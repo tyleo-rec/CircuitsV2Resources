@@ -10,14 +10,15 @@ A collection of resources for CircuitsV2 in Rec Room.
   * Use this page to report bugs and request or upvote new features.
 * [Circuits V2 Official YouTube Tutorial](https://www.youtube.com/watch?v=J_vGEe5-rc8)
 
-## YouTube
+## Unofficial Resources
+### YouTube
 * [Rec Room - Circuits V2 Tutorial](https://youtu.be/sQ4GuOyiink)
 
-## Circuits V2 Community Tutorial Rooms
+### Circuits V2 Community Tutorial Rooms
 * <a href="https://rec.net/room/CircuitsV2Tutorials">^CircuitsV2Tutorials</a>
 * <a href="https://rec.net/room/CircuitsVersionTwoTutorial">^CircuitsVersionTwoTutorial</a>
 * <a href="https://rec.net/room/YoesCircuitsV2">^YoesCircuitsV2</a>
 
-## Resource Directories
+### Resource Directories
 These are additional lists of resources which may contain content not listed here.
 * [rec-room Fandom Wiki Circuits V2 Page](https://rec-room.fandom.com/wiki/Circuits_V2)

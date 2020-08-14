@@ -14,6 +14,7 @@ A collection of resources for CircuitsV2 in Rec Room.
 * [Rec Room - Circuits V2 Tutorial](https://youtu.be/sQ4GuOyiink)
 
 ## Circuits V2 Community Tutorial Rooms
+* <a title="^CircuitsV2Tutorials" href="https://rec.net/room/CircuitsV2Tutorials">^CircuitsV2Tutorials</a>
 * [CircuitsV2Tutorials](https://rec.net/room/CircuitsV2Tutorials)
 * [CircuitsVersionTwoTutorial](https://rec.net/room/CircuitsVersionTwoTutorial)
 * [YoesCircuitsV2](https://rec.net/room/YoesCircuitsV2)

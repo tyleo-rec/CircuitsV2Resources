@@ -10,7 +10,9 @@
 
 ## Unofficial Resources
 ### YouTube
+* [How To Use Circuits V2 (Beginner Tutorial, Events, and Variables) - Rec Room VR](https://youtu.be/Ow2CCZPedb0)
 * [Rec Room - Circuits V2 Tutorial](https://youtu.be/sQ4GuOyiink)
+* [Rec Room - Circuits V2 Tutorial - List based calculator.](https://youtu.be/3pD_gLHelTs)
 
 ### Circuits V2 Community Tutorial Rooms
 * <a href="https://rec.net/room/CircuitsV2Tutorials">^CircuitsV2Tutorials</a>

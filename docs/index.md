@@ -24,3 +24,9 @@
 ### Resource Directories
 These are additional lists of resources which may contain content not listed here.
 * [rec-room Fandom Wiki Circuits V2 Page](https://rec-room.fandom.com/wiki/Circuits_V2)
+
+## Unofficial Resources (German)
+### YouTube
+* [Rec Room How To: Circuits V2 - Eine Einführung (Update 2.76 Beta Edition)](https://youtu.be/mi4i70XUsMs)
+* [Rec Room How: to Goblinauswahl per Uhr Circuits V2](https://youtu.be/yjU684RFP3A)
+* [Rec Room How to: Taschenrechner mit Circuits V2 bauen)](https://youtu.be/yJ5C89UfRpY)

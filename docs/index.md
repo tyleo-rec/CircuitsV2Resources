@@ -10,7 +10,7 @@
 * [Creative Classes](https://recroom.com/creative)
   * This is the full of curated classes for learning how to build. Check back periodically for Circuits V2 class availability.
 
-## Unofficial Resources
+## Unofficial Resources (English)
 ### YouTube
 * [How To Use Circuits V2 (Beginner Tutorial, Events, and Variables) - Rec Room VR](https://youtu.be/Ow2CCZPedb0)
 * [Rec Room - Circuits V2 Tutorial](https://youtu.be/sQ4GuOyiink)

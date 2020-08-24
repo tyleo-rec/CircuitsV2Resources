@@ -2,8 +2,8 @@
 ## Official Resources
 * [How To Circuits V2 Blog Post](https://recroom.com/developer-blog/2020/8/3/how-2-circuits-2)
 * [Circuits V2 Happy Fox Documentation](https://recroom.happyfox.com/kb/section/65/)
-* [Rec Room Discord](https://discord.com/channels/193073071802941451/414540825700335617)
-  * Use the #gadgets section for CircuitsV2 info.
+* [Rec Room Discord](https://discord.com/channels/193073071802941451/746858632301510708)
+  * Use the #gadgets-v2 section for CircuitsV2 info.
 * [Circuits V2 Canny](https://recroom.canny.io/creative-tools?category=circuits-v2-feedback)
   * Use this page to report bugs and request or upvote new features.
 * [Circuits V2 Official YouTube Tutorial](https://www.youtube.com/watch?v=J_vGEe5-rc8)

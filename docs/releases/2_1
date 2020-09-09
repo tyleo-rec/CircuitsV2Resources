@@ -1,0 +1,89 @@
+# Breaking Changes
+
+These changes may require you to update your rooms.
+
+* AILookAtNode
+  * Now only connects to AI, Combatant, CreationObject, PatrolPoint, Player and Vector3 types.
+  * It used to connect to anything but it doesn't work with any types besides these.
+* InvalidPlayerVariableNode no longer uses the variable mesh.
+  * The invalid player isn't a variable.
+* LocalPlayerVariableNode no longer uses the variable mesh.
+  * The local player isn't a variable.
+* EqualsNode now works correctly in all cases.
+* IsValidNode now returns correct result in all cases. Nodes now need special logic to work with invalid objects.
+  * Many nodes which previously tried to work with invalid objects now return errors. Some of these used to null ref.
+* Unset player variables now correspond to invalid players.
+* All variables now have names to help distinguish them
+  * Unnamed variables will be updated to named ones.
+  * Names are automatically generated when variables are placed or can be set manually.
+  * Variables with the same name will always refer to the same value (they change together)
+  * Variables with different names will always refer to different values (one may change without impacting the others)
+
+## Deprecations
+
+Deprecated content will be removed in the next update
+
+* `Invalid Player`
+    * Replaced with empty player variables
+* `Creation Object Add Tags`
+    * Replaced with a version with the same name that works better with lists
+* `Creation Object to AI Path Point`
+    * Replaced with `From Creation Object`
+* `Creation Object to AI`
+    * Replaced with `From Creation Object`
+
+# General Changes
+
+* Network heat has been tripled to 1 KB/s
+* Control panels follow their objects correctly in more cases
+* The prompt player node now allows body text
+* Boolean logic nodes allow ports to be added
+* Float comparisons now work
+* Functions on Control panels and Circuit Boards now have padding between their ports
+* Control panels now have a special built-in self port
+* Control panels with no ports except self now have a condensed mesh
+* A clever workaround for making inventions in beta rooms has been blocked
+
+## New Nodes
+
+* `Acos`
+* `Asin`
+* `Atan`
+* `Atan2`
+* `Ceil`
+* `Cos`
+* `Creation Object Add Tags`
+* `Creation Object Has Tags`
+* `Creation Object Remove Tags`
+* `Floor`
+* `From Creation Object`
+* `Instance List<string>`
+* `Log`
+* `Round`
+* `Set Element`
+* `Sin`
+* `Tan`
+* `To Creation Object`
+
+## New Objects
+
+We added these objects with this update. Look for nodes prefixed with their names in the palette!
+
+* `Button V2`
+* `Trigger Volume V2`
+* `Toggle Button V2`
+
+## Canny Issues
+
+* Trigonometric functions have been added
+  * https://recroom.canny.io/creative-tools/p/trigonometric-function-implementation-with-circuits-v2
+* Button V2, Toggle Button V2, and Trigger Volume V2 have been added
+  * https://recroom.canny.io/creative-tools/p/circuits-v2-inputs-like-buttons-and-trigger-zones
+* Users can now change text on buttons with Circuits
+  * https://recroom.canny.io/creative-tools/p/the-ability-to-change-the-text-on-a-button
+* Users can now remove tags with circuits
+  * https://recroom.canny.io/creative-tools/p/object-remove-tag
+* You can now get tags with cirucits
+  * https://recroom.canny.io/admin/board/creative-tools/p/object-get-tags-node
+* Trigger zones return lists of objects and players
+  * https://recroom.canny.io/admin/board/creative-tools/p/list-of-playersobjects-inside-trigger-zone-output

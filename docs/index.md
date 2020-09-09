@@ -11,6 +11,7 @@
   * This is a currated list of classes and events for learning how to build. Check back periodically for Circuits V2 class availability.
   * [Circuits V2 Transitional Class (Discord Class Link)](https://discord.com/channels/737529805121126471)
   * [Circuit Think Tank (Rec Room Event Link)](https://rec.net/room/CircuitThinkTank/events)
+* [Releases](https://tyleo-rec.github.io/CircuitsV2Resources/releases/)
 
 ## Unofficial Resources (English)
 ### YouTube

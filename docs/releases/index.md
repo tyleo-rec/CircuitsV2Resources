@@ -3,4 +3,4 @@
 * [Version 2.2](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_2)
 * [Version 2.3](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_3)
 * [Version 2.4](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_4)
-* [Version 2.x](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_x)
+* [Next (Version 2.5)](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_5)

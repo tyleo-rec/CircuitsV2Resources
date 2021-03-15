@@ -6,12 +6,9 @@
       "NodeDescs": {
         "98b99011-9be8-43b3-89cc-1e9d55bd8b51": {
           "Name": "Absolute Value",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int)"
+          },
           "InputPorts": {
             "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
               "Name": "Value",
@@ -43,7 +40,7 @@
       "NodeDescs": {
         "46ce50b8-0a20-43d2-9646-484ce2a6752c": {
           "Name": "Acos",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "45bf72ff-57ea-4c0e-9ac8-304ea00f2103": {
               "Name": "Value",
@@ -75,12 +72,9 @@
       "NodeDescs": {
         "0ccb153c-dd08-4f22-80fd-9d8c5940928c": {
           "Name": "Add",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float | Vector3)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -118,7 +112,7 @@
       "NodeDescs": {
         "3edc785f-46ef-4f30-b101-a07126d3a370": {
           "Name": "AI Get Line of Sight Parameters",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "39b1280e-dab1-4c3b-b931-6406e6524a24": {
               "Name": "AI",
@@ -165,7 +159,7 @@
       "NodeDescs": {
         "1637b250-e497-4f4a-9d5e-64206488391c": {
           "Name": "AI Get Target",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "daa95f4e-af95-4690-9d0a-8ee9a6ff72ac": {
               "Name": "AI",
@@ -197,12 +191,9 @@
       "NodeDescs": {
         "5858a52e-54fb-4bb2-80a0-ec5fce88b3ef": {
           "Name": "AI Has Line of Sight To Target",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+          },
           "InputPorts": {
             "39b1280e-dab1-4c3b-b931-6406e6524a24": {
               "Name": "AI",
@@ -239,12 +230,9 @@
       "NodeDescs": {
         "b5badf49-acfe-4a42-80e2-5262878e2d89": {
           "Name": "AI Look At",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+          },
           "InputPorts": {
             "ad7c3748-8da7-42fb-b445-50ffa13009b4": {
               "Name": "",
@@ -291,12 +279,9 @@
       "NodeDescs": {
         "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
           "Name": "AI Path To",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+          },
           "InputPorts": {
             "af14ef43-288f-47a4-a736-32e10ccb509f": {
               "Name": "",
@@ -338,12 +323,9 @@
       "NodeDescs": {
         "c2cb2ea2-f663-4aa6-9394-3b741f6b9064": {
           "Name": "AI Rotate",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int | Vector3)"
+          },
           "InputPorts": {
             "ad7c3748-8da7-42fb-b445-50ffa13009b4": {
               "Name": "",
@@ -385,7 +367,7 @@
       "NodeDescs": {
         "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
           "Name": "AI Set Line of Sight Parameters",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "13db9124-b5c9-4ab7-93b2-1beda3a4e2eb": {
               "Name": "",
@@ -447,7 +429,7 @@
       "NodeDescs": {
         "cd85a0c7-789b-41a2-aeda-40925b73738c": {
           "Name": "AI Set Pathing Speed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "13db9124-b5c9-4ab7-93b2-1beda3a4e2eb": {
               "Name": "",
@@ -489,7 +471,7 @@
       "NodeDescs": {
         "6370b8d9-8c72-4e6b-a623-acb7202a3110": {
           "Name": "AI Set Patrol Point",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "26674afe-cc21-4e76-94aa-93456f03f9f1": {
               "Name": "",
@@ -531,7 +513,7 @@
       "NodeDescs": {
         "73652899-2656-4aa4-a1b0-4de8d8e56095": {
           "Name": "AI Set Target",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "5b781196-0989-4678-bcde-62469852bc59": {
               "Name": "",
@@ -573,7 +555,7 @@
       "NodeDescs": {
         "b169c26e-3c2c-4058-bae7-dbbc3ee856a4": {
           "Name": "AI Start Combat Behavior",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "9a609a5d-ffd6-4d42-9640-62e27c914557": {
               "Name": "",
@@ -610,7 +592,7 @@
       "NodeDescs": {
         "6e244bf2-cf71-4baa-912d-3e61c7fcd1be": {
           "Name": "AI Stop Combat Behavior",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "26effcd2-1df0-4ed6-8116-becd7cb1e6f0": {
               "Name": "",
@@ -647,7 +629,7 @@
       "NodeDescs": {
         "f211a503-a237-41bc-875e-ae3ef62d745b": {
           "Name": "AI Stop Looking",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "ad7c3748-8da7-42fb-b445-50ffa13009b4": {
               "Name": "",
@@ -684,7 +666,7 @@
       "NodeDescs": {
         "3fb9fd93-8d45-4395-b9a3-63a99a14442b": {
           "Name": "And",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Input",
@@ -715,7 +697,7 @@
       "NodeDescs": {
         "aaa4e58f-16df-426a-b7a7-a654eab97037": {
           "Name": "Asin",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "ffb9ff2c-fc3f-45de-a3f3-a1bb5d04983b": {
               "Name": "Value",
@@ -747,7 +729,7 @@
       "NodeDescs": {
         "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
           "Name": "Atan",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "4dbc509e-bfc2-49d7-a9dc-80c90ff27f0e": {
               "Name": "Value",
@@ -779,7 +761,7 @@
       "NodeDescs": {
         "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
           "Name": "Atan2",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "5d4034d2-988b-4351-8e80-f25f1a54c66b": {
               "Name": "Y",
@@ -816,16 +798,10 @@
       "NodeDescs": {
         "9478334a-451d-4802-bab1-4b05f00d45e4": {
           "Name": "Break Tuple",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T0",
-              "ReadonlyType": "any"
-            },
-            {
-              "ReadonlyName": "T1",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T0": "any",
+            "T1": "any"
+          },
           "InputPorts": {
             "8769d3fa-5e27-416c-8e6d-f6708b1e129e": {
               "Name": "Tuple",
@@ -861,7 +837,7 @@
       "NodeDescs": {
         "fe32ba92-9018-4575-92e2-3b0d82c9419b": {
           "Name": "Button Get Is Pressed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "eb92882b-b1c5-44a0-a5f3-f787ae844f96": {
               "Name": "Target",
@@ -893,7 +869,7 @@
       "NodeDescs": {
         "70e7663d-a5fd-435d-8995-942b4babc262": {
           "Name": "Button Get Text",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "0bde7a22-5a07-42c7-89a0-f38f5f97c161": {
               "Name": "Target",
@@ -925,7 +901,7 @@
       "NodeDescs": {
         "21bbaa09-6bcf-435c-86da-e853a78bc27b": {
           "Name": "Button Set Text",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "429f432b-5ca1-468d-889f-dbe3e7175894": {
               "Name": "",
@@ -967,7 +943,7 @@
       "NodeDescs": {
         "f4cbc476-bc98-4cbf-bf47-de4baedddf79": {
           "Name": "Ceil",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "5bc4ef53-d43a-47d8-9ccf-664505623092": {
               "Name": "Value",
@@ -999,7 +975,7 @@
       "NodeDescs": {
         "38b502dc-dd35-4083-a2b0-8a8e5f69a958": {
           "Name": "Ceil to Int",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "26345749-2acb-4f62-8ff1-fab501950692": {
               "Name": "Value",
@@ -1036,12 +1012,9 @@
       "NodeDescs": {
         "c0ee02f4-bbab-40ea-88a0-7441d7e7094c": {
           "Name": "Combatant Get Ground Position",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Player)"
+          },
           "InputPorts": {
             "aeaf2027-2c35-4f3b-a021-d85b5f52621e": {
               "Name": "Combatant",
@@ -1073,12 +1046,9 @@
       "NodeDescs": {
         "3967a8ad-4237-4ae7-8cbf-850d8e24fe30": {
           "Name": "Combatant Get Health",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Player)"
+          },
           "InputPorts": {
             "f96657eb-742c-4d24-a49e-44ab89fb542d": {
               "Name": "Object",
@@ -1113,12 +1083,9 @@
       "NodeDescs": {
         "2a12c389-c3c6-4484-8c63-21cdaf0fac6c": {
           "Name": "Combatant Get Is Alive",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Player)"
+          },
           "InputPorts": {
             "12fea468-1efa-42c6-81a8-458c46076f32": {
               "Name": "Object",
@@ -1150,12 +1117,9 @@
       "NodeDescs": {
         "b4eadbfa-cdbe-42e6-9481-5197de58e272": {
           "Name": "Combatant Get Velocity",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Player)"
+          },
           "InputPorts": {
             "6e76f271-20a7-429a-8fed-f9deaf694d25": {
               "Name": "Combatant",
@@ -1192,16 +1156,10 @@
       "NodeDescs": {
         "67aca89c-f753-4f94-87df-1ce1d4fcb8b0": {
           "Name": "Combatant Receive Damage",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            },
-            {
-              "ReadonlyName": "U",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Player)",
+            "U": "(AI | Combatant | Player)"
+          },
           "InputPorts": {
             "4a35a867-1015-4553-8dc4-efa3ebdb296d": {
               "Name": "",
@@ -1253,12 +1211,9 @@
       "NodeDescs": {
         "3dc4807f-2acd-446d-928f-5d301d0795d6": {
           "Name": "Combatant Set Health",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Player)"
+          },
           "InputPorts": {
             "4a35a867-1015-4553-8dc4-efa3ebdb296d": {
               "Name": "",
@@ -1300,12 +1255,9 @@
       "NodeDescs": {
         "82f71bcc-5e83-4825-8306-6a2bb2a296dd": {
           "Name": "Combatant Set Max Health",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Player)"
+          },
           "InputPorts": {
             "4a35a867-1015-4553-8dc4-efa3ebdb296d": {
               "Name": "",
@@ -1347,7 +1299,7 @@
       "NodeDescs": {
         "81b08e44-0a1e-40da-b8a1-79f416691dcf": {
           "Name": "Combatant Split",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "6d9759a4-1f2a-462e-bf1d-68a457b13006": {
               "Name": "Combatant",
@@ -1389,7 +1341,7 @@
       "NodeDescs": {
         "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
           "Name": "Cos",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "239951e8-c13c-4b78-93f5-7131d7bc5713": {
               "Name": "Value",
@@ -1421,7 +1373,7 @@
       "NodeDescs": {
         "81939b0e-428f-481c-9fba-453b4c84f01e": {
           "Name": "Creation Object Add Tags",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "5da5e970-855c-4a59-ad27-1d0e6e5e4671": {
               "Name": "",
@@ -1463,7 +1415,7 @@
       "NodeDescs": {
         "02d69553-ae96-4c2d-8477-59ada6a66783": {
           "Name": "Creation Object Get All with Tag",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "da4e71bc-adba-488e-87f6-c8bb34cdff2f": {
               "Name": "Tag",
@@ -1495,7 +1447,7 @@
       "NodeDescs": {
         "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
           "Name": "Creation Object Get Authority",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "854ab564-5c5b-450e-87d1-bcc8cb57c1d2": {
               "Name": "Target",
@@ -1532,7 +1484,7 @@
       "NodeDescs": {
         "b0497de0-3dd3-470d-a421-8f0d321bfc3e": {
           "Name": "Creation Object Get Is Local Player Authority",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "9874b3bd-e051-4400-aa4c-0b20d8e61fee": {
               "Name": "Target",
@@ -1563,7 +1515,7 @@
       "NodeDescs": {
         "e67cfcb7-03e8-4152-ba41-af8ca61d93fb": {
           "Name": "Creation Object Get Tags",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "f073a7a5-6b9a-4dca-8538-32e534e9a88d": {
               "Name": "Target",
@@ -1595,7 +1547,7 @@
       "NodeDescs": {
         "15549697-11a3-4678-aabd-20890c3dbc09": {
           "Name": "Creation Object Has Tag",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7702ff52-2f2f-484a-9189-86a20c6a03db": {
               "Name": "Object",
@@ -1632,7 +1584,7 @@
       "NodeDescs": {
         "fb368814-daaf-475f-ae08-1d01b9d63b8e": {
           "Name": "Creation Object Remove Tags",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "c09f9910-65e0-4d8f-a019-21f08dacb0ba": {
               "Name": "",
@@ -1674,7 +1626,7 @@
       "NodeDescs": {
         "6c9e8939-6963-4803-9f22-90ee32382b0a": {
           "Name": "Debug Log",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "a77f3073-8389-4bed-a225-18094169fb30": {
               "Name": "",
@@ -1710,7 +1662,7 @@
       "NodeDescs": {
         "cefee2a5-d4a8-4dff-8c4e-bad684ca8d34": {
           "Name": "Delay",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "dd9db882-86be-478c-a52b-135bcb8ee935": {
               "Name": "Run",
@@ -1766,7 +1718,7 @@
       "NodeDescs": {
         "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
           "Name": "Dice Get Player Rolled",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "70889d3d-6644-4764-8943-dc6d18cf5003": {
               "Name": "Target",
@@ -1798,7 +1750,7 @@
       "NodeDescs": {
         "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
           "Name": "Dice Get Result",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "8920473c-8f02-43c6-9498-49dc38694bee": {
               "Name": "Target",
@@ -1830,7 +1782,7 @@
       "NodeDescs": {
         "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
           "Name": "Dice Get Roll finished",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "80196cac-c33e-4a92-a24f-6ce23f0b5d75": {
               "Name": "",
@@ -1867,16 +1819,10 @@
       "NodeDescs": {
         "182e1ae2-1183-4741-af6e-f307b788a857": {
           "Name": "Distance",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T1",
-              "ReadonlyType": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
-            },
-            {
-              "ReadonlyName": "T2",
-              "ReadonlyType": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T1": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)",
+            "T2": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+          },
           "InputPorts": {
             "15286770-ad0c-4ba7-8494-3c384e3879d5": {
               "Name": "A",
@@ -1918,12 +1864,9 @@
       "NodeDescs": {
         "f2eafd78-5f23-44c9-a271-8ff2f0762e71": {
           "Name": "Divide",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float | Vector3)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -1961,7 +1904,7 @@
       "NodeDescs": {
         "15e42063-cbae-40f9-a9e4-8226e83217ec": {
           "Name": "Emitter Set Color",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7ad1ee9f-8f7d-47b7-b282-e0eb4df605b2": {
               "Name": "",
@@ -2003,7 +1946,7 @@
       "NodeDescs": {
         "36881bd0-7da0-44a7-b6ef-8cd3770fed78": {
           "Name": "Emitter Set Looping",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "59e64bb9-f107-4b99-9e94-42faa12cdb86": {
               "Name": "",
@@ -2045,7 +1988,7 @@
       "NodeDescs": {
         "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
           "Name": "Emitter Set Size",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "4fe0990b-5138-4828-8ab9-961f38d06607": {
               "Name": "",
@@ -2087,7 +2030,7 @@
       "NodeDescs": {
         "12446960-d971-475f-b64e-b5c7bb422eca": {
           "Name": "Emitter Set Speed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "2d6be878-d05f-4e27-a7e8-7bbf87dbeda3": {
               "Name": "",
@@ -2129,7 +2072,7 @@
       "NodeDescs": {
         "56ebaa0b-256a-40ed-a066-f5663dfa2b59": {
           "Name": "Emitter Start",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "c3ba8a60-1c5a-4a06-98f9-bc2357a2e687": {
               "Name": "",
@@ -2166,7 +2109,7 @@
       "NodeDescs": {
         "23b278c4-5d3d-439d-afa3-ff30c949df97": {
           "Name": "Emitter Stop",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7ad1ee9f-8f7d-47b7-b282-e0eb4df605b2": {
               "Name": "",
@@ -2203,12 +2146,9 @@
       "NodeDescs": {
         "3663225d-e18d-40e6-a234-ef10378528be": {
           "Name": "Equals",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "31be406c-b556-45d5-afd8-5a0b87303d0e": {
               "Name": "A",
@@ -2247,9 +2187,9 @@
       "ReadonlyName": "Event Receiver",
       "Description": "Events are the entry points for all circuit graphs. Events are execution hooks for things like a player loading into the room, or knowing when a Button is pressed. After creating this chip, make sure to use the configure tool to choose the event you want to listen for. You can use the Event Defintion chip to create your own events to add to this list and use with the Event Sender chip.",
       "NodeDescs": {
-        "ccc2b243-69db-56bd-bdd1-d9079a6bd245": {
+        "34de191a-5978-5e27-9c35-2798b9053ef4": {
           "Name": "Event Receiver",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "c2ae9713-2346-4412-a600-c6ac56c3228b": {
@@ -2277,9 +2217,9 @@
       "ReadonlyName": "Event Sender",
       "Description": "Use the Event Sender to fire your custom events defined in Event Defintions. After creating this chip, make sure to use the configure tool to change the event that you want to fire. You can also change who you want to send the event to from the config menu.",
       "NodeDescs": {
-        "8e0f3812-29f9-5d1b-921a-849eb77c164f": {
+        "f0f04e0c-43e0-5443-a4bf-6722eb770ba5": {
           "Name": "Event Sender",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "5ff23b09-2d13-4331-8519-150c6b8b0b2f": {
               "Name": "",
@@ -2315,7 +2255,7 @@
       "NodeDescs": {
         "c90d9339-cdce-4d22-a885-f142fd5567ab": {
           "Name": "Floor",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "c02f5016-d8de-4ad0-a3b1-d2f12e54a51d": {
               "Name": "Value",
@@ -2347,7 +2287,7 @@
       "NodeDescs": {
         "bc451cab-2292-4e60-832d-31060eb82bd0": {
           "Name": "Floor to Int",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "26345749-2acb-4f62-8ff1-fab501950692": {
               "Name": "Value",
@@ -2384,7 +2324,7 @@
       "NodeDescs": {
         "8f945c22-988b-45d2-b7f2-409ba304fef4": {
           "Name": "For",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "85dcef58-dd15-4723-817f-650225869b1e": {
               "Name": "",
@@ -2435,12 +2375,9 @@
       "NodeDescs": {
         "744e5311-6cc7-4130-962e-fe050a475d43": {
           "Name": "For Each",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "b970329f-e743-43ca-b9f6-e4462b693224": {
               "Name": "",
@@ -2486,12 +2423,9 @@
       "NodeDescs": {
         "7ff685a6-f59c-4c6c-b559-f343d81ea1d4": {
           "Name": "From Creation Object",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "CreationObject"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "CreationObject"
+          },
           "InputPorts": {
             "24c9f17f-1a16-4f6f-a597-3f8da7fe1bfe": {
               "Name": "Target",
@@ -2528,7 +2462,7 @@
       "NodeDescs": {
         "09b0bf5b-95df-474b-b81a-4e8e2c78ed0a": {
           "Name": "Get All Players",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7bc7c312-5e63-46c9-8524-28d0b50bbddc": {
               "Name": "",
@@ -2564,7 +2498,7 @@
       "NodeDescs": {
         "eaf712f8-3257-4415-9f88-ae94e308396e": {
           "Name": "Get Authority",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "bdf258fc-7e1a-4d17-a45e-a9e66c5006b9": {
@@ -2589,12 +2523,9 @@
       "NodeDescs": {
         "e8c5082f-0a75-4025-9679-293bc8d72989": {
           "Name": "Get Element",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "3f78c57f-3de2-461a-a7e3-9bfbcc5a84ee": {
               "Name": "List",
@@ -2631,12 +2562,9 @@
       "NodeDescs": {
         "88f95338-d1a6-4fad-8424-d714d651f6ac": {
           "Name": "Get Forward Vector",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(CreationObject | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(CreationObject | Player)"
+          },
           "InputPorts": {
             "53ce784c-9d25-4a29-9aef-e1f779e6339f": {
               "Name": "Target",
@@ -2667,7 +2595,7 @@
       "NodeDescs": {
         "70c830bb-223a-4a7c-b0ae-df240c6f1f33": {
           "Name": "Get Local Camera Forward",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "30c3529c-9675-40f3-8d9d-f2879f497167": {
@@ -2692,7 +2620,7 @@
       "NodeDescs": {
         "5d9da95f-a64f-4660-a11f-bf0855769659": {
           "Name": "Get Local Camera Up",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "e2a2c352-0929-4b46-ab5b-492aa5d5ea80": {
@@ -2717,7 +2645,7 @@
       "NodeDescs": {
         "fdf733a8-bdd6-4800-b1d4-95b06b3d6f02": {
           "Name": "Get Local Player",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -2747,7 +2675,7 @@
       "NodeDescs": {
         "a76a9898-4add-4765-9f5b-f366b586e51c": {
           "Name": "Get Player Last Equipped Object",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "11eb2a56-f3ff-4cef-9a7c-14174d586c7d": {
               "Name": "Object",
@@ -2790,12 +2718,9 @@
       "NodeDescs": {
         "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
           "Name": "Get Position",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Combatant | CreationObject | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | CreationObject | Player)"
+          },
           "InputPorts": {
             "15286770-ad0c-4ba7-8494-3c384e3879d5": {
               "Name": "Target",
@@ -2826,7 +2751,7 @@
       "NodeDescs": {
         "d7557465-963e-4451-a55a-dea2050e9b74": {
           "Name": "Get Room Authority",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "e95ad558-8184-42d8-8ce6-bc44ee278c76": {
@@ -2851,12 +2776,9 @@
       "NodeDescs": {
         "830f781d-2522-4ec0-9d6f-ecfc0bf695f6": {
           "Name": "Get Up Vector",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(CreationObject | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(CreationObject | Player)"
+          },
           "InputPorts": {
             "e9dc68a7-efa4-4ad7-8e15-27b254436f91": {
               "Name": "Target",
@@ -2887,12 +2809,9 @@
       "NodeDescs": {
         "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
           "Name": "Get Velocity",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(CreationObject | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(CreationObject | Player)"
+          },
           "InputPorts": {
             "baa3e839-b8f5-4519-a08c-6a7f0f1d2cc8": {
               "Name": "Target",
@@ -2923,12 +2842,9 @@
       "NodeDescs": {
         "a10e7788-f016-4390-a68e-87d93b47edb1": {
           "Name": "Greater or Equal",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
               "Name": "A",
@@ -2964,12 +2880,9 @@
       "NodeDescs": {
         "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
           "Name": "Greater Than",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
               "Name": "A",
@@ -3005,7 +2918,7 @@
       "NodeDescs": {
         "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
           "Name": "If",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "78e84232-7c31-434e-898c-946cecd1d310": {
               "Name": "",
@@ -3051,12 +2964,9 @@
       "NodeDescs": {
         "a4f8a9a1-fd7b-4702-8345-93ae4d57f333": {
           "Name": "If Expression",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "f93d3978-668f-488d-aea8-4994aa5811f0": {
               "Name": "If",
@@ -3097,7 +3007,7 @@
       "NodeDescs": {
         "b8b667b9-7b55-4b8d-b116-abef220777e2": {
           "Name": "If Local Player Is Authority",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7e24c5c4-99e6-4142-9fb3-e736b182fffb": {
               "Name": "",
@@ -3133,7 +3043,7 @@
       "NodeDescs": {
         "5e28057f-214b-4ff8-81bc-512be207c9d7": {
           "Name": "If Local Player Is Room Authority",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "eca17ee8-3641-4096-8c73-dd5a082f4247": {
               "Name": "",
@@ -3169,7 +3079,7 @@
       "NodeDescs": {
         "c7643011-f320-4155-89b8-d693730c1935": {
           "Name": "If Player Is Local",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "1a221b63-6828-4c6f-8c51-abaf4fbe5bfc": {
               "Name": "",
@@ -3210,12 +3120,9 @@
       "NodeDescs": {
         "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
           "Name": "Impulse Add",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(Player | CreationObject)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(Player | CreationObject)"
+          },
           "InputPorts": {
             "47d59582-2661-4d87-a9ef-133d33f75988": {
               "Name": "Add Impulse",
@@ -3266,12 +3173,9 @@
       "NodeDescs": {
         "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
           "Name": "Impulse Reflect",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(Player | CreationObject)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(Player | CreationObject)"
+          },
           "InputPorts": {
             "c0f71599-64c7-4d29-8beb-995335d5a5c0": {
               "Name": "Reflect Impulse",
@@ -3327,12 +3231,9 @@
       "NodeDescs": {
         "f97c530d-03bf-498c-8854-33e814d2600b": {
           "Name": "Impulse Set",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(Player | CreationObject)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(Player | CreationObject)"
+          },
           "InputPorts": {
             "d721c22d-8695-4df5-8c2d-f6422e91b2b2": {
               "Name": "Set Impulse",
@@ -3376,9 +3277,9 @@
       "ReadonlyName": "In",
       "Description": "",
       "NodeDescs": {
-        "127ce147-216e-516c-9239-e6031739fe38": {
+        "fee611fd-7260-51db-a32c-9c4b7b5b6d12": {
           "Name": "In",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {}
         }
@@ -3391,7 +3292,7 @@
       "NodeDescs": {
         "cf16ad7e-4ca0-4140-89d1-a6e1e39f93f5": {
           "Name": "Instance AI",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3416,7 +3317,7 @@
       "NodeDescs": {
         "8065d557-b6cc-4dd1-8cfa-b7481fe7bcf1": {
           "Name": "Instance bool",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3441,7 +3342,7 @@
       "NodeDescs": {
         "9a44b46a-682d-4a20-af66-8e111673d061": {
           "Name": "Instance Combatant",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3466,7 +3367,7 @@
       "NodeDescs": {
         "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
           "Name": "Instance CreationObject",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3491,7 +3392,7 @@
       "NodeDescs": {
         "dce27fe2-abc2-4a6a-9c4e-5d829a5b83a6": {
           "Name": "Instance float",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3516,7 +3417,7 @@
       "NodeDescs": {
         "1a5331bc-5025-487e-898c-3c49ee715664": {
           "Name": "Instance int",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3541,7 +3442,7 @@
       "NodeDescs": {
         "4f927e94-c242-4aba-89ac-575b169ecbb2": {
           "Name": "Instance List<bool>",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3566,7 +3467,7 @@
       "NodeDescs": {
         "1e05b1fd-c75c-4955-917f-5576e5451737": {
           "Name": "Instance List<CreationObject>",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3591,7 +3492,7 @@
       "NodeDescs": {
         "b7a11075-1220-4907-ae5c-820f1a209814": {
           "Name": "Instance List<float>",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3616,7 +3517,7 @@
       "NodeDescs": {
         "401db17e-4e67-4a88-8a1b-88c6a819e685": {
           "Name": "Instance List<int>",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3641,7 +3542,7 @@
       "NodeDescs": {
         "1ad20647-c773-4708-ba68-d9bd9430fb65": {
           "Name": "Instance List<Player>",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3666,7 +3567,7 @@
       "NodeDescs": {
         "bcdb75cb-6c21-4a6a-acb5-8f733741e93f": {
           "Name": "Instance List<string>",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3691,7 +3592,7 @@
       "NodeDescs": {
         "5b34b481-a7a3-4932-a966-974082c54ecd": {
           "Name": "Instance List<Vector3>",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3716,7 +3617,7 @@
       "NodeDescs": {
         "3ee1edfe-5520-4714-862b-98af90f6e3da": {
           "Name": "Instance Player",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3741,7 +3642,7 @@
       "NodeDescs": {
         "797913df-1bcf-4280-8666-f17d7782cebb": {
           "Name": "Instance string",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3766,7 +3667,7 @@
       "NodeDescs": {
         "33ce1565-62f8-4d39-89da-b8838aadff6a": {
           "Name": "Instance Vector3",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -3791,7 +3692,7 @@
       "NodeDescs": {
         "65cfba8a-b5dc-4946-b824-e6efc5719f3a": {
           "Name": "Int to Float",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "26345749-2acb-4f62-8ff1-fab501950692": {
               "Name": "Value",
@@ -3828,12 +3729,9 @@
       "NodeDescs": {
         "24a1be50-ef1b-4e54-836b-4a2a95780b4e": {
           "Name": "Is Valid",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "727c5e61-0468-46e1-b38f-5fe17775adcb": {
               "Name": "",
@@ -3864,12 +3762,9 @@
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
           "Name": "Lerp",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | Vector3)"
+          },
           "InputPorts": {
             "5b6bd01f-d2ef-43e2-82c9-534810460b26": {
               "Name": "Lower",
@@ -3917,12 +3812,9 @@
       "NodeDescs": {
         "a027073f-9189-457f-a53d-8562e8829daf": {
           "Name": "Less or Equal",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
               "Name": "A",
@@ -3958,12 +3850,9 @@
       "NodeDescs": {
         "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
           "Name": "Less Than",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
               "Name": "A",
@@ -3999,7 +3888,7 @@
       "NodeDescs": {
         "873d8765-9dc7-41ea-87ef-dd6e32119af8": {
           "Name": "Light Set Angle",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "579f0a15-4b74-4b45-84d8-4a3beedeb715": {
               "Name": "",
@@ -4041,7 +3930,7 @@
       "NodeDescs": {
         "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
           "Name": "Light Set Color",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "801357a5-5220-4880-aeff-47af80097727": {
               "Name": "",
@@ -4083,7 +3972,7 @@
       "NodeDescs": {
         "902a47c8-3834-4858-bbae-5357281a507d": {
           "Name": "Light Set Intensity",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "d778f531-2869-468f-810c-c450a4396e0e": {
               "Name": "",
@@ -4125,7 +4014,7 @@
       "NodeDescs": {
         "c3d0ef1f-921c-4602-a6eb-b03ed46d556f": {
           "Name": "Light Set Range",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "35628d03-5113-47b8-a034-9af38bc21765": {
               "Name": "",
@@ -4167,7 +4056,7 @@
       "NodeDescs": {
         "0f96406e-af69-4f6c-a430-c6b004457ef4": {
           "Name": "Light Turn Off",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "be1a824a-4374-4391-a7ef-a884d20eaafb": {
               "Name": "",
@@ -4204,7 +4093,7 @@
       "NodeDescs": {
         "5452c480-62f9-4d4e-b615-0f59e645d8db": {
           "Name": "Light Turn On",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "b7788f7b-1264-4511-b0f9-04f7419f7eac": {
               "Name": "",
@@ -4241,12 +4130,9 @@
       "NodeDescs": {
         "f716c3f3-0c7c-42a4-bf55-12b7e1cd9040": {
           "Name": "List Add",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "f1e58bac-5e31-4bf8-9a1d-f51904dedda5": {
               "Name": "",
@@ -4288,7 +4174,7 @@
       "NodeDescs": {
         "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
           "Name": "List All True",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "90b0a7c9-f4a4-45a1-8302-27414de64f45": {
               "Name": "Target",
@@ -4326,7 +4212,7 @@
       "NodeDescs": {
         "f9589495-685e-4e14-af2e-5cd45f860021": {
           "Name": "List Any True",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "54e54afd-edc5-4eb2-8081-40b35f6f811e": {
               "Name": "Target",
@@ -4364,12 +4250,9 @@
       "NodeDescs": {
         "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
           "Name": "List Concat",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "5f016b76-ef30-485d-8997-70f0d2912ded": {
               "Name": "List 1",
@@ -4406,12 +4289,9 @@
       "NodeDescs": {
         "73f261e2-d65d-4607-858d-3f4c37c76963": {
           "Name": "List Contains",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "8dfabc8e-8607-4729-b212-a90395711bc4": {
               "Name": "Target",
@@ -4448,12 +4328,9 @@
       "NodeDescs": {
         "7e5af908-533d-4d42-b3c9-0159e2b5fd55": {
           "Name": "List Divide",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int | Vector3)"
+          },
           "InputPorts": {
             "ea48bba7-67b9-4963-a6e3-a73ecafb0e5b": {
               "Name": "Target",
@@ -4491,12 +4368,9 @@
       "NodeDescs": {
         "0493204d-9815-49a9-8c87-4dedf5ccf7e8": {
           "Name": "List Get Count",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "25b29331-85df-4091-998e-a153f526ec66": {
               "Name": "List",
@@ -4528,12 +4402,9 @@
       "NodeDescs": {
         "592c8aab-9489-492f-a4aa-1e558e6a8ce7": {
           "Name": "List Insert",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "1a625b5b-edc9-4946-bced-3bc4becc12d8": {
               "Name": "",
@@ -4580,12 +4451,9 @@
       "NodeDescs": {
         "47428133-4492-422a-aeab-82c21667543e": {
           "Name": "List Max",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int)"
+          },
           "InputPorts": {
             "6a65afec-c4fb-4ecb-8e82-83a027d02074": {
               "Name": "Target",
@@ -4623,12 +4491,9 @@
       "NodeDescs": {
         "73e9cc79-66cc-4526-8ed7-87500e208c6b": {
           "Name": "List Min",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int)"
+          },
           "InputPorts": {
             "d47efe83-d7a1-4ec0-91a2-7e89a72bf325": {
               "Name": "Target",
@@ -4666,12 +4531,9 @@
       "NodeDescs": {
         "585aebe5-5df3-423a-8bc4-66b4e2b8bc5b": {
           "Name": "List Multiply",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int | Vector3)"
+          },
           "InputPorts": {
             "f6aef702-2a87-4e3c-b83a-37d2fef7c4c2": {
               "Name": "Target",
@@ -4709,12 +4571,9 @@
       "NodeDescs": {
         "02774487-d41a-4b59-9aa9-2aeb0aad9e37": {
           "Name": "List Remove At",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "4a2f34f1-09a0-4e3e-a5aa-1d7ec93f55bb": {
               "Name": "",
@@ -4756,12 +4615,9 @@
       "NodeDescs": {
         "2687fb17-96ea-4106-94d7-be8854cfa978": {
           "Name": "List Remove Last",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "a17450cd-853c-4a63-b44e-63ece8b2ea30": {
               "Name": "",
@@ -4798,12 +4654,9 @@
       "NodeDescs": {
         "20f069cb-30e5-4df8-8e2f-d91f322a83dd": {
           "Name": "List Subtract",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int | Vector3)"
+          },
           "InputPorts": {
             "2450a44f-ee75-44c9-a81a-10cec4311d18": {
               "Name": "Target",
@@ -4841,12 +4694,9 @@
       "NodeDescs": {
         "d080c9af-402f-4eb9-91d6-9eee945bf734": {
           "Name": "List Sum",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(float | int | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(float | int | Vector3)"
+          },
           "InputPorts": {
             "c6de67c3-a2a8-48e2-b3ab-89c8d9b6fbbd": {
               "Name": "Target",
@@ -4884,7 +4734,7 @@
       "NodeDescs": {
         "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
           "Name": "Log Screen Get Mute",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "eab3c74e-6eb0-48d0-a3fb-ea2f7177ff24": {
               "Name": "Target",
@@ -4916,7 +4766,7 @@
       "NodeDescs": {
         "6b57589c-a154-4831-9c13-0a6e351435c2": {
           "Name": "Log Screen Reset",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "eb0fd2d1-45a5-42a3-91d8-6e0056582762": {
               "Name": "",
@@ -4953,7 +4803,7 @@
       "NodeDescs": {
         "faced0c6-b436-4f31-965e-82ea8743640b": {
           "Name": "Log Screen Set Mute",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "94835ea2-26a2-4b0e-a29a-1ad948c1dcdc": {
               "Name": "",
@@ -4995,7 +4845,7 @@
       "NodeDescs": {
         "4047a8cc-3dcc-4fa8-85a7-41d569b8e547": {
           "Name": "Log String",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "1585e352-9ac8-4513-abb8-cd563dd1be1d": {
               "Name": "",
@@ -5042,7 +4892,7 @@
       "NodeDescs": {
         "28a105ab-a947-4493-a51d-ced76a9601ee": {
           "Name": "Logarithm",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "128d19d7-aaaf-49f7-8c83-8482baab3d38": {
               "Name": "Value",
@@ -5079,12 +4929,9 @@
       "NodeDescs": {
         "542d3256-0d51-4c33-a2a1-fbc44b7e1f07": {
           "Name": "Make List",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Item",
@@ -5116,16 +4963,10 @@
       "NodeDescs": {
         "bee72c1d-266b-4ea4-b185-7500618030c6": {
           "Name": "Make Tuple",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T0",
-              "ReadonlyType": "any"
-            },
-            {
-              "ReadonlyName": "T1",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T0": "any",
+            "T1": "any"
+          },
           "InputPorts": {
             "fbc28582-fd45-4a80-a55f-11df1b9977cc": {
               "Name": "Item 0",
@@ -5161,12 +5002,9 @@
       "NodeDescs": {
         "1cb807b1-85e7-4c14-b3ae-5775b7873b7d": {
           "Name": "Max",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -5198,12 +5036,9 @@
       "NodeDescs": {
         "bfb1ad17-5ade-4bd8-9c31-6d4b1e47dae3": {
           "Name": "Min",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -5235,12 +5070,9 @@
       "NodeDescs": {
         "fe462e79-9e9f-4234-b594-7b6c0a69329b": {
           "Name": "Modulo",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -5272,12 +5104,9 @@
       "NodeDescs": {
         "4738d696-d05a-42ee-a182-7641c429ae06": {
           "Name": "Multiply",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float | Vector3)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -5315,7 +5144,7 @@
       "NodeDescs": {
         "502e86d1-5b3a-4213-97e2-df25836ffcc4": {
           "Name": "Nand",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Input",
@@ -5376,7 +5205,7 @@
       "NodeDescs": {
         "2891bcb4-a6ab-4a2e-a08d-dd2a55f1cf66": {
           "Name": "Nor",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Input",
@@ -5407,7 +5236,7 @@
       "NodeDescs": {
         "ff551243-beb4-470e-ab48-9d616818d5e4": {
           "Name": "Not",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
               "Name": "Value",
@@ -5438,7 +5267,7 @@
       "NodeDescs": {
         "b5dcded0-eb2b-468d-a4b9-ffb1054f6214": {
           "Name": "Or",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Input",
@@ -5467,9 +5296,9 @@
       "ReadonlyName": "Out",
       "Description": "",
       "NodeDescs": {
-        "c1b882be-f079-5cb5-a0f3-fb56b31655a6": {
+        "6924cfbc-076c-59ea-8924-246f31e94072": {
           "Name": "Out",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {}
         }
@@ -5482,7 +5311,7 @@
       "NodeDescs": {
         "92c05ebc-1967-49a4-94b5-2d01fe1e6b85": {
           "Name": "Parse Bool",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "815d8afe-7685-4691-8c83-ebe9cff591d3": {
               "Name": "String",
@@ -5523,7 +5352,7 @@
       "NodeDescs": {
         "5e25f40a-2b8c-4327-a89c-7a749838da7d": {
           "Name": "Parse Float",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "815d8afe-7685-4691-8c83-ebe9cff591d3": {
               "Name": "String",
@@ -5564,7 +5393,7 @@
       "NodeDescs": {
         "00b49995-a322-47a3-a32b-5530f2ba7fed": {
           "Name": "Parse Int",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "815d8afe-7685-4691-8c83-ebe9cff591d3": {
               "Name": "String",
@@ -5605,7 +5434,7 @@
       "NodeDescs": {
         "5e002bc3-c667-441c-8098-4df2f956de5b": {
           "Name": "Piston Get Acceleration",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "b55e6046-d711-4c48-8fd8-a8f9cf77f00b": {
               "Name": "Target",
@@ -5637,7 +5466,7 @@
       "NodeDescs": {
         "e503b0e4-d295-48cc-bf95-1f1a8127a009": {
           "Name": "Piston Get Distance",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "146bf3b6-4fa7-4a64-9fe3-c4d49d161f36": {
               "Name": "Target",
@@ -5669,7 +5498,7 @@
       "NodeDescs": {
         "639a360e-aeb1-4c5d-8bc1-96bfaea8aef2": {
           "Name": "Piston Get Marker Distance",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "2cb83108-6622-4f6b-8c4c-67d2e9b95689": {
               "Name": "Target",
@@ -5701,7 +5530,7 @@
       "NodeDescs": {
         "bb702e97-9f40-45cb-b35d-3a2193ab6800": {
           "Name": "Piston Get Max Distance",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "cde1f21d-29e0-4a5f-8ddf-400f498fc335": {
               "Name": "Target",
@@ -5733,7 +5562,7 @@
       "NodeDescs": {
         "1d989cd3-d6ae-4503-b80e-5e630ec3f308": {
           "Name": "Piston Get Speed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7f707a5d-b987-4535-990b-0a8412151f76": {
               "Name": "Target",
@@ -5765,7 +5594,7 @@
       "NodeDescs": {
         "07c316df-cfa1-4ef8-ac3b-d7e9c4795812": {
           "Name": "Piston Set Acceleration",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "579ecfe3-0812-47cc-97d1-6485edbc3e95": {
               "Name": "",
@@ -5807,7 +5636,7 @@
       "NodeDescs": {
         "283cb154-76e8-4d60-9899-2a50b6e4c093": {
           "Name": "Piston Set Distance",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "b5d9e90d-bef3-4a6f-ae22-89e090469bae": {
               "Name": "",
@@ -5849,7 +5678,7 @@
       "NodeDescs": {
         "bf25fab6-14ef-4815-a7db-92d99fc627d3": {
           "Name": "Piston Set Marker Distance",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "2e08d0ea-09fb-47fd-a65b-968b304b971c": {
               "Name": "",
@@ -5891,7 +5720,7 @@
       "NodeDescs": {
         "95431866-97f3-43b4-91f3-4bd3574b2b02": {
           "Name": "Piston Set Max Distance",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "a58e7d3b-b8f5-4937-855c-c7766e4e9a44": {
               "Name": "",
@@ -5933,7 +5762,7 @@
       "NodeDescs": {
         "419d2d2f-18f8-4223-b2f7-a7d1450c242c": {
           "Name": "Piston Set Speed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "68b3b16e-ab65-4c62-b96c-c0c1ad27ac6c": {
               "Name": "",
@@ -5975,7 +5804,7 @@
       "NodeDescs": {
         "7b725036-4996-441d-ac54-91ac2c23d6b3": {
           "Name": "Player Add Role",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "cae0efe6-c23e-4858-8352-d66e6e857f6d": {
               "Name": "",
@@ -6016,7 +5845,7 @@
       "NodeDescs": {
         "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
           "Name": "Player Get Equipped Objects",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "c10e69b9-e6cf-4d39-af56-301b0ec857a0": {
               "Name": "Player",
@@ -6068,7 +5897,7 @@
       "NodeDescs": {
         "4646dbed-e616-470e-8e0c-eb446b91838b": {
           "Name": "Player Get Is Local",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "cb924722-ff83-432e-b020-0834c5fc16d3": {
               "Name": "Target",
@@ -6104,7 +5933,7 @@
       "NodeDescs": {
         "9b39ed47-e9a5-4f04-b4cd-80f5bbaff2f7": {
           "Name": "Player Has Role",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "dbbd6d58-ed28-49c7-b7d1-0779d437c338": {
               "Name": "Target",
@@ -6140,7 +5969,7 @@
       "NodeDescs": {
         "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
           "Name": "Player Is Authority Of",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "0ed9735b-84bf-4d78-afb5-ddea14449b04": {
               "Name": "Target",
@@ -6181,7 +6010,7 @@
       "NodeDescs": {
         "6b5c4b0b-be26-4055-b26f-1e5f061c63ca": {
           "Name": "Player Left Hand Finger Direction",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "8050a2d1-61a4-4e38-9578-14d2f13ecfbe": {
               "Name": "Target",
@@ -6212,7 +6041,7 @@
       "NodeDescs": {
         "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
           "Name": "Player Left Hand Position",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "a81d335e-1e70-49e8-823a-ad5225db69a1": {
               "Name": "Target",
@@ -6243,7 +6072,7 @@
       "NodeDescs": {
         "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
           "Name": "Player Left Hand Velocity",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "d3109f73-ba4a-4a6e-b40a-0dfc928fc726": {
               "Name": "Target",
@@ -6274,7 +6103,7 @@
       "NodeDescs": {
         "89981fe2-2e27-4b92-b8c2-c0159b62bccc": {
           "Name": "Player Remove Role",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "8a8e43db-37d7-4d6f-a5cc-4b508a25ceda": {
               "Name": "",
@@ -6315,7 +6144,7 @@
       "NodeDescs": {
         "646ff790-c930-4565-ae38-99a798271a50": {
           "Name": "Player Right Hand Finger Direction",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "535feb44-7f79-428a-a0f7-6492c617effe": {
               "Name": "Target",
@@ -6346,7 +6175,7 @@
       "NodeDescs": {
         "e9d3330d-c290-41d5-aa37-cc5e43198836": {
           "Name": "Player Right Hand Position",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "89434fd5-b696-4ff9-ba30-fa6d885530d7": {
               "Name": "Target",
@@ -6377,7 +6206,7 @@
       "NodeDescs": {
         "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
           "Name": "Player Right Hand Velocity",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "f2d49e34-73bf-4641-9669-2fca468d63fa": {
               "Name": "Target",
@@ -6408,12 +6237,9 @@
       "NodeDescs": {
         "288d4e89-ebed-41ed-a522-4c79bd48471a": {
           "Name": "Power",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -6445,7 +6271,7 @@
       "NodeDescs": {
         "46e6b40e-2416-4078-b7dc-a0ecc2c2aa20": {
           "Name": "Prompt Local Player",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "8b1244aa-cdf3-4e42-82d8-9121839d3dbe": {
               "Name": "",
@@ -6499,14 +6325,11 @@
       "ReadonlyName": "Property",
       "Description": "",
       "NodeDescs": {
-        "e5a09f43-1667-54fa-9648-2cf9d4cc80f0": {
+        "45592255-a4eb-5261-95a5-fd95229b6a32": {
           "Name": "Property",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "cfb732cd-f7b0-4564-aaa2-08d07fc8a18e": {
               "Name": "Set",
@@ -6563,7 +6386,7 @@
       "NodeDescs": {
         "4ecbf247-ab14-4f9e-8094-e40a45d283e6": {
           "Name": "Random Float",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "c266b499-e7fa-4cab-8213-9e708e772c78": {
               "Name": "",
@@ -6610,7 +6433,7 @@
       "NodeDescs": {
         "fb2645f0-4042-4ef1-b988-af2f80e651ec": {
           "Name": "Random Int",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "cfe43805-c0af-486a-a161-fc6a49b09f9b": {
               "Name": "",
@@ -6657,7 +6480,7 @@
       "NodeDescs": {
         "6ba175cf-493a-4790-b916-57259f94cd98": {
           "Name": "Reset Object",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "40ca50e3-8e4a-497b-9966-067295db161b": {
               "Name": "",
@@ -6694,7 +6517,7 @@
       "NodeDescs": {
         "5ca7c15f-bfed-4103-b5d6-7af5da64a703": {
           "Name": "Reset Player Health",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "2dfb9d50-876f-4674-ab43-42ad309b969c": {
               "Name": "",
@@ -6730,7 +6553,7 @@
       "NodeDescs": {
         "e921b08d-10c2-4be4-86fe-b8c7155cb97b": {
           "Name": "Reset Room",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "94a3badf-2ec4-4aba-9757-d53b98d5e94d": {
               "Name": "",
@@ -6755,7 +6578,7 @@
       "NodeDescs": {
         "117b8c83-5ada-4665-a0c6-2c6ffdec98b9": {
           "Name": "Rotator Get Marker Rotation",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "77e2fd51-cfa3-4154-84fa-b83290b327e1": {
               "Name": "Target",
@@ -6787,7 +6610,7 @@
       "NodeDescs": {
         "30fe0829-2f08-4bd2-b4b1-9a41764e5a76": {
           "Name": "Rotator Get Rotation",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "668d5bba-4765-444d-9b5d-be7b9df44d0a": {
               "Name": "Target",
@@ -6819,7 +6642,7 @@
       "NodeDescs": {
         "2d96da47-4d37-4463-a3bd-8f8cd2ab0c58": {
           "Name": "Rotator Get Rotation Acceleration",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "a78bda91-799b-4910-8d20-dfe15a69206d": {
               "Name": "Target",
@@ -6851,7 +6674,7 @@
       "NodeDescs": {
         "be834de9-91cb-4588-8988-3a6abfd56573": {
           "Name": "Rotator Get Rotation Speed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "e944063a-f672-4bfb-88dd-0ff2b8c69355": {
               "Name": "Target",
@@ -6883,7 +6706,7 @@
       "NodeDescs": {
         "0f9da436-0752-422d-8323-fa445a9ca06b": {
           "Name": "Rotator Set Marker Rotation",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "0a851f66-22e8-4ee0-bf08-a3d5082b37e4": {
               "Name": "",
@@ -6925,7 +6748,7 @@
       "NodeDescs": {
         "07ae26b8-e0d7-49c0-bb2c-25d66d31fe3c": {
           "Name": "Rotator Set Rotation",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "b31cd4d2-78dc-44d2-822c-1053ee8d2401": {
               "Name": "",
@@ -6967,7 +6790,7 @@
       "NodeDescs": {
         "db29fd41-9fb5-4c2a-8c72-c8d327b0f23f": {
           "Name": "Rotator Set Rotation Acceleration",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "19ca9599-5bb4-4872-a226-8dd095497374": {
               "Name": "",
@@ -7009,7 +6832,7 @@
       "NodeDescs": {
         "9d0e3cf5-581d-4fb5-8346-c9e7d9877b3f": {
           "Name": "Rotator Set Rotation Speed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "07742fa5-6956-4ad4-a8ca-ba44f0ad5593": {
               "Name": "",
@@ -7051,7 +6874,7 @@
       "NodeDescs": {
         "c6cfe49a-4ffb-4714-9564-8ddda0300676": {
           "Name": "Round",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "d69ffdc0-41b5-40fb-8afd-5820aa7644cc": {
               "Name": "Value",
@@ -7083,7 +6906,7 @@
       "NodeDescs": {
         "0d2a4771-0694-4b84-8e07-2080c26aae22": {
           "Name": "Round to Int",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "26345749-2acb-4f62-8ff1-fab501950692": {
               "Name": "Value",
@@ -7113,9 +6936,9 @@
       "ReadonlyName": "Self",
       "Description": "",
       "NodeDescs": {
-        "035a785a-7ce3-53fc-a1a2-d1db6965e0b7": {
+        "e78a65b7-8f4a-51ab-a54d-34492351095a": {
           "Name": "Self",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "57f94cc4-d748-4d4a-a4e2-1b2263152bd6": {
@@ -7132,9 +6955,9 @@
       "ReadonlyName": "Self",
       "Description": "Outputs the object (and type) of the current context. For example, a self node inside a light outputs that specific light of the light type. This can only be placed inside an object board of a specific object.",
       "NodeDescs": {
-        "48f80a82-d1ae-5eb6-a0d7-bd2028f139fe": {
+        "582832a5-43d0-5e76-889f-588c6f04e7a0": {
           "Name": "Self",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "cd66459f-86ab-4019-a182-fe70115f2be5": {
@@ -7159,12 +6982,9 @@
       "NodeDescs": {
         "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
           "Name": "Set Element",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "6e3babc5-fc8e-43fb-b485-7f03a48bc09d": {
               "Name": "",
@@ -7211,12 +7031,9 @@
       "NodeDescs": {
         "76187060-c0b0-4ec6-b082-ff81754cff25": {
           "Name": "Set Value",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "027d33c7-3703-4132-9a5a-b6f23026c241": {
               "Name": "",
@@ -7257,7 +7074,7 @@
       "NodeDescs": {
         "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
           "Name": "Sfx Get Volume",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "17983fed-b13c-4b12-9133-e64da602d067": {
               "Name": "Target",
@@ -7289,7 +7106,7 @@
       "NodeDescs": {
         "a0a17fe1-bdb0-4687-81de-141ce97710ed": {
           "Name": "Sfx IsPlaying",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "b0ec4ade-a852-4472-ab7b-7acb022fce85": {
               "Name": "Target",
@@ -7321,7 +7138,7 @@
       "NodeDescs": {
         "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
           "Name": "Sfx Play",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "a508086a-9455-4d5e-a26f-c0a8a8eac741": {
               "Name": "",
@@ -7358,7 +7175,7 @@
       "NodeDescs": {
         "d2df4993-d858-4df1-aca2-fc0e7f479668": {
           "Name": "Sfx Set Volume",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "ece2f83e-88c1-4ea3-8731-2e29817dac08": {
               "Name": "",
@@ -7400,7 +7217,7 @@
       "NodeDescs": {
         "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
           "Name": "Sfx Stop",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "94b8a495-7229-4e37-bff8-7cc579e03e2e": {
               "Name": "",
@@ -7437,12 +7254,9 @@
       "NodeDescs": {
         "61bc2310-69f5-4dfa-b43c-12ae98dd05ab": {
           "Name": "Show Notification",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "942ca2b3-6a47-407e-b5f8-0dcef55acc1b": {
               "Name": "",
@@ -7478,7 +7292,7 @@
       "NodeDescs": {
         "ea824326-5061-411d-980c-30031511c821": {
           "Name": "Sin",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "3460f5ca-2771-4914-ac0a-b0f3ef48aa5e": {
               "Name": "Value",
@@ -7510,7 +7324,7 @@
       "NodeDescs": {
         "fb6a63b1-3f55-4dcf-9bf0-6ef82e3296d5": {
           "Name": "Spawner Internal Start Spawning",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "575ac827-7497-4b2f-a045-1c2c142815dd": {
               "Name": "",
@@ -7562,7 +7376,7 @@
       "NodeDescs": {
         "6a669e6e-4ebf-434c-9c23-d2b769d49b47": {
           "Name": "Spawner Reset",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "575ac827-7497-4b2f-a045-1c2c142815dd": {
               "Name": "",
@@ -7599,7 +7413,7 @@
       "NodeDescs": {
         "77afc9dd-baa9-4312-b8b8-7ef479c840e6": {
           "Name": "String Format",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
               "Name": "Format",
@@ -7640,7 +7454,7 @@
       "NodeDescs": {
         "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
           "Name": "Substring",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "13159af8-8c56-457f-882a-66e1d06695ab": {
               "Name": "String",
@@ -7681,12 +7495,9 @@
       "NodeDescs": {
         "1fbb364c-1af0-44bb-a82b-905caeb6819a": {
           "Name": "Subtract",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float | Vector3)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float | Vector3)"
+          },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
               "Name": "Value",
@@ -7724,7 +7535,7 @@
       "NodeDescs": {
         "620def94-34e2-48ec-b294-25139aa43f74": {
           "Name": "Sync AI",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7749,7 +7560,7 @@
       "NodeDescs": {
         "1e2ca8e7-037f-4a1a-82a7-62b81928b6a4": {
           "Name": "Sync bool",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7774,7 +7585,7 @@
       "NodeDescs": {
         "e4c52748-6ebc-487d-821c-11d661a08ed1": {
           "Name": "Sync Combatant",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7799,7 +7610,7 @@
       "NodeDescs": {
         "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
           "Name": "Sync CreationObject",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7824,7 +7635,7 @@
       "NodeDescs": {
         "56dcf860-9c74-4213-8859-45aba0b96d43": {
           "Name": "Sync float",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7849,7 +7660,7 @@
       "NodeDescs": {
         "dd96fd78-c47b-4ccc-9d6b-23da2f3f7987": {
           "Name": "Sync int",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7874,7 +7685,7 @@
       "NodeDescs": {
         "ddc89f58-d8f2-49de-af34-332382d8bb71": {
           "Name": "Sync Player",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7899,7 +7710,7 @@
       "NodeDescs": {
         "62f1b8b1-f1d3-4ceb-b0e9-57c4915bf401": {
           "Name": "Sync string",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7924,7 +7735,7 @@
       "NodeDescs": {
         "4499ea8f-1b4d-4072-9098-c6df7f49ed00": {
           "Name": "Sync Vector3",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
@@ -7947,9 +7758,9 @@
       "ReadonlyName": "Synced Event Sender",
       "Description": "Use these chips to sync your custom events over the network. Once placed, make sure to use the configure tool to change the event that you want to fire, as well as who you want the event to be sent to. These events are networked. In the configuration menu, your options for who the event gets sent to are: All, Authority, and Others.",
       "NodeDescs": {
-        "51c41a63-68a9-587b-a82f-4c2cc0226c29": {
+        "9387511b-78fe-5ee4-9695-67a6f429c7b0": {
           "Name": "Synced Event Sender",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "5ff23b09-2d13-4331-8519-150c6b8b0b2f": {
               "Name": "",
@@ -7985,7 +7796,7 @@
       "NodeDescs": {
         "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
           "Name": "Tan",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "3507d974-2d77-440e-8d16-b5c7e2e5532d": {
               "Name": "Value",
@@ -8017,7 +7828,7 @@
       "NodeDescs": {
         "2bd445ce-08ec-4c6a-9254-d63535690779": {
           "Name": "Text Set Color",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "5c4b88f9-512a-4b1b-8d5a-8d7a5338342c": {
               "Name": "",
@@ -8059,7 +7870,7 @@
       "NodeDescs": {
         "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
           "Name": "Text Set Material",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7eca75df-dc5b-4915-8488-fc48646e6749": {
               "Name": "",
@@ -8101,7 +7912,7 @@
       "NodeDescs": {
         "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
           "Name": "Text Set Text",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "442382ca-89e3-4e75-be04-671a1bd9b11c": {
               "Name": "",
@@ -8143,7 +7954,7 @@
       "NodeDescs": {
         "8722445f-e552-4d4a-bced-8afa63bbf70b": {
           "Name": "Time Get Precise Seconds",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "88f3addc-cf2b-44a1-a7c0-816bd0deb857": {
@@ -8168,7 +7979,7 @@
       "NodeDescs": {
         "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
           "Name": "Time Get Universal Seconds",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7148bed6-2bc2-4120-88b0-aa2a80e4db73": {
@@ -8193,7 +8004,7 @@
       "NodeDescs": {
         "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
           "Name": "Time Get Universal Time",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "8f878050-06b6-40b3-a005-3b96b0776d26": {
@@ -8243,12 +8054,9 @@
       "NodeDescs": {
         "75a3a9c2-da17-4762-b87b-1735b44af659": {
           "Name": "To Combatant",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(AI | Player)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(AI | Player)"
+          },
           "InputPorts": {
             "14ab1e1d-f3d2-4a8f-9c80-e96a2b36802d": {
               "Name": "Player or AI",
@@ -8280,12 +8088,9 @@
       "NodeDescs": {
         "315a494e-84cc-4e3c-acff-389bb932b5d0": {
           "Name": "To Creation Object",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "CreationObject"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "CreationObject"
+          },
           "InputPorts": {
             "18fb2a38-714f-434a-bd48-78b22d14b4d6": {
               "Name": "Target",
@@ -8322,12 +8127,9 @@
       "NodeDescs": {
         "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
           "Name": "To String",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "575ac827-7497-4b2f-a045-1c2c142815dd": {
               "Name": "Value",
@@ -8368,7 +8170,7 @@
       "NodeDescs": {
         "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
           "Name": "Toggle Button Get Is Pressed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "452489c1-2719-45be-97dc-fe493f03609c": {
               "Name": "Target",
@@ -8400,7 +8202,7 @@
       "NodeDescs": {
         "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
           "Name": "Toggle Button Set Is Pressed",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "f641ad8e-9de0-42f1-8a20-58cc52904030": {
               "Name": "",
@@ -8442,7 +8244,7 @@
       "NodeDescs": {
         "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
           "Name": "Trigger Volume Get Filter Role",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "40a9dcd7-0d52-47be-9d48-75d2d441a453": {
               "Name": "Target",
@@ -8474,7 +8276,7 @@
       "NodeDescs": {
         "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
           "Name": "Trigger Volume Get Filter Tags",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "432a175a-58f6-41c4-b7c5-a1a0dbd158c2": {
               "Name": "Target",
@@ -8506,7 +8308,7 @@
       "NodeDescs": {
         "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
           "Name": "Trigger Volume Get Num Objects",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "8e55bf26-b20a-4572-a88a-99df06b4a3f6": {
               "Name": "Target",
@@ -8538,7 +8340,7 @@
       "NodeDescs": {
         "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
           "Name": "Trigger Volume Get Num Players",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "b08bfbf1-c5d0-4d2a-bece-4126c4e5acd0": {
               "Name": "Target",
@@ -8570,7 +8372,7 @@
       "NodeDescs": {
         "530932a7-8781-4b09-a945-b33af6675809": {
           "Name": "Trigger Volume Get Objects",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "7a8aa4c1-e88a-4fa5-bef6-b1173bf8a089": {
               "Name": "Target",
@@ -8602,7 +8404,7 @@
       "NodeDescs": {
         "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
           "Name": "Trigger Volume Get Players",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "b7303529-a852-4835-845f-7799bce80a31": {
               "Name": "Target",
@@ -8634,7 +8436,7 @@
       "NodeDescs": {
         "55cfecf9-2623-4aad-948c-6ca89f11911b": {
           "Name": "Trigger Volume Set Filter Role",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "6c94f3b5-fa74-45b8-a40c-3607039577a6": {
               "Name": "",
@@ -8676,7 +8478,7 @@
       "NodeDescs": {
         "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
           "Name": "Trigger Volume Set Filter Tags",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "819e23c0-64d9-4f22-8d5d-0be0227412f6": {
               "Name": "",
@@ -8718,12 +8520,9 @@
       "NodeDescs": {
         "bc5e4a50-1d2c-43bb-a93f-29e53f5af50a": {
           "Name": "Value Changed",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "any"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
             "3b04beb3-c913-41f8-9693-427b621e4c95": {
               "Name": "Variable",
@@ -8759,7 +8558,7 @@
       "NodeDescs": {
         "0e92a7fb-fb38-418c-af39-9afec92112ee": {
           "Name": "Variable (AI)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -8807,7 +8606,7 @@
       "NodeDescs": {
         "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
           "Name": "Variable (bool)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -8854,7 +8653,7 @@
       "NodeDescs": {
         "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
           "Name": "Variable (Combatant)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -8902,7 +8701,7 @@
       "NodeDescs": {
         "7077d139-9876-495e-9756-58150fef9f3b": {
           "Name": "Variable (CreationObject)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -8950,7 +8749,7 @@
       "NodeDescs": {
         "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
           "Name": "Variable (float)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -8998,7 +8797,7 @@
       "NodeDescs": {
         "33224907-68ff-4102-802e-7c3eed481d37": {
           "Name": "Variable (int)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9046,7 +8845,7 @@
       "NodeDescs": {
         "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
           "Name": "Variable (List<bool>)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9108,7 +8907,7 @@
       "NodeDescs": {
         "536e376c-087d-4909-9412-3fcee5d6f52b": {
           "Name": "Variable (List<CreationObject>)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9164,7 +8963,7 @@
       "NodeDescs": {
         "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
           "Name": "Variable (List<float>)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9220,7 +9019,7 @@
       "NodeDescs": {
         "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
           "Name": "Variable (List<int>)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9276,7 +9075,7 @@
       "NodeDescs": {
         "32837e14-12de-465f-89dc-ceddb64cdd6c": {
           "Name": "Variable (List<Player>)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9331,7 +9130,7 @@
       "NodeDescs": {
         "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
           "Name": "Variable (List<string>)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9381,7 +9180,7 @@
       "NodeDescs": {
         "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
           "Name": "Variable (List<Vector3>)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9431,7 +9230,7 @@
       "NodeDescs": {
         "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
           "Name": "Variable (Player)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9478,7 +9277,7 @@
       "NodeDescs": {
         "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
           "Name": "Variable (string)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9525,7 +9324,7 @@
       "NodeDescs": {
         "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
           "Name": "Variable (Vector3)",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
               "Name": "",
@@ -9573,7 +9372,7 @@
       "NodeDescs": {
         "814e9337-7542-4851-9da0-c73885ab0b4f": {
           "Name": "Vector Create",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "ddbc97a4-2ffa-43f5-a439-c20f03dea102": {
               "Name": "X",
@@ -9615,7 +9414,7 @@
       "NodeDescs": {
         "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
           "Name": "Vector Gadget Get Vector",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "0900fec3-6c6d-45b3-b180-ee99412b02c3": {
               "Name": "Direction",
@@ -9652,7 +9451,7 @@
       "NodeDescs": {
         "c3b9ba98-6c4a-44c2-9125-043314fba4a6": {
           "Name": "Vector Get Magnitude",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "8a8144c9-f080-4128-9799-5a25f19dcf28": {
               "Name": "Vector",
@@ -9684,7 +9483,7 @@
       "NodeDescs": {
         "2d677241-61b7-45d2-aec2-4a302e3483a0": {
           "Name": "Vector Split",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "e954e76b-bf08-4d5a-afcf-0be2061bc693": {
               "Name": "Vector",
@@ -9726,7 +9525,7 @@
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
           "Name": "Vector3 Cross",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "cc2d25a9-95ba-4dd8-a0a1-9ba5bb81f535": {
               "Name": "Lhs",
@@ -9763,7 +9562,7 @@
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
           "Name": "Vector3 Dot",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "a442a2b5-fc32-459e-9186-dbc6a73d4aea": {
               "Name": "Lhs",
@@ -9800,7 +9599,7 @@
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
           "Name": "Vector3 Normalize",
-          "ReadonlyTypeParams": [],
+          "ReadonlyTypeParams": {},
           "InputPorts": {
             "8df94c79-0cf5-4417-b7b6-6270c1e0ffda": {
               "Name": "Value",
@@ -9832,12 +9631,9 @@
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
           "Name": "Vector3 Scale",
-          "ReadonlyTypeParams": [
-            {
-              "ReadonlyName": "T",
-              "ReadonlyType": "(int | float)"
-            }
-          ],
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
             "39934054-0d42-46b2-8188-395a46d4b1af": {
               "Name": "Value",

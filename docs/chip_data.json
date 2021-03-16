@@ -1620,42 +1620,6 @@
         }
       ]
     },
-    "6c9e8939-6963-4803-9f22-90ee32382b0a": {
-      "ReadonlyName": "Debug Log",
-      "Description": "",
-      "NodeDescs": {
-        "6c9e8939-6963-4803-9f22-90ee32382b0a": {
-          "Name": "Debug Log",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "a77f3073-8389-4bed-a225-18094169fb30": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "013e8ab4-53b5-4d75-96bb-c95d0dd16563": {
-              "Name": "Log String",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "a5544ac5-cecd-48b7-8e67-4e9a48319558": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Dev"
-          ]
-        }
-      ]
-    },
     "cefee2a5-d4a8-4dff-8c4e-bad684ca8d34": {
       "ReadonlyName": "Delay",
       "Description": "Fires outputs based on the inputted time to delay. The Run exec fires as soon as the node is executed. The After Delay exec fires once the input delay duration has completed. After Canceled fires after the delay node’s Cancel exec has been fired. Cancel cancels all current delays running from this node.",
@@ -6317,65 +6281,6 @@
         {
           "FilterPath": [
             "Player"
-          ]
-        }
-      ]
-    },
-    "29c788fc-be6c-4524-b882-bb1ee5e51c69": {
-      "ReadonlyName": "Property",
-      "Description": "",
-      "NodeDescs": {
-        "45592255-a4eb-5261-95a5-fd95229b6a32": {
-          "Name": "Property",
-          "ReadonlyTypeParams": {
-            "T": "any"
-          },
-          "InputPorts": {
-            "cfb732cd-f7b0-4564-aaa2-08d07fc8a18e": {
-              "Name": "Set",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "de230655-834c-4100-9e6e-a245b6b4ae41": {
-              "Name": "Target",
-              "ReadonlyType": "T",
-              "Description": ""
-            },
-            "9004f567-dcbf-428a-9150-8b95a57930d4": {
-              "Name": "Value",
-              "ReadonlyType": "any",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "32777dc5-56ab-4f1e-a943-f78510988455": {
-              "Name": "Set",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "1ecd40ea-d259-4109-b3a8-810a95b0c70e": {
-              "Name": "Success",
-              "ReadonlyType": "bool",
-              "Description": ""
-            },
-            "776535d5-8dd2-4c63-b5fa-3d4c3bb24bce": {
-              "Name": "Value",
-              "ReadonlyType": "any",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Objects",
-            "Core"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Dev"
           ]
         }
       ]

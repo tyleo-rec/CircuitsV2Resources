@@ -12,6 +12,7 @@
   * [Circuits V2 Transitional Class (Discord Class Link)](https://discord.com/channels/737529805121126471)
   * [Circuit Think Tank (Rec Room Event Link)](https://rec.net/room/CircuitThinkTank/events)
 * [Releases](https://tyleo-rec.github.io/CircuitsV2Resources/releases/)
+* [Chip Json](https://github.com/tyleo-rec/CircuitsV2Resources/blob/master/misc/chip_data.json)
 
 ## Unofficial Resources (English)
 ### YouTube

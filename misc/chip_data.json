@@ -693,7 +693,7 @@
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyName": "Asin",
-      "Description": "this chip allows you to use the math formula Asin",
+      "Description": "This chip allows you to use the math formula Asin",
       "NodeDescs": {
         "aaa4e58f-16df-426a-b7a7-a654eab97037": {
           "Name": "Asin",
@@ -1678,7 +1678,7 @@
     },
     "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
       "ReadonlyName": "Dice Get Player Rolled",
-      "Description": "Returns the player who Rolled the dice",
+      "Description": "Returns the player who rolled the dice",
       "NodeDescs": {
         "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
           "Name": "Dice Get Player Rolled",
@@ -1710,7 +1710,7 @@
     },
     "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
       "ReadonlyName": "Dice Get Result",
-      "Description": "Returns the resualt of the dice",
+      "Description": "Returns the result of the dice",
       "NodeDescs": {
         "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
           "Name": "Dice Get Result",
@@ -2840,7 +2840,7 @@
     },
     "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
       "ReadonlyName": "Greater Than",
-      "Description": "Returns true if input A is greater Than input B",
+      "Description": "Returns true if input A is greater than input B",
       "NodeDescs": {
         "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
           "Name": "Greater Than",
@@ -4134,7 +4134,7 @@
     },
     "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
       "ReadonlyName": "List All True",
-      "Description": "If all of the bool values is true then return ture",
+      "Description": "If all of the bool values in the list are true then return ture",
       "NodeDescs": {
         "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
           "Name": "List All True",
@@ -4172,7 +4172,7 @@
     },
     "f9589495-685e-4e14-af2e-5cd45f860021": {
       "ReadonlyName": "List Any True",
-      "Description": "If any bool value is true then return ture",
+      "Description": "If any bool value in the list is true then return ture",
       "NodeDescs": {
         "f9589495-685e-4e14-af2e-5cd45f860021": {
           "Name": "List Any True",
@@ -4210,7 +4210,7 @@
     },
     "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
       "ReadonlyName": "List Concat",
-      "Description": "Connect lists together into one list",
+      "Description": "Combine lists together into one list",
       "NodeDescs": {
         "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
           "Name": "List Concat",

@@ -725,7 +725,7 @@
     },
     "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
       "ReadonlyName": "Atan",
-      "Description": "This node allows you to use the math formula Atan",
+      "Description": "This chip allows you to use the math formula Atan",
       "NodeDescs": {
         "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
           "Name": "Atan",
@@ -757,7 +757,7 @@
     },
     "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
       "ReadonlyName": "Atan2",
-      "Description": "This node allows you to use the math formula Atan2",
+      "Description": "This chip allows you to use the math formula Atan2",
       "NodeDescs": {
         "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
           "Name": "Atan2",
@@ -1337,7 +1337,7 @@
     },
     "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
       "ReadonlyName": "Cos",
-      "Description": "This node allows you to use the math formula Cos",
+      "Description": "This chip allows you to use the math formula Cos",
       "NodeDescs": {
         "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
           "Name": "Cos",
@@ -2802,7 +2802,7 @@
     },
     "a10e7788-f016-4390-a68e-87d93b47edb1": {
       "ReadonlyName": "Greater or Equal",
-      "Description": "Returns true if input A is Greater or Equal than input B",
+      "Description": "Returns true if input A is greater or equal than input B",
       "NodeDescs": {
         "a10e7788-f016-4390-a68e-87d93b47edb1": {
           "Name": "Greater or Equal",
@@ -2840,7 +2840,7 @@
     },
     "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
       "ReadonlyName": "Greater Than",
-      "Description": "Returns true if input A is Greater Than input B",
+      "Description": "Returns true if input A is greater Than input B",
       "NodeDescs": {
         "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
           "Name": "Greater Than",
@@ -4210,7 +4210,7 @@
     },
     "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
       "ReadonlyName": "List Concat",
-      "Description": "Connect lists toghter into one list",
+      "Description": "Connect lists together into one list",
       "NodeDescs": {
         "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
           "Name": "List Concat",
@@ -5394,7 +5394,7 @@
     },
     "5e002bc3-c667-441c-8098-4df2f956de5b": {
       "ReadonlyName": "Piston Get Acceleration",
-      "Description": "Get Acceleration of a piston",
+      "Description": "Get acceleration of a piston",
       "NodeDescs": {
         "5e002bc3-c667-441c-8098-4df2f956de5b": {
           "Name": "Piston Get Acceleration",
@@ -6032,7 +6032,7 @@
     },
     "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
       "ReadonlyName": "Player Left Hand Velocity",
-      "Description": "Outputs the Velocity of a player's left hand",
+      "Description": "Outputs the velocity of a player's left hand",
       "NodeDescs": {
         "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
           "Name": "Player Left Hand Velocity",
@@ -6166,7 +6166,7 @@
     },
     "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
       "ReadonlyName": "Player Right Hand Velocity",
-      "Description": "Outputs the Velocity of a player's right hand",
+      "Description": "Outputs the velocity of a player's right hand",
       "NodeDescs": {
         "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
           "Name": "Player Right Hand Velocity",
@@ -7697,7 +7697,7 @@
     },
     "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
       "ReadonlyName": "Tan",
-      "Description": "This node allows you to use the math formula Tan",
+      "Description": "This chip allows you to use the math formula Tan",
       "NodeDescs": {
         "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
           "Name": "Tan",

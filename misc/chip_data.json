@@ -192,7 +192,7 @@
         "5858a52e-54fb-4bb2-80a0-ec5fce88b3ef": {
           "Name": "AI Has Line of Sight To Target",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T": "(AI | Combatant | CustomObject | PatrolPoint | Player | Vector3)"
           },
           "InputPorts": {
             "39b1280e-dab1-4c3b-b931-6406e6524a24": {
@@ -231,7 +231,7 @@
         "b5badf49-acfe-4a42-80e2-5262878e2d89": {
           "Name": "AI Look At",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T": "(AI | Combatant | CustomObject | PatrolPoint | Player | Vector3)"
           },
           "InputPorts": {
             "ad7c3748-8da7-42fb-b445-50ffa13009b4": {
@@ -280,7 +280,7 @@
         "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
           "Name": "AI Path To",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T": "(AI | Combatant | CustomObject | PatrolPoint | Player | Vector3)"
           },
           "InputPorts": {
             "af14ef43-288f-47a4-a736-32e10ccb509f": {
@@ -693,7 +693,7 @@
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyName": "Asin",
-      "Description": "",
+      "Description": "this node allows you to use the math formula Asin",
       "NodeDescs": {
         "aaa4e58f-16df-426a-b7a7-a654eab97037": {
           "Name": "Asin",
@@ -725,7 +725,7 @@
     },
     "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
       "ReadonlyName": "Atan",
-      "Description": "",
+      "Description": "This node allows you to use the math formula Atan",
       "NodeDescs": {
         "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
           "Name": "Atan",
@@ -757,7 +757,7 @@
     },
     "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
       "ReadonlyName": "Atan2",
-      "Description": "",
+      "Description": "This node allows you to use the math formula Atan2",
       "NodeDescs": {
         "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
           "Name": "Atan2",
@@ -1337,7 +1337,7 @@
     },
     "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
       "ReadonlyName": "Cos",
-      "Description": "",
+      "Description": "This node allows you to use the math formula Cos",
       "NodeDescs": {
         "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
           "Name": "Cos",
@@ -1382,7 +1382,7 @@
             },
             "ba59583b-0820-4b2c-98a3-49d12e29d030": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "6f43185b-0be5-445e-a832-f5bbb97a435b": {
@@ -1426,7 +1426,7 @@
           "OutputPorts": {
             "995538a8-7031-4e9c-a634-95e507d89f8d": {
               "Name": "Objects with Tag",
-              "ReadonlyType": "List<CreationObject>",
+              "ReadonlyType": "List<CustomObject>",
               "Description": ""
             }
           }
@@ -1451,7 +1451,7 @@
           "InputPorts": {
             "854ab564-5c5b-450e-87d1-bcc8cb57c1d2": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -1488,7 +1488,7 @@
           "InputPorts": {
             "9874b3bd-e051-4400-aa4c-0b20d8e61fee": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -1519,7 +1519,7 @@
           "InputPorts": {
             "f073a7a5-6b9a-4dca-8538-32e534e9a88d": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -1551,7 +1551,7 @@
           "InputPorts": {
             "7702ff52-2f2f-484a-9189-86a20c6a03db": {
               "Name": "Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "e87ad31d-d276-4903-a49e-77baf391001b": {
@@ -1593,7 +1593,7 @@
             },
             "6bda7af5-8a65-4a52-a5fc-b6919c28764a": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "35c48d44-77c7-4474-b0cb-8a60b63a7b7a": {
@@ -1678,7 +1678,7 @@
     },
     "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
       "ReadonlyName": "Dice Get Player Rolled",
-      "Description": "",
+      "Description": "Returns the player who Rolled the dice",
       "NodeDescs": {
         "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
           "Name": "Dice Get Player Rolled",
@@ -1710,7 +1710,7 @@
     },
     "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
       "ReadonlyName": "Dice Get Result",
-      "Description": "",
+      "Description": "Returns the resualt of the dice",
       "NodeDescs": {
         "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
           "Name": "Dice Get Result",
@@ -1742,7 +1742,7 @@
     },
     "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
       "ReadonlyName": "Dice Get Roll finished",
-      "Description": "",
+      "Description": "Outputs an exec when the dice finished rolling",
       "NodeDescs": {
         "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
           "Name": "Dice Get Roll finished",
@@ -1784,8 +1784,8 @@
         "182e1ae2-1183-4741-af6e-f307b788a857": {
           "Name": "Distance",
           "ReadonlyTypeParams": {
-            "T1": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)",
-            "T2": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T1": "(AI | Combatant | CustomObject | PatrolPoint | Player | Vector3)",
+            "T2": "(AI | Combatant | CustomObject | PatrolPoint | Player | Vector3)"
           },
           "InputPorts": {
             "15286770-ad0c-4ba7-8494-3c384e3879d5": {
@@ -2388,12 +2388,12 @@
         "7ff685a6-f59c-4c6c-b559-f343d81ea1d4": {
           "Name": "From Creation Object",
           "ReadonlyTypeParams": {
-            "T": "CreationObject"
+            "T": "CustomObject"
           },
           "InputPorts": {
             "24c9f17f-1a16-4f6f-a597-3f8da7fe1bfe": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -2527,7 +2527,7 @@
         "88f95338-d1a6-4fad-8424-d714d651f6ac": {
           "Name": "Get Forward Vector",
           "ReadonlyTypeParams": {
-            "T": "(CreationObject | Player)"
+            "T": "(CustomObject | Player)"
           },
           "InputPorts": {
             "53ce784c-9d25-4a29-9aef-e1f779e6339f": {
@@ -2635,7 +2635,7 @@
     },
     "a76a9898-4add-4765-9f5b-f366b586e51c": {
       "ReadonlyName": "Get Player Last Equipped Object",
-      "Description": "",
+      "Description": "Returns the player who last held an object",
       "NodeDescs": {
         "a76a9898-4add-4765-9f5b-f366b586e51c": {
           "Name": "Get Player Last Equipped Object",
@@ -2643,7 +2643,7 @@
           "InputPorts": {
             "11eb2a56-f3ff-4cef-9a7c-14174d586c7d": {
               "Name": "Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -2683,7 +2683,7 @@
         "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
           "Name": "Get Position",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | Player)"
+            "T": "(AI | Combatant | CustomObject | Player)"
           },
           "InputPorts": {
             "15286770-ad0c-4ba7-8494-3c384e3879d5": {
@@ -2711,7 +2711,7 @@
     },
     "d7557465-963e-4451-a55a-dea2050e9b74": {
       "ReadonlyName": "Get Room Authority",
-      "Description": "",
+      "Description": "Returns the player who is the room Authority player",
       "NodeDescs": {
         "d7557465-963e-4451-a55a-dea2050e9b74": {
           "Name": "Get Room Authority",
@@ -2741,7 +2741,7 @@
         "830f781d-2522-4ec0-9d6f-ecfc0bf695f6": {
           "Name": "Get Up Vector",
           "ReadonlyTypeParams": {
-            "T": "(CreationObject | Player)"
+            "T": "(CustomObject | Player)"
           },
           "InputPorts": {
             "e9dc68a7-efa4-4ad7-8e15-27b254436f91": {
@@ -2769,12 +2769,12 @@
     },
     "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
       "ReadonlyName": "Get Velocity",
-      "Description": "",
+      "Description": "Returns the velocity of a player or a CustomObject",
       "NodeDescs": {
         "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
           "Name": "Get Velocity",
           "ReadonlyTypeParams": {
-            "T": "(CreationObject | Player)"
+            "T": "(CustomObject | Player)"
           },
           "InputPorts": {
             "baa3e839-b8f5-4519-a08c-6a7f0f1d2cc8": {
@@ -2802,7 +2802,7 @@
     },
     "a10e7788-f016-4390-a68e-87d93b47edb1": {
       "ReadonlyName": "Greater or Equal",
-      "Description": "",
+      "Description": "Returns true if input A is Greater or Equal than input B",
       "NodeDescs": {
         "a10e7788-f016-4390-a68e-87d93b47edb1": {
           "Name": "Greater or Equal",
@@ -2840,7 +2840,7 @@
     },
     "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
       "ReadonlyName": "Greater Than",
-      "Description": "",
+      "Description": "Returns true if input A is Greater Than input B",
       "NodeDescs": {
         "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
           "Name": "Greater Than",
@@ -3085,7 +3085,7 @@
         "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
           "Name": "Impulse Add",
           "ReadonlyTypeParams": {
-            "T": "(Player | CreationObject)"
+            "T": "(Player | CustomObject)"
           },
           "InputPorts": {
             "47d59582-2661-4d87-a9ef-133d33f75988": {
@@ -3138,7 +3138,7 @@
         "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
           "Name": "Impulse Reflect",
           "ReadonlyTypeParams": {
-            "T": "(Player | CreationObject)"
+            "T": "(Player | CustomObject)"
           },
           "InputPorts": {
             "c0f71599-64c7-4d29-8beb-995335d5a5c0": {
@@ -3196,7 +3196,7 @@
         "f97c530d-03bf-498c-8854-33e814d2600b": {
           "Name": "Impulse Set",
           "ReadonlyTypeParams": {
-            "T": "(Player | CreationObject)"
+            "T": "(Player | CustomObject)"
           },
           "InputPorts": {
             "d721c22d-8695-4df5-8c2d-f6422e91b2b2": {
@@ -3326,17 +3326,17 @@
       ]
     },
     "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
-      "ReadonlyName": "Instance CreationObject",
+      "ReadonlyName": "Instance CustomObject",
       "Description": "",
       "NodeDescs": {
         "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
-          "Name": "Instance CreationObject",
+          "Name": "Instance CustomObject",
           "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
               "Name": "",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           }
@@ -3426,17 +3426,17 @@
       ]
     },
     "1e05b1fd-c75c-4955-917f-5576e5451737": {
-      "ReadonlyName": "Instance List<CreationObject>",
+      "ReadonlyName": "Instance List<CustomObject>",
       "Description": "",
       "NodeDescs": {
         "1e05b1fd-c75c-4955-917f-5576e5451737": {
-          "Name": "Instance List<CreationObject>",
+          "Name": "Instance List<CustomObject>",
           "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
               "Name": "",
-              "ReadonlyType": "List<CreationObject>",
+              "ReadonlyType": "List<CustomObject>",
               "Description": ""
             }
           }
@@ -4134,7 +4134,7 @@
     },
     "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
       "ReadonlyName": "List All True",
-      "Description": "",
+      "Description": "If all of the bool values is true then return ture",
       "NodeDescs": {
         "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
           "Name": "List All True",
@@ -4172,7 +4172,7 @@
     },
     "f9589495-685e-4e14-af2e-5cd45f860021": {
       "ReadonlyName": "List Any True",
-      "Description": "",
+      "Description": "If any bool value is true then return ture",
       "NodeDescs": {
         "f9589495-685e-4e14-af2e-5cd45f860021": {
           "Name": "List Any True",
@@ -4210,7 +4210,7 @@
     },
     "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
       "ReadonlyName": "List Concat",
-      "Description": "",
+      "Description": "Connect lists toghter into one list",
       "NodeDescs": {
         "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
           "Name": "List Concat",
@@ -4362,7 +4362,7 @@
     },
     "592c8aab-9489-492f-a4aa-1e558e6a8ce7": {
       "ReadonlyName": "List Insert",
-      "Description": "",
+      "Description": "Insert a value into a list",
       "NodeDescs": {
         "592c8aab-9489-492f-a4aa-1e558e6a8ce7": {
           "Name": "List Insert",
@@ -4694,7 +4694,7 @@
     },
     "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
       "ReadonlyName": "Log Screen Get Mute",
-      "Description": "",
+      "Description": "If the log screen is muted then return true",
       "NodeDescs": {
         "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
           "Name": "Log Screen Get Mute",
@@ -4726,7 +4726,7 @@
     },
     "6b57589c-a154-4831-9c13-0a6e351435c2": {
       "ReadonlyName": "Log Screen Reset",
-      "Description": "",
+      "Description": "Reset a log screen",
       "NodeDescs": {
         "6b57589c-a154-4831-9c13-0a6e351435c2": {
           "Name": "Log Screen Reset",
@@ -4763,7 +4763,7 @@
     },
     "faced0c6-b436-4f31-965e-82ea8743640b": {
       "ReadonlyName": "Log Screen Set Mute",
-      "Description": "",
+      "Description": "Mutes the log screen",
       "NodeDescs": {
         "faced0c6-b436-4f31-965e-82ea8743640b": {
           "Name": "Log Screen Set Mute",
@@ -4805,7 +4805,7 @@
     },
     "4047a8cc-3dcc-4fa8-85a7-41d569b8e547": {
       "ReadonlyName": "Log String",
-      "Description": "",
+      "Description": "Logs a string into a log screen",
       "NodeDescs": {
         "4047a8cc-3dcc-4fa8-85a7-41d569b8e547": {
           "Name": "Log String",
@@ -5394,7 +5394,7 @@
     },
     "5e002bc3-c667-441c-8098-4df2f956de5b": {
       "ReadonlyName": "Piston Get Acceleration",
-      "Description": "",
+      "Description": "Get Acceleration of a piston",
       "NodeDescs": {
         "5e002bc3-c667-441c-8098-4df2f956de5b": {
           "Name": "Piston Get Acceleration",
@@ -5522,7 +5522,7 @@
     },
     "1d989cd3-d6ae-4503-b80e-5e630ec3f308": {
       "ReadonlyName": "Piston Get Speed",
-      "Description": "",
+      "Description": "Returns the speed of a piston",
       "NodeDescs": {
         "1d989cd3-d6ae-4503-b80e-5e630ec3f308": {
           "Name": "Piston Get Speed",
@@ -5764,7 +5764,7 @@
     },
     "7b725036-4996-441d-ac54-91ac2c23d6b3": {
       "ReadonlyName": "Player Add Role",
-      "Description": "",
+      "Description": "Adds a Role to a player",
       "NodeDescs": {
         "7b725036-4996-441d-ac54-91ac2c23d6b3": {
           "Name": "Player Add Role",
@@ -5820,27 +5820,27 @@
           "OutputPorts": {
             "1a5a3086-b42e-4b1b-bf94-2bb8cd68a64c": {
               "Name": "Main-Hand Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "803c5514-b381-4385-817f-d2dead752553": {
               "Name": "Off-Hand Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "b9955e9f-bdaf-44b7-8f0d-92e40c36ce13": {
               "Name": "Left Hip Holster Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "90b0f544-1729-4794-90f0-521ad3693ef3": {
               "Name": "Right Hip Holster Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "d3951f9b-a4d6-4e7d-9215-1c0573df1d07": {
               "Name": "Shoulder Holster Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           }
@@ -5942,7 +5942,7 @@
             },
             "243000b2-21a6-4fc2-b86a-47c49d806bd8": {
               "Name": "Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -6001,7 +6001,7 @@
     },
     "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
       "ReadonlyName": "Player Left Hand Position",
-      "Description": "",
+      "Description": "Outputs the postion of a player's left hand",
       "NodeDescs": {
         "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
           "Name": "Player Left Hand Position",
@@ -6032,7 +6032,7 @@
     },
     "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
       "ReadonlyName": "Player Left Hand Velocity",
-      "Description": "",
+      "Description": "Outputs the Velocity of a player's left hand",
       "NodeDescs": {
         "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
           "Name": "Player Left Hand Velocity",
@@ -6135,7 +6135,7 @@
     },
     "e9d3330d-c290-41d5-aa37-cc5e43198836": {
       "ReadonlyName": "Player Right Hand Position",
-      "Description": "",
+      "Description": "Outputs the postion of a player's right hand",
       "NodeDescs": {
         "e9d3330d-c290-41d5-aa37-cc5e43198836": {
           "Name": "Player Right Hand Position",
@@ -6166,7 +6166,7 @@
     },
     "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
       "ReadonlyName": "Player Right Hand Velocity",
-      "Description": "",
+      "Description": "Outputs the Velocity of a player's right hand",
       "NodeDescs": {
         "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
           "Name": "Player Right Hand Velocity",
@@ -6394,7 +6394,7 @@
             },
             "855ab03a-70ca-4a6c-b14b-41b9e15e38ce": {
               "Name": "Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -7238,7 +7238,7 @@
             },
             "158875ea-9769-409a-a5a3-f5b6892166e9": {
               "Name": "Spawner",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             },
             "0e11dd9b-3396-46cd-9952-45277e410456": {
@@ -7290,7 +7290,7 @@
             },
             "76c86021-63ef-44a8-affc-d959bebbcaa9": {
               "Name": "",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -7510,17 +7510,17 @@
       ]
     },
     "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
-      "ReadonlyName": "Sync CreationObject",
+      "ReadonlyName": "Sync CustomObject",
       "Description": "",
       "NodeDescs": {
         "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
-          "Name": "Sync CreationObject",
+          "Name": "Sync CustomObject",
           "ReadonlyTypeParams": {},
           "InputPorts": {},
           "OutputPorts": {
             "7246bb37-68eb-4a54-9d22-13028ee5be51": {
               "Name": "",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           }
@@ -7697,7 +7697,7 @@
     },
     "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
       "ReadonlyName": "Tan",
-      "Description": "",
+      "Description": "This node allows you to use the math formula Tan",
       "NodeDescs": {
         "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
           "Name": "Tan",
@@ -7880,7 +7880,7 @@
     },
     "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
       "ReadonlyName": "Time Get Universal Seconds",
-      "Description": "",
+      "Description": "Gets the amount of seconds since 1970",
       "NodeDescs": {
         "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
           "Name": "Time Get Universal Seconds",
@@ -7905,7 +7905,7 @@
     },
     "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
       "ReadonlyName": "Time Get Universal Time",
-      "Description": "",
+      "Description": "Gets the UTC time zone Time",
       "NodeDescs": {
         "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
           "Name": "Time Get Universal Time",
@@ -7955,7 +7955,7 @@
     },
     "75a3a9c2-da17-4762-b87b-1735b44af659": {
       "ReadonlyName": "To Combatant",
-      "Description": "",
+      "Description": "Covert a player or an AI value into a Combatant value",
       "NodeDescs": {
         "75a3a9c2-da17-4762-b87b-1735b44af659": {
           "Name": "To Combatant",
@@ -7994,7 +7994,7 @@
         "315a494e-84cc-4e3c-acff-389bb932b5d0": {
           "Name": "To Creation Object",
           "ReadonlyTypeParams": {
-            "T": "CreationObject"
+            "T": "CustomObject"
           },
           "InputPorts": {
             "18fb2a38-714f-434a-bd48-78b22d14b4d6": {
@@ -8006,7 +8006,7 @@
           "OutputPorts": {
             "242199ab-d606-40b6-8f86-819f8e45ac02": {
               "Name": "Creation Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           }
@@ -8071,7 +8071,7 @@
     },
     "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
       "ReadonlyName": "Toggle Button Get Is Pressed",
-      "Description": "",
+      "Description": "Outputs true if the toggle button is pressed",
       "NodeDescs": {
         "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
           "Name": "Toggle Button Get Is Pressed",
@@ -8288,7 +8288,7 @@
           "OutputPorts": {
             "bfe63099-794d-491f-899d-84332bf7f278": {
               "Name": "Value",
-              "ReadonlyType": "List<CreationObject>",
+              "ReadonlyType": "List<CustomObject>",
               "Description": ""
             }
           }
@@ -8601,11 +8601,11 @@
       ]
     },
     "7077d139-9876-495e-9756-58150fef9f3b": {
-      "ReadonlyName": "Variable (CreationObject)",
+      "ReadonlyName": "Variable (CustomObject)",
       "Description": "",
       "NodeDescs": {
         "7077d139-9876-495e-9756-58150fef9f3b": {
-          "Name": "Variable (CreationObject)",
+          "Name": "Variable (CustomObject)",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
@@ -8615,7 +8615,7 @@
             },
             "79b01162-5388-4962-b52e-6f73777690a6": {
               "Name": "",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           },
@@ -8627,7 +8627,7 @@
             },
             "51befda3-d72d-4066-a30e-24b03aec8792": {
               "Name": "",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "CustomObject",
               "Description": ""
             }
           }
@@ -8807,11 +8807,11 @@
       ]
     },
     "536e376c-087d-4909-9412-3fcee5d6f52b": {
-      "ReadonlyName": "Variable (List<CreationObject>)",
+      "ReadonlyName": "Variable (List<CustomObject>)",
       "Description": "",
       "NodeDescs": {
         "536e376c-087d-4909-9412-3fcee5d6f52b": {
-          "Name": "Variable (List<CreationObject>)",
+          "Name": "Variable (List<CustomObject>)",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "adfb91f8-2de3-4478-8242-f1c7316e9320": {
@@ -8821,7 +8821,7 @@
             },
             "79b01162-5388-4962-b52e-6f73777690a6": {
               "Name": "",
-              "ReadonlyType": "List<CreationObject>",
+              "ReadonlyType": "List<CustomObject>",
               "Description": ""
             }
           },
@@ -8833,7 +8833,7 @@
             },
             "51befda3-d72d-4066-a30e-24b03aec8792": {
               "Name": "",
-              "ReadonlyType": "List<CreationObject>",
+              "ReadonlyType": "List<CustomObject>",
               "Description": ""
             }
           }

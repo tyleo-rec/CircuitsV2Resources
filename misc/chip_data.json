@@ -693,11 +693,7 @@
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyName": "Asin",
-<<<<<<< HEAD
       "Description": "This chip allows you to use the math formula asin",
-=======
-      "Description": "This chip allows you to use the math formula Asin",
->>>>>>> 2c416286056c9278efe605497818fa88fb43663c
       "NodeDescs": {
         "aaa4e58f-16df-426a-b7a7-a654eab97037": {
           "Name": "Asin",

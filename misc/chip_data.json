@@ -693,7 +693,7 @@
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyName": "Asin",
-      "Description": "",
+      "Description": "this chip allows you to use the math formula Asin",
       "NodeDescs": {
         "aaa4e58f-16df-426a-b7a7-a654eab97037": {
           "Name": "Asin",
@@ -725,7 +725,7 @@
     },
     "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
       "ReadonlyName": "Atan",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula Atan",
       "NodeDescs": {
         "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
           "Name": "Atan",
@@ -757,7 +757,7 @@
     },
     "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
       "ReadonlyName": "Atan2",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula Atan2",
       "NodeDescs": {
         "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
           "Name": "Atan2",
@@ -1337,7 +1337,7 @@
     },
     "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
       "ReadonlyName": "Cos",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula Cos",
       "NodeDescs": {
         "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
           "Name": "Cos",
@@ -1678,7 +1678,7 @@
     },
     "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
       "ReadonlyName": "Dice Get Player Rolled",
-      "Description": "",
+      "Description": "Returns the player who Rolled the dice",
       "NodeDescs": {
         "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
           "Name": "Dice Get Player Rolled",
@@ -1710,7 +1710,7 @@
     },
     "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
       "ReadonlyName": "Dice Get Result",
-      "Description": "",
+      "Description": "Returns the resualt of the dice",
       "NodeDescs": {
         "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
           "Name": "Dice Get Result",
@@ -1742,7 +1742,7 @@
     },
     "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
       "ReadonlyName": "Dice Get Roll finished",
-      "Description": "",
+      "Description": "Outputs an exec when the dice finished rolling",
       "NodeDescs": {
         "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
           "Name": "Dice Get Roll finished",
@@ -2635,7 +2635,7 @@
     },
     "a76a9898-4add-4765-9f5b-f366b586e51c": {
       "ReadonlyName": "Get Player Last Equipped Object",
-      "Description": "",
+      "Description": "Returns the player who last held an object",
       "NodeDescs": {
         "a76a9898-4add-4765-9f5b-f366b586e51c": {
           "Name": "Get Player Last Equipped Object",
@@ -2711,7 +2711,7 @@
     },
     "d7557465-963e-4451-a55a-dea2050e9b74": {
       "ReadonlyName": "Get Room Authority",
-      "Description": "",
+      "Description": "Returns the player who is the room Authority player",
       "NodeDescs": {
         "d7557465-963e-4451-a55a-dea2050e9b74": {
           "Name": "Get Room Authority",
@@ -2769,7 +2769,7 @@
     },
     "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
       "ReadonlyName": "Get Velocity",
-      "Description": "",
+      "Description": "Returns the velocity of a player or a CreationObject",
       "NodeDescs": {
         "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
           "Name": "Get Velocity",
@@ -2802,7 +2802,7 @@
     },
     "a10e7788-f016-4390-a68e-87d93b47edb1": {
       "ReadonlyName": "Greater or Equal",
-      "Description": "",
+      "Description": "Returns true if input A is greater or equal than input B",
       "NodeDescs": {
         "a10e7788-f016-4390-a68e-87d93b47edb1": {
           "Name": "Greater or Equal",
@@ -2840,7 +2840,7 @@
     },
     "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
       "ReadonlyName": "Greater Than",
-      "Description": "",
+      "Description": "Returns true if input A is greater Than input B",
       "NodeDescs": {
         "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
           "Name": "Greater Than",
@@ -4134,7 +4134,7 @@
     },
     "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
       "ReadonlyName": "List All True",
-      "Description": "",
+      "Description": "If all of the bool values is true then return ture",
       "NodeDescs": {
         "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
           "Name": "List All True",
@@ -4172,7 +4172,7 @@
     },
     "f9589495-685e-4e14-af2e-5cd45f860021": {
       "ReadonlyName": "List Any True",
-      "Description": "",
+      "Description": "If any bool value is true then return ture",
       "NodeDescs": {
         "f9589495-685e-4e14-af2e-5cd45f860021": {
           "Name": "List Any True",
@@ -4210,7 +4210,7 @@
     },
     "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
       "ReadonlyName": "List Concat",
-      "Description": "",
+      "Description": "Connect lists together into one list",
       "NodeDescs": {
         "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
           "Name": "List Concat",
@@ -4362,7 +4362,7 @@
     },
     "592c8aab-9489-492f-a4aa-1e558e6a8ce7": {
       "ReadonlyName": "List Insert",
-      "Description": "",
+      "Description": "Insert a value into a list",
       "NodeDescs": {
         "592c8aab-9489-492f-a4aa-1e558e6a8ce7": {
           "Name": "List Insert",
@@ -4694,7 +4694,7 @@
     },
     "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
       "ReadonlyName": "Log Screen Get Mute",
-      "Description": "",
+      "Description": "If the log screen is muted then return true",
       "NodeDescs": {
         "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
           "Name": "Log Screen Get Mute",
@@ -4726,7 +4726,7 @@
     },
     "6b57589c-a154-4831-9c13-0a6e351435c2": {
       "ReadonlyName": "Log Screen Reset",
-      "Description": "",
+      "Description": "Reset a log screen",
       "NodeDescs": {
         "6b57589c-a154-4831-9c13-0a6e351435c2": {
           "Name": "Log Screen Reset",
@@ -4763,7 +4763,7 @@
     },
     "faced0c6-b436-4f31-965e-82ea8743640b": {
       "ReadonlyName": "Log Screen Set Mute",
-      "Description": "",
+      "Description": "Mutes the log screen",
       "NodeDescs": {
         "faced0c6-b436-4f31-965e-82ea8743640b": {
           "Name": "Log Screen Set Mute",
@@ -4805,7 +4805,7 @@
     },
     "4047a8cc-3dcc-4fa8-85a7-41d569b8e547": {
       "ReadonlyName": "Log String",
-      "Description": "",
+      "Description": "Logs a string into a log screen",
       "NodeDescs": {
         "4047a8cc-3dcc-4fa8-85a7-41d569b8e547": {
           "Name": "Log String",
@@ -5394,7 +5394,7 @@
     },
     "5e002bc3-c667-441c-8098-4df2f956de5b": {
       "ReadonlyName": "Piston Get Acceleration",
-      "Description": "",
+      "Description": "Get acceleration of a piston",
       "NodeDescs": {
         "5e002bc3-c667-441c-8098-4df2f956de5b": {
           "Name": "Piston Get Acceleration",
@@ -5522,7 +5522,7 @@
     },
     "1d989cd3-d6ae-4503-b80e-5e630ec3f308": {
       "ReadonlyName": "Piston Get Speed",
-      "Description": "",
+      "Description": "Returns the speed of a piston",
       "NodeDescs": {
         "1d989cd3-d6ae-4503-b80e-5e630ec3f308": {
           "Name": "Piston Get Speed",
@@ -5764,7 +5764,7 @@
     },
     "7b725036-4996-441d-ac54-91ac2c23d6b3": {
       "ReadonlyName": "Player Add Role",
-      "Description": "",
+      "Description": "Adds a Role to a player",
       "NodeDescs": {
         "7b725036-4996-441d-ac54-91ac2c23d6b3": {
           "Name": "Player Add Role",
@@ -6001,7 +6001,7 @@
     },
     "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
       "ReadonlyName": "Player Left Hand Position",
-      "Description": "",
+      "Description": "Outputs the postion of a player's left hand",
       "NodeDescs": {
         "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
           "Name": "Player Left Hand Position",
@@ -6032,7 +6032,7 @@
     },
     "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
       "ReadonlyName": "Player Left Hand Velocity",
-      "Description": "",
+      "Description": "Outputs the velocity of a player's left hand",
       "NodeDescs": {
         "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
           "Name": "Player Left Hand Velocity",
@@ -6135,7 +6135,7 @@
     },
     "e9d3330d-c290-41d5-aa37-cc5e43198836": {
       "ReadonlyName": "Player Right Hand Position",
-      "Description": "",
+      "Description": "Outputs the postion of a player's right hand",
       "NodeDescs": {
         "e9d3330d-c290-41d5-aa37-cc5e43198836": {
           "Name": "Player Right Hand Position",
@@ -6166,7 +6166,7 @@
     },
     "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
       "ReadonlyName": "Player Right Hand Velocity",
-      "Description": "",
+      "Description": "Outputs the velocity of a player's right hand",
       "NodeDescs": {
         "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
           "Name": "Player Right Hand Velocity",
@@ -7697,7 +7697,7 @@
     },
     "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
       "ReadonlyName": "Tan",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula Tan",
       "NodeDescs": {
         "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
           "Name": "Tan",
@@ -7880,7 +7880,7 @@
     },
     "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
       "ReadonlyName": "Time Get Universal Seconds",
-      "Description": "",
+      "Description": "Gets the amount of seconds since 1970",
       "NodeDescs": {
         "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
           "Name": "Time Get Universal Seconds",
@@ -7905,7 +7905,7 @@
     },
     "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
       "ReadonlyName": "Time Get Universal Time",
-      "Description": "",
+      "Description": "Gets the UTC time zone Time",
       "NodeDescs": {
         "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
           "Name": "Time Get Universal Time",
@@ -7955,7 +7955,7 @@
     },
     "75a3a9c2-da17-4762-b87b-1735b44af659": {
       "ReadonlyName": "To Combatant",
-      "Description": "",
+      "Description": "Covert a player or an AI value into a Combatant value",
       "NodeDescs": {
         "75a3a9c2-da17-4762-b87b-1735b44af659": {
           "Name": "To Combatant",
@@ -8071,7 +8071,7 @@
     },
     "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
       "ReadonlyName": "Toggle Button Get Is Pressed",
-      "Description": "",
+      "Description": "Outputs true if the toggle button is pressed",
       "NodeDescs": {
         "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
           "Name": "Toggle Button Get Is Pressed",

@@ -1864,7 +1864,7 @@
     },
     "15e42063-cbae-40f9-a9e4-8226e83217ec": {
       "ReadonlyName": "Emitter Set Color",
-      "Description": "Sets a color for the emitter",
+      "Description": "Sets a color for the particles emitted",
       "NodeDescs": {
         "15e42063-cbae-40f9-a9e4-8226e83217ec": {
           "Name": "Emitter Set Color",
@@ -1990,7 +1990,7 @@
     },
     "12446960-d971-475f-b64e-b5c7bb422eca": {
       "ReadonlyName": "Emitter Set Speed",
-      "Description": "Sets the speed for how fast particles should be emitted",
+      "Description": "Sets the speed particles are emitted",
       "NodeDescs": {
         "12446960-d971-475f-b64e-b5c7bb422eca": {
           "Name": "Emitter Set Speed",
@@ -3039,7 +3039,7 @@
     },
     "c7643011-f320-4155-89b8-d693730c1935": {
       "ReadonlyName": "If Player Is Local",
-      "Description": "Outputs if a player is local or now",
+      "Description": "Outputs if a player is local or not",
       "NodeDescs": {
         "c7643011-f320-4155-89b8-d693730c1935": {
           "Name": "If Player Is Local",
@@ -5805,7 +5805,7 @@
     },
     "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
       "ReadonlyName": "Player Get Equipped Objects",
-      "Description": "Gets equiped objects from a player",
+      "Description": "Gets equipped objects from a player",
       "NodeDescs": {
         "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
           "Name": "Player Get Equipped Objects",
@@ -6883,7 +6883,7 @@
     },
     "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
       "ReadonlyName": "Set Element",
-      "Description": "Sets a value in a list",
+      "Description": "Sets a value at a location in a list",
       "NodeDescs": {
         "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
           "Name": "Set Element",
@@ -6932,7 +6932,7 @@
     },
     "76187060-c0b0-4ec6-b082-ff81754cff25": {
       "ReadonlyName": "Set Value",
-      "Description": "Sets a value to a variable",
+      "Description": "Sets a value of a variable",
       "NodeDescs": {
         "76187060-c0b0-4ec6-b082-ff81754cff25": {
           "Name": "Set Value",
@@ -7039,7 +7039,7 @@
     },
     "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
       "ReadonlyName": "Sfx Play",
-      "Description": "start an sfx gadget",
+      "Description": "Plays a sound from the SFX Component",
       "NodeDescs": {
         "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
           "Name": "Sfx Play",
@@ -7118,7 +7118,7 @@
     },
     "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
       "ReadonlyName": "Sfx Stop",
-      "Description": "Stops the sfx gadget",
+      "Description": "Stops the sound currently playing from the SFX Component",
       "NodeDescs": {
         "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
           "Name": "Sfx Stop",
@@ -7355,7 +7355,7 @@
     },
     "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
       "ReadonlyName": "Substring",
-      "Description": "Spits string values",
+      "Description": "Allows you to extract individual characters from a string, you can think of this like a list of characters",
       "NodeDescs": {
         "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
           "Name": "Substring",
@@ -7813,7 +7813,7 @@
     },
     "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
       "ReadonlyName": "Text Set Text",
-      "Description": "Set a strng value for the text gadget",
+      "Description": "Set a string value for the text gadget",
       "NodeDescs": {
         "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
           "Name": "Text Set Text",
@@ -7855,7 +7855,7 @@
     },
     "8722445f-e552-4d4a-bced-8afa63bbf70b": {
       "ReadonlyName": "Time Get Precise Seconds",
-      "Description": "Gets the amount of seconds since a player launched rec room",
+      "Description": "Gets the amount of seconds since a player launched Rec Room",
       "NodeDescs": {
         "8722445f-e552-4d4a-bced-8afa63bbf70b": {
           "Name": "Time Get Precise Seconds",
@@ -8103,7 +8103,7 @@
     },
     "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
       "ReadonlyName": "Toggle Button Set Is Pressed",
-      "Description": "Sets the toggle button as pressed",
+      "Description": "Sets the toggle button state to pressed",
       "NodeDescs": {
         "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
           "Name": "Toggle Button Set Is Pressed",
@@ -8145,7 +8145,7 @@
     },
     "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
       "ReadonlyName": "Trigger Volume Get Filter Role",
-      "Description": "Gets the role that is being filterd from a trigger zone",
+      "Description": "Gets the role that is being filterd from a trigger volume",
       "NodeDescs": {
         "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
           "Name": "Trigger Volume Get Filter Role",
@@ -8177,7 +8177,7 @@
     },
     "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
       "ReadonlyName": "Trigger Volume Get Filter Tags",
-      "Description": "Gets the tags that is being filterd from a trigger zone",
+      "Description": "Gets the tags that is being filterd from a trigger volume",
       "NodeDescs": {
         "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
           "Name": "Trigger Volume Get Filter Tags",
@@ -8209,7 +8209,7 @@
     },
     "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
       "ReadonlyName": "Trigger Volume Get Num Objects",
-      "Description": "Gets the number of objects inside a trigger zone",
+      "Description": "Gets the number of objects inside a trigger volume",
       "NodeDescs": {
         "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
           "Name": "Trigger Volume Get Num Objects",
@@ -8241,7 +8241,7 @@
     },
     "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
       "ReadonlyName": "Trigger Volume Get Num Players",
-      "Description": "Gets the number of players inside a trigger zone",
+      "Description": "Gets the number of players inside a trigger volume",
       "NodeDescs": {
         "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
           "Name": "Trigger Volume Get Num Players",
@@ -8273,7 +8273,7 @@
     },
     "530932a7-8781-4b09-a945-b33af6675809": {
       "ReadonlyName": "Trigger Volume Get Objects",
-      "Description": "Gets all of the objects that are inside a trigger zone",
+      "Description": "Gets all of the objects that are inside a trigger volume",
       "NodeDescs": {
         "530932a7-8781-4b09-a945-b33af6675809": {
           "Name": "Trigger Volume Get Objects",
@@ -8305,7 +8305,7 @@
     },
     "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
       "ReadonlyName": "Trigger Volume Get Players",
-      "Description": "Gets all of the players that are inside a trigger zone",
+      "Description": "Gets all of the players that are inside a trigger volume",
       "NodeDescs": {
         "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
           "Name": "Trigger Volume Get Players",
@@ -8337,7 +8337,7 @@
     },
     "55cfecf9-2623-4aad-948c-6ca89f11911b": {
       "ReadonlyName": "Trigger Volume Set Filter Role",
-      "Description": "Sets the filterd role for the trigger zone",
+      "Description": "Sets the filterd role for the trigger volume",
       "NodeDescs": {
         "55cfecf9-2623-4aad-948c-6ca89f11911b": {
           "Name": "Trigger Volume Set Filter Role",
@@ -8379,7 +8379,7 @@
     },
     "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
       "ReadonlyName": "Trigger Volume Set Filter Tags",
-      "Description": "Sets the filterd tags for the trigger zone",
+      "Description": "Sets the filterd tags for the trigger volume",
       "NodeDescs": {
         "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
           "Name": "Trigger Volume Set Filter Tags",

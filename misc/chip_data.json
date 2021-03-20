@@ -36,7 +36,7 @@
     },
     "46ce50b8-0a20-43d2-9646-484ce2a6752c": {
       "ReadonlyName": "Acos",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula acos",
       "NodeDescs": {
         "46ce50b8-0a20-43d2-9646-484ce2a6752c": {
           "Name": "Acos",
@@ -693,7 +693,7 @@
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyName": "Asin",
-      "Description": "This chip allows you to use the math formula Asin",
+      "Description": "This chip allows you to use the math formula asin",
       "NodeDescs": {
         "aaa4e58f-16df-426a-b7a7-a654eab97037": {
           "Name": "Asin",
@@ -939,7 +939,7 @@
     },
     "f4cbc476-bc98-4cbf-bf47-de4baedddf79": {
       "ReadonlyName": "Ceil",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula Ceil",
       "NodeDescs": {
         "f4cbc476-bc98-4cbf-bf47-de4baedddf79": {
           "Name": "Ceil",
@@ -1443,7 +1443,7 @@
     },
     "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
       "ReadonlyName": "Creation Object Get Authority",
-      "Description": "",
+      "Description": "Outputs the authority player of an CreationObject",
       "NodeDescs": {
         "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
           "Name": "Creation Object Get Authority",
@@ -1864,7 +1864,7 @@
     },
     "15e42063-cbae-40f9-a9e4-8226e83217ec": {
       "ReadonlyName": "Emitter Set Color",
-      "Description": "",
+      "Description": "Sets a color for the particles emitted",
       "NodeDescs": {
         "15e42063-cbae-40f9-a9e4-8226e83217ec": {
           "Name": "Emitter Set Color",
@@ -1948,7 +1948,7 @@
     },
     "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
       "ReadonlyName": "Emitter Set Size",
-      "Description": "",
+      "Description": "Sets the size of the particles",
       "NodeDescs": {
         "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
           "Name": "Emitter Set Size",
@@ -1990,7 +1990,7 @@
     },
     "12446960-d971-475f-b64e-b5c7bb422eca": {
       "ReadonlyName": "Emitter Set Speed",
-      "Description": "",
+      "Description": "Sets the speed particles are emitted",
       "NodeDescs": {
         "12446960-d971-475f-b64e-b5c7bb422eca": {
           "Name": "Emitter Set Speed",
@@ -2032,7 +2032,7 @@
     },
     "56ebaa0b-256a-40ed-a066-f5663dfa2b59": {
       "ReadonlyName": "Emitter Start",
-      "Description": "",
+      "Description": "Starts emitting particles",
       "NodeDescs": {
         "56ebaa0b-256a-40ed-a066-f5663dfa2b59": {
           "Name": "Emitter Start",
@@ -2069,7 +2069,7 @@
     },
     "23b278c4-5d3d-439d-afa3-ff30c949df97": {
       "ReadonlyName": "Emitter Stop",
-      "Description": "",
+      "Description": "Stops emitting particles",
       "NodeDescs": {
         "23b278c4-5d3d-439d-afa3-ff30c949df97": {
           "Name": "Emitter Stop",
@@ -3039,7 +3039,7 @@
     },
     "c7643011-f320-4155-89b8-d693730c1935": {
       "ReadonlyName": "If Player Is Local",
-      "Description": "",
+      "Description": "Outputs if a player is local or not",
       "NodeDescs": {
         "c7643011-f320-4155-89b8-d693730c1935": {
           "Name": "If Player Is Local",
@@ -3722,7 +3722,7 @@
     },
     "91b0ffa8-4eb1-4a30-aaf3-7a049071cb42": {
       "ReadonlyName": "Lerp",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula Lerp",
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
           "Name": "Lerp",
@@ -3848,7 +3848,7 @@
     },
     "873d8765-9dc7-41ea-87ef-dd6e32119af8": {
       "ReadonlyName": "Light Set Angle",
-      "Description": "",
+      "Description": "Sets the size of the spotlight's area",
       "NodeDescs": {
         "873d8765-9dc7-41ea-87ef-dd6e32119af8": {
           "Name": "Light Set Angle",
@@ -3890,7 +3890,7 @@
     },
     "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
       "ReadonlyName": "Light Set Color",
-      "Description": "",
+      "Description": "Sets the color for a point light or a spotlight",
       "NodeDescs": {
         "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
           "Name": "Light Set Color",
@@ -3932,7 +3932,7 @@
     },
     "902a47c8-3834-4858-bbae-5357281a507d": {
       "ReadonlyName": "Light Set Intensity",
-      "Description": "",
+      "Description": "Sets the brightness level for a point light or a spotlight",
       "NodeDescs": {
         "902a47c8-3834-4858-bbae-5357281a507d": {
           "Name": "Light Set Intensity",
@@ -3974,7 +3974,7 @@
     },
     "c3d0ef1f-921c-4602-a6eb-b03ed46d556f": {
       "ReadonlyName": "Light Set Range",
-      "Description": "",
+      "Description": "Sets the range of a point light or a spotlight",
       "NodeDescs": {
         "c3d0ef1f-921c-4602-a6eb-b03ed46d556f": {
           "Name": "Light Set Range",
@@ -4016,7 +4016,7 @@
     },
     "0f96406e-af69-4f6c-a430-c6b004457ef4": {
       "ReadonlyName": "Light Turn Off",
-      "Description": "",
+      "Description": "Turns off the point light or the spotlight",
       "NodeDescs": {
         "0f96406e-af69-4f6c-a430-c6b004457ef4": {
           "Name": "Light Turn Off",
@@ -4053,7 +4053,7 @@
     },
     "5452c480-62f9-4d4e-b615-0f59e645d8db": {
       "ReadonlyName": "Light Turn On",
-      "Description": "",
+      "Description": "Turns on the point light or the spotlight",
       "NodeDescs": {
         "5452c480-62f9-4d4e-b615-0f59e645d8db": {
           "Name": "Light Turn On",
@@ -4852,7 +4852,7 @@
     },
     "28a105ab-a947-4493-a51d-ced76a9601ee": {
       "ReadonlyName": "Logarithm",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula logarithm",
       "NodeDescs": {
         "28a105ab-a947-4493-a51d-ced76a9601ee": {
           "Name": "Logarithm",
@@ -5394,7 +5394,7 @@
     },
     "5e002bc3-c667-441c-8098-4df2f956de5b": {
       "ReadonlyName": "Piston Get Acceleration",
-      "Description": "Get acceleration of a piston",
+      "Description": "Gets the acceleration of a piston",
       "NodeDescs": {
         "5e002bc3-c667-441c-8098-4df2f956de5b": {
           "Name": "Piston Get Acceleration",
@@ -5805,7 +5805,7 @@
     },
     "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
       "ReadonlyName": "Player Get Equipped Objects",
-      "Description": "",
+      "Description": "Gets equipped objects from a player",
       "NodeDescs": {
         "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
           "Name": "Player Get Equipped Objects",
@@ -5929,7 +5929,7 @@
     },
     "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
       "ReadonlyName": "Player Is Authority Of",
-      "Description": "",
+      "Description": "Outputs if a player is authority of a CreationObject",
       "NodeDescs": {
         "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
           "Name": "Player Is Authority Of",
@@ -5970,7 +5970,7 @@
     },
     "6b5c4b0b-be26-4055-b26f-1e5f061c63ca": {
       "ReadonlyName": "Player Left Hand Finger Direction",
-      "Description": "",
+      "Description": "Outputs the Direction of a player's left hand finger",
       "NodeDescs": {
         "6b5c4b0b-be26-4055-b26f-1e5f061c63ca": {
           "Name": "Player Left Hand Finger Direction",
@@ -6104,7 +6104,7 @@
     },
     "646ff790-c930-4565-ae38-99a798271a50": {
       "ReadonlyName": "Player Right Hand Finger Direction",
-      "Description": "",
+      "Description": "Outputs the Direction of a player's right hand finger",
       "NodeDescs": {
         "646ff790-c930-4565-ae38-99a798271a50": {
           "Name": "Player Right Hand Finger Direction",
@@ -6381,7 +6381,7 @@
     },
     "6ba175cf-493a-4790-b916-57259f94cd98": {
       "ReadonlyName": "Reset Object",
-      "Description": "",
+      "Description": "Resets a CreationObject",
       "NodeDescs": {
         "6ba175cf-493a-4790-b916-57259f94cd98": {
           "Name": "Reset Object",
@@ -6418,7 +6418,7 @@
     },
     "5ca7c15f-bfed-4103-b5d6-7af5da64a703": {
       "ReadonlyName": "Reset Player Health",
-      "Description": "",
+      "Description": "Resets player's Health to the default value",
       "NodeDescs": {
         "5ca7c15f-bfed-4103-b5d6-7af5da64a703": {
           "Name": "Reset Player Health",
@@ -6454,7 +6454,7 @@
     },
     "e921b08d-10c2-4be4-86fe-b8c7155cb97b": {
       "ReadonlyName": "Reset Room",
-      "Description": "",
+      "Description": "Resets the room",
       "NodeDescs": {
         "e921b08d-10c2-4be4-86fe-b8c7155cb97b": {
           "Name": "Reset Room",
@@ -6883,7 +6883,7 @@
     },
     "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
       "ReadonlyName": "Set Element",
-      "Description": "",
+      "Description": "Sets a value at a location in a list",
       "NodeDescs": {
         "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
           "Name": "Set Element",
@@ -6932,7 +6932,7 @@
     },
     "76187060-c0b0-4ec6-b082-ff81754cff25": {
       "ReadonlyName": "Set Value",
-      "Description": "",
+      "Description": "Sets a value of a variable",
       "NodeDescs": {
         "76187060-c0b0-4ec6-b082-ff81754cff25": {
           "Name": "Set Value",
@@ -6975,7 +6975,7 @@
     },
     "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
       "ReadonlyName": "Sfx Get Volume",
-      "Description": "",
+      "Description": "Outputs the volume of an sfx gadget",
       "NodeDescs": {
         "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
           "Name": "Sfx Get Volume",
@@ -7039,7 +7039,7 @@
     },
     "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
       "ReadonlyName": "Sfx Play",
-      "Description": "",
+      "Description": "Plays a sound from the SFX Component",
       "NodeDescs": {
         "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
           "Name": "Sfx Play",
@@ -7076,7 +7076,7 @@
     },
     "d2df4993-d858-4df1-aca2-fc0e7f479668": {
       "ReadonlyName": "Sfx Set Volume",
-      "Description": "",
+      "Description": "Sets the volume for an sfx gadget",
       "NodeDescs": {
         "d2df4993-d858-4df1-aca2-fc0e7f479668": {
           "Name": "Sfx Set Volume",
@@ -7118,7 +7118,7 @@
     },
     "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
       "ReadonlyName": "Sfx Stop",
-      "Description": "",
+      "Description": "Stops the sound currently playing from the SFX Component",
       "NodeDescs": {
         "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
           "Name": "Sfx Stop",
@@ -7193,7 +7193,7 @@
     },
     "ea824326-5061-411d-980c-30031511c821": {
       "ReadonlyName": "Sin",
-      "Description": "",
+      "Description": "This chip allows you to use the math formula sin",
       "NodeDescs": {
         "ea824326-5061-411d-980c-30031511c821": {
           "Name": "Sin",
@@ -7355,7 +7355,7 @@
     },
     "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
       "ReadonlyName": "Substring",
-      "Description": "",
+      "Description": "Allows you to extract individual characters from a string, you can think of this like a list of characters",
       "NodeDescs": {
         "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
           "Name": "Substring",
@@ -7697,7 +7697,7 @@
     },
     "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
       "ReadonlyName": "Tan",
-      "Description": "This chip allows you to use the math formula Tan",
+      "Description": "This chip allows you to use the math formula tan",
       "NodeDescs": {
         "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
           "Name": "Tan",
@@ -7729,7 +7729,7 @@
     },
     "20b2528d-96a9-4be8-9782-aa75959f5232": {
       "ReadonlyName": "Text Set Color",
-      "Description": "",
+      "Description": "Sets the color for the text gadget",
       "NodeDescs": {
         "2bd445ce-08ec-4c6a-9254-d63535690779": {
           "Name": "Text Set Color",
@@ -7771,7 +7771,7 @@
     },
     "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
       "ReadonlyName": "Text Set Material",
-      "Description": "",
+      "Description": "Sets the material for the text gadget",
       "NodeDescs": {
         "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
           "Name": "Text Set Material",
@@ -7813,7 +7813,7 @@
     },
     "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
       "ReadonlyName": "Text Set Text",
-      "Description": "",
+      "Description": "Set a string value for the text gadget",
       "NodeDescs": {
         "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
           "Name": "Text Set Text",
@@ -7855,7 +7855,7 @@
     },
     "8722445f-e552-4d4a-bced-8afa63bbf70b": {
       "ReadonlyName": "Time Get Precise Seconds",
-      "Description": "",
+      "Description": "Gets the amount of seconds since a player launched Rec Room",
       "NodeDescs": {
         "8722445f-e552-4d4a-bced-8afa63bbf70b": {
           "Name": "Time Get Precise Seconds",
@@ -8103,7 +8103,7 @@
     },
     "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
       "ReadonlyName": "Toggle Button Set Is Pressed",
-      "Description": "",
+      "Description": "Sets the toggle button state to pressed",
       "NodeDescs": {
         "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
           "Name": "Toggle Button Set Is Pressed",
@@ -8145,7 +8145,7 @@
     },
     "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
       "ReadonlyName": "Trigger Volume Get Filter Role",
-      "Description": "",
+      "Description": "Gets the role that is being filterd from a trigger volume",
       "NodeDescs": {
         "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
           "Name": "Trigger Volume Get Filter Role",
@@ -8177,7 +8177,7 @@
     },
     "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
       "ReadonlyName": "Trigger Volume Get Filter Tags",
-      "Description": "",
+      "Description": "Gets the tags that is being filterd from a trigger volume",
       "NodeDescs": {
         "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
           "Name": "Trigger Volume Get Filter Tags",
@@ -8209,7 +8209,7 @@
     },
     "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
       "ReadonlyName": "Trigger Volume Get Num Objects",
-      "Description": "",
+      "Description": "Gets the number of objects inside a trigger volume",
       "NodeDescs": {
         "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
           "Name": "Trigger Volume Get Num Objects",
@@ -8241,7 +8241,7 @@
     },
     "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
       "ReadonlyName": "Trigger Volume Get Num Players",
-      "Description": "",
+      "Description": "Gets the number of players inside a trigger volume",
       "NodeDescs": {
         "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
           "Name": "Trigger Volume Get Num Players",
@@ -8273,7 +8273,7 @@
     },
     "530932a7-8781-4b09-a945-b33af6675809": {
       "ReadonlyName": "Trigger Volume Get Objects",
-      "Description": "",
+      "Description": "Gets all of the objects that are inside a trigger volume",
       "NodeDescs": {
         "530932a7-8781-4b09-a945-b33af6675809": {
           "Name": "Trigger Volume Get Objects",
@@ -8305,7 +8305,7 @@
     },
     "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
       "ReadonlyName": "Trigger Volume Get Players",
-      "Description": "",
+      "Description": "Gets all of the players that are inside a trigger volume",
       "NodeDescs": {
         "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
           "Name": "Trigger Volume Get Players",
@@ -8337,7 +8337,7 @@
     },
     "55cfecf9-2623-4aad-948c-6ca89f11911b": {
       "ReadonlyName": "Trigger Volume Set Filter Role",
-      "Description": "",
+      "Description": "Sets the filterd role for the trigger volume",
       "NodeDescs": {
         "55cfecf9-2623-4aad-948c-6ca89f11911b": {
           "Name": "Trigger Volume Set Filter Role",
@@ -8379,7 +8379,7 @@
     },
     "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
       "ReadonlyName": "Trigger Volume Set Filter Tags",
-      "Description": "",
+      "Description": "Sets the filterd tags for the trigger volume",
       "NodeDescs": {
         "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
           "Name": "Trigger Volume Set Filter Tags",
@@ -9315,7 +9315,7 @@
     },
     "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
       "ReadonlyName": "Vector Gadget Get Vector",
-      "Description": "",
+      "Description": "Gets the direction and magnitude of the vector gadget",
       "NodeDescs": {
         "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
           "Name": "Vector Gadget Get Vector",

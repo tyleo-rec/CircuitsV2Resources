@@ -1443,7 +1443,7 @@
     },
     "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
       "ReadonlyName": "Creation Object Get Authority",
-      "Description": "Outputs the authority player of an CreationObject",
+      "Description": "Outputs the authority player of the input CreationObject",
       "NodeDescs": {
         "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
           "Name": "Creation Object Get Authority",
@@ -1864,7 +1864,7 @@
     },
     "15e42063-cbae-40f9-a9e4-8226e83217ec": {
       "ReadonlyName": "Emitter Set Color",
-      "Description": "Sets a color for the particles emitted",
+      "Description": "Sets the color for the particles emitted",
       "NodeDescs": {
         "15e42063-cbae-40f9-a9e4-8226e83217ec": {
           "Name": "Emitter Set Color",
@@ -1948,7 +1948,7 @@
     },
     "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
       "ReadonlyName": "Emitter Set Size",
-      "Description": "Sets the size of the particles",
+      "Description": "Sets the size of the particles emitted",
       "NodeDescs": {
         "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
           "Name": "Emitter Set Size",
@@ -5929,7 +5929,7 @@
     },
     "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
       "ReadonlyName": "Player Is Authority Of",
-      "Description": "Outputs if a player is authority of a CreationObject",
+      "Description": "Outputs if a player is authority of the input CreationObject",
       "NodeDescs": {
         "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
           "Name": "Player Is Authority Of",
@@ -6975,7 +6975,7 @@
     },
     "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
       "ReadonlyName": "Sfx Get Volume",
-      "Description": "Outputs the volume of an sfx gadget",
+      "Description": "Outputs the volume of an SFX Component",
       "NodeDescs": {
         "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
           "Name": "Sfx Get Volume",
@@ -7039,7 +7039,7 @@
     },
     "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
       "ReadonlyName": "Sfx Play",
-      "Description": "Plays a sound from the SFX Component",
+      "Description": "Plays a sound from an SFX Component",
       "NodeDescs": {
         "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
           "Name": "Sfx Play",
@@ -7076,7 +7076,7 @@
     },
     "d2df4993-d858-4df1-aca2-fc0e7f479668": {
       "ReadonlyName": "Sfx Set Volume",
-      "Description": "Sets the volume for an sfx gadget",
+      "Description": "Sets the volume for an SFX Component",
       "NodeDescs": {
         "d2df4993-d858-4df1-aca2-fc0e7f479668": {
           "Name": "Sfx Set Volume",
@@ -7118,7 +7118,7 @@
     },
     "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
       "ReadonlyName": "Sfx Stop",
-      "Description": "Stops the sound currently playing from the SFX Component",
+      "Description": "Stops the sound currently playing from an SFX Component",
       "NodeDescs": {
         "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
           "Name": "Sfx Stop",
@@ -7355,7 +7355,7 @@
     },
     "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
       "ReadonlyName": "Substring",
-      "Description": "Allows you to extract individual characters from a string, you can think of this like a list of characters",
+      "Description": "Allows you to extract individual characters from a string. You can think of this like a list of characters.",
       "NodeDescs": {
         "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
           "Name": "Substring",
@@ -7729,7 +7729,7 @@
     },
     "20b2528d-96a9-4be8-9782-aa75959f5232": {
       "ReadonlyName": "Text Set Color",
-      "Description": "Sets the color for the text gadget",
+      "Description": "Sets the color for a Text Component",
       "NodeDescs": {
         "2bd445ce-08ec-4c6a-9254-d63535690779": {
           "Name": "Text Set Color",
@@ -7771,7 +7771,7 @@
     },
     "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
       "ReadonlyName": "Text Set Material",
-      "Description": "Sets the material for the text gadget",
+      "Description": "Sets the material for a Text Component",
       "NodeDescs": {
         "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
           "Name": "Text Set Material",
@@ -7813,7 +7813,7 @@
     },
     "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
       "ReadonlyName": "Text Set Text",
-      "Description": "Set a string value for the text gadget",
+      "Description": "Set the visible text for a Text Component",
       "NodeDescs": {
         "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
           "Name": "Text Set Text",
@@ -8103,7 +8103,7 @@
     },
     "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
       "ReadonlyName": "Toggle Button Set Is Pressed",
-      "Description": "Sets the toggle button state to pressed",
+      "Description": "Sets a Toggle Button state to pressed",
       "NodeDescs": {
         "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
           "Name": "Toggle Button Set Is Pressed",
@@ -8145,7 +8145,7 @@
     },
     "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
       "ReadonlyName": "Trigger Volume Get Filter Role",
-      "Description": "Gets the role that is being filterd from a trigger volume",
+      "Description": "Gets the Role that is being filterd from a Trigger Volume",
       "NodeDescs": {
         "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
           "Name": "Trigger Volume Get Filter Role",
@@ -8177,7 +8177,7 @@
     },
     "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
       "ReadonlyName": "Trigger Volume Get Filter Tags",
-      "Description": "Gets the tags that is being filterd from a trigger volume",
+      "Description": "Gets the Tags that are being filterd from a Trigger Volume",
       "NodeDescs": {
         "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
           "Name": "Trigger Volume Get Filter Tags",
@@ -8209,7 +8209,7 @@
     },
     "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
       "ReadonlyName": "Trigger Volume Get Num Objects",
-      "Description": "Gets the number of objects inside a trigger volume",
+      "Description": "Gets the number of objects inside a Trigger Volume",
       "NodeDescs": {
         "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
           "Name": "Trigger Volume Get Num Objects",
@@ -8241,7 +8241,7 @@
     },
     "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
       "ReadonlyName": "Trigger Volume Get Num Players",
-      "Description": "Gets the number of players inside a trigger volume",
+      "Description": "Gets the number of players inside a Trigger Volume",
       "NodeDescs": {
         "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
           "Name": "Trigger Volume Get Num Players",
@@ -8273,7 +8273,7 @@
     },
     "530932a7-8781-4b09-a945-b33af6675809": {
       "ReadonlyName": "Trigger Volume Get Objects",
-      "Description": "Gets all of the objects that are inside a trigger volume",
+      "Description": "Gets all of the objects inside a Trigger Volume",
       "NodeDescs": {
         "530932a7-8781-4b09-a945-b33af6675809": {
           "Name": "Trigger Volume Get Objects",
@@ -8305,7 +8305,7 @@
     },
     "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
       "ReadonlyName": "Trigger Volume Get Players",
-      "Description": "Gets all of the players that are inside a trigger volume",
+      "Description": "Gets all of the players inside a Trigger Volume",
       "NodeDescs": {
         "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
           "Name": "Trigger Volume Get Players",
@@ -8337,7 +8337,7 @@
     },
     "55cfecf9-2623-4aad-948c-6ca89f11911b": {
       "ReadonlyName": "Trigger Volume Set Filter Role",
-      "Description": "Sets the filterd role for the trigger volume",
+      "Description": "Sets the filterd Role for the Trigger Volume",
       "NodeDescs": {
         "55cfecf9-2623-4aad-948c-6ca89f11911b": {
           "Name": "Trigger Volume Set Filter Role",
@@ -8379,7 +8379,7 @@
     },
     "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
       "ReadonlyName": "Trigger Volume Set Filter Tags",
-      "Description": "Sets the filterd tags for the trigger volume",
+      "Description": "Sets the filterd Tags for a Trigger Volume",
       "NodeDescs": {
         "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
           "Name": "Trigger Volume Set Filter Tags",
@@ -9315,7 +9315,7 @@
     },
     "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
       "ReadonlyName": "Vector Gadget Get Vector",
-      "Description": "Gets the direction and magnitude of the vector gadget",
+      "Description": "Gets the direction and magnitude of the Vector Component",
       "NodeDescs": {
         "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
           "Name": "Vector Gadget Get Vector",

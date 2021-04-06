@@ -7040,6 +7040,11 @@
             "Math",
             "Scalar"
           ]
+        },
+        {
+          "FilterPath": [
+            "Conversions"
+          ]
         }
       ]
     },
@@ -7903,6 +7908,11 @@
             "Objects",
             "Combatant"
           ]
+        },
+        {
+          "FilterPath": [
+            "Conversions"
+          ]
         }
       ]
     },
@@ -7984,6 +7994,11 @@
         {
           "FilterPath": [
             "Commonly Used"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Conversions"
           ]
         }
       ]

@@ -192,7 +192,7 @@
         "5858a52e-54fb-4bb2-80a0-ec5fce88b3ef": {
           "Name": "AI Has Line of Sight To Target",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T": "(AI | Combatant | Rec Room Object | Patrol Point | Player | Vector3)"
           },
           "InputPorts": {
             "39b1280e-dab1-4c3b-b931-6406e6524a24": {
@@ -231,7 +231,7 @@
         "b5badf49-acfe-4a42-80e2-5262878e2d89": {
           "Name": "AI Look At",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T": "(AI | Combatant | Rec Room Object | Patrol Point | Player | Vector3)"
           },
           "InputPorts": {
             "ad7c3748-8da7-42fb-b445-50ffa13009b4": {
@@ -273,6 +273,54 @@
         }
       ]
     },
+    "0e92a7fb-fb38-418c-af39-9afec92112ee": {
+      "ReadonlyName": "Variable (AI)",
+      "Description": "",
+      "NodeDescs": {
+        "0e92a7fb-fb38-418c-af39-9afec92112ee": {
+          "Name": "Variable (AI)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "AI",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "AI",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Objects"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Objects",
+            "AI"
+          ]
+        }
+      ]
+    },
     "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
       "ReadonlyName": "AI Path To",
       "Description": "Commands the AI to path to the input target destination.",
@@ -280,7 +328,7 @@
         "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
           "Name": "AI Path To",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T": "(AI | Combatant | Rec Room Object | Patrol Point | Player | Vector3)"
           },
           "InputPorts": {
             "af14ef43-288f-47a4-a736-32e10ccb509f": {
@@ -485,7 +533,7 @@
             },
             "cbae2b94-2c01-4157-9fd5-b0244f059881": {
               "Name": "Patrol Point",
-              "ReadonlyType": "PatrolPoint",
+              "ReadonlyType": "Patrol Point",
               "Description": ""
             }
           },
@@ -723,38 +771,6 @@
         }
       ]
     },
-    "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
-      "ReadonlyName": "Atan",
-      "Description": "This chip allows you to use the math formula Atan",
-      "NodeDescs": {
-        "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
-          "Name": "Atan",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "4dbc509e-bfc2-49d7-a9dc-80c90ff27f0e": {
-              "Name": "Value",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "753631c0-a7f8-4c51-812c-51415aa8d303": {
-              "Name": "Result",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Math",
-            "Trigonometry"
-          ]
-        }
-      ]
-    },
     "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
       "ReadonlyName": "Atan2",
       "Description": "This chip allows you to use the math formula Atan2",
@@ -788,6 +804,136 @@
           "FilterPath": [
             "Math",
             "Trigonometry"
+          ]
+        }
+      ]
+    },
+    "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
+      "ReadonlyName": "Atan",
+      "Description": "This chip allows you to use the math formula Atan",
+      "NodeDescs": {
+        "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
+          "Name": "Atan",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "4dbc509e-bfc2-49d7-a9dc-80c90ff27f0e": {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "753631c0-a7f8-4c51-812c-51415aa8d303": {
+              "Name": "Result",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Trigonometry"
+          ]
+        }
+      ]
+    },
+    "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
+      "ReadonlyName": "Variable (bool)",
+      "Description": "",
+      "NodeDescs": {
+        "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
+          "Name": "Variable (bool)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Logic"
+          ]
+        }
+      ]
+    },
+    "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
+      "ReadonlyName": "If",
+      "Description": "Takes a boolean condition as an input. If true, the “then” exec pin fires. If false, the “else” exec pin fires.",
+      "NodeDescs": {
+        "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
+          "Name": "If",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "78e84232-7c31-434e-898c-946cecd1d310": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "0406b9bc-a357-48eb-90f5-104032902a1e": {
+              "Name": "Condition",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "1258d177-c8e0-4bc8-93a9-13df284ca39e": {
+              "Name": "Then",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "fd77b3db-14aa-4bde-96c2-21ee245cdb7d": {
+              "Name": "Else",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Control Flow"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Commonly Used"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Logic"
           ]
         }
       ]
@@ -967,6 +1113,18 @@
         }
       ]
     },
+    "14ebde7a-76c0-47df-b0dd-01b1daa50821": {
+      "ReadonlyName": "No Name",
+      "Description": "Use as a way to encapsulate your logic. You can have as many inputs and outputs as you like. Use the Edit tool to open up the Circuit Board and add nodes inside it to encapsulate the logic. Hit done editing on your Maker Pen to leave the Circuit Board context.",
+      "NodeDescs": {},
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Utilities"
+          ]
+        }
+      ]
+    },
     "c0ee02f4-bbab-40ea-88a0-7441d7e7094c": {
       "ReadonlyName": "Combatant Get Ground Position",
       "Description": "Outputs the ground position of an input combatant",
@@ -1103,6 +1261,54 @@
         }
       },
       "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Combatant"
+          ]
+        }
+      ]
+    },
+    "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
+      "ReadonlyName": "Variable (Combatant)",
+      "Description": "",
+      "NodeDescs": {
+        "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
+          "Name": "Variable (Combatant)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "Combatant",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "Combatant",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Objects"
+          ]
+        },
         {
           "FilterPath": [
             "Objects",
@@ -1329,11 +1535,11 @@
       ]
     },
     "81939b0e-428f-481c-9fba-453b4c84f01e": {
-      "ReadonlyName": "Creation Object Add Tags",
+      "ReadonlyName": "Rec Room Object Add Tags",
       "Description": "Assigns tags to the input object.",
       "NodeDescs": {
         "81939b0e-428f-481c-9fba-453b4c84f01e": {
-          "Name": "Creation Object Add Tags",
+          "Name": "Rec Room Object Add Tags",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "5da5e970-855c-4a59-ad27-1d0e6e5e4671": {
@@ -1343,7 +1549,7 @@
             },
             "ba59583b-0820-4b2c-98a3-49d12e29d030": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             },
             "6f43185b-0be5-445e-a832-f5bbb97a435b": {
@@ -1365,17 +1571,17 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         }
       ]
     },
     "02d69553-ae96-4c2d-8477-59ada6a66783": {
-      "ReadonlyName": "Creation Object Get All with Tag",
+      "ReadonlyName": "Rec Room Object Get All with Tag",
       "Description": "Searches the room for all objects with a specified tag. Outputs all objects with the input tag in a list.",
       "NodeDescs": {
         "02d69553-ae96-4c2d-8477-59ada6a66783": {
-          "Name": "Creation Object Get All with Tag",
+          "Name": "Rec Room Object Get All with Tag",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "da4e71bc-adba-488e-87f6-c8bb34cdff2f": {
@@ -1387,7 +1593,7 @@
           "OutputPorts": {
             "995538a8-7031-4e9c-a634-95e507d89f8d": {
               "Name": "Objects with Tag",
-              "ReadonlyType": "List<CreationObject>",
+              "ReadonlyType": "List<Rec Room Object>",
               "Description": ""
             }
           }
@@ -1397,22 +1603,22 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         }
       ]
     },
     "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
-      "ReadonlyName": "Creation Object Get Authority",
-      "Description": "Outputs the authority player of the input CreationObject",
+      "ReadonlyName": "Rec Room Object Get Authority",
+      "Description": "Outputs the authority player of the input RecRoomObject",
       "NodeDescs": {
         "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
-          "Name": "Creation Object Get Authority",
+          "Name": "Rec Room Object Get Authority",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "854ab564-5c5b-450e-87d1-bcc8cb57c1d2": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           },
@@ -1429,7 +1635,7 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         },
         {
@@ -1440,16 +1646,16 @@
       ]
     },
     "b0497de0-3dd3-470d-a421-8f0d321bfc3e": {
-      "ReadonlyName": "Creation Object Get Is Local Player Authority",
+      "ReadonlyName": "Rec Room Object Get Is Local Player Authority",
       "Description": "Outputs true on the player's machine who has authority of the input.",
       "NodeDescs": {
         "b0497de0-3dd3-470d-a421-8f0d321bfc3e": {
-          "Name": "Creation Object Get Is Local Player Authority",
+          "Name": "Rec Room Object Get Is Local Player Authority",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "9874b3bd-e051-4400-aa4c-0b20d8e61fee": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           },
@@ -1470,17 +1676,60 @@
         }
       ]
     },
+    "a76a9898-4add-4765-9f5b-f366b586e51c": {
+      "ReadonlyName": "Get Player Last Equipped Object",
+      "Description": "Returns the player who last held an object",
+      "NodeDescs": {
+        "a76a9898-4add-4765-9f5b-f366b586e51c": {
+          "Name": "Get Player Last Equipped Object",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "11eb2a56-f3ff-4cef-9a7c-14174d586c7d": {
+              "Name": "Object",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "bccc1df0-c9d9-4b2a-8232-1e6ce7e35684": {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            "01b99193-362a-4c8b-847f-08f91d7b9374": {
+              "Name": "Currently Equipped",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Rec Room Object"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Equipment"
+          ]
+        }
+      ]
+    },
     "e67cfcb7-03e8-4152-ba41-af8ca61d93fb": {
-      "ReadonlyName": "Creation Object Get Tags",
+      "ReadonlyName": "Rec Room Object Get Tags",
       "Description": "Outputs list of tags the input object has.",
       "NodeDescs": {
         "e67cfcb7-03e8-4152-ba41-af8ca61d93fb": {
-          "Name": "Creation Object Get Tags",
+          "Name": "Rec Room Object Get Tags",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "f073a7a5-6b9a-4dca-8538-32e534e9a88d": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           },
@@ -1497,22 +1746,22 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         }
       ]
     },
     "bc3011d2-c085-490e-a450-195ff3a27009": {
-      "ReadonlyName": "Creation Object Has Tag",
+      "ReadonlyName": "Rec Room Object Has Tag",
       "Description": "Outputs true if the input object has the input tag.",
       "NodeDescs": {
         "15549697-11a3-4678-aabd-20890c3dbc09": {
-          "Name": "Creation Object Has Tag",
+          "Name": "Rec Room Object Has Tag",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "7702ff52-2f2f-484a-9189-86a20c6a03db": {
               "Name": "Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             },
             "e87ad31d-d276-4903-a49e-77baf391001b": {
@@ -1534,17 +1783,65 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
+          ]
+        }
+      ]
+    },
+    "7077d139-9876-495e-9756-58150fef9f3b": {
+      "ReadonlyName": "Variable (RecRoomObject)",
+      "Description": "",
+      "NodeDescs": {
+        "7077d139-9876-495e-9756-58150fef9f3b": {
+          "Name": "Variable (RecRoomObject)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Objects"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Objects",
+            "Rec Room Object"
           ]
         }
       ]
     },
     "fb368814-daaf-475f-ae08-1d01b9d63b8e": {
-      "ReadonlyName": "Creation Object Remove Tags",
+      "ReadonlyName": "Rec Room Object Remove Tags",
       "Description": "Removes the input list of tags from the input object.",
       "NodeDescs": {
         "fb368814-daaf-475f-ae08-1d01b9d63b8e": {
-          "Name": "Creation Object Remove Tags",
+          "Name": "Rec Room Object Remove Tags",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "c09f9910-65e0-4d8f-a019-21f08dacb0ba": {
@@ -1554,7 +1851,7 @@
             },
             "6bda7af5-8a65-4a52-a5fc-b6919c28764a": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             },
             "35c48d44-77c7-4474-b0cb-8a60b63a7b7a": {
@@ -1576,7 +1873,7 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         }
       ]
@@ -1633,712 +1930,6 @@
         {
           "FilterPath": [
             "Commonly Used"
-          ]
-        }
-      ]
-    },
-    "cf16ad7e-4ca0-4140-89d1-a6e1e39f93f5": {
-      "ReadonlyName": "DEPRECATED Instance AI",
-      "Description": "",
-      "NodeDescs": {
-        "cf16ad7e-4ca0-4140-89d1-a6e1e39f93f5": {
-          "Name": "DEPRECATED Instance AI",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "AI",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "8065d557-b6cc-4dd1-8cfa-b7481fe7bcf1": {
-      "ReadonlyName": "DEPRECATED Instance bool",
-      "Description": "",
-      "NodeDescs": {
-        "8065d557-b6cc-4dd1-8cfa-b7481fe7bcf1": {
-          "Name": "DEPRECATED Instance bool",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "bool",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "9a44b46a-682d-4a20-af66-8e111673d061": {
-      "ReadonlyName": "DEPRECATED Instance Combatant",
-      "Description": "",
-      "NodeDescs": {
-        "9a44b46a-682d-4a20-af66-8e111673d061": {
-          "Name": "DEPRECATED Instance Combatant",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "Combatant",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
-      "ReadonlyName": "DEPRECATED Instance CreationObject",
-      "Description": "",
-      "NodeDescs": {
-        "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
-          "Name": "DEPRECATED Instance CreationObject",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "CreationObject",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "dce27fe2-abc2-4a6a-9c4e-5d829a5b83a6": {
-      "ReadonlyName": "DEPRECATED Instance float",
-      "Description": "",
-      "NodeDescs": {
-        "dce27fe2-abc2-4a6a-9c4e-5d829a5b83a6": {
-          "Name": "DEPRECATED Instance float",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "1a5331bc-5025-487e-898c-3c49ee715664": {
-      "ReadonlyName": "DEPRECATED Instance int",
-      "Description": "",
-      "NodeDescs": {
-        "1a5331bc-5025-487e-898c-3c49ee715664": {
-          "Name": "DEPRECATED Instance int",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "4f927e94-c242-4aba-89ac-575b169ecbb2": {
-      "ReadonlyName": "DEPRECATED Instance List<bool>",
-      "Description": "",
-      "NodeDescs": {
-        "4f927e94-c242-4aba-89ac-575b169ecbb2": {
-          "Name": "DEPRECATED Instance List<bool>",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "List<bool>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "1e05b1fd-c75c-4955-917f-5576e5451737": {
-      "ReadonlyName": "DEPRECATED Instance List<CreationObject>",
-      "Description": "",
-      "NodeDescs": {
-        "1e05b1fd-c75c-4955-917f-5576e5451737": {
-          "Name": "DEPRECATED Instance List<CreationObject>",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "List<CreationObject>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "b7a11075-1220-4907-ae5c-820f1a209814": {
-      "ReadonlyName": "DEPRECATED Instance List<float>",
-      "Description": "",
-      "NodeDescs": {
-        "b7a11075-1220-4907-ae5c-820f1a209814": {
-          "Name": "DEPRECATED Instance List<float>",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "List<float>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "401db17e-4e67-4a88-8a1b-88c6a819e685": {
-      "ReadonlyName": "DEPRECATED Instance List<int>",
-      "Description": "",
-      "NodeDescs": {
-        "401db17e-4e67-4a88-8a1b-88c6a819e685": {
-          "Name": "DEPRECATED Instance List<int>",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "List<int>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "1ad20647-c773-4708-ba68-d9bd9430fb65": {
-      "ReadonlyName": "DEPRECATED Instance List<Player>",
-      "Description": "",
-      "NodeDescs": {
-        "1ad20647-c773-4708-ba68-d9bd9430fb65": {
-          "Name": "DEPRECATED Instance List<Player>",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "List<Player>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "bcdb75cb-6c21-4a6a-acb5-8f733741e93f": {
-      "ReadonlyName": "DEPRECATED Instance List<string>",
-      "Description": "",
-      "NodeDescs": {
-        "bcdb75cb-6c21-4a6a-acb5-8f733741e93f": {
-          "Name": "DEPRECATED Instance List<string>",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "List<string>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "5b34b481-a7a3-4932-a966-974082c54ecd": {
-      "ReadonlyName": "DEPRECATED Instance List<Vector3>",
-      "Description": "",
-      "NodeDescs": {
-        "5b34b481-a7a3-4932-a966-974082c54ecd": {
-          "Name": "DEPRECATED Instance List<Vector3>",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "List<Vector3>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "3ee1edfe-5520-4714-862b-98af90f6e3da": {
-      "ReadonlyName": "DEPRECATED Instance Player",
-      "Description": "",
-      "NodeDescs": {
-        "3ee1edfe-5520-4714-862b-98af90f6e3da": {
-          "Name": "DEPRECATED Instance Player",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "Player",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "797913df-1bcf-4280-8666-f17d7782cebb": {
-      "ReadonlyName": "DEPRECATED Instance string",
-      "Description": "",
-      "NodeDescs": {
-        "797913df-1bcf-4280-8666-f17d7782cebb": {
-          "Name": "DEPRECATED Instance string",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "33ce1565-62f8-4d39-89da-b8838aadff6a": {
-      "ReadonlyName": "DEPRECATED Instance Vector3",
-      "Description": "",
-      "NodeDescs": {
-        "33ce1565-62f8-4d39-89da-b8838aadff6a": {
-          "Name": "DEPRECATED Instance Vector3",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "76187060-c0b0-4ec6-b082-ff81754cff25": {
-      "ReadonlyName": "DEPRECATED Set Value",
-      "Description": "Sets a value of a variable",
-      "NodeDescs": {
-        "76187060-c0b0-4ec6-b082-ff81754cff25": {
-          "Name": "DEPRECATED Set Value",
-          "ReadonlyTypeParams": {
-            "T": "any"
-          },
-          "InputPorts": {
-            "027d33c7-3703-4132-9a5a-b6f23026c241": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "Value",
-              "ReadonlyType": "T",
-              "Description": ""
-            },
-            "3b04beb3-c913-41f8-9693-427b621e4c95": {
-              "Name": "Variable",
-              "ReadonlyType": "T",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "2edc0dc0-f526-49d3-b2da-c12835c30025": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "620def94-34e2-48ec-b294-25139aa43f74": {
-      "ReadonlyName": "DEPRECATED Sync AI",
-      "Description": "",
-      "NodeDescs": {
-        "620def94-34e2-48ec-b294-25139aa43f74": {
-          "Name": "DEPRECATED Sync AI",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "AI",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "1e2ca8e7-037f-4a1a-82a7-62b81928b6a4": {
-      "ReadonlyName": "DEPRECATED Sync bool",
-      "Description": "",
-      "NodeDescs": {
-        "1e2ca8e7-037f-4a1a-82a7-62b81928b6a4": {
-          "Name": "DEPRECATED Sync bool",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "bool",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "e4c52748-6ebc-487d-821c-11d661a08ed1": {
-      "ReadonlyName": "DEPRECATED Sync Combatant",
-      "Description": "",
-      "NodeDescs": {
-        "e4c52748-6ebc-487d-821c-11d661a08ed1": {
-          "Name": "DEPRECATED Sync Combatant",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "Combatant",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
-      "ReadonlyName": "DEPRECATED Sync CreationObject",
-      "Description": "",
-      "NodeDescs": {
-        "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
-          "Name": "DEPRECATED Sync CreationObject",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "CreationObject",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "56dcf860-9c74-4213-8859-45aba0b96d43": {
-      "ReadonlyName": "DEPRECATED Sync float",
-      "Description": "",
-      "NodeDescs": {
-        "56dcf860-9c74-4213-8859-45aba0b96d43": {
-          "Name": "DEPRECATED Sync float",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "dd96fd78-c47b-4ccc-9d6b-23da2f3f7987": {
-      "ReadonlyName": "DEPRECATED Sync int",
-      "Description": "",
-      "NodeDescs": {
-        "dd96fd78-c47b-4ccc-9d6b-23da2f3f7987": {
-          "Name": "DEPRECATED Sync int",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "ddc89f58-d8f2-49de-af34-332382d8bb71": {
-      "ReadonlyName": "DEPRECATED Sync Player",
-      "Description": "",
-      "NodeDescs": {
-        "ddc89f58-d8f2-49de-af34-332382d8bb71": {
-          "Name": "DEPRECATED Sync Player",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "Player",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "62f1b8b1-f1d3-4ceb-b0e9-57c4915bf401": {
-      "ReadonlyName": "DEPRECATED Sync string",
-      "Description": "",
-      "NodeDescs": {
-        "62f1b8b1-f1d3-4ceb-b0e9-57c4915bf401": {
-          "Name": "DEPRECATED Sync string",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "4499ea8f-1b4d-4072-9098-c6df7f49ed00": {
-      "ReadonlyName": "DEPRECATED Sync Vector3",
-      "Description": "",
-      "NodeDescs": {
-        "4499ea8f-1b4d-4072-9098-c6df7f49ed00": {
-          "Name": "DEPRECATED Sync Vector3",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
-              "Name": "",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
-          ]
-        }
-      ]
-    },
-    "bc5e4a50-1d2c-43bb-a93f-29e53f5af50a": {
-      "ReadonlyName": "DEPRECATED Value Changed",
-      "Description": "",
-      "NodeDescs": {
-        "bc5e4a50-1d2c-43bb-a93f-29e53f5af50a": {
-          "Name": "DEPRECATED Value Changed",
-          "ReadonlyTypeParams": {
-            "T": "any"
-          },
-          "InputPorts": {
-            "3b04beb3-c913-41f8-9693-427b621e4c95": {
-              "Name": "Variable",
-              "ReadonlyType": "T",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "3e99b722-801e-4db6-9ec6-a504a66d86e4": {
-              "Name": "On Value Changed",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "7f4bb52c-1f4b-4724-8363-92660cde009d": {
-              "Name": "Value",
-              "ReadonlyType": "T",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Deprecated"
           ]
         }
       ]
@@ -2451,8 +2042,8 @@
         "182e1ae2-1183-4741-af6e-f307b788a857": {
           "Name": "Distance",
           "ReadonlyTypeParams": {
-            "T1": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)",
-            "T2": "(AI | Combatant | CreationObject | PatrolPoint | Player | Vector3)"
+            "T1": "(AI | Combatant | Rec Room Object | Patrol Point | Player | Vector3)",
+            "T2": "(AI | Combatant | Rec Room Object | Patrol Point | Player | Vector3)"
           },
           "InputPorts": {
             "15286770-ad0c-4ba7-8494-3c384e3879d5": {
@@ -2814,6 +2405,30 @@
         }
       ]
     },
+    "7d72a1fa-a434-4437-a73a-51f306a3f55f": {
+      "ReadonlyName": "Event Definition",
+      "Description": "",
+      "NodeDescs": {
+        "474f120e-96e8-5885-b98e-3ff85f2a287b": {
+          "Name": "Event Definition",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {}
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Commonly Used"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Events"
+          ]
+        }
+      ]
+    },
     "8b533ccb-643a-491d-982c-94417ce99954": {
       "ReadonlyName": "Event Receiver",
       "Description": "Events are the entry points for all circuit graphs. Events are execution hooks for things like a player loading into the room, or knowing when a Button is pressed. After creating this chip, make sure to use the configure tool to choose the event you want to listen for. You can use the Event Defintion chip to create your own events to add to this list and use with the Event Sender chip.",
@@ -2876,6 +2491,54 @@
         {
           "FilterPath": [
             "Commonly Used"
+          ]
+        }
+      ]
+    },
+    "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
+      "ReadonlyName": "Variable (float)",
+      "Description": "",
+      "NodeDescs": {
+        "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
+          "Name": "Variable (float)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
           ]
         }
       ]
@@ -2949,6 +2612,54 @@
         }
       ]
     },
+    "744e5311-6cc7-4130-962e-fe050a475d43": {
+      "ReadonlyName": "For Each",
+      "Description": "Iterates over the input list. The loop exec fires for each element in the list. The Done exec fires once the end of the list has been reached.",
+      "NodeDescs": {
+        "744e5311-6cc7-4130-962e-fe050a475d43": {
+          "Name": "For Each",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "InputPorts": {
+            "b970329f-e743-43ca-b9f6-e4462b693224": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "8932f340-04fa-4be8-a4f9-6041fd38f8eb": {
+              "Name": "Items",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "1fd087b0-1917-449d-a6e2-c5c0fd3a6ae8": {
+              "Name": "Loop",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "70602aaa-54c4-4e08-8e56-0a217f05cc77": {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            "798ccd72-77e8-4565-8f93-1e6306a1e0ef": {
+              "Name": "Done",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Control Flow"
+          ]
+        }
+      ]
+    },
     "8f945c22-988b-45d2-b7f2-409ba304fef4": {
       "ReadonlyName": "For",
       "Description": "Iterates over the “From” pin (inclusive) to the “To” pin (exclusive)",
@@ -3000,67 +2711,19 @@
         }
       ]
     },
-    "744e5311-6cc7-4130-962e-fe050a475d43": {
-      "ReadonlyName": "For Each",
-      "Description": "Iterates over the input list. The loop exec fires for each element in the list. The Done exec fires once the end of the list has been reached.",
-      "NodeDescs": {
-        "744e5311-6cc7-4130-962e-fe050a475d43": {
-          "Name": "For Each",
-          "ReadonlyTypeParams": {
-            "T": "any"
-          },
-          "InputPorts": {
-            "b970329f-e743-43ca-b9f6-e4462b693224": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "8932f340-04fa-4be8-a4f9-6041fd38f8eb": {
-              "Name": "Items",
-              "ReadonlyType": "List<T>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "1fd087b0-1917-449d-a6e2-c5c0fd3a6ae8": {
-              "Name": "Loop",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "70602aaa-54c4-4e08-8e56-0a217f05cc77": {
-              "Name": "Item",
-              "ReadonlyType": "T",
-              "Description": ""
-            },
-            "798ccd72-77e8-4565-8f93-1e6306a1e0ef": {
-              "Name": "Done",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Control Flow"
-          ]
-        }
-      ]
-    },
     "7ff685a6-f59c-4c6c-b559-f343d81ea1d4": {
-      "ReadonlyName": "From Creation Object",
-      "Description": "Converts the input creation object to the object's subtype.",
+      "ReadonlyName": "From Rec Room Object",
+      "Description": "Converts the input Rec Room Object to the object's subtype.",
       "NodeDescs": {
         "7ff685a6-f59c-4c6c-b559-f343d81ea1d4": {
-          "Name": "From Creation Object",
+          "Name": "From Rec Room Object",
           "ReadonlyTypeParams": {
-            "T": "CreationObject"
+            "T": "Rec Room Object"
           },
           "InputPorts": {
             "24c9f17f-1a16-4f6f-a597-3f8da7fe1bfe": {
               "Name": "Target",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           },
@@ -3077,7 +2740,7 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         },
         {
@@ -3094,19 +2757,8 @@
         "09b0bf5b-95df-474b-b81a-4e8e2c78ed0a": {
           "Name": "Get All Players",
           "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "7bc7c312-5e63-46c9-8524-28d0b50bbddc": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          },
+          "InputPorts": {},
           "OutputPorts": {
-            "8f78e036-b4be-416c-bcc5-f30c28abe39a": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
             "4fa627cf-a7b7-4323-944d-11da0720909a": {
               "Name": "Players",
               "ReadonlyType": "List<Player>",
@@ -3187,6 +2839,31 @@
         }
       ]
     },
+    "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
+      "ReadonlyName": "Time Get Universal Seconds",
+      "Description": "Gets the amount of seconds since 1970",
+      "NodeDescs": {
+        "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
+          "Name": "Time Get Universal Seconds",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7148bed6-2bc2-4120-88b0-aa2a80e4db73": {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Time"
+          ]
+        }
+      ]
+    },
     "88f95338-d1a6-4fad-8424-d714d651f6ac": {
       "ReadonlyName": "Get Forward Vector",
       "Description": "",
@@ -3194,7 +2871,7 @@
         "88f95338-d1a6-4fad-8424-d714d651f6ac": {
           "Name": "Get Forward Vector",
           "ReadonlyTypeParams": {
-            "T": "(CreationObject | Player)"
+            "T": "(Rec Room Object | Player)"
           },
           "InputPorts": {
             "53ce784c-9d25-4a29-9aef-e1f779e6339f": {
@@ -3216,6 +2893,40 @@
         {
           "FilterPath": [
             "Physics"
+          ]
+        }
+      ]
+    },
+    "0493204d-9815-49a9-8c87-4dedf5ccf7e8": {
+      "ReadonlyName": "List Get Count",
+      "Description": "Outputs the number of elements inside the input list.",
+      "NodeDescs": {
+        "0493204d-9815-49a9-8c87-4dedf5ccf7e8": {
+          "Name": "List Get Count",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "InputPorts": {
+            "25b29331-85df-4091-998e-a153f526ec66": {
+              "Name": "List",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "7dd19874-010c-4e9b-933a-297136d97222": {
+              "Name": "Count",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Core"
           ]
         }
       ]
@@ -3300,49 +3011,6 @@
         }
       ]
     },
-    "a76a9898-4add-4765-9f5b-f366b586e51c": {
-      "ReadonlyName": "Get Player Last Equipped Object",
-      "Description": "Returns the player who last held an object",
-      "NodeDescs": {
-        "a76a9898-4add-4765-9f5b-f366b586e51c": {
-          "Name": "Get Player Last Equipped Object",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "11eb2a56-f3ff-4cef-9a7c-14174d586c7d": {
-              "Name": "Object",
-              "ReadonlyType": "CreationObject",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "bccc1df0-c9d9-4b2a-8232-1e6ce7e35684": {
-              "Name": "Player",
-              "ReadonlyType": "Player",
-              "Description": ""
-            },
-            "01b99193-362a-4c8b-847f-08f91d7b9374": {
-              "Name": "Currently Equipped",
-              "ReadonlyType": "bool",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Objects",
-            "Creation Object"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Player",
-            "Equipment"
-          ]
-        }
-      ]
-    },
     "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
       "ReadonlyName": "Get Position",
       "Description": "Outputs the position of the input object as a vector3.",
@@ -3350,7 +3018,7 @@
         "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
           "Name": "Get Position",
           "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | CreationObject | Player)"
+            "T": "(AI | Combatant | Rec Room Object | Player)"
           },
           "InputPorts": {
             "15286770-ad0c-4ba7-8494-3c384e3879d5": {
@@ -3372,6 +3040,31 @@
         {
           "FilterPath": [
             "Physics"
+          ]
+        }
+      ]
+    },
+    "8722445f-e552-4d4a-bced-8afa63bbf70b": {
+      "ReadonlyName": "Time Get Precise Seconds",
+      "Description": "Gets the amount of seconds since a player launched Rec Room",
+      "NodeDescs": {
+        "8722445f-e552-4d4a-bced-8afa63bbf70b": {
+          "Name": "Time Get Precise Seconds",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "88f3addc-cf2b-44a1-a7c0-816bd0deb857": {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Time"
           ]
         }
       ]
@@ -3408,7 +3101,7 @@
         "830f781d-2522-4ec0-9d6f-ecfc0bf695f6": {
           "Name": "Get Up Vector",
           "ReadonlyTypeParams": {
-            "T": "(CreationObject | Player)"
+            "T": "(Rec Room Object | Player)"
           },
           "InputPorts": {
             "e9dc68a7-efa4-4ad7-8e15-27b254436f91": {
@@ -3434,14 +3127,64 @@
         }
       ]
     },
+    "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
+      "ReadonlyName": "Time Get Universal Time",
+      "Description": "Gets the UTC time zone Time",
+      "NodeDescs": {
+        "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
+          "Name": "Time Get Universal Time",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "8f878050-06b6-40b3-a005-3b96b0776d26": {
+              "Name": "Year",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            "6a6f3d24-cb0f-4f23-a4d6-93ecd74669ff": {
+              "Name": "Month",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            "32fa8494-e29f-4fe5-9f57-d0b90e3b7b12": {
+              "Name": "Day",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            "f9e2db7d-6a75-4211-8474-3af6714dbf8b": {
+              "Name": "Hour",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            "11f50dff-28b3-462c-a2bc-d282796315cc": {
+              "Name": "Minute",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            "0dd582ce-c150-40c9-a8d4-868de06d021f": {
+              "Name": "Second",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Time"
+          ]
+        }
+      ]
+    },
     "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
       "ReadonlyName": "Get Velocity",
-      "Description": "Returns the velocity of a player or a CreationObject",
+      "Description": "Returns the velocity of a player or a RecRoomObject",
       "NodeDescs": {
         "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
           "Name": "Get Velocity",
           "ReadonlyTypeParams": {
-            "T": "(CreationObject | Player)"
+            "T": "(Rec Room Object | Player)"
           },
           "InputPorts": {
             "baa3e839-b8f5-4519-a08c-6a7f0f1d2cc8": {
@@ -3463,44 +3206,6 @@
         {
           "FilterPath": [
             "Physics"
-          ]
-        }
-      ]
-    },
-    "a10e7788-f016-4390-a68e-87d93b47edb1": {
-      "ReadonlyName": "Greater or Equal",
-      "Description": "Returns true if input A is greater or equal than input B",
-      "NodeDescs": {
-        "a10e7788-f016-4390-a68e-87d93b47edb1": {
-          "Name": "Greater or Equal",
-          "ReadonlyTypeParams": {
-            "T": "(int | float)"
-          },
-          "InputPorts": {
-            "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
-              "Name": "A",
-              "ReadonlyType": "T",
-              "Description": ""
-            },
-            "e9ed811e-a655-492d-bbd5-090cb97c6a26": {
-              "Name": "B",
-              "ReadonlyType": "T",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "20a815ff-df3a-4fdf-a569-58a51a25318f": {
-              "Name": "Result",
-              "ReadonlyType": "bool",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Logic"
           ]
         }
       ]
@@ -3543,50 +3248,37 @@
         }
       ]
     },
-    "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
-      "ReadonlyName": "If",
-      "Description": "Takes a boolean condition as an input. If true, the “then” exec pin fires. If false, the “else” exec pin fires.",
+    "a10e7788-f016-4390-a68e-87d93b47edb1": {
+      "ReadonlyName": "Greater or Equal",
+      "Description": "Returns true if input A is greater or equal than input B",
       "NodeDescs": {
-        "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
-          "Name": "If",
-          "ReadonlyTypeParams": {},
+        "a10e7788-f016-4390-a68e-87d93b47edb1": {
+          "Name": "Greater or Equal",
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
           "InputPorts": {
-            "78e84232-7c31-434e-898c-946cecd1d310": {
-              "Name": "",
-              "ReadonlyType": "exec",
+            "fb8e4f15-4a6f-4672-9d4d-dfef9b69329e": {
+              "Name": "A",
+              "ReadonlyType": "T",
               "Description": ""
             },
-            "0406b9bc-a357-48eb-90f5-104032902a1e": {
-              "Name": "Condition",
-              "ReadonlyType": "bool",
+            "e9ed811e-a655-492d-bbd5-090cb97c6a26": {
+              "Name": "B",
+              "ReadonlyType": "T",
               "Description": ""
             }
           },
           "OutputPorts": {
-            "1258d177-c8e0-4bc8-93a9-13df284ca39e": {
-              "Name": "Then",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "fd77b3db-14aa-4bde-96c2-21ee245cdb7d": {
-              "Name": "Else",
-              "ReadonlyType": "exec",
+            "20a815ff-df3a-4fdf-a569-58a51a25318f": {
+              "Name": "Result",
+              "ReadonlyType": "bool",
               "Description": ""
             }
           }
         }
       },
       "NodeFilters": [
-        {
-          "FilterPath": [
-            "Control Flow"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Commonly Used"
-          ]
-        },
         {
           "FilterPath": [
             "Logic"
@@ -3798,7 +3490,7 @@
         "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
           "Name": "Impulse Add",
           "ReadonlyTypeParams": {
-            "T": "(Player | CreationObject)"
+            "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "47d59582-2661-4d87-a9ef-133d33f75988": {
@@ -3851,7 +3543,7 @@
         "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
           "Name": "Impulse Reflect",
           "ReadonlyTypeParams": {
-            "T": "(Player | CreationObject)"
+            "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "c0f71599-64c7-4d29-8beb-995335d5a5c0": {
@@ -3909,7 +3601,7 @@
         "f97c530d-03bf-498c-8854-33e814d2600b": {
           "Name": "Impulse Set",
           "ReadonlyTypeParams": {
-            "T": "(Player | CreationObject)"
+            "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "d721c22d-8695-4df5-8c2d-f6422e91b2b2": {
@@ -3946,6 +3638,454 @@
         {
           "FilterPath": [
             "Physics"
+          ]
+        }
+      ]
+    },
+    "cf16ad7e-4ca0-4140-89d1-a6e1e39f93f5": {
+      "ReadonlyName": "DEPRECATED Instance AI",
+      "Description": "",
+      "NodeDescs": {
+        "cf16ad7e-4ca0-4140-89d1-a6e1e39f93f5": {
+          "Name": "DEPRECATED Instance AI",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "AI",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "8065d557-b6cc-4dd1-8cfa-b7481fe7bcf1": {
+      "ReadonlyName": "DEPRECATED Instance bool",
+      "Description": "",
+      "NodeDescs": {
+        "8065d557-b6cc-4dd1-8cfa-b7481fe7bcf1": {
+          "Name": "DEPRECATED Instance bool",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "9a44b46a-682d-4a20-af66-8e111673d061": {
+      "ReadonlyName": "DEPRECATED Instance Combatant",
+      "Description": "",
+      "NodeDescs": {
+        "9a44b46a-682d-4a20-af66-8e111673d061": {
+          "Name": "DEPRECATED Instance Combatant",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Combatant",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
+      "ReadonlyName": "DEPRECATED Instance RecRoomObject",
+      "Description": "",
+      "NodeDescs": {
+        "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
+          "Name": "DEPRECATED Instance RecRoomObject",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "dce27fe2-abc2-4a6a-9c4e-5d829a5b83a6": {
+      "ReadonlyName": "DEPRECATED Instance float",
+      "Description": "",
+      "NodeDescs": {
+        "dce27fe2-abc2-4a6a-9c4e-5d829a5b83a6": {
+          "Name": "DEPRECATED Instance float",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "1a5331bc-5025-487e-898c-3c49ee715664": {
+      "ReadonlyName": "DEPRECATED Instance int",
+      "Description": "",
+      "NodeDescs": {
+        "1a5331bc-5025-487e-898c-3c49ee715664": {
+          "Name": "DEPRECATED Instance int",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "4f927e94-c242-4aba-89ac-575b169ecbb2": {
+      "ReadonlyName": "DEPRECATED Instance List<bool>",
+      "Description": "",
+      "NodeDescs": {
+        "4f927e94-c242-4aba-89ac-575b169ecbb2": {
+          "Name": "DEPRECATED Instance List<bool>",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "List<bool>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "1e05b1fd-c75c-4955-917f-5576e5451737": {
+      "ReadonlyName": "DEPRECATED Instance List<RecRoomObject>",
+      "Description": "",
+      "NodeDescs": {
+        "1e05b1fd-c75c-4955-917f-5576e5451737": {
+          "Name": "DEPRECATED Instance List<RecRoomObject>",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "List<Rec Room Object>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "b7a11075-1220-4907-ae5c-820f1a209814": {
+      "ReadonlyName": "DEPRECATED Instance List<float>",
+      "Description": "",
+      "NodeDescs": {
+        "b7a11075-1220-4907-ae5c-820f1a209814": {
+          "Name": "DEPRECATED Instance List<float>",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "List<float>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "401db17e-4e67-4a88-8a1b-88c6a819e685": {
+      "ReadonlyName": "DEPRECATED Instance List<int>",
+      "Description": "",
+      "NodeDescs": {
+        "401db17e-4e67-4a88-8a1b-88c6a819e685": {
+          "Name": "DEPRECATED Instance List<int>",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "List<int>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "1ad20647-c773-4708-ba68-d9bd9430fb65": {
+      "ReadonlyName": "DEPRECATED Instance List<Player>",
+      "Description": "",
+      "NodeDescs": {
+        "1ad20647-c773-4708-ba68-d9bd9430fb65": {
+          "Name": "DEPRECATED Instance List<Player>",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "List<Player>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "bcdb75cb-6c21-4a6a-acb5-8f733741e93f": {
+      "ReadonlyName": "DEPRECATED Instance List<string>",
+      "Description": "",
+      "NodeDescs": {
+        "bcdb75cb-6c21-4a6a-acb5-8f733741e93f": {
+          "Name": "DEPRECATED Instance List<string>",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "5b34b481-a7a3-4932-a966-974082c54ecd": {
+      "ReadonlyName": "DEPRECATED Instance List<Vector3>",
+      "Description": "",
+      "NodeDescs": {
+        "5b34b481-a7a3-4932-a966-974082c54ecd": {
+          "Name": "DEPRECATED Instance List<Vector3>",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "List<Vector3>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "3ee1edfe-5520-4714-862b-98af90f6e3da": {
+      "ReadonlyName": "DEPRECATED Instance Player",
+      "Description": "",
+      "NodeDescs": {
+        "3ee1edfe-5520-4714-862b-98af90f6e3da": {
+          "Name": "DEPRECATED Instance Player",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "797913df-1bcf-4280-8666-f17d7782cebb": {
+      "ReadonlyName": "DEPRECATED Instance string",
+      "Description": "",
+      "NodeDescs": {
+        "797913df-1bcf-4280-8666-f17d7782cebb": {
+          "Name": "DEPRECATED Instance string",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "33ce1565-62f8-4d39-89da-b8838aadff6a": {
+      "ReadonlyName": "DEPRECATED Instance Vector3",
+      "Description": "",
+      "NodeDescs": {
+        "33ce1565-62f8-4d39-89da-b8838aadff6a": {
+          "Name": "DEPRECATED Instance Vector3",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "33224907-68ff-4102-802e-7c3eed481d37": {
+      "ReadonlyName": "Variable (int)",
+      "Description": "",
+      "NodeDescs": {
+        "33224907-68ff-4102-802e-7c3eed481d37": {
+          "Name": "Variable (int)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
           ]
         }
       ]
@@ -4070,12 +4210,12 @@
         }
       ]
     },
-    "a027073f-9189-457f-a53d-8562e8829daf": {
-      "ReadonlyName": "Less or Equal",
-      "Description": "Returns true if input A is less than or equal to input B.",
+    "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
+      "ReadonlyName": "Less Than",
+      "Description": "Returns true if input A is less than input B.",
       "NodeDescs": {
-        "a027073f-9189-457f-a53d-8562e8829daf": {
-          "Name": "Less or Equal",
+        "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
+          "Name": "Less Than",
           "ReadonlyTypeParams": {
             "T": "(int | float)"
           },
@@ -4108,12 +4248,12 @@
         }
       ]
     },
-    "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
-      "ReadonlyName": "Less Than",
-      "Description": "Returns true if input A is less than input B.",
+    "a027073f-9189-457f-a53d-8562e8829daf": {
+      "ReadonlyName": "Less or Equal",
+      "Description": "Returns true if input A is less than or equal to input B.",
       "NodeDescs": {
-        "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
-          "Name": "Less Than",
+        "a027073f-9189-457f-a53d-8562e8829daf": {
+          "Name": "Less or Equal",
           "ReadonlyTypeParams": {
             "T": "(int | float)"
           },
@@ -4161,7 +4301,7 @@
             },
             "bedc5b1e-036e-47e5-b9e3-b5554972b6c5": {
               "Name": "Target",
-              "ReadonlyType": "DynamicLight",
+              "ReadonlyType": "Light",
               "Description": ""
             },
             "07d49d94-9fd5-48ec-badc-c9483eedaa5f": {
@@ -4203,7 +4343,7 @@
             },
             "6428afd8-aef7-4cc5-9404-6b78f66d6e05": {
               "Name": "Target",
-              "ReadonlyType": "DynamicLight",
+              "ReadonlyType": "Light",
               "Description": ""
             },
             "89f3945d-d924-4184-9c44-32abf16de9d1": {
@@ -4245,7 +4385,7 @@
             },
             "b2b87ba5-92e6-49fb-88d7-578649b647cb": {
               "Name": "Target",
-              "ReadonlyType": "DynamicLight",
+              "ReadonlyType": "Light",
               "Description": ""
             },
             "79143b1e-9452-466d-9b7c-bf818e9fdac9": {
@@ -4287,7 +4427,7 @@
             },
             "0aa6dff9-e623-4909-b6c6-e780e1d7b64f": {
               "Name": "Target",
-              "ReadonlyType": "DynamicLight",
+              "ReadonlyType": "Light",
               "Description": ""
             },
             "38de8f7d-98aa-4dbc-b500-d8d44ddb3d54": {
@@ -4329,7 +4469,7 @@
             },
             "95081b5e-bdfa-43f8-b617-93f5e6360969": {
               "Name": "Target",
-              "ReadonlyType": "DynamicLight",
+              "ReadonlyType": "Light",
               "Description": ""
             }
           },
@@ -4366,7 +4506,7 @@
             },
             "e450c577-8262-4a38-b72f-9a23185f2894": {
               "Name": "Target",
-              "ReadonlyType": "DynamicLight",
+              "ReadonlyType": "Light",
               "Description": ""
             }
           },
@@ -4508,6 +4648,68 @@
         }
       ]
     },
+    "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
+      "ReadonlyName": "Variable (List<bool>)",
+      "Description": "",
+      "NodeDescs": {
+        "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
+          "Name": "Variable (List<bool>)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<bool>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<bool>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Logic",
+            "Lists"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Lists",
+            "Logic"
+          ]
+        }
+      ]
+    },
     "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
       "ReadonlyName": "List Concat",
       "Description": "Combine lists together into one list",
@@ -4586,6 +4788,62 @@
         }
       ]
     },
+    "536e376c-087d-4909-9412-3fcee5d6f52b": {
+      "ReadonlyName": "Variable (List<RecRoomObject>)",
+      "Description": "",
+      "NodeDescs": {
+        "536e376c-087d-4909-9412-3fcee5d6f52b": {
+          "Name": "Variable (List<RecRoomObject>)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<Rec Room Object>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<Rec Room Object>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Variables",
+            "Objects"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists",
+            "Objects"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Objects",
+            "Rec Room Object"
+          ]
+        }
+      ]
+    },
     "7e5af908-533d-4d42-b3c9-0159e2b5fd55": {
       "ReadonlyName": "List Divide",
       "Description": "",
@@ -4626,26 +4884,34 @@
         }
       ]
     },
-    "0493204d-9815-49a9-8c87-4dedf5ccf7e8": {
-      "ReadonlyName": "List Get Count",
-      "Description": "Outputs the number of elements inside the input list.",
+    "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
+      "ReadonlyName": "Variable (List<float>)",
+      "Description": "",
       "NodeDescs": {
-        "0493204d-9815-49a9-8c87-4dedf5ccf7e8": {
-          "Name": "List Get Count",
-          "ReadonlyTypeParams": {
-            "T": "any"
-          },
+        "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
+          "Name": "Variable (List<float>)",
+          "ReadonlyTypeParams": {},
           "InputPorts": {
-            "25b29331-85df-4091-998e-a153f526ec66": {
-              "Name": "List",
-              "ReadonlyType": "List<T>",
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<float>",
               "Description": ""
             }
           },
           "OutputPorts": {
-            "7dd19874-010c-4e9b-933a-297136d97222": {
-              "Name": "Count",
-              "ReadonlyType": "int",
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<float>",
               "Description": ""
             }
           }
@@ -4655,7 +4921,21 @@
         {
           "FilterPath": [
             "Lists",
-            "Core"
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Lists"
           ]
         }
       ]
@@ -4705,6 +4985,62 @@
           "FilterPath": [
             "Lists",
             "Core"
+          ]
+        }
+      ]
+    },
+    "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
+      "ReadonlyName": "Variable (List<int>)",
+      "Description": "",
+      "NodeDescs": {
+        "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
+          "Name": "Variable (List<int>)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<int>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<int>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Lists"
           ]
         }
       ]
@@ -4829,6 +5165,61 @@
         }
       ]
     },
+    "32837e14-12de-465f-89dc-ceddb64cdd6c": {
+      "ReadonlyName": "Variable (List<Player>)",
+      "Description": "",
+      "NodeDescs": {
+        "32837e14-12de-465f-89dc-ceddb64cdd6c": {
+          "Name": "Variable (List<Player>)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<Player>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<Player>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Variables",
+            "Objects"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists",
+            "Objects"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "02774487-d41a-4b59-9aa9-2aeb0aad9e37": {
       "ReadonlyName": "List Remove At",
       "Description": "",
@@ -4908,6 +5299,56 @@
           "FilterPath": [
             "Lists",
             "Core"
+          ]
+        }
+      ]
+    },
+    "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
+      "ReadonlyName": "Variable (List<string>)",
+      "Description": "",
+      "NodeDescs": {
+        "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
+          "Name": "Variable (List<string>)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists",
+            "Primitives"
           ]
         }
       ]
@@ -4992,6 +5433,93 @@
         }
       ]
     },
+    "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
+      "ReadonlyName": "Variable (List<Vector3>)",
+      "Description": "",
+      "NodeDescs": {
+        "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
+          "Name": "Variable (List<Vector3>)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<Vector3>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<Vector3>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists",
+            "Primitives"
+          ]
+        }
+      ]
+    },
+    "28a105ab-a947-4493-a51d-ced76a9601ee": {
+      "ReadonlyName": "Logarithm",
+      "Description": "This chip allows you to use the math formula logarithm",
+      "NodeDescs": {
+        "28a105ab-a947-4493-a51d-ced76a9601ee": {
+          "Name": "Logarithm",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "128d19d7-aaaf-49f7-8c83-8482baab3d38": {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "85c94c0b-4304-422f-84af-1abd92ed3d44": {
+              "Name": "Base",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "9425d3e2-546f-480b-ae94-2eff614be033": {
+              "Name": "Result",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
+          ]
+        }
+      ]
+    },
     "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
       "ReadonlyName": "Log Screen Get Mute",
       "Description": "If the log screen is muted then return true",
@@ -5002,7 +5530,7 @@
           "InputPorts": {
             "eab3c74e-6eb0-48d0-a3fb-ea2f7177ff24": {
               "Name": "Target",
-              "ReadonlyType": "LogScreen",
+              "ReadonlyType": "Log Screen",
               "Description": ""
             }
           },
@@ -5039,7 +5567,7 @@
             },
             "bf6d9dee-f02d-48af-8fde-8c7aaf29635c": {
               "Name": "Target",
-              "ReadonlyType": "LogScreen",
+              "ReadonlyType": "Log Screen",
               "Description": ""
             }
           },
@@ -5076,7 +5604,7 @@
             },
             "fff8775d-05dd-431e-a18c-12b79f2e031e": {
               "Name": "Target",
-              "ReadonlyType": "LogScreen",
+              "ReadonlyType": "Log Screen",
               "Description": ""
             },
             "95d53697-b771-4d45-ad1a-f123951c73a9": {
@@ -5150,49 +5678,12 @@
         }
       ]
     },
-    "28a105ab-a947-4493-a51d-ced76a9601ee": {
-      "ReadonlyName": "Logarithm",
-      "Description": "This chip allows you to use the math formula logarithm",
-      "NodeDescs": {
-        "28a105ab-a947-4493-a51d-ced76a9601ee": {
-          "Name": "Logarithm",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "128d19d7-aaaf-49f7-8c83-8482baab3d38": {
-              "Name": "Value",
-              "ReadonlyType": "float",
-              "Description": ""
-            },
-            "85c94c0b-4304-422f-84af-1abd92ed3d44": {
-              "Name": "Base",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "9425d3e2-546f-480b-ae94-2eff614be033": {
-              "Name": "Result",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Math",
-            "Scalar"
-          ]
-        }
-      ]
-    },
     "542d3256-0d51-4c33-a2a1-fbc44b7e1f07": {
-      "ReadonlyName": "Make List",
+      "ReadonlyName": "List Create",
       "Description": "Creates a list from input values. Add more inputs by using the configure tool on the node and press “Add Input”. All items in a list must be of the same type.",
       "NodeDescs": {
         "542d3256-0d51-4c33-a2a1-fbc44b7e1f07": {
-          "Name": "Make List",
+          "Name": "List Create",
           "ReadonlyTypeParams": {
             "T": "any"
           },
@@ -5390,30 +5881,6 @@
         {
           "FilterPath": [
             "Logic"
-          ]
-        }
-      ]
-    },
-    "14ebde7a-76c0-47df-b0dd-01b1daa50821": {
-      "ReadonlyName": "No Name",
-      "Description": "Use as a way to encapsulate your logic. You can have as many inputs and outputs as you like. Use the Edit tool to open up the Circuit Board and add nodes inside it to encapsulate the logic. Hit done editing on your Maker Pen to leave the Circuit Board context.",
-      "NodeDescs": {},
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Utilities"
-          ]
-        }
-      ]
-    },
-    "4c9e7840-0721-4d1c-b334-167f79d3bf40": {
-      "ReadonlyName": "No Name",
-      "Description": "This is very similar to an object board that you would find on any object, except this is for all players! After placing, make sure to configure it and make sure it is active. Edit into this board and add any other chips you'd like and know that each player will have the same logic on them when you hit done editing. ",
-      "NodeDescs": {},
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Player"
           ]
         }
       ]
@@ -5699,11 +6166,11 @@
       ]
     },
     "639a360e-aeb1-4c5d-8bc1-96bfaea8aef2": {
-      "ReadonlyName": "Piston Get Marker Distance",
+      "ReadonlyName": "Piston Get Target Distance",
       "Description": "",
       "NodeDescs": {
         "639a360e-aeb1-4c5d-8bc1-96bfaea8aef2": {
-          "Name": "Piston Get Marker Distance",
+          "Name": "Piston Get Target Distance",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "2cb83108-6622-4f6b-8c4c-67d2e9b95689": {
@@ -5879,11 +6346,11 @@
       ]
     },
     "bf25fab6-14ef-4815-a7db-92d99fc627d3": {
-      "ReadonlyName": "Piston Set Marker Distance",
+      "ReadonlyName": "Piston Set Target Distance",
       "Description": "",
       "NodeDescs": {
         "bf25fab6-14ef-4815-a7db-92d99fc627d3": {
-          "Name": "Piston Set Marker Distance",
+          "Name": "Piston Set Target Distance",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "2e08d0ea-09fb-47fd-a65b-968b304b971c": {
@@ -6045,6 +6512,18 @@
         }
       ]
     },
+    "4c9e7840-0721-4d1c-b334-167f79d3bf40": {
+      "ReadonlyName": "No Name",
+      "Description": "This is very similar to an object board that you would find on any object, except this is for all players! After placing, make sure to configure it and make sure it is active. Edit into this board and add any other chips you'd like and know that each player will have the same logic on them when you hit done editing. ",
+      "NodeDescs": {},
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
       "ReadonlyName": "Player Get Equipped Objects",
       "Description": "Gets equipped objects from a player",
@@ -6062,27 +6541,27 @@
           "OutputPorts": {
             "1a5a3086-b42e-4b1b-bf94-2bb8cd68a64c": {
               "Name": "Main-Hand Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             },
             "803c5514-b381-4385-817f-d2dead752553": {
               "Name": "Off-Hand Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             },
             "b9955e9f-bdaf-44b7-8f0d-92e40c36ce13": {
               "Name": "Left Hip Holster Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             },
             "90b0f544-1729-4794-90f0-521ad3693ef3": {
               "Name": "Right Hip Holster Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             },
             "d3951f9b-a4d6-4e7d-9215-1c0573df1d07": {
               "Name": "Shoulder Holster Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           }
@@ -6171,7 +6650,7 @@
     },
     "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
       "ReadonlyName": "Player Is Authority Of",
-      "Description": "Outputs if a player is authority of the input CreationObject",
+      "Description": "Outputs if a player is authority of the input RecRoomObject",
       "NodeDescs": {
         "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
           "Name": "Player Is Authority Of",
@@ -6184,7 +6663,7 @@
             },
             "243000b2-21a6-4fc2-b86a-47c49d806bd8": {
               "Name": "Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           },
@@ -6203,6 +6682,37 @@
             "Networking"
           ]
         },
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "58c5cab7-ddf7-4de8-86c8-25f3d3c19d98": {
+      "ReadonlyName": "Player Is Room Owner",
+      "Description": "Outputs true if the input player is one of the current room's owners.",
+      "NodeDescs": {
+        "58c5cab7-ddf7-4de8-86c8-25f3d3c19d98": {
+          "Name": "Player Is Room Owner",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "e213cdff-57bb-451c-a799-49ad2a982cfc": {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "8e5e41b7-9e15-4788-968e-7850781b9f8a": {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
         {
           "FilterPath": [
             "Player"
@@ -6296,6 +6806,53 @@
         }
       },
       "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
+      "ReadonlyName": "Variable (Player)",
+      "Description": "",
+      "NodeDescs": {
+        "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
+          "Name": "Variable (Player)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Objects"
+          ]
+        },
         {
           "FilterPath": [
             "Player"
@@ -6424,6 +6981,37 @@
             "7260a599-cdbf-4486-84f8-a76e0c4ffb79": {
               "Name": "Vector",
               "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "7e321d9b-4500-4917-9361-a32e1463401c": {
+      "ReadonlyName": "Player Subscribes to Room Owner",
+      "Description": "Outputs true if the input player subscribes to one of the current room's owners.",
+      "NodeDescs": {
+        "7e321d9b-4500-4917-9361-a32e1463401c": {
+          "Name": "Player Subscribes to Room Owner",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "a8bcd985-fdee-439c-afff-9c35f4351d74": {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "3a2a2a24-c077-4560-a920-9e23278167a0": {
+              "Name": "Result",
+              "ReadonlyType": "bool",
               "Description": ""
             }
           }
@@ -6623,7 +7211,7 @@
     },
     "6ba175cf-493a-4790-b916-57259f94cd98": {
       "ReadonlyName": "Reset Object",
-      "Description": "Resets a CreationObject",
+      "Description": "Resets a RecRoomObject",
       "NodeDescs": {
         "6ba175cf-493a-4790-b916-57259f94cd98": {
           "Name": "Reset Object",
@@ -6636,7 +7224,7 @@
             },
             "855ab03a-70ca-4a6c-b14b-41b9e15e38ce": {
               "Name": "Object",
-              "ReadonlyType": "CreationObject",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           },
@@ -6653,7 +7241,7 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         }
       ]
@@ -6684,11 +7272,11 @@
       ]
     },
     "117b8c83-5ada-4665-a0c6-2c6ffdec98b9": {
-      "ReadonlyName": "Rotator Get Marker Rotation",
+      "ReadonlyName": "Rotator Get Target Rotation",
       "Description": "",
       "NodeDescs": {
         "117b8c83-5ada-4665-a0c6-2c6ffdec98b9": {
-          "Name": "Rotator Get Marker Rotation",
+          "Name": "Rotator Get Target Rotation",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "77e2fd51-cfa3-4154-84fa-b83290b327e1": {
@@ -6699,38 +7287,6 @@
           },
           "OutputPorts": {
             "0b93bb2f-d45f-404e-9693-39896c1711a0": {
-              "Name": "Value",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Objects",
-            "Rotator"
-          ]
-        }
-      ]
-    },
-    "30fe0829-2f08-4bd2-b4b1-9a41764e5a76": {
-      "ReadonlyName": "Rotator Get Rotation",
-      "Description": "",
-      "NodeDescs": {
-        "30fe0829-2f08-4bd2-b4b1-9a41764e5a76": {
-          "Name": "Rotator Get Rotation",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "668d5bba-4765-444d-9b5d-be7b9df44d0a": {
-              "Name": "Target",
-              "ReadonlyType": "Rotator",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "69a5b265-d3cf-4437-9dc2-7ae988453ebe": {
               "Name": "Value",
               "ReadonlyType": "float",
               "Description": ""
@@ -6763,6 +7319,38 @@
           },
           "OutputPorts": {
             "ecae752b-1f47-4865-a9d1-17fba053bac7": {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Rotator"
+          ]
+        }
+      ]
+    },
+    "30fe0829-2f08-4bd2-b4b1-9a41764e5a76": {
+      "ReadonlyName": "Rotator Get Rotation",
+      "Description": "",
+      "NodeDescs": {
+        "30fe0829-2f08-4bd2-b4b1-9a41764e5a76": {
+          "Name": "Rotator Get Rotation",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "668d5bba-4765-444d-9b5d-be7b9df44d0a": {
+              "Name": "Target",
+              "ReadonlyType": "Rotator",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "69a5b265-d3cf-4437-9dc2-7ae988453ebe": {
               "Name": "Value",
               "ReadonlyType": "float",
               "Description": ""
@@ -6812,11 +7400,11 @@
       ]
     },
     "0f9da436-0752-422d-8323-fa445a9ca06b": {
-      "ReadonlyName": "Rotator Set Marker Rotation",
+      "ReadonlyName": "Rotator Set Target Rotation",
       "Description": "",
       "NodeDescs": {
         "0f9da436-0752-422d-8323-fa445a9ca06b": {
-          "Name": "Rotator Set Marker Rotation",
+          "Name": "Rotator Set Target Rotation",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "0a851f66-22e8-4ee0-bf08-a3d5082b37e4": {
@@ -6837,48 +7425,6 @@
           },
           "OutputPorts": {
             "bdf8dedc-0059-44ce-bd30-2e1229f06629": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Objects",
-            "Rotator"
-          ]
-        }
-      ]
-    },
-    "07ae26b8-e0d7-49c0-bb2c-25d66d31fe3c": {
-      "ReadonlyName": "Rotator Set Rotation",
-      "Description": "",
-      "NodeDescs": {
-        "07ae26b8-e0d7-49c0-bb2c-25d66d31fe3c": {
-          "Name": "Rotator Set Rotation",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "b31cd4d2-78dc-44d2-822c-1053ee8d2401": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "ab52d841-90bd-445d-9ad7-c1dde8ac13ab": {
-              "Name": "Target",
-              "ReadonlyType": "Rotator",
-              "Description": ""
-            },
-            "3ae4b032-d362-4c90-9ce2-4faedc9824ab": {
-              "Name": "Value",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "f47a5ed6-2626-4e33-8e40-b708636e36f4": {
               "Name": "",
               "ReadonlyType": "exec",
               "Description": ""
@@ -6921,6 +7467,48 @@
           },
           "OutputPorts": {
             "93fbfc8b-8573-4fb4-884a-b271d19b1fa2": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Rotator"
+          ]
+        }
+      ]
+    },
+    "07ae26b8-e0d7-49c0-bb2c-25d66d31fe3c": {
+      "ReadonlyName": "Rotator Set Rotation",
+      "Description": "",
+      "NodeDescs": {
+        "07ae26b8-e0d7-49c0-bb2c-25d66d31fe3c": {
+          "Name": "Rotator Set Rotation",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "b31cd4d2-78dc-44d2-822c-1053ee8d2401": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "ab52d841-90bd-445d-9ad7-c1dde8ac13ab": {
+              "Name": "Target",
+              "ReadonlyType": "Rotator",
+              "Description": ""
+            },
+            "3ae4b032-d362-4c90-9ce2-4faedc9824ab": {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "f47a5ed6-2626-4e33-8e40-b708636e36f4": {
               "Name": "",
               "ReadonlyType": "exec",
               "Description": ""
@@ -7117,17 +7705,60 @@
         }
       ]
     },
+    "76187060-c0b0-4ec6-b082-ff81754cff25": {
+      "ReadonlyName": "DEPRECATED Set Value",
+      "Description": "Sets a value of a variable",
+      "NodeDescs": {
+        "76187060-c0b0-4ec6-b082-ff81754cff25": {
+          "Name": "DEPRECATED Set Value",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "InputPorts": {
+            "027d33c7-3703-4132-9a5a-b6f23026c241": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            "3b04beb3-c913-41f8-9693-427b621e4c95": {
+              "Name": "Variable",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "2edc0dc0-f526-49d3-b2da-c12835c30025": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
     "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
-      "ReadonlyName": "Sfx Get Volume",
+      "ReadonlyName": "SFX Get Volume",
       "Description": "Outputs the volume of an SFX Component",
       "NodeDescs": {
         "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
-          "Name": "Sfx Get Volume",
+          "Name": "SFX Get Volume",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "17983fed-b13c-4b12-9133-e64da602d067": {
               "Name": "Target",
-              "ReadonlyType": "Sound Effect Gizmo",
+              "ReadonlyType": "SFX",
               "Description": ""
             }
           },
@@ -7150,16 +7781,16 @@
       ]
     },
     "a0a17fe1-bdb0-4687-81de-141ce97710ed": {
-      "ReadonlyName": "Sfx IsPlaying",
+      "ReadonlyName": "SFX IsPlaying",
       "Description": "",
       "NodeDescs": {
         "a0a17fe1-bdb0-4687-81de-141ce97710ed": {
-          "Name": "Sfx IsPlaying",
+          "Name": "SFX IsPlaying",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "b0ec4ade-a852-4472-ab7b-7acb022fce85": {
               "Name": "Target",
-              "ReadonlyType": "Sound Effect Gizmo",
+              "ReadonlyType": "SFX",
               "Description": ""
             }
           },
@@ -7182,11 +7813,11 @@
       ]
     },
     "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
-      "ReadonlyName": "Sfx Play",
+      "ReadonlyName": "SFX Play",
       "Description": "Plays a sound from an SFX Component",
       "NodeDescs": {
         "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
-          "Name": "Sfx Play",
+          "Name": "SFX Play",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "a508086a-9455-4d5e-a26f-c0a8a8eac741": {
@@ -7196,7 +7827,7 @@
             },
             "68cab76c-f79f-4cc4-9db5-c5431710e1e3": {
               "Name": "Target",
-              "ReadonlyType": "Sound Effect Gizmo",
+              "ReadonlyType": "SFX",
               "Description": ""
             }
           },
@@ -7219,11 +7850,11 @@
       ]
     },
     "d2df4993-d858-4df1-aca2-fc0e7f479668": {
-      "ReadonlyName": "Sfx Set Volume",
+      "ReadonlyName": "SFX Set Volume",
       "Description": "Sets the volume for an SFX Component",
       "NodeDescs": {
         "d2df4993-d858-4df1-aca2-fc0e7f479668": {
-          "Name": "Sfx Set Volume",
+          "Name": "SFX Set Volume",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "ece2f83e-88c1-4ea3-8731-2e29817dac08": {
@@ -7233,7 +7864,7 @@
             },
             "0003721d-9111-4e64-a74f-49c43ee9c39e": {
               "Name": "Target",
-              "ReadonlyType": "Sound Effect Gizmo",
+              "ReadonlyType": "SFX",
               "Description": ""
             },
             "00bc5174-1a1a-4d74-a669-b1f0968b265d": {
@@ -7261,11 +7892,11 @@
       ]
     },
     "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
-      "ReadonlyName": "Sfx Stop",
+      "ReadonlyName": "SFX Stop",
       "Description": "Stops the sound currently playing from an SFX Component",
       "NodeDescs": {
         "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
-          "Name": "Sfx Stop",
+          "Name": "SFX Stop",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "94b8a495-7229-4e37-bff8-7cc579e03e2e": {
@@ -7275,7 +7906,7 @@
             },
             "49d03659-81fb-401d-af9f-c64dc7f8e0ce": {
               "Name": "Target",
-              "ReadonlyType": "Sound Effect Gizmo",
+              "ReadonlyType": "SFX",
               "Description": ""
             }
           },
@@ -7367,12 +7998,12 @@
         }
       ]
     },
-    "fb6a63b1-3f55-4dcf-9bf0-6ef82e3296d5": {
-      "ReadonlyName": "Spawner Internal Start Spawning",
+    "6a669e6e-4ebf-434c-9c23-d2b769d49b47": {
+      "ReadonlyName": "Spawner Reset",
       "Description": "",
       "NodeDescs": {
-        "fb6a63b1-3f55-4dcf-9bf0-6ef82e3296d5": {
-          "Name": "Spawner Internal Start Spawning",
+        "6a669e6e-4ebf-434c-9c23-d2b769d49b47": {
+          "Name": "Spawner Reset",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "575ac827-7497-4b2f-a045-1c2c142815dd": {
@@ -7380,24 +8011,9 @@
               "ReadonlyType": "exec",
               "Description": ""
             },
-            "158875ea-9769-409a-a5a3-f5b6892166e9": {
-              "Name": "Spawner",
-              "ReadonlyType": "CreationObject",
-              "Description": ""
-            },
-            "0e11dd9b-3396-46cd-9952-45277e410456": {
-              "Name": "Amount of objects to spawn",
-              "ReadonlyType": "int",
-              "Description": ""
-            },
-            "5bb7fd39-b700-4ca4-93f2-7cab91bca16e": {
-              "Name": "Time between spawns",
-              "ReadonlyType": "float",
-              "Description": ""
-            },
-            "5652ee6a-ff98-4418-891f-ff151ae79c98": {
-              "Name": "Spawn Position",
-              "ReadonlyType": "Vector3",
+            "76c86021-63ef-44a8-affc-d959bebbcaa9": {
+              "Name": "",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           },
@@ -7419,12 +8035,12 @@
         }
       ]
     },
-    "6a669e6e-4ebf-434c-9c23-d2b769d49b47": {
-      "ReadonlyName": "Spawner Reset",
+    "fb6a63b1-3f55-4dcf-9bf0-6ef82e3296d5": {
+      "ReadonlyName": "Spawner Internal Start Spawning",
       "Description": "",
       "NodeDescs": {
-        "6a669e6e-4ebf-434c-9c23-d2b769d49b47": {
-          "Name": "Spawner Reset",
+        "fb6a63b1-3f55-4dcf-9bf0-6ef82e3296d5": {
+          "Name": "Spawner Internal Start Spawning",
           "ReadonlyTypeParams": {},
           "InputPorts": {
             "575ac827-7497-4b2f-a045-1c2c142815dd": {
@@ -7432,9 +8048,24 @@
               "ReadonlyType": "exec",
               "Description": ""
             },
-            "76c86021-63ef-44a8-affc-d959bebbcaa9": {
-              "Name": "",
-              "ReadonlyType": "CreationObject",
+            "158875ea-9769-409a-a5a3-f5b6892166e9": {
+              "Name": "Spawner",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            },
+            "0e11dd9b-3396-46cd-9952-45277e410456": {
+              "Name": "Amount of objects to spawn",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            "5bb7fd39-b700-4ca4-93f2-7cab91bca16e": {
+              "Name": "Time between spawns",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "5652ee6a-ff98-4418-891f-ff151ae79c98": {
+              "Name": "Spawn Position",
+              "ReadonlyType": "Vector3",
               "Description": ""
             }
           },
@@ -7493,6 +8124,53 @@
         {
           "FilterPath": [
             "Commonly Used"
+          ]
+        }
+      ]
+    },
+    "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
+      "ReadonlyName": "Variable (string)",
+      "Description": "",
+      "NodeDescs": {
+        "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
+          "Name": "Variable (string)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Primitives"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Strings"
           ]
         }
       ]
@@ -7574,6 +8252,231 @@
           "FilterPath": [
             "Math",
             "Vector"
+          ]
+        }
+      ]
+    },
+    "620def94-34e2-48ec-b294-25139aa43f74": {
+      "ReadonlyName": "DEPRECATED Sync AI",
+      "Description": "",
+      "NodeDescs": {
+        "620def94-34e2-48ec-b294-25139aa43f74": {
+          "Name": "DEPRECATED Sync AI",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "AI",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "1e2ca8e7-037f-4a1a-82a7-62b81928b6a4": {
+      "ReadonlyName": "DEPRECATED Sync bool",
+      "Description": "",
+      "NodeDescs": {
+        "1e2ca8e7-037f-4a1a-82a7-62b81928b6a4": {
+          "Name": "DEPRECATED Sync bool",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "e4c52748-6ebc-487d-821c-11d661a08ed1": {
+      "ReadonlyName": "DEPRECATED Sync Combatant",
+      "Description": "",
+      "NodeDescs": {
+        "e4c52748-6ebc-487d-821c-11d661a08ed1": {
+          "Name": "DEPRECATED Sync Combatant",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Combatant",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
+      "ReadonlyName": "DEPRECATED Sync RecRoomObject",
+      "Description": "",
+      "NodeDescs": {
+        "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
+          "Name": "DEPRECATED Sync RecRoomObject",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "56dcf860-9c74-4213-8859-45aba0b96d43": {
+      "ReadonlyName": "DEPRECATED Sync float",
+      "Description": "",
+      "NodeDescs": {
+        "56dcf860-9c74-4213-8859-45aba0b96d43": {
+          "Name": "DEPRECATED Sync float",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "dd96fd78-c47b-4ccc-9d6b-23da2f3f7987": {
+      "ReadonlyName": "DEPRECATED Sync int",
+      "Description": "",
+      "NodeDescs": {
+        "dd96fd78-c47b-4ccc-9d6b-23da2f3f7987": {
+          "Name": "DEPRECATED Sync int",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "ddc89f58-d8f2-49de-af34-332382d8bb71": {
+      "ReadonlyName": "DEPRECATED Sync Player",
+      "Description": "",
+      "NodeDescs": {
+        "ddc89f58-d8f2-49de-af34-332382d8bb71": {
+          "Name": "DEPRECATED Sync Player",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "62f1b8b1-f1d3-4ceb-b0e9-57c4915bf401": {
+      "ReadonlyName": "DEPRECATED Sync string",
+      "Description": "",
+      "NodeDescs": {
+        "62f1b8b1-f1d3-4ceb-b0e9-57c4915bf401": {
+          "Name": "DEPRECATED Sync string",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
+          ]
+        }
+      ]
+    },
+    "4499ea8f-1b4d-4072-9098-c6df7f49ed00": {
+      "ReadonlyName": "DEPRECATED Sync Vector3",
+      "Description": "",
+      "NodeDescs": {
+        "4499ea8f-1b4d-4072-9098-c6df7f49ed00": {
+          "Name": "DEPRECATED Sync Vector3",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "7246bb37-68eb-4a54-9d22-13028ee5be51": {
+              "Name": "",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Deprecated"
           ]
         }
       ]
@@ -7661,7 +8564,7 @@
             },
             "07857bf7-0f2e-42c0-9917-a8ff011bd3f3": {
               "Name": "Target",
-              "ReadonlyType": "Text Tool",
+              "ReadonlyType": "Text",
               "Description": ""
             },
             "b6eafb1f-7f34-4bcf-b95d-abf1b75afa90": {
@@ -7703,7 +8606,7 @@
             },
             "eb8a520e-5395-4c62-b4fa-61b134d9d907": {
               "Name": "Target",
-              "ReadonlyType": "Text Tool",
+              "ReadonlyType": "Text",
               "Description": ""
             },
             "1a77e81b-9e49-499c-bc57-c35331e49def": {
@@ -7745,7 +8648,7 @@
             },
             "32ecd975-5943-4e00-b1a7-7185047b18b9": {
               "Name": "Target",
-              "ReadonlyType": "Text Tool",
+              "ReadonlyType": "Text",
               "Description": ""
             },
             "af3899f8-2c80-46e3-9848-43627eeb2306": {
@@ -7768,106 +8671,6 @@
           "FilterPath": [
             "Objects",
             "Text"
-          ]
-        }
-      ]
-    },
-    "8722445f-e552-4d4a-bced-8afa63bbf70b": {
-      "ReadonlyName": "Time Get Precise Seconds",
-      "Description": "Gets the amount of seconds since a player launched Rec Room",
-      "NodeDescs": {
-        "8722445f-e552-4d4a-bced-8afa63bbf70b": {
-          "Name": "Time Get Precise Seconds",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "88f3addc-cf2b-44a1-a7c0-816bd0deb857": {
-              "Name": "Value",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Time"
-          ]
-        }
-      ]
-    },
-    "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
-      "ReadonlyName": "Time Get Universal Seconds",
-      "Description": "Gets the amount of seconds since 1970",
-      "NodeDescs": {
-        "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
-          "Name": "Time Get Universal Seconds",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "7148bed6-2bc2-4120-88b0-aa2a80e4db73": {
-              "Name": "Value",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Time"
-          ]
-        }
-      ]
-    },
-    "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
-      "ReadonlyName": "Time Get Universal Time",
-      "Description": "Gets the UTC time zone Time",
-      "NodeDescs": {
-        "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
-          "Name": "Time Get Universal Time",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {},
-          "OutputPorts": {
-            "8f878050-06b6-40b3-a005-3b96b0776d26": {
-              "Name": "Year",
-              "ReadonlyType": "int",
-              "Description": ""
-            },
-            "6a6f3d24-cb0f-4f23-a4d6-93ecd74669ff": {
-              "Name": "Month",
-              "ReadonlyType": "int",
-              "Description": ""
-            },
-            "32fa8494-e29f-4fe5-9f57-d0b90e3b7b12": {
-              "Name": "Day",
-              "ReadonlyType": "int",
-              "Description": ""
-            },
-            "f9e2db7d-6a75-4211-8474-3af6714dbf8b": {
-              "Name": "Hour",
-              "ReadonlyType": "int",
-              "Description": ""
-            },
-            "11f50dff-28b3-462c-a2bc-d282796315cc": {
-              "Name": "Minute",
-              "ReadonlyType": "int",
-              "Description": ""
-            },
-            "0dd582ce-c150-40c9-a8d4-868de06d021f": {
-              "Name": "Second",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Time"
           ]
         }
       ]
@@ -7907,13 +8710,13 @@
       ]
     },
     "315a494e-84cc-4e3c-acff-389bb932b5d0": {
-      "ReadonlyName": "To Creation Object",
+      "ReadonlyName": "To Rec Room Object",
       "Description": "",
       "NodeDescs": {
         "315a494e-84cc-4e3c-acff-389bb932b5d0": {
-          "Name": "To Creation Object",
+          "Name": "To Rec Room Object",
           "ReadonlyTypeParams": {
-            "T": "CreationObject"
+            "T": "Rec Room Object"
           },
           "InputPorts": {
             "18fb2a38-714f-434a-bd48-78b22d14b4d6": {
@@ -7924,8 +8727,8 @@
           },
           "OutputPorts": {
             "242199ab-d606-40b6-8f86-819f8e45ac02": {
-              "Name": "Creation Object",
-              "ReadonlyType": "CreationObject",
+              "Name": "Rec Room Object",
+              "ReadonlyType": "Rec Room Object",
               "Description": ""
             }
           }
@@ -7935,55 +8738,12 @@
         {
           "FilterPath": [
             "Objects",
-            "Creation Object"
+            "Rec Room Object"
           ]
         },
         {
           "FilterPath": [
             "Conversions"
-          ]
-        }
-      ]
-    },
-    "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
-      "ReadonlyName": "To String",
-      "Description": "Converts the input value to the string type. Example: the integer input 10 would output “10” as a string. Helpful for debugging purposes.",
-      "NodeDescs": {
-        "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
-          "Name": "To String",
-          "ReadonlyTypeParams": {
-            "T": "any"
-          },
-          "InputPorts": {
-            "575ac827-7497-4b2f-a045-1c2c142815dd": {
-              "Name": "Value",
-              "ReadonlyType": "T",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "e00d3441-fcad-4b8f-b500-0cac236dae7d": {
-              "Name": "Result ",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Utilities"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Strings"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Commonly Used"
           ]
         }
       ]
@@ -8058,6 +8818,49 @@
           "FilterPath": [
             "Objects",
             "Toggle Button"
+          ]
+        }
+      ]
+    },
+    "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
+      "ReadonlyName": "To String",
+      "Description": "Converts the input value to the string type. Example: the integer input 10 would output “10” as a string. Helpful for debugging purposes.",
+      "NodeDescs": {
+        "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
+          "Name": "To String",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "InputPorts": {
+            "575ac827-7497-4b2f-a045-1c2c142815dd": {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "e00d3441-fcad-4b8f-b500-0cac236dae7d": {
+              "Name": "Result ",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Utilities"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Strings"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Commonly Used"
           ]
         }
       ]
@@ -8207,7 +9010,7 @@
           "OutputPorts": {
             "bfe63099-794d-491f-899d-84332bf7f278": {
               "Name": "Value",
-              "ReadonlyType": "List<CreationObject>",
+              "ReadonlyType": "List<Rec Room Object>",
               "Description": ""
             }
           }
@@ -8338,34 +9141,31 @@
         }
       ]
     },
-    "0e92a7fb-fb38-418c-af39-9afec92112ee": {
-      "ReadonlyName": "Variable (AI)",
+    "bc5e4a50-1d2c-43bb-a93f-29e53f5af50a": {
+      "ReadonlyName": "DEPRECATED Value Changed",
       "Description": "",
       "NodeDescs": {
-        "0e92a7fb-fb38-418c-af39-9afec92112ee": {
-          "Name": "Variable (AI)",
-          "ReadonlyTypeParams": {},
+        "bc5e4a50-1d2c-43bb-a93f-29e53f5af50a": {
+          "Name": "DEPRECATED Value Changed",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
           "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "AI",
+            "3b04beb3-c913-41f8-9693-427b621e4c95": {
+              "Name": "Variable",
+              "ReadonlyType": "T",
               "Description": ""
             }
           },
           "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
+            "3e99b722-801e-4db6-9ec6-a504a66d86e4": {
+              "Name": "On Value Changed",
               "ReadonlyType": "exec",
               "Description": ""
             },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "AI",
+            "7f4bb52c-1f4b-4724-8363-92660cde009d": {
+              "Name": "Value",
+              "ReadonlyType": "T",
               "Description": ""
             }
           }
@@ -8374,46 +9174,34 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Objects",
-            "AI"
+            "Deprecated"
           ]
         }
       ]
     },
-    "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
-      "ReadonlyName": "Variable (bool)",
+    "6bd92538-6889-41f3-b819-9511e6f81944": {
+      "ReadonlyName": "Vector3 Cross",
       "Description": "",
       "NodeDescs": {
-        "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
-          "Name": "Variable (bool)",
+        "6bd92538-6889-41f3-b819-9511e6f81944": {
+          "Name": "Vector3 Cross",
           "ReadonlyTypeParams": {},
           "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
+            "cc2d25a9-95ba-4dd8-a0a1-9ba5bb81f535": {
+              "Name": "Lhs",
+              "ReadonlyType": "Vector3",
               "Description": ""
             },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "bool",
+            "f61c29aa-30a9-4720-b5a1-e3bc7443ca6a": {
+              "Name": "Rhs",
+              "ReadonlyType": "Vector3",
               "Description": ""
             }
           },
           "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "bool",
+            "338f954e-a91a-4105-993c-35a50411e69f": {
+              "Name": "Result",
+              "ReadonlyType": "Vector3",
               "Description": ""
             }
           }
@@ -8422,140 +9210,34 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Logic"
+            "Math",
+            "Vector"
           ]
         }
       ]
     },
-    "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
-      "ReadonlyName": "Variable (Combatant)",
+    "498c4e25-f73b-49a6-912e-ae148ed50dca": {
+      "ReadonlyName": "Vector3 Dot",
       "Description": "",
       "NodeDescs": {
-        "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
-          "Name": "Variable (Combatant)",
+        "6bd92538-6889-41f3-b819-9511e6f81944": {
+          "Name": "Vector3 Dot",
           "ReadonlyTypeParams": {},
           "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
+            "a442a2b5-fc32-459e-9186-dbc6a73d4aea": {
+              "Name": "Lhs",
+              "ReadonlyType": "Vector3",
               "Description": ""
             },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "Combatant",
+            "9d6896b9-d8d1-4581-b15a-3b2a965926a0": {
+              "Name": "Rhs",
+              "ReadonlyType": "Vector3",
               "Description": ""
             }
           },
           "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "Combatant",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Variables",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Objects",
-            "Combatant"
-          ]
-        }
-      ]
-    },
-    "7077d139-9876-495e-9756-58150fef9f3b": {
-      "ReadonlyName": "Variable (CreationObject)",
-      "Description": "",
-      "NodeDescs": {
-        "7077d139-9876-495e-9756-58150fef9f3b": {
-          "Name": "Variable (CreationObject)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "CreationObject",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "CreationObject",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Variables",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Objects",
-            "Creation Object"
-          ]
-        }
-      ]
-    },
-    "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
-      "ReadonlyName": "Variable (float)",
-      "Description": "",
-      "NodeDescs": {
-        "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
-          "Name": "Variable (float)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
+            "93f671ee-9978-4cf7-82ac-9f3a22cef4b2": {
+              "Name": "Result",
               "ReadonlyType": "float",
               "Description": ""
             }
@@ -8565,541 +9247,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
             "Math",
-            "Scalar"
-          ]
-        }
-      ]
-    },
-    "33224907-68ff-4102-802e-7c3eed481d37": {
-      "ReadonlyName": "Variable (int)",
-      "Description": "",
-      "NodeDescs": {
-        "33224907-68ff-4102-802e-7c3eed481d37": {
-          "Name": "Variable (int)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Math",
-            "Scalar"
-          ]
-        }
-      ]
-    },
-    "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
-      "ReadonlyName": "Variable (List<bool>)",
-      "Description": "",
-      "NodeDescs": {
-        "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
-          "Name": "Variable (List<bool>)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "List<bool>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "List<bool>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Logic",
-            "Lists"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Lists",
-            "Logic"
-          ]
-        }
-      ]
-    },
-    "536e376c-087d-4909-9412-3fcee5d6f52b": {
-      "ReadonlyName": "Variable (List<CreationObject>)",
-      "Description": "",
-      "NodeDescs": {
-        "536e376c-087d-4909-9412-3fcee5d6f52b": {
-          "Name": "Variable (List<CreationObject>)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "List<CreationObject>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "List<CreationObject>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Lists",
-            "Variables",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Variables",
-            "Lists",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Objects",
-            "Creation Object"
-          ]
-        }
-      ]
-    },
-    "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
-      "ReadonlyName": "Variable (List<float>)",
-      "Description": "",
-      "NodeDescs": {
-        "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
-          "Name": "Variable (List<float>)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "List<float>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "List<float>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Math",
-            "Lists"
-          ]
-        }
-      ]
-    },
-    "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
-      "ReadonlyName": "Variable (List<int>)",
-      "Description": "",
-      "NodeDescs": {
-        "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
-          "Name": "Variable (List<int>)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "List<int>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "List<int>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Math",
-            "Lists"
-          ]
-        }
-      ]
-    },
-    "32837e14-12de-465f-89dc-ceddb64cdd6c": {
-      "ReadonlyName": "Variable (List<Player>)",
-      "Description": "",
-      "NodeDescs": {
-        "32837e14-12de-465f-89dc-ceddb64cdd6c": {
-          "Name": "Variable (List<Player>)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "List<Player>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "List<Player>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Lists",
-            "Variables",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Variables",
-            "Lists",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Player"
-          ]
-        }
-      ]
-    },
-    "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
-      "ReadonlyName": "Variable (List<string>)",
-      "Description": "",
-      "NodeDescs": {
-        "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
-          "Name": "Variable (List<string>)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "List<string>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "List<string>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
-          ]
-        }
-      ]
-    },
-    "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
-      "ReadonlyName": "Variable (List<Vector3>)",
-      "Description": "",
-      "NodeDescs": {
-        "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
-          "Name": "Variable (List<Vector3>)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "List<Vector3>",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "List<Vector3>",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
-          ]
-        }
-      ]
-    },
-    "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
-      "ReadonlyName": "Variable (Player)",
-      "Description": "",
-      "NodeDescs": {
-        "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
-          "Name": "Variable (Player)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "Player",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "Player",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Variables",
-            "Objects"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Player"
-          ]
-        }
-      ]
-    },
-    "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
-      "ReadonlyName": "Variable (string)",
-      "Description": "",
-      "NodeDescs": {
-        "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
-          "Name": "Variable (string)",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "79b01162-5388-4962-b52e-6f73777690a6": {
-              "Name": "",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "51befda3-d72d-4066-a30e-24b03aec8792": {
-              "Name": "",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Variables",
-            "Primitives"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Strings"
+            "Vector"
           ]
         }
       ]
@@ -9144,6 +9293,77 @@
             "Primitives"
           ]
         },
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        }
+      ]
+    },
+    "92ded211-17d6-4c73-b29c-71323c6a40ee": {
+      "ReadonlyName": "Vector3 Normalize",
+      "Description": "",
+      "NodeDescs": {
+        "6bd92538-6889-41f3-b819-9511e6f81944": {
+          "Name": "Vector3 Normalize",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "8df94c79-0cf5-4417-b7b6-6270c1e0ffda": {
+              "Name": "Value",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "16e30b23-17e0-4706-a3b4-da95d5a667bf": {
+              "Name": "Result",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        }
+      ]
+    },
+    "87aa17b1-7760-4b07-8c44-a2d530590597": {
+      "ReadonlyName": "Vector3 Scale",
+      "Description": "",
+      "NodeDescs": {
+        "6bd92538-6889-41f3-b819-9511e6f81944": {
+          "Name": "Vector3 Scale",
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
+          "InputPorts": {
+            "39934054-0d42-46b2-8188-395a46d4b1af": {
+              "Name": "Value",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            "caed5cd5-35e2-487d-9c01-e67a8461c918": {
+              "Name": "Scalar",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "c71fff68-092a-40b5-b3b8-72e9c30e81d4": {
+              "Name": "Result",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
         {
           "FilterPath": [
             "Math",
@@ -9204,7 +9424,7 @@
           "InputPorts": {
             "0900fec3-6c6d-45b3-b180-ee99412b02c3": {
               "Name": "Direction",
-              "ReadonlyType": "Vector Gadget",
+              "ReadonlyType": "Vector",
               "Description": ""
             },
             "decd9def-e005-49bd-a3fe-9d8a35688464": {
@@ -9291,151 +9511,6 @@
             "4e2dd95b-12da-4ef0-921e-7fc51871aab2": {
               "Name": "Z",
               "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Math",
-            "Vector"
-          ]
-        }
-      ]
-    },
-    "6bd92538-6889-41f3-b819-9511e6f81944": {
-      "ReadonlyName": "Vector3 Cross",
-      "Description": "",
-      "NodeDescs": {
-        "6bd92538-6889-41f3-b819-9511e6f81944": {
-          "Name": "Vector3 Cross",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "cc2d25a9-95ba-4dd8-a0a1-9ba5bb81f535": {
-              "Name": "Lhs",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            },
-            "f61c29aa-30a9-4720-b5a1-e3bc7443ca6a": {
-              "Name": "Rhs",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "338f954e-a91a-4105-993c-35a50411e69f": {
-              "Name": "Result",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Math",
-            "Vector"
-          ]
-        }
-      ]
-    },
-    "498c4e25-f73b-49a6-912e-ae148ed50dca": {
-      "ReadonlyName": "Vector3 Dot",
-      "Description": "",
-      "NodeDescs": {
-        "6bd92538-6889-41f3-b819-9511e6f81944": {
-          "Name": "Vector3 Dot",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "a442a2b5-fc32-459e-9186-dbc6a73d4aea": {
-              "Name": "Lhs",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            },
-            "9d6896b9-d8d1-4581-b15a-3b2a965926a0": {
-              "Name": "Rhs",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "93f671ee-9978-4cf7-82ac-9f3a22cef4b2": {
-              "Name": "Result",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Math",
-            "Vector"
-          ]
-        }
-      ]
-    },
-    "92ded211-17d6-4c73-b29c-71323c6a40ee": {
-      "ReadonlyName": "Vector3 Normalize",
-      "Description": "",
-      "NodeDescs": {
-        "6bd92538-6889-41f3-b819-9511e6f81944": {
-          "Name": "Vector3 Normalize",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "8df94c79-0cf5-4417-b7b6-6270c1e0ffda": {
-              "Name": "Value",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "16e30b23-17e0-4706-a3b4-da95d5a667bf": {
-              "Name": "Result",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Math",
-            "Vector"
-          ]
-        }
-      ]
-    },
-    "87aa17b1-7760-4b07-8c44-a2d530590597": {
-      "ReadonlyName": "Vector3 Scale",
-      "Description": "",
-      "NodeDescs": {
-        "6bd92538-6889-41f3-b819-9511e6f81944": {
-          "Name": "Vector3 Scale",
-          "ReadonlyTypeParams": {
-            "T": "(int | float)"
-          },
-          "InputPorts": {
-            "39934054-0d42-46b2-8188-395a46d4b1af": {
-              "Name": "Value",
-              "ReadonlyType": "Vector3",
-              "Description": ""
-            },
-            "caed5cd5-35e2-487d-9c01-e67a8461c918": {
-              "Name": "Scalar",
-              "ReadonlyType": "T",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "c71fff68-092a-40b5-b3b8-72e9c30e81d4": {
-              "Name": "Result",
-              "ReadonlyType": "Vector3",
               "Description": ""
             }
           }

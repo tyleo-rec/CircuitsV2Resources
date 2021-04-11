@@ -3484,17 +3484,17 @@
       ]
     },
     "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
-      "ReadonlyName": "Impulse Add",
-      "Description": "Adds impulse to the input object. The Vector Component may be useful here to help specify the direction.",
+      "ReadonlyName": "Velocity Add",
+      "Description": "Adds a velocity to the input object. The Vector component may be useful here to help specify the direction.",
       "NodeDescs": {
         "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
-          "Name": "Impulse Add",
+          "Name": "Velocity Add",
           "ReadonlyTypeParams": {
             "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "47d59582-2661-4d87-a9ef-133d33f75988": {
-              "Name": "Add Impulse",
+              "Name": "Add Velocity",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -3504,17 +3504,17 @@
               "Description": ""
             },
             "981f8455-e392-444b-b1d6-ce2d08ec1a25": {
-              "Name": "Speed (m/s)",
+              "Name": "Multiplier",
               "ReadonlyType": "float",
               "Description": ""
             },
             "56043b0c-62fa-4584-a143-39eaf67c7775": {
-              "Name": "Direction",
+              "Name": "Velocity (m/s)",
               "ReadonlyType": "Vector3",
               "Description": ""
             },
             "4d8f8897-af7e-4034-a02c-2c5e474ee836": {
-              "Name": "Max Impulse Speed (m/s)",
+              "Name": "Maximum Speed (m/s)",
               "ReadonlyType": "float",
               "Description": ""
             }
@@ -3537,17 +3537,17 @@
       ]
     },
     "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
-      "ReadonlyName": "Impulse Reflect",
-      "Description": "Reflects the input object's impulse based on it's current velocity.",
+      "ReadonlyName": "Velocity Reflect",
+      "Description": "Changes the input object's velocity as if it bounced off of a surface with the normal vector specified as input. It will also multiply the speed by the magnitude of the vector, as well as the Multiplier, and then add the Additional Speed.",
       "NodeDescs": {
         "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
-          "Name": "Impulse Reflect",
+          "Name": "Velocity Reflect",
           "ReadonlyTypeParams": {
             "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "c0f71599-64c7-4d29-8beb-995335d5a5c0": {
-              "Name": "Reflect Impulse",
+              "Name": "Reflect Velocity",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -3567,12 +3567,12 @@
               "Description": ""
             },
             "bf8b32e3-d498-4868-a6fe-b1267a659e3d": {
-              "Name": "Direction",
+              "Name": "Normal",
               "ReadonlyType": "Vector3",
               "Description": ""
             },
             "f1c4c8e0-458f-4cbb-bc46-2d391163f962": {
-              "Name": "Max Impulse Speed (m/s)",
+              "Name": "Maximum Speed (m/s)",
               "ReadonlyType": "float",
               "Description": ""
             }
@@ -3595,17 +3595,17 @@
       ]
     },
     "f97c530d-03bf-498c-8854-33e814d2600b": {
-      "ReadonlyName": "Impulse Set",
-      "Description": "Sets the impulse of the input object. The Vector Component may be useful here to help specify the direction.",
+      "ReadonlyName": "Velocity Set",
+      "Description": "Sets the velocity of a physical input object at this moment in time. The Vector component may be useful here to help specify the direction.",
       "NodeDescs": {
         "f97c530d-03bf-498c-8854-33e814d2600b": {
-          "Name": "Impulse Set",
+          "Name": "Velocity Set",
           "ReadonlyTypeParams": {
             "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "d721c22d-8695-4df5-8c2d-f6422e91b2b2": {
-              "Name": "Set Impulse",
+              "Name": "Set Velocity",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -3615,12 +3615,12 @@
               "Description": ""
             },
             "31591f51-8d3b-4015-b28d-3ea2f561dd0e": {
-              "Name": "Speed (m/s)",
+              "Name": "Multiplier",
               "ReadonlyType": "float",
               "Description": ""
             },
             "46901beb-5849-4711-96c7-aef748d36f67": {
-              "Name": "Direction",
+              "Name": "Velocity (m/s)",
               "ReadonlyType": "Vector3",
               "Description": ""
             }

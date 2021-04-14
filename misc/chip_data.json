@@ -3485,7 +3485,7 @@
     },
     "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
       "ReadonlyName": "Velocity Add",
-      "Description": "Adds a velocity to the input object. The Vector component may be useful here to help specify the direction.",
+      "Description": "Adds a velocity to the input object. Use the Velocity vector specify the direction.",
       "NodeDescs": {
         "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
           "Name": "Velocity Add",
@@ -3596,7 +3596,7 @@
     },
     "f97c530d-03bf-498c-8854-33e814d2600b": {
       "ReadonlyName": "Velocity Set",
-      "Description": "Sets the velocity of a physical input object at this moment in time. The Vector component may be useful here to help specify the direction.",
+      "Description": "Sets the velocity of a physical input object at this moment in time. Use the Velocity vector specify the direction.",
       "NodeDescs": {
         "f97c530d-03bf-498c-8854-33e814d2600b": {
           "Name": "Velocity Set",

@@ -7162,6 +7162,43 @@
         }
       ]
     },
+    "0b18cef3-0ea5-4e3c-a0d5-c460f03dbe8c": {
+      "ReadonlyName": "No Name",
+      "Description": "",
+      "NodeDescs": {
+        "0b18cef3-0ea5-4e3c-a0d5-c460f03dbe8c": {
+          "Name": "Random From List",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "InputPorts": {
+            "10cf41f2-45a3-4940-b8c0-01b5d1b994e2": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "d4e29aa2-3e08-45cf-8b54-764261ceb949": {
+              "Name": "List",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "dc63e0e9-62ac-4d21-ba1b-4707d8e32f3e": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "77191328-83a2-46e7-957d-b1bc8693250b": {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": []
+    },
     "fb2645f0-4042-4ef1-b988-af2f80e651ec": {
       "ReadonlyName": "Random Int",
       "Description": "Generates a random integer from [min to max). Min is inclusive, and max is exclusive. For example with a min of 0 and a max of 1, 1 will never get output because it is excluded from the range.",
@@ -8492,42 +8529,6 @@
         {
           "FilterPath": [
             "Deprecated"
-          ]
-        }
-      ]
-    },
-    "19572058-d738-4e6d-9c89-d5dee7f5c903": {
-      "ReadonlyName": "Synced Event Sender",
-      "Description": "Use these chips to sync your custom events over the network. Once placed, make sure to use the configure tool to change the event that you want to fire, as well as who you want the event to be sent to. These events are networked. In the configuration menu, your options for who the event gets sent to are: All, Authority, and Others.",
-      "NodeDescs": {
-        "9387511b-78fe-5ee4-9695-67a6f429c7b0": {
-          "Name": "Synced Event Sender",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "5ff23b09-2d13-4331-8519-150c6b8b0b2f": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "3e99b722-801e-4db6-9ec6-a504a66d86e4": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Events"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Commonly Used"
           ]
         }
       ]

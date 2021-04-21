@@ -3011,6 +3011,130 @@
         }
       ]
     },
+    "6141ff64-412b-452f-beb0-f338eb6abfb5": {
+      "ReadonlyName": "Get Player Account Name",
+      "Description": "",
+      "NodeDescs": {
+        "6141ff64-412b-452f-beb0-f338eb6abfb5": {
+          "Name": "Get Player Account Name",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "d71f5d1e-592b-463b-b3ce-d11873b5f53f": {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "c86b99a9-6a49-44cf-9d10-f2af70664451": {
+              "Name": "Player Name",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
+      "ReadonlyName": "Get Player By Account Name",
+      "Description": "",
+      "NodeDescs": {
+        "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
+          "Name": "Get Player By Account Name",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "25eb3fd5-4bfe-4263-b8a0-1e3c6a5760c2": {
+              "Name": "Name",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "acb93586-32c3-4be4-912f-e783403bb2e1": {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "637e07e4-9b93-44b6-bba3-68966080d064": {
+      "ReadonlyName": "Get Player By Display Name",
+      "Description": "",
+      "NodeDescs": {
+        "637e07e4-9b93-44b6-bba3-68966080d064": {
+          "Name": "Get Player By Display Name",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "a2e5df92-28df-4a23-be96-72877d993a52": {
+              "Name": "Name",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "5093d9d5-dca4-4c9e-8586-70f35574c460": {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
+      "ReadonlyName": "Get Players With Role",
+      "Description": "",
+      "NodeDescs": {
+        "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
+          "Name": "Get Players With Role",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "6b2fa42f-20b5-4193-9191-2b2a29f3a723": {
+              "Name": "Role Name",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "e23cc5e2-c831-4e86-986c-620e8d1155d0": {
+              "Name": "Players",
+              "ReadonlyType": "List<Player>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
       "ReadonlyName": "Get Position",
       "Description": "Outputs the position of the input object as a vector3.",
@@ -3484,22 +3608,22 @@
       ]
     },
     "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
-      "ReadonlyName": "Impulse Add",
-      "Description": "Adds impulse to the input object. The Vector Component may be useful here to help specify the direction.",
+      "ReadonlyName": "Velocity Add",
+      "Description": "Adds velocity to the input target. The input velocity will be multiplied by the magnitude of the vector provided in the input direction.",
       "NodeDescs": {
         "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
-          "Name": "Impulse Add",
+          "Name": "Velocity Add",
           "ReadonlyTypeParams": {
             "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "47d59582-2661-4d87-a9ef-133d33f75988": {
-              "Name": "Add Impulse",
+              "Name": "Add Velocity",
               "ReadonlyType": "exec",
               "Description": ""
             },
             "b684ff67-47c5-405d-a7c7-223f9840375c": {
-              "Name": "Object",
+              "Name": "Target",
               "ReadonlyType": "T",
               "Description": ""
             },
@@ -3514,7 +3638,7 @@
               "Description": ""
             },
             "4d8f8897-af7e-4034-a02c-2c5e474ee836": {
-              "Name": "Max Impulse Speed (m/s)",
+              "Name": "Maximum Speed (m/s)",
               "ReadonlyType": "float",
               "Description": ""
             }
@@ -3537,22 +3661,22 @@
       ]
     },
     "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
-      "ReadonlyName": "Impulse Reflect",
-      "Description": "Reflects the input object's impulse based on it's current velocity.",
+      "ReadonlyName": "Velocity Reflect",
+      "Description": "The input target's velocity parallel to the input direction vector is reflected along the input direction and velocities perpendicular to it, are maintained. The input velocity will be multiplied by the magnitude of the vector provided in the input direction.",
       "NodeDescs": {
         "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
-          "Name": "Impulse Reflect",
+          "Name": "Velocity Reflect",
           "ReadonlyTypeParams": {
             "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "c0f71599-64c7-4d29-8beb-995335d5a5c0": {
-              "Name": "Reflect Impulse",
+              "Name": "Reflect Velocity",
               "ReadonlyType": "exec",
               "Description": ""
             },
             "c84ce467-37fd-4ed0-9731-b5aab8a2d77e": {
-              "Name": "Object",
+              "Name": "Target",
               "ReadonlyType": "T",
               "Description": ""
             },
@@ -3572,7 +3696,7 @@
               "Description": ""
             },
             "f1c4c8e0-458f-4cbb-bc46-2d391163f962": {
-              "Name": "Max Impulse Speed (m/s)",
+              "Name": "Maximum Speed (m/s)",
               "ReadonlyType": "float",
               "Description": ""
             }
@@ -3595,22 +3719,22 @@
       ]
     },
     "f97c530d-03bf-498c-8854-33e814d2600b": {
-      "ReadonlyName": "Impulse Set",
-      "Description": "Sets the impulse of the input object. The Vector Component may be useful here to help specify the direction.",
+      "ReadonlyName": "Velocity Set",
+      "Description": "Momentarily sets the velocity of the input target in the input direction. The input velocity will be multiplied by the magnitude of the vector provided in the input direction.",
       "NodeDescs": {
         "f97c530d-03bf-498c-8854-33e814d2600b": {
-          "Name": "Impulse Set",
+          "Name": "Velocity Set",
           "ReadonlyTypeParams": {
             "T": "(Player | Rec Room Object)"
           },
           "InputPorts": {
             "d721c22d-8695-4df5-8c2d-f6422e91b2b2": {
-              "Name": "Set Impulse",
+              "Name": "Set Velocity",
               "ReadonlyType": "exec",
               "Description": ""
             },
             "f47f4f7e-21f1-47d7-9479-31c6997f2bad": {
-              "Name": "Object",
+              "Name": "Target",
               "ReadonlyType": "T",
               "Description": ""
             },
@@ -7163,7 +7287,7 @@
       ]
     },
     "0b18cef3-0ea5-4e3c-a0d5-c460f03dbe8c": {
-      "ReadonlyName": "No Name",
+      "ReadonlyName": "Random From List",
       "Description": "",
       "NodeDescs": {
         "0b18cef3-0ea5-4e3c-a0d5-c460f03dbe8c": {

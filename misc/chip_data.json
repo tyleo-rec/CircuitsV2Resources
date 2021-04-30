@@ -1114,7 +1114,7 @@
       ]
     },
     "14ebde7a-76c0-47df-b0dd-01b1daa50821": {
-      "ReadonlyName": "Circuit Board",
+      "ReadonlyName": "No Name",
       "Description": "Use as a way to encapsulate your logic. You can have as many inputs and outputs as you like. Use the Edit tool to open up the Circuit Board and add nodes inside it to encapsulate the logic. Hit done editing on your Maker Pen to leave the Circuit Board context.",
       "NodeDescs": {},
       "NodeFilters": [
@@ -3013,7 +3013,7 @@
     },
     "6141ff64-412b-452f-beb0-f338eb6abfb5": {
       "ReadonlyName": "Get Player Account Name",
-      "Description": "Outputs the player's Account name (e.g Alexa) in a form of a string",
+      "Description": "Outputs the player's Account name (e.g Coach) in a form of a string",
       "NodeDescs": {
         "6141ff64-412b-452f-beb0-f338eb6abfb5": {
           "Name": "Get Player Account Name",
@@ -3044,7 +3044,7 @@
     },
     "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
       "ReadonlyName": "Get Player By Account Name",
-      "Description": "Gets the player vaule type based by their Account Name (e.g My Account name is Alexa and if I input my Account Name in the form of a string, The output would be my player value type.)",
+      "Description": "Gets the player value type based by their Account Name (e.g My Account name is Coach and if I input my Account Name in the form of a string, The output would be my player value type.)",
       "NodeDescs": {
         "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
           "Name": "Get Player By Account Name",
@@ -3075,7 +3075,7 @@
     },
     "637e07e4-9b93-44b6-bba3-68966080d064": {
       "ReadonlyName": "Get Player By Display Name",
-      "Description": "Gets the a player value type based by their Display Name (e.g My Display Name is Alexa and if I input a sting Alexa, The output would be my player value type)",
+      "Description": "Gets the a player value type based by their Display Name (e.g My Display Name is Coach and if I input a sting Coach, The output would be my player value type)",
       "NodeDescs": {
         "637e07e4-9b93-44b6-bba3-68966080d064": {
           "Name": "Get Player By Display Name",

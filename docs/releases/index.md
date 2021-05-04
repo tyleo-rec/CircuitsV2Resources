@@ -10,5 +10,5 @@
 * [Version 2.08](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_08)
 * [Version 2.09](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_09)
 * [Version 2.10](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_10)
-* [Next (Version 2.11)](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_11)
-* [Next Next (Version 2.12)](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_12)
+* [Version 2.11](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_11)
+* [Next (Version 2.12)](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_12)

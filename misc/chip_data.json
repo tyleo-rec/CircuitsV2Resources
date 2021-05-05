@@ -2164,7 +2164,7 @@
     },
     "36881bd0-7da0-44a7-b6ef-8cd3770fed78": {
       "ReadonlyName": "Emitter Set Looping",
-      "Description": "",
+      "Description": "Makes the emitter emit continuously",
       "NodeDescs": {
         "36881bd0-7da0-44a7-b6ef-8cd3770fed78": {
           "Name": "Emitter Set Looping",
@@ -3013,7 +3013,7 @@
     },
     "6141ff64-412b-452f-beb0-f338eb6abfb5": {
       "ReadonlyName": "Get Player Account Name",
-      "Description": "",
+      "Description": "Outputs the player's Account name (e.g Coach) in a form of a string",
       "NodeDescs": {
         "6141ff64-412b-452f-beb0-f338eb6abfb5": {
           "Name": "Get Player Account Name",
@@ -3044,7 +3044,7 @@
     },
     "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
       "ReadonlyName": "Get Player By Account Name",
-      "Description": "",
+      "Description": "Gets the player value type based by their Account Name (e.g My Account name is Coach and if I input my Account Name in the form of a string, The output would be my player value type.)",
       "NodeDescs": {
         "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
           "Name": "Get Player By Account Name",
@@ -3075,7 +3075,7 @@
     },
     "637e07e4-9b93-44b6-bba3-68966080d064": {
       "ReadonlyName": "Get Player By Display Name",
-      "Description": "",
+      "Description": "Gets the a player value type based by their Display Name (e.g My Display Name is Coach and if I input a sting Coach, The output would be my player value type)",
       "NodeDescs": {
         "637e07e4-9b93-44b6-bba3-68966080d064": {
           "Name": "Get Player By Display Name",
@@ -3106,7 +3106,7 @@
     },
     "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
       "ReadonlyName": "Get Players With Role",
-      "Description": "",
+      "Description": "Outpus a player value type list that continues every player with a certain role",
       "NodeDescs": {
         "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
           "Name": "Get Players With Role",

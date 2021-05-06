@@ -2,6 +2,8 @@
   "Nodes": {
     "98b99011-9be8-43b3-89cc-1e9d55bd8b51": {
       "ReadonlyName": "Absolute Value",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the magnitude of the number. Is always positive.",
       "NodeDescs": {
         "98b99011-9be8-43b3-89cc-1e9d55bd8b51": {
@@ -36,6 +38,8 @@
     },
     "46ce50b8-0a20-43d2-9646-484ce2a6752c": {
       "ReadonlyName": "Acos",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula acos",
       "NodeDescs": {
         "46ce50b8-0a20-43d2-9646-484ce2a6752c": {
@@ -68,6 +72,8 @@
     },
     "0ccb153c-dd08-4f22-80fd-9d8c5940928c": {
       "ReadonlyName": "Add",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Adds the two input values together.",
       "NodeDescs": {
         "0ccb153c-dd08-4f22-80fd-9d8c5940928c": {
@@ -108,6 +114,8 @@
     },
     "3edc785f-46ef-4f30-b101-a07126d3a370": {
       "ReadonlyName": "AI Get Line of Sight Parameters",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Outputs the current line of sight parameters from the input AI",
       "NodeDescs": {
         "3edc785f-46ef-4f30-b101-a07126d3a370": {
@@ -155,6 +163,8 @@
     },
     "1637b250-e497-4f4a-9d5e-64206488391c": {
       "ReadonlyName": "AI Get Target",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Outputs the current combat target of an inputted AI",
       "NodeDescs": {
         "1637b250-e497-4f4a-9d5e-64206488391c": {
@@ -187,6 +197,8 @@
     },
     "5858a52e-54fb-4bb2-80a0-ec5fce88b3ef": {
       "ReadonlyName": "AI Has Line of Sight To Target",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Outputs if the input AI has line of sight to the input target.",
       "NodeDescs": {
         "5858a52e-54fb-4bb2-80a0-ec5fce88b3ef": {
@@ -226,6 +238,8 @@
     },
     "b5badf49-acfe-4a42-80e2-5262878e2d89": {
       "ReadonlyName": "AI Look At",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Command an AI to look at the input target. If you want the AI to look in a passed in vector as a direction, set the “Look Target Is Direction” parameter to true. To make an AI stop looking, use the AI Stop Looking node.",
       "NodeDescs": {
         "b5badf49-acfe-4a42-80e2-5262878e2d89": {
@@ -275,6 +289,8 @@
     },
     "0e92a7fb-fb38-418c-af39-9afec92112ee": {
       "ReadonlyName": "Variable (AI)",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "0e92a7fb-fb38-418c-af39-9afec92112ee": {
@@ -323,6 +339,8 @@
     },
     "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
       "ReadonlyName": "AI Path To",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Commands the AI to path to the input target destination.",
       "NodeDescs": {
         "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
@@ -367,6 +385,8 @@
     },
     "c2cb2ea2-f663-4aa6-9394-3b741f6b9064": {
       "ReadonlyName": "AI Rotate",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Commands an AI to turn an inputted number of degrees. To command the AI to back to default rotating behavior, use the AI Stop Looking node.",
       "NodeDescs": {
         "c2cb2ea2-f663-4aa6-9394-3b741f6b9064": {
@@ -411,6 +431,8 @@
     },
     "02557d1f-2265-4b6d-8177-92f1802dc106": {
       "ReadonlyName": "AI Set Line of Sight Parameters",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Sets an AI’s various LoS paramters. The “Cone” setting acts like a vision cone that sits in front of AIs like eyes, where the “Circle” setting acts like a radius around the AI. The Require LoS For Targetting parameter defines if AIs can see you through walls.",
       "NodeDescs": {
         "7b05df01-d4c8-490c-9442-55aa3b4975fa": {
@@ -473,6 +495,8 @@
     },
     "cd85a0c7-789b-41a2-aeda-40925b73738c": {
       "ReadonlyName": "AI Set Pathing Speed",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Sets the speed for an inputted AI. This same setting can be determined by configuring the AI itself.",
       "NodeDescs": {
         "cd85a0c7-789b-41a2-aeda-40925b73738c": {
@@ -515,6 +539,8 @@
     },
     "6370b8d9-8c72-4e6b-a623-acb7202a3110": {
       "ReadonlyName": "AI Set Patrol Point",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Set an AIs Path Point.",
       "NodeDescs": {
         "6370b8d9-8c72-4e6b-a623-acb7202a3110": {
@@ -557,6 +583,8 @@
     },
     "73652899-2656-4aa4-a1b0-4de8d8e56095": {
       "ReadonlyName": "AI Set Target",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Sets the input AI’s current target.",
       "NodeDescs": {
         "73652899-2656-4aa4-a1b0-4de8d8e56095": {
@@ -599,6 +627,8 @@
     },
     "b169c26e-3c2c-4058-bae7-dbbc3ee856a4": {
       "ReadonlyName": "AI Start Combat Behavior",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "RRO Quest AI black box. This node tells the input AI to start their C# defined combat behavior. Note: this behavior varies per AI.",
       "NodeDescs": {
         "b169c26e-3c2c-4058-bae7-dbbc3ee856a4": {
@@ -636,6 +666,8 @@
     },
     "6e244bf2-cf71-4baa-912d-3e61c7fcd1be": {
       "ReadonlyName": "AI Stop Combat Behavior",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Tells the input AI to stop its C# defined combat behavior.",
       "NodeDescs": {
         "6e244bf2-cf71-4baa-912d-3e61c7fcd1be": {
@@ -673,6 +705,8 @@
     },
     "f211a503-a237-41bc-875e-ae3ef62d745b": {
       "ReadonlyName": "AI Stop Looking",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Command the input AI to cancel its current Rotate and Look At commands. Call this before telling an AI to path after having it Rotate/Look At so it rotates properly while moving again.",
       "NodeDescs": {
         "f211a503-a237-41bc-875e-ae3ef62d745b": {
@@ -710,6 +744,8 @@
     },
     "3fb9fd93-8d45-4395-b9a3-63a99a14442b": {
       "ReadonlyName": "And",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs True only when both inputs are True. If any inputs are False, it outputs False.",
       "NodeDescs": {
         "3fb9fd93-8d45-4395-b9a3-63a99a14442b": {
@@ -741,6 +777,8 @@
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyName": "Asin",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula asin",
       "NodeDescs": {
         "aaa4e58f-16df-426a-b7a7-a654eab97037": {
@@ -773,6 +811,8 @@
     },
     "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
       "ReadonlyName": "Atan2",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula Atan2",
       "NodeDescs": {
         "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
@@ -810,6 +850,8 @@
     },
     "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
       "ReadonlyName": "Atan",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula Atan",
       "NodeDescs": {
         "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
@@ -842,6 +884,8 @@
     },
     "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
       "ReadonlyName": "Variable (bool)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
@@ -889,6 +933,8 @@
     },
     "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
       "ReadonlyName": "If",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Takes a boolean condition as an input. If true, the “then” exec pin fires. If false, the “else” exec pin fires.",
       "NodeDescs": {
         "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
@@ -940,6 +986,8 @@
     },
     "fe32ba92-9018-4575-92e2-3b0d82c9419b": {
       "ReadonlyName": "Button Get Is Pressed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs a target Button's Pressed property.",
       "NodeDescs": {
         "fe32ba92-9018-4575-92e2-3b0d82c9419b": {
@@ -972,6 +1020,8 @@
     },
     "70e7663d-a5fd-435d-8995-942b4babc262": {
       "ReadonlyName": "Button Get Text",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs a target Button's Text property.",
       "NodeDescs": {
         "70e7663d-a5fd-435d-8995-942b4babc262": {
@@ -1004,6 +1054,8 @@
     },
     "21bbaa09-6bcf-435c-86da-e853a78bc27b": {
       "ReadonlyName": "Button Set Text",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets an input Button's Text property.",
       "NodeDescs": {
         "21bbaa09-6bcf-435c-86da-e853a78bc27b": {
@@ -1046,6 +1098,8 @@
     },
     "f4cbc476-bc98-4cbf-bf47-de4baedddf79": {
       "ReadonlyName": "Ceil",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula Ceil",
       "NodeDescs": {
         "f4cbc476-bc98-4cbf-bf47-de4baedddf79": {
@@ -1078,6 +1132,8 @@
     },
     "38b502dc-dd35-4083-a2b0-8a8e5f69a958": {
       "ReadonlyName": "Ceil to Int",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the smallest integer value greater than or equal to the input value.",
       "NodeDescs": {
         "38b502dc-dd35-4083-a2b0-8a8e5f69a958": {
@@ -1114,7 +1170,9 @@
       ]
     },
     "14ebde7a-76c0-47df-b0dd-01b1daa50821": {
-      "ReadonlyName": "No Name",
+      "ReadonlyName": "Circuit Board",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Use as a way to encapsulate your logic. You can have as many inputs and outputs as you like. Use the Edit tool to open up the Circuit Board and add nodes inside it to encapsulate the logic. Hit done editing on your Maker Pen to leave the Circuit Board context.",
       "NodeDescs": {},
       "NodeFilters": [
@@ -1127,6 +1185,8 @@
     },
     "c0ee02f4-bbab-40ea-88a0-7441d7e7094c": {
       "ReadonlyName": "Combatant Get Ground Position",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Outputs the ground position of an input combatant",
       "NodeDescs": {
         "c0ee02f4-bbab-40ea-88a0-7441d7e7094c": {
@@ -1161,6 +1221,8 @@
     },
     "3967a8ad-4237-4ae7-8cbf-850d8e24fe30": {
       "ReadonlyName": "Combatant Get Health",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Outputs the Health property of the input combatant.",
       "NodeDescs": {
         "3967a8ad-4237-4ae7-8cbf-850d8e24fe30": {
@@ -1198,6 +1260,8 @@
     },
     "2a12c389-c3c6-4484-8c63-21cdaf0fac6c": {
       "ReadonlyName": "Combatant Get Is Alive",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Outputs true if the input combatant is alive.",
       "NodeDescs": {
         "2a12c389-c3c6-4484-8c63-21cdaf0fac6c": {
@@ -1232,6 +1296,8 @@
     },
     "b4eadbfa-cdbe-42e6-9481-5197de58e272": {
       "ReadonlyName": "Combatant Get Velocity",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Outputs the input combatant's current velocity and speed.",
       "NodeDescs": {
         "b4eadbfa-cdbe-42e6-9481-5197de58e272": {
@@ -1271,6 +1337,8 @@
     },
     "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
       "ReadonlyName": "Variable (Combatant)",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
@@ -1319,6 +1387,8 @@
     },
     "67aca89c-f753-4f94-87df-1ce1d4fcb8b0": {
       "ReadonlyName": "Combatant Receive Damage",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Deals damage to the given target combatant with various parameters.",
       "NodeDescs": {
         "67aca89c-f753-4f94-87df-1ce1d4fcb8b0": {
@@ -1374,6 +1444,8 @@
     },
     "3dc4807f-2acd-446d-928f-5d301d0795d6": {
       "ReadonlyName": "Combatant Set Health",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Sets the Health property of an input combatant.",
       "NodeDescs": {
         "3dc4807f-2acd-446d-928f-5d301d0795d6": {
@@ -1418,6 +1490,8 @@
     },
     "82f71bcc-5e83-4825-8306-6a2bb2a296dd": {
       "ReadonlyName": "Combatant Set Max Health",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Sets the Max Health property of the input combatant.",
       "NodeDescs": {
         "82f71bcc-5e83-4825-8306-6a2bb2a296dd": {
@@ -1462,6 +1536,8 @@
     },
     "81b08e44-0a1e-40da-b8a1-79f416691dcf": {
       "ReadonlyName": "Combatant Split",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Splits the input Combatant into Player and AI types. Use this off of Combatant outputs to directly access the Player or AI.",
       "NodeDescs": {
         "81b08e44-0a1e-40da-b8a1-79f416691dcf": {
@@ -1504,6 +1580,8 @@
     },
     "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
       "ReadonlyName": "Cos",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula Cos",
       "NodeDescs": {
         "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
@@ -1536,6 +1614,8 @@
     },
     "81939b0e-428f-481c-9fba-453b4c84f01e": {
       "ReadonlyName": "Rec Room Object Add Tags",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Assigns tags to the input object.",
       "NodeDescs": {
         "81939b0e-428f-481c-9fba-453b4c84f01e": {
@@ -1578,6 +1658,8 @@
     },
     "02d69553-ae96-4c2d-8477-59ada6a66783": {
       "ReadonlyName": "Rec Room Object Get All with Tag",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Searches the room for all objects with a specified tag. Outputs all objects with the input tag in a list.",
       "NodeDescs": {
         "02d69553-ae96-4c2d-8477-59ada6a66783": {
@@ -1610,6 +1692,8 @@
     },
     "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
       "ReadonlyName": "Rec Room Object Get Authority",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the authority player of the input RecRoomObject",
       "NodeDescs": {
         "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
@@ -1647,6 +1731,8 @@
     },
     "b0497de0-3dd3-470d-a421-8f0d321bfc3e": {
       "ReadonlyName": "Rec Room Object Get Is Local Player Authority",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs true on the player's machine who has authority of the input.",
       "NodeDescs": {
         "b0497de0-3dd3-470d-a421-8f0d321bfc3e": {
@@ -1678,6 +1764,8 @@
     },
     "a76a9898-4add-4765-9f5b-f366b586e51c": {
       "ReadonlyName": "Get Player Last Equipped Object",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the player who last held an object",
       "NodeDescs": {
         "a76a9898-4add-4765-9f5b-f366b586e51c": {
@@ -1721,6 +1809,8 @@
     },
     "e67cfcb7-03e8-4152-ba41-af8ca61d93fb": {
       "ReadonlyName": "Rec Room Object Get Tags",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs list of tags the input object has.",
       "NodeDescs": {
         "e67cfcb7-03e8-4152-ba41-af8ca61d93fb": {
@@ -1753,6 +1843,8 @@
     },
     "bc3011d2-c085-490e-a450-195ff3a27009": {
       "ReadonlyName": "Rec Room Object Has Tag",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs true if the input object has the input tag.",
       "NodeDescs": {
         "15549697-11a3-4678-aabd-20890c3dbc09": {
@@ -1790,6 +1882,8 @@
     },
     "7077d139-9876-495e-9756-58150fef9f3b": {
       "ReadonlyName": "Variable (RecRoomObject)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "7077d139-9876-495e-9756-58150fef9f3b": {
@@ -1838,6 +1932,8 @@
     },
     "fb368814-daaf-475f-ae08-1d01b9d63b8e": {
       "ReadonlyName": "Rec Room Object Remove Tags",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Removes the input list of tags from the input object.",
       "NodeDescs": {
         "fb368814-daaf-475f-ae08-1d01b9d63b8e": {
@@ -1880,6 +1976,8 @@
     },
     "cefee2a5-d4a8-4dff-8c4e-bad684ca8d34": {
       "ReadonlyName": "Delay",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Fires outputs based on the inputted time to delay. The Run exec fires as soon as the node is executed. The After Delay exec fires once the input delay duration has completed. After Canceled fires after the delay node’s Cancel exec has been fired. Cancel cancels all current delays running from this node.",
       "NodeDescs": {
         "cefee2a5-d4a8-4dff-8c4e-bad684ca8d34": {
@@ -1936,6 +2034,8 @@
     },
     "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
       "ReadonlyName": "Dice Get Player Rolled",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the player who rolled the dice",
       "NodeDescs": {
         "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
@@ -1968,6 +2068,8 @@
     },
     "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
       "ReadonlyName": "Dice Get Result",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the result of the dice",
       "NodeDescs": {
         "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
@@ -2000,17 +2102,14 @@
     },
     "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
       "ReadonlyName": "Dice Get Roll finished",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs an exec when the dice finished rolling",
       "NodeDescs": {
         "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
           "Name": "Dice Get Roll finished",
           "ReadonlyTypeParams": {},
           "InputPorts": {
-            "80196cac-c33e-4a92-a24f-6ce23f0b5d75": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
             "83b1eae2-6101-4579-ae26-5268deedf0f5": {
               "Name": "Target",
               "ReadonlyType": "Die",
@@ -2037,6 +2136,8 @@
     },
     "182e1ae2-1183-4741-af6e-f307b788a857": {
       "ReadonlyName": "Distance",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the distance between the input objects.",
       "NodeDescs": {
         "182e1ae2-1183-4741-af6e-f307b788a857": {
@@ -2082,6 +2183,8 @@
     },
     "f2eafd78-5f23-44c9-a271-8ff2f0762e71": {
       "ReadonlyName": "Divide",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Find how many times a value contains another.",
       "NodeDescs": {
         "f2eafd78-5f23-44c9-a271-8ff2f0762e71": {
@@ -2122,6 +2225,8 @@
     },
     "15e42063-cbae-40f9-a9e4-8226e83217ec": {
       "ReadonlyName": "Emitter Set Color",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the color for the particles emitted",
       "NodeDescs": {
         "15e42063-cbae-40f9-a9e4-8226e83217ec": {
@@ -2164,6 +2269,8 @@
     },
     "36881bd0-7da0-44a7-b6ef-8cd3770fed78": {
       "ReadonlyName": "Emitter Set Looping",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Makes the emitter emit continuously",
       "NodeDescs": {
         "36881bd0-7da0-44a7-b6ef-8cd3770fed78": {
@@ -2206,6 +2313,8 @@
     },
     "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
       "ReadonlyName": "Emitter Set Size",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the size of the particles emitted",
       "NodeDescs": {
         "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
@@ -2248,6 +2357,8 @@
     },
     "12446960-d971-475f-b64e-b5c7bb422eca": {
       "ReadonlyName": "Emitter Set Speed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the speed particles are emitted",
       "NodeDescs": {
         "12446960-d971-475f-b64e-b5c7bb422eca": {
@@ -2290,6 +2401,8 @@
     },
     "56ebaa0b-256a-40ed-a066-f5663dfa2b59": {
       "ReadonlyName": "Emitter Start",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Starts emitting particles",
       "NodeDescs": {
         "56ebaa0b-256a-40ed-a066-f5663dfa2b59": {
@@ -2327,6 +2440,8 @@
     },
     "23b278c4-5d3d-439d-afa3-ff30c949df97": {
       "ReadonlyName": "Emitter Stop",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Stops emitting particles",
       "NodeDescs": {
         "23b278c4-5d3d-439d-afa3-ff30c949df97": {
@@ -2364,6 +2479,8 @@
     },
     "3663225d-e18d-40e6-a234-ef10378528be": {
       "ReadonlyName": "Equals",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Compares the two inputted values and outputs true if they are the same. False if they are different.",
       "NodeDescs": {
         "3663225d-e18d-40e6-a234-ef10378528be": {
@@ -2407,6 +2524,8 @@
     },
     "7d72a1fa-a434-4437-a73a-51f306a3f55f": {
       "ReadonlyName": "Event Definition",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "474f120e-96e8-5885-b98e-3ff85f2a287b": {
@@ -2431,6 +2550,8 @@
     },
     "8b533ccb-643a-491d-982c-94417ce99954": {
       "ReadonlyName": "Event Receiver",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Events are the entry points for all circuit graphs. Events are execution hooks for things like a player loading into the room, or knowing when a Button is pressed. After creating this chip, make sure to use the configure tool to choose the event you want to listen for. You can use the Event Defintion chip to create your own events to add to this list and use with the Event Sender chip.",
       "NodeDescs": {
         "34de191a-5978-5e27-9c35-2798b9053ef4": {
@@ -2461,6 +2582,8 @@
     },
     "96a8fe50-bc37-458b-bac9-582d45314779": {
       "ReadonlyName": "Event Sender",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Use the Event Sender to fire your custom events defined in Event Defintions. After creating this chip, make sure to use the configure tool to change the event that you want to fire. You can also change who you want to send the event to from the config menu.",
       "NodeDescs": {
         "f0f04e0c-43e0-5443-a4bf-6722eb770ba5": {
@@ -2497,6 +2620,8 @@
     },
     "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
       "ReadonlyName": "Variable (float)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
@@ -2545,6 +2670,8 @@
     },
     "c90d9339-cdce-4d22-a885-f142fd5567ab": {
       "ReadonlyName": "Floor",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the smallest value less than or equal to the input value.",
       "NodeDescs": {
         "c90d9339-cdce-4d22-a885-f142fd5567ab": {
@@ -2577,6 +2704,8 @@
     },
     "bc451cab-2292-4e60-832d-31060eb82bd0": {
       "ReadonlyName": "Floor to Int",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the smallest integer value less than or equal to the input value.",
       "NodeDescs": {
         "bc451cab-2292-4e60-832d-31060eb82bd0": {
@@ -2614,6 +2743,8 @@
     },
     "744e5311-6cc7-4130-962e-fe050a475d43": {
       "ReadonlyName": "For Each",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Iterates over the input list. The loop exec fires for each element in the list. The Done exec fires once the end of the list has been reached.",
       "NodeDescs": {
         "744e5311-6cc7-4130-962e-fe050a475d43": {
@@ -2662,6 +2793,8 @@
     },
     "8f945c22-988b-45d2-b7f2-409ba304fef4": {
       "ReadonlyName": "For",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Iterates over the “From” pin (inclusive) to the “To” pin (exclusive)",
       "NodeDescs": {
         "8f945c22-988b-45d2-b7f2-409ba304fef4": {
@@ -2713,6 +2846,8 @@
     },
     "7ff685a6-f59c-4c6c-b559-f343d81ea1d4": {
       "ReadonlyName": "From Rec Room Object",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Converts the input Rec Room Object to the object's subtype.",
       "NodeDescs": {
         "7ff685a6-f59c-4c6c-b559-f343d81ea1d4": {
@@ -2752,6 +2887,8 @@
     },
     "09b0bf5b-95df-474b-b81a-4e8e2c78ed0a": {
       "ReadonlyName": "Get All Players",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs a list of all the players in the room currently.",
       "NodeDescs": {
         "09b0bf5b-95df-474b-b81a-4e8e2c78ed0a": {
@@ -2777,6 +2914,8 @@
     },
     "eaf712f8-3257-4415-9f88-ae94e308396e": {
       "ReadonlyName": "Get Authority",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "eaf712f8-3257-4415-9f88-ae94e308396e": {
@@ -2802,6 +2941,8 @@
     },
     "e8c5082f-0a75-4025-9679-293bc8d72989": {
       "ReadonlyName": "Get Element",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets a specified element from the input list. The element you want to retrieve is called the “index” and is the location of the element in the list. The first element in the list is at index 0, the second element is at index 1.",
       "NodeDescs": {
         "e8c5082f-0a75-4025-9679-293bc8d72989": {
@@ -2841,6 +2982,8 @@
     },
     "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
       "ReadonlyName": "Time Get Universal Seconds",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the amount of seconds since 1970",
       "NodeDescs": {
         "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
@@ -2866,6 +3009,8 @@
     },
     "88f95338-d1a6-4fad-8424-d714d651f6ac": {
       "ReadonlyName": "Get Forward Vector",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "88f95338-d1a6-4fad-8424-d714d651f6ac": {
@@ -2899,6 +3044,8 @@
     },
     "0493204d-9815-49a9-8c87-4dedf5ccf7e8": {
       "ReadonlyName": "List Get Count",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the number of elements inside the input list.",
       "NodeDescs": {
         "0493204d-9815-49a9-8c87-4dedf5ccf7e8": {
@@ -2933,6 +3080,8 @@
     },
     "70c830bb-223a-4a7c-b0ae-df240c6f1f33": {
       "ReadonlyName": "Get Local Camera Forward",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "70c830bb-223a-4a7c-b0ae-df240c6f1f33": {
@@ -2956,8 +3105,37 @@
         }
       ]
     },
+    "912f0e1b-267d-4424-8002-3f82a2d835fe": {
+      "ReadonlyName": "Get Local Camera Orientation",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "912f0e1b-267d-4424-8002-3f82a2d835fe": {
+          "Name": "Get Local Camera Orientation",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {},
+          "OutputPorts": {
+            "581f3a73-17e2-464d-8f5b-ccea84cd0b7e": {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
     "5d9da95f-a64f-4660-a11f-bf0855769659": {
       "ReadonlyName": "Get Local Camera Up",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "5d9da95f-a64f-4660-a11f-bf0855769659": {
@@ -2983,6 +3161,8 @@
     },
     "fdf733a8-bdd6-4800-b1d4-95b06b3d6f02": {
       "ReadonlyName": "Get Local Player",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the player running this chip on their machine.",
       "NodeDescs": {
         "fdf733a8-bdd6-4800-b1d4-95b06b3d6f02": {
@@ -3011,8 +3191,45 @@
         }
       ]
     },
+    "c453fa47-d0db-4c4a-a6a1-dac4ebad0aca": {
+      "ReadonlyName": "Get Orientation",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "c453fa47-d0db-4c4a-a6a1-dac4ebad0aca": {
+          "Name": "Get Orientation",
+          "ReadonlyTypeParams": {
+            "T": "(Rec Room Object | Player)"
+          },
+          "InputPorts": {
+            "a7dbd3ef-d4c4-4888-985e-99f25b37de9a": {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "ab84ca75-35d4-42d1-998a-15483402b53f": {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
     "6141ff64-412b-452f-beb0-f338eb6abfb5": {
       "ReadonlyName": "Get Player Account Name",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the player's Account name (e.g Coach) in a form of a string",
       "NodeDescs": {
         "6141ff64-412b-452f-beb0-f338eb6abfb5": {
@@ -3044,6 +3261,8 @@
     },
     "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
       "ReadonlyName": "Get Player By Account Name",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the player value type based by their Account Name (e.g My Account name is Coach and if I input my Account Name in the form of a string, The output would be my player value type.)",
       "NodeDescs": {
         "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
@@ -3075,6 +3294,8 @@
     },
     "637e07e4-9b93-44b6-bba3-68966080d064": {
       "ReadonlyName": "Get Player By Display Name",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the a player value type based by their Display Name (e.g My Display Name is Coach and if I input a sting Coach, The output would be my player value type)",
       "NodeDescs": {
         "637e07e4-9b93-44b6-bba3-68966080d064": {
@@ -3106,6 +3327,8 @@
     },
     "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
       "ReadonlyName": "Get Players With Role",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outpus a player value type list that continues every player with a certain role",
       "NodeDescs": {
         "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
@@ -3137,6 +3360,8 @@
     },
     "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
       "ReadonlyName": "Get Position",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the position of the input object as a vector3.",
       "NodeDescs": {
         "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
@@ -3170,6 +3395,8 @@
     },
     "8722445f-e552-4d4a-bced-8afa63bbf70b": {
       "ReadonlyName": "Time Get Precise Seconds",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the amount of seconds since a player launched Rec Room",
       "NodeDescs": {
         "8722445f-e552-4d4a-bced-8afa63bbf70b": {
@@ -3195,6 +3422,8 @@
     },
     "d7557465-963e-4451-a55a-dea2050e9b74": {
       "ReadonlyName": "Get Room Authority",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the player who is the room Authority player",
       "NodeDescs": {
         "d7557465-963e-4451-a55a-dea2050e9b74": {
@@ -3220,6 +3449,8 @@
     },
     "830f781d-2522-4ec0-9d6f-ecfc0bf695f6": {
       "ReadonlyName": "Get Up Vector",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "830f781d-2522-4ec0-9d6f-ecfc0bf695f6": {
@@ -3253,6 +3484,8 @@
     },
     "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
       "ReadonlyName": "Time Get Universal Time",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the UTC time zone Time",
       "NodeDescs": {
         "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
@@ -3303,6 +3536,8 @@
     },
     "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
       "ReadonlyName": "Get Velocity",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the velocity of a player or a RecRoomObject",
       "NodeDescs": {
         "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
@@ -3336,6 +3571,8 @@
     },
     "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
       "ReadonlyName": "Greater Than",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns true if input A is greater than input B",
       "NodeDescs": {
         "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
@@ -3374,6 +3611,8 @@
     },
     "a10e7788-f016-4390-a68e-87d93b47edb1": {
       "ReadonlyName": "Greater or Equal",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns true if input A is greater or equal than input B",
       "NodeDescs": {
         "a10e7788-f016-4390-a68e-87d93b47edb1": {
@@ -3412,6 +3651,8 @@
     },
     "a4f8a9a1-fd7b-4702-8345-93ae4d57f333": {
       "ReadonlyName": "If Expression",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs an input value based on the input conditional. Outputs the “then” input if the inputted conditional is true. Outputs the “else” input if the input conditional is false.",
       "NodeDescs": {
         "a4f8a9a1-fd7b-4702-8345-93ae4d57f333": {
@@ -3455,6 +3696,8 @@
     },
     "b8b667b9-7b55-4b8d-b116-abef220777e2": {
       "ReadonlyName": "If Local Player Is Authority",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "I'm Authority exec fires on the player's machine who has authority in the current context. At the room level, this is room authority, inside an object board, this is object authority. I'm Not Authority exec fires for everyone else.",
       "NodeDescs": {
         "b8b667b9-7b55-4b8d-b116-abef220777e2": {
@@ -3491,6 +3734,8 @@
     },
     "5e28057f-214b-4ff8-81bc-512be207c9d7": {
       "ReadonlyName": "If Local Player Is Room Authority",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "5e28057f-214b-4ff8-81bc-512be207c9d7": {
@@ -3527,6 +3772,8 @@
     },
     "6d69bee8-0d77-4d5f-bf35-9794eaaabe81": {
       "ReadonlyName": "If Local Player Should Run",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "6d69bee8-0d77-4d5f-bf35-9794eaaabe81": {
@@ -3568,6 +3815,8 @@
     },
     "c7643011-f320-4155-89b8-d693730c1935": {
       "ReadonlyName": "If Player Is Local",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs if a player is local or not",
       "NodeDescs": {
         "c7643011-f320-4155-89b8-d693730c1935": {
@@ -3609,6 +3858,8 @@
     },
     "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
       "ReadonlyName": "Velocity Add",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Adds velocity to the input target. The input velocity will be multiplied by the magnitude of the vector provided in the input direction.",
       "NodeDescs": {
         "1b5eca75-0e7e-4aff-8adc-c5e043cac29e": {
@@ -3662,6 +3913,8 @@
     },
     "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
       "ReadonlyName": "Velocity Reflect",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "The input target's velocity parallel to the input direction vector is reflected along the input direction and velocities perpendicular to it, are maintained. The input velocity will be multiplied by the magnitude of the vector provided in the input direction.",
       "NodeDescs": {
         "f0137efc-b3b7-4217-ba8b-1d2e78d451bd": {
@@ -3720,6 +3973,8 @@
     },
     "f97c530d-03bf-498c-8854-33e814d2600b": {
       "ReadonlyName": "Velocity Set",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Momentarily sets the velocity of the input target in the input direction. The input velocity will be multiplied by the magnitude of the vector provided in the input direction.",
       "NodeDescs": {
         "f97c530d-03bf-498c-8854-33e814d2600b": {
@@ -3768,6 +4023,8 @@
     },
     "cf16ad7e-4ca0-4140-89d1-a6e1e39f93f5": {
       "ReadonlyName": "DEPRECATED Instance AI",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "cf16ad7e-4ca0-4140-89d1-a6e1e39f93f5": {
@@ -3793,6 +4050,8 @@
     },
     "8065d557-b6cc-4dd1-8cfa-b7481fe7bcf1": {
       "ReadonlyName": "DEPRECATED Instance bool",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "8065d557-b6cc-4dd1-8cfa-b7481fe7bcf1": {
@@ -3818,6 +4077,8 @@
     },
     "9a44b46a-682d-4a20-af66-8e111673d061": {
       "ReadonlyName": "DEPRECATED Instance Combatant",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "9a44b46a-682d-4a20-af66-8e111673d061": {
@@ -3843,6 +4104,8 @@
     },
     "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
       "ReadonlyName": "DEPRECATED Instance RecRoomObject",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "410316a0-dbd0-4a43-9e36-67d1443c2a05": {
@@ -3868,6 +4131,8 @@
     },
     "dce27fe2-abc2-4a6a-9c4e-5d829a5b83a6": {
       "ReadonlyName": "DEPRECATED Instance float",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "dce27fe2-abc2-4a6a-9c4e-5d829a5b83a6": {
@@ -3893,6 +4158,8 @@
     },
     "1a5331bc-5025-487e-898c-3c49ee715664": {
       "ReadonlyName": "DEPRECATED Instance int",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "1a5331bc-5025-487e-898c-3c49ee715664": {
@@ -3918,6 +4185,8 @@
     },
     "4f927e94-c242-4aba-89ac-575b169ecbb2": {
       "ReadonlyName": "DEPRECATED Instance List<bool>",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "4f927e94-c242-4aba-89ac-575b169ecbb2": {
@@ -3943,6 +4212,8 @@
     },
     "1e05b1fd-c75c-4955-917f-5576e5451737": {
       "ReadonlyName": "DEPRECATED Instance List<RecRoomObject>",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "1e05b1fd-c75c-4955-917f-5576e5451737": {
@@ -3968,6 +4239,8 @@
     },
     "b7a11075-1220-4907-ae5c-820f1a209814": {
       "ReadonlyName": "DEPRECATED Instance List<float>",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "b7a11075-1220-4907-ae5c-820f1a209814": {
@@ -3993,6 +4266,8 @@
     },
     "401db17e-4e67-4a88-8a1b-88c6a819e685": {
       "ReadonlyName": "DEPRECATED Instance List<int>",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "401db17e-4e67-4a88-8a1b-88c6a819e685": {
@@ -4018,6 +4293,8 @@
     },
     "1ad20647-c773-4708-ba68-d9bd9430fb65": {
       "ReadonlyName": "DEPRECATED Instance List<Player>",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "1ad20647-c773-4708-ba68-d9bd9430fb65": {
@@ -4043,6 +4320,8 @@
     },
     "bcdb75cb-6c21-4a6a-acb5-8f733741e93f": {
       "ReadonlyName": "DEPRECATED Instance List<string>",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "bcdb75cb-6c21-4a6a-acb5-8f733741e93f": {
@@ -4068,6 +4347,8 @@
     },
     "5b34b481-a7a3-4932-a966-974082c54ecd": {
       "ReadonlyName": "DEPRECATED Instance List<Vector3>",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "5b34b481-a7a3-4932-a966-974082c54ecd": {
@@ -4093,6 +4374,8 @@
     },
     "3ee1edfe-5520-4714-862b-98af90f6e3da": {
       "ReadonlyName": "DEPRECATED Instance Player",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "3ee1edfe-5520-4714-862b-98af90f6e3da": {
@@ -4118,6 +4401,8 @@
     },
     "797913df-1bcf-4280-8666-f17d7782cebb": {
       "ReadonlyName": "DEPRECATED Instance string",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "797913df-1bcf-4280-8666-f17d7782cebb": {
@@ -4143,6 +4428,8 @@
     },
     "33ce1565-62f8-4d39-89da-b8838aadff6a": {
       "ReadonlyName": "DEPRECATED Instance Vector3",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "33ce1565-62f8-4d39-89da-b8838aadff6a": {
@@ -4168,6 +4455,8 @@
     },
     "33224907-68ff-4102-802e-7c3eed481d37": {
       "ReadonlyName": "Variable (int)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "33224907-68ff-4102-802e-7c3eed481d37": {
@@ -4216,6 +4505,8 @@
     },
     "65cfba8a-b5dc-4946-b824-e6efc5719f3a": {
       "ReadonlyName": "Int to Float",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Converts the input int to a float.",
       "NodeDescs": {
         "65cfba8a-b5dc-4946-b824-e6efc5719f3a": {
@@ -4253,6 +4544,8 @@
     },
     "24a1be50-ef1b-4e54-836b-4a2a95780b4e": {
       "ReadonlyName": "Is Valid",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns true if the input variable is not null. Certain variable types must be set before use because they can't have a default value. A Rec Room Object variable that isn't set isn't going to be valid.",
       "NodeDescs": {
         "24a1be50-ef1b-4e54-836b-4a2a95780b4e": {
@@ -4286,12 +4579,14 @@
     },
     "91b0ffa8-4eb1-4a30-aaf3-7a049071cb42": {
       "ReadonlyName": "Lerp",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula Lerp",
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
           "Name": "Lerp",
           "ReadonlyTypeParams": {
-            "T": "(float | Vector3)"
+            "T": "(float | Quaternion | Vector3)"
           },
           "InputPorts": {
             "5b6bd01f-d2ef-43e2-82c9-534810460b26": {
@@ -4336,6 +4631,8 @@
     },
     "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
       "ReadonlyName": "Less Than",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns true if input A is less than input B.",
       "NodeDescs": {
         "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
@@ -4374,6 +4671,8 @@
     },
     "a027073f-9189-457f-a53d-8562e8829daf": {
       "ReadonlyName": "Less or Equal",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns true if input A is less than or equal to input B.",
       "NodeDescs": {
         "a027073f-9189-457f-a53d-8562e8829daf": {
@@ -4412,6 +4711,8 @@
     },
     "873d8765-9dc7-41ea-87ef-dd6e32119af8": {
       "ReadonlyName": "Light Set Angle",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the size of the spotlight's area",
       "NodeDescs": {
         "873d8765-9dc7-41ea-87ef-dd6e32119af8": {
@@ -4454,6 +4755,8 @@
     },
     "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
       "ReadonlyName": "Light Set Color",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the color for a point light or a spotlight",
       "NodeDescs": {
         "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
@@ -4496,6 +4799,8 @@
     },
     "902a47c8-3834-4858-bbae-5357281a507d": {
       "ReadonlyName": "Light Set Intensity",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the brightness level for a point light or a spotlight",
       "NodeDescs": {
         "902a47c8-3834-4858-bbae-5357281a507d": {
@@ -4538,6 +4843,8 @@
     },
     "c3d0ef1f-921c-4602-a6eb-b03ed46d556f": {
       "ReadonlyName": "Light Set Range",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the range of a point light or a spotlight",
       "NodeDescs": {
         "c3d0ef1f-921c-4602-a6eb-b03ed46d556f": {
@@ -4580,6 +4887,8 @@
     },
     "0f96406e-af69-4f6c-a430-c6b004457ef4": {
       "ReadonlyName": "Light Turn Off",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Turns off the point light or the spotlight",
       "NodeDescs": {
         "0f96406e-af69-4f6c-a430-c6b004457ef4": {
@@ -4617,6 +4926,8 @@
     },
     "5452c480-62f9-4d4e-b615-0f59e645d8db": {
       "ReadonlyName": "Light Turn On",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Turns on the point light or the spotlight",
       "NodeDescs": {
         "5452c480-62f9-4d4e-b615-0f59e645d8db": {
@@ -4654,6 +4965,8 @@
     },
     "f716c3f3-0c7c-42a4-bf55-12b7e1cd9040": {
       "ReadonlyName": "List Add",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "f716c3f3-0c7c-42a4-bf55-12b7e1cd9040": {
@@ -4698,6 +5011,8 @@
     },
     "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
       "ReadonlyName": "List All True",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "If all of the bool values in the list are true then return ture",
       "NodeDescs": {
         "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
@@ -4736,6 +5051,8 @@
     },
     "f9589495-685e-4e14-af2e-5cd45f860021": {
       "ReadonlyName": "List Any True",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "If any bool value in the list is true then return ture",
       "NodeDescs": {
         "f9589495-685e-4e14-af2e-5cd45f860021": {
@@ -4774,6 +5091,8 @@
     },
     "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
       "ReadonlyName": "Variable (List<bool>)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
@@ -4836,6 +5155,8 @@
     },
     "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
       "ReadonlyName": "List Concat",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Combine lists together into one list",
       "NodeDescs": {
         "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
@@ -4875,6 +5196,8 @@
     },
     "73f261e2-d65d-4607-858d-3f4c37c76963": {
       "ReadonlyName": "List Contains",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "73f261e2-d65d-4607-858d-3f4c37c76963": {
@@ -4914,6 +5237,8 @@
     },
     "536e376c-087d-4909-9412-3fcee5d6f52b": {
       "ReadonlyName": "Variable (List<RecRoomObject>)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "536e376c-087d-4909-9412-3fcee5d6f52b": {
@@ -4970,6 +5295,8 @@
     },
     "7e5af908-533d-4d42-b3c9-0159e2b5fd55": {
       "ReadonlyName": "List Divide",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "7e5af908-533d-4d42-b3c9-0159e2b5fd55": {
@@ -5010,6 +5337,8 @@
     },
     "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
       "ReadonlyName": "Variable (List<float>)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
@@ -5066,6 +5395,8 @@
     },
     "592c8aab-9489-492f-a4aa-1e558e6a8ce7": {
       "ReadonlyName": "List Insert",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Insert a value into a list",
       "NodeDescs": {
         "592c8aab-9489-492f-a4aa-1e558e6a8ce7": {
@@ -5115,6 +5446,8 @@
     },
     "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
       "ReadonlyName": "Variable (List<int>)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
@@ -5171,6 +5504,8 @@
     },
     "47428133-4492-422a-aeab-82c21667543e": {
       "ReadonlyName": "List Max",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "47428133-4492-422a-aeab-82c21667543e": {
@@ -5211,6 +5546,8 @@
     },
     "73e9cc79-66cc-4526-8ed7-87500e208c6b": {
       "ReadonlyName": "List Min",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "73e9cc79-66cc-4526-8ed7-87500e208c6b": {
@@ -5251,12 +5588,14 @@
     },
     "585aebe5-5df3-423a-8bc4-66b4e2b8bc5b": {
       "ReadonlyName": "List Multiply",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "585aebe5-5df3-423a-8bc4-66b4e2b8bc5b": {
           "Name": "List Multiply",
           "ReadonlyTypeParams": {
-            "T": "(float | int | Vector3)"
+            "T": "(float | int | Quaternion | Vector3)"
           },
           "InputPorts": {
             "f6aef702-2a87-4e3c-b83a-37d2fef7c4c2": {
@@ -5291,6 +5630,8 @@
     },
     "32837e14-12de-465f-89dc-ceddb64cdd6c": {
       "ReadonlyName": "Variable (List<Player>)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "32837e14-12de-465f-89dc-ceddb64cdd6c": {
@@ -5344,8 +5685,55 @@
         }
       ]
     },
+    "e8cfde19-33a4-4826-a032-4b9bd50aa171": {
+      "ReadonlyName": "Variable (List<Quaternion>)",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "88d00c7b-3341-5500-bcf1-5e4018948299": {
+          "Name": "Variable (List<Quaternion>)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "List<Quaternion>",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "List<Quaternion>",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Variables",
+            "Primitives"
+          ]
+        }
+      ]
+    },
     "02774487-d41a-4b59-9aa9-2aeb0aad9e37": {
       "ReadonlyName": "List Remove At",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "02774487-d41a-4b59-9aa9-2aeb0aad9e37": {
@@ -5390,6 +5778,8 @@
     },
     "2687fb17-96ea-4106-94d7-be8854cfa978": {
       "ReadonlyName": "List Remove Last",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "2687fb17-96ea-4106-94d7-be8854cfa978": {
@@ -5429,6 +5819,8 @@
     },
     "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
       "ReadonlyName": "Variable (List<string>)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
@@ -5479,6 +5871,8 @@
     },
     "20f069cb-30e5-4df8-8e2f-d91f322a83dd": {
       "ReadonlyName": "List Subtract",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "20f069cb-30e5-4df8-8e2f-d91f322a83dd": {
@@ -5519,6 +5913,8 @@
     },
     "d080c9af-402f-4eb9-91d6-9eee945bf734": {
       "ReadonlyName": "List Sum",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "d080c9af-402f-4eb9-91d6-9eee945bf734": {
@@ -5559,6 +5955,8 @@
     },
     "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
       "ReadonlyName": "Variable (List<Vector3>)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
@@ -5609,6 +6007,8 @@
     },
     "28a105ab-a947-4493-a51d-ced76a9601ee": {
       "ReadonlyName": "Logarithm",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula logarithm",
       "NodeDescs": {
         "28a105ab-a947-4493-a51d-ced76a9601ee": {
@@ -5644,119 +6044,10 @@
         }
       ]
     },
-    "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
-      "ReadonlyName": "Log Screen Get Mute",
-      "Description": "If the log screen is muted then return true",
-      "NodeDescs": {
-        "b9dcc6d1-e3d9-4c4c-9017-a4dd891521fd": {
-          "Name": "Log Screen Get Mute",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "eab3c74e-6eb0-48d0-a3fb-ea2f7177ff24": {
-              "Name": "Target",
-              "ReadonlyType": "Log Screen",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "e122ecc8-3583-4264-90c9-564bfdf4f08c": {
-              "Name": "Mute",
-              "ReadonlyType": "bool",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Objects",
-            "Log Screen"
-          ]
-        }
-      ]
-    },
-    "6b57589c-a154-4831-9c13-0a6e351435c2": {
-      "ReadonlyName": "Log Screen Reset",
-      "Description": "Reset a log screen",
-      "NodeDescs": {
-        "6b57589c-a154-4831-9c13-0a6e351435c2": {
-          "Name": "Log Screen Reset",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "eb0fd2d1-45a5-42a3-91d8-6e0056582762": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "bf6d9dee-f02d-48af-8fde-8c7aaf29635c": {
-              "Name": "Target",
-              "ReadonlyType": "Log Screen",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "2c1f33b3-993e-4b30-961b-c97d7b9300b8": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Objects",
-            "Log Screen"
-          ]
-        }
-      ]
-    },
-    "faced0c6-b436-4f31-965e-82ea8743640b": {
-      "ReadonlyName": "Log Screen Set Mute",
-      "Description": "Mutes the log screen",
-      "NodeDescs": {
-        "faced0c6-b436-4f31-965e-82ea8743640b": {
-          "Name": "Log Screen Set Mute",
-          "ReadonlyTypeParams": {},
-          "InputPorts": {
-            "94835ea2-26a2-4b0e-a29a-1ad948c1dcdc": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            "fff8775d-05dd-431e-a18c-12b79f2e031e": {
-              "Name": "Target",
-              "ReadonlyType": "Log Screen",
-              "Description": ""
-            },
-            "95d53697-b771-4d45-ad1a-f123951c73a9": {
-              "Name": "Mute",
-              "ReadonlyType": "bool",
-              "Description": ""
-            }
-          },
-          "OutputPorts": {
-            "ea70bd9b-37d0-41e4-83ff-8b2d468095ca": {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          }
-        }
-      },
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Objects",
-            "Log Screen"
-          ]
-        }
-      ]
-    },
     "4047a8cc-3dcc-4fa8-85a7-41d569b8e547": {
       "ReadonlyName": "Log String",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Logs a string into a log screen",
       "NodeDescs": {
         "4047a8cc-3dcc-4fa8-85a7-41d569b8e547": {
@@ -5804,6 +6095,8 @@
     },
     "542d3256-0d51-4c33-a2a1-fbc44b7e1f07": {
       "ReadonlyName": "List Create",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Creates a list from input values. Add more inputs by using the configure tool on the node and press “Add Input”. All items in a list must be of the same type.",
       "NodeDescs": {
         "542d3256-0d51-4c33-a2a1-fbc44b7e1f07": {
@@ -5838,6 +6131,8 @@
     },
     "1cb807b1-85e7-4c14-b3ae-5775b7873b7d": {
       "ReadonlyName": "Max",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns largest of two or more values.",
       "NodeDescs": {
         "1cb807b1-85e7-4c14-b3ae-5775b7873b7d": {
@@ -5872,6 +6167,8 @@
     },
     "bfb1ad17-5ade-4bd8-9c31-6d4b1e47dae3": {
       "ReadonlyName": "Min",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns smallest of two or more values.",
       "NodeDescs": {
         "bfb1ad17-5ade-4bd8-9c31-6d4b1e47dae3": {
@@ -5906,6 +6203,8 @@
     },
     "fe462e79-9e9f-4234-b594-7b6c0a69329b": {
       "ReadonlyName": "Modulo",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the remainder of the first value is divided by the second.",
       "NodeDescs": {
         "fe462e79-9e9f-4234-b594-7b6c0a69329b": {
@@ -5940,12 +6239,14 @@
     },
     "4738d696-d05a-42ee-a182-7641c429ae06": {
       "ReadonlyName": "Multiply",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Multiplies the two input values and outputs the result",
       "NodeDescs": {
         "4738d696-d05a-42ee-a182-7641c429ae06": {
           "Name": "Multiply",
           "ReadonlyTypeParams": {
-            "T": "(int | float | Vector3)"
+            "T": "(int | float | Quaternion | Vector3)"
           },
           "InputPorts": {
             "dd3ec9e6-d22e-4e3e-bd63-f502bd558084": {
@@ -5980,6 +6281,8 @@
     },
     "502e86d1-5b3a-4213-97e2-df25836ffcc4": {
       "ReadonlyName": "Nand",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs False only when both inputs are True. If one or both is False, it outputs True.",
       "NodeDescs": {
         "502e86d1-5b3a-4213-97e2-df25836ffcc4": {
@@ -6011,6 +6314,8 @@
     },
     "2891bcb4-a6ab-4a2e-a08d-dd2a55f1cf66": {
       "ReadonlyName": "Nor",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs True when both inputs are False. Otherwise, outputs False.",
       "NodeDescs": {
         "2891bcb4-a6ab-4a2e-a08d-dd2a55f1cf66": {
@@ -6042,6 +6347,8 @@
     },
     "ff551243-beb4-470e-ab48-9d616818d5e4": {
       "ReadonlyName": "Not",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the opposite of the input boolean. ",
       "NodeDescs": {
         "ff551243-beb4-470e-ab48-9d616818d5e4": {
@@ -6073,6 +6380,8 @@
     },
     "b5dcded0-eb2b-468d-a4b9-ffb1054f6214": {
       "ReadonlyName": "Or",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs True if any input is true. Otherwise outputs False.",
       "NodeDescs": {
         "b5dcded0-eb2b-468d-a4b9-ffb1054f6214": {
@@ -6104,6 +6413,8 @@
     },
     "92c05ebc-1967-49a4-94b5-2d01fe1e6b85": {
       "ReadonlyName": "Parse Bool",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Converts the input string to a bool if able.",
       "NodeDescs": {
         "92c05ebc-1967-49a4-94b5-2d01fe1e6b85": {
@@ -6145,6 +6456,8 @@
     },
     "5e25f40a-2b8c-4327-a89c-7a749838da7d": {
       "ReadonlyName": "Parse Float",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Converts the input string to a float if able.",
       "NodeDescs": {
         "5e25f40a-2b8c-4327-a89c-7a749838da7d": {
@@ -6186,6 +6499,8 @@
     },
     "00b49995-a322-47a3-a32b-5530f2ba7fed": {
       "ReadonlyName": "Parse Int",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Converts the input string to a integer if able.",
       "NodeDescs": {
         "00b49995-a322-47a3-a32b-5530f2ba7fed": {
@@ -6227,6 +6542,8 @@
     },
     "5e002bc3-c667-441c-8098-4df2f956de5b": {
       "ReadonlyName": "Piston Get Acceleration",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the acceleration of a piston",
       "NodeDescs": {
         "5e002bc3-c667-441c-8098-4df2f956de5b": {
@@ -6259,6 +6576,8 @@
     },
     "e503b0e4-d295-48cc-bf95-1f1a8127a009": {
       "ReadonlyName": "Piston Get Distance",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "e503b0e4-d295-48cc-bf95-1f1a8127a009": {
@@ -6291,6 +6610,8 @@
     },
     "639a360e-aeb1-4c5d-8bc1-96bfaea8aef2": {
       "ReadonlyName": "Piston Get Target Distance",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "639a360e-aeb1-4c5d-8bc1-96bfaea8aef2": {
@@ -6323,6 +6644,8 @@
     },
     "bb702e97-9f40-45cb-b35d-3a2193ab6800": {
       "ReadonlyName": "Piston Get Max Distance",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "bb702e97-9f40-45cb-b35d-3a2193ab6800": {
@@ -6355,6 +6678,8 @@
     },
     "1d989cd3-d6ae-4503-b80e-5e630ec3f308": {
       "ReadonlyName": "Piston Get Speed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Returns the speed of a piston",
       "NodeDescs": {
         "1d989cd3-d6ae-4503-b80e-5e630ec3f308": {
@@ -6387,6 +6712,8 @@
     },
     "07c316df-cfa1-4ef8-ac3b-d7e9c4795812": {
       "ReadonlyName": "Piston Set Acceleration",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "07c316df-cfa1-4ef8-ac3b-d7e9c4795812": {
@@ -6429,6 +6756,8 @@
     },
     "283cb154-76e8-4d60-9899-2a50b6e4c093": {
       "ReadonlyName": "Piston Set Distance",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "283cb154-76e8-4d60-9899-2a50b6e4c093": {
@@ -6471,6 +6800,8 @@
     },
     "bf25fab6-14ef-4815-a7db-92d99fc627d3": {
       "ReadonlyName": "Piston Set Target Distance",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "bf25fab6-14ef-4815-a7db-92d99fc627d3": {
@@ -6513,6 +6844,8 @@
     },
     "95431866-97f3-43b4-91f3-4bd3574b2b02": {
       "ReadonlyName": "Piston Set Max Distance",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "95431866-97f3-43b4-91f3-4bd3574b2b02": {
@@ -6555,6 +6888,8 @@
     },
     "419d2d2f-18f8-4223-b2f7-a7d1450c242c": {
       "ReadonlyName": "Piston Set Speed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "419d2d2f-18f8-4223-b2f7-a7d1450c242c": {
@@ -6597,6 +6932,8 @@
     },
     "7b725036-4996-441d-ac54-91ac2c23d6b3": {
       "ReadonlyName": "Player Add Role",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Adds a Role to a player",
       "NodeDescs": {
         "7b725036-4996-441d-ac54-91ac2c23d6b3": {
@@ -6637,7 +6974,9 @@
       ]
     },
     "4c9e7840-0721-4d1c-b334-167f79d3bf40": {
-      "ReadonlyName": "No Name",
+      "ReadonlyName": "Player Definition Board",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This is very similar to an object board that you would find on any object, except this is for all players! After placing, make sure to configure it and make sure it is active. Edit into this board and add any other chips you'd like and know that each player will have the same logic on them when you hit done editing. ",
       "NodeDescs": {},
       "NodeFilters": [
@@ -6650,6 +6989,8 @@
     },
     "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
       "ReadonlyName": "Player Get Equipped Objects",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets equipped objects from a player",
       "NodeDescs": {
         "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
@@ -6702,6 +7043,8 @@
     },
     "4646dbed-e616-470e-8e0c-eb446b91838b": {
       "ReadonlyName": "Player Get Is Local",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs true if the input player is the local player executing the chip on their machine.",
       "NodeDescs": {
         "4646dbed-e616-470e-8e0c-eb446b91838b": {
@@ -6738,6 +7081,8 @@
     },
     "9b39ed47-e9a5-4f04-b4cd-80f5bbaff2f7": {
       "ReadonlyName": "Player Has Role",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs true if the input player has the input role.",
       "NodeDescs": {
         "9b39ed47-e9a5-4f04-b4cd-80f5bbaff2f7": {
@@ -6774,6 +7119,8 @@
     },
     "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
       "ReadonlyName": "Player Is Authority Of",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs if a player is authority of the input RecRoomObject",
       "NodeDescs": {
         "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
@@ -6815,6 +7162,8 @@
     },
     "58c5cab7-ddf7-4de8-86c8-25f3d3c19d98": {
       "ReadonlyName": "Player Is Room Owner",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs true if the input player is one of the current room's owners.",
       "NodeDescs": {
         "58c5cab7-ddf7-4de8-86c8-25f3d3c19d98": {
@@ -6846,6 +7195,8 @@
     },
     "6b5c4b0b-be26-4055-b26f-1e5f061c63ca": {
       "ReadonlyName": "Player Left Hand Finger Direction",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the Direction of a player's left hand finger",
       "NodeDescs": {
         "6b5c4b0b-be26-4055-b26f-1e5f061c63ca": {
@@ -6875,8 +7226,43 @@
         }
       ]
     },
+    "17e61429-059f-4b29-b8b8-f0bf3179f580": {
+      "ReadonlyName": "Player Left Hand Orientation",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "17e61429-059f-4b29-b8b8-f0bf3179f580": {
+          "Name": "Player Left Hand Orientation",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "b60d45bc-b854-4787-8420-642651cc2952": {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "21a7f0d1-9ecb-4a27-8983-58c9509d99e0": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
       "ReadonlyName": "Player Left Hand Position",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the postion of a player's left hand",
       "NodeDescs": {
         "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
@@ -6908,6 +7294,8 @@
     },
     "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
       "ReadonlyName": "Player Left Hand Velocity",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the velocity of a player's left hand",
       "NodeDescs": {
         "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
@@ -6939,6 +7327,8 @@
     },
     "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
       "ReadonlyName": "Variable (Player)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
@@ -6986,6 +7376,8 @@
     },
     "89981fe2-2e27-4b92-b8c2-c0159b62bccc": {
       "ReadonlyName": "Player Remove Role",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Removes the input role from the input player.",
       "NodeDescs": {
         "89981fe2-2e27-4b92-b8c2-c0159b62bccc": {
@@ -7027,6 +7419,8 @@
     },
     "646ff790-c930-4565-ae38-99a798271a50": {
       "ReadonlyName": "Player Right Hand Finger Direction",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the Direction of a player's right hand finger",
       "NodeDescs": {
         "646ff790-c930-4565-ae38-99a798271a50": {
@@ -7056,8 +7450,43 @@
         }
       ]
     },
+    "0afab661-0870-42bb-9256-891f1a876b3b": {
+      "ReadonlyName": "Player Right Hand Orientation",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "0afab661-0870-42bb-9256-891f1a876b3b": {
+          "Name": "Player Right Hand Orientation",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "cd34c9e5-8016-4491-8760-da4af8c3dd5b": {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "cd830f4c-11c7-4b46-bf91-7e84c289b728": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "e9d3330d-c290-41d5-aa37-cc5e43198836": {
       "ReadonlyName": "Player Right Hand Position",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the postion of a player's right hand",
       "NodeDescs": {
         "e9d3330d-c290-41d5-aa37-cc5e43198836": {
@@ -7089,6 +7518,8 @@
     },
     "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
       "ReadonlyName": "Player Right Hand Velocity",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the velocity of a player's right hand",
       "NodeDescs": {
         "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
@@ -7120,6 +7551,8 @@
     },
     "7e321d9b-4500-4917-9361-a32e1463401c": {
       "ReadonlyName": "Player Subscribes to Room Owner",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs true if the input player subscribes to one of the current room's owners.",
       "NodeDescs": {
         "7e321d9b-4500-4917-9361-a32e1463401c": {
@@ -7151,6 +7584,8 @@
     },
     "288d4e89-ebed-41ed-a522-4c79bd48471a": {
       "ReadonlyName": "Power",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Multiplies a value by itself an input number of times.",
       "NodeDescs": {
         "288d4e89-ebed-41ed-a522-4c79bd48471a": {
@@ -7185,6 +7620,8 @@
     },
     "46e6b40e-2416-4078-b7dc-a0ecc2c2aa20": {
       "ReadonlyName": "Prompt Local Player",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sends a watch notification to a player. The player which it sends a notification to depends on who's machine fires the exec pin. Once this watch notification is opened, the player can type responses into the text box and send back responses. You can define the prompt title and the prompt itself via inputs, and can also receive the player’s response via an output pin.",
       "NodeDescs": {
         "46e6b40e-2416-4078-b7dc-a0ecc2c2aa20": {
@@ -7239,8 +7676,610 @@
         }
       ]
     },
+    "8157b896-fce8-45fc-957a-4407f0d6c42a": {
+      "ReadonlyName": "Quaternion Normalize",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "8157b896-fce8-45fc-957a-4407f0d6c42a": {
+          "Name": "Quaternion Normalize",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "977d8ea5-4a87-45bd-9b25-ee9826f269e0": {
+              "Name": "Value",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "b8063882-9654-4a03-8e7a-a38286a1513f": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "cff17d2a-4333-41da-81ac-2825f25bf819": {
+      "ReadonlyName": "Quaternion Create",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "cff17d2a-4333-41da-81ac-2825f25bf819": {
+          "Name": "Quaternion Create",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "90b3f12d-35ca-4d1d-94ea-bd37158cceb0": {
+              "Name": "W",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "3d561561-d4b4-4c3b-a75e-e67ce1befa99": {
+              "Name": "X",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "4e9f81c1-a4dd-4747-8cdb-a84b4c359459": {
+              "Name": "Y",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "8e568b02-7cbd-472b-882a-6bde709ac36e": {
+              "Name": "Z",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "fe6e94dd-d3c1-4eb4-acb8-83f9f9852d12": {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "d9096fb3-50c6-42f9-93bb-fc6df63d86a8": {
+      "ReadonlyName": "Quaternion Create Angle Axis",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "d9096fb3-50c6-42f9-93bb-fc6df63d86a8": {
+          "Name": "Quaternion Create Angle Axis",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "fd2e0a17-a381-4f7e-b632-7c296e9d0cce": {
+              "Name": "Angle",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "b238c961-7686-4d00-984d-d8e9dd369807": {
+              "Name": "Axis",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "3d0b22f9-b06f-4efc-ab0d-9526449a1bb4": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "e320278c-13f0-4fe3-b838-7e671bdd9b49": {
+      "ReadonlyName": "Quaternion Create Euler Angles",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "e320278c-13f0-4fe3-b838-7e671bdd9b49": {
+          "Name": "Quaternion Create Euler Angles",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "31f157c6-d688-49f9-8b29-5a331d916b13": {
+              "Name": "Angles",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "33843798-0af7-4f5c-b09c-10f4d05c6b5d": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "1069c5de-c7e3-40e0-bd90-52135873b36d": {
+      "ReadonlyName": "Quaternion Create From To",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "1069c5de-c7e3-40e0-bd90-52135873b36d": {
+          "Name": "Quaternion Create From To",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "c3992e5d-d909-4fe5-8190-3de112124f2b": {
+              "Name": "From",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            "487479c3-3cb5-4be9-abbf-27a005799fd5": {
+              "Name": "To",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "c51b57b9-eba7-49c8-ac82-64787eb9edab": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "b28f369d-6758-4afc-80e2-8f09ea1df125": {
+      "ReadonlyName": "Quaternion Create Look",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "b28f369d-6758-4afc-80e2-8f09ea1df125": {
+          "Name": "Quaternion Create Look",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "081c43ad-5d2d-4e1c-bbc4-f9062b0dce9b": {
+              "Name": "Forward",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            "3abd0d9e-0808-414f-a033-0e21a5d0a568": {
+              "Name": "Upwards",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "7263250b-411b-46a2-bb73-a896b241b76b": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "268d931e-172b-48e8-8eb8-8ec2a9614f0d": {
+      "ReadonlyName": "Quaternion Dot",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "268d931e-172b-48e8-8eb8-8ec2a9614f0d": {
+          "Name": "Quaternion Dot",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "aac697bc-0135-4c61-ae3f-8c9b49cf0aff": {
+              "Name": "Lhs",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            },
+            "3665f769-f2b5-4aba-abc9-43cd564dcc2b": {
+              "Name": "Rhs",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "a34bcd52-72ae-4d4b-ac37-5eaa7016f162": {
+              "Name": "Result",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "81048ea5-2778-4816-99c5-1c50faad8a87": {
+      "ReadonlyName": "Quaternion Euler Angles",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "81048ea5-2778-4816-99c5-1c50faad8a87": {
+          "Name": "Quaternion Euler Angles",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "b018ef7b-49ba-43cb-b5a7-1ebe172101eb": {
+              "Name": "Value",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "51655e37-5eae-4eb5-88ec-ada1ff9bf47f": {
+              "Name": "Result",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "b415c3ce-5f9f-472b-8d70-daeb728b7c2d": {
+      "ReadonlyName": "Quaternion Get Angle Axis",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "b415c3ce-5f9f-472b-8d70-daeb728b7c2d": {
+          "Name": "Quaternion Get Angle Axis",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "debfcce4-e027-4af7-903c-219a9ca15251": {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "a8f03eba-2dee-41da-9a65-ca047819490d": {
+              "Name": "Angle",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "32ea17dc-2e59-448d-80fd-ee69149c5a6d": {
+              "Name": "Axis",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "2097bef3-9ed1-4601-ab5d-f620654bd1c4": {
+      "ReadonlyName": "Quaternion Inverse",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "2097bef3-9ed1-4601-ab5d-f620654bd1c4": {
+          "Name": "Quaternion Inverse",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "523b1b58-f5ea-4fdf-825b-672501ed47d9": {
+              "Name": "Value",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "d6391b21-0cd8-4d15-bd9d-f0ed154563d4": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "18a980ff-9a46-472c-b658-96bf42eb61c2": {
+      "ReadonlyName": "Variable (Quaternion)",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "6e735c44-7156-58d8-9c8a-617b881dcc7e": {
+          "Name": "Variable (Quaternion)",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "adfb91f8-2de3-4478-8242-f1c7316e9320": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "79b01162-5388-4962-b52e-6f73777690a6": {
+              "Name": "",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "de8ddaa2-7f50-4289-b61e-0324e6f78443": {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            "51befda3-d72d-4066-a30e-24b03aec8792": {
+              "Name": "",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Primitives"
+          ]
+        }
+      ]
+    },
+    "edfe7cbb-6973-4489-9b7a-75746243dd6d": {
+      "ReadonlyName": "Quaternion Rotate Towards",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "edfe7cbb-6973-4489-9b7a-75746243dd6d": {
+          "Name": "Quaternion Rotate Towards",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "414e8f71-4fed-4f47-a2ce-76bb2418c98f": {
+              "Name": "From",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            },
+            "a3dbbbf3-a287-422b-88a5-d06a16b6f23b": {
+              "Name": "To",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            },
+            "85f8f0cb-7e67-443c-a042-75219b5df010": {
+              "Name": "MaxDegreesDelta",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "7a088f7e-e560-4ad0-9d0f-18b746b3bf52": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "02c4048a-5f67-47ea-9f00-692f51c66e65": {
+      "ReadonlyName": "Rotate Vector",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "02c4048a-5f67-47ea-9f00-692f51c66e65": {
+          "Name": "Rotate Vector",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "153193fe-9281-404b-91d6-b56b48d65ac4": {
+              "Name": "Rotation",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            },
+            "7db84f80-46bb-408f-b969-25a94574103c": {
+              "Name": "Point",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "cbf8bffa-c229-46b4-af47-cf87fa050e08": {
+              "Name": "Result",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "8d5f0586-1ecf-42ba-a34f-c6ccbb0eadb9": {
+      "ReadonlyName": "Quaternion Slerp",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "8d5f0586-1ecf-42ba-a34f-c6ccbb0eadb9": {
+          "Name": "Quaternion Slerp",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "523b1b58-f5ea-4fdf-825b-672501ed47d9": {
+              "Name": "Lower",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            },
+            "d5e177fb-31e7-4895-a7ca-2622356a9532": {
+              "Name": "Upper",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            },
+            "ea698e8b-e1df-42ed-b878-de08ff6933a4": {
+              "Name": "Interpolant",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "35bf328b-8e0a-4519-9656-9c2ba9ddb73b": {
+              "Name": "Result",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "1d2a37e1-428e-4385-bc96-4ad5adff0a05": {
+      "ReadonlyName": "Quaternion Split",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
+      "Description": "",
+      "NodeDescs": {
+        "1d2a37e1-428e-4385-bc96-4ad5adff0a05": {
+          "Name": "Quaternion Split",
+          "ReadonlyTypeParams": {},
+          "InputPorts": {
+            "6d21bec3-3ae7-4c13-b2c1-09f697708ab4": {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          },
+          "OutputPorts": {
+            "26be92d9-9f1f-431c-b5be-da65d4d28564": {
+              "Name": "W",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "bd178195-691b-49e7-90eb-5d0c0be0979a": {
+              "Name": "X",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "47a1b1ea-2c7f-4875-8806-9844498f26c7": {
+              "Name": "Y",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            "c28a1796-20a9-4c00-a82e-01e234a97466": {
+              "Name": "Z",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          }
+        }
+      },
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
     "4ecbf247-ab14-4f9e-8094-e40a45d283e6": {
       "ReadonlyName": "Random Float",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Generates a random float from [min to max]. Min is inclusive, and max is also inclusive. For example with a min of 0 and a max of 1, both 0 and 1 have the possibility of getting output because they are both included in the range.",
       "NodeDescs": {
         "4ecbf247-ab14-4f9e-8094-e40a45d283e6": {
@@ -7288,6 +8327,8 @@
     },
     "0b18cef3-0ea5-4e3c-a0d5-c460f03dbe8c": {
       "ReadonlyName": "Random From List",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "0b18cef3-0ea5-4e3c-a0d5-c460f03dbe8c": {
@@ -7325,6 +8366,8 @@
     },
     "fb2645f0-4042-4ef1-b988-af2f80e651ec": {
       "ReadonlyName": "Random Int",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Generates a random integer from [min to max). Min is inclusive, and max is exclusive. For example with a min of 0 and a max of 1, 1 will never get output because it is excluded from the range.",
       "NodeDescs": {
         "fb2645f0-4042-4ef1-b988-af2f80e651ec": {
@@ -7372,6 +8415,8 @@
     },
     "6ba175cf-493a-4790-b916-57259f94cd98": {
       "ReadonlyName": "Reset Object",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Resets a RecRoomObject",
       "NodeDescs": {
         "6ba175cf-493a-4790-b916-57259f94cd98": {
@@ -7409,6 +8454,8 @@
     },
     "e921b08d-10c2-4be4-86fe-b8c7155cb97b": {
       "ReadonlyName": "Reset Room",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Resets the room",
       "NodeDescs": {
         "e921b08d-10c2-4be4-86fe-b8c7155cb97b": {
@@ -7434,6 +8481,8 @@
     },
     "117b8c83-5ada-4665-a0c6-2c6ffdec98b9": {
       "ReadonlyName": "Rotator Get Target Rotation",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "117b8c83-5ada-4665-a0c6-2c6ffdec98b9": {
@@ -7466,6 +8515,8 @@
     },
     "2d96da47-4d37-4463-a3bd-8f8cd2ab0c58": {
       "ReadonlyName": "Rotator Get Rotation Acceleration",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "2d96da47-4d37-4463-a3bd-8f8cd2ab0c58": {
@@ -7498,6 +8549,8 @@
     },
     "30fe0829-2f08-4bd2-b4b1-9a41764e5a76": {
       "ReadonlyName": "Rotator Get Rotation",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "30fe0829-2f08-4bd2-b4b1-9a41764e5a76": {
@@ -7530,6 +8583,8 @@
     },
     "be834de9-91cb-4588-8988-3a6abfd56573": {
       "ReadonlyName": "Rotator Get Rotation Speed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "be834de9-91cb-4588-8988-3a6abfd56573": {
@@ -7562,6 +8617,8 @@
     },
     "0f9da436-0752-422d-8323-fa445a9ca06b": {
       "ReadonlyName": "Rotator Set Target Rotation",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "0f9da436-0752-422d-8323-fa445a9ca06b": {
@@ -7604,6 +8661,8 @@
     },
     "db29fd41-9fb5-4c2a-8c72-c8d327b0f23f": {
       "ReadonlyName": "Rotator Set Rotation Acceleration",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "db29fd41-9fb5-4c2a-8c72-c8d327b0f23f": {
@@ -7646,6 +8705,8 @@
     },
     "07ae26b8-e0d7-49c0-bb2c-25d66d31fe3c": {
       "ReadonlyName": "Rotator Set Rotation",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "07ae26b8-e0d7-49c0-bb2c-25d66d31fe3c": {
@@ -7688,6 +8749,8 @@
     },
     "9d0e3cf5-581d-4fb5-8346-c9e7d9877b3f": {
       "ReadonlyName": "Rotator Set Rotation Speed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "9d0e3cf5-581d-4fb5-8346-c9e7d9877b3f": {
@@ -7730,6 +8793,8 @@
     },
     "c6cfe49a-4ffb-4714-9564-8ddda0300676": {
       "ReadonlyName": "Round",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "c6cfe49a-4ffb-4714-9564-8ddda0300676": {
@@ -7762,6 +8827,8 @@
     },
     "0d2a4771-0694-4b84-8e07-2080c26aae22": {
       "ReadonlyName": "Round to Int",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Rounds an input value to the nearest integer.",
       "NodeDescs": {
         "0d2a4771-0694-4b84-8e07-2080c26aae22": {
@@ -7799,6 +8866,8 @@
     },
     "3d7d40d6-885a-4fa5-bbaa-b19057291ddb": {
       "ReadonlyName": "Self",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the object (and type) of the current context. For example, a self node inside a light outputs that specific light of the light type. This can only be placed inside an object board of a specific object.",
       "NodeDescs": {
         "582832a5-43d0-5e76-889f-588c6f04e7a0": {
@@ -7824,6 +8893,8 @@
     },
     "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
       "ReadonlyName": "Set Element",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets a value at a location in a list",
       "NodeDescs": {
         "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
@@ -7873,6 +8944,8 @@
     },
     "76187060-c0b0-4ec6-b082-ff81754cff25": {
       "ReadonlyName": "DEPRECATED Set Value",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Sets a value of a variable",
       "NodeDescs": {
         "76187060-c0b0-4ec6-b082-ff81754cff25": {
@@ -7916,6 +8989,8 @@
     },
     "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
       "ReadonlyName": "SFX Get Volume",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the volume of an SFX Component",
       "NodeDescs": {
         "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
@@ -7948,6 +9023,8 @@
     },
     "a0a17fe1-bdb0-4687-81de-141ce97710ed": {
       "ReadonlyName": "SFX IsPlaying",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "a0a17fe1-bdb0-4687-81de-141ce97710ed": {
@@ -7980,6 +9057,8 @@
     },
     "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
       "ReadonlyName": "SFX Play",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Plays a sound from an SFX Component",
       "NodeDescs": {
         "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
@@ -8017,6 +9096,8 @@
     },
     "d2df4993-d858-4df1-aca2-fc0e7f479668": {
       "ReadonlyName": "SFX Set Volume",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the volume for an SFX Component",
       "NodeDescs": {
         "d2df4993-d858-4df1-aca2-fc0e7f479668": {
@@ -8059,6 +9140,8 @@
     },
     "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
       "ReadonlyName": "SFX Stop",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Stops the sound currently playing from an SFX Component",
       "NodeDescs": {
         "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
@@ -8096,6 +9179,8 @@
     },
     "61bc2310-69f5-4dfa-b43c-12ae98dd05ab": {
       "ReadonlyName": "Show Notification",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Prints the input notification to a player’s screen if the node is run on a player's machine.",
       "NodeDescs": {
         "61bc2310-69f5-4dfa-b43c-12ae98dd05ab": {
@@ -8134,6 +9219,8 @@
     },
     "ea824326-5061-411d-980c-30031511c821": {
       "ReadonlyName": "Sin",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula sin",
       "NodeDescs": {
         "ea824326-5061-411d-980c-30031511c821": {
@@ -8166,6 +9253,8 @@
     },
     "6a669e6e-4ebf-434c-9c23-d2b769d49b47": {
       "ReadonlyName": "Spawner Reset",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "6a669e6e-4ebf-434c-9c23-d2b769d49b47": {
@@ -8203,6 +9292,8 @@
     },
     "fb6a63b1-3f55-4dcf-9bf0-6ef82e3296d5": {
       "ReadonlyName": "Spawner Internal Start Spawning",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "fb6a63b1-3f55-4dcf-9bf0-6ef82e3296d5": {
@@ -8255,6 +9346,8 @@
     },
     "77afc9dd-baa9-4312-b8b8-7ef479c840e6": {
       "ReadonlyName": "String Format",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Use this node to combine multiple strings together into a single string output. The Format input is part of final string output and can include other string inputs by using this syntax: {input pin # starting at 0}. For example, a Format input with a default value of “Hello, {0}!” with a single additional input pin with the value “World” is fully output as “Hey, World!”. If you had another input pin you would use {1} to denote the 2nd pin. You can add more string inputs by configuring the node and pressing “Add Input”.",
       "NodeDescs": {
         "77afc9dd-baa9-4312-b8b8-7ef479c840e6": {
@@ -8296,6 +9389,8 @@
     },
     "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
       "ReadonlyName": "Variable (string)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
@@ -8343,6 +9438,8 @@
     },
     "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
       "ReadonlyName": "Substring",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Allows you to extract individual characters from a string. You can think of this like a list of characters.",
       "NodeDescs": {
         "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
@@ -8384,6 +9481,8 @@
     },
     "1fbb364c-1af0-44bb-a82b-905caeb6819a": {
       "ReadonlyName": "Subtract",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Takes one input value away from the other.",
       "NodeDescs": {
         "1fbb364c-1af0-44bb-a82b-905caeb6819a": {
@@ -8424,6 +9523,8 @@
     },
     "620def94-34e2-48ec-b294-25139aa43f74": {
       "ReadonlyName": "DEPRECATED Sync AI",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "620def94-34e2-48ec-b294-25139aa43f74": {
@@ -8449,6 +9550,8 @@
     },
     "1e2ca8e7-037f-4a1a-82a7-62b81928b6a4": {
       "ReadonlyName": "DEPRECATED Sync bool",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "1e2ca8e7-037f-4a1a-82a7-62b81928b6a4": {
@@ -8474,6 +9577,8 @@
     },
     "e4c52748-6ebc-487d-821c-11d661a08ed1": {
       "ReadonlyName": "DEPRECATED Sync Combatant",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "e4c52748-6ebc-487d-821c-11d661a08ed1": {
@@ -8499,6 +9604,8 @@
     },
     "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
       "ReadonlyName": "DEPRECATED Sync RecRoomObject",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "db44e828-56cc-4b3b-92ac-a899c44faa3f": {
@@ -8524,6 +9631,8 @@
     },
     "56dcf860-9c74-4213-8859-45aba0b96d43": {
       "ReadonlyName": "DEPRECATED Sync float",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "56dcf860-9c74-4213-8859-45aba0b96d43": {
@@ -8554,6 +9663,8 @@
     },
     "dd96fd78-c47b-4ccc-9d6b-23da2f3f7987": {
       "ReadonlyName": "DEPRECATED Sync int",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "dd96fd78-c47b-4ccc-9d6b-23da2f3f7987": {
@@ -8579,6 +9690,8 @@
     },
     "ddc89f58-d8f2-49de-af34-332382d8bb71": {
       "ReadonlyName": "DEPRECATED Sync Player",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "ddc89f58-d8f2-49de-af34-332382d8bb71": {
@@ -8609,6 +9722,8 @@
     },
     "62f1b8b1-f1d3-4ceb-b0e9-57c4915bf401": {
       "ReadonlyName": "DEPRECATED Sync string",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "62f1b8b1-f1d3-4ceb-b0e9-57c4915bf401": {
@@ -8634,6 +9749,8 @@
     },
     "4499ea8f-1b4d-4072-9098-c6df7f49ed00": {
       "ReadonlyName": "DEPRECATED Sync Vector3",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "4499ea8f-1b4d-4072-9098-c6df7f49ed00": {
@@ -8659,6 +9776,8 @@
     },
     "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
       "ReadonlyName": "Tan",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "This chip allows you to use the math formula tan",
       "NodeDescs": {
         "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
@@ -8691,6 +9810,8 @@
     },
     "20b2528d-96a9-4be8-9782-aa75959f5232": {
       "ReadonlyName": "Text Set Color",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the color for a Text Component",
       "NodeDescs": {
         "2bd445ce-08ec-4c6a-9254-d63535690779": {
@@ -8733,6 +9854,8 @@
     },
     "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
       "ReadonlyName": "Text Set Material",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the material for a Text Component",
       "NodeDescs": {
         "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
@@ -8775,6 +9898,8 @@
     },
     "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
       "ReadonlyName": "Text Set Text",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Set the visible text for a Text Component",
       "NodeDescs": {
         "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
@@ -8817,6 +9942,8 @@
     },
     "75a3a9c2-da17-4762-b87b-1735b44af659": {
       "ReadonlyName": "To Combatant",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "Covert a player or an AI value into a Combatant value",
       "NodeDescs": {
         "75a3a9c2-da17-4762-b87b-1735b44af659": {
@@ -8851,6 +9978,8 @@
     },
     "315a494e-84cc-4e3c-acff-389bb932b5d0": {
       "ReadonlyName": "To Rec Room Object",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "315a494e-84cc-4e3c-acff-389bb932b5d0": {
@@ -8890,6 +10019,8 @@
     },
     "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
       "ReadonlyName": "Toggle Button Get Is Pressed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs true if the toggle button is pressed",
       "NodeDescs": {
         "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
@@ -8922,6 +10053,8 @@
     },
     "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
       "ReadonlyName": "Toggle Button Set Is Pressed",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets a Toggle Button state to pressed",
       "NodeDescs": {
         "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
@@ -8964,6 +10097,8 @@
     },
     "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
       "ReadonlyName": "To String",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Converts the input value to the string type. Example: the integer input 10 would output “10” as a string. Helpful for debugging purposes.",
       "NodeDescs": {
         "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
@@ -9007,6 +10142,8 @@
     },
     "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
       "ReadonlyName": "Trigger Volume Get Filter Role",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the Role that is being filterd from a Trigger Volume",
       "NodeDescs": {
         "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
@@ -9039,6 +10176,8 @@
     },
     "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
       "ReadonlyName": "Trigger Volume Get Filter Tags",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the Tags that are being filterd from a Trigger Volume",
       "NodeDescs": {
         "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
@@ -9071,6 +10210,8 @@
     },
     "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
       "ReadonlyName": "Trigger Volume Get Num Objects",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the number of objects inside a Trigger Volume",
       "NodeDescs": {
         "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
@@ -9103,6 +10244,8 @@
     },
     "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
       "ReadonlyName": "Trigger Volume Get Num Players",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the number of players inside a Trigger Volume",
       "NodeDescs": {
         "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
@@ -9135,6 +10278,8 @@
     },
     "530932a7-8781-4b09-a945-b33af6675809": {
       "ReadonlyName": "Trigger Volume Get Objects",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets all of the objects inside a Trigger Volume",
       "NodeDescs": {
         "530932a7-8781-4b09-a945-b33af6675809": {
@@ -9167,6 +10312,8 @@
     },
     "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
       "ReadonlyName": "Trigger Volume Get Players",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets all of the players inside a Trigger Volume",
       "NodeDescs": {
         "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
@@ -9199,6 +10346,8 @@
     },
     "55cfecf9-2623-4aad-948c-6ca89f11911b": {
       "ReadonlyName": "Trigger Volume Set Filter Role",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the filterd Role for the Trigger Volume",
       "NodeDescs": {
         "55cfecf9-2623-4aad-948c-6ca89f11911b": {
@@ -9241,6 +10390,8 @@
     },
     "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
       "ReadonlyName": "Trigger Volume Set Filter Tags",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Sets the filterd Tags for a Trigger Volume",
       "NodeDescs": {
         "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
@@ -9283,6 +10434,8 @@
     },
     "bc5e4a50-1d2c-43bb-a93f-29e53f5af50a": {
       "ReadonlyName": "DEPRECATED Value Changed",
+      "IsBetaChip": true,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "bc5e4a50-1d2c-43bb-a93f-29e53f5af50a": {
@@ -9321,6 +10474,8 @@
     },
     "6bd92538-6889-41f3-b819-9511e6f81944": {
       "ReadonlyName": "Vector3 Cross",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
@@ -9358,6 +10513,8 @@
     },
     "498c4e25-f73b-49a6-912e-ae148ed50dca": {
       "ReadonlyName": "Vector3 Dot",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
@@ -9395,6 +10552,8 @@
     },
     "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
       "ReadonlyName": "Variable (Vector3)",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
@@ -9443,6 +10602,8 @@
     },
     "92ded211-17d6-4c73-b29c-71323c6a40ee": {
       "ReadonlyName": "Vector3 Normalize",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
@@ -9475,6 +10636,8 @@
     },
     "87aa17b1-7760-4b07-8c44-a2d530590597": {
       "ReadonlyName": "Vector3 Scale",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "",
       "NodeDescs": {
         "6bd92538-6889-41f3-b819-9511e6f81944": {
@@ -9514,6 +10677,8 @@
     },
     "814e9337-7542-4851-9da0-c73885ab0b4f": {
       "ReadonlyName": "Vector Create",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Creates a new vector from X, Y, Z values.",
       "NodeDescs": {
         "814e9337-7542-4851-9da0-c73885ab0b4f": {
@@ -9556,6 +10721,8 @@
     },
     "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
       "ReadonlyName": "Vector Gadget Get Vector",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Gets the direction and magnitude of the Vector Component",
       "NodeDescs": {
         "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
@@ -9593,6 +10760,8 @@
     },
     "c3b9ba98-6c4a-44c2-9125-043314fba4a6": {
       "ReadonlyName": "Vector Get Magnitude",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Outputs the length of the input vector.",
       "NodeDescs": {
         "c3b9ba98-6c4a-44c2-9125-043314fba4a6": {
@@ -9625,6 +10794,8 @@
     },
     "2d677241-61b7-45d2-aec2-4a302e3483a0": {
       "ReadonlyName": "Vector Split",
+      "IsBetaChip": false,
+      "IsDeprecated": false,
       "Description": "Breaks the X, Y, and Z values out of the input vector.",
       "NodeDescs": {
         "2d677241-61b7-45d2-aec2-4a302e3483a0": {

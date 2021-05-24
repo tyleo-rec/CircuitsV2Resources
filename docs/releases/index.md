@@ -1,6 +1,7 @@
 # Releases
 
-* [Next (Version 2.13)](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_13)
+* [Next (Version 2.14)](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_14)
+* [Version 2.13](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_13)
 * [Version 2.12](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_12)
 * [Version 2.11](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_11)
 * [Version 2.10](https://tyleo-rec.github.io/CircuitsV2Resources/releases/2_10)

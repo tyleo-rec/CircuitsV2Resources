@@ -3109,7 +3109,7 @@
       "ReadonlyName": "Get Local Camera Orientation",
       "IsBetaChip": true,
       "IsDeprecated": false,
-      "Description": "",
+      "Description": "Gets Local Camera quaternion vector",
       "NodeDescs": {
         "912f0e1b-267d-4424-8002-3f82a2d835fe": {
           "Name": "Get Local Camera Orientation",
@@ -3195,7 +3195,7 @@
       "ReadonlyName": "Get Orientation",
       "IsBetaChip": true,
       "IsDeprecated": false,
-      "Description": "",
+      "Description": "Gets the quaternion vector from a Rec Room Object or a Player",
       "NodeDescs": {
         "c453fa47-d0db-4c4a-a6a1-dac4ebad0aca": {
           "Name": "Get Orientation",
@@ -7230,7 +7230,7 @@
       "ReadonlyName": "Player Left Hand Orientation",
       "IsBetaChip": true,
       "IsDeprecated": false,
-      "Description": "",
+      "Description": "Gets the quaternion vector from the left hand of a target",
       "NodeDescs": {
         "17e61429-059f-4b29-b8b8-f0bf3179f580": {
           "Name": "Player Left Hand Orientation",
@@ -7454,7 +7454,7 @@
       "ReadonlyName": "Player Right Hand Orientation",
       "IsBetaChip": true,
       "IsDeprecated": false,
-      "Description": "",
+      "Description": "Gets the quaternion vector from the right hand of a target",
       "NodeDescs": {
         "0afab661-0870-42bb-9256-891f1a876b3b": {
           "Name": "Player Right Hand Orientation",

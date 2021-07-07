@@ -1074,6 +1074,466 @@
         }
       ]
     },
+    "28a95bc3-ab08-48ae-b0c0-16b41168bf47": {
+      "ReadonlyName": "Bit AND",
+      "Description": "Computes a bitwise AND. The result has a 1 for each bit that is 1 in both of the inputs.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit AND",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "d6e62624-06b0-416e-8e3c-ca058efd3c46": {
+      "ReadonlyName": "Bit Leading Zeros",
+      "Description": "Counts the number of zeros at the beginning of the binary representation of an integer.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit Leading Zeros",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Leading Zeros",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "05305e33-a809-4751-b928-2c8a5bbc6dc9": {
+      "ReadonlyName": "Bit NAND",
+      "Description": "Computes a bitwise NAND. (NOT AND) The result has a 1 for each bit that is 0 in either of the inputs.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit NAND",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "ec74ea41-24e5-491c-8919-a502638583f9": {
+      "ReadonlyName": "Bit NOT",
+      "Description": "Computes a bitwise NOT. The result has a 1 for each bit that is 0 in the input.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit NOT",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "2c24bc11-9543-4738-8c6c-0c5e3fadd944": {
+      "ReadonlyName": "Bit OR",
+      "Description": "Computes a bitwise OR. The result has a 1 for each bit that is 1 in either of the inputs.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit OR",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "6982e235-5814-4c5a-8bc8-fdbcc9a73eb8": {
+      "ReadonlyName": "Bit Pop Count",
+      "Description": "Counts the number of ones in the binary representation of an integer.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit Pop Count",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Population",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "bd013fe7-3799-46b5-b1f3-66a3f5add5ed": {
+      "ReadonlyName": "Bit Rotate Left",
+      "Description": "Rotates digits in the binary representation of an integer to the left. As the leftmost bits fall off, they are used to fill the rightmost bits.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit Rotate Left",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Shift",
+              "ReadonlyType": "int",
+              "Description": "Number of bits to rotate"
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "b5f36fdf-0a2e-489a-bbdf-f17c50974cc1": {
+      "ReadonlyName": "Bit Rotate Right",
+      "Description": "Rotates digits in the binary representation of an integer to the right. As the rightmost bits fall off, they are used to fill the leftmost bits.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit Rotate Right",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Shift",
+              "ReadonlyType": "int",
+              "Description": "Number of bits to rotate"
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "0a7b4058-b1da-442f-8341-81df66979663": {
+      "ReadonlyName": "Bit Shift Left",
+      "Description": "Shifts a value left by a number of bits. Leftmost bits are discarded, and rightmost bits are filled with zeros.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit Shift Left",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Shift",
+              "ReadonlyType": "int",
+              "Description": "Shift count. The actual shift performed will be this value mod 32."
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "4024b483-ab3d-4fa0-b399-b3350b800081": {
+      "ReadonlyName": "Bit Shift Right",
+      "Description": "Shifts a value right by a number of bits. Rightmost bits are discarded, and leftmost bits are filled with zeros. (Logical shift)",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit Shift Right",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Shift",
+              "ReadonlyType": "int",
+              "Description": "Shift count. The actual shift performed will be this value mod 32."
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "773d361e-3761-497b-9dec-b5e5313a5a2c": {
+      "ReadonlyName": "Bit Trailing Zeros",
+      "Description": "Counts the number of zeros at the end of the binary representation of an integer.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit Trailing Zeros",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Trailing Zeros",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
+    "a3899394-1ed9-4d41-a836-22fffaf4e90d": {
+      "ReadonlyName": "Bit XOR",
+      "Description": "Computes a bitwise XOR. The result has a 1 for each bit that is 1 in exactly one of the inputs.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Bit XOR",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Bitwise"
+          ]
+        }
+      ]
+    },
     "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
       "ReadonlyName": "Variable (bool)",
       "Description": "",
@@ -1860,6 +2320,75 @@
           "FilterPath": [
             "Math",
             "Trigonometry"
+          ]
+        }
+      ]
+    },
+    "1f57e165-dee2-470d-9ab2-9c836aeccccf": {
+      "ReadonlyName": "Costume Equip",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 1,
+      "NodeDescs": [
+        {
+          "Name": "",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": []
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Costume"
+          ]
+        }
+      ]
+    },
+    "f28d1a5e-a08c-471b-89e6-5ee6372d9897": {
+      "ReadonlyName": "Costume Get Wearer",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 1,
+      "NodeDescs": [
+        {
+          "Name": "",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": []
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Costume"
+          ]
+        }
+      ]
+    },
+    "d5070b89-da23-4e4b-848c-07bb22c0420e": {
+      "ReadonlyName": "Costume Unequip",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 1,
+      "NodeDescs": [
+        {
+          "Name": "",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": []
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Costume"
           ]
         }
       ]

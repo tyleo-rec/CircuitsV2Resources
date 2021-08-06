@@ -126,12 +126,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Economy",
+            "Currencies"
           ]
         },
         {
           "FilterPath": [
-            "Economy"
+            "Economy",
+            "Currencies"
           ]
         }
       ]
@@ -2326,16 +2329,38 @@
     },
     "1f57e165-dee2-470d-9ab2-9c836aeccccf": {
       "ReadonlyName": "Costume Equip",
-      "Description": "",
+      "Description": "Equip a player with a costume",
       "IsBetaChip": false,
       "DeprecationStage": 0,
-      "NameSource": 1,
+      "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "",
+          "Name": "Costume Equip",
           "ReadonlyTypeParams": {},
-          "Inputs": [],
-          "Outputs": []
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Costume",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
         }
       ],
       "NodeFilters": [
@@ -2349,16 +2374,28 @@
     },
     "f28d1a5e-a08c-471b-89e6-5ee6372d9897": {
       "ReadonlyName": "Costume Get Wearer",
-      "Description": "",
+      "Description": "Get player wearing a costume",
       "IsBetaChip": false,
       "DeprecationStage": 0,
-      "NameSource": 1,
+      "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "",
+          "Name": "Costume Get Wearer",
           "ReadonlyTypeParams": {},
-          "Inputs": [],
-          "Outputs": []
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Costume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
         }
       ],
       "NodeFilters": [
@@ -2372,16 +2409,38 @@
     },
     "d5070b89-da23-4e4b-848c-07bb22c0420e": {
       "ReadonlyName": "Costume Unequip",
-      "Description": "",
+      "Description": "Unequip a costume",
       "IsBetaChip": false,
       "DeprecationStage": 0,
-      "NameSource": 1,
+      "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "",
+          "Name": "Costume Unequip",
           "ReadonlyTypeParams": {},
-          "Inputs": [],
-          "Outputs": []
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Costume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
         }
       ],
       "NodeFilters": [
@@ -2669,11 +2728,11 @@
       ]
     },
     "7077d139-9876-495e-9756-58150fef9f3b": {
-      "ReadonlyName": "Variable (RecRoomObject)",
+      "ReadonlyName": "Variable (Rec Room Object)",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
-      "NameSource": 0,
+      "NameSource": 1,
       "NodeDescs": [
         {
           "Name": "Variable (RecRoomObject)",
@@ -3802,12 +3861,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Economy",
+            "Currencies"
           ]
         },
         {
           "FilterPath": [
-            "Economy"
+            "Economy",
+            "Currencies"
           ]
         }
       ]
@@ -4179,7 +4241,7 @@
     },
     "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
       "ReadonlyName": "Get Player By Account Name",
-      "Description": "Gets the player value type based by their Account Name (e.g My Account name is Coach and if I input my Account Name in the form of a string, The output would be my player value type.)",
+      "Description": "Gets a player value type based on an Account Name. (e.g My Account name is @Coach and if I input the string \"Coach\", the output would be my player value type.) Outputs an Invalid Player if nobody in the room has the given account name.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4213,7 +4275,7 @@
     },
     "637e07e4-9b93-44b6-bba3-68966080d064": {
       "ReadonlyName": "Get Player By Display Name",
-      "Description": "Gets the a player value type based by their Display Name (e.g My Display Name is Coach and if I input a sting Coach, The output would be my player value type)",
+      "Description": "Gets a player value type based on a Display Name. (e.g My Display Name is Coach and if I input a string \"Coach\", the output would be my player value type.) Outputs an Invalid Player if nobody in the room has the given display name.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11086,6 +11148,11 @@
         {
           "FilterPath": [
             "Commonly Used"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Conversions"
           ]
         }
       ]

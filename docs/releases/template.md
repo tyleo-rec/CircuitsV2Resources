@@ -6,11 +6,11 @@
 
 ## General Changes
 
-### Beta Releases
-
 ### New Chips
 
 ### New Objects
+
+### Beta Releases
 
 ## Beta Changes
 

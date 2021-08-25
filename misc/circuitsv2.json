@@ -1080,7 +1080,7 @@
     "28a95bc3-ab08-48ae-b0c0-16b41168bf47": {
       "ReadonlyName": "Bit AND",
       "Description": "Computes a bitwise AND. The result has a 1 for each bit that is 1 in both of the inputs.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1120,7 +1120,7 @@
     "d6e62624-06b0-416e-8e3c-ca058efd3c46": {
       "ReadonlyName": "Bit Leading Zeros",
       "Description": "Counts the number of zeros at the beginning of the binary representation of an integer.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1155,7 +1155,7 @@
     "05305e33-a809-4751-b928-2c8a5bbc6dc9": {
       "ReadonlyName": "Bit NAND",
       "Description": "Computes a bitwise NAND. (NOT AND) The result has a 1 for each bit that is 0 in either of the inputs.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1195,7 +1195,7 @@
     "ec74ea41-24e5-491c-8919-a502638583f9": {
       "ReadonlyName": "Bit NOT",
       "Description": "Computes a bitwise NOT. The result has a 1 for each bit that is 0 in the input.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1230,7 +1230,7 @@
     "2c24bc11-9543-4738-8c6c-0c5e3fadd944": {
       "ReadonlyName": "Bit OR",
       "Description": "Computes a bitwise OR. The result has a 1 for each bit that is 1 in either of the inputs.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1270,7 +1270,7 @@
     "6982e235-5814-4c5a-8bc8-fdbcc9a73eb8": {
       "ReadonlyName": "Bit Pop Count",
       "Description": "Counts the number of ones in the binary representation of an integer.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1305,7 +1305,7 @@
     "bd013fe7-3799-46b5-b1f3-66a3f5add5ed": {
       "ReadonlyName": "Bit Rotate Left",
       "Description": "Rotates digits in the binary representation of an integer to the left. As the leftmost bits fall off, they are used to fill the rightmost bits.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1345,7 +1345,7 @@
     "b5f36fdf-0a2e-489a-bbdf-f17c50974cc1": {
       "ReadonlyName": "Bit Rotate Right",
       "Description": "Rotates digits in the binary representation of an integer to the right. As the rightmost bits fall off, they are used to fill the leftmost bits.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1385,7 +1385,7 @@
     "0a7b4058-b1da-442f-8341-81df66979663": {
       "ReadonlyName": "Bit Shift Left",
       "Description": "Shifts a value left by a number of bits. Leftmost bits are discarded, and rightmost bits are filled with zeros.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1425,7 +1425,7 @@
     "4024b483-ab3d-4fa0-b399-b3350b800081": {
       "ReadonlyName": "Bit Shift Right",
       "Description": "Shifts a value right by a number of bits. Rightmost bits are discarded, and leftmost bits are filled with zeros. (Logical shift)",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1465,7 +1465,7 @@
     "773d361e-3761-497b-9dec-b5e5313a5a2c": {
       "ReadonlyName": "Bit Trailing Zeros",
       "Description": "Counts the number of zeros at the end of the binary representation of an integer.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1500,7 +1500,7 @@
     "a3899394-1ed9-4d41-a836-22fffaf4e90d": {
       "ReadonlyName": "Bit XOR",
       "Description": "Computes a bitwise XOR. The result has a 1 for each bit that is 1 in exactly one of the inputs.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1884,6 +1884,46 @@
         {
           "FilterPath": [
             "Utilities"
+          ]
+        }
+      ]
+    },
+    "a542e800-22c8-4e0b-ac4d-ea712875a5f8": {
+      "ReadonlyName": "Clear Current Subtitle",
+      "Description": "Clears any subtitle which is currently being displayed.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Clear Current Subtitle",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Utilities"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "UI"
           ]
         }
       ]
@@ -8309,6 +8349,11 @@
               "Name": "Result",
               "ReadonlyType": "bool",
               "Description": ""
+            },
+            {
+              "Name": "Seconds Until Enabled",
+              "ReadonlyType": "int",
+              "Description": ""
             }
           ]
         }
@@ -9282,6 +9327,83 @@
         }
       ]
     },
+    "5898c7f7-cb5d-4344-a194-bd09260b12dd": {
+      "ReadonlyName": "Respawn",
+      "Description": "Sets the position and rotation of the target player or object. Will fail in the following cases: If the target object is currently held, select/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Respawn",
+          "ReadonlyTypeParams": {
+            "T": "(Player | Rec Room Object)",
+            "U": "(Vector3 | Quaternion)"
+          },
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Rotation",
+              "ReadonlyType": "U",
+              "Description": ""
+            },
+            {
+              "Name": "Spawn Radius",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Clear Velocity",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Use Rez Effects",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Failed",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Objects"
+          ]
+        }
+      ]
+    },
     "117b8c83-5ada-4665-a0c6-2c6ffdec98b9": {
       "ReadonlyName": "Rotator Get Target Rotation",
       "Description": "Outputs the rotation of the Marker on the target Rotator.",
@@ -9972,6 +10094,62 @@
         }
       ]
     },
+    "ff1c2a15-4099-4aaa-afe3-c217b2fca15b": {
+      "ReadonlyName": "Set Position",
+      "Description": "Sets the position of the target player or object. Will fail in the following cases: If the target object is currently held, select/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Set Position",
+          "ReadonlyTypeParams": {
+            "T": "(Player | Rec Room Object)"
+          },
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Failed",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Objects"
+          ]
+        }
+      ]
+    },
     "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
       "ReadonlyName": "SFX Get Volume",
       "Description": "Outputs the volume of an SFX Component",
@@ -10204,6 +10382,67 @@
         {
           "FilterPath": [
             "Utilities"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "UI"
+          ]
+        }
+      ]
+    },
+    "abaae687-e943-4534-bb78-2c8d7e17c425": {
+      "ReadonlyName": "Show Local Subtitle",
+      "Description": "Displays a subtitle for a specified duration. If there is already a subtitle showing, it will be replaced only if this subtitle has an equal or higher priority. If the string is more than 200 characters, it will be displayed in multiple subtitles, each lasting a fraction of the total duration. Escape characters are ignored.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Show Local Subtitle",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Subtitle",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Duration",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Priority",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Utilities"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "UI"
           ]
         }
       ]

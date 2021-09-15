@@ -1,14 +1,15 @@
 # The List
 ## Official Resources
-* [How To Circuits V2 Blog Post](https://recroom.com/developer-blog/2020/8/3/how-2-circuits-2)
+* [How To Circuits V2 Blog Post](https://blog.recroom.com/posts/2020/8/3/how-2-circuits-2)
+* [The Circuits Handbook Blog Post](https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook)
 * [Circuits V2 Happy Fox Documentation](https://recroom.happyfox.com/kb/section/65/)
 * [Rec Room Discord](https://discord.com/channels/193073071802941451/746858632301510708)
-  * Use the #gadgets-v2 section for CircuitsV2 info.
+  * Use the #circuits-v2 channel for CircuitsV2 info.
 * [Circuits V2 Canny](https://recroom.canny.io/creative-tools?category=circuits-v2-feedback)
   * Use this page to report bugs and request or upvote new features.
 * [Circuits V2 Official YouTube Tutorial](https://www.youtube.com/watch?v=J_vGEe5-rc8)
 * [Creative Classes and Events](https://recroom.com/creative)
-  * This is a currated list of classes and events for learning how to build. Check back periodically for Circuits V2 class availability.
+  * This is a curated list of classes and events for learning how to build. Check back periodically for Circuits V2 class availability.
   * [Circuits V2 Transitional Class (Discord Class Link)](https://discord.com/channels/737529805121126471)
   * [Circuit Think Tank (Rec Room Event Link)](https://rec.net/room/CircuitThinkTank/events)
 * [Releases](https://tyleo-rec.github.io/CircuitsV2Resources/releases/)

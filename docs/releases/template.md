@@ -1,24 +1,18 @@
 # V2.XX
 
+## General Changes
+
 ## Breaking Changes
+
+## New Chips
+
+## New Objects
+
+## Beta Releases
 
 ## Deprecations
 
-## General Changes
-
-### New Chips
-
-### New Objects
-
-### Beta Releases
-
-## Beta Changes
-
-### New Chips
-
-### New Objects
-
-## Bugs Fixed
+## Bugs Fixes
 
 ## Special Thanks
 

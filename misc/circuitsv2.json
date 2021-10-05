@@ -72,6 +72,53 @@
         }
       ]
     },
+    "d7ea08ab-aee6-43d0-99e1-54478ac3db7f": {
+      "ReadonlyName": "Activate Consumable",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Activate Consumable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Consumable",
+              "ReadonlyType": "Consumable",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Consumables"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Consumables"
+          ]
+        }
+      ]
+    },
     "03461631-734f-491b-ab86-6bdf66947556": {
       "ReadonlyName": "Add Currency",
       "Description": "",
@@ -362,7 +409,7 @@
       ]
     },
     "0e92a7fb-fb38-418c-af39-9afec92112ee": {
-      "ReadonlyName": "Variable (AI)",
+      "ReadonlyName": "AI Variable",
       "Description": "",
       "IsBetaChip": true,
       "DeprecationStage": 0,
@@ -1538,7 +1585,7 @@
       ]
     },
     "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
-      "ReadonlyName": "Variable (bool)",
+      "ReadonlyName": "bool Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -2085,7 +2132,7 @@
       ]
     },
     "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
-      "ReadonlyName": "Variable (Combatant)",
+      "ReadonlyName": "Combatant Variable",
       "Description": "",
       "IsBetaChip": true,
       "DeprecationStage": 0,
@@ -2328,6 +2375,42 @@
           "FilterPath": [
             "Objects",
             "Combatant"
+          ]
+        }
+      ]
+    },
+    "3dc63876-39a9-4828-9967-67821e620cb1": {
+      "ReadonlyName": "Constant (Consumable)",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Constant (Consumable)",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Consumable",
+              "ReadonlyType": "Consumable",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Consumables"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Consumables"
           ]
         }
       ]
@@ -2768,7 +2851,7 @@
       ]
     },
     "7077d139-9876-495e-9756-58150fef9f3b": {
-      "ReadonlyName": "Variable (Rec Room Object)",
+      "ReadonlyName": "Rec Room Object Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -2859,6 +2942,53 @@
           "FilterPath": [
             "Objects",
             "Rec Room Object"
+          ]
+        }
+      ]
+    },
+    "6809978a-e1fc-403a-a41a-d4e94f22281f": {
+      "ReadonlyName": "Deactivate Consumable",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Deactivate Consumable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Consumable",
+              "ReadonlyType": "Consumable",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Consumables"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Consumables"
           ]
         }
       ]
@@ -3524,7 +3654,7 @@
       ]
     },
     "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
-      "ReadonlyName": "Variable (float)",
+      "ReadonlyName": "float Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -3914,6 +4044,38 @@
         }
       ]
     },
+    "78f5a9f2-4e3d-4534-aada-4af3a551a953": {
+      "ReadonlyName": "Get Broadcasting Attendance",
+      "Description": "Outputs player counts if you're in an event that's actively broadcasting",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Get Broadcasting Attendance",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Audience Count",
+              "ReadonlyType": "int",
+              "Description": "Number of players watching a broadcast at this event"
+            },
+            {
+              "Name": "Broadcaster Count",
+              "ReadonlyType": "int",
+              "Description": "Number of players broadcasting themselves at this event"
+            },
+            {
+              "Name": "Is Broadcast Active",
+              "ReadonlyType": "bool",
+              "Description": "True if anyone is broadcasting. Only active broadcasts will have accurate attendance counts"
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
     "e8c5082f-0a75-4025-9679-293bc8d72989": {
       "ReadonlyName": "Get Element",
       "Description": "Gets a specified element from the input list. The element you want to retrieve is called the “index” and is the location of the element in the list. The first element in the list is at index 0, the second element is at index 1.",
@@ -4166,6 +4328,56 @@
         }
       ]
     },
+    "12cf9781-1e1b-4e59-a783-c7214b66be8a": {
+      "ReadonlyName": "Get Local Player Leaderboard Stat Node",
+      "Description": "Get leaderboard stat for local player on stat channel 1, 2 or 3",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Get Local Player Leaderboard Stat Node",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Channel",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Get Stat Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Leaderboard"
+          ]
+        }
+      ]
+    },
     "fdf733a8-bdd6-4800-b1d4-95b06b3d6f02": {
       "ReadonlyName": "Get Local Player",
       "Description": "Outputs the player running this chip on their machine.",
@@ -4241,6 +4453,41 @@
         {
           "FilterPath": [
             "Objects"
+          ]
+        }
+      ]
+    },
+    "dcbd4d6a-8f42-48ef-ad66-e1f245228d84": {
+      "ReadonlyName": "Get Party Of Player",
+      "Description": "Returns the party of the input player as List<Player>. If the player is not in a party, it will return a list containing only that player.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Get Party Of Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Party",
+              "ReadonlyType": "List<Player>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Party"
           ]
         }
       ]
@@ -4710,6 +4957,566 @@
         }
       ]
     },
+    "dc78ca9e-29c4-4cba-a6cb-3ea87ffbe780": {
+      "ReadonlyName": "Ground Vehicle Add Boost Fuel",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Add Boost Fuel",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Boost amount",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "29dd429b-81e5-40c7-b3b6-8d03bcc1eec3": {
+      "ReadonlyName": "Ground Vehicle Apply Boost",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Apply Boost",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Success",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Failure",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "76d46244-7b8e-43de-bd8c-55375411ffe1": {
+      "ReadonlyName": "Ground Vehicle Get Boost Fuel",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Get Boost Fuel",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Boost amount",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "f41ae49a-dbf3-4b4b-87dc-68614da242cc": {
+      "ReadonlyName": "Ground Vehicle Get Driving Enabled",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Get Driving Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Driving Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "390257d5-e382-4416-81f7-40562d5473d3": {
+      "ReadonlyName": "Ground Vehicle Get Engine Torque Multiplier",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Get Engine Torque Multiplier",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Torque Multiplier",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "d150c8fa-91fd-4483-a8b5-ca6c62f2c648": {
+      "ReadonlyName": "Ground Vehicle Get Seated Player",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Get Seated Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Seat index",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "0fcc3c15-5ee0-4af9-a4de-94627fbba6ec": {
+      "ReadonlyName": "Ground Vehicle Get Wheel Friction Multiplier",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Get Wheel Friction Multiplier",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Friction Multiplier",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "6c7a86cc-2145-404c-b029-31d22f9811e7": {
+      "ReadonlyName": "Ground Vehicle Set Driving Enabled",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Set Driving Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "128116c8-591f-44bc-97cd-f787d660cfb5": {
+      "ReadonlyName": "Ground Vehicle Set Engine Torque Multiplier",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Set Engine Torque Multiplier",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Torque multiplier",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "50458d97-a7cf-45e3-892b-fb67c0fbe64b": {
+      "ReadonlyName": "Ground Vehicle Set Seated Player",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Set Seated Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Seat index",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Success",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Failure",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "d00aed86-97ac-4717-872e-ca6646ee266d": {
+      "ReadonlyName": "Ground Vehicle Set Wheel Friction Multiplier",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Set Wheel Friction Multiplier",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Friction multiplier",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "4bb12ec4-780e-4186-a597-36bdc5c67b43": {
+      "ReadonlyName": "Ground Vehicle Unseat Player From Seat",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Unseat Player From Seat",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Seat index",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Success",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Failure",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
+    "5815406b-a3f2-471e-88ec-dffc212293be": {
+      "ReadonlyName": "Ground Vehicle Unseat Player",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Ground Vehicle Unseat Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Ground Vehicle",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Success",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Failure",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Vehicles"
+          ]
+        }
+      ]
+    },
     "a4f8a9a1-fd7b-4702-8345-93ae4d57f333": {
       "ReadonlyName": "If Expression",
       "Description": "Outputs an input value based on the input conditional. Outputs the “then” input if the inputted conditional is true. Outputs the “else” input if the input conditional is false.",
@@ -5121,14 +5928,14 @@
       ]
     },
     "33224907-68ff-4102-802e-7c3eed481d37": {
-      "ReadonlyName": "Variable (int)",
+      "ReadonlyName": "int Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
       "NodeDescs": [
         {
-          "Name": "Variable (int)",
+          "Name": "Int Variable",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -5772,7 +6579,7 @@
       ]
     },
     "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
-      "ReadonlyName": "Variable (List<bool>)",
+      "ReadonlyName": "List<bool> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -5921,7 +6728,7 @@
       ]
     },
     "536e376c-087d-4909-9412-3fcee5d6f52b": {
-      "ReadonlyName": "Variable (List<Rec Room Object>)",
+      "ReadonlyName": "List<Rec Room Object> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -6023,7 +6830,7 @@
       ]
     },
     "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
-      "ReadonlyName": "Variable (List<float>)",
+      "ReadonlyName": "List<float> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -6134,7 +6941,7 @@
       ]
     },
     "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
-      "ReadonlyName": "Variable (List<int>)",
+      "ReadonlyName": "List<int> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -6322,7 +7129,7 @@
       ]
     },
     "32837e14-12de-465f-89dc-ceddb64cdd6c": {
-      "ReadonlyName": "Variable (List<Player>)",
+      "ReadonlyName": "List<Player> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -6380,7 +7187,7 @@
       ]
     },
     "e8cfde19-33a4-4826-a032-4b9bd50aa171": {
-      "ReadonlyName": "Variable (List<Quaternion>)",
+      "ReadonlyName": "List<Quaternion> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -6515,7 +7322,7 @@
       ]
     },
     "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
-      "ReadonlyName": "Variable (List<string>)",
+      "ReadonlyName": "List<string> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -6654,7 +7461,7 @@
       ]
     },
     "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
-      "ReadonlyName": "Variable (List<Vector3>)",
+      "ReadonlyName": "List<Vector3> Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -8098,7 +8905,7 @@
       ]
     },
     "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
-      "ReadonlyName": "Variable (Player)",
+      "ReadonlyName": "Player Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -8331,7 +9138,7 @@
       "ReadonlyName": "Player Subscribes to Room Owner",
       "Description": "Outputs true if the input player subscribes to one of the current room's owners.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -8818,7 +9625,7 @@
       ]
     },
     "18a980ff-9a46-472c-b658-96bf42eb61c2": {
-      "ReadonlyName": "Variable (Quaternion)",
+      "ReadonlyName": "Quaternion Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -9232,9 +10039,7 @@
       "NodeDescs": [
         {
           "Name": "Raycast",
-          "ReadonlyTypeParams": {
-            "T": "(AI | Combatant | Rec Room Object | Player)"
-          },
+          "ReadonlyTypeParams": {},
           "Inputs": [
             {
               "Name": "Start Position",
@@ -10160,6 +10965,51 @@
         }
       ]
     },
+    "57a1553a-ba24-4422-903a-e610a03e7994": {
+      "ReadonlyName": "Set Local Player Leaderboard Stat",
+      "Description": "Set leaderboard stat for local player on stat channel 1, 2 or 3",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Set Local Player Leaderboard Stat",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Channel",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Leaderboard"
+          ]
+        }
+      ]
+    },
     "ff1c2a15-4099-4aaa-afe3-c217b2fca15b": {
       "ReadonlyName": "Set Position",
       "Description": "Sets the position of the target player or object. Will fail in the following cases: If the target object is currently held, select/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
@@ -10761,7 +11611,7 @@
       ]
     },
     "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
-      "ReadonlyName": "Variable (string)",
+      "ReadonlyName": "string Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -11843,7 +12693,7 @@
       ]
     },
     "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
-      "ReadonlyName": "Variable (Vector3)",
+      "ReadonlyName": "Vector3 Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,

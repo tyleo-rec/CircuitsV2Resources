@@ -2575,6 +2575,51 @@
         }
       ]
     },
+    "953fb21b-c9f0-46fc-a0f1-ee1a937854f8": {
+      "ReadonlyName": "Rec Room Object Add Tag",
+      "Description": "Adds a tag to an object.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Rec Room Object Add Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            },
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Rec Room Object"
+          ]
+        }
+      ]
+    },
     "81939b0e-428f-481c-9fba-453b4c84f01e": {
       "ReadonlyName": "Rec Room Object Add Tags",
       "Description": "Assigns tags to the input object.",
@@ -2691,6 +2736,76 @@
         {
           "FilterPath": [
             "Networking"
+          ]
+        }
+      ]
+    },
+    "cb909206-8627-4c66-ac8d-47b1a046ef8b": {
+      "ReadonlyName": "Rec Room Object Get First Tag",
+      "Description": "Gets the first tag from an object.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Rec Room Object Get First Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Rec Room Object"
+          ]
+        }
+      ]
+    },
+    "43ff2d3c-c3aa-45bc-a7b7-01587c8a61f6": {
+      "ReadonlyName": "Rec Room Object Get First with Tag",
+      "Description": "Gets the first object with a tag.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Rec Room Object Get First with Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Object",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Rec Room Object"
           ]
         }
       ]
@@ -2893,6 +3008,51 @@
             "Objects"
           ]
         },
+        {
+          "FilterPath": [
+            "Objects",
+            "Rec Room Object"
+          ]
+        }
+      ]
+    },
+    "207c6721-b242-4dc2-857d-ebd1ff7c8624": {
+      "ReadonlyName": "Rec Room Object Remove Tag",
+      "Description": "Removes the tag from the object.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Rec Room Object Remove Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            },
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
         {
           "FilterPath": [
             "Objects",
@@ -4146,6 +4306,40 @@
         }
       ]
     },
+    "a924cac0-0245-4846-862d-df4092c5e1c2": {
+      "ReadonlyName": "Get First Player with Role",
+      "Description": "Gets the first player with a role. Returns invalid player if no player     has the role.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Get First Player with Role",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Role",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "88f95338-d1a6-4fad-8424-d714d651f6ac": {
       "ReadonlyName": "Get Forward Vector",
       "Description": "Gets the forward of the target, output as a vector3.",
@@ -4329,14 +4523,14 @@
       ]
     },
     "12cf9781-1e1b-4e59-a783-c7214b66be8a": {
-      "ReadonlyName": "Get Local Player Leaderboard Stat Node",
+      "ReadonlyName": "Get Local Player Leaderboard Stat",
       "Description": "Get leaderboard stat for local player on stat channel 1, 2 or 3",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Local Player Leaderboard Stat Node",
+          "Name": "Get Local Player Leaderboard Stat",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -4407,6 +4601,34 @@
         {
           "FilterPath": [
             "Networking"
+          ]
+        }
+      ]
+    },
+    "975fde92-136c-4ce5-b749-bf149b817695": {
+      "ReadonlyName": "Get New Line",
+      "Description": "Returns a new line string.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Get New Line",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "New Line",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Strings"
           ]
         }
       ]
@@ -5374,7 +5596,7 @@
     },
     "d00aed86-97ac-4717-872e-ca6646ee266d": {
       "ReadonlyName": "Ground Vehicle Set Wheel Friction Multiplier",
-      "Description": "",
+      "Description": "Wheel Friction affects how good the wheels are at gripping the ground - lower values decrease traction and make the wheels slip more and higher values can increase traction and make the wheels slip less. 1 is the default value for Wheel Friction.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -5396,7 +5618,7 @@
             {
               "Name": "Friction multiplier",
               "ReadonlyType": "float",
-              "Description": ""
+              "Description": "The lower this value is, the more the tires will slip instead of properly grabbing the ground"
             }
           ],
           "Outputs": [
@@ -6539,7 +6761,7 @@
     },
     "f9589495-685e-4e14-af2e-5cd45f860021": {
       "ReadonlyName": "List Any True",
-      "Description": "If any bool value in the list is true then return ture",
+      "Description": "If any bool value in the list is true then return true.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10082,6 +10304,11 @@
               "Name": "Hit Position",
               "ReadonlyType": "Vector3",
               "Description": ""
+            },
+            {
+              "Name": "Surface Normal",
+              "ReadonlyType": "Vector3",
+              "Description": ""
             }
           ]
         }
@@ -12312,6 +12539,41 @@
         }
       ]
     },
+    "b309c032-1bcd-4ca1-83cf-b8871e65fb16": {
+      "ReadonlyName": "Trigger Handle Get Primary Action Held",
+      "Description": "True if the primary action button is down; otherwise, false.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Trigger Handle Get Primary Action Held",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Trigger Handle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Held",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Trigger Handle"
+          ]
+        }
+      ]
+    },
     "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
       "ReadonlyName": "Trigger Volume Get Filter Role",
       "Description": "Gets the Role that is being filterd from a Trigger Volume",
@@ -12878,7 +13140,7 @@
           "Inputs": [
             {
               "Name": "Direction",
-              "ReadonlyType": "Vector",
+              "ReadonlyType": "Vector Gadget",
               "Description": ""
             },
             {

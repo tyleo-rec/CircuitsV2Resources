@@ -9,8 +9,8 @@
   - Use the #circuits-v2 channel for CircuitsV2 info.
 - [Circuits V2 Canny](https://recroom.canny.io/creative-tools?category=circuits-v2-feedback)
   - Use this page to report bugs and request or upvote new features.
-- YouTube
-  - [Circuits V2 Tutorials](https://www.youtube.com/playlist?list=PLvVANGXSELv6m5z17coGwxtOkxcHYPKTA)
+- [How to Create](https://recroom.com/howtocreate)
+  - Browse to the **Circuits V2 Beginners** section.
 - [Creative Classes and Events](https://recroom.com/creative)
   - This is a curated list of classes and events for learning how to build. Check back periodically for Circuits V2 class availability.
   - [Circuit Think Tank (Rec Room Event Link)](https://rec.net/room/CircuitThinkTank/events)
@@ -22,3 +22,4 @@
 These are additional lists of resources which may contain content not listed here.
 
 - [rec-room Fandom Wiki Circuits V2 Page](https://rec-room.fandom.com/wiki/Circuits_V2)
+- [It's Time For YOU To Learn Circuits V2](https://www.youtube.com/watch?v=L4yvvoWdpWA)

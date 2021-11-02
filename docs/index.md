@@ -1,23 +1,5 @@
 # Circuits V2 Resources
 
-## Principals - _Circuits empowers by being_:
-
-- :balance_scale: **Elegant**: strike a balance between usability and capability
-  - build for the novice but empower the expert
-  - Automate difficult concepts rather than dumbing them down
-- :hammer_and_wrench: **Productive**: a little effort does a lot of work
-  - Building should be an adventure, it shouldn't be a chore
-  - If something must be done frequently, it can also be done quickly
-- :arrows_counterclockwise: **Reusable**: player creations are indistinguishable from our own
-  - Inventions achieve the quality of content built in Unity
-  - Allow the community to rely on each other, rather than only relying on us
-- :handshake: **Friendly**: physicality isn't a burden
-  - Prioritize quick, intuitive solutions over popups and forms
-  - Expose as much information as necessary but no more than that
-- :mag: **Obvious**: errors aren't hidden
-  - If you have an error, you know where and why
-  - Finding a solution shouldn't require a PhD
-
 ## Official Resources
 
 - [Releases](https://tyleo-rec.github.io/CircuitsV2Resources/releases/)
@@ -42,3 +24,21 @@ These are additional lists of resources which may contain content not listed her
 
 - [rec-room Fandom Wiki Circuits V2 Page](https://rec-room.fandom.com/wiki/Circuits_V2)
 - [It's Time For YOU To Learn Circuits V2](https://www.youtube.com/watch?v=L4yvvoWdpWA)
+
+## Principals - _Circuits empowers by being_:
+
+- :balance_scale: **Elegant**: strike a balance between usability and capability
+  - build for the novice but empower the expert
+  - Automate difficult concepts rather than dumbing them down
+- :hammer_and_wrench: **Productive**: a little effort does a lot of work
+  - Building should be an adventure, it shouldn't be a chore
+  - If something must be done frequently, it can also be done quickly
+- :arrows_counterclockwise: **Reusable**: player creations are indistinguishable from our own
+  - Inventions achieve the quality of content built in Unity
+  - Allow the community to rely on each other, rather than only relying on us
+- :handshake: **Friendly**: physicality isn't a burden
+  - Prioritize quick, intuitive solutions over popups and forms
+  - Expose as much information as necessary but no more than that
+- :mag: **Obvious**: errors aren't hidden
+  - If you have an error, you know where and why
+  - Finding a solution shouldn't require a PhD

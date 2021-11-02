@@ -1,8 +1,6 @@
 # Circuits V2 Resources
 
-## Principals
-
-**Principles** - _Circuits empowers by being_:
+## Principals - _Circuits empowers by being_:
 
 - :balance_scale: **Elegant**: strike a balance between usability and capability
   - build for the novice but empower the expert

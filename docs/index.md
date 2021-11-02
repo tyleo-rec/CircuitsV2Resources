@@ -4,7 +4,7 @@
 
 **Principles** - _Circuits empowers by being_:
 
-- :scales: **Elegant**: strike a balance between usability and capability
+- :balance_scale: **Elegant**: strike a balance between usability and capability
   - build for the novice but empower the expert
   - Automate difficult concepts rather than dumbing them down
 - :hammer_and_wrench: **Productive**: a little effort does a lot of work

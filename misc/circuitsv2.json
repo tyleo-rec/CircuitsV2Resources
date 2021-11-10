@@ -13042,7 +13042,7 @@
     },
     "87aa17b1-7760-4b07-8c44-a2d530590597": {
       "ReadonlyName": "Vector3 Scale",
-      "Description": "Multiplies two vectors.",
+      "Description": "Multiplies the parts of a vector by a scalar.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,

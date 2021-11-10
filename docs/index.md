@@ -25,6 +25,7 @@ These are additional lists of resources which may contain content not listed her
 - [rec-room Fandom Wiki Circuits V2 Page](https://rec-room.fandom.com/wiki/Circuits_V2)
 - [It's Time For YOU To Learn Circuits V2](https://www.youtube.com/watch?v=L4yvvoWdpWA)
 - [CV2 Chip Searcher](https://cv2browser.alyxisdysphoric.repl.co)
+- [Alexa's CV2 Docs](https://cv2.alexapi.cf)
 
 ## Principals - _Circuits empowers by being_:
 

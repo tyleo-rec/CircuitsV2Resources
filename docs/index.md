@@ -2,8 +2,8 @@
 
 ## Official Resources
 
-- [Releases](https://tyleo-rec.github.io/CircuitsV2Resources/releases/)
-- [Designs](https://tyleo-rec.github.io/CircuitsV2Resources/designs/)
+- [Releases](/releases/)
+- [Designs](/designs/)
 - [How To Circuits V2 Blog Post](https://blog.recroom.com/posts/2020/8/3/how-2-circuits-2)
 - [The Circuits Handbook Blog Post](https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook)
 - [Rec Room Discord](https://discord.com/channels/193073071802941451/746858632301510708)
@@ -25,7 +25,7 @@ These are additional lists of resources which may contain content not listed her
 - [rec-room Fandom Wiki Circuits V2 Page](https://rec-room.fandom.com/wiki/Circuits_V2)
 - [It's Time For YOU To Learn Circuits V2](https://www.youtube.com/watch?v=L4yvvoWdpWA)
 - [CV2 Chip Searcher](https://cv2.aleteoryx.me)
-- [This Page on Cloudflare](https://cv2.pages.dev)
+- [This Page on Cloudflare](/)
 
 ## Principals - _Circuits empowers by being_:
 

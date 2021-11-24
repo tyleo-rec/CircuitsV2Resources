@@ -1,5 +1,5 @@
 ---
-title: '2021_01_01_home_values'
+title: '20210101homevalues'
 ---
 <object data="/2021_01_01_home_values.pdf" type="application/pdf" width="1000px" height="1000px">
     <embed src="/2021_01_01_home_values.pdf">

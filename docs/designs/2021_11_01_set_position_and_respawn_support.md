@@ -1,5 +1,5 @@
 ---
-title: '2021_11_01_set_position_and_respawn_support'
+title: '20211101setpositionandrespawnsupport'
 ---
 <object data="/2021_11_01_set_position_and_respawn_support.pdf" type="application/pdf" width="1000px" height="1000px">
     <embed src="/2021_11_01_set_position_and_respawn_support.pdf">

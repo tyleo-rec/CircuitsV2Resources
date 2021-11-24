@@ -1,5 +1,5 @@
 ---
-title: '2020_01_01_palette_search_v2'
+title: '20200101palettesearchv2'
 ---
 <object data="/2020_01_01_palette_search_v2.pdf" type="application/pdf" width="1000px" height="1000px">
     <embed src="/2020_01_01_palette_search_v2.pdf">

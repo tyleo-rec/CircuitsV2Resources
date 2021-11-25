@@ -18,4 +18,4 @@
 
 ## Links
 
-**[<- Back to Releases](https://tyleo-rec.github.io/CircuitsV2Resources/releases/)**
+**[<- Back to Releases](/releases/)**

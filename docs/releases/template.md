@@ -18,4 +18,4 @@
 
 ## Links
 
-**[<- Back to Releases](releases/)**
+**[<- Back to Releases](./)**

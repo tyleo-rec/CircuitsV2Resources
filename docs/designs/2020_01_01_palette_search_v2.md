@@ -1,8 +1,13 @@
 ---
-title: '20200101palettesearchv2'
+title: 'Palette Search V2'
 ---
-<object data="/2020_01_01_palette_search_v2.pdf" type="application/pdf" width="1000px" height="1000px">
-    <embed src="/2020_01_01_palette_search_v2.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/2020_01_01_palette_search_v2.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<html>
+  <head>
+    <title>Palette Search V2</title>
+  </head>
+  <body>
+    <h1>Palette Search V2</h1>
+    <iframe src="/2020_01_01_palette_search_v2.pdf#toolbar=0" width="100%" height="500px">
+    </iframe>
+  </body>
+</html>

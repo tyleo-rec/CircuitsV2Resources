@@ -1,8 +1,13 @@
 ---
-title: '20211101cv2environments'
+title: 'CV2 Environments'
 ---
-<object data="/2021_11_01_cv2_environments.pdf" type="application/pdf" width="1000px" height="1000px">
-    <embed src="/2021_11_01_cv2_environments.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/2021_11_01_cv2_environments.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<html>
+  <head>
+    <title>CV2 Environments</title>
+  </head>
+  <body>
+    <h1>CV2 Environments</h1>
+    <iframe src="/2021_11_01_cv2_environments.pdf#toolbar=0" width="100%" height="500px">
+    </iframe>
+  </body>
+</html>

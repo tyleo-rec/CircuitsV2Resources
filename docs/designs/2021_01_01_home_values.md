@@ -1,5 +1,6 @@
 ---
 title: 'Home Values'
+order: 6
 ---
 <html>
   <head>
@@ -7,7 +8,7 @@ title: 'Home Values'
   </head>
   <body>
     <h1>Home Values</h1>
-    <iframe src="/2021_01_01_home_values.pdf#toolbar=0" width="100%" height="500px">
+    <iframe src="/2021_01_01_home_values.pdf#toolbar=0" width="1000px" height="500px">
     </iframe>
   </body>
 </html>

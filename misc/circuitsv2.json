@@ -410,7 +410,7 @@
     },
     "0e92a7fb-fb38-418c-af39-9afec92112ee": {
       "ReadonlyName": "AI Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nAI represents one of the Rec Room AIs, created with a Spawner Gadget V2.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -1586,7 +1586,7 @@
     },
     "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
       "ReadonlyName": "bool Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nBools represent a boolean True or False value. They can be used with an If chip to make decisions in your code.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -2133,7 +2133,7 @@
     },
     "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
       "ReadonlyName": "Combatant Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nCombatants represent something that can engage in combat, either a Player or an AI.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -2967,7 +2967,7 @@
     },
     "7077d139-9876-495e-9756-58150fef9f3b": {
       "ReadonlyName": "Rec Room Object Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name. When a variable is configured to be synced, its value will be the same across all players' games.\nRec Room Objects represent a given object in the room. If the represented object is deleted, the value will become invalid. All components (Text, Pistons, etc) are Rec Room Objects, and a Rec Room Object which represents a component can be used as an input to its chips.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -3815,7 +3815,7 @@
     },
     "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
       "ReadonlyName": "float Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nFloats can represent most real numbers from -3.4e38 to 3.4e38, though they are only accurate to approximately 7 significant digits.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6151,7 +6151,7 @@
     },
     "33224907-68ff-4102-802e-7c3eed481d37": {
       "ReadonlyName": "int Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nInts can represent any integer from -2 147 483 648 to 2 147 483 647.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6802,7 +6802,7 @@
     },
     "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
       "ReadonlyName": "List<bool> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<bool> represents multiple bools with a specific order. List<bool> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6951,7 +6951,7 @@
     },
     "536e376c-087d-4909-9412-3fcee5d6f52b": {
       "ReadonlyName": "List<Rec Room Object> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Rec Room Object> represents multiple Rec Room Objects with a specific order. List<Rec Room Object> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7053,7 +7053,7 @@
     },
     "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
       "ReadonlyName": "List<float> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<float> represents multiple floats with a specific order. List<float> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7164,7 +7164,7 @@
     },
     "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
       "ReadonlyName": "List<int> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<int> represents multiple ints with a specific order. List<int> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7352,7 +7352,7 @@
     },
     "32837e14-12de-465f-89dc-ceddb64cdd6c": {
       "ReadonlyName": "List<Player> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Player> represents multiple Players with a specific order. List<Player> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7410,7 +7410,7 @@
     },
     "e8cfde19-33a4-4826-a032-4b9bd50aa171": {
       "ReadonlyName": "List<Quaternion> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Quaternion> represents multiple Quaternions with a specific order. List<Quaternion> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7545,7 +7545,7 @@
     },
     "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
       "ReadonlyName": "List<string> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<string> represents multiple strings with a specific order. List<string> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7684,7 +7684,7 @@
     },
     "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
       "ReadonlyName": "List<Vector3> Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Vector3> represents multiple Vector3s with a specific order. List<Vector3> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -9128,7 +9128,7 @@
     },
     "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
       "ReadonlyName": "Player Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.When a variable is configured to be synced, its value will be the same across all players' games.\nPlayers represent a given connected player in the game instance. If the represented player leaves, the value will become invalid.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -9848,7 +9848,7 @@
     },
     "18a980ff-9a46-472c-b658-96bf42eb61c2": {
       "ReadonlyName": "Quaternion Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name. When a variable is configured to be synced, its value will be the same across all players' games.\nQuaternions are 4D numbers that represent a rotation, and contain 4 floats to do so. Multiplying 2 quaternions will produce the effect of rotating by one quaternion, and then rotating that by the other.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -11839,7 +11839,7 @@
     },
     "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
       "ReadonlyName": "string Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nStrings represent text, and have a maximum length of 512.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -12956,7 +12956,7 @@
     },
     "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
       "ReadonlyName": "Vector3 Variable",
-      "Description": "",
+      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nVector3s represent a position in space or a direction with magnitude. They contain 3 floats.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,

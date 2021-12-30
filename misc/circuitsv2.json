@@ -9486,7 +9486,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "UIf"
           ]
         }
       ]
@@ -10497,7 +10498,13 @@
         },
         {
           "FilterPath": [
-            "Objects"
+            "Objects",
+            "Rec Room Object"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Physics"
           ]
         }
       ]
@@ -11288,7 +11295,13 @@
         },
         {
           "FilterPath": [
-            "Objects"
+            "Objects",
+            "Rec Room Object"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Physics"
           ]
         }
       ]

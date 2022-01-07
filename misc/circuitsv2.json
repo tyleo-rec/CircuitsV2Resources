@@ -75,7 +75,7 @@
     "d7ea08ab-aee6-43d0-99e1-54478ac3db7f": {
       "ReadonlyName": "Activate Consumable",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -122,7 +122,7 @@
     "03461631-734f-491b-ab86-6bdf66947556": {
       "ReadonlyName": "Add Currency",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -410,7 +410,7 @@
     },
     "0e92a7fb-fb38-418c-af39-9afec92112ee": {
       "ReadonlyName": "AI Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nAI represents one of the Rec Room AIs, created with a Spawner Gadget V2.",
+      "Description": "",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -1125,14 +1125,14 @@
       ]
     },
     "28a95bc3-ab08-48ae-b0c0-16b41168bf47": {
-      "ReadonlyName": "Bit AND",
+      "ReadonlyName": "Bit And",
       "Description": "Computes a bitwise AND. The result has a 1 for each bit that is 1 in both of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit AND",
+          "Name": "Bit And",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1200,14 +1200,14 @@
       ]
     },
     "05305e33-a809-4751-b928-2c8a5bbc6dc9": {
-      "ReadonlyName": "Bit NAND",
+      "ReadonlyName": "Bit Nand",
       "Description": "Computes a bitwise NAND. (NOT AND) The result has a 1 for each bit that is 0 in either of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit NAND",
+          "Name": "Bit Nand",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1240,14 +1240,14 @@
       ]
     },
     "ec74ea41-24e5-491c-8919-a502638583f9": {
-      "ReadonlyName": "Bit NOT",
+      "ReadonlyName": "Bit Not",
       "Description": "Computes a bitwise NOT. The result has a 1 for each bit that is 0 in the input.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit NOT",
+          "Name": "Bit Not",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1275,14 +1275,14 @@
       ]
     },
     "2c24bc11-9543-4738-8c6c-0c5e3fadd944": {
-      "ReadonlyName": "Bit OR",
+      "ReadonlyName": "Bit Or",
       "Description": "Computes a bitwise OR. The result has a 1 for each bit that is 1 in either of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit OR",
+          "Name": "Bit Or",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1545,14 +1545,14 @@
       ]
     },
     "a3899394-1ed9-4d41-a836-22fffaf4e90d": {
-      "ReadonlyName": "Bit XOR",
+      "ReadonlyName": "Bit Xor",
       "Description": "Computes a bitwise XOR. The result has a 1 for each bit that is 1 in exactly one of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit XOR",
+          "Name": "Bit Xor",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1586,7 +1586,7 @@
     },
     "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
       "ReadonlyName": "bool Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nBools represent a boolean True or False value. They can be used with an If chip to make decisions in your code.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -1938,7 +1938,7 @@
     "a542e800-22c8-4e0b-ac4d-ea712875a5f8": {
       "ReadonlyName": "Clear Current Subtitle",
       "Description": "Clears any subtitle which is currently being displayed.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1971,6 +1971,113 @@
           "FilterPath": [
             "Player",
             "UI"
+          ]
+        }
+      ]
+    },
+    "87a8e178-b15c-4c38-9da0-95ba74f9f4ec": {
+      "ReadonlyName": "Color Constant",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Color Constant",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Constants"
+          ]
+        }
+      ]
+    },
+    "3d2fd0b5-eeac-45cc-a622-1701710f0792": {
+      "ReadonlyName": "Color Variable",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Color Variable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Primitives"
+          ]
+        }
+      ]
+    },
+    "8e412141-635d-435c-a900-f40d8a261906": {
+      "ReadonlyName": "Color To Int",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Color To Int",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Int",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Conversions"
           ]
         }
       ]
@@ -2133,7 +2240,7 @@
     },
     "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
       "ReadonlyName": "Combatant Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nCombatants represent something that can engage in combat, either a Player or an AI.",
+      "Description": "",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -2380,14 +2487,14 @@
       ]
     },
     "3dc63876-39a9-4828-9967-67821e620cb1": {
-      "ReadonlyName": "Constant (Consumable)",
+      "ReadonlyName": "Consumable Constant",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Constant (Consumable)",
+          "Name": "Consumable Constant",
           "ReadonlyTypeParams": {},
           "Inputs": [],
           "Outputs": [
@@ -2411,6 +2518,11 @@
           "FilterPath": [
             "Economy",
             "Consumables"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constants"
           ]
         }
       ]
@@ -2967,7 +3079,7 @@
     },
     "7077d139-9876-495e-9756-58150fef9f3b": {
       "ReadonlyName": "Rec Room Object Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name. When a variable is configured to be synced, its value will be the same across all players' games.\nRec Room Objects represent a given object in the room. If the represented object is deleted, the value will become invalid. All components (Text, Pistons, etc) are Rec Room Objects, and a Rec Room Object which represents a component can be used as an input to its chips.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -3109,7 +3221,7 @@
     "6809978a-e1fc-403a-a41a-d4e94f22281f": {
       "ReadonlyName": "Deactivate Consumable",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -3815,7 +3927,7 @@
     },
     "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
       "ReadonlyName": "float Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nFloats can represent most real numbers from -3.4e38 to 3.4e38, though they are only accurate to approximately 7 significant digits.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -4145,7 +4257,7 @@
     "a4b0c860-e7f0-4abf-ad7c-9be1805c3d01": {
       "ReadonlyName": "Get Currency Balance",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -4307,14 +4419,14 @@
       ]
     },
     "a924cac0-0245-4846-862d-df4092c5e1c2": {
-      "ReadonlyName": "Get First Player with Role",
-      "Description": "Gets the first player with a role. Returns invalid player if no player     has the role.",
+      "ReadonlyName": "Get Any Player with Role",
+      "Description": "Gets a player with the role. Returns invalid player if no player has the role.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get First Player with Role",
+          "Name": "Get Any Player with Role",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -4682,7 +4794,7 @@
     "dcbd4d6a-8f42-48ef-ad66-e1f245228d84": {
       "ReadonlyName": "Get Party Of Player",
       "Description": "Returns the party of the input player as List<Player>. If the player is not in a party, it will return a list containing only that player.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5182,7 +5294,7 @@
     "dc78ca9e-29c4-4cba-a6cb-3ea87ffbe780": {
       "ReadonlyName": "Ground Vehicle Add Boost Fuel",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5227,7 +5339,7 @@
     "29dd429b-81e5-40c7-b3b6-8d03bcc1eec3": {
       "ReadonlyName": "Ground Vehicle Apply Boost",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5272,7 +5384,7 @@
     "76d46244-7b8e-43de-bd8c-55375411ffe1": {
       "ReadonlyName": "Ground Vehicle Get Boost Fuel",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5307,7 +5419,7 @@
     "f41ae49a-dbf3-4b4b-87dc-68614da242cc": {
       "ReadonlyName": "Ground Vehicle Get Driving Enabled",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5342,7 +5454,7 @@
     "390257d5-e382-4416-81f7-40562d5473d3": {
       "ReadonlyName": "Ground Vehicle Get Engine Torque Multiplier",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5377,7 +5489,7 @@
     "d150c8fa-91fd-4483-a8b5-ca6c62f2c648": {
       "ReadonlyName": "Ground Vehicle Get Seated Player",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5417,7 +5529,7 @@
     "0fcc3c15-5ee0-4af9-a4de-94627fbba6ec": {
       "ReadonlyName": "Ground Vehicle Get Wheel Friction Multiplier",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5452,7 +5564,7 @@
     "6c7a86cc-2145-404c-b029-31d22f9811e7": {
       "ReadonlyName": "Ground Vehicle Set Driving Enabled",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5497,7 +5609,7 @@
     "128116c8-591f-44bc-97cd-f787d660cfb5": {
       "ReadonlyName": "Ground Vehicle Set Engine Torque Multiplier",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5542,7 +5654,7 @@
     "50458d97-a7cf-45e3-892b-fb67c0fbe64b": {
       "ReadonlyName": "Ground Vehicle Set Seated Player",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5597,7 +5709,7 @@
     "d00aed86-97ac-4717-872e-ca6646ee266d": {
       "ReadonlyName": "Ground Vehicle Set Wheel Friction Multiplier",
       "Description": "Wheel Friction affects how good the wheels are at gripping the ground - lower values decrease traction and make the wheels slip more and higher values can increase traction and make the wheels slip less. 1 is the default value for Wheel Friction.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5642,7 +5754,7 @@
     "4bb12ec4-780e-4186-a597-36bdc5c67b43": {
       "ReadonlyName": "Ground Vehicle Unseat Player From Seat",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5692,7 +5804,7 @@
     "5815406b-a3f2-471e-88ec-dffc212293be": {
       "ReadonlyName": "Ground Vehicle Unseat Player",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -6149,9 +6261,169 @@
         }
       ]
     },
+    "0c351297-db4d-43e7-81a3-95dc5ddde401": {
+      "ReadonlyName": "Interaction Volume Get Interaction Prompt",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Get Interaction Prompt",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Interaction Prompt",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
+    "c536089c-e2c3-4a6a-a4fa-aba8dca6b810": {
+      "ReadonlyName": "Interaction Volume Get Is Locked",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Get Is Locked",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Locked",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
+    "380d8467-bdfa-4724-a62c-1955831f994a": {
+      "ReadonlyName": "Interaction Volume Set Interaction Prompt",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Set Interaction Prompt",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            },
+            {
+              "Name": "Interaction Prompt",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
+    "a1e57113-f0b5-45c5-b1e0-95163674daa4": {
+      "ReadonlyName": "Interaction Volume Set Locked",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Set Locked",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            },
+            {
+              "Name": "Locked",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
     "33224907-68ff-4102-802e-7c3eed481d37": {
       "ReadonlyName": "int Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nInts can represent any integer from -2 147 483 648 to 2 147 483 647.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6415,7 +6687,7 @@
       "ReadonlyName": "Light Set Angle",
       "Description": "Sets the size of the spotlight's area",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6455,6 +6727,44 @@
           ]
         }
       ]
+    },
+    "494ceaa7-3520-4f5b-87e0-7dd08334730c": {
+      "ReadonlyName": "Light Set Angle",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Angle",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Angle",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
     },
     "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
       "ReadonlyName": "Light Set Color",
@@ -6505,7 +6815,7 @@
       "ReadonlyName": "Light Set Intensity",
       "Description": "Sets the brightness level for a point light or a spotlight",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6546,11 +6856,49 @@
         }
       ]
     },
+    "aa6dc013-3f5b-45f4-87a2-8aa4d16cc375": {
+      "ReadonlyName": "Light Set Intensity",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Intensity",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Intensity",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
     "c3d0ef1f-921c-4602-a6eb-b03ed46d556f": {
       "ReadonlyName": "Light Set Range",
       "Description": "Sets the range of a point light or a spotlight",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6590,6 +6938,44 @@
           ]
         }
       ]
+    },
+    "214bb1b7-f808-4a36-9c10-113045b4fe44": {
+      "ReadonlyName": "Light Set Range",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Range",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Range",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
     },
     "0f96406e-af69-4f6c-a430-c6b004457ef4": {
       "ReadonlyName": "Light Turn Off",
@@ -6802,7 +7188,7 @@
     },
     "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
       "ReadonlyName": "List<bool> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<bool> represents multiple bools with a specific order. List<bool> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6861,6 +7247,51 @@
           "FilterPath": [
             "Lists",
             "Logic"
+          ]
+        }
+      ]
+    },
+    "9216dded-da74-49a7-a327-5750f4809787": {
+      "ReadonlyName": "List<Color> Variable",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "List<Color> Variable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "List<Color>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "List<Color>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variables",
+            "Lists"
           ]
         }
       ]
@@ -6951,7 +7382,7 @@
     },
     "536e376c-087d-4909-9412-3fcee5d6f52b": {
       "ReadonlyName": "List<Rec Room Object> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Rec Room Object> represents multiple Rec Room Objects with a specific order. List<Rec Room Object> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7053,7 +7484,7 @@
     },
     "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
       "ReadonlyName": "List<float> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<float> represents multiple floats with a specific order. List<float> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7106,6 +7537,90 @@
           "FilterPath": [
             "Math",
             "Lists"
+          ]
+        }
+      ]
+    },
+    "09066fc7-c88e-49f2-992c-5ed10f4ee682": {
+      "ReadonlyName": "List Get All Indices",
+      "Description": "Returns list of all indices of input item in target list if that list contains one or more instances of the item. Otherwise returns an empty list.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "List Get All Indices",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            },
+            {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "List<int>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Core"
+          ]
+        }
+      ]
+    },
+    "d8926108-6c7d-4c78-8fbd-baac2b210e03": {
+      "ReadonlyName": "List Get First Index",
+      "Description": "Returns first index of the item in target list if that list contains it. Otherwise returns -1.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "List Get First Index",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            },
+            {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Lists",
+            "Core"
           ]
         }
       ]
@@ -7164,7 +7679,7 @@
     },
     "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
       "ReadonlyName": "List<int> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<int> represents multiple ints with a specific order. List<int> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7352,7 +7867,7 @@
     },
     "32837e14-12de-465f-89dc-ceddb64cdd6c": {
       "ReadonlyName": "List<Player> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Player> represents multiple Players with a specific order. List<Player> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7410,7 +7925,7 @@
     },
     "e8cfde19-33a4-4826-a032-4b9bd50aa171": {
       "ReadonlyName": "List<Quaternion> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Quaternion> represents multiple Quaternions with a specific order. List<Quaternion> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7545,7 +8060,7 @@
     },
     "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
       "ReadonlyName": "List<string> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<string> represents multiple strings with a specific order. List<string> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7684,7 +8199,7 @@
     },
     "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
       "ReadonlyName": "List<Vector3> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Vector3> represents multiple Vector3s with a specific order. List<Vector3> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -9092,6 +9607,40 @@
         }
       ]
     },
+    "fc2a0141-4997-422c-bdd3-f7ecd7d4c996": {
+      "ReadonlyName": "Player Left Hand Thumb Direction",
+      "Description": "Outputs the Direction of a player's left hand thumb.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Player Left Hand Thumb Direction",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
       "ReadonlyName": "Player Left Hand Velocity",
       "Description": "Outputs the velocity of a player's left hand.",
@@ -9128,7 +9677,7 @@
     },
     "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
       "ReadonlyName": "Player Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.When a variable is configured to be synced, its value will be the same across all players' games.\nPlayers represent a given connected player in the game instance. If the represented player leaves, the value will become invalid.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -9297,6 +9846,40 @@
       "NodeDescs": [
         {
           "Name": "Player Right Hand Position",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "86e8581c-ddf9-4302-a06f-c451b5055a98": {
+      "ReadonlyName": "Player Right Hand Thumb Direction",
+      "Description": "Outputs the Direction of a player's right hand thumb.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Player Right Hand Thumb Direction",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -9848,7 +10431,7 @@
     },
     "18a980ff-9a46-472c-b658-96bf42eb61c2": {
       "ReadonlyName": "Quaternion Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name. When a variable is configured to be synced, its value will be the same across all players' games.\nQuaternions are 4D numbers that represent a rotation, and contain 4 floats to do so. Multiplying 2 quaternions will produce the effect of rotating by one quaternion, and then rotating that by the other.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -10255,7 +10838,7 @@
     "af203a1f-f3c9-479b-86f0-72224b094179": {
       "ReadonlyName": "Raycast",
       "Description": "Fires an invisible ray from the Start Position, in the Direction specified. Returns true if any object or player is hit within the target Max Distance. Otherwise, returns false. You can configure the chip itself to ignore players or objects specifically.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -11538,7 +12121,7 @@
     "abaae687-e943-4534-bb78-2c8d7e17c425": {
       "ReadonlyName": "Show Local Subtitle",
       "Description": "Displays a subtitle for a specified duration. If there is already a subtitle showing, it will be replaced only if this subtitle has an equal or higher priority. If the string is more than 200 characters, it will be displayed in multiple subtitles, each lasting a fraction of the total duration. Escape characters are ignored.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -11839,7 +12422,7 @@
     },
     "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
       "ReadonlyName": "string Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nStrings represent text, and have a maximum length of 512.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -12194,6 +12777,41 @@
         }
       ]
     },
+    "3e8fbb88-3179-4a4c-9f8f-d9c2db35b9b5": {
+      "ReadonlyName": "Text Get Text",
+      "Description": "Outputs the visible text for a Text Component",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Text Get Text",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Text",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Text",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Objects",
+            "Text"
+          ]
+        }
+      ]
+    },
     "20b2528d-96a9-4be8-9782-aa75959f5232": {
       "ReadonlyName": "Text Set Color",
       "Description": "Sets the color for a Text Component",
@@ -12542,7 +13160,7 @@
     "b309c032-1bcd-4ca1-83cf-b8871e65fb16": {
       "ReadonlyName": "Trigger Handle Get Primary Action Held",
       "Description": "True if the primary action button is down; otherwise, false.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -12956,7 +13574,7 @@
     },
     "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
       "ReadonlyName": "Vector3 Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nVector3s represent a position in space or a direction with magnitude. They contain 3 floats.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -13042,7 +13660,7 @@
     },
     "87aa17b1-7760-4b07-8c44-a2d530590597": {
       "ReadonlyName": "Vector3 Scale",
-      "Description": "Multiplies the parts of a vector by a scalar.",
+      "Description": "Multiplies two vectors.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,

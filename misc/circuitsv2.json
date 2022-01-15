@@ -80,7 +80,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Activate Consumable",
+          "Name": "Consumable Activate",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -448,7 +448,7 @@
         {
           "FilterPath": [
             "Variable",
-            "Object",
+            "Object"
           ]
         },
         {
@@ -2288,7 +2288,7 @@
         {
           "FilterPath": [
             "Variable",
-            "Object",
+            "Object"
           ]
         },
         {
@@ -2980,7 +2980,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Player Last Equipped Object",
+          "Name": "Rec Room Object Get Last Equipping Player",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -3133,7 +3133,7 @@
         {
           "FilterPath": [
             "Variable",
-            "Object",
+            "Object"
           ]
         },
         {
@@ -3242,7 +3242,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Deactivate Consumable",
+          "Name": "Consumable Deactivate",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -3545,7 +3545,7 @@
       "ReadonlyName": "Emitter Set Color",
       "Description": "Sets the color for the particles emitted.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 1,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -3565,6 +3565,51 @@
             {
               "Name": "Value",
               "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Emitter"
+          ]
+        }
+      ]
+    },
+    "4263768a-035b-4d8b-b17c-1a7bb0b9b96d": {
+      "ReadonlyName": "Emitter Set Color V2",
+      "Description": "Sets the color for the particles emitted",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Emitter Set Color V2",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Emitter",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "Color",
               "Description": ""
             }
           ],
@@ -4379,7 +4424,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Element",
+          "Name": "List Get Element",
           "ReadonlyTypeParams": {
             "T": "any"
           },
@@ -4471,7 +4516,7 @@
         {
           "FilterPath": [
             "Player",
-            "Role",
+            "Role"
           ]
         }
       ]
@@ -4512,13 +4557,13 @@
         },
         {
           "FilterPath": [
-            "Object",
+            "Object"
           ]
         },
         {
           "FilterPath": [
             "Player",
-            "Physics",
+            "Physics"
           ]
         }
       ]
@@ -4589,7 +4634,7 @@
         {
           "FilterPath": [
             "Player",
-            "Physics",
+            "Physics"
           ]
         }
       ]
@@ -4623,7 +4668,7 @@
         {
           "FilterPath": [
             "Player",
-            "Physics",
+            "Physics"
           ]
         }
       ]
@@ -4657,7 +4702,7 @@
         {
           "FilterPath": [
             "Player",
-            "Physics",
+            "Physics"
           ]
         }
       ]
@@ -4970,7 +5015,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Players With Role",
+          "Name": "Get All Players With Role",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -6840,7 +6885,7 @@
       "ReadonlyName": "Light Set Color",
       "Description": "Sets the color for a point light or a spotlight.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 1,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6860,6 +6905,51 @@
             {
               "Name": "Color",
               "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Light"
+          ]
+        }
+      ]
+    },
+    "b2698906-68bd-4ea3-be98-35a23615b522": {
+      "ReadonlyName": "Light Set Color V2",
+      "Description": "Sets the color for a point light or a spotlight",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Color V2",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
               "Description": ""
             }
           ],
@@ -6928,7 +7018,7 @@
     },
     "aa6dc013-3f5b-45f4-87a2-8aa4d16cc375": {
       "ReadonlyName": "Light Set Intensity",
-      "Description": "Description": "Sets the brightness level for a point light or a spotlight.",
+      "Description": "Sets the brightness level for a point light or a spotlight.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -7519,14 +7609,14 @@
           "FilterPath": [
             "List",
             "Variable",
-            "Object",
+            "Object"
           ]
         },
         {
           "FilterPath": [
             "Variable",
             "List",
-            "Object",
+            "Object"
           ]
         },
         {
@@ -7689,7 +7779,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "List Get First Index",
+          "Name": "List Get First Index Of",
           "ReadonlyTypeParams": {
             "T": "any"
           },
@@ -8004,20 +8094,20 @@
           "FilterPath": [
             "List",
             "Variable",
-            "Object",
+            "Object"
           ]
         },
         {
           "FilterPath": [
             "Variable",
             "List",
-            "Object",
+            "Object"
           ]
         },
         {
           "FilterPath": [
             "Player",
-            "Variable",
+            "Variable"
           ]
         }
       ]
@@ -9572,7 +9662,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Player Is Authority Of",
+          "Name": "Player Get Is Authority Of",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -9617,7 +9707,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Player Is Room Owner",
+          "Name": "Player Get Is Room Owner",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -9859,7 +9949,7 @@
         {
           "FilterPath": [
             "Variable",
-            "Object",
+            "Object"
           ]
         },
         {
@@ -10098,7 +10188,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Player Subscribes to Room Owner",
+          "Name": "Player Subscribes To Room Owner",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -11113,7 +11203,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Reset Object",
+          "Name": "Rec Room Object Reset",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -11898,7 +11988,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Set Element",
+          "Name": "List Set Element",
           "ReadonlyTypeParams": {
             "T": "any"
           },
@@ -11950,7 +12040,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Set Local Player Leaderboard Stat",
+          "Name": "Leaderboard Set Local Player Stat",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -12088,7 +12178,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "SFX IsPlaying",
+          "Name": "SFX Get Is Playing",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -12462,6 +12552,80 @@
         }
       ]
     },
+    "0ea23792-e987-459e-8cd7-c0c60f667e08": {
+      "ReadonlyName": "Spherecast",
+      "Description": "Fires an invisible sphere of the specified Radius from the Start Position, in the Direction specified. Returns true if any object or player is hit within the target Max Distance. Otherwise, returns false. You can configure the chip itself to ignore players or objects specifically.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Spherecast",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Start Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Radius",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Direction",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Max Distance (m)",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Hit",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Object",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            },
+            {
+              "Name": "Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Hit Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Surface Normal",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
     "aa24edab-c707-4cff-8c73-07e479b4cd07": {
       "ReadonlyName": "String Contains",
       "Description": "Outputs True if the target string contains the input value.",
@@ -12822,7 +12986,7 @@
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Substring",
+          "Name": "String Substring",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -12975,7 +13139,7 @@
       "ReadonlyName": "Text Set Color",
       "Description": "Sets the color for a Text object.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 1,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -12995,6 +13159,51 @@
             {
               "Name": "Color",
               "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Text"
+          ]
+        }
+      ]
+    },
+    "0bfaa337-46a1-472f-beac-12faa21867d4": {
+      "ReadonlyName": "Text Set Color V2",
+      "Description": "Sets the color for a Text Component",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Text Set Color V2",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Text",
+              "Description": ""
+            },
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
               "Description": ""
             }
           ],
@@ -13663,7 +13872,7 @@
       ]
     },
     "6bd92538-6889-41f3-b819-9511e6f81944": {
-      "ReadonlyName": "Vector Cross",
+      "ReadonlyName": "Vector3 Cross",
       "Description": "The cross product of two vectors results in a third vector which is perpendicular to the two input vectors.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -13703,7 +13912,7 @@
       ]
     },
     "498c4e25-f73b-49a6-912e-ae148ed50dca": {
-      "ReadonlyName": "Vector Dot",
+      "ReadonlyName": "Vector3 Dot",
       "Description": "Computes the dot product. Commonly used to determine if the camera is facing a particular direction.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -13743,7 +13952,7 @@
       ]
     },
     "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
-      "ReadonlyName": "Vector Variable",
+      "ReadonlyName": "Vector3 Variable",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -13794,7 +14003,7 @@
       ]
     },
     "92ded211-17d6-4c73-b29c-71323c6a40ee": {
-      "ReadonlyName": "Vector Normalize",
+      "ReadonlyName": "Vector3 Normalize",
       "Description": "Outputs the target vector, but its magnitude is 1.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -13829,7 +14038,7 @@
       ]
     },
     "87aa17b1-7760-4b07-8c44-a2d530590597": {
-      "ReadonlyName": "Vector Scale",
+      "ReadonlyName": "Vector3 Scale",
       "Description": "Multiplies a vector by a scalar.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
@@ -13871,14 +14080,14 @@
       ]
     },
     "814e9337-7542-4851-9da0-c73885ab0b4f": {
-      "ReadonlyName": "Vector Create",
+      "ReadonlyName": "Vector3 Create",
       "Description": "Creates a new vector from X, Y, Z values.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Vector Create",
+          "Name": "Vector3 Create",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -13899,7 +14108,7 @@
           ],
           "Outputs": [
             {
-              "Name": "Vector",
+              "Name": "Vector3",
               "ReadonlyType": "Vector3",
               "Description": ""
             }
@@ -13967,7 +14176,7 @@
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Vector",
+              "Name": "Vector3",
               "ReadonlyType": "Vector3",
               "Description": ""
             }
@@ -13991,18 +14200,18 @@
       ]
     },
     "2d677241-61b7-45d2-aec2-4a302e3483a0": {
-      "ReadonlyName": "Vector Split",
+      "ReadonlyName": "Vector3 Split",
       "Description": "Breaks the X, Y, and Z values out of the input vector.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Vector Split",
+          "Name": "Vector3 Split",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Vector",
+              "Name": "Vector3",
               "ReadonlyType": "Vector3",
               "Description": ""
             }

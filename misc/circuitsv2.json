@@ -3589,7 +3589,7 @@
     "4263768a-035b-4d8b-b17c-1a7bb0b9b96d": {
       "ReadonlyName": "Emitter Set Color V2",
       "Description": "Sets the color for the particles emitted",
-      "IsBetaChip": false,
+      "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -6929,7 +6929,7 @@
     "b2698906-68bd-4ea3-be98-35a23615b522": {
       "ReadonlyName": "Light Set Color V2",
       "Description": "Sets the color for a point light or a spotlight",
-      "IsBetaChip": false,
+      "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -13183,7 +13183,7 @@
     "0bfaa337-46a1-472f-beac-12faa21867d4": {
       "ReadonlyName": "Text Set Color V2",
       "Description": "Sets the color for a Text Component",
-      "IsBetaChip": false,
+      "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [

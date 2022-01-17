@@ -1,6 +1,11 @@
 # Releases
+<<<<<<< HEAD
 - [Version 2.25 (Next Next)](2_25)
 - [Version 2.24 (Next)](2_24)
+=======
+- [Version 2.25 (Next)](2_25)
+- [Version 2.24](2_24)
+>>>>>>> ad6d167102444feb4e99bce40192fa41193e5d1a
 - [Version 2.23](2_23)
 - [Version 2.22](2_22)
 - [Version 2.21](2_21)

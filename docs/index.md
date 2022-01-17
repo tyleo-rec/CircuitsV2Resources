@@ -2,12 +2,18 @@
 
 ## Official Resources
 
+<<<<<<< HEAD
 - [Releases](/releases/)
 - [Designs](/designs/)
+=======
+- [Releases](releases/)
+- [Designs](designs/)
+>>>>>>> ad6d167102444feb4e99bce40192fa41193e5d1a
 - [How To Circuits V2 Blog Post](https://blog.recroom.com/posts/2020/8/3/how-2-circuits-2)
 - [The Circuits Handbook Blog Post](https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook)
 - [Rec Room Discord](https://discord.com/channels/193073071802941451/746858632301510708)
   - Use the #circuits-v2 channel for CircuitsV2 info.
+  - Need help? Make a thread in #circuits-v2-help.
 - [Circuits V2 Canny](https://recroom.canny.io/creative-tools?category=circuits-v2-feedback)
   - Use this page to report bugs and request or upvote new features.
 - [How to Create](https://recroom.com/howtocreate)

@@ -39,7 +39,7 @@
     },
     "46ce50b8-0a20-43d2-9646-484ce2a6752c": {
       "ReadonlyName": "Acos",
-      "Description": "This chip allows you to use the math formula acos",
+      "Description": "Computes the arccosine of a number.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -73,14 +73,14 @@
       ]
     },
     "d7ea08ab-aee6-43d0-99e1-54478ac3db7f": {
-      "ReadonlyName": "Activate Consumable",
-      "Description": "",
-      "IsBetaChip": true,
+      "ReadonlyName": "Consumable Activate",
+      "Description": "Sets the input consumable to active. Use this to confirm a consumable used event. Can also be used independently. Displays the consumable as active in the backback and decreases the number of comsumables the player owns.",
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Activate Consumable",
+          "Name": "Consumable Activate",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -108,21 +108,21 @@
           "FilterPath": [
             "Player",
             "Economy",
-            "Consumables"
+            "Consumable"
           ]
         },
         {
           "FilterPath": [
             "Economy",
-            "Consumables"
+            "Consumable"
           ]
         }
       ]
     },
     "03461631-734f-491b-ab86-6bdf66947556": {
       "ReadonlyName": "Add Currency",
-      "Description": "",
-      "IsBetaChip": true,
+      "Description": "Adds some amount to the Player's balance of one room currency. Configure this chip to set the affected currency.",
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -175,20 +175,20 @@
           "FilterPath": [
             "Player",
             "Economy",
-            "Currencies"
+            "Currency"
           ]
         },
         {
           "FilterPath": [
             "Economy",
-            "Currencies"
+            "Currency"
           ]
         }
       ]
     },
     "0ccb153c-dd08-4f22-80fd-9d8c5940928c": {
       "ReadonlyName": "Add",
-      "Description": "Adds the two input values together.",
+      "Description": "Computes the sum of two or more inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -231,7 +231,7 @@
     },
     "3edc785f-46ef-4f30-b101-a07126d3a370": {
       "ReadonlyName": "AI Get Line of Sight Parameters",
-      "Description": "Outputs the current line of sight parameters from the input AI",
+      "Description": "Outputs the current line of sight parameters from the input AI.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -273,7 +273,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -281,7 +281,7 @@
     },
     "1637b250-e497-4f4a-9d5e-64206488391c": {
       "ReadonlyName": "AI Get Target",
-      "Description": "Outputs the current combat target of an inputted AI",
+      "Description": "Outputs the current combat target of an inputted AI.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -308,7 +308,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -350,7 +350,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -358,7 +358,7 @@
     },
     "b5badf49-acfe-4a42-80e2-5262878e2d89": {
       "ReadonlyName": "AI Look At",
-      "Description": "Command an AI to look at the input target. If you want the AI to look in a passed in vector as a direction, set the “Look Target Is Direction” parameter to true. To make an AI stop looking, use the AI Stop Looking node.",
+      "Description": "Command an AI to look at the input target. If you want the AI to look in a passed in vector as a direction, set the “Look Target Is Direction” parameter to True. To make an AI stop looking, use the AI Stop Looking node.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -402,7 +402,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -410,7 +410,7 @@
     },
     "0e92a7fb-fb38-418c-af39-9afec92112ee": {
       "ReadonlyName": "AI Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nAI represents one of the Rec Room AIs, created with a Spawner Gadget V2.",
+      "Description": "",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -447,13 +447,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Objects"
+            "Variable",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -500,7 +500,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -547,7 +547,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -612,7 +612,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -657,7 +657,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -702,7 +702,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -747,7 +747,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -787,7 +787,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -827,7 +827,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -867,7 +867,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "AI"
           ]
         }
@@ -875,7 +875,7 @@
     },
     "3fb9fd93-8d45-4395-b9a3-63a99a14442b": {
       "ReadonlyName": "And",
-      "Description": "Outputs True only when both inputs are True. If any inputs are False, it outputs False.",
+      "Description": "Outputs True when all inputs are True. If any input is False, it outputs False.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -902,7 +902,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Boolean Function"
           ]
         }
       ]
@@ -1016,7 +1017,7 @@
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyName": "Asin",
-      "Description": "This chip allows you to use the math formula asin",
+      "Description": "Computes the arcsine of a number.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1051,7 +1052,7 @@
     },
     "02d62908-550d-4f8b-8bc7-0960fb1b547f": {
       "ReadonlyName": "Atan2",
-      "Description": "This chip allows you to use the math formula Atan2",
+      "Description": "Computes the 2-argument arctangent of a number.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1091,7 +1092,7 @@
     },
     "84646ed2-015e-4a8b-9d37-5115cb9ebadc": {
       "ReadonlyName": "Atan",
-      "Description": "This chip allows you to use the math formula Atan",
+      "Description": "Computes the arctangent of a number.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1125,14 +1126,14 @@
       ]
     },
     "28a95bc3-ab08-48ae-b0c0-16b41168bf47": {
-      "ReadonlyName": "Bit AND",
-      "Description": "Computes a bitwise AND. The result has a 1 for each bit that is 1 in both of the inputs.",
+      "ReadonlyName": "Bit And",
+      "Description": "Computes a bitwise AND. The result has a bit set for every bit that is set in both of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit AND",
+          "Name": "Bit And",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1166,7 +1167,7 @@
     },
     "d6e62624-06b0-416e-8e3c-ca058efd3c46": {
       "ReadonlyName": "Bit Leading Zeros",
-      "Description": "Counts the number of zeros at the beginning of the binary representation of an integer.",
+      "Description": "Counts the number of zeros at the beginning (most significant side) of the binary representation of an integer.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1200,14 +1201,14 @@
       ]
     },
     "05305e33-a809-4751-b928-2c8a5bbc6dc9": {
-      "ReadonlyName": "Bit NAND",
-      "Description": "Computes a bitwise NAND. (NOT AND) The result has a 1 for each bit that is 0 in either of the inputs.",
+      "ReadonlyName": "Bit Nand",
+      "Description": "Computes a bitwise NAND. (NOT AND) The result has a bit set for every bit that is not set in either of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit NAND",
+          "Name": "Bit Nand",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1240,14 +1241,14 @@
       ]
     },
     "ec74ea41-24e5-491c-8919-a502638583f9": {
-      "ReadonlyName": "Bit NOT",
-      "Description": "Computes a bitwise NOT. The result has a 1 for each bit that is 0 in the input.",
+      "ReadonlyName": "Bit Not",
+      "Description": "Computes a bitwise NOT. The result has a bit set for every bit that is not set in the input.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit NOT",
+          "Name": "Bit Not",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1275,14 +1276,14 @@
       ]
     },
     "2c24bc11-9543-4738-8c6c-0c5e3fadd944": {
-      "ReadonlyName": "Bit OR",
-      "Description": "Computes a bitwise OR. The result has a 1 for each bit that is 1 in either of the inputs.",
+      "ReadonlyName": "Bit Or",
+      "Description": "Computes a bitwise OR. The result has a bit set for every bit that is set in either of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit OR",
+          "Name": "Bit Or",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1316,7 +1317,7 @@
     },
     "6982e235-5814-4c5a-8bc8-fdbcc9a73eb8": {
       "ReadonlyName": "Bit Pop Count",
-      "Description": "Counts the number of ones in the binary representation of an integer.",
+      "Description": "Counts the number of set bits in the binary representation of an integer.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1511,7 +1512,7 @@
     },
     "773d361e-3761-497b-9dec-b5e5313a5a2c": {
       "ReadonlyName": "Bit Trailing Zeros",
-      "Description": "Counts the number of zeros at the end of the binary representation of an integer.",
+      "Description": "Counts the number of zeros at the end (least significant side) of the binary representation of an integer.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1545,14 +1546,14 @@
       ]
     },
     "a3899394-1ed9-4d41-a836-22fffaf4e90d": {
-      "ReadonlyName": "Bit XOR",
-      "Description": "Computes a bitwise XOR. The result has a 1 for each bit that is 1 in exactly one of the inputs.",
+      "ReadonlyName": "Bit Xor",
+      "Description": "Computes a bitwise XOR. The result has a bit set for every bit that is set in exactly one of the inputs.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Bit XOR",
+          "Name": "Bit Xor",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -1586,7 +1587,7 @@
     },
     "80955588-7f7a-4f7c-b46f-6d1e9057fba0": {
       "ReadonlyName": "bool Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nBools represent a boolean True or False value. They can be used with an If chip to make decisions in your code.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -1623,20 +1624,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
+            "Variable",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Variable"
           ]
         }
       ]
     },
     "7adc6ab1-fcab-4746-aec6-006352e29cdc": {
       "ReadonlyName": "If",
-      "Description": "Takes a boolean condition as an input. If true, the “then” exec pin fires. If false, the “else” exec pin fires.",
+      "Description": "Takes a boolean condition as an input. If True, the \"Then\" exec pin fires. If False, the \"Else\" exec pin fires.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1683,7 +1685,8 @@
         },
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Control Flow"
           ]
         }
       ]
@@ -1759,7 +1762,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Button"
           ]
         }
@@ -1794,7 +1797,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Button"
           ]
         }
@@ -1839,7 +1842,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Button"
           ]
         }
@@ -1847,7 +1850,7 @@
     },
     "f4cbc476-bc98-4cbf-bf47-de4baedddf79": {
       "ReadonlyName": "Ceil",
-      "Description": "This chip allows you to use the math formula Ceil",
+      "Description": "Returns the least integral value greater than or equal to the input value.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -1915,7 +1918,7 @@
         },
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         }
       ]
@@ -1938,7 +1941,7 @@
     "a542e800-22c8-4e0b-ac4d-ea712875a5f8": {
       "ReadonlyName": "Clear Current Subtitle",
       "Description": "Clears any subtitle which is currently being displayed.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -1975,9 +1978,116 @@
         }
       ]
     },
+    "87a8e178-b15c-4c38-9da0-95ba74f9f4ec": {
+      "ReadonlyName": "Color Constant",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Color Constant",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Constant"
+          ]
+        }
+      ]
+    },
+    "3d2fd0b5-eeac-45cc-a622-1701710f0792": {
+      "ReadonlyName": "Color Variable",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Color Variable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variable",
+            "Primitive"
+          ]
+        }
+      ]
+    },
+    "8e412141-635d-435c-a900-f40d8a261906": {
+      "ReadonlyName": "Color To Int",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Color To Int",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Int",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Conversion"
+          ]
+        }
+      ]
+    },
     "c0ee02f4-bbab-40ea-88a0-7441d7e7094c": {
       "ReadonlyName": "Combatant Get Ground Position",
-      "Description": "Outputs the ground position of an input combatant",
+      "Description": "Outputs the ground position of an input combatant.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2006,7 +2116,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
@@ -2050,11 +2160,18 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Combatant"
+          ]
+        }
+      ]
     },
     "2a12c389-c3c6-4484-8c63-21cdaf0fac6c": {
       "ReadonlyName": "Combatant Get Is Alive",
-      "Description": "Outputs true if the input combatant is alive.",
+      "Description": "Outputs True if the input combatant is alive.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2083,7 +2200,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
@@ -2125,7 +2242,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
@@ -2133,7 +2250,7 @@
     },
     "cfd8e246-8682-4707-a0ae-da55bacfbf72": {
       "ReadonlyName": "Combatant Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nCombatants represent something that can engage in combat, either a Player or an AI.",
+      "Description": "",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -2170,13 +2287,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Objects"
+            "Variable",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
@@ -2234,7 +2351,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
@@ -2281,7 +2398,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
@@ -2328,7 +2445,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
@@ -2373,21 +2490,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
           ]
         }
       ]
     },
     "3dc63876-39a9-4828-9967-67821e620cb1": {
-      "ReadonlyName": "Constant (Consumable)",
+      "ReadonlyName": "Consumable Constant",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Constant (Consumable)",
+          "Name": "Consumable Constant",
           "ReadonlyTypeParams": {},
           "Inputs": [],
           "Outputs": [
@@ -2404,20 +2521,25 @@
           "FilterPath": [
             "Player",
             "Economy",
-            "Consumables"
+            "Consumable"
           ]
         },
         {
           "FilterPath": [
             "Economy",
-            "Consumables"
+            "Consumable"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constant"
           ]
         }
       ]
     },
     "e8659a59-9e11-4403-8bbc-f4a3961cbf21": {
       "ReadonlyName": "Cos",
-      "Description": "This chip allows you to use the math formula Cos",
+      "Description": "Computes the cosine of a number.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2452,7 +2574,7 @@
     },
     "1f57e165-dee2-470d-9ab2-9c836aeccccf": {
       "ReadonlyName": "Costume Equip",
-      "Description": "Equip a player with a costume",
+      "Description": "Equip a Player with a costume.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2489,7 +2611,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Costume"
           ]
         }
@@ -2497,7 +2619,7 @@
     },
     "f28d1a5e-a08c-471b-89e6-5ee6372d9897": {
       "ReadonlyName": "Costume Get Wearer",
-      "Description": "Get player wearing a costume",
+      "Description": "Get Player wearing a costume.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2524,7 +2646,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Costume"
           ]
         }
@@ -2532,7 +2654,7 @@
     },
     "d5070b89-da23-4e4b-848c-07bb22c0420e": {
       "ReadonlyName": "Costume Unequip",
-      "Description": "Unequip a costume",
+      "Description": "Unequip a costume.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2569,7 +2691,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Costume"
           ]
         }
@@ -2614,7 +2736,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -2622,7 +2744,7 @@
     },
     "81939b0e-428f-481c-9fba-453b4c84f01e": {
       "ReadonlyName": "Rec Room Object Add Tags",
-      "Description": "Assigns tags to the input object.",
+      "Description": "Adds tags to the input object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2659,7 +2781,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -2667,7 +2789,7 @@
     },
     "02d69553-ae96-4c2d-8477-59ada6a66783": {
       "ReadonlyName": "Rec Room Object Get All with Tag",
-      "Description": "Searches the room for all objects with a specified tag. Outputs all objects with the input tag in a list.",
+      "Description": "Searches the room for all objects with a specified tag. Outputs all objects with the input tag as a list.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2694,7 +2816,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -2702,7 +2824,7 @@
     },
     "9e51fcdc-87b4-4eee-a7b1-8d6f86a5fa6b": {
       "ReadonlyName": "Rec Room Object Get Authority",
-      "Description": "Outputs the authority player of the input RecRoomObject",
+      "Description": "Outputs the authority Player of the input object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2729,7 +2851,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         },
@@ -2742,7 +2864,7 @@
     },
     "cb909206-8627-4c66-ac8d-47b1a046ef8b": {
       "ReadonlyName": "Rec Room Object Get First Tag",
-      "Description": "Gets the first tag from an object.",
+      "Description": "Gets the first tag of an object.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2769,7 +2891,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -2804,7 +2926,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -2812,7 +2934,7 @@
     },
     "b0497de0-3dd3-470d-a421-8f0d321bfc3e": {
       "ReadonlyName": "Rec Room Object Get Is Local Player Authority",
-      "Description": "Outputs true on the player's machine who has authority of the input.",
+      "Description": "Outputs True on the player's machine who has authority of the input.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2839,20 +2961,26 @@
       "NodeFilters": [
         {
           "FilterPath": [
+            "Object",
+            "Rec Room Object"
+          ]
+        },
+        {
+          "FilterPath": [
             "Networking"
           ]
         }
       ]
     },
     "a76a9898-4add-4765-9f5b-f366b586e51c": {
-      "ReadonlyName": "Get Player Last Equipped Object",
-      "Description": "Returns the player who last held an object",
+      "ReadonlyName": "Rec Room Object Get Last Equipping Player",
+      "Description": "Returns the player who last held an object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Player Last Equipped Object",
+          "Name": "Rec Room Object Get Last Equipping Player",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -2878,7 +3006,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         },
@@ -2919,7 +3047,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -2927,7 +3055,7 @@
     },
     "bc3011d2-c085-490e-a450-195ff3a27009": {
       "ReadonlyName": "Rec Room Object Has Tag",
-      "Description": "Outputs true if the input object has the input tag.",
+      "Description": "Outputs True if the input object has the input tag.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -2959,7 +3087,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -2967,7 +3095,7 @@
     },
     "7077d139-9876-495e-9756-58150fef9f3b": {
       "ReadonlyName": "Rec Room Object Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name. When a variable is configured to be synced, its value will be the same across all players' games.\nRec Room Objects represent a given object in the room. If the represented object is deleted, the value will become invalid. All components (Text, Pistons, etc) are Rec Room Objects, and a Rec Room Object which represents a component can be used as an input to its chips.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -3004,13 +3132,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Objects"
+            "Variable",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -3018,7 +3146,7 @@
     },
     "207c6721-b242-4dc2-857d-ebd1ff7c8624": {
       "ReadonlyName": "Rec Room Object Remove Tag",
-      "Description": "Removes the tag from the object.",
+      "Description": "Removes a tag from the object.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3055,7 +3183,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -3100,21 +3228,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
       ]
     },
     "6809978a-e1fc-403a-a41a-d4e94f22281f": {
-      "ReadonlyName": "Deactivate Consumable",
-      "Description": "",
-      "IsBetaChip": true,
+      "ReadonlyName": "Consumable Deactivate",
+      "Description": "Sets the input consumable to inactive. Displays the consumable as not active in the backback and allow using another one.",
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Deactivate Consumable",
+          "Name": "Consumable Deactivate",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -3142,20 +3270,20 @@
           "FilterPath": [
             "Player",
             "Economy",
-            "Consumables"
+            "Consumable"
           ]
         },
         {
           "FilterPath": [
             "Economy",
-            "Consumables"
+            "Consumable"
           ]
         }
       ]
     },
     "cefee2a5-d4a8-4dff-8c4e-bad684ca8d34": {
       "ReadonlyName": "Delay",
-      "Description": "Fires outputs based on the inputted time to delay. The Run exec fires as soon as the node is executed. The After Delay exec fires once the input delay duration has completed. After Canceled fires after the delay node’s Cancel exec has been fired. Cancel cancels all current delays running from this node.",
+      "Description": "Fires outputs based on the inputted time to delay. The Run exec fires as soon as the node is executed. The After Delay exec fires once the input delay duration has completed. After Canceled fires after the delay node’s Cancel exec has been fired. Cancel cancels all current delays running from this node, except for delays scheduled for the next tick.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3202,6 +3330,11 @@
       "NodeFilters": [
         {
           "FilterPath": [
+            "Control Flow"
+          ]
+        },
+        {
+          "FilterPath": [
             "Time"
           ]
         },
@@ -3214,7 +3347,7 @@
     },
     "c1fdc4fa-fcb4-4ea4-b505-7b1d15fb8117": {
       "ReadonlyName": "Dice Get Player Rolled",
-      "Description": "Returns the player who rolled the dice",
+      "Description": "Returns the player who rolled the dice.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3241,7 +3374,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Dice"
           ]
         }
@@ -3249,7 +3382,7 @@
     },
     "c80e2979-c672-4e7a-81fb-0ed1964e3ea6": {
       "ReadonlyName": "Dice Get Result",
-      "Description": "Returns the result of the dice",
+      "Description": "Returns the result of the dice.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3276,7 +3409,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Dice"
           ]
         }
@@ -3284,7 +3417,7 @@
     },
     "b8735ad9-cd89-4d81-ab9b-be3eb50e3b5a": {
       "ReadonlyName": "Dice Get Roll finished",
-      "Description": "Outputs an exec when the dice finished rolling",
+      "Description": "Outputs an exec when the dice finished rolling.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3311,7 +3444,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Dice"
           ]
         }
@@ -3410,9 +3543,9 @@
     },
     "15e42063-cbae-40f9-a9e4-8226e83217ec": {
       "ReadonlyName": "Emitter Set Color",
-      "Description": "Sets the color for the particles emitted",
+      "Description": "Sets the color for the particles emitted.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 1,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -3447,7 +3580,52 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
+            "Emitter"
+          ]
+        }
+      ]
+    },
+    "4263768a-035b-4d8b-b17c-1a7bb0b9b96d": {
+      "ReadonlyName": "Emitter Set Color V2",
+      "Description": "Sets the color for the particles emitted",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Emitter Set Color V2",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Emitter",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
             "Emitter"
           ]
         }
@@ -3455,7 +3633,7 @@
     },
     "36881bd0-7da0-44a7-b6ef-8cd3770fed78": {
       "ReadonlyName": "Emitter Set Looping",
-      "Description": "Makes the emitter emit continuously",
+      "Description": "Makes the emitter emit continuously or not.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3492,7 +3670,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Emitter"
           ]
         }
@@ -3500,7 +3678,7 @@
     },
     "1fdf4bab-c868-4ffb-8bfc-b2e360450495": {
       "ReadonlyName": "Emitter Set Size",
-      "Description": "Sets the size of the particles emitted",
+      "Description": "Sets the size of the particles emitted.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3537,7 +3715,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Emitter"
           ]
         }
@@ -3545,7 +3723,7 @@
     },
     "12446960-d971-475f-b64e-b5c7bb422eca": {
       "ReadonlyName": "Emitter Set Speed",
-      "Description": "Sets the speed particles are emitted",
+      "Description": "Sets the speed particles are emitted.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3582,7 +3760,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Emitter"
           ]
         }
@@ -3590,7 +3768,7 @@
     },
     "56ebaa0b-256a-40ed-a066-f5663dfa2b59": {
       "ReadonlyName": "Emitter Start",
-      "Description": "Starts emitting particles",
+      "Description": "Starts emitting particles.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3622,7 +3800,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Emitter"
           ]
         }
@@ -3630,7 +3808,7 @@
     },
     "23b278c4-5d3d-439d-afa3-ff30c949df97": {
       "ReadonlyName": "Emitter Stop",
-      "Description": "Stops emitting particles",
+      "Description": "Stops emitting particles.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3662,7 +3840,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Emitter"
           ]
         }
@@ -3670,7 +3848,7 @@
     },
     "3663225d-e18d-40e6-a234-ef10378528be": {
       "ReadonlyName": "Equals",
-      "Description": "Compares the two inputted values and outputs true if they are the same. False if they are different.",
+      "Description": "Compares the two input values and outputs True if they are the same. False if they are different.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3704,7 +3882,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Comparison"
           ]
         },
         {
@@ -3736,7 +3915,7 @@
         },
         {
           "FilterPath": [
-            "Events"
+            "Event"
           ]
         }
       ]
@@ -3764,7 +3943,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Events"
+            "Event"
           ]
         },
         {
@@ -3803,7 +3982,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Events"
+            "Event"
           ]
         },
         {
@@ -3815,7 +3994,7 @@
     },
     "04a31ca5-91d2-4a69-bf3d-484d18411cc0": {
       "ReadonlyName": "float Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nFloats can represent most real numbers from -3.4e38 to 3.4e38, though they are only accurate to approximately 7 significant digits.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -3852,8 +4031,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
+            "Variable",
+            "Primitive"
           ]
         },
         {
@@ -3866,7 +4045,7 @@
     },
     "c90d9339-cdce-4d22-a885-f142fd5567ab": {
       "ReadonlyName": "Floor",
-      "Description": "Returns the smallest value less than or equal to the input value.",
+      "Description": "Returns the smallest integral value less than or equal to the input value.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -3934,7 +4113,7 @@
         },
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         }
       ]
@@ -3992,7 +4171,7 @@
     },
     "8f945c22-988b-45d2-b7f2-409ba304fef4": {
       "ReadonlyName": "For",
-      "Description": "Iterates over the “From” pin (inclusive) to the “To” pin (exclusive)",
+      "Description": "Iterates over the \"From\" pin (inclusive) to the \"To\" pin (exclusive).",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4075,13 +4254,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         },
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         }
       ]
@@ -4109,7 +4288,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Utilities"
           ]
         }
       ]
@@ -4144,8 +4324,8 @@
     },
     "a4b0c860-e7f0-4abf-ad7c-9be1805c3d01": {
       "ReadonlyName": "Get Currency Balance",
-      "Description": "",
-      "IsBetaChip": true,
+      "Description": "Returns the local players balance of one room currency. Configure this chip to selecht which currency to use.",
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -4193,20 +4373,20 @@
           "FilterPath": [
             "Player",
             "Economy",
-            "Currencies"
+            "Currency"
           ]
         },
         {
           "FilterPath": [
             "Economy",
-            "Currencies"
+            "Currency"
           ]
         }
       ]
     },
     "78f5a9f2-4e3d-4534-aada-4af3a551a953": {
       "ReadonlyName": "Get Broadcasting Attendance",
-      "Description": "Outputs player counts if you're in an event that's actively broadcasting",
+      "Description": "Outputs player counts if you're in an event that's actively broadcasting.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4237,14 +4417,14 @@
       "NodeFilters": []
     },
     "e8c5082f-0a75-4025-9679-293bc8d72989": {
-      "ReadonlyName": "Get Element",
-      "Description": "Gets a specified element from the input list. The element you want to retrieve is called the “index” and is the location of the element in the list. The first element in the list is at index 0, the second element is at index 1.",
+      "ReadonlyName": "List Get Element",
+      "Description": "Gets a specified element from the input list. The \"Index\" is the location of the element in the list. The first element in the list is at index 0, the second element is at index 1.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Element",
+          "Name": "List Get Element",
           "ReadonlyTypeParams": {
             "T": "any"
           },
@@ -4272,7 +4452,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -4280,7 +4460,7 @@
     },
     "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
       "ReadonlyName": "Time Get Universal Seconds",
-      "Description": "Gets the amount of seconds since 1970",
+      "Description": "Gets the number of seconds since 1970. Uses local player's system clock. This is not synchronized between players!",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4307,14 +4487,14 @@
       ]
     },
     "a924cac0-0245-4846-862d-df4092c5e1c2": {
-      "ReadonlyName": "Get First Player with Role",
-      "Description": "Gets the first player with a role. Returns invalid player if no player     has the role.",
+      "ReadonlyName": "Get Any Player with Role",
+      "Description": "Gets a player with the role. Returns invalid player if no player has the role.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get First Player with Role",
+          "Name": "Get Any Player with Role",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -4335,14 +4515,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Role"
           ]
         }
       ]
     },
     "88f95338-d1a6-4fad-8424-d714d651f6ac": {
       "ReadonlyName": "Get Forward Vector",
-      "Description": "Gets the forward of the target, output as a vector3.",
+      "Description": "Gets the forward direction of a target, output as a vector3.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4376,12 +4557,13 @@
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
@@ -4417,7 +4599,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -4451,7 +4633,8 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
@@ -4484,7 +4667,8 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
@@ -4517,14 +4701,15 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "12cf9781-1e1b-4e59-a783-c7214b66be8a": {
       "ReadonlyName": "Get Local Player Leaderboard Stat",
-      "Description": "Get leaderboard stat for local player on stat channel 1, 2 or 3",
+      "Description": "Get leaderboard stat for local player on stat channel 1, 2 or 3.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4595,7 +4780,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Networking"
           ]
         },
         {
@@ -4628,7 +4814,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
@@ -4669,12 +4855,14 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
@@ -4682,7 +4870,7 @@
     "dcbd4d6a-8f42-48ef-ad66-e1f245228d84": {
       "ReadonlyName": "Get Party Of Player",
       "Description": "Returns the party of the input player as List<Player>. If the player is not in a party, it will return a list containing only that player.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -4716,7 +4904,7 @@
     },
     "6141ff64-412b-452f-beb0-f338eb6abfb5": {
       "ReadonlyName": "Get Player Account Name",
-      "Description": "Outputs the player's Account name (e.g Coach) in a form of a string",
+      "Description": "Outputs the player's Account name (e.g Coach) in a form of a string. To get a display name, use To String.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4743,14 +4931,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Name"
           ]
         }
       ]
     },
     "2ee5a268-9d44-4326-8a34-ad126a3218f2": {
       "ReadonlyName": "Get Player By Account Name",
-      "Description": "Gets a player value type based on an Account Name. (e.g My Account name is @Coach and if I input the string \"Coach\", the output would be my player value type.) Outputs an Invalid Player if nobody in the room has the given account name.",
+      "Description": "Gets a Player based on an Account Name. (E.g. my account name is @Coach and if I input the string \"Coach\", the output would be my Player object.) Outputs an invalid Player if nobody in the room has the given account name.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4777,14 +4966,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Name"
           ]
         }
       ]
     },
     "637e07e4-9b93-44b6-bba3-68966080d064": {
       "ReadonlyName": "Get Player By Display Name",
-      "Description": "Gets a player value type based on a Display Name. (e.g My Display Name is Coach and if I input a string \"Coach\", the output would be my player value type.) Outputs an Invalid Player if nobody in the room has the given display name.",
+      "Description": "Gets a Player based on a display name. (E.g. my display name is Coach and if I input a string \"Coach\", the output would be my Player object.) Outputs an invalid Player if nobody in the room has the given display name.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4811,20 +5001,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Name"
           ]
         }
       ]
     },
     "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
-      "ReadonlyName": "Get Players With Role",
-      "Description": "Outpus a player value type list that continues every player with a certain role",
+      "ReadonlyName": "Get All Players With Role",
+      "Description": "Outpus List<Player> that continues every player with the specified role.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Players With Role",
+          "Name": "Get All Players With Role",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -4845,7 +5036,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Role"
           ]
         }
       ]
@@ -4886,19 +5078,21 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
     },
     "8722445f-e552-4d4a-bced-8afa63bbf70b": {
       "ReadonlyName": "Time Get Precise Seconds",
-      "Description": "Gets the amount of seconds since a player launched Rec Room",
+      "Description": "Gets the amount of seconds since a player launched Rec Room.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4926,7 +5120,7 @@
     },
     "d7557465-963e-4451-a55a-dea2050e9b74": {
       "ReadonlyName": "Get Room Authority",
-      "Description": "Returns the player who is the room Authority player.",
+      "Description": "Returns the player who is the room authority.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4988,19 +5182,21 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
     },
     "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
       "ReadonlyName": "Time Get Universal Time",
-      "Description": "Gets the UTC time zone Time.",
+      "Description": "Gets the UTC time. Uses local player's system clock. This is not synchronized between players! This is also not guaranteed to be continuous. To measure time, use Time Get Precise Seconds instead.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -5087,19 +5283,21 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
     },
     "110c29b1-ac90-4a71-b3c0-53372aa134bc": {
       "ReadonlyName": "Greater Than",
-      "Description": "Returns true if input A is greater than input B",
+      "Description": "Returns True if input A is greater than input B.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -5133,14 +5331,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Comparison"
           ]
         }
       ]
     },
     "a10e7788-f016-4390-a68e-87d93b47edb1": {
       "ReadonlyName": "Greater or Equal",
-      "Description": "Returns true if input A is greater or equal than input B",
+      "Description": "Returns True if input A is greater than or equal to input B.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -5174,7 +5373,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Comparison"
           ]
         }
       ]
@@ -5182,7 +5382,7 @@
     "dc78ca9e-29c4-4cba-a6cb-3ea87ffbe780": {
       "ReadonlyName": "Ground Vehicle Add Boost Fuel",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5218,8 +5418,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5227,7 +5427,7 @@
     "29dd429b-81e5-40c7-b3b6-8d03bcc1eec3": {
       "ReadonlyName": "Ground Vehicle Apply Boost",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5263,8 +5463,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5272,7 +5472,7 @@
     "76d46244-7b8e-43de-bd8c-55375411ffe1": {
       "ReadonlyName": "Ground Vehicle Get Boost Fuel",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5298,8 +5498,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5307,7 +5507,7 @@
     "f41ae49a-dbf3-4b4b-87dc-68614da242cc": {
       "ReadonlyName": "Ground Vehicle Get Driving Enabled",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5333,8 +5533,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5342,7 +5542,7 @@
     "390257d5-e382-4416-81f7-40562d5473d3": {
       "ReadonlyName": "Ground Vehicle Get Engine Torque Multiplier",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5368,8 +5568,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5377,7 +5577,7 @@
     "d150c8fa-91fd-4483-a8b5-ca6c62f2c648": {
       "ReadonlyName": "Ground Vehicle Get Seated Player",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5408,8 +5608,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5417,7 +5617,7 @@
     "0fcc3c15-5ee0-4af9-a4de-94627fbba6ec": {
       "ReadonlyName": "Ground Vehicle Get Wheel Friction Multiplier",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5443,8 +5643,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5452,7 +5652,7 @@
     "6c7a86cc-2145-404c-b029-31d22f9811e7": {
       "ReadonlyName": "Ground Vehicle Set Driving Enabled",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5488,8 +5688,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5497,7 +5697,7 @@
     "128116c8-591f-44bc-97cd-f787d660cfb5": {
       "ReadonlyName": "Ground Vehicle Set Engine Torque Multiplier",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5533,8 +5733,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5542,7 +5742,7 @@
     "50458d97-a7cf-45e3-892b-fb67c0fbe64b": {
       "ReadonlyName": "Ground Vehicle Set Seated Player",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5588,8 +5788,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5597,7 +5797,7 @@
     "d00aed86-97ac-4717-872e-ca6646ee266d": {
       "ReadonlyName": "Ground Vehicle Set Wheel Friction Multiplier",
       "Description": "Wheel Friction affects how good the wheels are at gripping the ground - lower values decrease traction and make the wheels slip more and higher values can increase traction and make the wheels slip less. 1 is the default value for Wheel Friction.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5633,8 +5833,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5642,7 +5842,7 @@
     "4bb12ec4-780e-4186-a597-36bdc5c67b43": {
       "ReadonlyName": "Ground Vehicle Unseat Player From Seat",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5683,8 +5883,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
@@ -5692,7 +5892,7 @@
     "5815406b-a3f2-471e-88ec-dffc212293be": {
       "ReadonlyName": "Ground Vehicle Unseat Player",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -5733,15 +5933,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
-            "Vehicles"
+            "Object",
+            "Vehicle"
           ]
         }
       ]
     },
     "a4f8a9a1-fd7b-4702-8345-93ae4d57f333": {
       "ReadonlyName": "If Expression",
-      "Description": "Outputs an input value based on the input conditional. Outputs the “then” input if the inputted conditional is true. Outputs the “else” input if the input conditional is false.",
+      "Description": "Outputs one input value based on the input condition. Outputs the \"Then\" input if the input condition is True. Outputs the \"Else\" input if the input condition is False. Only reads one of the inputs, not both.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -5780,7 +5980,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Control Flow"
+            "Commonly Used"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Logic",
+            "Ternary Operator"
           ]
         }
       ]
@@ -5865,7 +6071,7 @@
     },
     "6d69bee8-0d77-4d5f-bf35-9794eaaabe81": {
       "ReadonlyName": "If Local Player Should Run",
-      "Description": "The \"Should Run\" port will exec If the input player is local or if input player is authority over the current context (prefers if the player is local).",
+      "Description": "The \"Should Run\" port will exec a) if the input player is local or b) if input player is invalid and the local player has authority of the current context.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6007,12 +6213,14 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
@@ -6078,12 +6286,14 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
@@ -6139,19 +6349,181 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "0c351297-db4d-43e7-81a3-95dc5ddde401": {
+      "ReadonlyName": "Interaction Volume Get Interaction Prompt",
+      "Description": "Gets the interaction promt of an Interaction Volume.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Get Interaction Prompt",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Interaction Prompt",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
+    "c536089c-e2c3-4a6a-a4fa-aba8dca6b810": {
+      "ReadonlyName": "Interaction Volume Get Is Locked",
+      "Description": "Returns False if the Interaction Volume is enabled, and True if it is locked.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Get Is Locked",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Locked",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
+    "380d8467-bdfa-4724-a62c-1955831f994a": {
+      "ReadonlyName": "Interaction Volume Set Interaction Prompt",
+      "Description": "Sets the interaction promt of an Interaction Volume.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Set Interaction Prompt",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            },
+            {
+              "Name": "Interaction Prompt",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
+    "a1e57113-f0b5-45c5-b1e0-95163674daa4": {
+      "ReadonlyName": "Interaction Volume Set Locked",
+      "Description": "Disables or enables an Interaction Volume (but reversed).",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Set Locked",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            },
+            {
+              "Name": "Locked",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume"
           ]
         }
       ]
     },
     "33224907-68ff-4102-802e-7c3eed481d37": {
       "ReadonlyName": "int Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nInts can represent any integer from -2 147 483 648 to 2 147 483 647.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6188,8 +6560,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
+            "Variable",
+            "Primitive"
           ]
         },
         {
@@ -6235,14 +6607,14 @@
         },
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         }
       ]
     },
     "24a1be50-ef1b-4e54-836b-4a2a95780b4e": {
       "ReadonlyName": "Is Valid",
-      "Description": "Returns true if the input variable is not null. Certain variable types must be set before use because they can't have a default value. A Rec Room Object variable that isn't set isn't going to be valid.",
+      "Description": "Returns True if the input variable is not null. Certain variable types must be set before use because they can't have a default value. A Rec Room Object variable that isn't set isn't going to be valid.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6278,7 +6650,7 @@
     },
     "91b0ffa8-4eb1-4a30-aaf3-7a049071cb42": {
       "ReadonlyName": "Lerp",
-      "Description": "This chip allows you to use the math formula Lerp",
+      "Description": "Computes a linear interpolation.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6326,12 +6698,18 @@
             "Math",
             "Vector"
           ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
         }
       ]
     },
     "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
       "ReadonlyName": "Less Than",
-      "Description": "Returns true if input A is less than input B.",
+      "Description": "Returns True if input A is less than input B.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6365,14 +6743,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Comparison"
           ]
         }
       ]
     },
     "a027073f-9189-457f-a53d-8562e8829daf": {
       "ReadonlyName": "Less or Equal",
-      "Description": "Returns true if input A is less than or equal to input B.",
+      "Description": "Returns True if input A is less than or equal to input B.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6406,16 +6785,17 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Comparison"
           ]
         }
       ]
     },
     "873d8765-9dc7-41ea-87ef-dd6e32119af8": {
       "ReadonlyName": "Light Set Angle",
-      "Description": "Sets the size of the spotlight's area",
+      "Description": "Sets the angle of the spotlight's cone.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6450,7 +6830,52 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
+            "Light"
+          ]
+        }
+      ]
+    },
+    "494ceaa7-3520-4f5b-87e0-7dd08334730c": {
+      "ReadonlyName": "Light Set Angle",
+      "Description": "Sets the angle of the spotlight's cone.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Angle",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Angle",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
             "Light"
           ]
         }
@@ -6458,9 +6883,9 @@
     },
     "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
       "ReadonlyName": "Light Set Color",
-      "Description": "Sets the color for a point light or a spotlight",
+      "Description": "Sets the color for a point light or a spotlight.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 1,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6495,7 +6920,52 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
+            "Light"
+          ]
+        }
+      ]
+    },
+    "b2698906-68bd-4ea3-be98-35a23615b522": {
+      "ReadonlyName": "Light Set Color V2",
+      "Description": "Sets the color for a point light or a spotlight",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Color V2",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
             "Light"
           ]
         }
@@ -6503,9 +6973,9 @@
     },
     "902a47c8-3834-4858-bbae-5357281a507d": {
       "ReadonlyName": "Light Set Intensity",
-      "Description": "Sets the brightness level for a point light or a spotlight",
+      "Description": "Sets the brightness level for a point light or a spotlight.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6540,7 +7010,52 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
+            "Light"
+          ]
+        }
+      ]
+    },
+    "aa6dc013-3f5b-45f4-87a2-8aa4d16cc375": {
+      "ReadonlyName": "Light Set Intensity",
+      "Description": "Sets the brightness level for a point light or a spotlight.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Intensity",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Intensity",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
             "Light"
           ]
         }
@@ -6548,9 +7063,9 @@
     },
     "c3d0ef1f-921c-4602-a6eb-b03ed46d556f": {
       "ReadonlyName": "Light Set Range",
-      "Description": "Sets the range of a point light or a spotlight",
+      "Description": "Sets the range of a point light or a spotlight.",
       "IsBetaChip": false,
-      "DeprecationStage": 0,
+      "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -6585,7 +7100,52 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
+            "Light"
+          ]
+        }
+      ]
+    },
+    "214bb1b7-f808-4a36-9c10-113045b4fe44": {
+      "ReadonlyName": "Light Set Range",
+      "Description": "Sets the range of a point light or a spotlight.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Light Set Range",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Range",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
             "Light"
           ]
         }
@@ -6593,7 +7153,7 @@
     },
     "0f96406e-af69-4f6c-a430-c6b004457ef4": {
       "ReadonlyName": "Light Turn Off",
-      "Description": "Turns off the point light or the spotlight",
+      "Description": "Turns off the point light or the spotlight.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6625,7 +7185,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Light"
           ]
         }
@@ -6633,7 +7193,7 @@
     },
     "5452c480-62f9-4d4e-b615-0f59e645d8db": {
       "ReadonlyName": "Light Turn On",
-      "Description": "Turns on the point light or the spotlight",
+      "Description": "Turns on the point light or the spotlight.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6665,7 +7225,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Light"
           ]
         }
@@ -6712,7 +7272,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -6720,7 +7280,7 @@
     },
     "7d474bd7-ee53-4e6d-a45f-cd64fce1c0dc": {
       "ReadonlyName": "List All True",
-      "Description": "If all of the bool values in the list are true then return ture",
+      "Description": "If all of the bool values in the list are True then return ture.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6747,21 +7307,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Logic"
           ]
         },
         {
           "FilterPath": [
             "Logic",
-            "Lists"
+            "List"
           ]
         }
       ]
     },
     "f9589495-685e-4e14-af2e-5cd45f860021": {
       "ReadonlyName": "List Any True",
-      "Description": "If any bool value in the list is true then return true.",
+      "Description": "If any bool value in the list is True then return True.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6788,21 +7348,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Logic"
           ]
         },
         {
           "FilterPath": [
             "Logic",
-            "Lists"
+            "List"
           ]
         }
       ]
     },
     "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
       "ReadonlyName": "List<bool> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<bool> represents multiple bools with a specific order. List<bool> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6839,35 +7399,94 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
+            "List",
+            "Variable",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
+            "Variable",
+            "List",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
             "Logic",
-            "Lists"
+            "List"
           ]
         },
         {
           "FilterPath": [
-            "Lists",
+            "Logic",
+            "Variable"
+          ]
+        },
+        {
+          "FilterPath": [
+            "List",
             "Logic"
+          ]
+        }
+      ]
+    },
+    "9216dded-da74-49a7-a327-5750f4809787": {
+      "ReadonlyName": "List<Color> Variable",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "List<Color> Variable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "List<Color>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "List<Color>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variable",
+            "List",
+            "Primitive"
+          ]
+        },
+        {
+          "FilterPath": [
+            "List",
+            "Variable",
+            "Primitive"
           ]
         }
       ]
     },
     "0e2f21e0-bc71-423a-a983-72e27193ca8b": {
       "ReadonlyName": "List Concat",
-      "Description": "Combine lists together into one list",
+      "Description": "Combine lists together into one list.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6901,7 +7520,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -6909,7 +7528,7 @@
     },
     "73f261e2-d65d-4607-858d-3f4c37c76963": {
       "ReadonlyName": "List Contains",
-      "Description": "Outputs true if the target list contains the input value.",
+      "Description": "Outputs True if the target list contains the input value.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6943,7 +7562,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -6951,7 +7570,7 @@
     },
     "536e376c-087d-4909-9412-3fcee5d6f52b": {
       "ReadonlyName": "List<Rec Room Object> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Rec Room Object> represents multiple Rec Room Objects with a specific order. List<Rec Room Object> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -6988,21 +7607,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Objects"
+            "List",
+            "Variable",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Variables",
-            "Lists",
-            "Objects"
+            "Variable",
+            "List",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -7039,21 +7658,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Math"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
           ]
         }
       ]
     },
     "9bcd36e6-c293-432a-8d90-f6391fe06c62": {
       "ReadonlyName": "List<float> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<float> represents multiple floats with a specific order. List<float> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7090,22 +7709,106 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
+            "List",
+            "Variable",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
+            "Variable",
+            "List",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
+          ]
+        }
+      ]
+    },
+    "09066fc7-c88e-49f2-992c-5ed10f4ee682": {
+      "ReadonlyName": "List Get All Indices Of",
+      "Description": "Returns list of all indices of input item in target list if that list contains one or more instances of the item. Otherwise returns an empty list.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "List Get All Indices Of",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            },
+            {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "List<int>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
+          ]
+        }
+      ]
+    },
+    "d8926108-6c7d-4c78-8fbd-baac2b210e03": {
+      "ReadonlyName": "List Get First Index Of",
+      "Description": "Returns first index of the item in target list if that list contains it. Otherwise returns -1.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "List Get First Index Of",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            },
+            {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
           ]
         }
       ]
@@ -7156,7 +7859,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -7164,7 +7867,7 @@
     },
     "fe2f9c12-d213-4234-a387-9d2ec1ad7fc1": {
       "ReadonlyName": "List<int> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<int> represents multiple ints with a specific order. List<int> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7201,22 +7904,22 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
+            "List",
+            "Variable",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
+            "Variable",
+            "List",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
           ]
         }
       ]
@@ -7252,14 +7955,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Math"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
           ]
         }
       ]
@@ -7295,14 +7998,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Math"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
           ]
         }
       ]
@@ -7338,21 +8041,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Math"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
           ]
         }
       ]
     },
     "32837e14-12de-465f-89dc-ceddb64cdd6c": {
       "ReadonlyName": "List<Player> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Player> represents multiple Players with a specific order. List<Player> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7389,28 +8092,29 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Objects"
+            "List",
+            "Variable",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Variables",
-            "Lists",
-            "Objects"
+            "Variable",
+            "List",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Variable"
           ]
         }
       ]
     },
     "e8cfde19-33a4-4826-a032-4b9bd50aa171": {
       "ReadonlyName": "List<Quaternion> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Quaternion> represents multiple Quaternions with a specific order. List<Quaternion> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7447,9 +8151,22 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
+            "List",
+            "Variable",
+            "Primitive"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Variable",
+            "List",
+            "Primitive"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
           ]
         }
       ]
@@ -7495,7 +8212,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -7537,7 +8254,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -7545,7 +8262,7 @@
     },
     "94fb596f-6b3f-4981-bc2d-1bb693c45ae6": {
       "ReadonlyName": "List<string> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<string> represents multiple strings with a specific order. List<string> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7582,16 +8299,16 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
+            "List",
+            "Variable",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
+            "Variable",
+            "List",
+            "Primitive"
           ]
         }
       ]
@@ -7627,14 +8344,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Math"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
           ]
         }
       ]
@@ -7670,21 +8387,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Math"
           ]
         },
         {
           "FilterPath": [
             "Math",
-            "Lists"
+            "List"
           ]
         }
       ]
     },
     "35f84cfc-b10e-451e-832e-c6ad8d99685d": {
       "ReadonlyName": "List<Vector3> Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nList<Vector3> represents multiple Vector3s with a specific order. List<Vector3> Variables have a maximum of 50 items. The <variable> changed events are only reliable when setting the value. Any mutation chips, such as List Add, will not emit the event.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -7721,23 +8438,29 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
-            "Variables",
-            "Primitives"
+            "List",
+            "Variable",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
-            "Variables",
-            "Lists",
-            "Primitives"
+            "Variable",
+            "List",
+            "Primitive"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
           ]
         }
       ]
     },
     "28a105ab-a947-4493-a51d-ced76a9601ee": {
       "ReadonlyName": "Logarithm",
-      "Description": "This chip allows you to use the math formula logarithm",
+      "Description": "Computes a logarithm.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -7821,7 +8544,7 @@
     },
     "542d3256-0d51-4c33-a2a1-fbc44b7e1f07": {
       "ReadonlyName": "List Create",
-      "Description": "Creates a list from input values. Add more inputs by using the configure tool on the node and press “Add Input”. All items in a list must be of the same type.",
+      "Description": "Creates a list from input values. Add more inputs by using the configure tool on the node and press \"Add Input\". All items in a list must be of the same type.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -7850,7 +8573,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
@@ -8011,7 +8734,7 @@
     },
     "4738d696-d05a-42ee-a182-7641c429ae06": {
       "ReadonlyName": "Multiply",
-      "Description": "Multiplies the two input values and outputs the result",
+      "Description": "Multiplies the two or more input values and outputs the result.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8047,14 +8770,20 @@
         {
           "FilterPath": [
             "Math",
-            "Scalar"
+            "Vector"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
           ]
         }
       ]
     },
     "502e86d1-5b3a-4213-97e2-df25836ffcc4": {
       "ReadonlyName": "Nand",
-      "Description": "Outputs False only when both inputs are True. If one or both is False, it outputs True.",
+      "Description": "Outputs False only when all inputs are True. If any input is False, it outputs True.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8081,14 +8810,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Boolean Function"
           ]
         }
       ]
     },
     "2891bcb4-a6ab-4a2e-a08d-dd2a55f1cf66": {
       "ReadonlyName": "Nor",
-      "Description": "Outputs True when both inputs are False. Otherwise, outputs False.",
+      "Description": "Outputs True when all inputs are False. Otherwise, outputs False.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8115,14 +8845,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Boolean Function"
           ]
         }
       ]
     },
     "ff551243-beb4-470e-ab48-9d616818d5e4": {
       "ReadonlyName": "Not",
-      "Description": "Outputs the opposite of the input boolean. ",
+      "Description": "Outputs the opposite of the input boolean.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8149,14 +8880,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Boolean Function"
           ]
         }
       ]
     },
     "b5dcded0-eb2b-468d-a4b9-ffb1054f6214": {
       "ReadonlyName": "Or",
-      "Description": "Outputs True if any input is true. Otherwise outputs False.",
+      "Description": "Outputs True if any input is True. Otherwise outputs False.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8183,7 +8915,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Logic"
+            "Logic",
+            "Boolean Function"
           ]
         }
       ]
@@ -8222,12 +8955,12 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         },
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
@@ -8266,12 +8999,12 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         },
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
@@ -8310,19 +9043,19 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         },
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
     },
     "5e002bc3-c667-441c-8098-4df2f956de5b": {
       "ReadonlyName": "Piston Get Acceleration",
-      "Description": "Gets the acceleration of a piston",
+      "Description": "Gets the acceleration of a piston.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8349,7 +9082,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8384,7 +9117,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8419,7 +9152,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8454,7 +9187,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8489,7 +9222,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8497,7 +9230,7 @@
     },
     "07c316df-cfa1-4ef8-ac3b-d7e9c4795812": {
       "ReadonlyName": "Piston Set Acceleration",
-      "Description": "Outputs the acceleration of the target Piston.",
+      "Description": "Sets the acceleration of the target Piston.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8534,7 +9267,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8542,7 +9275,7 @@
     },
     "283cb154-76e8-4d60-9899-2a50b6e4c093": {
       "ReadonlyName": "Piston Set Distance",
-      "Description": "Moves a target piston to the input distance.",
+      "Description": "Moves the target piston to the input distance.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8579,7 +9312,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8624,7 +9357,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8669,7 +9402,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8714,7 +9447,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Piston"
           ]
         }
@@ -8722,7 +9455,7 @@
     },
     "7b725036-4996-441d-ac54-91ac2c23d6b3": {
       "ReadonlyName": "Player Add Role",
-      "Description": "Adds a Role to a player",
+      "Description": "Adds a Role to a Player.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8759,14 +9492,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Role"
           ]
         }
       ]
     },
     "4c9e7840-0721-4d1c-b334-167f79d3bf40": {
       "ReadonlyName": "Player Definition Board",
-      "Description": "This is very similar to an object board that you would find on any object, except this is for all players! After placing, make sure to configure it and make sure it is active. Edit into this board and add any other chips you'd like and know that each player will have the same logic on them when you hit done editing. ",
+      "Description": "This is very similar to an object board that you would find on any object, except this is for all players! After placing, make sure to configure it and make sure it is active. Edit into this board and add any other chips you'd like and know that each player will have the same logic on them when you hit done editing.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -8774,7 +9508,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Utilities"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Utilities"
           ]
         }
       ]
@@ -8836,7 +9576,7 @@
     },
     "4646dbed-e616-470e-8e0c-eb446b91838b": {
       "ReadonlyName": "Player Get Is Local",
-      "Description": "Outputs true if the input player is the local player executing the chip on their machine.",
+      "Description": "Outputs True if the input player is the local player executing the chip on their machine.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8868,14 +9608,15 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Networking"
           ]
         }
       ]
     },
     "9b39ed47-e9a5-4f04-b4cd-80f5bbaff2f7": {
       "ReadonlyName": "Player Has Role",
-      "Description": "Outputs true if the input player has the input role.",
+      "Description": "Outputs True if the input player has the input role.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -8907,20 +9648,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Role"
           ]
         }
       ]
     },
     "c35fe6fe-d231-4ee5-80ff-9e69f24eb29e": {
-      "ReadonlyName": "Player Is Authority Of",
-      "Description": "Outputs if a player is authority of the input RecRoomObject",
+      "ReadonlyName": "Player Get Is Authority Of",
+      "Description": "Outputs if a Player is authority of the input object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Player Is Authority Of",
+          "Name": "Player Get Is Authority Of",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -8951,20 +9693,21 @@
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Networking"
           ]
         }
       ]
     },
     "58c5cab7-ddf7-4de8-86c8-25f3d3c19d98": {
-      "ReadonlyName": "Player Is Room Owner",
-      "Description": "Outputs true if the input player is one of the current room's owners.",
+      "ReadonlyName": "Player Get Is Room Owner",
+      "Description": "Outputs True if the input Player is one of the current room's owners.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Player Is Room Owner",
+          "Name": "Player Get Is Room Owner",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -8985,14 +9728,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Utilities"
           ]
         }
       ]
     },
     "6b5c4b0b-be26-4055-b26f-1e5f061c63ca": {
       "ReadonlyName": "Player Left Hand Finger Direction",
-      "Description": "Outputs the Direction of a player's left hand finger.",
+      "Description": "Outputs the direction of a Player's left hand finger.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9019,14 +9763,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "17e61429-059f-4b29-b8b8-f0bf3179f580": {
       "ReadonlyName": "Player Left Hand Rotation",
-      "Description": "Outputs the rotation of a player's left hand.",
+      "Description": "Outputs the rotation of a Player's left hand.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9053,14 +9798,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "619b3bc8-bcb9-4812-86f5-f6442cdbb557": {
       "ReadonlyName": "Player Left Hand Position",
-      "Description": "Outputs the postion of a player's left hand in world space.",
+      "Description": "Outputs the postion of a Player's left hand in world space.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9087,14 +9833,50 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "fc2a0141-4997-422c-bdd3-f7ecd7d4c996": {
+      "ReadonlyName": "Player Left Hand Thumb Direction",
+      "Description": "Outputs the direction of a Player's left hand thumb.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Player Left Hand Thumb Direction",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "2607a0fe-f200-4f29-83ae-446db4b8e8ce": {
       "ReadonlyName": "Player Left Hand Velocity",
-      "Description": "Outputs the velocity of a player's left hand.",
+      "Description": "Outputs the velocity of a Player's left hand.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9121,14 +9903,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
       "ReadonlyName": "Player Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.When a variable is configured to be synced, its value will be the same across all players' games.\nPlayers represent a given connected player in the game instance. If the represented player leaves, the value will become invalid.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -9165,13 +9948,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Objects"
+            "Variable",
+            "Object"
           ]
         },
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Variable"
           ]
         }
       ]
@@ -9215,14 +9999,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Role"
           ]
         }
       ]
     },
     "646ff790-c930-4565-ae38-99a798271a50": {
       "ReadonlyName": "Player Right Hand Finger Direction",
-      "Description": "Outputs the Direction of a player's right hand finger.",
+      "Description": "Outputs the direction of a Player's right hand finger.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9249,14 +10034,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "0afab661-0870-42bb-9256-891f1a876b3b": {
       "ReadonlyName": "Player Right Hand Rotation",
-      "Description": "Outputs the rotation of a player's right hand.",
+      "Description": "Outputs the rotation of a Player's right hand.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9283,14 +10069,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "e9d3330d-c290-41d5-aa37-cc5e43198836": {
       "ReadonlyName": "Player Right Hand Position",
-      "Description": "Outputs the postion of a player's right hand in world space.",
+      "Description": "Outputs the postion of a Player's right hand in world space.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9317,14 +10104,50 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "86e8581c-ddf9-4302-a06f-c451b5055a98": {
+      "ReadonlyName": "Player Right Hand Thumb Direction",
+      "Description": "Outputs the direction of a Player's right hand thumb.",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Player Right Hand Thumb Direction",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "aba06411-9c8c-477a-bc7f-76ab5605c85d": {
       "ReadonlyName": "Player Right Hand Velocity",
-      "Description": "Outputs the velocity of a player's right hand.",
+      "Description": "Outputs the velocity of a Player's right hand.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9351,20 +10174,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         }
       ]
     },
     "7e321d9b-4500-4917-9361-a32e1463401c": {
-      "ReadonlyName": "Player Subscribes to Room Owner",
-      "Description": "Outputs true if the input player subscribes to one of the current room's owners.",
+      "ReadonlyName": "Player Subscribes To Room Owner",
+      "Description": "Outputs True if the input Player subscribes to one of the current room's owners.",
       "IsBetaChip": false,
       "DeprecationStage": 2,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Player Subscribes to Room Owner",
+          "Name": "Player Subscribes To Room Owner",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -9390,7 +10214,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Utilities"
           ]
         }
       ]
@@ -9486,14 +10311,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "UI"
           ]
         }
       ]
     },
     "d9096fb3-50c6-42f9-93bb-fc6df63d86a8": {
       "ReadonlyName": "Quaternion Create Angle Axis",
-      "Description": "Creates a rotation which rotates angle degrees around axis.",
+      "Description": "Creates a rotation which rotates \"Angle\" degrees around \"Axis\".",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9568,7 +10394,7 @@
     },
     "1069c5de-c7e3-40e0-bd90-52135873b36d": {
       "ReadonlyName": "Quaternion Create From To",
-      "Description": "Creates a rotation which rotates from fromDirection to toDirection.",
+      "Description": "Creates a rotation which rotates from \"From\" to \"To\".",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -9848,7 +10674,7 @@
     },
     "18a980ff-9a46-472c-b658-96bf42eb61c2": {
       "ReadonlyName": "Quaternion Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name. When a variable is configured to be synced, its value will be the same across all players' games.\nQuaternions are 4D numbers that represent a rotation, and contain 4 floats to do so. Multiplying 2 quaternions will produce the effect of rotating by one quaternion, and then rotating that by the other.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -9885,8 +10711,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
+            "Variable",
+            "Primitive"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
           ]
         }
       ]
@@ -9928,7 +10760,7 @@
     },
     "edfe7cbb-6973-4489-9b7a-75746243dd6d": {
       "ReadonlyName": "Quaternion Rotate Towards",
-      "Description": "Rotates a rotation \"from\" towards \"to\".",
+      "Description": "Rotates a rotation from \"From\" towards \"To\".",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10013,7 +10845,7 @@
     },
     "8d5f0586-1ecf-42ba-a34f-c6ccbb0eadb9": {
       "ReadonlyName": "Quaternion Slerp",
-      "Description": "Spherically interpolates between quaternions a and b. Progress is 0 to 1. Also a rare, but refreshing beverage.",
+      "Description": "Spherically interpolates between quaternions \"Start\" and \"End\". Progress is 0 to 1. Also a rare, but refreshing beverage.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10108,7 +10940,7 @@
     },
     "4ecbf247-ab14-4f9e-8094-e40a45d283e6": {
       "ReadonlyName": "Random Float",
-      "Description": "Generates a random float from [min to max]. Min is inclusive, and max is also inclusive. For example with a min of 0 and a max of 1, both 0 and 1 have the possibility of getting output because they are both included in the range.",
+      "Description": "Generates a random float from [\"Min\" to \"Max\"]. \"Min\" is inclusive, and \"Max\" is also inclusive. For example with a \"Min\" of 0 and a \"Max\" of 1, both 0 and 1 have the possibility of getting output because they are both included in the range.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10197,14 +11029,15 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists"
+            "List",
+            "Utilities"
           ]
         }
       ]
     },
     "fb2645f0-4042-4ef1-b988-af2f80e651ec": {
       "ReadonlyName": "Random Int",
-      "Description": "Generates a random integer from [min to max). Min is inclusive, and max is exclusive. For example with a min of 0 and a max of 1, 1 will never get output because it is excluded from the range.",
+      "Description": "Generates a random integer from [\"Min\" to \"Max\"]. \"Min\" is inclusive, and \"Max\" is also inclusive. For example with a \"Min\" of 0 and a \"Max\" of 1, 0 and 1 will have a chance of being output.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10254,8 +11087,8 @@
     },
     "af203a1f-f3c9-479b-86f0-72224b094179": {
       "ReadonlyName": "Raycast",
-      "Description": "Fires an invisible ray from the Start Position, in the Direction specified. Returns true if any object or player is hit within the target Max Distance. Otherwise, returns false. You can configure the chip itself to ignore players or objects specifically.",
-      "IsBetaChip": true,
+      "Description": "Fires an invisible ray from the \"Start Position\", in the \"Direction\" specified. Returns True if any object or player is hit within the target \"Max Distance\". Otherwise, returns False. You can configure the chip itself to ignore players or objects specifically.",
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -10323,7 +11156,7 @@
     },
     "f8db4ba2-7380-49a0-a0ba-bcdca11fec96": {
       "ReadonlyName": "Reroute",
-      "Description": "Used to remove spaghetti from your creations.",
+      "Description": "Used to remove spaghetti from your creations. Consumes additional CPU heat.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -10354,18 +11187,23 @@
           "FilterPath": [
             "Commonly Used"
           ]
+        },
+        {
+          "FilterPath": [
+            "Utilities"
+          ]
         }
       ]
     },
     "6ba175cf-493a-4790-b916-57259f94cd98": {
-      "ReadonlyName": "Reset Object",
-      "Description": "Resets a Rec Room Object.",
+      "ReadonlyName": "Rec Room Object Reset",
+      "Description": "Resets an object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Reset Object",
+          "Name": "Rec Room Object Reset",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -10391,7 +11229,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         }
@@ -10427,7 +11265,7 @@
     },
     "5898c7f7-cb5d-4344-a194-bd09260b12dd": {
       "ReadonlyName": "Respawn",
-      "Description": "Sets the position and rotation of the target player or object. Will fail in the following cases: If the target object is currently held, select/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
+      "Description": "Sets the position and rotation of the target player or object. Will fail in the following cases: If the target object is currently held, selected/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10492,12 +11330,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
@@ -10531,7 +11371,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10566,7 +11406,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10601,7 +11441,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10636,7 +11476,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10681,7 +11521,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10726,7 +11566,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10771,7 +11611,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10816,7 +11656,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rotator"
           ]
         }
@@ -10824,7 +11664,7 @@
     },
     "c6cfe49a-4ffb-4714-9564-8ddda0300676": {
       "ReadonlyName": "Round",
-      "Description": "Rounds the input float up.",
+      "Description": "Rounds the input float to the nearest integral value.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10892,7 +11732,7 @@
         },
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         }
       ]
@@ -10926,7 +11766,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Seats"
           ]
         }
@@ -10934,7 +11774,7 @@
     },
     "af071963-a0df-422e-8372-e561336921db": {
       "ReadonlyName": "Seat Set Lock Players In",
-      "Description": "Prevents a Seated player from unseating themselves on a target Seat. Must use circuits to Unseat.",
+      "Description": "Prevents a Seated player from unseating themselves on a target Seat. Use circuits to unseat or unlock.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -10971,7 +11811,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Seats"
           ]
         }
@@ -11016,7 +11856,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Seats"
           ]
         }
@@ -11066,7 +11906,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Seats"
           ]
         }
@@ -11106,7 +11946,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Seats"
           ]
         }
@@ -11114,7 +11954,7 @@
     },
     "3d7d40d6-885a-4fa5-bbaa-b19057291ddb": {
       "ReadonlyName": "Self",
-      "Description": "Outputs the object (and type) of the current context. For example, a self node inside a light outputs that specific light of the light type. This can only be placed inside an object board of a specific object.",
+      "Description": "Outputs the object of the current context. For example, a self node inside a light outputs that specific light of the light type. This can only be placed inside an object board of a specific object or a player or object definition board.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11141,14 +11981,14 @@
       ]
     },
     "88daacc5-7652-4d3a-b505-ba256ce3fd9d": {
-      "ReadonlyName": "Set Element",
-      "Description": "Sets a value at a location in a list",
+      "ReadonlyName": "List Set Element",
+      "Description": "Sets a value at a location in a list.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Set Element",
+          "Name": "List Set Element",
           "ReadonlyTypeParams": {
             "T": "any"
           },
@@ -11186,21 +12026,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Lists",
+            "List",
             "Core"
           ]
         }
       ]
     },
     "57a1553a-ba24-4422-903a-e610a03e7994": {
-      "ReadonlyName": "Set Local Player Leaderboard Stat",
-      "Description": "Set leaderboard stat for local player on stat channel 1, 2 or 3",
+      "ReadonlyName": "Leaderboard Set Local Player Stat",
+      "Description": "Set leaderboard stat for the local player on stat channel 1, 2 or 3.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Set Local Player Leaderboard Stat",
+          "Name": "Leaderboard Set Local Player Stat",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -11283,19 +12123,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Player"
+            "Player",
+            "Physics"
           ]
         },
         {
           "FilterPath": [
-            "Objects"
+            "Object",
+            "Physics"
           ]
         }
       ]
     },
     "aaf39143-c5dc-47cd-ad85-c659c3035cab": {
       "ReadonlyName": "SFX Get Volume",
-      "Description": "Outputs the volume of an SFX Component",
+      "Description": "Outputs the volume of an SFX object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11322,21 +12164,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "SFX"
           ]
         }
       ]
     },
     "a0a17fe1-bdb0-4687-81de-141ce97710ed": {
-      "ReadonlyName": "SFX IsPlaying",
+      "ReadonlyName": "SFX Get Is Playing",
       "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "SFX IsPlaying",
+          "Name": "SFX Get Is Playing",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -11357,7 +12199,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "SFX"
           ]
         }
@@ -11365,7 +12207,7 @@
     },
     "5f8991bb-d1b8-4c74-a54a-86e7033b53a0": {
       "ReadonlyName": "SFX Play",
-      "Description": "Plays a sound from an SFX Component",
+      "Description": "Plays a sound from an SFX object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11397,7 +12239,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "SFX"
           ]
         }
@@ -11405,7 +12247,7 @@
     },
     "d2df4993-d858-4df1-aca2-fc0e7f479668": {
       "ReadonlyName": "SFX Set Volume",
-      "Description": "Sets the volume for an SFX Component",
+      "Description": "Sets the volume for an SFX object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11442,7 +12284,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "SFX"
           ]
         }
@@ -11450,7 +12292,7 @@
     },
     "3ad57fda-1fab-4b00-81b3-71d61af37c65": {
       "ReadonlyName": "SFX Stop",
-      "Description": "Stops the sound currently playing from an SFX Component",
+      "Description": "Stops the sound currently playing from an SFX object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11482,7 +12324,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "SFX"
           ]
         }
@@ -11490,7 +12332,7 @@
     },
     "61bc2310-69f5-4dfa-b43c-12ae98dd05ab": {
       "ReadonlyName": "Show Notification",
-      "Description": "Prints the input notification to a player’s screen if the node is run on a player's machine.",
+      "Description": "Prints the input notification to a player's screen if the node is run on a player's machine.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11524,11 +12366,6 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Utilities"
-          ]
-        },
-        {
-          "FilterPath": [
             "Player",
             "UI"
           ]
@@ -11538,7 +12375,7 @@
     "abaae687-e943-4534-bb78-2c8d7e17c425": {
       "ReadonlyName": "Show Local Subtitle",
       "Description": "Displays a subtitle for a specified duration. If there is already a subtitle showing, it will be replaced only if this subtitle has an equal or higher priority. If the string is more than 200 characters, it will be displayed in multiple subtitles, each lasting a fraction of the total duration. Escape characters are ignored.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -11579,11 +12416,6 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Utilities"
-          ]
-        },
-        {
-          "FilterPath": [
             "Player",
             "UI"
           ]
@@ -11592,7 +12424,7 @@
     },
     "ea824326-5061-411d-980c-30031511c821": {
       "ReadonlyName": "Sin",
-      "Description": "This chip allows you to use the math formula sin",
+      "Description": "Computes the sine of a number.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11659,7 +12491,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Spawner"
           ]
         }
@@ -11714,15 +12546,89 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Spawner"
+          ]
+        }
+      ]
+    },
+    "0ea23792-e987-459e-8cd7-c0c60f667e08": {
+      "ReadonlyName": "Spherecast",
+      "Description": "Fires an invisible sphere of the specified Radius from the Start Position, in the Direction specified. Returns true if any object or player is hit within the target Max Distance. Otherwise, returns false. You can configure the chip itself to ignore players or objects specifically.",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Spherecast",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Start Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Radius",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Direction",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Max Distance (m)",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Hit",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Object",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            },
+            {
+              "Name": "Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Hit Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Surface Normal",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
           ]
         }
       ]
     },
     "aa24edab-c707-4cff-8c73-07e479b4cd07": {
       "ReadonlyName": "String Contains",
-      "Description": "Outputs true if the target string contains the input value.",
+      "Description": "Outputs True if the target string contains the input value.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11754,14 +12660,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
     },
     "77afc9dd-baa9-4312-b8b8-7ef479c840e6": {
       "ReadonlyName": "String Format",
-      "Description": "Use this node to combine multiple strings together into a single string output. The Format input is part of final string output and can include other string inputs by using this syntax: {input pin # starting at 0}. For example, a Format input with a default value of “Hello, {0}!” with a single additional input pin with the value “World” is fully output as “Hey, World!”. If you had another input pin you would use {1} to denote the 2nd pin. You can add more string inputs by configuring the node and pressing “Add Input”.",
+      "Description": "Use this chip to combine multiple strings together into a single string output. The \"Format\" input is part of final string output and can include other string inputs by using this syntax: {input pin # starting at 0}. For example, a \"Format\" input with a default value of “Hello, {0}!” with a single additional input pin with the value \"World\" is fully output as \"Hello, World!\". If you had another input pin you would use {1} to denote the 2nd pin. You can add more string inputs by configuring the chip and pressing \"Add Input\".",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11793,7 +12699,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         },
         {
@@ -11805,7 +12711,7 @@
     },
     "dcde9345-00f2-41fb-9a2d-5a938f39bfb5": {
       "ReadonlyName": "String Length",
-      "Description": "Outputs the length of a target string.",
+      "Description": "Outputs the length of a target string in UTF-16 characters.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11832,14 +12738,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
     },
     "66b6ea20-9a00-4f80-9636-2cfb676b3965": {
       "ReadonlyName": "string Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nThe initial value may be set by editing the value box in the configure menu\nStrings represent text, and have a maximum length of 512.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -11876,13 +12782,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
+            "Variable",
+            "Primitive"
           ]
         },
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
@@ -11921,14 +12827,14 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
     },
     "6b92c345-e6bc-40d9-aae9-4754e634777c": {
       "ReadonlyName": "String Split At Index",
-      "Description": "Splits the target string in half at the input index.",
+      "Description": "Splits the target string in two at the input index.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -11960,20 +12866,20 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
     },
     "1af21999-38f8-4231-9de9-26b43f47fe0d": {
-      "ReadonlyName": "String Substring Index",
+      "ReadonlyName": "String Index Of",
       "Description": "Outputs the index where the substring starts in the target string.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "String Substring Index",
+          "Name": "String Index Of",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -11999,7 +12905,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
@@ -12033,7 +12939,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
@@ -12067,20 +12973,20 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
     },
     "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
-      "ReadonlyName": "Substring",
-      "Description": "Allows you to extract individual characters from a string. You can think of this like a list of characters.",
+      "ReadonlyName": "String Substring",
+      "Description": "Allows you to extract individual parts from a string. You can think of this like a list of characters.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Substring",
+          "Name": "String Substring",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -12111,7 +13017,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         }
       ]
@@ -12161,7 +13067,7 @@
     },
     "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
       "ReadonlyName": "Tan",
-      "Description": "This chip allows you to use the math formula tan",
+      "Description": "Computes the tangent of a number.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12194,11 +13100,46 @@
         }
       ]
     },
-    "20b2528d-96a9-4be8-9782-aa75959f5232": {
-      "ReadonlyName": "Text Set Color",
-      "Description": "Sets the color for a Text Component",
+    "3e8fbb88-3179-4a4c-9f8f-d9c2db35b9b5": {
+      "ReadonlyName": "Text Get Text",
+      "Description": "Outputs the visible text for a Text object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Text Get Text",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Text",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Text",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Text"
+          ]
+        }
+      ]
+    },
+    "20b2528d-96a9-4be8-9782-aa75959f5232": {
+      "ReadonlyName": "Text Set Color",
+      "Description": "Sets the color for a Text object.",
+      "IsBetaChip": false,
+      "DeprecationStage": 1,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -12233,7 +13174,52 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
+            "Text"
+          ]
+        }
+      ]
+    },
+    "0bfaa337-46a1-472f-beac-12faa21867d4": {
+      "ReadonlyName": "Text Set Color V2",
+      "Description": "Sets the color for a Text Component",
+      "IsBetaChip": true,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Text Set Color V2",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Text",
+              "Description": ""
+            },
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
             "Text"
           ]
         }
@@ -12241,7 +13227,7 @@
     },
     "ef6fcf56-1b3f-42bc-af50-019ff0a9cfc5": {
       "ReadonlyName": "Text Set Material",
-      "Description": "Sets the material for a Text Component",
+      "Description": "Sets the material for a Text object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12278,7 +13264,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Text"
           ]
         }
@@ -12286,7 +13272,7 @@
     },
     "c941f3a3-d3f6-49cc-a6a4-b7a4e95fd173": {
       "ReadonlyName": "Text Set Text",
-      "Description": "Set the visible text for a Text Component",
+      "Description": "Set the visible text for a Text object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12323,7 +13309,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Text"
           ]
         }
@@ -12331,7 +13317,7 @@
     },
     "75a3a9c2-da17-4762-b87b-1735b44af659": {
       "ReadonlyName": "To Combatant",
-      "Description": "Covert a player or an AI value into a Combatant value",
+      "Description": "Covert a player or an AI value into a Combatant value.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12360,15 +13346,20 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Combatant"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Conversion"
           ]
         }
       ]
     },
     "315a494e-84cc-4e3c-acff-389bb932b5d0": {
       "ReadonlyName": "To Rec Room Object",
-      "Description": "Outputs the target specific object to a Rec Room Object.",
+      "Description": "Casts a target specific object to a Rec Room Object.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12397,20 +13388,20 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Rec Room Object"
           ]
         },
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
           ]
         }
       ]
     },
     "f8a9cb84-dcb1-4a12-ae29-4d7711e14506": {
       "ReadonlyName": "Toggle Button Get Is Pressed",
-      "Description": "Outputs true if the toggle button is pressed",
+      "Description": "Outputs True if the toggle button is pressed.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12437,7 +13428,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Toggle Button"
           ]
         }
@@ -12445,7 +13436,7 @@
     },
     "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
       "ReadonlyName": "Toggle Button Set Is Pressed",
-      "Description": "Sets a Toggle Button state to pressed",
+      "Description": "Sets a Toggle Button state to pressed.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12482,7 +13473,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Toggle Button"
           ]
         }
@@ -12490,7 +13481,7 @@
     },
     "74e81edb-84bd-4e52-b2f3-a73a62a6b3aa": {
       "ReadonlyName": "To String",
-      "Description": "Converts the input value to the string type. Example: the integer input 10 would output “10” as a string. Helpful for debugging purposes.",
+      "Description": "Converts the input value to the string type. Example: the integer input 10 would output \"10\" as a string. Helpful for debugging purposes.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12524,7 +13515,7 @@
         },
         {
           "FilterPath": [
-            "Strings"
+            "String"
           ]
         },
         {
@@ -12534,15 +13525,21 @@
         },
         {
           "FilterPath": [
-            "Conversions"
+            "Conversion"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Name"
           ]
         }
       ]
     },
     "b309c032-1bcd-4ca1-83cf-b8871e65fb16": {
       "ReadonlyName": "Trigger Handle Get Primary Action Held",
-      "Description": "True if the primary action button is down; otherwise, false.",
-      "IsBetaChip": true,
+      "Description": "True if the primary action button is down; otherwise, False.",
+      "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
@@ -12568,7 +13565,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Handle"
           ]
         }
@@ -12576,7 +13573,7 @@
     },
     "b49c4e16-93c5-45c3-b457-fb960c661bc5": {
       "ReadonlyName": "Trigger Volume Get Filter Role",
-      "Description": "Gets the Role that is being filterd from a Trigger Volume",
+      "Description": "Gets the role name that is being used as a filter for a Trigger Volume.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12603,7 +13600,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
@@ -12611,7 +13608,7 @@
     },
     "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
       "ReadonlyName": "Trigger Volume Get Filter Tags",
-      "Description": "Gets the Tags that are being filterd from a Trigger Volume",
+      "Description": "Gets the tags that are being used as a filter for a Trigger Volume.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12638,21 +13635,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
       ]
     },
     "338c7e0a-fa55-49e1-91e8-1609d00f1fd0": {
-      "ReadonlyName": "Trigger Volume Get Num Objects",
-      "Description": "Gets the number of objects inside a Trigger Volume",
+      "ReadonlyName": "Trigger Volume Get Object Count",
+      "Description": "Gets the number of objects currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Trigger Volume Get Num Objects",
+          "Name": "Trigger Volume Get Object Count",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -12673,21 +13670,21 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
       ]
     },
     "4cbe661b-7053-4c19-9ccf-1600c7a41016": {
-      "ReadonlyName": "Trigger Volume Get Num Players",
-      "Description": "Gets the number of players inside a Trigger Volume",
+      "ReadonlyName": "Trigger Volume Get Player Count",
+      "Description": "Gets the number of players currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Trigger Volume Get Num Players",
+          "Name": "Trigger Volume Get Player Count",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -12708,7 +13705,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
@@ -12716,7 +13713,7 @@
     },
     "530932a7-8781-4b09-a945-b33af6675809": {
       "ReadonlyName": "Trigger Volume Get Objects",
-      "Description": "Gets all of the objects inside a Trigger Volume",
+      "Description": "Gets all of the objects currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12743,7 +13740,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
@@ -12751,7 +13748,7 @@
     },
     "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
       "ReadonlyName": "Trigger Volume Get Players",
-      "Description": "Gets all of the players inside a Trigger Volume",
+      "Description": "Gets all of the players currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12778,7 +13775,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
@@ -12786,7 +13783,7 @@
     },
     "55cfecf9-2623-4aad-948c-6ca89f11911b": {
       "ReadonlyName": "Trigger Volume Set Filter Role",
-      "Description": "Sets the filterd Role for the Trigger Volume",
+      "Description": "Sets the role name that is being used as a filter for a Trigger Volume.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12823,7 +13820,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
@@ -12831,7 +13828,7 @@
     },
     "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
       "ReadonlyName": "Trigger Volume Set Filter Tags",
-      "Description": "Sets the filterd Tags for a Trigger Volume",
+      "Description": "Sets the tags that are being used as a filter for a Trigger Volume. An object is considered by the Trigger Volume, if it has any of the tags in this list.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12868,7 +13865,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Trigger Volume"
           ]
         }
@@ -12916,7 +13913,7 @@
     },
     "498c4e25-f73b-49a6-912e-ae148ed50dca": {
       "ReadonlyName": "Vector3 Dot",
-      "Description": "Commonly used to determine if the camera is facing a particular direction.",
+      "Description": "Computes the dot product. Commonly used to determine if the camera is facing a particular direction.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -12956,7 +13953,7 @@
     },
     "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
       "ReadonlyName": "Vector3 Variable",
-      "Description": "Variables will store their input value when their exec is triggered. The value stored and output by any variable chip is always the same between variables that share a name.\nWhen a variable is configured to be synced, its value will be the same across all players' games.\nWhen a variable is configured to be persistent, each player will have a different value, which stays the same between subrooms and leaving the room.\nVector3s represent a position in space or a direction with magnitude. They contain 3 floats.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 1,
@@ -12993,8 +13990,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Variables",
-            "Primitives"
+            "Variable",
+            "Primitive"
           ]
         },
         {
@@ -13042,7 +14039,7 @@
     },
     "87aa17b1-7760-4b07-8c44-a2d530590597": {
       "ReadonlyName": "Vector3 Scale",
-      "Description": "Multiplies the parts of a vector by a scalar.",
+      "Description": "Multiplies a vector by a scalar.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -13083,14 +14080,14 @@
       ]
     },
     "814e9337-7542-4851-9da0-c73885ab0b4f": {
-      "ReadonlyName": "Vector Create",
+      "ReadonlyName": "Vector3 Create",
       "Description": "Creates a new vector from X, Y, Z values.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Vector Create",
+          "Name": "Vector3 Create",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -13111,7 +14108,7 @@
           ],
           "Outputs": [
             {
-              "Name": "Vector",
+              "Name": "Vector3",
               "ReadonlyType": "Vector3",
               "Description": ""
             }
@@ -13129,7 +14126,7 @@
     },
     "74ba9189-2880-46fa-b4b0-3c9a7152489e": {
       "ReadonlyName": "Vector Gadget Get Vector",
-      "Description": "Gets the direction and magnitude of the Vector Component",
+      "Description": "Gets the direction and magnitude of the Vector Gadget.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -13161,7 +14158,7 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Objects",
+            "Object",
             "Vector Gadget"
           ]
         }
@@ -13179,7 +14176,7 @@
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Vector",
+              "Name": "Vector3",
               "ReadonlyType": "Vector3",
               "Description": ""
             }
@@ -13203,18 +14200,18 @@
       ]
     },
     "2d677241-61b7-45d2-aec2-4a302e3483a0": {
-      "ReadonlyName": "Vector Split",
+      "ReadonlyName": "Vector3 Split",
       "Description": "Breaks the X, Y, and Z values out of the input vector.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Vector Split",
+          "Name": "Vector3 Split",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Vector",
+              "Name": "Vector3",
               "ReadonlyType": "Vector3",
               "Description": ""
             }

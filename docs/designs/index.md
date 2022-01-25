@@ -2,6 +2,7 @@
 
 ## Upcoming
 
+- [2022-01-25 Wire Flash Debugging](2022_01_25_wire_flash_debug.pdf)
 - [2022-01-25 Combat V2](2022_01_25_combat_v2.pdf)
 - [2022-01-25 Doors V2](2022_01_25_doors_v2.pdf)
 - [2021-11-15 Interaction Roles](2021_11_15_interaction_roles.pdf)

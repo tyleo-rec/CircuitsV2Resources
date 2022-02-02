@@ -4,6 +4,8 @@
 
 - [Releases](releases/)
 - [Designs](designs/)
+- [Circuits Design System](https://www.figma.com/file/iuEVw1vwSFqwNATidZE2Jy/Circuits-V2-Components-Public)\
+  - If you have a Figma account, you can use this to make fancy images of chips. 
 - [How To Circuits V2 Blog Post](https://blog.recroom.com/posts/2020/8/3/how-2-circuits-2)
 - [The Circuits Handbook Blog Post](https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook)
 - [Rec Room Discord](https://discord.com/channels/193073071802941451/746858632301510708)

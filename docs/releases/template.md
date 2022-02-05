@@ -12,7 +12,7 @@
 
 ## Deprecations
 
-## Bugs Fixes
+## Bugs Fixed
 
 ## Special Thanks
 

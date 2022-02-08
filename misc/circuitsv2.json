@@ -3545,7 +3545,7 @@
       "ReadonlyName": "Emitter Set Color",
       "Description": "Sets the color for the particles emitted.",
       "IsBetaChip": false,
-      "DeprecationStage": 1,
+      "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -3608,7 +3608,7 @@
               "Description": ""
             },
             {
-              "Name": "Value",
+              "Name": "Color",
               "ReadonlyType": "Color",
               "Description": ""
             }
@@ -5006,6 +5006,34 @@
           ]
         }
       ]
+    },
+    "288083ac-338d-410f-9395-fbd7c6e41207": {
+      "ReadonlyName": "Get Player Season League Name",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": 0,
+      "NameSource": 0,
+      "NodeDescs": [
+        {
+          "Name": "Get Player Season League Name",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Season League Name",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
     },
     "1c0a6bd4-bcac-40a9-8bae-fceff7ff7cff": {
       "ReadonlyName": "Get All Players With Role",
@@ -6885,7 +6913,7 @@
       "ReadonlyName": "Light Set Color",
       "Description": "Sets the color for a point light or a spotlight.",
       "IsBetaChip": false,
-      "DeprecationStage": 1,
+      "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
@@ -13139,7 +13167,7 @@
       "ReadonlyName": "Text Set Color",
       "Description": "Sets the color for a Text object.",
       "IsBetaChip": false,
-      "DeprecationStage": 1,
+      "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {

@@ -3101,7 +3101,7 @@
       "NameSource": 1,
       "NodeDescs": [
         {
-          "Name": "Variable (RecRoomObject)",
+          "Name": "Variable (Rec Room Object)",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -3588,7 +3588,7 @@
     },
     "4263768a-035b-4d8b-b17c-1a7bb0b9b96d": {
       "ReadonlyName": "Emitter Set Color V2",
-      "Description": "Sets the color for the particles emitted",
+      "Description": "Sets the color for the particles emitted.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4460,7 +4460,7 @@
     },
     "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
       "ReadonlyName": "Time Get Universal Seconds",
-      "Description": "Gets the number of seconds since 1970. Uses local player's system clock. This is not synchronized between players!",
+      "Description": "Gets the number of seconds since 1970. Uses local player's system clock. This is not synchronized between players! This is also not guaranteed to be continuous. To measure time, use Time Get Precise Seconds instead.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4523,7 +4523,7 @@
     },
     "88f95338-d1a6-4fad-8424-d714d651f6ac": {
       "ReadonlyName": "Get Forward Vector",
-      "Description": "Gets the forward direction of a target, output as a vector3.",
+      "Description": "Gets the forward direction of a target, output as a vector.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -4708,14 +4708,14 @@
       ]
     },
     "12cf9781-1e1b-4e59-a783-c7214b66be8a": {
-      "ReadonlyName": "Get Local Player Leaderboard Stat",
+      "ReadonlyName": "Leaderboard Get Local Player Stat",
       "Description": "Get leaderboard stat for local player on stat channel 1, 2 or 3.",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
       "NodeDescs": [
         {
-          "Name": "Get Local Player Leaderboard Stat",
+          "Name": "Leaderboard Get Local Player Stat",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -5224,7 +5224,7 @@
     },
     "f33e3fb6-79f1-43da-93c1-553d022b9f37": {
       "ReadonlyName": "Time Get Universal Time",
-      "Description": "Gets the UTC time. Uses local player's system clock. This is not synchronized between players! This is also not guaranteed to be continuous. To measure time, use Time Get Precise Seconds instead.",
+      "Description": "Gets the UTC time. Uses local player's system clock. This is not synchronized between players!",
       "IsBetaChip": false,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -6956,7 +6956,7 @@
     },
     "b2698906-68bd-4ea3-be98-35a23615b522": {
       "ReadonlyName": "Light Set Color V2",
-      "Description": "Sets the color for a point light or a spotlight",
+      "Description": "Sets the color for a point light or a spotlight.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,
@@ -7604,7 +7604,7 @@
       "NameSource": 1,
       "NodeDescs": [
         {
-          "Name": "Variable (List<RecRoomObject>)",
+          "Name": "Variable (List<Rec Room Object>)",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -13210,7 +13210,7 @@
     },
     "0bfaa337-46a1-472f-beac-12faa21867d4": {
       "ReadonlyName": "Text Set Color V2",
-      "Description": "Sets the color for a Text Component",
+      "Description": "Sets the color for a Text object.",
       "IsBetaChip": true,
       "DeprecationStage": 0,
       "NameSource": 0,

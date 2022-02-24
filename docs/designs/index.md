@@ -2,8 +2,7 @@
 
 ## Upcoming
 
-- [2022_02_13_comment_chip](2022_02_13_comment_chip.pdf)
-- [2022-01-25 Wire Flash Debugging](2022_01_25_wire_flash_debugging.pdf)
+- [2022_02_13 Comment Chip](2022_02_13_comment_chip.pdf)
 - [2022-01-25 Combat V2](2022_01_25_combat_v2.pdf)
 - [2022-01-25 Doors V2](2022_01_25_doors_v2.pdf)
 - [2021-11-15 Interaction Roles](2021_11_15_interaction_roles.pdf)
@@ -14,5 +13,6 @@
 
 ## Released
 
+- [2022-01-25 Wire Flash Debugging](2022_01_25_wire_flash_debugging.pdf)
 - [2021-01-01 Home Values](2021_01_01_home_values.pdf)
 - [2020-01-01 Palette Search V2](2020_01_01_palette_search_v2.pdf)

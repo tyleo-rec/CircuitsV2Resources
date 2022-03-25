@@ -1280,6 +1280,268 @@
         }
       ]
     },
+    "e6391f35-dd8b-4e99-a0f9-7dc44b6c1893": {
+      "ReadonlyPaletteName": "Audio Player Pause",
+      "ReadonlyChipName": "Audio Player Pause",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Pause",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pause",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Audio",
+            "Player"
+          ]
+        }
+      ]
+    },
+    "38f16370-7224-40d0-a551-665bb9fb6f8b": {
+      "ReadonlyPaletteName": "Audio Player Play",
+      "ReadonlyChipName": "Audio Player Play",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Play",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Play",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            },
+            {
+              "Name": "Media",
+              "ReadonlyType": "Audio",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Audio",
+            "Player"
+          ]
+        }
+      ]
+    },
+    "a59e93b4-f949-47b4-af73-fb6e110392fa": {
+      "ReadonlyPaletteName": "Audio Player Set Speed",
+      "ReadonlyChipName": "Audio Player Set Speed",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Set Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Set Speed",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            },
+            {
+              "Name": "Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Audio",
+            "Player"
+          ]
+        }
+      ]
+    },
+    "cdedf5fe-9d4f-4811-9883-160b04695657": {
+      "ReadonlyPaletteName": "Audio Player Set Volume",
+      "ReadonlyChipName": "Audio Player Set Volume",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Set Volume",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Set Volume",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            },
+            {
+              "Name": "Volume",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Audio",
+            "Player"
+          ]
+        }
+      ]
+    },
+    "f6c546cc-becd-44cc-999b-bf2031b5f737": {
+      "ReadonlyPaletteName": "Audio Player Stop",
+      "ReadonlyChipName": "Audio Player Stop",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Stop",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Stop",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Audio",
+            "Player"
+          ]
+        }
+      ]
+    },
+    "61e8293d-5d5a-4dbc-9505-0a13faf8b4cc": {
+      "ReadonlyPaletteName": "Audio Player Time Stamp",
+      "ReadonlyChipName": "Audio Player Time Stamp",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Time Stamp",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Time Stamp",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Audio",
+            "Player"
+          ]
+        }
+      ]
+    },
     "28a95bc3-ab08-48ae-b0c0-16b41168bf47": {
       "ReadonlyPaletteName": "Bit And",
       "ReadonlyChipName": "Bit And",
@@ -2214,7 +2476,7 @@
       "IsBetaChip": true,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
       "NodeDescs": [
         {
           "Name": "Color Variable",
@@ -2723,7 +2985,7 @@
       "ReadonlyPaletteName": "Comment",
       "ReadonlyChipName": "i",
       "Description": "Put a comment next to your circuits to explain what they're doing.",
-      "IsBetaChip": false,
+      "IsBetaChip": true,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "Code",
@@ -7952,7 +8214,7 @@
       "IsBetaChip": true,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
       "NodeDescs": [
         {
           "Name": "List<Color> Variable",
@@ -10905,6 +11167,473 @@
         }
       ]
     },
+    "27e235ea-7305-4f3e-a426-04a887cbde6d": {
+      "ReadonlyPaletteName": "Projectile Launcher Fire Projectile",
+      "ReadonlyChipName": "Projectile Launcher Fire Projectile",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Fire Projectile",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            },
+            {
+              "Name": "Direction",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "29005ae6-2611-4ed3-9bed-e256749b487a": {
+      "ReadonlyPaletteName": "Projectile Launcher Get Projectile Color",
+      "ReadonlyChipName": "Projectile Launcher Get Projectile Color",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Get Projectile Color",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "ed1f109d-bc85-4e4b-8f15-d33363aed7dd": {
+      "ReadonlyPaletteName": "Projectile Launcher Get Hand Damage",
+      "ReadonlyChipName": "Projectile Launcher Get Hand Damage",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Get Hand Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "7aa59933-c380-428e-aca9-2de2875cb38d": {
+      "ReadonlyPaletteName": "Projectile Launcher Get Head Damage",
+      "ReadonlyChipName": "Projectile Launcher Get Head Damage",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Get Head Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "1803843e-4e3b-4422-ada9-5f8959337ee5": {
+      "ReadonlyPaletteName": "Projectile Launcher Get Projectile Speed",
+      "ReadonlyChipName": "Projectile Launcher Get Projectile Speed",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Get Projectile Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "0da5a0be-9c01-4fcc-83a4-a660971c8644": {
+      "ReadonlyPaletteName": "Projectile Launcher Get Torso Damage",
+      "ReadonlyChipName": "Projectile Launcher Get Torso Damage",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Get Torso Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "3a253a6e-fc0f-4ae2-b669-0418c09fc553": {
+      "ReadonlyPaletteName": "Projectile Launcher Set Projectile Color",
+      "ReadonlyChipName": "Projectile Launcher Set Projectile Color",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Set Projectile Color",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            },
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "3dd1fa27-a800-4d05-8b47-16ad48311135": {
+      "ReadonlyPaletteName": "Projectile Launcher Set Hand Damage",
+      "ReadonlyChipName": "Projectile Launcher Set Hand Damage",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Set Hand Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            },
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "f9eeb1b4-5721-4d30-82d4-3bfdea0b8617": {
+      "ReadonlyPaletteName": "Projectile Launcher Set Head Damage",
+      "ReadonlyChipName": "Projectile Launcher Set Head Damage",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Set Head Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            },
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "01cf75ba-b056-4226-b646-84fee1b7c9aa": {
+      "ReadonlyPaletteName": "Projectile Launcher Set Projectile Speed",
+      "ReadonlyChipName": "Projectile Launcher Set Projectile Speed",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Set Projectile Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            },
+            {
+              "Name": "Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "531dc709-286e-429c-9d51-537a63d74f76": {
+      "ReadonlyPaletteName": "Projectile Launcher Set Torso Damage",
+      "ReadonlyChipName": "Projectile Launcher Set Torso Damage",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Set Torso Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            },
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
     "46e6b40e-2416-4078-b7dc-a0ecc2c2aa20": {
       "ReadonlyPaletteName": "Prompt Local Player",
       "ReadonlyChipName": "Prompt Local Player",
@@ -12582,6 +13311,30 @@
           ]
         }
       ]
+    },
+    "2cb45825-f385-414f-9a65-2425963fa720": {
+      "ReadonlyPaletteName": "Sample Audio",
+      "ReadonlyChipName": "Sample Audio",
+      "Description": "",
+      "IsBetaChip": true,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Sample Audio",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Audio",
+              "ReadonlyType": "Audio",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
     },
     "7fc01b3a-3f44-4cf1-ad2d-d5898fb35f4d": {
       "ReadonlyPaletteName": "Seat Get Seated Player",

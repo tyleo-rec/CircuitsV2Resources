@@ -4,6 +4,7 @@
 
 - [2022_03_25 Invisible Collision](2022_03_25_invisible_collision.pdf)
 - [2022_03_25 Laser Pointer](2022_03_25_laser_pointer.pdf)
+- [2022_03_25 Logging Improvements](2022_03_25_logging_improvements.pdf)
 - [2022_03_25 Player is Grounded](2022_03_25_player_is_grounded.pdf)
 - [2022_03_25 Projectile Launcher](2022_03_25_projectile_launcher.pdf)
 - [2022_02_13 Comment Chip](2022_02_13_comment_chip.pdf)

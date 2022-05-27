@@ -1,7 +1,7 @@
 # Releases
 
-- [Version 2.28 (Next Next)](2_28)
-- [Version 2.27 (Next)](2_27)
+- [Version 2.28 (Coming Soon)](2_28)
+- [Version 2.27](2_27)
 - [Version 2.26](2_26)
 - [Version 2.25](2_25)
 - [Version 2.24](2_24)

@@ -239,6 +239,114 @@
         }
       ]
     },
+    "953fb21b-c9f0-46fc-a0f1-ee1a937854f8": {
+      "ReadonlyPaletteName": "Add Tag",
+      "ReadonlyChipName": "Add Tag",
+      "Description": "Adds a tag to the input object or player.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Add Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Taggable",
+              "Description": ""
+            },
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object",
+            "Tag"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
+          ]
+        }
+      ]
+    },
+    "81939b0e-428f-481c-9fba-453b4c84f01e": {
+      "ReadonlyPaletteName": "Add Tags",
+      "ReadonlyChipName": "Add Tags",
+      "Description": "Adds tags to the input object or player.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Add Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Taggable",
+              "Description": ""
+            },
+            {
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object",
+            "Tag"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
+          ]
+        }
+      ]
+    },
     "3edc785f-46ef-4f30-b101-a07126d3a370": {
       "ReadonlyPaletteName": "AI Get Line of Sight Parameters",
       "ReadonlyChipName": "AI Get Line of Sight Parameters",
@@ -1010,7 +1118,7 @@
       "ReadonlyPaletteName": "Angular Velocity Add",
       "ReadonlyChipName": "Angular Velocity Add",
       "Description": "Add angular velocity to an object. The Angular Velocity vector should lie along the axis of the rotation being added, with a magnitude that (once multiplied by the speed multiplier) represents the clockwise rotation speed in deg/s. Once the new angular velocity has been computed, its speed will be capped by the Max Angular Speed.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -1059,7 +1167,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
     },
     "98b24bc7-32d8-4386-9348-d44ad00d7702": {
       "ReadonlyPaletteName": "Angular Velocity Set (Deprecated)",
@@ -1118,7 +1232,7 @@
       "ReadonlyPaletteName": "Angular Velocity Set",
       "ReadonlyChipName": "Angular Velocity Set",
       "Description": "Sets the angular velocity of an object. The Angular Velocity vector should lie along the axis of rotation, with a magnitude that (once multiplied by the speed multiplier) represents the clockwise rotation speed in deg/s.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -1162,7 +1276,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
     },
     "aaa4e58f-16df-426a-b7a7-a654eab97037": {
       "ReadonlyPaletteName": "Asin",
@@ -1284,7 +1404,7 @@
       "ReadonlyPaletteName": "Audio Player Pause",
       "ReadonlyChipName": "Audio Player Pause",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -1326,7 +1446,7 @@
       "ReadonlyPaletteName": "Audio Player Play",
       "ReadonlyChipName": "Audio Player Play",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -1373,7 +1493,7 @@
       "ReadonlyPaletteName": "Audio Player Set Speed",
       "ReadonlyChipName": "Audio Player Set Speed",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -1420,7 +1540,7 @@
       "ReadonlyPaletteName": "Audio Player Set Volume",
       "ReadonlyChipName": "Audio Player Set Volume",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -1467,7 +1587,7 @@
       "ReadonlyPaletteName": "Audio Player Stop",
       "ReadonlyChipName": "Audio Player Stop",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -1509,7 +1629,7 @@
       "ReadonlyPaletteName": "Audio Player Time Stamp",
       "ReadonlyChipName": "Audio Player Time Stamp",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -2439,11 +2559,191 @@
         }
       ]
     },
+    "c3fc963c-6d73-4d88-9c9b-95e9faae219f": {
+      "ReadonlyPaletteName": "Collision Data Get Distance",
+      "ReadonlyChipName": "Collision Data Get Distance",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Collision Data Get Distance",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Collision Data",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "ced470f8-dd9d-4e67-a654-7c7e1a3e7819": {
+      "ReadonlyPaletteName": "Collision Data Get Normal",
+      "ReadonlyChipName": "Collision Data Get Normal",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Collision Data Get Normal",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Collision Data",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Normal",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "8c8931da-1a8e-4164-a3a5-0f68db8cafb5": {
+      "ReadonlyPaletteName": "Collision Data Get Object",
+      "ReadonlyChipName": "Collision Data Get Object",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Collision Data Get Object",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Collision Data",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Object",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "2729e8db-62d1-4f9e-b076-74f27cd43332": {
+      "ReadonlyPaletteName": "Collision Data Get Player",
+      "ReadonlyChipName": "Collision Data Get Player",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Collision Data Get Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Collision Data",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "5910618b-f862-49ce-9779-46130e47f985": {
+      "ReadonlyPaletteName": "Collision Data Get Position",
+      "ReadonlyChipName": "Collision Data Get Position",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Collision Data Get Position",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Collision Data",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
     "87a8e178-b15c-4c38-9da0-95ba74f9f4ec": {
       "ReadonlyPaletteName": "Color Constant",
       "ReadonlyChipName": "Color Constant",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -2473,7 +2773,7 @@
       "ReadonlyPaletteName": "Color Variable",
       "ReadonlyChipName": "Color Variable",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "Code",
@@ -2985,7 +3285,7 @@
       "ReadonlyPaletteName": "Comment",
       "ReadonlyChipName": "i",
       "Description": "Put a comment next to your circuits to explain what they're doing.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "Code",
@@ -3221,104 +3521,10 @@
         }
       ]
     },
-    "953fb21b-c9f0-46fc-a0f1-ee1a937854f8": {
-      "ReadonlyPaletteName": "Rec Room Object Add Tag",
-      "ReadonlyChipName": "Rec Room Object Add Tag",
-      "Description": "Adds a tag to an object.",
-      "IsBetaChip": true,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Rec Room Object Add Tag",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Target",
-              "ReadonlyType": "Rec Room Object",
-              "Description": ""
-            },
-            {
-              "Name": "Tag",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Object",
-            "Rec Room Object"
-          ]
-        }
-      ]
-    },
-    "81939b0e-428f-481c-9fba-453b4c84f01e": {
-      "ReadonlyPaletteName": "Rec Room Object Add Tags",
-      "ReadonlyChipName": "Rec Room Object Add Tags",
-      "Description": "Adds tags to the input object.",
-      "IsBetaChip": false,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Rec Room Object Add Tags",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Target",
-              "ReadonlyType": "Rec Room Object",
-              "Description": ""
-            },
-            {
-              "Name": "Tags",
-              "ReadonlyType": "List<string>",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Object",
-            "Rec Room Object"
-          ]
-        }
-      ]
-    },
     "02d69553-ae96-4c2d-8477-59ada6a66783": {
       "ReadonlyPaletteName": "Rec Room Object Get All with Tag",
       "ReadonlyChipName": "Rec Room Object Get All with Tag",
-      "Description": "Searches the room for all objects with a specified tag. Outputs all objects with the input tag as a list.",
+      "Description": "Searches the room for all objects with the input tag and outputs them as a list.",
       "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
@@ -3347,7 +3553,8 @@
         {
           "FilterPath": [
             "Object",
-            "Rec Room Object"
+            "Rec Room Object",
+            "Tag"
           ]
         }
       ]
@@ -3394,47 +3601,10 @@
         }
       ]
     },
-    "cb909206-8627-4c66-ac8d-47b1a046ef8b": {
-      "ReadonlyPaletteName": "Rec Room Object Get First Tag",
-      "ReadonlyChipName": "Rec Room Object Get First Tag",
-      "Description": "Gets the first tag of an object.",
-      "IsBetaChip": true,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Rec Room Object Get First Tag",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Target",
-              "ReadonlyType": "Rec Room Object",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "Tag",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Object",
-            "Rec Room Object"
-          ]
-        }
-      ]
-    },
     "43ff2d3c-c3aa-45bc-a7b7-01587c8a61f6": {
       "ReadonlyPaletteName": "Rec Room Object Get First with Tag",
       "ReadonlyChipName": "Rec Room Object Get First with Tag",
-      "Description": "Gets the first object with a tag.",
+      "Description": "Gets the first object with the input tag.",
       "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
@@ -3463,7 +3633,8 @@
         {
           "FilterPath": [
             "Object",
-            "Rec Room Object"
+            "Rec Room Object",
+            "Tag"
           ]
         }
       ]
@@ -3558,85 +3729,6 @@
         }
       ]
     },
-    "e67cfcb7-03e8-4152-ba41-af8ca61d93fb": {
-      "ReadonlyPaletteName": "Rec Room Object Get Tags",
-      "ReadonlyChipName": "Rec Room Object Get Tags",
-      "Description": "Outputs list of tags the input object has.",
-      "IsBetaChip": false,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Rec Room Object Get Tags",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Target",
-              "ReadonlyType": "Rec Room Object",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "Tags",
-              "ReadonlyType": "List<string>",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Object",
-            "Rec Room Object"
-          ]
-        }
-      ]
-    },
-    "bc3011d2-c085-490e-a450-195ff3a27009": {
-      "ReadonlyPaletteName": "Rec Room Object Has Tag",
-      "ReadonlyChipName": "Rec Room Object Has Tag",
-      "Description": "Outputs True if the input object has the input tag.",
-      "IsBetaChip": false,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Rec Room Object Has Tag",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Object",
-              "ReadonlyType": "Rec Room Object",
-              "Description": ""
-            },
-            {
-              "Name": "Tag",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "Has Tag",
-              "ReadonlyType": "bool",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Object",
-            "Rec Room Object"
-          ]
-        }
-      ]
-    },
     "7077d139-9876-495e-9756-58150fef9f3b": {
       "ReadonlyPaletteName": "Rec Room Object Variable",
       "ReadonlyChipName": "Rec Room Object Variable",
@@ -3682,100 +3774,6 @@
             "Object"
           ]
         },
-        {
-          "FilterPath": [
-            "Object",
-            "Rec Room Object"
-          ]
-        }
-      ]
-    },
-    "207c6721-b242-4dc2-857d-ebd1ff7c8624": {
-      "ReadonlyPaletteName": "Rec Room Object Remove Tag",
-      "ReadonlyChipName": "Rec Room Object Remove Tag",
-      "Description": "Removes a tag from the object.",
-      "IsBetaChip": true,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Rec Room Object Remove Tag",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Target",
-              "ReadonlyType": "Rec Room Object",
-              "Description": ""
-            },
-            {
-              "Name": "Tag",
-              "ReadonlyType": "string",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Object",
-            "Rec Room Object"
-          ]
-        }
-      ]
-    },
-    "fb368814-daaf-475f-ae08-1d01b9d63b8e": {
-      "ReadonlyPaletteName": "Rec Room Object Remove Tags",
-      "ReadonlyChipName": "Rec Room Object Remove Tags",
-      "Description": "Removes the input list of tags from the input object.",
-      "IsBetaChip": false,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Rec Room Object Remove Tags",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Target",
-              "ReadonlyType": "Rec Room Object",
-              "Description": ""
-            },
-            {
-              "Name": "Tags",
-              "ReadonlyType": "List<string>",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "",
-              "ReadonlyType": "exec",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
         {
           "FilterPath": [
             "Object",
@@ -4106,8 +4104,8 @@
       ]
     },
     "15e42063-cbae-40f9-a9e4-8226e83217ec": {
-      "ReadonlyPaletteName": "Emitter Set Color",
-      "ReadonlyChipName": "Emitter Set Color",
+      "ReadonlyPaletteName": "Emitter Set Color Id",
+      "ReadonlyChipName": "Emitter Set Color Id",
       "Description": "Sets the color for the particles emitted.",
       "IsBetaChip": false,
       "DeprecationStage": "Active",
@@ -4115,7 +4113,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Emitter Set Color",
+          "Name": "Emitter Set Color Id",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -4153,16 +4151,16 @@
       ]
     },
     "4263768a-035b-4d8b-b17c-1a7bb0b9b96d": {
-      "ReadonlyPaletteName": "Emitter Set Color V2",
-      "ReadonlyChipName": "Emitter Set Color V2",
+      "ReadonlyPaletteName": "Emitter Set Color",
+      "ReadonlyChipName": "Emitter Set Color",
       "Description": "Sets the color for the particles emitted.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Emitter Set Color V2",
+          "Name": "Emitter Set Color",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -4574,6 +4572,394 @@
         {
           "FilterPath": [
             "Commonly Used"
+          ]
+        }
+      ]
+    },
+    "0387e4c7-b917-4d19-937f-5da37b9f41cc": {
+      "ReadonlyPaletteName": "Execution Integer Switch",
+      "ReadonlyChipName": "Execution Integer Switch",
+      "Description": "Executes the associated output of the compare value that matches the 'match' input. Executes the default output if no match can be found.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Execution Integer Switch",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Match",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Failed",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Control Flow"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Control Flow"
+          ]
+        }
+      ]
+    },
+    "80c7d803-df40-45a5-ac7b-bfccb0b511c7": {
+      "ReadonlyPaletteName": "Execution String Switch",
+      "ReadonlyChipName": "Execution String Switch",
+      "Description": "Executes the associated output of the compare value that matches the 'match' input. Executes the default output if no match can be found.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Execution String Switch",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Match",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Failed",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Control Flow"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Control Flow"
+          ]
+        }
+      ]
+    },
+    "49774675-e750-441f-9e92-8455232f1703": {
+      "ReadonlyPaletteName": "Explosion Emitter Explode",
+      "ReadonlyChipName": "Explosion Emitter Explode",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Explode",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
+    "6039d63b-f484-4436-bb7c-ea58529ed4ec": {
+      "ReadonlyPaletteName": "Explosion Emitter Get Explosion Color",
+      "ReadonlyChipName": "Explosion Emitter Get Explosion Color",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Get Explosion Color",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
+    "87d94359-da69-49ed-8b61-fbf78d79fa48": {
+      "ReadonlyPaletteName": "Explosion Emitter Get Damage",
+      "ReadonlyChipName": "Explosion Emitter Get Damage",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Get Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
+    "eff7cfca-dcee-4ea1-887f-e4c60f3c8269": {
+      "ReadonlyPaletteName": "Explosion Emitter Get Explosion Radius",
+      "ReadonlyChipName": "Explosion Emitter Get Explosion Radius",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Get Explosion Radius",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Radius",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
+    "a3211c4f-9924-4a9a-afea-ab48f37bbc67": {
+      "ReadonlyPaletteName": "Explosion Emitter Set Explosion Color",
+      "ReadonlyChipName": "Explosion Emitter Set Explosion Color",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Set Explosion Color",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            },
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
+    "748f210d-f9e2-4dca-a29a-8eacf99daff7": {
+      "ReadonlyPaletteName": "Explosion Emitter Set Damage",
+      "ReadonlyChipName": "Explosion Emitter Set Damage",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Set Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            },
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
+    "672e473f-7099-4f76-aead-8b3df7c2fcd2": {
+      "ReadonlyPaletteName": "Explosion Emitter Set Explosion Radius",
+      "ReadonlyChipName": "Explosion Emitter Set Explosion Radius",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Set Explosion Radius",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            },
+            {
+              "Name": "Radius",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
           ]
         }
       ]
@@ -5100,7 +5486,7 @@
       "ReadonlyPaletteName": "Get Any Player with Role",
       "ReadonlyChipName": "Get Any Player with Role",
       "Description": "Gets a player with the role. Returns invalid player if no player has the role.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -5129,6 +5515,50 @@
           "FilterPath": [
             "Player",
             "Role"
+          ]
+        }
+      ]
+    },
+    "cb909206-8627-4c66-ac8d-47b1a046ef8b": {
+      "ReadonlyPaletteName": "Get First Tag",
+      "ReadonlyChipName": "Get First Tag",
+      "Description": "Gets the first tag of an object or player.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get First Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Taggable",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object",
+            "Tag"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
           ]
         }
       ]
@@ -5818,6 +6248,50 @@
         {
           "FilterPath": [
             "Networking"
+          ]
+        }
+      ]
+    },
+    "e67cfcb7-03e8-4152-ba41-af8ca61d93fb": {
+      "ReadonlyPaletteName": "Get Tags",
+      "ReadonlyChipName": "Get Tags",
+      "Description": "Outputs a list of tags the input object or player has.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Taggable",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object",
+            "Tag"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
           ]
         }
       ]
@@ -6651,9 +7125,58 @@
         }
       ]
     },
+    "bc3011d2-c085-490e-a450-195ff3a27009": {
+      "ReadonlyPaletteName": "Has Tag",
+      "ReadonlyChipName": "Has Tag",
+      "Description": "Outputs True if the input object or player has the input tag.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Has Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Taggable",
+              "Description": ""
+            },
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Has Tag",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object",
+            "Tag"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
+          ]
+        }
+      ]
+    },
     "a4f8a9a1-fd7b-4702-8345-93ae4d57f333": {
-      "ReadonlyPaletteName": "If Expression",
-      "ReadonlyChipName": "If Expression",
+      "ReadonlyPaletteName": "If Value",
+      "ReadonlyChipName": "If Value",
       "Description": "Outputs one input value based on the input condition. Outputs the \"Then\" input if the input condition is True. Outputs the \"Else\" input if the input condition is False. Only reads one of the inputs, not both.",
       "IsBetaChip": false,
       "DeprecationStage": "Active",
@@ -6661,7 +7184,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "If Expression",
+          "Name": "If Value",
           "ReadonlyTypeParams": {
             "T": "any"
           },
@@ -7352,6 +7875,120 @@
         }
       ]
     },
+    "de407f3c-2fb0-4c9a-9dc4-fb6d6709737e": {
+      "ReadonlyPaletteName": "Invisible Collision Get Enabled",
+      "ReadonlyChipName": "Invisible Collision Get Enabled",
+      "Description": "Outputs True if the target Invisible Collision object is enabled.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Invisible Collision Get Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Invisible Collision",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Invisible Collision"
+          ]
+        }
+      ]
+    },
+    "a5b78c7e-d718-44d4-91c4-7f795bf73814": {
+      "ReadonlyPaletteName": "Invisible Collision Set Enabled",
+      "ReadonlyChipName": "Invisible Collision Set Enabled",
+      "Description": "Sets the enabled state of a target Invisible Collision object.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Invisible Collision Set Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Invisible Collision",
+              "Description": ""
+            },
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Invisible Collision"
+          ]
+        }
+      ]
+    },
+    "aa263220-c6aa-4789-b09c-c73d7fa144fd": {
+      "ReadonlyPaletteName": "Get Is Private Instance",
+      "ReadonlyChipName": "Get Is Private Instance",
+      "Description": "Returns True if the current room instance is private.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Is Private Instance",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Is Private Instance",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Utilities"
+          ]
+        }
+      ]
+    },
     "24a1be50-ef1b-4e54-836b-4a2a95780b4e": {
       "ReadonlyPaletteName": "Is Valid",
       "ReadonlyChipName": "Is Valid",
@@ -7634,8 +8271,8 @@
       ]
     },
     "2b6d9368-2ddc-41fb-ac14-b1a3561b19fc": {
-      "ReadonlyPaletteName": "Light Set Color",
-      "ReadonlyChipName": "Light Set Color",
+      "ReadonlyPaletteName": "Light Set Color Id",
+      "ReadonlyChipName": "Light Set Color Id",
       "Description": "Sets the color for a point light or a spotlight.",
       "IsBetaChip": false,
       "DeprecationStage": "Active",
@@ -7643,7 +8280,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Light Set Color",
+          "Name": "Light Set Color Id",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -7681,16 +8318,16 @@
       ]
     },
     "b2698906-68bd-4ea3-be98-35a23615b522": {
-      "ReadonlyPaletteName": "Light Set Color V2",
-      "ReadonlyChipName": "Light Set Color V2",
+      "ReadonlyPaletteName": "Light Set Color",
+      "ReadonlyChipName": "Light Set Color",
       "Description": "Sets the color for a point light or a spotlight.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Light Set Color V2",
+          "Name": "Light Set Color",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -7914,6 +8551,86 @@
           ]
         }
       ]
+    },
+    "7876451d-982d-4880-b78b-b3d02389af2c": {
+      "ReadonlyPaletteName": "Light Set Softness",
+      "ReadonlyChipName": "Light Set Softness",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Light Set Softness",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Softness",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
+    "723817f6-9562-4f36-b3cc-1c66da5ac3c6": {
+      "ReadonlyPaletteName": "Light Set Specular Contribution",
+      "ReadonlyChipName": "Light Set Specular Contribution",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Light Set Specular Contribution",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Light",
+              "Description": ""
+            },
+            {
+              "Name": "Specular Contribution",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
     },
     "0f96406e-af69-4f6c-a430-c6b004457ef4": {
       "ReadonlyPaletteName": "Light Turn Off",
@@ -8211,7 +8928,7 @@
       "ReadonlyPaletteName": "List<Color> Variable",
       "ReadonlyChipName": "List<Color> Variable",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "Code",
@@ -9763,6 +10480,57 @@
         }
       ]
     },
+    "23ce1dae-7585-43af-92c1-9a72fa5d0101": {
+      "ReadonlyPaletteName": "Overlap Sphere",
+      "ReadonlyChipName": "Overlap Sphere",
+      "Description": "",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Overlap Sphere",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Origin",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Radius",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Collisions",
+              "ReadonlyType": "List<Collision Data>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
     "92c05ebc-1967-49a4-94b5-2d01fe1e6b85": {
       "ReadonlyPaletteName": "Parse Bool",
       "ReadonlyChipName": "Parse Bool",
@@ -10391,6 +11159,43 @@
         }
       ]
     },
+    "8286a047-19a2-4ad0-bdec-833f35adf4f2": {
+      "ReadonlyPaletteName": "Player Get All with Tag",
+      "ReadonlyChipName": "Player Get All with Tag",
+      "Description": "Searches the room for all players with the input tag and outputs them as a list.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get All with Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Players with Tag",
+              "ReadonlyType": "List<Player>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
+          ]
+        }
+      ]
+    },
     "f0827a17-7d21-45ba-b302-c2b068bd50ca": {
       "ReadonlyPaletteName": "Player Get Equipped Objects",
       "ReadonlyChipName": "Player Get Equipped Objects",
@@ -10444,6 +11249,43 @@
           "FilterPath": [
             "Player",
             "Equipment"
+          ]
+        }
+      ]
+    },
+    "48364320-cb02-41d8-9d8f-50291131dad2": {
+      "ReadonlyPaletteName": "Player Get First with Tag",
+      "ReadonlyChipName": "Player Get First with Tag",
+      "Description": "Gets the first player with the input tag.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get First with Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
           ]
         }
       ]
@@ -11171,7 +12013,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Fire Projectile",
       "ReadonlyChipName": "Projectile Launcher Fire Projectile",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11218,7 +12060,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Get Projectile Color",
       "ReadonlyChipName": "Projectile Launcher Get Projectile Color",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11255,7 +12097,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Get Hand Damage",
       "ReadonlyChipName": "Projectile Launcher Get Hand Damage",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11292,7 +12134,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Get Head Damage",
       "ReadonlyChipName": "Projectile Launcher Get Head Damage",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11329,7 +12171,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Get Projectile Speed",
       "ReadonlyChipName": "Projectile Launcher Get Projectile Speed",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11366,7 +12208,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Get Torso Damage",
       "ReadonlyChipName": "Projectile Launcher Get Torso Damage",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11403,7 +12245,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Set Projectile Color",
       "ReadonlyChipName": "Projectile Launcher Set Projectile Color",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11450,7 +12292,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Set Hand Damage",
       "ReadonlyChipName": "Projectile Launcher Set Hand Damage",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11497,7 +12339,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Set Head Damage",
       "ReadonlyChipName": "Projectile Launcher Set Head Damage",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11544,7 +12386,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Set Projectile Speed",
       "ReadonlyChipName": "Projectile Launcher Set Projectile Speed",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -11591,7 +12433,7 @@
       "ReadonlyPaletteName": "Projectile Launcher Set Torso Damage",
       "ReadonlyChipName": "Projectile Launcher Set Torso Damage",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -12451,7 +13293,7 @@
     "d253cef6-dd99-4357-b98a-e09a0c23bad7": {
       "ReadonlyPaletteName": "Random From List",
       "ReadonlyChipName": "Random From List",
-      "Description": "Outputs a random value from a target list.",
+      "Description": "",
       "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
@@ -12488,14 +13330,7 @@
           ]
         }
       ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "List",
-            "Utilities"
-          ]
-        }
-      ]
+      "NodeFilters": []
     },
     "fb2645f0-4042-4ef1-b988-af2f80e651ec": {
       "ReadonlyPaletteName": "Random Int",
@@ -12616,6 +13451,114 @@
         {
           "FilterPath": [
             "Physics"
+          ]
+        }
+      ]
+    },
+    "207c6721-b242-4dc2-857d-ebd1ff7c8624": {
+      "ReadonlyPaletteName": "Remove Tag",
+      "ReadonlyChipName": "Remove Tag",
+      "Description": "Removes a tag from the input object or player.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Remove Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Taggable",
+              "Description": ""
+            },
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object",
+            "Tag"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
+          ]
+        }
+      ]
+    },
+    "fb368814-daaf-475f-ae08-1d01b9d63b8e": {
+      "ReadonlyPaletteName": "Remove Tags",
+      "ReadonlyChipName": "Remove Tags",
+      "Description": "Removes the input list of tags from the input object or player.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Remove Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Taggable",
+              "Description": ""
+            },
+            {
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object",
+            "Tag"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Tag"
           ]
         }
       ]
@@ -13316,7 +14259,7 @@
       "ReadonlyPaletteName": "Sample Audio",
       "ReadonlyChipName": "Sample Audio",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -13816,7 +14759,7 @@
       "ReadonlyPaletteName": "Set Rotation",
       "ReadonlyChipName": "Set Rotation",
       "Description": "Sets the rotation of the target player or object. Players will rotate about the vertical axis only. Will fail in the following cases: If the target object is currently held, select/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -13877,7 +14820,7 @@
       "ReadonlyPaletteName": "Set Transform",
       "ReadonlyChipName": "Set Transform",
       "Description": "Sets the transform (position and rotation) of the target player or object. Players will rotate about the vertical axis only. Will fail in the following cases: If the target object is currently held, select/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -14380,7 +15323,7 @@
       "ReadonlyPaletteName": "Spherecast",
       "ReadonlyChipName": "Spherecast",
       "Description": "Fires an invisible sphere of the specified Radius from the Start Position, in the Direction specified. Returns true if any object or player is hit within the target Max Distance. Otherwise, returns false. You can configure the chip itself to ignore players or objects specifically.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -14988,8 +15931,8 @@
       ]
     },
     "20b2528d-96a9-4be8-9782-aa75959f5232": {
-      "ReadonlyPaletteName": "Text Set Color",
-      "ReadonlyChipName": "Text Set Color",
+      "ReadonlyPaletteName": "Text Set Color Id",
+      "ReadonlyChipName": "Text Set Color Id",
       "Description": "Sets the color for a Text object.",
       "IsBetaChip": false,
       "DeprecationStage": "Active",
@@ -14997,7 +15940,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Text Set Color",
+          "Name": "Text Set Color Id",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -15035,16 +15978,16 @@
       ]
     },
     "0bfaa337-46a1-472f-beac-12faa21867d4": {
-      "ReadonlyPaletteName": "Text Set Color V2",
-      "ReadonlyChipName": "Text Set Color V2",
+      "ReadonlyPaletteName": "Text Set Color",
+      "ReadonlyChipName": "Text Set Color",
       "Description": "Sets the color for a Text object.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Text Set Color V2",
+          "Name": "Text Set Color",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -15755,6 +16698,92 @@
           "FilterPath": [
             "Object",
             "Trigger Volume"
+          ]
+        }
+      ]
+    },
+    "be534038-473e-40ad-b4e2-abd38a76711b": {
+      "ReadonlyPaletteName": "Value Integer Switch",
+      "ReadonlyChipName": "Value Integer Switch",
+      "Description": "Returns the associated input of the compare value that matches the 'match' input. Returns the default value if no match can be found.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Value Integer Switch",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Match",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Default",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Data",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic"
+          ]
+        }
+      ]
+    },
+    "2c9dcd54-dd65-498e-8a13-50c221448358": {
+      "ReadonlyPaletteName": "Value String Switch",
+      "ReadonlyChipName": "Value String Switch",
+      "Description": "Returns the associated input of the compare value that matches the 'match' input. Returns the default value if no match can be found.",
+      "IsBetaChip": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Value String Switch",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Match",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Default",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Data",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic"
           ]
         }
       ]

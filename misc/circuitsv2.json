@@ -1095,6 +1095,12 @@
             "Object",
             "Audio Player"
           ]
+        },
+        {
+          "FilterPath": [
+            "Constant",
+            "Audio"
+          ]
         }
       ]
     },
@@ -1495,6 +1501,123 @@
         }
       ]
     },
+    "be5262f0-1f67-4be7-aa8c-967c30bd5487": {
+      "ReadonlyPaletteName": "Audio Get Length",
+      "ReadonlyChipName": "Audio Get Length",
+      "Description": "Returns the length in seconds of the given audio reference.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Get Length",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Audio",
+              "ReadonlyType": "Audio",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Length",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Audio Player"
+          ]
+        }
+      ]
+    },
+    "0f4433b6-425d-4172-968a-2c867bc0fef5": {
+      "ReadonlyPaletteName": "Audio Player Get Audio",
+      "ReadonlyChipName": "Audio Player Get Audio",
+      "Description": "Returns the most recent audio reference that the target Audio Player has started playing.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Get Audio",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Audio",
+              "ReadonlyType": "Audio",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Audio Player"
+          ]
+        }
+      ]
+    },
+    "2db28fb7-0edb-4f09-8d74-ed5614dfaf11": {
+      "ReadonlyPaletteName": "Audio Player Get Max Rolloff Distance",
+      "ReadonlyChipName": "Audio Player Get Max Rolloff Distance",
+      "Description": "Returns the furthest distance from the target Audio Player that the audio can be heard from.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Get Max Rolloff Distance",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Max Rolloff Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Audio Player"
+          ]
+        }
+      ]
+    },
     "00443d01-632e-4f75-ac6f-23b3e224e791": {
       "ReadonlyPaletteName": "Audio Player Get Playing",
       "ReadonlyChipName": "Audio Player Get Playing",
@@ -1573,6 +1696,45 @@
         }
       ]
     },
+    "61e8293d-5d5a-4dbc-9505-0a13faf8b4cc": {
+      "ReadonlyPaletteName": "Audio Player Get Time Stamp",
+      "ReadonlyChipName": "Audio Player Get Time Stamp",
+      "Description": "Returns the current time stamp of the target Audio Player in seconds.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Get Time Stamp",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Time Stamp",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Audio Player"
+          ]
+        }
+      ]
+    },
     "1bbabac2-f316-4e07-9eb6-fd65848a5b90": {
       "ReadonlyPaletteName": "Audio Player Get Volume",
       "ReadonlyChipName": "Audio Player Get Volume",
@@ -1628,7 +1790,7 @@
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Pause",
+              "Name": "",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -1672,7 +1834,7 @@
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Play",
+              "Name": "",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -1682,8 +1844,57 @@
               "Description": ""
             },
             {
-              "Name": "Media",
+              "Name": "Audio",
               "ReadonlyType": "Audio",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Audio Player"
+          ]
+        }
+      ]
+    },
+    "c8b0ee69-7b27-4805-b809-438b1c59f472": {
+      "ReadonlyPaletteName": "Audio Player Set Max Rolloff Distance",
+      "ReadonlyChipName": "Audio Player Set Max Rolloff Distance",
+      "Description": "Sets the maximum distance that audio from the target Audio Player can be heard from.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Set Max Rolloff Distance",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            },
+            {
+              "Name": "Max Rolloff Distance",
+              "ReadonlyType": "float",
               "Description": ""
             }
           ],
@@ -1708,7 +1919,7 @@
     "a59e93b4-f949-47b4-af73-fb6e110392fa": {
       "ReadonlyPaletteName": "Audio Player Set Speed",
       "ReadonlyChipName": "Audio Player Set Speed",
-      "Description": "",
+      "Description": "Sets the speed multiplier that the target Audio Player will play at.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -1721,7 +1932,7 @@
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Set Speed",
+              "Name": "",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -1754,10 +1965,59 @@
         }
       ]
     },
+    "d30959ca-fa17-498b-88da-a83a46c34b97": {
+      "ReadonlyPaletteName": "Audio Player Set Time Stamp",
+      "ReadonlyChipName": "Audio Player Set Time Stamp",
+      "Description": "Sets the time stamp of the target Audio Player in seconds.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Audio Player Set Time Stamp",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Audio Player",
+              "Description": ""
+            },
+            {
+              "Name": "Time Stamp",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Audio Player"
+          ]
+        }
+      ]
+    },
     "cdedf5fe-9d4f-4811-9883-160b04695657": {
       "ReadonlyPaletteName": "Audio Player Set Volume",
       "ReadonlyChipName": "Audio Player Set Volume",
-      "Description": "",
+      "Description": "Sets the volume multiplier that the target Audio Player will play at.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -1770,7 +2030,7 @@
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Set Volume",
+              "Name": "",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -1819,7 +2079,7 @@
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
-              "Name": "Stop",
+              "Name": "",
               "ReadonlyType": "exec",
               "Description": ""
             },
@@ -1847,31 +2107,25 @@
         }
       ]
     },
-    "61e8293d-5d5a-4dbc-9505-0a13faf8b4cc": {
-      "ReadonlyPaletteName": "Audio Player Time Stamp",
-      "ReadonlyChipName": "Audio Player Time Stamp",
-      "Description": "",
-      "IsBetaChip": false,
+    "c6e9ffef-b505-41d3-bb2d-ff86838398c6": {
+      "ReadonlyPaletteName": "Background Objects Constant",
+      "ReadonlyChipName": "Background Objects Constant",
+      "Description": "Defines values for the room's background objects.",
+      "IsBetaChip": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
       "NodeDescs": [
         {
-          "Name": "Audio Player Time Stamp",
+          "Name": "Background Objects Constant",
           "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Target",
-              "ReadonlyType": "Audio Player",
-              "Description": ""
-            }
-          ],
+          "Inputs": [],
           "Outputs": [
             {
-              "Name": "Time Stamp",
-              "ReadonlyType": "float",
+              "Name": "",
+              "ReadonlyType": "Background Objects",
               "Description": ""
             }
           ]
@@ -1880,8 +2134,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Object",
-            "Audio Player"
+            "Game Features",
+            "Moods"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constants"
           ]
         }
       ]
@@ -3052,6 +3311,57 @@
         }
       ]
     },
+    "f95735f1-1db8-4bf4-8198-03b2595fa741": {
+      "ReadonlyPaletteName": "Clamp",
+      "ReadonlyChipName": "Clamp",
+      "Description": "Clamps a value between a minimum value and maximum value. If the minimum is greater than the maximum, the minimum value will always be returned no matter the input.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Clamp",
+          "ReadonlyTypeParams": {
+            "T": "(float | int)"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Min",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Max",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
+          ]
+        }
+      ]
+    },
     "161bdcc8-4156-4c8f-9792-2a1285b97e68": {
       "ReadonlyPaletteName": "Clear Player Vignette",
       "ReadonlyChipName": "Clear Player Vignette",
@@ -3101,7 +3411,7 @@
       "ReadonlyPaletteName": "Clear Player World UI",
       "ReadonlyChipName": "Clear Player World UI",
       "Description": "Clear the UI configuration displayed above a given player.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -4027,7 +4337,7 @@
       "ReadonlyPaletteName": "Destination Room Constant",
       "ReadonlyChipName": "Destination Room",
       "Description": "Configure this constant to choose a destination, specifying room, subroom, and welcome mat. If destination room is different than current room, only Entry Subrooms may be targeted. Party follow options may vary by destination. Use this chip with Go To Room.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -4555,6 +4865,60 @@
         }
       ]
     },
+    "191f8009-5a2e-4da4-8817-980842a08d48": {
+      "ReadonlyPaletteName": "Rec Room Object Set Authority",
+      "ReadonlyChipName": "Rec Room Object Set Authority",
+      "Description": "Sets the authority player of the input Rec Room Object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Rec Room Object Set Authority",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            },
+            {
+              "Name": "Authority",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Rec Room Object"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Networking"
+          ]
+        }
+      ]
+    },
     "6809978a-e1fc-403a-a41a-d4e94f22281f": {
       "ReadonlyPaletteName": "Consumable Deactivate",
       "ReadonlyChipName": "Consumable Deactivate",
@@ -4678,7 +5042,7 @@
       "ReadonlyPaletteName": "Destination Room Variable",
       "ReadonlyChipName": "Destination Room Variable",
       "Description": "Stores a destination room. Destination cannot be configured from variable - for that, use a Constant.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -4999,7 +5363,7 @@
       "ReadonlyPaletteName": "Door Get Destination",
       "ReadonlyChipName": "Door Get Destination",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -5025,13 +5389,20 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Door"
+          ]
+        }
+      ]
     },
     "f2918d8a-444c-429d-ab79-e2d445695a57": {
       "ReadonlyPaletteName": "Door Get Locked",
       "ReadonlyChipName": "Door Get Locked",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -5057,13 +5428,20 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Door"
+          ]
+        }
+      ]
     },
     "5b9dc865-0fac-4d3a-9edc-68184ee189a2": {
       "ReadonlyPaletteName": "Door Set Destination",
       "ReadonlyChipName": "Door Set Destination",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -5099,13 +5477,20 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Door"
+          ]
+        }
+      ]
     },
     "7ca4abb2-d705-4c17-b713-7525122ef286": {
       "ReadonlyPaletteName": "Door Set Locked",
       "ReadonlyChipName": "Door Set Locked",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -5141,7 +5526,14 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Door"
+          ]
+        }
+      ]
     },
     "f8c91da0-bb4f-4958-9016-546a387f45dd": {
       "ReadonlyPaletteName": "Emitter Get Looping",
@@ -6338,6 +6730,98 @@
         }
       ]
     },
+    "3026a5c6-232f-4961-b18a-5ad179e6b24d": {
+      "ReadonlyPaletteName": "Fog Constant",
+      "ReadonlyChipName": "Fog Constant",
+      "Description": "Defines settings for room fog.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
+      "NodeDescs": [
+        {
+          "Name": "Fog Constant",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "Fog",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constants"
+          ]
+        }
+      ]
+    },
+    "471f7cf9-a4e4-4162-a6e9-d594b6ec28ef": {
+      "ReadonlyPaletteName": "Room Fog Modify",
+      "ReadonlyChipName": "Room Fog Modify",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Fog Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Fog Constant",
+              "ReadonlyType": "Fog",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        }
+      ]
+    },
     "744e5311-6cc7-4130-962e-fe050a475d43": {
       "ReadonlyPaletteName": "For Each",
       "ReadonlyChipName": "For Each",
@@ -6664,6 +7148,68 @@
       ],
       "NodeFilters": []
     },
+    "49fa5928-1af5-49e3-96d0-5ae67e6d81c9": {
+      "ReadonlyPaletteName": "Get Closest",
+      "ReadonlyChipName": "Get Closest",
+      "Description": "Finds the element in Targets that is closest in space to Origin, and returns it, its index in the list, and its distance to Origin.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Closest",
+          "ReadonlyTypeParams": {
+            "T1": "(Rec Room Object | Player | Vector3)",
+            "T2": "(Rec Room Object | Player | Vector3)"
+          },
+          "Inputs": [
+            {
+              "Name": "Origin",
+              "ReadonlyType": "T1",
+              "Description": ""
+            },
+            {
+              "Name": "Targets",
+              "ReadonlyType": "List<T2>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Closest",
+              "ReadonlyType": "T2",
+              "Description": ""
+            },
+            {
+              "Name": "Closest Index",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
     "e8c5082f-0a75-4025-9679-293bc8d72989": {
       "ReadonlyPaletteName": "List Get Element",
       "ReadonlyChipName": "List Get Element",
@@ -6710,11 +7256,11 @@
         }
       ]
     },
-    "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
-      "ReadonlyPaletteName": "Time Get Universal Seconds",
-      "ReadonlyChipName": "Time Get Universal Seconds",
-      "Description": "Gets the number of seconds since 1970. Uses local player's system clock. This is not synchronized between players! This is also not guaranteed to be continuous. To measure time, use Time Get Precise Seconds instead.",
-      "IsBetaChip": false,
+    "8e17bef6-59ea-4ff0-999a-a158800b22da": {
+      "ReadonlyPaletteName": "Get Farthest",
+      "ReadonlyChipName": "Get Farthest",
+      "Description": "Finds the element in Targets that is farthest in space to Origin, and returns it, its index in the list, and its distance to Origin.",
+      "IsBetaChip": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -6722,13 +7268,37 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Time Get Universal Seconds",
-          "ReadonlyTypeParams": {},
-          "Inputs": [],
+          "Name": "Get Farthest",
+          "ReadonlyTypeParams": {
+            "T1": "(Rec Room Object | Player | Vector3)",
+            "T2": "(Rec Room Object | Player | Vector3)"
+          },
+          "Inputs": [
+            {
+              "Name": "Origin",
+              "ReadonlyType": "T1",
+              "Description": ""
+            },
+            {
+              "Name": "Targets",
+              "ReadonlyType": "List<T2>",
+              "Description": ""
+            }
+          ],
           "Outputs": [
             {
-              "Name": "Value",
+              "Name": "Farthest",
+              "ReadonlyType": "T2",
+              "Description": ""
+            },
+            {
+              "Name": "Farthest Index",
               "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Distance",
+              "ReadonlyType": "float",
               "Description": ""
             }
           ]
@@ -6737,7 +7307,13 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Time"
+            "Math",
+            "Vector"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Physics"
           ]
         }
       ]
@@ -6833,7 +7409,7 @@
       "ReadonlyPaletteName": "Get Formatted Time",
       "ReadonlyChipName": "Get Formatted Time",
       "Description": "Returns the given universal time, formatted based on the C# DateTime format specifiers.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7127,9 +7703,9 @@
       ]
     },
     "70c830bb-223a-4a7c-b0ae-df240c6f1f33": {
-      "ReadonlyPaletteName": "Get Player Camera Forward",
-      "ReadonlyChipName": "Get Player Camera Forward",
-      "Description": "Gets the direction the given player is looking, output as a vector3.",
+      "ReadonlyPaletteName": "Get Local Camera Forward",
+      "ReadonlyChipName": "Get Local Camera Forward",
+      "Description": "Gets the direction your avatar is looking, output as a vector3.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -7138,15 +7714,9 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Get Player Camera Forward",
+          "Name": "Get Local Camera Forward",
           "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Player",
-              "ReadonlyType": "Player",
-              "Description": ""
-            }
-          ],
+          "Inputs": [],
           "Outputs": [
             {
               "Name": "Vector",
@@ -7171,9 +7741,9 @@
       ]
     },
     "912f0e1b-267d-4424-8002-3f82a2d835fe": {
-      "ReadonlyPaletteName": "Get Player Camera Rotation",
-      "ReadonlyChipName": "Get Player Camera Rotation",
-      "Description": "Gets the rotation of the given player's view, output as a quaternion.",
+      "ReadonlyPaletteName": "Get Local Camera Rotation",
+      "ReadonlyChipName": "Get Local Camera Rotation",
+      "Description": "Gets the rotation of your avatar's view, output as a quaternion.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -7182,15 +7752,9 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Get Player Camera Rotation",
+          "Name": "Get Local Camera Rotation",
           "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Player",
-              "ReadonlyType": "Player",
-              "Description": ""
-            }
-          ],
+          "Inputs": [],
           "Outputs": [
             {
               "Name": "Quaternion",
@@ -7215,9 +7779,9 @@
       ]
     },
     "5d9da95f-a64f-4660-a11f-bf0855769659": {
-      "ReadonlyPaletteName": "Get Player Camera Up",
-      "ReadonlyChipName": "Get Player Camera Up",
-      "Description": "Gets the up direction from the given player's camera, output as a vector3.",
+      "ReadonlyPaletteName": "Get Local Camera Up",
+      "ReadonlyChipName": "Get Local Camera Up",
+      "Description": "Gets the up direction from the local player's camera, output as a vector3.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -7226,15 +7790,9 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Get Player Camera Up",
+          "Name": "Get Local Camera Up",
           "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Player",
-              "ReadonlyType": "Player",
-              "Description": ""
-            }
-          ],
+          "Inputs": [],
           "Outputs": [
             {
               "Name": "Vector",
@@ -7254,65 +7812,6 @@
           "FilterPath": [
             "Player",
             "Physics"
-          ]
-        }
-      ]
-    },
-    "12cf9781-1e1b-4e59-a783-c7214b66be8a": {
-      "ReadonlyPaletteName": "Leaderboard Get Player Stat",
-      "ReadonlyChipName": "Leaderboard Get Player Stat",
-      "Description": "Get leaderboard stat for the given player on stat channel 1, 2 or 3.",
-      "IsBetaChip": false,
-      "IsTrollingRisk": false,
-      "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Leaderboard Get Player Stat",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Run",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Player",
-              "ReadonlyType": "Player",
-              "Description": ""
-            },
-            {
-              "Name": "Channel",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "Run",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "On Get Stat Complete",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Value",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Player",
-            "Leaderboard"
           ]
         }
       ]
@@ -7595,6 +8094,65 @@
         }
       ]
     },
+    "12cf9781-1e1b-4e59-a783-c7214b66be8a": {
+      "ReadonlyPaletteName": "Leaderboard Get Player Stat",
+      "ReadonlyChipName": "Leaderboard Get Player Stat",
+      "Description": "Get leaderboard stat for the given player on stat channel 1, 2 or 3.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Leaderboard Get Player Stat",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Channel",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Get Stat Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Leaderboard"
+          ]
+        }
+      ]
+    },
     "288083ac-338d-410f-9395-fbd7c6e41207": {
       "ReadonlyPaletteName": "Get Player Season League Name",
       "ReadonlyChipName": "Get Player Season League Name",
@@ -7670,7 +8228,7 @@
       "ReadonlyPaletteName": "Get Player World UI Enabled",
       "ReadonlyChipName": "Get Player World UI Enabled",
       "Description": "Returns the enabled state of the given player's world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7710,7 +8268,7 @@
       "ReadonlyPaletteName": "Get Player World UI Primary Bar Color",
       "ReadonlyChipName": "Get Player World UI Primary Bar Color",
       "Description": "Returns the color of the given player's primary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7750,7 +8308,7 @@
       "ReadonlyPaletteName": "Get Player World UI Primary Bar Enabled",
       "ReadonlyChipName": "Get Player World UI Primary Bar Enabled",
       "Description": "Returns the enabled state of the given player's primary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7790,7 +8348,7 @@
       "ReadonlyPaletteName": "Get Player World UI Primary Bar Max Value",
       "ReadonlyChipName": "Get Player World UI Primary Bar Max Value",
       "Description": "Returns the max value of the given player's primary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7830,7 +8388,7 @@
       "ReadonlyPaletteName": "Get Player World UI Primary Bar Value",
       "ReadonlyChipName": "Get Player World UI Primary Bar Value",
       "Description": "Returns the value of the given player's primary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7870,7 +8428,7 @@
       "ReadonlyPaletteName": "Get Player World UI Secondary Bar Color",
       "ReadonlyChipName": "Get Player World UI Secondary Bar Color",
       "Description": "Returns the color of the given player's secondary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7910,7 +8468,7 @@
       "ReadonlyPaletteName": "Get Player World UI Secondary Bar Enabled",
       "ReadonlyChipName": "Get Player World UI Secondary Bar Enabled",
       "Description": "Returns the enabled state of the given player's secondary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7950,7 +8508,7 @@
       "ReadonlyPaletteName": "Get Player World UI Secondary Bar Max Value",
       "ReadonlyChipName": "Get Player World UI Secondary Bar Max Value",
       "Description": "Returns the max value of the given player's secondary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7990,7 +8548,7 @@
       "ReadonlyPaletteName": "Get Player World UI Secondary Bar Value",
       "ReadonlyChipName": "Get Player World UI Secondary Bar Value",
       "Description": "Returns the value of the given player's secondary bar in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -8030,7 +8588,7 @@
       "ReadonlyPaletteName": "Get Player World UI Text Color",
       "ReadonlyChipName": "Get Player World UI Text Color",
       "Description": "Returns the color of the given player's text in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -8070,7 +8628,7 @@
       "ReadonlyPaletteName": "Get Player World UI Text Enabled",
       "ReadonlyChipName": "Get Player World UI Text Enabled",
       "Description": "Returns the enabled state of the given player's text in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -8110,7 +8668,7 @@
       "ReadonlyPaletteName": "Get Player World UI Text Value",
       "ReadonlyChipName": "Get Player World UI Text Value",
       "Description": "Returns the value of the given player's text in their current world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -8262,6 +8820,38 @@
         }
       ]
     },
+    "bc3059d8-b613-4e91-ac7f-4c3566e01dc2": {
+      "ReadonlyPaletteName": "Time Get Universal Seconds",
+      "ReadonlyChipName": "Time Get Universal Seconds",
+      "Description": "Gets the number of seconds since 1970. Uses server's clock. This will be synchronized between players. This is also not guaranteed to be continuous. To measure time, use Time Get Precise Seconds instead.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Time Get Universal Seconds",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Time"
+          ]
+        }
+      ]
+    },
     "1b220886-d851-474c-a79e-0a18d0893ee9": {
       "ReadonlyPaletteName": "Time Get Universal Time",
       "ReadonlyChipName": "Time Get Universal Time",
@@ -8363,6 +8953,76 @@
           "FilterPath": [
             "Player",
             "Tag"
+          ]
+        }
+      ]
+    },
+    "2d675f16-502a-489e-8fed-161935f32c04": {
+      "ReadonlyPaletteName": "Player Get Time Zone",
+      "ReadonlyChipName": "Player Get Time Zone",
+      "Description": "Returns the offset of the given player's local time zone from UTC in seconds.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Time Zone",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Seconds from UTC",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Time"
+          ]
+        }
+      ]
+    },
+    "d46f6fdc-480c-41e6-9a27-87fadb0ab0fc": {
+      "ReadonlyPaletteName": "Time Get Unsynced Universal Seconds",
+      "ReadonlyChipName": "Time Get Unsynced Universal Seconds",
+      "Description": "Gets the number of seconds since 1970. Uses local player's system clock. This is not synchronized between players! This is also not guaranteed to be continuous. To measure time, use Time Get Precise Seconds instead.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Time Get Unsynced Universal Seconds",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Time"
           ]
         }
       ]
@@ -8532,7 +9192,7 @@
       "ReadonlyPaletteName": "Go To Room",
       "ReadonlyChipName": "Go To Room",
       "Description": "Execution sends the specified player to a preconfigured destination. Use a destination constant or variable to specify the destination of this chip. Follow settings are a property of the destination.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -8578,6 +9238,12 @@
         {
           "FilterPath": [
             "Player"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Door"
           ]
         }
       ]
@@ -10938,7 +11604,7 @@
       "ReadonlyPaletteName": "Invisible Collision Get Blocks Players",
       "ReadonlyChipName": "Invisible Collision Get Blocks Players",
       "Description": "Outputs True if the target Invisible Collision object is set to collide with players.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -11016,7 +11682,7 @@
       "ReadonlyPaletteName": "Invisible Collision Set Blocks Players",
       "ReadonlyChipName": "Invisible Collision Set Blocks Players",
       "Description": "Sets the player collision state of a target Invisible Collision object.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -11114,7 +11780,7 @@
       "ReadonlyPaletteName": "Get Is Event Instance",
       "ReadonlyChipName": "Get Is Event Instance",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -12916,7 +13582,7 @@
       "ReadonlyPaletteName": "List<Destination Room> Variable",
       "ReadonlyChipName": "List<Destination Room> Variable",
       "Description": "Stores a list of Destinations. Use constants to configure destinations.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -13664,7 +14330,7 @@
       "ReadonlyPaletteName": "List Shuffle",
       "ReadonlyChipName": "List Shuffle",
       "Description": "Randomize the order of the values in the given list.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14355,6 +15021,12 @@
           "FilterPath": [
             "Object",
             "Audio Player"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constant",
+            "Audio"
           ]
         }
       ]
@@ -15536,7 +16208,7 @@
       "ReadonlyPaletteName": "Player Get Dominant Hand Is Right",
       "ReadonlyChipName": "Player Get Dominant Hand Is Right",
       "Description": "Returns true if the given player has their right hand set as dominant.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -15688,6 +16360,11 @@
               "Name": "Is Jumping Or Falling",
               "ReadonlyType": "bool",
               "Description": ""
+            },
+            {
+              "Name": "Contact Surface",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
             }
           ]
         }
@@ -15741,6 +16418,45 @@
           "FilterPath": [
             "Player",
             "Networking"
+          ]
+        }
+      ]
+    },
+    "7683e201-29d3-44d4-abb4-d75ef9233faa": {
+      "ReadonlyPaletteName": "Player Get Room Index",
+      "ReadonlyChipName": "Player Get Room Index",
+      "Description": "Returns the unique index of this player in the room, bounded by the room capacity.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Room Index",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Room Index",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Utilities"
           ]
         }
       ]
@@ -15898,6 +16614,45 @@
           "FilterPath": [
             "Player",
             "Networking"
+          ]
+        }
+      ]
+    },
+    "7e6788b0-08a1-4c76-b591-9c8460bcf925": {
+      "ReadonlyPaletteName": "Player Is In Party",
+      "ReadonlyChipName": "Player Is In Party",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Is In Party",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "In Party",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Party"
           ]
         }
       ]
@@ -16137,6 +16892,61 @@
       ]
     },
     "1094590a-ca33-4ca0-8e6b-66d784f4b5d7": {
+      "ReadonlyPaletteName": "Player Variable",
+      "ReadonlyChipName": "Player Variable",
+      "Description": "Reads or writes a variable in the current scope based on the name.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
+      "NodeDescs": [
+        {
+          "Name": "Player Variable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variable",
+            "Object"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Variable"
+          ]
+        }
+      ]
+    },
+    "ea61960b-3a53-426e-b87c-f0e94dd2c3da": {
       "ReadonlyPaletteName": "Player Variable",
       "ReadonlyChipName": "Player Variable",
       "Description": "Reads or writes a variable in the current scope based on the name.",
@@ -16677,7 +17487,7 @@
       "ReadonlyPaletteName": "Player World UI",
       "ReadonlyChipName": "Player World UI",
       "Description": "Define a set of world-space UI elements that can appear above a player.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -17586,6 +18396,90 @@
             {
               "Name": "Failed",
               "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "UI"
+          ]
+        }
+      ]
+    },
+    "d376a3c7-67c2-4607-a124-e2b93dc256d8": {
+      "ReadonlyPaletteName": "Prompt Multiple Choice Player",
+      "ReadonlyChipName": "Prompt Multiple Choice Player",
+      "Description": "Sends a watch notification to the specified player containing the prompt title and body, along with each of the answer choices on its own line. Once this watch notification is opened, the player can choose a response and hit \"ok,\" triggering the On Prompt Complete event. Since there is a delay between sending a notification and receiving the response in which other responses may be received, the Player output can be used to disambiguate multiple responses",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Prompt Multiple Choice Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Prompt Title",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Prompt Body",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Answer Choices",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Prompt Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Receiving Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Response",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Response Index",
+              "ReadonlyType": "int",
               "Description": ""
             }
           ]
@@ -18773,7 +19667,7 @@
       "ReadonlyPaletteName": "Reset Player World UI",
       "ReadonlyChipName": "Reset Player World UI",
       "Description": "Reset the player's active world UI to its default values.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -19057,6 +19951,329 @@
           "FilterPath": [
             "Conversion",
             "Color"
+          ]
+        }
+      ]
+    },
+    "f16741ca-778f-44de-99e6-6a948c7aecfb": {
+      "ReadonlyPaletteName": "Room Background Objects Modify",
+      "ReadonlyChipName": "Room Background Objects Modify",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Background Objects Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Background Objects Constant",
+              "ReadonlyType": "Background Objects",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        }
+      ]
+    },
+    "56c10ead-6198-4b13-b6de-d1df9080341b": {
+      "ReadonlyPaletteName": "Room Background Objects Reset",
+      "ReadonlyChipName": "Room Background Objects Reset",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Background Objects Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        }
+      ]
+    },
+    "2dd67fbd-eb84-4810-bfa7-55836139f8a2": {
+      "ReadonlyPaletteName": "Room Fog Reset",
+      "ReadonlyChipName": "Room Fog Reset",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Fog Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        }
+      ]
+    },
+    "61e30876-2f28-4ba6-9d70-dfa5cc2af1cc": {
+      "ReadonlyPaletteName": "Room Index Get Player",
+      "ReadonlyChipName": "Room Index Get Player",
+      "Description": "Returns the player in the room with this unique index, bounded by the room capacity.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Index Get Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Room Index",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Utilities"
+          ]
+        }
+      ]
+    },
+    "511e85c5-a359-49f1-a83c-a0550e98fe8e": {
+      "ReadonlyPaletteName": "Room Skydome Modify",
+      "ReadonlyChipName": "Room Skydome Modify",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Skydome Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Skydome Constant",
+              "ReadonlyType": "Skydome",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        }
+      ]
+    },
+    "b17f7045-6fa5-4fc5-84d5-def4f78d4f45": {
+      "ReadonlyPaletteName": "Room Skydome Reset",
+      "ReadonlyChipName": "Room Skydome Reset",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Skydome Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        }
+      ]
+    },
+    "b38f186d-67b3-44a1-8a95-120123ddb182": {
+      "ReadonlyPaletteName": "Room Sun Reset",
+      "ReadonlyChipName": "Room Sun Reset",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Sun Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
           ]
         }
       ]
@@ -19526,6 +20743,12 @@
             "Object",
             "Audio Player"
           ]
+        },
+        {
+          "FilterPath": [
+            "Constant",
+            "Audio"
+          ]
         }
       ]
     },
@@ -19878,7 +21101,7 @@
       "ReadonlyPaletteName": "Sequence",
       "ReadonlyChipName": "Sequence",
       "Description": "Executes all output ports in order.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -19923,7 +21146,7 @@
       "ReadonlyPaletteName": "Set Camera Shake",
       "ReadonlyChipName": "Set Camera Shake",
       "Description": "Start a screen shake effect for the given player. This will have no effect on VR players.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20341,7 +21564,7 @@
     "fee486b2-823f-4110-b33a-241adb59b634": {
       "ReadonlyPaletteName": "Set Player Vignette",
       "ReadonlyChipName": "Set Player Vignette",
-      "Description": "Apply a vignette of the given color to the given player. The vignette will be displayed at full opacity for the given duration, and then fade out.",
+      "Description": "Apply a vignette of the given color to the given player. The vignette will be displayed at the given intensity for the given duration, and then fade out. The intensity must be between 0 and 1.",
       "IsBetaChip": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -20372,6 +21595,11 @@
               "Name": "Color",
               "ReadonlyType": "Color",
               "Description": ""
+            },
+            {
+              "Name": "Intensity",
+              "ReadonlyType": "float",
+              "Description": ""
             }
           ],
           "Outputs": [
@@ -20397,7 +21625,7 @@
       "ReadonlyPaletteName": "Display Player World UI",
       "ReadonlyChipName": "Display Player World UI",
       "Description": "Displays a target UI configuration above a given player.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20447,7 +21675,7 @@
       "ReadonlyPaletteName": "Set Player World UI Primary Bar Color",
       "ReadonlyChipName": "Set Player World UI Primary Bar Color",
       "Description": "Set the color of the primary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20497,7 +21725,7 @@
       "ReadonlyPaletteName": "Set Player World UI Primary Bar Enabled",
       "ReadonlyChipName": "Set Player World UI Primary Bar Enabled",
       "Description": "Set the enabled state of the primary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20547,7 +21775,7 @@
       "ReadonlyPaletteName": "Set Player World UI Primary Bar Max Value",
       "ReadonlyChipName": "Set Player World UI Primary Bar Max Value",
       "Description": "Set the max value of the primary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20597,7 +21825,7 @@
       "ReadonlyPaletteName": "Set Player World UI Primary Bar Value",
       "ReadonlyChipName": "Set Player World UI Primary Bar Value",
       "Description": "Set the value of the primary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20647,7 +21875,7 @@
       "ReadonlyPaletteName": "Set Player World UI Secondary Bar Color",
       "ReadonlyChipName": "Set Player World UI Secondary Bar Color",
       "Description": "Set the color of the secondary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20697,7 +21925,7 @@
       "ReadonlyPaletteName": "Set Player World UI Secondary Bar Enabled",
       "ReadonlyChipName": "Set Player World UI Secondary Bar Enabled",
       "Description": "Set the enabled state of the secondary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20747,7 +21975,7 @@
       "ReadonlyPaletteName": "Set Player World UI Secondary Bar Max Value",
       "ReadonlyChipName": "Set Player World UI Secondary Bar Max Value",
       "Description": "Set the max value of the secondary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20797,7 +22025,7 @@
       "ReadonlyPaletteName": "Set Player World UI Secondary Bar Value",
       "ReadonlyChipName": "Set Player World UI Secondary Bar Value",
       "Description": "Set the value of the secondary bar in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20847,7 +22075,7 @@
       "ReadonlyPaletteName": "Set Player World UI Text Color",
       "ReadonlyChipName": "Set Player World UI Text Color",
       "Description": "Set the color of the text in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20897,7 +22125,7 @@
       "ReadonlyPaletteName": "Set Player World UI Text Enabled",
       "ReadonlyChipName": "Set Player World UI Text Enabled",
       "Description": "Set the enabled state of the text in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -20947,7 +22175,7 @@
       "ReadonlyPaletteName": "Set Player World UI Text Value",
       "ReadonlyChipName": "Set Player World UI Text Value",
       "Description": "Set the value of the text in the given player's active world UI.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -21277,6 +22505,12 @@
           "FilterPath": [
             "Object",
             "Audio Player"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constant",
+            "Audio"
           ]
         }
       ]
@@ -21741,6 +22975,44 @@
           "FilterPath": [
             "Math",
             "Trigonometry"
+          ]
+        }
+      ]
+    },
+    "bff88a1e-4888-4e03-a1f4-804864a2f177": {
+      "ReadonlyPaletteName": "Skydome Constant",
+      "ReadonlyChipName": "Skydome Constant",
+      "Description": "Defines values for the room skydome.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
+      "NodeDescs": [
+        {
+          "Name": "Skydome Constant",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "Skydome",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constants"
           ]
         }
       ]
@@ -22533,7 +23805,7 @@
       "ReadonlyPaletteName": "Stop Camera Shake",
       "ReadonlyChipName": "Stop Camera Shake",
       "Description": "Stop any current screen shake for the given player.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -23049,7 +24321,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "84efd7b3-fddc-4f50-b0b6-c728bef04f52": {
       "ReadonlyPaletteName": "Studio Event Sender - Bool",
@@ -23096,7 +24374,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "441f3853-e402-4dfa-9d50-1453d243cb6d": {
       "ReadonlyPaletteName": "Studio Event Sender - Float",
@@ -23143,7 +24427,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "1a29d0ac-0372-4a8a-84cd-9df9af8920a1": {
       "ReadonlyPaletteName": "Studio Event Sender - Int",
@@ -23190,7 +24480,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "6bc4210c-dc16-4686-90bf-f95da3338b74": {
       "ReadonlyPaletteName": "Studio Event Sender - String",
@@ -23237,7 +24533,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "91f2d5db-f6c6-4ef0-b134-056fa57c953d": {
       "ReadonlyPaletteName": "Studio Event Sender - String, Bool",
@@ -23289,7 +24591,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "e394ced1-c594-4750-a4c1-6e861cfe57c0": {
       "ReadonlyPaletteName": "Studio Event Sender - String, Float",
@@ -23341,7 +24649,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "dabac52b-26ef-422d-bded-e9234449b989": {
       "ReadonlyPaletteName": "Studio Event Sender - String, Int",
@@ -23393,7 +24707,13 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "06225a58-e343-4cec-b93b-949f69a430c7": {
       "ReadonlyPaletteName": "Studio Event Sender - String, String",
@@ -23445,7 +24765,185 @@
           ]
         }
       ],
-      "NodeFilters": []
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
+    },
+    "7ab38485-8d7c-4c98-b8f3-55a11d4ab741": {
+      "ReadonlyPaletteName": "Studio Object Get Property - Bool",
+      "ReadonlyChipName": "Studio Object Get Property - Bool",
+      "Description": "",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Studio Object Get Property - Bool",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Studio Object",
+              "ReadonlyType": "Studio Object",
+              "Description": ""
+            },
+            {
+              "Name": "Property",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
+    },
+    "0dda9345-0211-4757-8fea-03e05fac89c3": {
+      "ReadonlyPaletteName": "Studio Object Get Property - Float",
+      "ReadonlyChipName": "Studio Object Get Property - Float",
+      "Description": "",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Studio Object Get Property - Float",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Studio Object",
+              "ReadonlyType": "Studio Object",
+              "Description": ""
+            },
+            {
+              "Name": "Property",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
+    },
+    "4467dc43-b07c-41fc-9e43-21ebf8f86554": {
+      "ReadonlyPaletteName": "Studio Object Get Property - Int",
+      "ReadonlyChipName": "Studio Object Get Property - Int",
+      "Description": "",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Studio Object Get Property - Int",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Studio Object",
+              "ReadonlyType": "Studio Object",
+              "Description": ""
+            },
+            {
+              "Name": "Property",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
+    },
+    "a0708f14-89b6-4ef7-97eb-38359a57422f": {
+      "ReadonlyPaletteName": "Studio Object Get Property - String",
+      "ReadonlyChipName": "Studio Object Get Property - String",
+      "Description": "",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Studio Object Get Property - String",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Studio Object",
+              "ReadonlyType": "Studio Object",
+              "Description": ""
+            },
+            {
+              "Name": "Property",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Rec Room Studio"
+          ]
+        }
+      ]
     },
     "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
       "ReadonlyPaletteName": "String Substring",
@@ -23542,6 +25040,103 @@
         }
       ]
     },
+    "26062297-4aab-4fd4-bfb8-95fbf64f6bb7": {
+      "ReadonlyPaletteName": "Sun Constant",
+      "ReadonlyChipName": "Sun Constant",
+      "Description": "Defines values for the room's sun.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
+      "NodeDescs": [
+        {
+          "Name": "Sun Constant",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "Sun",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constants"
+          ]
+        }
+      ]
+    },
+    "884408a8-5884-41e4-9399-1b0ef5d353e0": {
+      "ReadonlyPaletteName": "Room Sun Modify",
+      "ReadonlyChipName": "Room Sun Modify",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Sun Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Modify",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Sun Constant",
+              "ReadonlyType": "Sun",
+              "Description": ""
+            },
+            {
+              "Name": "Sun Direction",
+              "ReadonlyType": "Sun Direction",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods"
+          ]
+        }
+      ]
+    },
     "13dbbd78-11c0-4b4f-9098-1ef59e584324": {
       "ReadonlyPaletteName": "Tan",
       "ReadonlyChipName": "Tan",
@@ -23585,7 +25180,7 @@
       "ReadonlyPaletteName": "Clear Screen",
       "ReadonlyChipName": "Clear Screen",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -23622,7 +25217,7 @@
       "ReadonlyPaletteName": "Print Text To Screen",
       "ReadonlyChipName": "Print Text To Screen",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -25054,7 +26649,7 @@
       "ReadonlyPaletteName": "Welcome Mat Get Enabled",
       "ReadonlyChipName": "Welcome Mat Get Enabled",
       "Description": "Return whether target welcome mat is enabled (true) or disabled (false)",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -25099,7 +26694,7 @@
       "ReadonlyPaletteName": "Welcome Mat Set Enabled",
       "ReadonlyChipName": "Welcome Mat Set Enabled",
       "Description": "Set target welcome mat to be enabled (true) or disabled (false)",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",

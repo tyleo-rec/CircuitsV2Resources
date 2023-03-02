@@ -1,6 +1,9 @@
 # Releases
 
-- [Version 2.28 (Coming Soon)](2_28)
+After Version 2.28, Circuits began releasing incrementally with Rec Room. Changes are included within the Rec Room release notes.
+
+Previous verions are catalogued here:
+- [Version 2.28](2_28)
 - [Version 2.27](2_27)
 - [Version 2.26](2_26)
 - [Version 2.25](2_25)

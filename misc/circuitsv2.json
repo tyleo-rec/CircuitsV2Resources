@@ -131,77 +131,6 @@
         }
       ]
     },
-    "03461631-734f-491b-ab86-6bdf66947556": {
-      "ReadonlyPaletteName": "Add Currency",
-      "ReadonlyChipName": "Add Currency",
-      "Description": "Adds some amount to the Player's balance of one room currency. Configure this chip to set the affected currency.",
-      "IsBetaChip": false,
-      "IsTrollingRisk": false,
-      "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Add Currency",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Run",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Player",
-              "ReadonlyType": "Player",
-              "Description": ""
-            },
-            {
-              "Name": "Amount",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "Run",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "On Add Currency Complete",
-              "ReadonlyType": "exec",
-              "Description": ""
-            },
-            {
-              "Name": "Success",
-              "ReadonlyType": "bool",
-              "Description": ""
-            },
-            {
-              "Name": "Total Balance",
-              "ReadonlyType": "int",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Player",
-            "Economy",
-            "Currency"
-          ]
-        },
-        {
-          "FilterPath": [
-            "Economy",
-            "Currency"
-          ]
-        }
-      ]
-    },
     "0ccb153c-dd08-4f22-80fd-9d8c5940928c": {
       "ReadonlyPaletteName": "Add",
       "ReadonlyChipName": "Add",
@@ -2197,6 +2126,214 @@
         }
       ]
     },
+    "9ceb3e5a-2030-4034-98a4-dc2809828b63": {
+      "ReadonlyPaletteName": "Award Consumable",
+      "ReadonlyChipName": "Award Consumable",
+      "Description": "Award a room consumable to a player. Multiple award room consumable requests from the same client are sent in bulk with a ten-second cooldown.\nThe Success port will be TRUE if the consumable was entirely, or in part, awarded to the player. If the consumable could not be awarded, the Success port will be FALSE.\nUse the Log Output toggle in the configuration settings to see more information about why a failure occurred. Logging output may impact room performance and should be toggled off when not in use.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Award Consumable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Consumable",
+              "ReadonlyType": "Consumable",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Quantity",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Award Consumable Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Consumable"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Consumable"
+          ]
+        }
+      ]
+    },
+    "03461631-734f-491b-ab86-6bdf66947556": {
+      "ReadonlyPaletteName": "Award Currency",
+      "ReadonlyChipName": "Award Currency",
+      "Description": "Award some amount to the Player's balance of one room currency. Configure this chip to set the affected currency.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Award Currency",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Amount",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Award Currency Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Total Balance",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Currency"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Currency"
+          ]
+        }
+      ]
+    },
+    "7e40f770-c9a4-4233-8845-cac6ec99ae67": {
+      "ReadonlyPaletteName": "Award Room Key",
+      "ReadonlyChipName": "Award Room Key",
+      "Description": "Unlocks a room key for the target player. Multiple award room key requests from the same client are sent in bulk with a one-second cooldown.\nThe Success port will be TRUE if the key was successfully unlocked for the player or if the player previously owned the key. If the key could not be awarded the Success port will be FALSE.\nUse the Log Output toggle in the configuration settings to see more information about why a failure occurred. Logging output may impact room performance and should be toggled off when not in use.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Award Room Key",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Room Key",
+              "ReadonlyType": "Room Key",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Award Room Key Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Room Key"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Room Key"
+          ]
+        }
+      ]
+    },
     "c6e9ffef-b505-41d3-bb2d-ff86838398c6": {
       "ReadonlyPaletteName": "Background Objects Constant",
       "ReadonlyChipName": "Background Objects Constant",
@@ -2230,7 +2367,7 @@
         },
         {
           "FilterPath": [
-            "Constants"
+            "Constant"
           ]
         }
       ]
@@ -6198,6 +6335,52 @@
         }
       ]
     },
+    "e1f1b65e-8d82-47af-8637-ae2d0afa431f": {
+      "ReadonlyPaletteName": "Equals (New)",
+      "ReadonlyChipName": "Equals (New)",
+      "Description": "Compares the input values and outputs True if they are the same. False if they are different.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Equals (New)",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Equals",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Comparison"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Commonly Used"
+          ]
+        }
+      ]
+    },
     "7d72a1fa-a434-4437-a73a-51f306a3f55f": {
       "ReadonlyPaletteName": "Event Definition",
       "ReadonlyChipName": "Event Definition",
@@ -6886,7 +7069,7 @@
         },
         {
           "FilterPath": [
-            "Constants"
+            "Constant"
           ]
         }
       ]
@@ -7861,7 +8044,7 @@
     "70c830bb-223a-4a7c-b0ae-df240c6f1f33": {
       "ReadonlyPaletteName": "Get Local Camera Forward",
       "ReadonlyChipName": "Get Local Camera Forward",
-      "Description": "Gets the direction your avatar is looking, output as a vector3.",
+      "Description": "Gets the direction your avatar is looking, output as a Vector3.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -7934,10 +8117,48 @@
         }
       ]
     },
+    "c19eff8a-980c-444a-983f-bb4c53a94daf": {
+      "ReadonlyPaletteName": "Get Local Camera Position",
+      "ReadonlyChipName": "Get Local Camera Position",
+      "Description": "Gets the position of your avatar's view, output as a Vector3.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Local Camera Position",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
     "5d9da95f-a64f-4660-a11f-bf0855769659": {
       "ReadonlyPaletteName": "Get Local Camera Up",
       "ReadonlyChipName": "Get Local Camera Up",
-      "Description": "Gets the up direction from the local player's camera, output as a vector3.",
+      "Description": "Gets the up direction from the local player's camera, output as a Vector3.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -11759,7 +11980,7 @@
     "9d811bd5-2a4a-4368-80ea-635004b6c06b": {
       "ReadonlyPaletteName": "Inverse Lerp",
       "ReadonlyChipName": "Inverse Lerp",
-      "Description": "",
+      "Description": "Computes an inverse linear interpolation. The output is clamped between 0 and 1.",
       "IsBetaChip": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -11803,6 +12024,69 @@
           "FilterPath": [
             "Math",
             "Scalar"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        }
+      ]
+    },
+    "d33e7a63-ec6b-40b2-9f81-ab110457a9f2": {
+      "ReadonlyPaletteName": "Inverse Lerp Unclamped",
+      "ReadonlyChipName": "Inverse Lerp Unclamped",
+      "Description": "Computes an inverse linear interpolation. The output is not clamped.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Inverse Lerp Unclamped",
+          "ReadonlyTypeParams": {
+            "T": "(float | Color | Vector3)"
+          },
+          "Inputs": [
+            {
+              "Name": "Start",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "End",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
           ]
         }
       ]
@@ -12354,7 +12638,7 @@
     "91b0ffa8-4eb1-4a30-aaf3-7a049071cb42": {
       "ReadonlyPaletteName": "Lerp",
       "ReadonlyChipName": "Lerp",
-      "Description": "Computes a linear interpolation.",
+      "Description": "Computes a linear interpolation. The interpolant is clamped between 0 and 1.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -12387,6 +12671,69 @@
           "Outputs": [
             {
               "Name": "Result",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
+          ]
+        }
+      ]
+    },
+    "6e9219ab-89d2-47e3-a105-562a9a1fddda": {
+      "ReadonlyPaletteName": "Lerp Unclamped",
+      "ReadonlyChipName": "Lerp Unclamped",
+      "Description": "Computes a linear interpolation. The interpolant is not clamped. When lerping between Colors, the interpolant is still constrained to values which stay within the set of real colors.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Lerp Unclamped",
+          "ReadonlyTypeParams": {
+            "T": "(float | Quaternion | Vector3 | Color)"
+          },
+          "Inputs": [
+            {
+              "Name": "Start",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "End",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Interpolant",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Progress",
               "ReadonlyType": "T",
               "Description": ""
             }
@@ -16465,6 +16812,84 @@
         }
       ]
     },
+    "d5f0503f-eee6-4a2a-811d-33ead7122bd3": {
+      "ReadonlyPaletteName": "Player Body Orientation",
+      "ReadonlyChipName": "Player Body Orientation",
+      "Description": "Outputs the rotation of a Player's body.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Body Orientation",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "5de67799-3301-48d8-ac08-0b371b418962": {
+      "ReadonlyPaletteName": "Player Body Position",
+      "ReadonlyChipName": "Player Body Position",
+      "Description": "Outputs the postion of a Player's body in world space.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Body Position",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
     "4c9e7840-0721-4d1c-b334-167f79d3bf40": {
       "ReadonlyPaletteName": "Player Definition Board",
       "ReadonlyChipName": "Player Definition Board",
@@ -17146,6 +17571,84 @@
           "FilterPath": [
             "Player",
             "Party"
+          ]
+        }
+      ]
+    },
+    "6f4324c5-4c7a-4243-97d0-58f027996534": {
+      "ReadonlyPaletteName": "Player Is Room Host",
+      "ReadonlyChipName": "Player Is Room Host",
+      "Description": "Outputs True if the input Player is one of the current room's hosts.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Is Room Host",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Utilities"
+          ]
+        }
+      ]
+    },
+    "8f9b0921-a92b-4d01-a4d5-a8d2e6fc6ca0": {
+      "ReadonlyPaletteName": "Player Is Room Mod",
+      "ReadonlyChipName": "Player Is Room Mod",
+      "Description": "Outputs True if the input Player is one of the current room's moderators.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Is Room Mod",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Utilities"
           ]
         }
       ]
@@ -19715,55 +20218,6 @@
         }
       ]
     },
-    "8d5f0586-1ecf-42ba-a34f-c6ccbb0eadb9": {
-      "ReadonlyPaletteName": "Quaternion Slerp",
-      "ReadonlyChipName": "Quaternion Slerp",
-      "Description": "Spherically interpolates between quaternions \"Start\" and \"End\". Progress is 0 to 1. Also a rare, but refreshing beverage.",
-      "IsBetaChip": false,
-      "IsTrollingRisk": false,
-      "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
-      "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
-      "NodeDescs": [
-        {
-          "Name": "Quaternion Slerp",
-          "ReadonlyTypeParams": {},
-          "Inputs": [
-            {
-              "Name": "Start",
-              "ReadonlyType": "Quaternion",
-              "Description": ""
-            },
-            {
-              "Name": "End",
-              "ReadonlyType": "Quaternion",
-              "Description": ""
-            },
-            {
-              "Name": "Progress",
-              "ReadonlyType": "float",
-              "Description": ""
-            }
-          ],
-          "Outputs": [
-            {
-              "Name": "Result",
-              "ReadonlyType": "Quaternion",
-              "Description": ""
-            }
-          ]
-        }
-      ],
-      "NodeFilters": [
-        {
-          "FilterPath": [
-            "Math",
-            "Quaternion"
-          ]
-        }
-      ]
-    },
     "1d2a37e1-428e-4385-bc96-4ad5adff0a05": {
       "ReadonlyPaletteName": "Quaternion Split",
       "ReadonlyChipName": "Quaternion Split",
@@ -20960,6 +21414,50 @@
           "FilterPath": [
             "Game Features",
             "Moods"
+          ]
+        }
+      ]
+    },
+    "8b96e472-2b19-4265-aade-2c6202358d86": {
+      "ReadonlyPaletteName": "Root",
+      "ReadonlyChipName": "Root",
+      "Description": "Calculate the root of a given value, with the default root being 2 (meaning the square root).",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Root",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Root",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
           ]
         }
       ]
@@ -23579,6 +24077,77 @@
         }
       ]
     },
+    "7a8d9550-41fa-42a3-8d52-0fc7e6ac3213": {
+      "ReadonlyPaletteName": "Show Purchase Prompt",
+      "ReadonlyChipName": "Show Purchase Prompt",
+      "Description": "Show player a purchase prompt for a Room Key or Room Consumable. If called too many times sequentially, the purchase prompt will appear as a Watch notification, instead of as a popup.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Show Purchase Prompt",
+          "ReadonlyTypeParams": {
+            "T": "(Room Key | Consumable)"
+          },
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "In-Room Purchasable",
+              "ReadonlyType": "T",
+              "Description": "Room Key or Room Consumable"
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Consumable"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Consumable"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Room Key"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "RoomKey"
+          ]
+        }
+      ]
+    },
     "abaae687-e943-4534-bb78-2c8d7e17c425": {
       "ReadonlyPaletteName": "Player Show Subtitle",
       "ReadonlyChipName": "Player Show Subtitle",
@@ -23710,7 +24279,58 @@
         },
         {
           "FilterPath": [
-            "Constants"
+            "Constant"
+          ]
+        }
+      ]
+    },
+    "8d5f0586-1ecf-42ba-a34f-c6ccbb0eadb9": {
+      "ReadonlyPaletteName": "Slerp",
+      "ReadonlyChipName": "Slerp",
+      "Description": "Spherically interpolates between quaternions or Vector3s \"Start\" and \"End\". Progress is 0 to 1. Also a rare, but refreshing beverage.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Slerp",
+          "ReadonlyTypeParams": {
+            "T": "(Quaternion | Vector3)"
+          },
+          "Inputs": [
+            {
+              "Name": "Start",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "End",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Progress",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Quaternion"
           ]
         }
       ]
@@ -25821,7 +26441,7 @@
         },
         {
           "FilterPath": [
-            "Constants"
+            "Constant"
           ]
         }
       ]
@@ -26469,7 +27089,7 @@
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -26487,7 +27107,7 @@
           ],
           "Outputs": [
             {
-              "Name": "Result ",
+              "Name": "Result",
               "ReadonlyType": "string",
               "Description": ""
             }
@@ -26519,6 +27139,419 @@
           "FilterPath": [
             "Player",
             "Name"
+          ]
+        }
+      ]
+    },
+    "bddc8e4e-b496-48ee-8e25-5b9fe8e1c6c9": {
+      "ReadonlyPaletteName": "To String",
+      "ReadonlyChipName": "To String",
+      "Description": "Converts the input value to the string type. Example: the integer input 10 would output \"10\" as a string. Helpful for debugging purposes.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "To String",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Utilities"
+          ]
+        },
+        {
+          "FilterPath": [
+            "String"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Commonly Used"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Conversion"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Name"
+          ]
+        }
+      ]
+    },
+    "f8c16cc7-ceaf-471a-b196-5d46ec7ab72a": {
+      "ReadonlyPaletteName": "Trail Get Color",
+      "ReadonlyChipName": "Trail Get Color",
+      "Description": "Returns the color of the target Motion Trail object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Get Color",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
+          ]
+        }
+      ]
+    },
+    "f3e39f47-1835-4d09-8e19-d3e9d661990b": {
+      "ReadonlyPaletteName": "Trail Get Enabled",
+      "ReadonlyChipName": "Trail Get Enabled",
+      "Description": "Outputs True if the target Motion Trail object is enabled.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Get Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
+          ]
+        }
+      ]
+    },
+    "0f069b0b-6f70-4386-9c7f-1343661e8df6": {
+      "ReadonlyPaletteName": "Trail Get Lifetime",
+      "ReadonlyChipName": "Trail Get Lifetime",
+      "Description": "Returns the lifetime of the target Motion Trail object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Get Lifetime",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Lifetime",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
+          ]
+        }
+      ]
+    },
+    "6dcc7a44-0163-4058-97a9-1ef7f482a3d5": {
+      "ReadonlyPaletteName": "Trail Get Opacity",
+      "ReadonlyChipName": "Trail Get Opacity",
+      "Description": "Returns the max opacity of the target Motion Trail object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Get Opacity",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Max Opacity",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
+          ]
+        }
+      ]
+    },
+    "d326ebc4-1653-4c1d-886c-c1bd4c06db86": {
+      "ReadonlyPaletteName": "Trail Set Color",
+      "ReadonlyChipName": "Trail Set Color",
+      "Description": "Sets the color of the target Motion Trail object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Set Color",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            },
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
+          ]
+        }
+      ]
+    },
+    "0bf0dcf8-0731-40d4-883d-288862c98aed": {
+      "ReadonlyPaletteName": "Trail Set Enabled",
+      "ReadonlyChipName": "Trail Set Enabled",
+      "Description": "Sets the enabled state of the target Motion Trail object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Set Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            },
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
+          ]
+        }
+      ]
+    },
+    "eb69e7ac-e579-463c-9da9-643e639cf333": {
+      "ReadonlyPaletteName": "Trail Set Lifetime",
+      "ReadonlyChipName": "Trail Set Lifetime",
+      "Description": "Sets the lifetime of the target Motion Trail object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Set Lifetime",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            },
+            {
+              "Name": "Lifetime",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
+          ]
+        }
+      ]
+    },
+    "bb79cf12-6d38-4691-a004-c2b3ad963374": {
+      "ReadonlyPaletteName": "Trail Set Opacity",
+      "ReadonlyChipName": "Trail Set Opacity",
+      "Description": "Sets the max opacity of the target Motion Trail object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trail Set Opacity",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Motion Trail",
+              "Description": ""
+            },
+            {
+              "Name": "Max Opacity",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Motion Trail"
           ]
         }
       ]

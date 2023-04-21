@@ -2129,7 +2129,7 @@
     "9ceb3e5a-2030-4034-98a4-dc2809828b63": {
       "ReadonlyPaletteName": "Award Consumable",
       "ReadonlyChipName": "Award Consumable",
-      "Description": "Award a room consumable to a player. Multiple award room consumable requests from the same client are sent in bulk with a ten-second cooldown.\nThe Success port will be TRUE if the consumable was entirely, or in part, awarded to the player. If the consumable could not be awarded, the Success port will be FALSE.\nUse the Log Output toggle in the configuration settings to see more information about why a failure occurred. Logging output may impact room performance and should be toggled off when not in use.",
+      "Description": "Award a room consumable to a player. Multiple award room consumable requests from the same client are sent in bulk with a ten-second cooldown. The Success port will be TRUE if the consumable was entirely, or in part, awarded to the player. If the consumable could not be awarded, the Success port will be FALSE. Use the Log Output toggle in the configuration settings to see more information about why a failure occurred. Logging output may impact room performance and should be toggled off when not in use.",
       "IsBetaChip": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -3999,6 +3999,55 @@
         }
       ]
     },
+    "d697171e-56ac-41b7-aa1e-dabc4538c029": {
+      "ReadonlyPaletteName": "Color To HSV",
+      "ReadonlyChipName": "Color To HSV",
+      "Description": "Return hue, saturation, and value from the given color.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Color To HSV",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Hue",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Saturation",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Conversion",
+            "Color"
+          ]
+        }
+      ]
+    },
     "8e412141-635d-435c-a900-f40d8a261906": {
       "ReadonlyPaletteName": "Color To Int",
       "ReadonlyChipName": "Color To Int",
@@ -4033,6 +4082,55 @@
         {
           "FilterPath": [
             "Conversion"
+          ]
+        }
+      ]
+    },
+    "52565e5d-73d1-4f29-bca7-0c8ae9afcc57": {
+      "ReadonlyPaletteName": "Color To RGB",
+      "ReadonlyChipName": "Color To RGB",
+      "Description": "Return red, green, and blue from the given color.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Color To RGB",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Color",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Red",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Green",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Blue",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Conversion",
+            "Color"
           ]
         }
       ]
@@ -14875,6 +14973,113 @@
         }
       ]
     },
+    "370f1016-69e0-4265-a4a2-7841067f1fa7": {
+      "ReadonlyPaletteName": "List Remove Item (All)",
+      "ReadonlyChipName": "List Remove Item (All)",
+      "Description": "Removes all instances of item from list.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "List Remove Item (All)",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            },
+            {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
+          ]
+        }
+      ]
+    },
+    "1657cd3d-6bc5-41d2-b70f-1854f9288ffa": {
+      "ReadonlyPaletteName": "List Remove Item (First)",
+      "ReadonlyChipName": "List Remove Item (First)",
+      "Description": "Removes the first instance of the item in the list, and returns the index where it was found (-1 if not present)",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "List Remove Item (First)",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            },
+            {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Index Removed",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Code"
+          ]
+        }
+      ]
+    },
     "2687fb17-96ea-4106-94d7-be8854cfa978": {
       "ReadonlyPaletteName": "List Remove Last",
       "ReadonlyChipName": "List Remove Last",
@@ -21237,6 +21442,32 @@
         }
       ]
     },
+    "2d358c91-9000-4851-ad37-65759a135ab7": {
+      "ReadonlyPaletteName": "Room Get Matchmaking State",
+      "ReadonlyChipName": "Room Get Matchmaking State",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Get Matchmaking State",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Matchmaking Permitted",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
     "61e30876-2f28-4ba6-9d70-dfa5cc2af1cc": {
       "ReadonlyPaletteName": "Room Index Get Player",
       "ReadonlyChipName": "Room Index Get Player",
@@ -21275,6 +21506,53 @@
           ]
         }
       ]
+    },
+    "be4decd2-56a0-46af-8e96-091261946fd9": {
+      "ReadonlyPaletteName": "Room Set Matchmaking State",
+      "ReadonlyChipName": "Room Set Matchmaking State",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Set Matchmaking State",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Matchmaking Permitted",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Matchmaking State Set",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Matchmaking Permitted",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
     },
     "511e85c5-a359-49f1-a83c-a0550e98fe8e": {
       "ReadonlyPaletteName": "Room Skydome Modify",
@@ -25394,6 +25672,54 @@
         }
       ]
     },
+    "b394650e-7673-40a3-8b9e-3aa8eaa2a77e": {
+      "ReadonlyPaletteName": "String Replace",
+      "ReadonlyChipName": "String Replace",
+      "Description": "Replaces all instances of pattern within string with replacement.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "String Replace",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "String",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Pattern",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Replacement",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "String"
+          ]
+        }
+      ]
+    },
     "ad169649-1050-48c5-a540-f03a2059bcdb": {
       "ReadonlyPaletteName": "String Split",
       "ReadonlyChipName": "String Split",
@@ -25460,6 +25786,44 @@
             {
               "Name": "Index",
               "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "List",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "String"
+          ]
+        }
+      ]
+    },
+    "7695ff77-5b9d-4a41-a894-6602b98f289f": {
+      "ReadonlyPaletteName": "String Split Whitespace",
+      "ReadonlyChipName": "String Split Whitespace",
+      "Description": "Outputs a list of strings which split up by whitespace.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "String Split Whitespace",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "String",
+              "ReadonlyType": "string",
               "Description": ""
             }
           ],
@@ -25574,6 +25938,44 @@
       "NodeDescs": [
         {
           "Name": "String To Upper",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "String",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "String"
+          ]
+        }
+      ]
+    },
+    "e6f056ee-cf6d-4696-b338-31418275af16": {
+      "ReadonlyPaletteName": "String Trim",
+      "ReadonlyChipName": "String Trim",
+      "Description": "Outputs the string with leading and trailing whitespace removed.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "String Trim",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {

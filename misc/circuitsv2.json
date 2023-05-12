@@ -4698,14 +4698,14 @@
     },
     "b9b000ca-eb3d-4b9f-9f45-0fd64045f63d": {
       "ReadonlyPaletteName": "Room Key Constant",
-      "ReadonlyChipName": "Room Key Constant",
+      "ReadonlyChipName": "Room Key",
       "Description": "",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
-      "ChipNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
       "NodeDescs": [
         {
           "Name": "Room Key Constant",
@@ -5619,6 +5619,58 @@
       ]
     },
     "182e1ae2-1183-4741-af6e-f307b788a857": {
+      "ReadonlyPaletteName": "Distance (Deprecated)",
+      "ReadonlyChipName": "Distance (Deprecated)",
+      "Description": "Outputs the distance between the input objects.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Distance (Deprecated)",
+          "ReadonlyTypeParams": {
+            "T1": "(AI | Combatant | Rec Room Object | Player | Vector3)",
+            "T2": "(AI | Combatant | Rec Room Object | Player | Vector3)"
+          },
+          "Inputs": [
+            {
+              "Name": "A",
+              "ReadonlyType": "T1",
+              "Description": ""
+            },
+            {
+              "Name": "B",
+              "ReadonlyType": "T2",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "da92dbd5-5bbd-4afa-8eb1-2e88fff2380d": {
       "ReadonlyPaletteName": "Distance",
       "ReadonlyChipName": "Distance",
       "Description": "Outputs the distance between the input objects.",
@@ -7855,6 +7907,57 @@
       ]
     },
     "88f95338-d1a6-4fad-8424-d714d651f6ac": {
+      "ReadonlyPaletteName": "Get Forward Vector (Deprecated)",
+      "ReadonlyChipName": "Get Forward Vector (Deprecated)",
+      "Description": "Gets the forward direction of a target, output as a vector.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Forward Vector (Deprecated)",
+          "ReadonlyTypeParams": {
+            "T": "(Rec Room Object | Player)"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "4536e1df-1138-4a2c-9117-475bb3f38eae": {
       "ReadonlyPaletteName": "Get Forward Vector",
       "ReadonlyChipName": "Get Forward Vector",
       "Description": "Gets the forward direction of a target, output as a vector.",
@@ -8362,6 +8465,58 @@
       ]
     },
     "c453fa47-d0db-4c4a-a6a1-dac4ebad0aca": {
+      "ReadonlyPaletteName": "Get Rotation (Deprecated)",
+      "ReadonlyChipName": "Get Rotation (Deprecated)",
+      "Description": "Outputs the rotation of the target as a quaternion.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Rotation (Deprecated)",
+          "ReadonlyTypeParams": {
+            "T": "(Rec Room Object | Player)"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "d750b619-1dd8-4099-a1dd-627050cd5d41": {
       "ReadonlyPaletteName": "Get Rotation",
       "ReadonlyChipName": "Get Rotation",
       "Description": "Outputs the rotation of the target as a quaternion.",
@@ -8407,7 +8562,7 @@
         },
         {
           "FilterPath": [
-            "Object",
+            "Player",
             "Physics"
           ]
         }
@@ -9180,6 +9335,58 @@
       ]
     },
     "a8c52ef2-17bf-47e6-9084-3e5623584b48": {
+      "ReadonlyPaletteName": "Get Position (Deprecated)",
+      "ReadonlyChipName": "Get Position (Deprecated)",
+      "Description": "Outputs the position of the input object as a vector3.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Position (Deprecated)",
+          "ReadonlyTypeParams": {
+            "T": "(AI | Combatant | Rec Room Object | Player)"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "5f6a8ee8-8a87-4da2-851f-fda89cc62344": {
       "ReadonlyPaletteName": "Get Position",
       "ReadonlyChipName": "Get Position",
       "Description": "Outputs the position of the input object as a vector3.",
@@ -9560,6 +9767,58 @@
       ]
     },
     "830f781d-2522-4ec0-9d6f-ecfc0bf695f6": {
+      "ReadonlyPaletteName": "Get Up Vector (Deprecated)",
+      "ReadonlyChipName": "Get Up Vector (Deprecated)",
+      "Description": "Outputs the up direction of the input target, output as a vector3.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Up Vector (Deprecated)",
+          "ReadonlyTypeParams": {
+            "T": "(Rec Room Object | Player)"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "824f6801-17b6-4ada-9a97-4f36cef02e8b": {
       "ReadonlyPaletteName": "Get Up Vector",
       "ReadonlyChipName": "Get Up Vector",
       "Description": "Outputs the up direction of the input target, output as a vector3.",
@@ -9612,6 +9871,58 @@
       ]
     },
     "e9c65fbe-9d0f-4373-bd45-fe620de801b4": {
+      "ReadonlyPaletteName": "Get Velocity (Deprecated)",
+      "ReadonlyChipName": "Get Velocity (Deprecated)",
+      "Description": "Returns the velocity of a Player or a Rec Room Object.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Velocity (Deprecated)",
+          "ReadonlyTypeParams": {
+            "T": "(Rec Room Object | Player)"
+          },
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Velocity",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "0310de62-2ede-4af0-b551-0228290fc54c": {
       "ReadonlyPaletteName": "Get Velocity",
       "ReadonlyChipName": "Get Velocity",
       "Description": "Returns the velocity of a Player or a Rec Room Object.",
@@ -9730,6 +10041,52 @@
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Greater Than",
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
+          "Inputs": [
+            {
+              "Name": "A",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "B",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Comparison"
+          ]
+        }
+      ]
+    },
+    "65aa2570-98b8-413b-a9a9-2eae9f562871": {
+      "ReadonlyPaletteName": "Greater Than",
+      "ReadonlyChipName": "Greater Than",
+      "Description": "Returns True if input A is greater than input B.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
@@ -9770,6 +10127,52 @@
       ]
     },
     "a10e7788-f016-4390-a68e-87d93b47edb1": {
+      "ReadonlyPaletteName": "Greater or Equal",
+      "ReadonlyChipName": "Greater or Equal",
+      "Description": "Returns True if input A is greater than or equal to input B.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Greater or Equal",
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
+          "Inputs": [
+            {
+              "Name": "A",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "B",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Comparison"
+          ]
+        }
+      ]
+    },
+    "f3ced0d8-396e-4311-a807-8ffd9b147060": {
       "ReadonlyPaletteName": "Greater or Equal",
       "ReadonlyChipName": "Greater or Equal",
       "Description": "Returns True if input A is greater than or equal to input B.",
@@ -12824,14 +13227,14 @@
               "Description": ""
             },
             {
-              "Name": "Interpolant",
+              "Name": "Progress",
               "ReadonlyType": "float",
               "Description": ""
             }
           ],
           "Outputs": [
             {
-              "Name": "Progress",
+              "Name": "Result",
               "ReadonlyType": "T",
               "Description": ""
             }
@@ -12860,6 +13263,52 @@
       ]
     },
     "7e58b3f4-2694-4ced-b3a8-0fe23f48f60f": {
+      "ReadonlyPaletteName": "Less Than",
+      "ReadonlyChipName": "Less Than",
+      "Description": "Returns True if input A is less than input B.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Less Than",
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
+          "Inputs": [
+            {
+              "Name": "A",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "B",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Comparison"
+          ]
+        }
+      ]
+    },
+    "a05cd0de-609a-4d92-93ad-65b635306233": {
       "ReadonlyPaletteName": "Less Than",
       "ReadonlyChipName": "Less Than",
       "Description": "Returns True if input A is less than input B.",
@@ -12906,6 +13355,52 @@
       ]
     },
     "a027073f-9189-457f-a53d-8562e8829daf": {
+      "ReadonlyPaletteName": "Less or Equal",
+      "ReadonlyChipName": "Less or Equal",
+      "Description": "Returns True if input A is less than or equal to input B.",
+      "IsBetaChip": false,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Less or Equal",
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
+          "Inputs": [
+            {
+              "Name": "A",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "B",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Comparison"
+          ]
+        }
+      ]
+    },
+    "8c78eedf-f79e-4f70-b187-65092893d1b6": {
       "ReadonlyPaletteName": "Less or Equal",
       "ReadonlyChipName": "Less or Equal",
       "Description": "Returns True if input A is less than or equal to input B.",
@@ -15533,6 +16028,72 @@
         }
       ]
     },
+    "6b68c3d8-8e26-43d2-bd6d-37944ae80963": {
+      "ReadonlyPaletteName": "Local Player Gaze Direction",
+      "ReadonlyChipName": "Local Player Gaze Direction",
+      "Description": "Outputs the direction of Local Player Gaze.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Local Player Gaze Direction",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "44d9ad9e-8f31-4588-903d-1bbe8d3c3b70": {
+      "ReadonlyPaletteName": "Local Player Gaze Origin",
+      "ReadonlyChipName": "Local Player Gaze Origin",
+      "Description": "Outputs the origin of Local Player Gaze.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Local Player Gaze Origin",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
     "28a105ab-a947-4493-a51d-ced76a9601ee": {
       "ReadonlyPaletteName": "Logarithm",
       "ReadonlyChipName": "Logarithm",
@@ -17584,6 +18145,44 @@
         }
       ]
     },
+    "47038300-2f6d-4876-bbb7-7c2e64fd9364": {
+      "ReadonlyPaletteName": "Player Get Seat",
+      "ReadonlyChipName": "Player Get Seat",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Seat",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Seat",
+              "ReadonlyType": "Seat",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "9b39ed47-e9a5-4f04-b4cd-80f5bbaff2f7": {
       "ReadonlyPaletteName": "Player Has Role",
       "ReadonlyChipName": "Player Has Role",
@@ -17624,6 +18223,240 @@
           "FilterPath": [
             "Player",
             "Role"
+          ]
+        }
+      ]
+    },
+    "9fb898a5-f5f2-4d62-be3d-31381279d1d3": {
+      "ReadonlyPaletteName": "Player Head Forward Vector",
+      "ReadonlyChipName": "Player Head Forward Vector",
+      "Description": "Outputs the forward vector of a Player's head.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Head Forward Vector",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "6278538c-5ea9-4515-ba00-ffc4d5b99c3b": {
+      "ReadonlyPaletteName": "Player Head Height",
+      "ReadonlyChipName": "Player Head Height",
+      "Description": "Outputs the height of a Player's head.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Head Height",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Height",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "21ee2f55-0414-4fd6-a915-a2577832d6bd": {
+      "ReadonlyPaletteName": "Player Head Orientation",
+      "ReadonlyChipName": "Player Head Orientation",
+      "Description": "Outputs the rotation of a Player's head.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Head Orientation",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Quaternion",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "2f3571aa-53bf-4f52-b8fe-d1c42eda6081": {
+      "ReadonlyPaletteName": "Player Head Position",
+      "ReadonlyChipName": "Player Head Position",
+      "Description": "Outputs the position of a Player's head in world space.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Head Position",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "5adbfc46-75b1-4b2f-b072-5531ebb0246b": {
+      "ReadonlyPaletteName": "Player Head Up Vector",
+      "ReadonlyChipName": "Player Head Up Vector",
+      "Description": "Outputs the up vector of a Player's head.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Head Up Vector",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Vector",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
+          ]
+        }
+      ]
+    },
+    "6577e6e8-8039-4843-aba1-993eb6967326": {
+      "ReadonlyPaletteName": "Player Head Velocity",
+      "ReadonlyChipName": "Player Head Velocity",
+      "Description": "Outputs the velocity of a Player's head.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Head Velocity",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Velocity",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Physics"
           ]
         }
       ]
@@ -28595,6 +29428,55 @@
         }
       ]
     },
+    "97b150f5-7bd0-4649-96d7-fdf0b5e88ffb": {
+      "ReadonlyPaletteName": "Vector3 Inverse Transform",
+      "ReadonlyChipName": "Vector3 Inverse Transform",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Vector3 Inverse Transform",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "WorldPoint",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "WorldOrigin",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "WorldOrientation",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        }
+      ]
+    },
     "fba2accf-44e2-412d-a204-ae3bd04f7dfa": {
       "ReadonlyPaletteName": "Vector3 Variable",
       "ReadonlyChipName": "Vector3 Variable",
@@ -28714,6 +29596,55 @@
             {
               "Name": "Scalar",
               "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Vector"
+          ]
+        }
+      ]
+    },
+    "64924217-da3a-4a6f-b84d-e499634d763b": {
+      "ReadonlyPaletteName": "Vector3 Transform",
+      "ReadonlyChipName": "Vector3 Transform",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Vector3 Transform",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "LocalPoint",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "WorldOrigin",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "WorldOrientation",
+              "ReadonlyType": "Quaternion",
               "Description": ""
             }
           ],

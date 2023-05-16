@@ -2338,7 +2338,7 @@
       "ReadonlyPaletteName": "Background Objects Constant",
       "ReadonlyChipName": "Background Objects Constant",
       "Description": "Defines values for the room's background objects.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -3542,7 +3542,7 @@
       "ReadonlyPaletteName": "Clamp",
       "ReadonlyChipName": "Clamp",
       "Description": "Clamps a value between a minimum value and maximum value. If the minimum is greater than the maximum, the minimum value will always be returned no matter the input.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -6862,6 +6862,45 @@
         }
       ]
     },
+    "36cd4562-2c1f-43e3-ba90-56daa0cb7339": {
+      "ReadonlyPaletteName": "Explosion Emitter Get Firing Player",
+      "ReadonlyChipName": "Explosion Emitter Get Firing Player",
+      "Description": "Returns the player set by the Explosion Emitter Set Firing Player chip.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Get Firing Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
     "eff7cfca-dcee-4ea1-887f-e4c60f3c8269": {
       "ReadonlyPaletteName": "Explosion Emitter Get Explosion Radius",
       "ReadonlyChipName": "Explosion Emitter Get Explosion Radius",
@@ -6978,6 +7017,55 @@
             {
               "Name": "Damage",
               "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Explosion Emitter"
+          ]
+        }
+      ]
+    },
+    "d39b968d-bdab-4548-aaa7-745e3155789e": {
+      "ReadonlyPaletteName": "Explosion Emitter Set Firing Player",
+      "ReadonlyChipName": "Explosion Emitter Set Firing Player",
+      "Description": "Sets the firing player of the target Explosion Emitter. If none is set, the component will use the authority player.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Explosion Emitter Set Firing Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Explosion Emitter",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
               "Description": ""
             }
           ],
@@ -7190,7 +7278,7 @@
       "ReadonlyPaletteName": "Fog Constant",
       "ReadonlyChipName": "Fog Constant",
       "Description": "Defines settings for room fog.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7228,7 +7316,7 @@
       "ReadonlyPaletteName": "Room Fog Modify",
       "ReadonlyChipName": "Room Fog Modify",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -7466,6 +7554,44 @@
           "FilterPath": [
             "Player",
             "Utilities"
+          ]
+        }
+      ]
+    },
+    "0922120c-c5b8-4109-8001-61b3131072a4": {
+      "ReadonlyPaletteName": "Get Angular Velocity",
+      "ReadonlyChipName": "Get Angular Velocity",
+      "Description": "Returns the angular velocity in degrees per second of a Rec Room Object.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Angular Velocity",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Angular Velocity",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics"
           ]
         }
       ]
@@ -12281,6 +12407,51 @@
         }
       ]
     },
+    "4cdfcf23-e5dc-4b81-a500-189dba609d0f": {
+      "ReadonlyPaletteName": "Interaction Volume Get Normalized Hold Progress",
+      "ReadonlyChipName": "Interaction Volume Get Normalized Hold Progress",
+      "Description": "Gets normalized hold progress for Interaction Volume V2",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Get Normalized Hold Progress",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Normalized Hold Progress",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume V2"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
     "380d8467-bdfa-4724-a62c-1955831f994a": {
       "ReadonlyPaletteName": "Interaction Volume Set Interaction Prompt",
       "ReadonlyChipName": "Interaction Volume Set Interaction Prompt",
@@ -12371,6 +12542,61 @@
         }
       ],
       "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume"
+          ]
+        }
+      ]
+    },
+    "714654bc-7266-4088-8efe-287bdca164fd": {
+      "ReadonlyPaletteName": "Interaction Volume Set Normalized Hold Progress",
+      "ReadonlyChipName": "Interaction Volume Set Normalized Hold Progress",
+      "Description": "Sets normalized hold progress for Interaction Volume V2",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Interaction Volume Set Normalized Hold Progress",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Interaction Volume",
+              "Description": ""
+            },
+            {
+              "Name": "Normalized Hold Progress",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Interaction Volume V2"
+          ]
+        },
         {
           "FilterPath": [
             "Object",
@@ -14666,7 +14892,7 @@
       "ReadonlyPaletteName": "List Copy",
       "ReadonlyChipName": "List Copy",
       "Description": "Returns a shallow clone of the given list.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -16784,6 +17010,65 @@
         }
       ]
     },
+    "5df93bc7-4bb7-44c6-b260-d7b2836436c8": {
+      "ReadonlyPaletteName": "Overlap Box",
+      "ReadonlyChipName": "Overlap Box",
+      "Description": "Get information about all the objects/players within a box defined by its center, extents, and orientation. (position, distance, direction, etc.)",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Overlap Box",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Center",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Extents",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Orientation",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Collisions",
+              "ReadonlyType": "List<Collision Data>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Physics",
+            "Collision"
+          ]
+        }
+      ]
+    },
     "23ce1dae-7585-43af-92c1-9a72fa5d0101": {
       "ReadonlyPaletteName": "Overlap Sphere",
       "ReadonlyChipName": "Overlap Sphere",
@@ -16832,7 +17117,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Physics"
+            "Physics",
+            "Collision"
           ]
         }
       ]
@@ -18110,7 +18396,7 @@
       "ReadonlyPaletteName": "Player Get Room Index",
       "ReadonlyChipName": "Player Get Room Index",
       "Description": "Returns the unique index of this player in the room, bounded by the room capacity.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -18578,7 +18864,7 @@
       "ReadonlyPaletteName": "Player Is In Party",
       "ReadonlyChipName": "Player Is In Party",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -19946,6 +20232,45 @@
       ],
       "NodeFilters": []
     },
+    "9bc9def7-d7c3-4248-ba1c-35116f013768": {
+      "ReadonlyPaletteName": "Projectile Launcher Get Firing Player",
+      "ReadonlyChipName": "Projectile Launcher Get Firing Player",
+      "Description": "Returns the player set by the Projectile Launcher Set Firing Player chip.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Get Firing Player",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
     "ed1f109d-bc85-4e4b-8f15-d33363aed7dd": {
       "ReadonlyPaletteName": "Projectile Launcher Get Hand Damage",
       "ReadonlyChipName": "Projectile Launcher Get Hand Damage",
@@ -20049,6 +20374,45 @@
             {
               "Name": "Lifetime",
               "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "630823d4-c27f-493e-81a3-ae482448403d": {
+      "ReadonlyPaletteName": "Projectile Launcher Get Rec Room Object Damage",
+      "ReadonlyChipName": "Projectile Launcher Get Rec Room Object Damage",
+      "Description": "Returns the damage value that projectiles from the target launcher will do when hitting Rec Room Objects.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Get Rec Room Object Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
               "Description": ""
             }
           ]
@@ -20274,7 +20638,7 @@
     "ebff1459-5eb7-456c-a753-f8267d45f79d": {
       "ReadonlyPaletteName": "Projectile Launcher Set Firing Player",
       "ReadonlyChipName": "Projectile Launcher Set Firing Player",
-      "Description": "",
+      "Description": "Sets the firing player of the target Projectile Launcher. If none is set, the component will use the authority player.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -20446,6 +20810,55 @@
             {
               "Name": "Lifetime",
               "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Projectile Launcher"
+          ]
+        }
+      ]
+    },
+    "1fcd6f83-b403-426d-8ded-7064e8790b2d": {
+      "ReadonlyPaletteName": "Projectile Launcher Set Rec Room Object Damage",
+      "ReadonlyChipName": "Projectile Launcher Set Rec Room Object Damage",
+      "Description": "Sets the damage value that projectiles from the target launcher will do when hitting Rec Room Objects.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Projectile Launcher Set Rec Room Object Damage",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Projectile Launcher",
+              "Description": ""
+            },
+            {
+              "Name": "Damage",
+              "ReadonlyType": "int",
               "Description": ""
             }
           ],
@@ -21588,7 +22001,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Physics"
+            "Physics",
+            "Collision"
           ]
         }
       ]
@@ -22137,7 +22551,7 @@
       "ReadonlyPaletteName": "Room Background Objects Modify",
       "ReadonlyChipName": "Room Background Objects Modify",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -22191,7 +22605,7 @@
       "ReadonlyPaletteName": "Room Background Objects Reset",
       "ReadonlyChipName": "Room Background Objects Reset",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -22235,7 +22649,7 @@
       "ReadonlyPaletteName": "Room Fog Reset",
       "ReadonlyChipName": "Room Fog Reset",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -22305,7 +22719,7 @@
       "ReadonlyPaletteName": "Room Index Get Player",
       "ReadonlyChipName": "Room Index Get Player",
       "Description": "Returns the player in the room with this unique index, bounded by the room capacity.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -22391,7 +22805,7 @@
       "ReadonlyPaletteName": "Room Skydome Modify",
       "ReadonlyChipName": "Room Skydome Modify",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -22445,7 +22859,7 @@
       "ReadonlyPaletteName": "Room Skydome Reset",
       "ReadonlyChipName": "Room Skydome Reset",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -22489,7 +22903,7 @@
       "ReadonlyPaletteName": "Room Sun Reset",
       "ReadonlyChipName": "Room Sun Reset",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -25361,7 +25775,7 @@
       "ReadonlyPaletteName": "Skydome Constant",
       "ReadonlyChipName": "Skydome Constant",
       "Description": "Defines values for the room skydome.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -26225,7 +26639,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "Physics"
+            "Physics",
+            "Collision"
           ]
         }
       ]
@@ -27647,7 +28062,7 @@
       "ReadonlyPaletteName": "Sun Constant",
       "ReadonlyChipName": "Sun Constant",
       "Description": "Defines values for the room's sun.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -27685,7 +28100,7 @@
       "ReadonlyPaletteName": "Room Sun Modify",
       "ReadonlyChipName": "Room Sun Modify",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",

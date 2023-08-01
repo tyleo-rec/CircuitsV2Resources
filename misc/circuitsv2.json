@@ -2197,6 +2197,82 @@
         }
       ]
     },
+    "9ad9cfa5-da73-4bc6-b53e-e2fdc265998f": {
+      "ReadonlyPaletteName": "Award Currency (New)",
+      "ReadonlyChipName": "Award Currency (New)",
+      "Description": "Award some amount to the Player's balance of the given room currency.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Award Currency (New)",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Currency",
+              "ReadonlyType": "Room Currency",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Amount",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Award Currency Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Total Balance",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Currency"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Currency"
+          ]
+        }
+      ]
+    },
     "03461631-734f-491b-ab86-6bdf66947556": {
       "ReadonlyPaletteName": "Award Currency",
       "ReadonlyChipName": "Award Currency",
@@ -4696,6 +4772,56 @@
         }
       ]
     },
+    "2aa2fe68-18bf-4f63-9ed9-2fc237b60df9": {
+      "ReadonlyPaletteName": "List<Objective Marker> Variable",
+      "ReadonlyChipName": "List<Objective Marker> Variable",
+      "Description": "Reads or writes a variable in the current scope based on the name.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
+      "NodeDescs": [
+        {
+          "Name": "List<Objective Marker> Variable",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "List<Objective Marker>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "",
+              "ReadonlyType": "List<Objective Marker>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Variable",
+            "List",
+            "Objective Marker"
+          ]
+        }
+      ]
+    },
     "9ffb119b-dadc-4e50-af19-9bfd335a34ef": {
       "ReadonlyPaletteName": "Objective Marker Constant",
       "ReadonlyChipName": "Objective Marker",
@@ -4732,6 +4858,51 @@
             "Player",
             "UI",
             "Objective Marker"
+          ]
+        }
+      ]
+    },
+    "7e843432-afde-41c1-9bc1-194112d91226": {
+      "ReadonlyPaletteName": "Room Currency Constant",
+      "ReadonlyChipName": "Room Currency",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
+      "NodeDescs": [
+        {
+          "Name": "Room Currency Constant",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "Room Currency",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Room Currency"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Room Currency"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Constant"
           ]
         }
       ]
@@ -7702,6 +7873,77 @@
         }
       ]
     },
+    "01659b8a-db44-4b5e-9a58-c366dcfff666": {
+      "ReadonlyPaletteName": "Get Currency Balance (New)",
+      "ReadonlyChipName": "Get Currency Balance (New)",
+      "Description": "Returns the given player's balance of the given room currency.",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Currency Balance (New)",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Currency",
+              "ReadonlyType": "Room Currency",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Get Balance Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Total Balance",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Currency"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Currency"
+          ]
+        }
+      ]
+    },
     "a4b0c860-e7f0-4abf-ad7c-9be1805c3d01": {
       "ReadonlyPaletteName": "Get Currency Balance",
       "ReadonlyChipName": "Get Currency Balance",
@@ -8927,7 +9169,7 @@
     "12cf9781-1e1b-4e59-a783-c7214b66be8a": {
       "ReadonlyPaletteName": "Leaderboard Get Player Stat",
       "ReadonlyChipName": "Leaderboard Get Player Stat",
-      "Description": "Get leaderboard stat for the given player on stat channel 1, 2 or 3.",
+      "Description": "Get the leaderboard stat for the given player on the given stat channel.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -17172,6 +17414,48 @@
         }
       ]
     },
+    "ebacb9b5-adb0-4f5b-94c4-973e89d30a65": {
+      "ReadonlyPaletteName": "NavMesh Sample Position",
+      "ReadonlyChipName": "NavMesh Sample Position",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "NavMesh Sample Position",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "SourcePosition",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "MaxDistance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "IsValid",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "HitPosition",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
     "06f8732b-b1cb-4b79-815e-5b389c1dd78f": {
       "ReadonlyPaletteName": "Noise",
       "ReadonlyChipName": "Noise",
@@ -21212,7 +21496,7 @@
         {
           "Name": "Play Handle Haptics",
           "ReadonlyTypeParams": {
-            "T": "(Trigger Handle | Gun Handle)"
+            "T": "(Trigger Handle | Gun Handle | Swing Handle)"
           },
           "Inputs": [
             {
@@ -23487,7 +23771,7 @@
       "ReadonlyChipName": "Reset Room",
       "Description": "Resets the Room.",
       "IsBetaChip": false,
-      "IsTrollingRisk": false,
+      "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
@@ -23519,7 +23803,7 @@
       "ReadonlyChipName": "Respawn (Deprecated)",
       "Description": "Sets the position and rotation of the target player or object. Players will rotate about the vertical axis only. Will fail in the following cases: If the target object is currently held, selected/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
       "IsBetaChip": false,
-      "IsTrollingRisk": false,
+      "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
@@ -23602,7 +23886,7 @@
       "ReadonlyChipName": "Respawn",
       "Description": "Sets the position and rotation of the target player or object. Players will rotate about the vertical axis only. Will fail in the following cases: If the target object is currently held, selected/frozen by the maker pen, or is the child of a gizmo. Will also fail on players that are seated.",
       "IsBetaChip": false,
-      "IsTrollingRisk": false,
+      "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
@@ -25416,7 +25700,7 @@
     "57a1553a-ba24-4422-903a-e610a03e7994": {
       "ReadonlyPaletteName": "Leaderboard Set Local Player Stat",
       "ReadonlyChipName": "Leaderboard Set Local Player Stat",
-      "Description": "Set leaderboard stat for the local player on stat channel 1, 2 or 3.",
+      "Description": "Set the leaderboard stat for the local player on the given stat channel.",
       "IsBetaChip": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -26857,7 +27141,7 @@
         {
           "Name": "Show Purchase Prompt",
           "ReadonlyTypeParams": {
-            "T": "(Room Key | Consumable)"
+            "T": "(Room Key | Consumable | Room Currency)"
           },
           "Inputs": [
             {
@@ -27650,7 +27934,7 @@
       "ReadonlyChipName": "Respawn Point Respawn Player At Respawn Point",
       "Description": "",
       "IsBetaChip": false,
-      "IsTrollingRisk": false,
+      "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
@@ -27709,7 +27993,7 @@
       "ReadonlyChipName": "Respawn Point Respawn Player",
       "Description": "",
       "IsBetaChip": false,
-      "IsTrollingRisk": false,
+      "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
       "PaletteNameSource": "FirstNodeDesc",
@@ -30091,6 +30375,231 @@
           "FilterPath": [
             "Player",
             "Name"
+          ]
+        }
+      ]
+    },
+    "b83d2e2f-61e8-4490-8a81-d38c88fff8d1": {
+      "ReadonlyPaletteName": "Touchpad Component Get Active Touch",
+      "ReadonlyChipName": "Touchpad Component Get Active Touch",
+      "Description": "Get the active touch position from the local player's interaction",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Touchpad Component Get Active Touch",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Touchpad",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Touch Active",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Touch Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "World Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Touchpad Component"
+          ]
+        }
+      ]
+    },
+    "32aa1ef2-a230-430b-9809-19c114b1fe44": {
+      "ReadonlyPaletteName": "Touchpad Component Get Interaction Label",
+      "ReadonlyChipName": "Touchpad Component Get Interaction Label",
+      "Description": "Sets the interaction label (used by Screen players)",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Touchpad Component Get Interaction Label",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Touchpad",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Label",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Touchpad Component"
+          ]
+        }
+      ]
+    },
+    "64ca9ac0-04a8-4460-afe5-64a927f1ca4a": {
+      "ReadonlyPaletteName": "Touchpad Component Get Is Enabled",
+      "ReadonlyChipName": "Touchpad Component Get Is Enabled",
+      "Description": "Sets if the Touchpad can be interacted with or output touch events",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Touchpad Component Get Is Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Touchpad",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "IsEnabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Touchpad Component"
+          ]
+        }
+      ]
+    },
+    "41643ef3-6003-43d5-9bc7-d520e7aa5fcf": {
+      "ReadonlyPaletteName": "Touchpad Component Set Interaction Label",
+      "ReadonlyChipName": "Touchpad Component Set Interaction Label",
+      "Description": "Gets the interaction label (used by Screen players)",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Touchpad Component Set Interaction Label",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Touchpad",
+              "Description": ""
+            },
+            {
+              "Name": "Label",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Touchpad Component"
+          ]
+        }
+      ]
+    },
+    "1f27359f-71ca-4827-ab17-5acbdb027837": {
+      "ReadonlyPaletteName": "Touchpad Component Set Is Enabled",
+      "ReadonlyChipName": "Touchpad Component Set Is Enabled",
+      "Description": "Gets if the Touchpad can be interacted with or output touch events",
+      "IsBetaChip": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Touchpad Component Set Is Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Touchpad",
+              "Description": ""
+            },
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Touchpad Component"
           ]
         }
       ]

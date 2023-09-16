@@ -23875,7 +23875,12 @@
         },
         {
           "FilterPath": [
-            "Object",
+            "Objects",
+            "Rec Room Object"
+          ]
+        },
+        {
+          "FilterPath": [
             "Physics"
           ]
         }
@@ -26517,7 +26522,12 @@
         },
         {
           "FilterPath": [
-            "Object",
+            "Objects",
+            "Rec Room Object"
+          ]
+        },
+        {
+          "FilterPath": [
             "Physics"
           ]
         }

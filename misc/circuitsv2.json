@@ -1489,7 +1489,7 @@
       "ReadonlyPaletteName": "Animation Get Speed",
       "ReadonlyChipName": "Animation Get Speed",
       "Description": "Returns the normalized speed of the given Animation Controller.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -1571,7 +1571,7 @@
       "ReadonlyPaletteName": "Animation Get Is Playing",
       "ReadonlyChipName": "Animation Get Is Playing",
       "Description": "Returns whether or not the Animation Controller is currently playing.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -1612,7 +1612,7 @@
       "ReadonlyPaletteName": "Animation Pause",
       "ReadonlyChipName": "Animation Pause",
       "Description": "Pauses the Animation Controller. The Animation Controller resumes at the same moment next time play is activated.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -1658,7 +1658,7 @@
       "ReadonlyPaletteName": "Animation Play",
       "ReadonlyChipName": "Animation Play",
       "Description": "Tells the Animation Controller to play its animation using the Playback Mode set in the Animation Controller's configuration menu.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -1704,7 +1704,7 @@
       "ReadonlyPaletteName": "Animation Set Frame",
       "ReadonlyChipName": "Animation Set Frame",
       "Description": "Sets the Animation Controller's animation to a specific frame number.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -1755,7 +1755,7 @@
       "ReadonlyPaletteName": "Animation Set Speed",
       "ReadonlyChipName": "Animation Set Speed",
       "Description": "Sets the Animation Controller's play speed. Default value is 1. Negative values play the animation in reverse.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -1857,7 +1857,7 @@
       "ReadonlyPaletteName": "Animation Stop",
       "ReadonlyChipName": "Animation Stop",
       "Description": "Stops the Animation Controller. The Animation Controller restarts from the beginning next time play is activated.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -2819,10 +2819,10 @@
       ]
     },
     "9ad9cfa5-da73-4bc6-b53e-e2fdc265998f": {
-      "ReadonlyPaletteName": "Award Currency (New)",
-      "ReadonlyChipName": "Award Currency (New)",
+      "ReadonlyPaletteName": "Award Currency",
+      "ReadonlyChipName": "Award Currency",
       "Description": "Award some amount to the Player's balance of the given room currency.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": false,
       "IsTrollingRisk": false,
@@ -2832,7 +2832,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Award Currency (New)",
+          "Name": "Award Currency",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -2905,7 +2905,7 @@
       "IsValidInRoom2": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -3043,7 +3043,7 @@
       "Description": "Defines values for the room's background objects.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -3067,12 +3067,14 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Background Objects"
           ]
         },
         {
           "FilterPath": [
-            "Constant"
+            "Constant",
+            "Moods"
           ]
         }
       ]
@@ -5825,7 +5827,7 @@
       "ReadonlyPaletteName": "Room Currency Constant",
       "ReadonlyChipName": "Room Currency",
       "Description": "",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": false,
       "IsTrollingRisk": false,
@@ -7016,9 +7018,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7058,9 +7059,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7100,9 +7100,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7142,9 +7141,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7229,9 +7227,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7286,9 +7283,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7296,7 +7292,7 @@
     "a348af16-bd74-4da6-a3e1-1bf1e2456eba": {
       "ReadonlyPaletteName": "Dialogue UI Set Is Enabled",
       "ReadonlyChipName": "Dialogue UI Set Is Enabled",
-      "Description": "Toggles whether or not the target Dialogue UI is enabled for the local player.\r",
+      "Description": "Toggles whether or not the target Dialogue UI is enabled for the local player.",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
@@ -7338,9 +7334,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7390,9 +7385,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -7442,9 +7436,8 @@
       "NodeFilters": [
         {
           "FilterPath": [
-            "circuits",
-            "object",
-            "dialogue UI"
+            "Object",
+            "Dialogue UI"
           ]
         }
       ]
@@ -9360,7 +9353,7 @@
       "Description": "Defines settings for room fog.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -9384,12 +9377,14 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Fog"
           ]
         },
         {
           "FilterPath": [
-            "Constant"
+            "Constant",
+            "Moods"
           ]
         }
       ]
@@ -9445,7 +9440,8 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Fog"
           ]
         }
       ]
@@ -9761,10 +9757,10 @@
       ]
     },
     "01659b8a-db44-4b5e-9a58-c366dcfff666": {
-      "ReadonlyPaletteName": "Get Currency Balance (New)",
-      "ReadonlyChipName": "Get Currency Balance (New)",
+      "ReadonlyPaletteName": "Get Currency Balance",
+      "ReadonlyChipName": "Get Currency Balance",
       "Description": "Returns the given player's balance of the given room currency.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": false,
       "IsTrollingRisk": false,
@@ -9774,7 +9770,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Get Currency Balance (New)",
+          "Name": "Get Currency Balance",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -9842,7 +9838,7 @@
       "IsValidInRoom2": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -10401,6 +10397,48 @@
         }
       ]
     },
+    "a970b2bd-0224-4b1e-9839-111315b28986": {
+      "ReadonlyPaletteName": "Get HUD Element Enabled",
+      "ReadonlyChipName": "Get HUD Element Enabled",
+      "Description": "Returns true if the local player has a HUD element of the given type currently enabled.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get HUD Element Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "HUD Constant",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "UI",
+            "HUD"
+          ]
+        }
+      ]
+    },
     "98ef89de-7a1b-4043-8071-b5cda41030cd": {
       "ReadonlyPaletteName": "Get Game HUD Element Label",
       "ReadonlyChipName": "Get Game HUD Element Label",
@@ -10598,7 +10636,7 @@
     "93ad7158-81eb-453c-b3db-222b9630ae0e": {
       "ReadonlyPaletteName": "Inventory Item Get Definition",
       "ReadonlyChipName": "Inventory Item Get Definition",
-      "Description": "Gets the friendly name and description of the given inventory item.",
+      "Description": "Gets the friendly name, description, and image of the given inventory item.",
       "IsBetaChip": true,
       "IsValidInRoom1": false,
       "IsValidInRoom2": true,
@@ -10633,6 +10671,11 @@
               "Name": "SupportsUseAction",
               "ReadonlyType": "bool",
               "Description": ""
+            },
+            {
+              "Name": "Image",
+              "ReadonlyType": "RecNet Image",
+              "Description": ""
             }
           ]
         }
@@ -10647,6 +10690,90 @@
         },
         {
           "FilterPath": [
+            "Economy",
+            "Inventory Item"
+          ]
+        }
+      ]
+    },
+    "f54582a2-90b1-4be4-a6c0-0d688b4f8067": {
+      "ReadonlyPaletteName": "Get Inventory Item From Name",
+      "ReadonlyChipName": "Get Inventory Item From Name",
+      "Description": "Gets the Inventory Item that matches the provided friendly name",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get Inventory Item From Name",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Name",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Inventory Item",
+              "ReadonlyType": "Inventory Item",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Inventory Item"
+          ]
+        }
+      ]
+    },
+    "aaa5f89c-abb4-42ef-a300-6a3acf528ea4": {
+      "ReadonlyPaletteName": "Inventory Item Get Image",
+      "ReadonlyChipName": "Inventory Item Get Image",
+      "Description": "Gets the image of the given inventory item",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Inventory Item Get Image",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Inventory Item",
+              "ReadonlyType": "Inventory Item",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Image",
+              "ReadonlyType": "RecNet Image",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
             "Economy",
             "Inventory Item"
           ]
@@ -12551,7 +12678,7 @@
       "Description": "Execution sends the specified player to a preconfigured destination. Use a destination constant or variable to specify the destination of this chip. Follow settings are a property of the destination.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -12611,7 +12738,7 @@
       "ReadonlyPaletteName": "Go To State",
       "ReadonlyChipName": "Go To State",
       "Description": "Transitions to the given state in the current state machine.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -12871,7 +12998,7 @@
       "ReadonlyPaletteName": "Graph Get Is Active",
       "ReadonlyChipName": "Graph Get Is Active",
       "Description": "Returns true if the current circuit graph is active. When inactive, circuit events will not run.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -13740,7 +13867,7 @@
       "IsValidInRoom2": false,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -13788,7 +13915,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -13854,7 +13981,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -13889,13 +14016,54 @@
         }
       ]
     },
+    "bb9b601a-b501-434d-9df7-1b66c393fd8c": {
+      "ReadonlyPaletteName": "Gun Handle Get Continuous Fire",
+      "ReadonlyChipName": "Gun Handle Get Continuous Fire",
+      "Description": "Returns whether the given gun handle will fire continuously.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Gun Handle Get Continuous Fire",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Gun Handle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Continuous Fire",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Gun Handle"
+          ]
+        }
+      ]
+    },
     "9e2bb0fe-6179-4ffc-92df-6f3b43bca52d": {
       "ReadonlyPaletteName": "Gun Handle Get Current Ammo",
       "ReadonlyChipName": "Gun Handle Get Current Ammo",
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -13936,7 +14104,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -13982,7 +14150,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14023,7 +14191,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14064,7 +14232,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14105,7 +14273,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14146,10 +14314,10 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -14197,7 +14365,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14248,10 +14416,10 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -14299,7 +14467,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14344,13 +14512,64 @@
         }
       ]
     },
+    "d539bb9a-5e64-43df-a8f9-16839ede0027": {
+      "ReadonlyPaletteName": "Gun Handle Set Continuous Fire",
+      "ReadonlyChipName": "Gun Handle Set Continuous Fire",
+      "Description": "Sets whether the given gun handle will fire continuously.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Gun Handle Set Continuous Fire",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Gun Handle",
+              "Description": ""
+            },
+            {
+              "Name": "Continuous Fire",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Gun Handle"
+          ]
+        }
+      ]
+    },
     "75c94e14-2fd9-4097-93c4-ee5b56a27b64": {
       "ReadonlyPaletteName": "Gun Handle Set Current Ammo",
       "ReadonlyChipName": "Gun Handle Set Current Ammo",
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14401,7 +14620,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14452,7 +14671,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14503,7 +14722,7 @@
       "Description": "",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -14544,6 +14763,190 @@
           "FilterPath": [
             "Object",
             "Gun Handle"
+          ]
+        }
+      ]
+    },
+    "9af47a88-a066-4923-928d-50a8ff99eaaa": {
+      "ReadonlyPaletteName": "Handle Get Control Prompt",
+      "ReadonlyChipName": "Handle Get Control Prompt",
+      "Description": "Gets the primary action label on the target handle type object",
+      "IsBetaChip": false,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Handle Get Control Prompt",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Handle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Control Prompt",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Handle"
+          ]
+        }
+      ]
+    },
+    "37545ad5-40c3-49c0-9c32-1c4ccdd27f83": {
+      "ReadonlyPaletteName": "Handle Get Player Filter Tags",
+      "ReadonlyChipName": "Handle Get Player Filter Tags",
+      "Description": "Gets the tags that a handle is using in its Tag Filter. The Tag Filter must be enabled in the handle's configure menu for this to work.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Handle Get Player Filter Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Handle",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Handle"
+          ]
+        }
+      ]
+    },
+    "7900ebde-9abd-4f84-b471-94c69bae2a65": {
+      "ReadonlyPaletteName": "Handle Set Control Prompt",
+      "ReadonlyChipName": "Handle Set Control Prompt",
+      "Description": "Sets the primary action label on the target handle type object",
+      "IsBetaChip": false,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Handle Set Control Prompt",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Handle",
+              "Description": ""
+            },
+            {
+              "Name": "Control Prompt",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Handle"
+          ]
+        }
+      ]
+    },
+    "fa0d31e8-149d-4554-9994-894cb3d79f3d": {
+      "ReadonlyPaletteName": "Handle Set Player Filter Tags",
+      "ReadonlyChipName": "Handle Set Player Filter Tags",
+      "Description": "Sets the tags that a handle is using in its Tag Filter. The Tag Filter must be enabled in the handle's configure menu for this to work.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Handle Set Player Filter Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Handle",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Handle"
           ]
         }
       ]
@@ -15142,7 +15545,7 @@
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -15208,10 +15611,10 @@
       ]
     },
     "f94206bd-1903-492f-85fc-07f8f756b9f5": {
-      "ReadonlyPaletteName": "Velocity Add (New)",
-      "ReadonlyChipName": "Velocity Add (New)",
+      "ReadonlyPaletteName": "Velocity Add",
+      "ReadonlyChipName": "Velocity Add",
       "Description": "Adds velocity to the input target. The input velocity will be multiplied by the magnitude of the vector provided in the input direction.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -15221,7 +15624,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Velocity Add (New)",
+          "Name": "Velocity Add",
           "ReadonlyTypeParams": {
             "T": "(Player | Rec Room Object)"
           },
@@ -15494,6 +15897,41 @@
           "FilterPath": [
             "Object",
             "Physics"
+          ]
+        }
+      ]
+    },
+    "e05bd0b5-bbcd-46d2-827c-063020bd9f1b": {
+      "ReadonlyPaletteName": "Instance Get Lifetime",
+      "ReadonlyChipName": "Instance Get Lifetime",
+      "Description": "Returns the number of seconds since the current room instance was created.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Instance Get Lifetime",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Lifetime",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Room Instance"
           ]
         }
       ]
@@ -16309,7 +16747,7 @@
     "f24d537e-da9e-47bf-8764-fba6eeefb043": {
       "ReadonlyPaletteName": "Instance Get Is Event",
       "ReadonlyChipName": "Instance Get Is Event",
-      "Description": "",
+      "Description": "Returns true when the current room instance is a player run event.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
@@ -16326,6 +16764,41 @@
           "Outputs": [
             {
               "Name": "Is Event",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Room Instance"
+          ]
+        }
+      ]
+    },
+    "bcaa0819-f788-49ed-91d5-767484c48dea": {
+      "ReadonlyPaletteName": "Instance Get Is Multi-Instance Event",
+      "ReadonlyChipName": "Instance Get Is Multi-Instance Event",
+      "Description": "Returns true when the current room instance is part of a multi-instance event.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Instance Get Is Multi-Instance Event",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Is Multi-Instance Event",
               "ReadonlyType": "bool",
               "Description": ""
             }
@@ -17905,6 +18378,64 @@
         }
       ]
     },
+    "a107765d-643e-4b61-b144-7b8f4712f143": {
+      "ReadonlyPaletteName": "List Add If Not Contains",
+      "ReadonlyChipName": "List Add If Not Contains",
+      "Description": "Adds a new element to the end of the target list containing the input value, but only if the element isn't already in the list.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "List Add If Not Contains",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            },
+            {
+              "Name": "Item",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
+          ]
+        }
+      ]
+    },
     "f716c3f3-0c7c-42a4-bf55-12b7e1cd9040": {
       "ReadonlyPaletteName": "List Add",
       "ReadonlyChipName": "List Add",
@@ -18052,6 +18583,135 @@
         }
       ]
     },
+    "2333a01b-6b6f-43c0-b7c3-ea89df868a10": {
+      "ReadonlyPaletteName": "List Except",
+      "ReadonlyChipName": "List Except",
+      "Description": "Get a list of all elements that appear in the first list but not in the other lists.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "List Except",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Output",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
+          ]
+        }
+      ]
+    },
+    "ddee857a-4be4-47a8-9dd7-782c02d5d1f6": {
+      "ReadonlyPaletteName": "List Intersect",
+      "ReadonlyChipName": "List Intersect",
+      "Description": "Get a list of the elements that appear in every input list.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "List Intersect",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Output",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
+          ]
+        }
+      ]
+    },
+    "304c312c-f3bd-460b-b54a-90ba343f2a7c": {
+      "ReadonlyPaletteName": "List Union",
+      "ReadonlyChipName": "List Union",
+      "Description": "Combine lists together into one list and remove any duplicate elements.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "List Union",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Output",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
+          ]
+        }
+      ]
+    },
     "e0ef8c83-e5a6-4272-a102-07bfc0a40fd5": {
       "ReadonlyPaletteName": "List<bool> Variable",
       "ReadonlyChipName": "List<bool> Variable",
@@ -18133,7 +18793,7 @@
       "ReadonlyPaletteName": "List Clear",
       "ReadonlyChipName": "List Clear",
       "Description": "Removes all elements from a list",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -18501,6 +19161,49 @@
           "FilterPath": [
             "Game Features",
             "Room Flow"
+          ]
+        }
+      ]
+    },
+    "7f15baa5-f804-4754-9cec-d1fe76a458b1": {
+      "ReadonlyPaletteName": "List Distinct",
+      "ReadonlyChipName": "List Distinct",
+      "Description": "Outputs a copy of the input list containing only its unique elements.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "List Distinct",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "List",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "List<T>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "List",
+            "Core"
           ]
         }
       ]
@@ -20132,6 +20835,590 @@
         }
       ]
     },
+    "b179742a-bdd8-47b5-b439-6cdd5cf9484a": {
+      "ReadonlyPaletteName": "Locomotion Request Clamber",
+      "ReadonlyChipName": "Locomotion Request Clamber",
+      "Description": "Request that the local player perform a clamber or a mantle. Custom Locomotion must be enabled in the active Player Definition Board.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Clamber",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Ledge Position",
+              "ReadonlyType": "Vector3",
+              "Description": "The position that the clamber will end up"
+            },
+            {
+              "Name": "Wall Normal",
+              "ReadonlyType": "Vector3",
+              "Description": "The normal of the wall that the player is clambering up. Only used for better clambering up moving surfaces."
+            },
+            {
+              "Name": "Wall Object",
+              "ReadonlyType": "Rec Room Object",
+              "Description": "The wall that the player is clambering up"
+            },
+            {
+              "Name": "Mantle",
+              "ReadonlyType": "bool",
+              "Description": "Whether this is a Clamber or a Mantle. This affects the animation used."
+            },
+            {
+              "Name": "Duration",
+              "ReadonlyType": "float",
+              "Description": "How long the clamber should last"
+            },
+            {
+              "Name": "Post Clamber Velocity Multiplier",
+              "ReadonlyType": "float",
+              "Description": "A value between 0 and 1. If 0, the player will come to a complete stop after the clamber. If 1, the player's speed after the clamber will be unaffected."
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "668d3245-34e3-4619-9881-eb8b49d2d638": {
+      "ReadonlyPaletteName": "Locomotion Request Crouch",
+      "ReadonlyChipName": "Locomotion Request Crouch",
+      "Description": "Request that the local player crouch.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Crouch",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "584c70a5-5bd1-448c-9dfa-45a0461481ef": {
+      "ReadonlyPaletteName": "Locomotion Request Jump Cutoff",
+      "ReadonlyChipName": "Locomotion Request Jump Cutoff",
+      "Description": "Request that the local player's jump is cancelled or shortened.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Jump Cutoff",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "33149283-60d0-4564-b989-db074573e857": {
+      "ReadonlyPaletteName": "Locomotion Request Jump",
+      "ReadonlyChipName": "Locomotion Request Jump",
+      "Description": "Request that the local player jumps.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Jump",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Max Jump Height",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Direction",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "3bff6eb2-3c82-4081-83e8-52032b1e28db": {
+      "ReadonlyPaletteName": "Locomotion Request Prone",
+      "ReadonlyChipName": "Locomotion Request Prone",
+      "Description": "Request that the local player becomes prone.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Prone",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "ae507f57-8840-493d-9014-38c6beb19e58": {
+      "ReadonlyPaletteName": "Locomotion Request Slide",
+      "ReadonlyChipName": "Locomotion Request Slide",
+      "Description": "Used for custom locomotion in order to request starting a slide.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Slide",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Slide Speed",
+              "ReadonlyType": "float",
+              "Description": "Speed(m/s) to start sliding at. Note that request steering will not affect your speed while sliding."
+            },
+            {
+              "Name": "Min Slide Speed",
+              "ReadonlyType": "float",
+              "Description": "Speed(m/s) that the player will stop sliding."
+            },
+            {
+              "Name": "Slide With Gravity",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "72e44053-7f7d-44f8-a45e-0d8eab06b13a": {
+      "ReadonlyPaletteName": "Locomotion Request Sprint Start",
+      "ReadonlyChipName": "Locomotion Request Sprint Start",
+      "Description": "Used for custom locomotion in order to request starting a sprint. ",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Sprint Start",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "804ac85f-1cd7-4da6-b81b-739971cfc387": {
+      "ReadonlyPaletteName": "Locomotion Request Sprint Stop",
+      "ReadonlyChipName": "Locomotion Request Sprint Stop",
+      "Description": "Request that the local player's sprint stops.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Sprint Stop",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "b6169557-e604-47bf-b11b-939f53daf6e9": {
+      "ReadonlyPaletteName": "Locomotion Request Stand",
+      "ReadonlyChipName": "Locomotion Request Stand",
+      "Description": "Requests that the local player stand.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Stand",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "0eead8ce-398b-4b0b-b16f-bad7be1bc11b": {
+      "ReadonlyPaletteName": "Locomotion Request Steering",
+      "ReadonlyChipName": "Locomotion Request Steering",
+      "Description": "Request that the local player is steered in the given direction, at the given speed.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": true,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Steering",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Direction",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Normalized Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Max Steering Speed",
+              "ReadonlyType": "float",
+              "Description": "Max steering speed(m/s) regardless of locomotion state"
+            },
+            {
+              "Name": "Acceleration Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
+    "13989690-57a9-432f-b79d-9e8a33c9888b": {
+      "ReadonlyPaletteName": "Locomotion Request Wall Run",
+      "ReadonlyChipName": "Locomotion Request Wall Run",
+      "Description": "Request that the local player begin to wall run. Not affected by CanWallRun directly. If you want that property to impact this request you should check it yourself.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Wall Run",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Max Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Max Duration (seconds)",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Gravity Multiplier",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Wall Run"
+          ]
+        }
+      ]
+    },
+    "cc6e247e-8bce-481c-b68e-e2449a5cb1fd": {
+      "ReadonlyPaletteName": "Locomotion Request Wall Run Stop",
+      "ReadonlyChipName": "Locomotion Request Wall Run Stop",
+      "Description": "Request that the local player stop wall running. Not affected by CanWallRun directly. If you want that property to impact this request you should check it yourself.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Locomotion Request Wall Run Stop",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Wall Run"
+          ]
+        }
+      ]
+    },
     "28a105ab-a947-4493-a51d-ced76a9601ee": {
       "ReadonlyPaletteName": "Logarithm",
       "ReadonlyChipName": "Logarithm",
@@ -20446,11 +21733,11 @@
         }
       ]
     },
-    "fe462e79-9e9f-4234-b594-7b6c0a69329b": {
+    "60da34d9-7e21-4cb6-a279-f083634c2979": {
       "ReadonlyPaletteName": "Modulo",
       "ReadonlyChipName": "Modulo",
-      "Description": "Outputs the remainder of the first value is divided by the second.",
-      "IsBetaChip": false,
+      "Description": "Outputs the modulo of the first value when divided by the second.",
+      "IsBetaChip": true,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -20716,6 +22003,59 @@
           "FilterPath": [
             "Logic",
             "Boolean Function"
+          ]
+        }
+      ]
+    },
+    "98a46410-ddd1-46b8-a99e-0642f75a0861": {
+      "ReadonlyPaletteName": "Not Equals",
+      "ReadonlyChipName": "Not Equals",
+      "Description": "Compares the input values and outputs True if they are different. False if they are the same.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Not Equals",
+          "ReadonlyTypeParams": {
+            "T": "any"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Equals",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Logic",
+            "Comparison"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Commonly Used"
           ]
         }
       ]
@@ -21905,6 +23245,51 @@
         }
       ]
     },
+    "836b64ad-0fd2-4936-bc1f-d25098df8b1d": {
+      "ReadonlyPaletteName": "Parse Time",
+      "ReadonlyChipName": "Parse Time",
+      "Description": "Parses the input date and time and returns the corresponding universal seconds. The chip will automatically try to find the correct format of the input data.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Parse Time",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Time",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Universal Seconds",
+              "ReadonlyType": "int",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Time"
+          ]
+        }
+      ]
+    },
     "5e25f40a-2b8c-4327-a89c-7a749838da7d": {
       "ReadonlyPaletteName": "Parse Float",
       "ReadonlyChipName": "Parse Float",
@@ -22531,6 +23916,69 @@
         }
       ]
     },
+    "3ac91358-d131-4e01-95e0-a24d309886c1": {
+      "ReadonlyPaletteName": "Player Add Aim Assist Tag",
+      "ReadonlyChipName": "Player Add Aim Assist Tag",
+      "Description": "Adds a tag to the list of player tags that the provided player can target with aim assist.\nBy default, this list contains the #player tag.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Add Aim Assist Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "AimAssist"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Gun Handle"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Swing Handle"
+          ]
+        }
+      ]
+    },
     "7b725036-4996-441d-ac54-91ac2c23d6b3": {
       "ReadonlyPaletteName": "Player Add Role",
       "ReadonlyChipName": "Player Add Role",
@@ -22787,6 +24235,53 @@
         }
       ]
     },
+    "1e33670b-5362-48d1-8f28-38df16e1b4c5": {
+      "ReadonlyPaletteName": "Local Player Clear Player Voice Rolloff Override",
+      "ReadonlyChipName": "Local Player Clear Player Voice Rolloff Override",
+      "Description": "Clears the local player's override of target player's voice rolloff distance.\n\nThe local player's reckoning of the target player's voice rolloff returns to being based on that player's voice rolloff distance property.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Local Player Clear Player Voice Rolloff Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Audio"
+          ]
+        }
+      ]
+    },
     "4c9e7840-0721-4d1c-b334-167f79d3bf40": {
       "ReadonlyPaletteName": "Player Definition Board",
       "ReadonlyChipName": "Player Definition Board",
@@ -23017,6 +24512,69 @@
         }
       ]
     },
+    "5d6461e3-c6e0-40eb-8032-8595b6d9b0dc": {
+      "ReadonlyPaletteName": "Player Get Aim Assist Tags",
+      "ReadonlyChipName": "Player Get Aim Assist Tags",
+      "Description": "Gets the list of player tags that the provided player can target with aim assist.\nBy default, this list contains the #player tag.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Aim Assist Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "AimAssist"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Gun Handle"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Swing Handle"
+          ]
+        }
+      ]
+    },
     "8286a047-19a2-4ad0-bdec-833f35adf4f2": {
       "ReadonlyPaletteName": "Player Get All with Tag",
       "ReadonlyChipName": "Player Get All with Tag",
@@ -23058,10 +24616,10 @@
         }
       ]
     },
-    "52fcfdc0-5f37-4c4c-892a-f61ba6ebf686": {
-      "ReadonlyPaletteName": "Player Get Can Teleport",
-      "ReadonlyChipName": "Player Get Can Teleport",
-      "Description": "Returns whether a given player is allowed to teleport.\n\nNote: The value of this property is independent of a player's platform. (This value can be true for screens players.)",
+    "ae54528b-eaf4-4247-a49e-29b9acbaf1b5": {
+      "ReadonlyPaletteName": "Player Get Wall Run Enabled",
+      "ReadonlyChipName": "Player Get Wall Run Enabled",
+      "Description": "Gets the whether the player can Wall Run. Enforced via circuits.",
       "IsBetaChip": true,
       "IsValidInRoom1": false,
       "IsValidInRoom2": true,
@@ -23072,7 +24630,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Player Get Can Teleport",
+          "Name": "Player Get Wall Run Enabled",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -23083,7 +24641,7 @@
           ],
           "Outputs": [
             {
-              "Name": "Can Teleport",
+              "Name": "Wall Run Enabled",
               "ReadonlyType": "bool",
               "Description": ""
             }
@@ -23096,14 +24654,14 @@
             "Player",
             "Properties",
             "Locomotion",
-            "Teleport"
+            "Wall Run"
           ]
         },
         {
           "FilterPath": [
             "Player",
             "Locomotion",
-            "Teleport"
+            "Wall Run"
           ]
         }
       ]
@@ -23181,6 +24739,56 @@
             {
               "Name": "Crouch Input Enabled",
               "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Walk"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Walk"
+          ]
+        }
+      ]
+    },
+    "c7e7881d-24aa-4308-af34-386daa6a9e12": {
+      "ReadonlyPaletteName": "Player Get Crouch Speed",
+      "ReadonlyChipName": "Player Get Crouch Speed",
+      "Description": "Returns the crouch speed for a given player.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Crouch Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Crouch Speed (m/s)",
+              "ReadonlyType": "float",
               "Description": ""
             }
           ]
@@ -23635,6 +25243,46 @@
         }
       ]
     },
+    "d5a7f0e5-b0ab-4b6d-82d2-cdecade30009": {
+      "ReadonlyPaletteName": "Player Get Is Custom Footstep Audio Enabled",
+      "ReadonlyChipName": "Player Get Is Custom Footstep Audio Enabled",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Is Custom Footstep Audio Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "4db35e9d-3a1d-4823-a011-7f94e028a3e7": {
       "ReadonlyPaletteName": "Player Get Is Grounded",
       "ReadonlyChipName": "Player Get Is Grounded",
@@ -23936,6 +25584,98 @@
         }
       ]
     },
+    "52fcfdc0-5f37-4c4c-892a-f61ba6ebf686": {
+      "ReadonlyPaletteName": "Player Get Can Teleport",
+      "ReadonlyChipName": "Player Get Can Teleport",
+      "Description": "Returns whether a given player is allowed to teleport.\n\nNote: The value of this property is independent of a player's platform. (This value can be true for screens players.)",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Can Teleport",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Can Teleport",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Teleport"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Teleport"
+          ]
+        }
+      ]
+    },
+    "5078db49-c621-4491-af58-3d37973c613c": {
+      "ReadonlyPaletteName": "Player Get Is WallRunning",
+      "ReadonlyChipName": "Player Get Is WallRunning",
+      "Description": "Returns whether the given player is wall running.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Is WallRunning",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Wall Running",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Wall Run"
+          ]
+        }
+      ]
+    },
     "42dbf319-8d57-41d2-921f-f3f707e6ad81": {
       "ReadonlyPaletteName": "Player Get Jump Height",
       "ReadonlyChipName": "Player Get Jump Height",
@@ -24039,13 +25779,13 @@
     "1eb70662-4a75-4120-9713-11dbbeedc740": {
       "ReadonlyPaletteName": "Player Get Normalized Steering Speed",
       "ReadonlyChipName": "Player Get Normalized Steering Speed",
-      "Description": "Returns the normalized (zero to one) steering speed requested by the player. This value represents how fast a player is wanting to move relative to their max speed.",
+      "Description": "(DEPRECATED: Use PlayerGetSteeringSpeed / GetWalkSpeed) Returns the steering speed requested by the player, squared, and normalized by the square of the default walk speed.",
       "IsBetaChip": true,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -24073,6 +25813,98 @@
           "FilterPath": [
             "Player",
             "Locomotion"
+          ]
+        }
+      ]
+    },
+    "502c4b6c-47b6-4370-a1e0-9cab18b1af35": {
+      "ReadonlyPaletteName": "Player Get Players In Radio Channel",
+      "ReadonlyChipName": "Player Get Players In Radio Channel",
+      "Description": "Returns a list of players that are set to the given radio channel.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Players In Radio Channel",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Channel",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Players",
+              "ReadonlyType": "List<Player>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Audio",
+            "Radio Channel"
+          ]
+        }
+      ]
+    },
+    "4d0f09da-4784-4b35-bf66-cdf818ea1a29": {
+      "ReadonlyPaletteName": "Player Get Prone Speed",
+      "ReadonlyChipName": "Player Get Prone Speed",
+      "Description": "Returns the prone speed for a given player.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Prone Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Prone Speed (m/s)",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Walk"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Walk"
           ]
         }
       ]
@@ -24241,6 +26073,56 @@
         }
       ]
     },
+    "87a7028f-cdde-4660-ade6-666509e137f8": {
+      "ReadonlyPaletteName": "Player Get Slide Speed",
+      "ReadonlyChipName": "Player Get Slide Speed",
+      "Description": "Returns the slide speed for a given player.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Slide Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Slide Speed (m/s)",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Walk"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Walk"
+          ]
+        }
+      ]
+    },
     "0b931a90-b24c-4be8-8503-efeea655c660": {
       "ReadonlyPaletteName": "Player Get Sprint Input Enabled",
       "ReadonlyChipName": "Player Get Sprint Input Enabled",
@@ -24382,6 +26264,47 @@
         }
       ]
     },
+    "348bc4c8-3b3b-4c44-8c49-4f782e5c8039": {
+      "ReadonlyPaletteName": "Player Get Steering Speed",
+      "ReadonlyChipName": "Player Get Steering Speed",
+      "Description": "Returns the steering speed requested by the player. This value represents how fast a player is wanting to move in world units.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Steering Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Steering Speed",
+              "ReadonlyType": "float",
+              "Description": "How fast the given player wants to move in m/s"
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion"
+          ]
+        }
+      ]
+    },
     "aa63bd19-b0a1-441f-8d69-71591d9007b9": {
       "ReadonlyPaletteName": "Player Get Teleport Delay",
       "ReadonlyChipName": "Player Get Teleport Delay",
@@ -24485,7 +26408,7 @@
     "7dd7ea91-2600-4002-804d-3a88d8b3b8a5": {
       "ReadonlyPaletteName": "Player Get Voice Rolloff Distance",
       "ReadonlyChipName": "Player Get Voice Rolloff Distance",
-      "Description": "Returns the voice rolloff distance for a given player",
+      "Description": "Returns the voice rolloff distance for the target player, as reckoned by the local player.\n\nIf the local player has set an override for the target player's voice rolloff distance, the \"Has Local Override\" bool returns true, and the overridden value is returned.\n\nOtherwise, the synced value of that player's voice rolloff distance is returned, and the bool returns false.",
       "IsBetaChip": true,
       "IsValidInRoom1": false,
       "IsValidInRoom2": true,
@@ -24509,6 +26432,11 @@
             {
               "Name": "Voice Rolloff Distance (m)",
               "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Has Local Override",
+              "ReadonlyType": "bool",
               "Description": ""
             }
           ]
@@ -24661,6 +26589,74 @@
           "FilterPath": [
             "Game Features",
             "Progression"
+          ]
+        }
+      ]
+    },
+    "d1261f45-8ee7-4d5e-8916-50c2e511ad84": {
+      "ReadonlyPaletteName": "Player Has Purchased Room Offer",
+      "ReadonlyChipName": "Player Has Purchased Room Offer",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "Code",
+      "NodeDescs": [
+        {
+          "Name": "Player Has Purchased Room Offer",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Room Offer",
+              "ReadonlyType": "Room Offer",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Player Has Purchased Room Offer Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player Has Purchased Room Offer",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Room Offer"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Room Offer"
           ]
         }
       ]
@@ -25156,9 +27152,50 @@
         }
       ]
     },
+    "7ff6c70e-d2df-4a57-980f-7bc8036e6e5d": {
+      "ReadonlyPaletteName": "Player Get Is Room Contributor",
+      "ReadonlyChipName": "Player Get Is Room Contributor",
+      "Description": "Outputs True if the input Player is one of the current room's contributors.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Get Is Room Contributor",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Result",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Permissions"
+          ]
+        }
+      ]
+    },
     "6f4324c5-4c7a-4243-97d0-58f027996534": {
-      "ReadonlyPaletteName": "Player Is Room Host",
-      "ReadonlyChipName": "Player Is Room Host",
+      "ReadonlyPaletteName": "Player Get Is Room Host",
+      "ReadonlyChipName": "Player Get Is Room Host",
       "Description": "Outputs True if the input Player is one of the current room's hosts.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
@@ -25170,7 +27207,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Player Is Room Host",
+          "Name": "Player Get Is Room Host",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -25192,14 +27229,14 @@
         {
           "FilterPath": [
             "Player",
-            "Utilities"
+            "Permissions"
           ]
         }
       ]
     },
     "8f9b0921-a92b-4d01-a4d5-a8d2e6fc6ca0": {
-      "ReadonlyPaletteName": "Player Is Room Mod",
-      "ReadonlyChipName": "Player Is Room Mod",
+      "ReadonlyPaletteName": "Player Get Is Room Mod",
+      "ReadonlyChipName": "Player Get Is Room Mod",
       "Description": "Outputs True if the input Player is one of the current room's moderators.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
@@ -25211,7 +27248,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Player Is Room Mod",
+          "Name": "Player Get Is Room Mod",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -25233,7 +27270,7 @@
         {
           "FilterPath": [
             "Player",
-            "Utilities"
+            "Permissions"
           ]
         }
       ]
@@ -25274,7 +27311,7 @@
         {
           "FilterPath": [
             "Player",
-            "Utilities"
+            "Permissions"
           ]
         }
       ]
@@ -25598,6 +27635,58 @@
         }
       ]
     },
+    "bb4ff641-2267-45e0-9e07-fc480b04f478": {
+      "ReadonlyPaletteName": "Local Player Override Player Voice Rolloff",
+      "ReadonlyChipName": "Local Player Override Player Voice Rolloff",
+      "Description": "Override the voice rolloff distance of the target player as heard by the local player.\n\nOther players' perception of the target player's voice rolloff will be unaffected.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Local Player Override Player Voice Rolloff",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Voice Rolloff Distance (m)",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Audio"
+          ]
+        }
+      ]
+    },
     "68cc97a7-440a-450a-bf7f-b25091629c32": {
       "ReadonlyPaletteName": "Player Owns Inventory Item",
       "ReadonlyChipName": "Player Owns Inventory Item",
@@ -25820,6 +27909,69 @@
         }
       ]
     },
+    "03d08e3c-b639-43ca-9443-dee4b160ad0e": {
+      "ReadonlyPaletteName": "Player Remove Aim Assist Tag",
+      "ReadonlyChipName": "Player Remove Aim Assist Tag",
+      "Description": "Removes a tag from the list of player tags that the provided player can target with aim assist.\nBy default, this list contains the #player tag.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Remove Aim Assist Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "AimAssist"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Gun Handle"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Swing Handle"
+          ]
+        }
+      ]
+    },
     "eb605a54-315e-495e-b051-8d113c32ed7c": {
       "ReadonlyPaletteName": "Remove Player From Radio Channel",
       "ReadonlyChipName": "Remove Player From Radio Channel",
@@ -25922,7 +28074,7 @@
       "ReadonlyPaletteName": "Player Reset Name Color",
       "ReadonlyChipName": "Player Reset Name Color",
       "Description": "Resets the color of the given player's name tag to the default color.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -26175,12 +28327,12 @@
         }
       ]
     },
-    "de2df219-9d85-4778-a9a3-255d912596a2": {
-      "ReadonlyPaletteName": "Player Set Can Teleport",
-      "ReadonlyChipName": "Player Set Can Teleport",
-      "Description": "Sets whether a given player is allowed to teleport.\n\nNote: Setting this to false does not prevent VR players from being in Teleport mode. It only prevents them from performing a teleport.",
+    "19883a68-58b5-480e-a5cd-97a526e08fdd": {
+      "ReadonlyPaletteName": "Player Set Aim Assist Tags",
+      "ReadonlyChipName": "Player Set Aim Assist Tags",
+      "Description": "Sets the list of player tags that the provided player can target with aim assist.\nBy default, this list contains the #player tag.",
       "IsBetaChip": true,
-      "IsValidInRoom1": false,
+      "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
@@ -26189,7 +28341,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Player Set Can Teleport",
+          "Name": "Player Set Aim Assist Tags",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -26203,7 +28355,70 @@
               "Description": ""
             },
             {
-              "Name": "Can Teleport",
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "AimAssist"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Gun Handle"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Object",
+            "Swing Handle"
+          ]
+        }
+      ]
+    },
+    "8470f76b-a4c5-4b79-9651-5af1b9ed8b78": {
+      "ReadonlyPaletteName": "Player Set Wall Run Enabled",
+      "ReadonlyChipName": "Player Set Wall Run Enabled",
+      "Description": "Sets the whether the player can Wall Run. Enforced via circuits.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Set Wall Run Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Wall Run Enabled",
               "ReadonlyType": "bool",
               "Description": ""
             }
@@ -26223,14 +28438,14 @@
             "Player",
             "Properties",
             "Locomotion",
-            "Teleport"
+            "Wall Run"
           ]
         },
         {
           "FilterPath": [
             "Player",
             "Locomotion",
-            "Teleport"
+            "Wall Run"
           ]
         }
       ]
@@ -26265,6 +28480,66 @@
             {
               "Name": "Crouch Input Enabled",
               "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Walk"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Walk"
+          ]
+        }
+      ]
+    },
+    "0a83ea9a-7796-4f77-940e-1bb6593b1ac2": {
+      "ReadonlyPaletteName": "Player Set Crouch Speed",
+      "ReadonlyChipName": "Player Set Crouch Speed",
+      "Description": "Sets the crouch speed for a given player",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Set Crouch Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Crouch Speed (m/s)",
+              "ReadonlyType": "float",
               "Description": ""
             }
           ],
@@ -26536,6 +28811,66 @@
         }
       ]
     },
+    "de2df219-9d85-4778-a9a3-255d912596a2": {
+      "ReadonlyPaletteName": "Player Set Can Teleport",
+      "ReadonlyChipName": "Player Set Can Teleport",
+      "Description": "Sets whether a given player is allowed to teleport.\n\nNote: Setting this to false does not prevent VR players from being in Teleport mode. It only prevents them from performing a teleport.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Set Can Teleport",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Can Teleport",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Teleport"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Teleport"
+          ]
+        }
+      ]
+    },
     "5dae4912-b714-4cbe-91ab-c736b517d0d6": {
       "ReadonlyPaletteName": "Player Set Jump Height",
       "ReadonlyChipName": "Player Set Jump Height",
@@ -26656,6 +28991,66 @@
         }
       ]
     },
+    "f7f503b5-58df-42b2-ab69-3d7f3b0f4a5d": {
+      "ReadonlyPaletteName": "Player Set Prone Speed",
+      "ReadonlyChipName": "Player Set Prone Speed",
+      "Description": "Sets the prone speed for a given player",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Set Prone Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Prone Speed (m/s)",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Walk"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Walk"
+          ]
+        }
+      ]
+    },
     "231d05ba-8577-4d1e-888d-115e657dd525": {
       "ReadonlyPaletteName": "Player Set Radio Channel",
       "ReadonlyChipName": "Player Set Radio Channel",
@@ -26704,6 +29099,66 @@
             "Player",
             "Audio",
             "Radio Channel"
+          ]
+        }
+      ]
+    },
+    "e4f3a06c-b997-4186-a4a3-f435713a910b": {
+      "ReadonlyPaletteName": "Player Set Slide Speed",
+      "ReadonlyChipName": "Player Set Slide Speed",
+      "Description": "Sets the slide speed for a given player",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Player Set Slide Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Slide Speed (m/s)",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Properties",
+            "Locomotion",
+            "Walk"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Player",
+            "Locomotion",
+            "Walk"
           ]
         }
       ]
@@ -26951,7 +29406,7 @@
     "7fd128dd-189b-4454-9824-5f482f8f5ce6": {
       "ReadonlyPaletteName": "Player Set Voice Rolloff Distance",
       "ReadonlyChipName": "Player Set Voice Rolloff Distance",
-      "Description": "Sets the voice rolloff distance for a given player. Beyond this distance, they cannot be heard.",
+      "Description": "Sets the voice rolloff distance for a given player as heard by all other players.\n\nBeyond this distance, the target player cannot be heard.",
       "IsBetaChip": true,
       "IsValidInRoom1": false,
       "IsValidInRoom2": true,
@@ -27116,6 +29571,48 @@
             "Player",
             "Locomotion",
             "Walk"
+          ]
+        }
+      ]
+    },
+    "f28a5263-76d9-4bba-97f2-2654ae04ce61": {
+      "ReadonlyPaletteName": "Share Camera Get Is Spawned",
+      "ReadonlyChipName": "Share Camera Get Is Spawned",
+      "Description": "Gets whether the target player has their Share Camera spawned",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Share Camera Get Is Spawned",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Spawned",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Equipment",
+            "Share Camera"
           ]
         }
       ]
@@ -27481,9 +29978,7 @@
       "NodeDescs": [
         {
           "Name": "Play Handle Haptics",
-          "ReadonlyTypeParams": {
-            "T": "(Trigger Handle | Gun Handle | Swing Handle)"
-          },
+          "ReadonlyTypeParams": {},
           "Inputs": [
             {
               "Name": "Play",
@@ -27492,7 +29987,7 @@
             },
             {
               "Name": "Handle",
-              "ReadonlyType": "T",
+              "ReadonlyType": "Handle",
               "Description": ""
             },
             {
@@ -29629,6 +32124,49 @@
         }
       ]
     },
+    "fe462e79-9e9f-4234-b594-7b6c0a69329b": {
+      "ReadonlyPaletteName": "Remainder",
+      "ReadonlyChipName": "Remainder",
+      "Description": "Outputs the remainder of the first value when divided by the second.",
+      "IsBetaChip": false,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Remainder",
+          "ReadonlyTypeParams": {
+            "T": "(int | float)"
+          },
+          "Inputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Remainder",
+              "ReadonlyType": "T",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Math",
+            "Scalar"
+          ]
+        }
+      ]
+    },
     "736abfd6-5a44-4c74-9fc2-663adf6cbbdf": {
       "ReadonlyPaletteName": "Inventory Item Remove",
       "ReadonlyChipName": "Inventory Item Remove",
@@ -30296,6 +32834,63 @@
         }
       ]
     },
+    "b890f7ef-5126-401c-8d66-794e9b1bc2a5": {
+      "ReadonlyPaletteName": "Room Background Objects Clear Player Override",
+      "ReadonlyChipName": "Room Background Objects Clear Player Override",
+      "Description": "Clears the given player's local room background objects state override.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Background Objects Clear Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Background Objects"
+          ]
+        }
+      ]
+    },
     "f16741ca-778f-44de-99e6-6a948c7aecfb": {
       "ReadonlyPaletteName": "Room Background Objects Modify",
       "ReadonlyChipName": "Room Background Objects Modify",
@@ -30347,7 +32942,127 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Background Objects"
+          ]
+        }
+      ]
+    },
+    "79b90cab-14e3-4a90-8975-163506809c7e": {
+      "ReadonlyPaletteName": "Room Background Objects Modify",
+      "ReadonlyChipName": "Room Background Objects Modify",
+      "Description": "Changes the room's shared background objects state to the given configuration.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Background Objects Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Background Objects",
+              "ReadonlyType": "Background Objects",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Background Objects"
+          ]
+        }
+      ]
+    },
+    "8ee487c2-9351-4f3b-9497-1e633d606f20": {
+      "ReadonlyPaletteName": "Room Background Objects Player Override",
+      "ReadonlyChipName": "Room Background Objects Player Override",
+      "Description": "Overrides the given player's room background objects state to the given configuration. This will take precedent over the room's shared background objects state.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Background Objects Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Background Objects",
+              "ReadonlyType": "Background Objects",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Background Objects"
           ]
         }
       ]
@@ -30393,7 +33108,236 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Background Objects"
+          ]
+        }
+      ]
+    },
+    "71b85a8d-cda7-481f-a795-156bd8318d95": {
+      "ReadonlyPaletteName": "Room Background Objects Reset",
+      "ReadonlyChipName": "Room Background Objects Reset",
+      "Description": "Resets the room's shared background objects state to the room default.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Background Objects Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Background Objects"
+          ]
+        }
+      ]
+    },
+    "415b92fb-53a3-4036-97ee-75146dcfd637": {
+      "ReadonlyPaletteName": "Room Fog Clear Player Override",
+      "ReadonlyChipName": "Room Fog Clear Player Override",
+      "Description": "Clears the given player's local room fog state override.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Fog Clear Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Fog"
+          ]
+        }
+      ]
+    },
+    "2f9b5697-b309-474b-ad4d-361d17278f15": {
+      "ReadonlyPaletteName": "Room Fog Modify",
+      "ReadonlyChipName": "Room Fog Modify",
+      "Description": "Changes the room's shared fog state to the given configuration.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Fog Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Fog",
+              "ReadonlyType": "Fog",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Fog"
+          ]
+        }
+      ]
+    },
+    "be4008ad-3f28-4a62-9b30-f479eb7c0542": {
+      "ReadonlyPaletteName": "Room Fog Player Override",
+      "ReadonlyChipName": "Room Fog Player Override",
+      "Description": "Overrides the given player's room fog state to the given configuration. This will take precedent over the room's shared fog state.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Fog Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Fog",
+              "ReadonlyType": "Fog",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Fog"
           ]
         }
       ]
@@ -30439,7 +33383,60 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Fog"
+          ]
+        }
+      ]
+    },
+    "8d447921-57aa-471c-9628-857071fc4a10": {
+      "ReadonlyPaletteName": "Room Fog Reset",
+      "ReadonlyChipName": "Room Fog Reset",
+      "Description": "Resets the room's shared fog state to the room default.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Fog Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Fog"
           ]
         }
       ]
@@ -30618,6 +33615,63 @@
         }
       ]
     },
+    "de67b647-5c82-4875-a6c4-051768c27c32": {
+      "ReadonlyPaletteName": "Room Skydome Clear Player Override",
+      "ReadonlyChipName": "Room Skydome Clear Player Override",
+      "Description": "Clears the given player's local room skydome state override.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Skydome Clear Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Skydome"
+          ]
+        }
+      ]
+    },
     "511e85c5-a359-49f1-a83c-a0550e98fe8e": {
       "ReadonlyPaletteName": "Room Skydome Modify",
       "ReadonlyChipName": "Room Skydome Modify",
@@ -30669,7 +33723,127 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Skydome"
+          ]
+        }
+      ]
+    },
+    "fa6ebcdd-7551-4f05-91ca-101b2679cc0c": {
+      "ReadonlyPaletteName": "Room Skydome Modify",
+      "ReadonlyChipName": "Room Skydome Modify",
+      "Description": "Changes the room's shared skydome state to the given configuration.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Skydome Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Skydome",
+              "ReadonlyType": "Skydome",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Skydome"
+          ]
+        }
+      ]
+    },
+    "f204d79b-fbd2-4b19-a4bf-b7eabe927bed": {
+      "ReadonlyPaletteName": "Room Skydome Player Override",
+      "ReadonlyChipName": "Room Skydome Player Override",
+      "Description": "Overrides the given player's room skydome state to the given configuration. This will take precedent over the room's shared skydome state.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Skydome Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Skydome",
+              "ReadonlyType": "Skydome",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Skydome"
           ]
         }
       ]
@@ -30715,7 +33889,246 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Skydome"
+          ]
+        }
+      ]
+    },
+    "79581488-2095-4ccd-a597-e3ed4d172105": {
+      "ReadonlyPaletteName": "Room Skydome Reset",
+      "ReadonlyChipName": "Room Skydome Reset",
+      "Description": "Resets the room's shared skydome state to the room default.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Skydome Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Skydome"
+          ]
+        }
+      ]
+    },
+    "c3c56056-ae0a-4576-a907-84c78a8cd3bf": {
+      "ReadonlyPaletteName": "Room Sun Clear Player Override",
+      "ReadonlyChipName": "Room Sun Clear Player Override",
+      "Description": "Clears the given player's local room sun state override.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Sun Clear Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Sun"
+          ]
+        }
+      ]
+    },
+    "ecf6491d-782c-47b8-bb3e-b751de0f348f": {
+      "ReadonlyPaletteName": "Room Sun Modify",
+      "ReadonlyChipName": "Room Sun Modify",
+      "Description": "Changes the room's shared sun state to the given configuration.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Sun Modify",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Sun",
+              "ReadonlyType": "Sun",
+              "Description": ""
+            },
+            {
+              "Name": "Sun Direction",
+              "ReadonlyType": "Sun Direction",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Sun"
+          ]
+        }
+      ]
+    },
+    "6601dc45-6a5d-4a4d-986a-c3f265de9971": {
+      "ReadonlyPaletteName": "Room Sun Player Override",
+      "ReadonlyChipName": "Room Sun Player Override",
+      "Description": "Overrides the given player's room sun state to the given configuration. This will take precedent over the room's shared sun state.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Sun Player Override",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Sun",
+              "ReadonlyType": "Sun",
+              "Description": ""
+            },
+            {
+              "Name": "Sun Direction",
+              "ReadonlyType": "Sun Direction",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Sun"
           ]
         }
       ]
@@ -30761,7 +34174,60 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Sun"
+          ]
+        }
+      ]
+    },
+    "f62876ea-8c18-4566-ae4e-224d39fdcd89": {
+      "ReadonlyPaletteName": "Room Sun Reset",
+      "ReadonlyChipName": "Room Sun Reset",
+      "Description": "Resets the room's shared sun state to the room default.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Room Sun Reset",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Blend Finished",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "Moods",
+            "Sun"
           ]
         }
       ]
@@ -33425,6 +36891,63 @@
         }
       ]
     },
+    "2d9b5795-efca-48a6-9270-d1804ec69bb4": {
+      "ReadonlyPaletteName": "Equip Share Camera",
+      "ReadonlyChipName": "Equip Share Camera",
+      "Description": "Equips Share Camera to a player's dominant hand if the player is not already holding the Share Camera.\nReturns success if the target player is already holding their Share Camera in either hand.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Equip Share Camera",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Force Equip",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Equipment",
+            "Share Camera"
+          ]
+        }
+      ]
+    },
     "2231d8fa-fa63-4952-8ba4-a8258ffb2f9b": {
       "ReadonlyPaletteName": "Set Game HUD Element Label Enabled",
       "ReadonlyChipName": "Set Game HUD Element Label Enabled",
@@ -33776,6 +37299,67 @@
         }
       ]
     },
+    "829b5788-efe0-4df4-91de-75c267ed3d57": {
+      "ReadonlyPaletteName": "Show Banner Notification",
+      "ReadonlyChipName": "Show Banner Notification",
+      "Description": "Shows a player a banner notification. Appearance can be customized in the config menu!",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Show Banner Notification",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            },
+            {
+              "Name": "Title",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Main Text",
+              "ReadonlyType": "string",
+              "Description": ""
+            },
+            {
+              "Name": "Duration",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "UI"
+          ]
+        }
+      ]
+    },
     "3d713e71-2729-4819-819c-bcbe6fb8d400": {
       "ReadonlyPaletteName": "Show Reward Notification",
       "ReadonlyChipName": "Show Reward Notification",
@@ -33888,7 +37472,7 @@
       "Description": "Defines values for the room skydome.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -33912,12 +37496,14 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Skydome"
           ]
         },
         {
           "FilterPath": [
-            "Constant"
+            "Constant",
+            "Moods"
           ]
         }
       ]
@@ -33979,7 +37565,7 @@
       "ReadonlyPaletteName": "Smooth Damp",
       "ReadonlyChipName": "Smooth Damp",
       "Description": "Moves a vector towards a target, with velocity based damping",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -34233,7 +37819,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34340,7 +37926,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34391,7 +37977,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34483,7 +38069,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34585,7 +38171,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34636,7 +38222,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34697,7 +38283,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": true,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34753,7 +38339,7 @@
       "Description": "",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -34883,7 +38469,7 @@
       "ReadonlyPaletteName": "State Constant",
       "ReadonlyChipName": "State - UNDEFINED",
       "Description": "A constant representing a state in a state machine.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -34918,7 +38504,7 @@
       "ReadonlyPaletteName": "State Machine",
       "ReadonlyChipName": "State Machine",
       "Description": "Manage state transitions by editing into this chip and populating it with connected State chips.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -34940,7 +38526,7 @@
       "ReadonlyPaletteName": "State",
       "ReadonlyChipName": "State",
       "Description": "Place this chip inside a State Machine chip to represent a state.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -36478,7 +40064,7 @@
       "Description": "Defines values for the room's sun.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -36502,12 +40088,14 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Sun"
           ]
         },
         {
           "FilterPath": [
-            "Constant"
+            "Constant",
+            "Moods"
           ]
         }
       ]
@@ -36568,7 +40156,8 @@
         {
           "FilterPath": [
             "Game Features",
-            "Moods"
+            "Moods",
+            "Sun"
           ]
         }
       ]
@@ -37955,7 +41544,7 @@
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -38037,7 +41626,7 @@
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
-      "DeprecationStage": "Active",
+      "DeprecationStage": "Deprecated",
       "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
@@ -38121,12 +41710,12 @@
       ]
     },
     "8f42f9b7-87fb-4f4b-9160-a45baf269650": {
-      "ReadonlyPaletteName": "Trigger Volume Get Filter Tags",
-      "ReadonlyChipName": "Trigger Volume Get Filter Tags",
-      "Description": "Gets the tags that are being used as a filter for a Trigger Volume.",
+      "ReadonlyPaletteName": "Trigger Volume Get Object Filter Tags",
+      "ReadonlyChipName": "Trigger Volume Get Object Filter Tags",
+      "Description": "Gets the tags that are being used as the object filter for a Trigger Volume.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -38134,7 +41723,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Trigger Volume Get Filter Tags",
+          "Name": "Trigger Volume Get Object Filter Tags",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -38145,7 +41734,7 @@
           ],
           "Outputs": [
             {
-              "Name": "Value",
+              "Name": "Tags",
               "ReadonlyType": "List<string>",
               "Description": ""
             }
@@ -38167,7 +41756,7 @@
       "Description": "Gets the number of objects currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -38208,7 +41797,7 @@
       "Description": "Gets the number of players currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -38249,7 +41838,7 @@
       "Description": "Gets all of the objects currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -38284,13 +41873,54 @@
         }
       ]
     },
+    "7c71350c-67fe-4e57-953b-0b4230a77878": {
+      "ReadonlyPaletteName": "Trigger Volume Get Player Filter Tags",
+      "ReadonlyChipName": "Trigger Volume Get Player Filter Tags",
+      "Description": "Gets the tags that are being used as the player filter for a Trigger Volume.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trigger Volume Get Player Filter Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Trigger Volume",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Trigger Volume"
+          ]
+        }
+      ]
+    },
     "4c23af85-e05c-4be7-a708-c2f0cc67ebec": {
       "ReadonlyPaletteName": "Trigger Volume Get Players",
       "ReadonlyChipName": "Trigger Volume Get Players",
       "Description": "Gets all of the players currently inside a Trigger Volume. This is not synchronized with the Trigger Volume's events!",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -38377,12 +42007,12 @@
       ]
     },
     "6668fd38-076e-4d03-b9a1-02eca5edd0b7": {
-      "ReadonlyPaletteName": "Trigger Volume Set Filter Tags",
-      "ReadonlyChipName": "Trigger Volume Set Filter Tags",
-      "Description": "Sets the tags that are being used as a filter for a Trigger Volume. An object is considered by the Trigger Volume, if it has any of the tags in this list.",
+      "ReadonlyPaletteName": "Trigger Volume Set Object Filter Tags",
+      "ReadonlyChipName": "Trigger Volume Set Object Filter Tags",
+      "Description": "Sets the tags that are being used as the object filter for a Trigger Volume. An object is considered by the Trigger Volume, if it has any of the tags in this list.",
       "IsBetaChip": false,
       "IsValidInRoom1": true,
-      "IsValidInRoom2": false,
+      "IsValidInRoom2": true,
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
@@ -38390,7 +42020,7 @@
       "ChipNameSource": "FirstNodeDesc",
       "NodeDescs": [
         {
-          "Name": "Trigger Volume Set Filter Tags",
+          "Name": "Trigger Volume Set Object Filter Tags",
           "ReadonlyTypeParams": {},
           "Inputs": [
             {
@@ -38404,7 +42034,58 @@
               "Description": ""
             },
             {
-              "Name": "Value",
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Trigger Volume"
+          ]
+        }
+      ]
+    },
+    "e53a6e31-af8f-4579-87ba-7e2e49991b04": {
+      "ReadonlyPaletteName": "Trigger Volume Set Player Filter Tags",
+      "ReadonlyChipName": "Trigger Volume Set Player Filter Tags",
+      "Description": "Sets the tags that are being used as the player filter for a Trigger  Volume. A player is considered by the Trigger Volume, if they have any of the tags in this list.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Trigger Volume Set Player Filter Tags",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Trigger Volume",
+              "Description": ""
+            },
+            {
+              "Name": "Tags",
               "ReadonlyType": "List<string>",
               "Description": ""
             }
@@ -38578,7 +42259,7 @@
       "ReadonlyPaletteName": "Vector3 Clamp Magnitude",
       "ReadonlyChipName": "Vector3 Clamp Magnitude",
       "Description": "Clamps a vector's magnitude to a given max length.\nVector is unchanged if magnitude is already less.\nMax length cannot be negative.",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -38624,7 +42305,7 @@
       "ReadonlyPaletteName": "Vector3 Closest Point On Plane",
       "ReadonlyChipName": "Vector3 Closest Point On Plane",
       "Description": "Gets the point on the plane that is closest to a given position",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -38859,7 +42540,7 @@
       "ReadonlyPaletteName": "Vector3 Move Towards",
       "ReadonlyChipName": "Vector3 Move Towards",
       "Description": "Moves a vector towards target, not moving more than max delta distance at a time",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -39008,7 +42689,7 @@
       "ReadonlyPaletteName": "Vector3 Project",
       "ReadonlyChipName": "Vector3 Project",
       "Description": "Projects a vector onto a normal",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,
@@ -39054,7 +42735,7 @@
       "ReadonlyPaletteName": "Vector3 Project On Plane",
       "ReadonlyChipName": "Vector3 Project On Plane",
       "Description": "Projects a vector onto a plane",
-      "IsBetaChip": true,
+      "IsBetaChip": false,
       "IsValidInRoom1": true,
       "IsValidInRoom2": true,
       "IsTrollingRisk": false,

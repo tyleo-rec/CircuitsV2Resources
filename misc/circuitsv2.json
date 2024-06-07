@@ -9885,6 +9885,54 @@
         }
       ]
     },
+    "80ad6681-f1b1-448e-acc2-0736e4f6841d": {
+      "ReadonlyPaletteName": "Get All Inventory Items With Tag",
+      "ReadonlyChipName": "Get All Inventory Items With Tag",
+      "Description": "Returns a List of Room Inventory Items that are tagged with the inputted tag.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Get All Inventory Items With Tag",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Tag",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Inventory Items",
+              "ReadonlyType": "List<Inventory Item>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player",
+            "Economy",
+            "Inventory Item"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Economy",
+            "Inventory Item"
+          ]
+        }
+      ]
+    },
     "3f4346b1-bc6f-4aca-9650-d43cbd4acc5b": {
       "ReadonlyPaletteName": "Get All Players",
       "ReadonlyChipName": "Get All Players",
@@ -10874,7 +10922,7 @@
     "93ad7158-81eb-453c-b3db-222b9630ae0e": {
       "ReadonlyPaletteName": "Inventory Item Get Definition",
       "ReadonlyChipName": "Inventory Item Get Definition",
-      "Description": "Gets the friendly name, description, and image of the given inventory item.",
+      "Description": "Gets the friendly name, description, image, and tag names of the given inventory item.",
       "IsBetaChip": true,
       "IsValidInRoom1": false,
       "IsValidInRoom2": true,
@@ -10913,6 +10961,11 @@
             {
               "Name": "Image",
               "ReadonlyType": "RecNet Image",
+              "Description": ""
+            },
+            {
+              "Name": "Tags",
+              "ReadonlyType": "List<string>",
               "Description": ""
             }
           ]
@@ -15352,6 +15405,414 @@
         }
       ]
     },
+    "9cf6397d-6e8f-4945-95ac-65ec01530d57": {
+      "ReadonlyPaletteName": "Holotar Projector Get Current Time",
+      "ReadonlyChipName": "Holotar Projector Get Current Time",
+      "Description": "Get current playback time for Target Holotar Projector",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Get Current Time",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "973bc740-7e2b-48ac-911d-7eadfdc1833e": {
+      "ReadonlyPaletteName": "Holotar Projector Get Volume",
+      "ReadonlyChipName": "Holotar Projector Get Volume",
+      "Description": "Holotar Projector get playback volume",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Get Volume",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Volume",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "8554d9ff-4ac3-4214-872b-4274fe5a8549": {
+      "ReadonlyPaletteName": "Holotar Projector Pause",
+      "ReadonlyChipName": "Holotar Projector Pause",
+      "Description": "Pasue Holotar Projector at current playback time",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Pause",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "17fa140e-4112-4362-8d04-16aa2ae95d44": {
+      "ReadonlyPaletteName": "Holotar Projector Play",
+      "ReadonlyChipName": "Holotar Projector Play",
+      "Description": "Load & play Holotar Recording from the start through the Target Projector. Play will always begin the clip from 0s",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Play",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            },
+            {
+              "Name": "Holotar",
+              "ReadonlyType": "Holotar Recording",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "df1624a8-1f41-4ff9-b893-1cf16c2a942d": {
+      "ReadonlyPaletteName": "Holotar Projector Resume",
+      "ReadonlyChipName": "Holotar Projector Resume",
+      "Description": "Resume playing the currently loaded clip on the Target Projector from the current time ",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Resume",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "4529edc7-0fb7-48b0-a685-8600ac73b7df": {
+      "ReadonlyPaletteName": "Holotar Projector Set Current Time",
+      "ReadonlyChipName": "Holotar Projector Set Current Time",
+      "Description": "Set playback time for Target Projector when paused or playing",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Set Current Time",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            },
+            {
+              "Name": "Time",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "4cc01ea7-d5ce-4877-883a-9492e6e48c9e": {
+      "ReadonlyPaletteName": "Holotar Projector Set Volume",
+      "ReadonlyChipName": "Holotar Projector Set Volume",
+      "Description": "Holotar Projector set playback volume",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Set Volume",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            },
+            {
+              "Name": "Volume",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "943fdeaa-a9d8-4ddf-aa21-04bc3f022f58": {
+      "ReadonlyPaletteName": "Holotar Projector Stop",
+      "ReadonlyChipName": "Holotar Projector Stop",
+      "Description": "Holotar Projector end play",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Projector Stop",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Holotar Projector",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
+    "a01d55f9-3a69-4edf-bdfa-20beff06148a": {
+      "ReadonlyPaletteName": "Holotar Recording",
+      "ReadonlyChipName": "Holotar Recording",
+      "Description": "Constant to record and save a Holotar clip",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Holotar Recording",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "Holotar Recording",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Holotar"
+          ]
+        }
+      ]
+    },
     "2e8d2d58-a73d-407a-9892-6cac4cb9ce9a": {
       "ReadonlyPaletteName": "HSV To Color",
       "ReadonlyChipName": "HSV To Color",
@@ -17509,6 +17970,98 @@
           "FilterPath": [
             "Object",
             "Laser Pointer"
+          ]
+        }
+      ]
+    },
+    "17d59d6e-c4c5-48de-b113-d708b740b48d": {
+      "ReadonlyPaletteName": "Leaderboard Get Projector Enabled",
+      "ReadonlyChipName": "Leaderboard Get Projector Enabled",
+      "Description": "Outputs True if the target Leaderboard object is enabled.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Leaderboard Get Projector Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Leaderboard Projector",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Leaderboard"
+          ]
+        }
+      ]
+    },
+    "a7b12a2f-2a22-4332-a810-f9497eb91ac4": {
+      "ReadonlyPaletteName": "Leaderboard Set Projector Enabled",
+      "ReadonlyChipName": "Leaderboard Set Projector Enabled",
+      "Description": "Sets the enabled state of the target Leaderboard object.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Leaderboard Set Projector Enabled",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Leaderboard Projector",
+              "Description": ""
+            },
+            {
+              "Name": "Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Leaderboard"
           ]
         }
       ]
@@ -20935,6 +21488,40 @@
         }
       ]
     },
+    "d6d17e6f-855e-4f5a-9e33-843a788ce3a0": {
+      "ReadonlyPaletteName": "Local Player Get Is Third Person Active",
+      "ReadonlyChipName": "Local Player Get Is Third Person Active",
+      "Description": "Checks if the local player is in third-person mode. This always returns false for platforms that do not support third person like VR.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Local Player Get Is Third Person Active",
+          "ReadonlyTypeParams": {},
+          "Inputs": [],
+          "Outputs": [
+            {
+              "Name": "Active",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
     "809ba66c-8877-4d74-ac4b-2d0730a1b576": {
       "ReadonlyPaletteName": "Local Player Get Objective Log Content",
       "ReadonlyChipName": "Local Player Get Objective Log Content",
@@ -21043,6 +21630,51 @@
             {
               "Name": "Is VR",
               "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Player"
+          ]
+        }
+      ]
+    },
+    "039fdbe0-31f2-4743-81ef-aa326b5e410f": {
+      "ReadonlyPaletteName": "Local Player Request Third Person",
+      "ReadonlyChipName": "Local Player Request Third Person",
+      "Description": "Tries to set the local player to third or first person. If Active is true, the local player will be changed to third person. If Active is false, they will be changed to first person. No effect on platforms where third person is unsupported, like VR.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Local Player Request Third Person",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Active",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
               "Description": ""
             }
           ]
@@ -22484,6 +23116,69 @@
           "FilterPath": [
             "Logic",
             "Boolean Function"
+          ]
+        }
+      ]
+    },
+    "42a50b22-bc74-4c79-8bd6-00f021f721b0": {
+      "ReadonlyPaletteName": "NavMesh Can Path Between",
+      "ReadonlyChipName": "NavMesh Can Path Between",
+      "Description": "Checks if a path exists between two positions using the NavMesh. \n\nUse \"Max Distance\" to indicate how far away from the NavMesh the positions can be. Lower values increase precision and can cause valid paths to register false if the target positions are not close enough to the NavMesh, while higher values decrease precision and can return a false positive if the margin is wide enough to include points that are not near the NavMesh.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "NavMesh Can Path Between",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Start Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "End Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Max Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Path Exists",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Game Features",
+            "AI",
+            "Pathfinder",
+            "Utilities"
           ]
         }
       ]
@@ -24852,7 +25547,7 @@
       ]
     },
     "4c9e7840-0721-4d1c-b334-167f79d3bf40": {
-      "ReadonlyPaletteName": "Player Definition Board",
+      "ReadonlyPaletteName": "Player Definition Board (Empty)",
       "ReadonlyChipName": "Player Definition Board",
       "Description": "This is very similar to an object board that you would find on any object, except this is for all players! After placing, make sure to configure it and make sure it is active. Edit into this board and add any other chips you'd like and know that each player will have the same logic on them when you hit done editing.",
       "IsBetaChip": false,
@@ -24861,7 +25556,7 @@
       "IsTrollingRisk": false,
       "IsRoleAssignmentRisk": false,
       "DeprecationStage": "Active",
-      "PaletteNameSource": "Code",
+      "PaletteNameSource": "FirstNodeDesc",
       "ChipNameSource": "Code",
       "NodeDescs": [],
       "NodeFilters": [
@@ -33323,6 +34018,215 @@
         }
       ]
     },
+    "62566b9c-6f09-46a0-8db9-8c4b895a2b79": {
+      "ReadonlyPaletteName": "Replicator Get Active Objects Count",
+      "ReadonlyChipName": "Replicator Get Active Objects Count",
+      "Description": "Returns the total number of objects that have been spawned by the target replicator and are currently active.\r",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Replicator Get Active Objects Count",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Replicator",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Active Object Count",
+              "ReadonlyType": "int",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Replicator"
+          ]
+        }
+      ]
+    },
+    "8cb80c1a-3b88-4fc0-a1ff-8c069a57e726": {
+      "ReadonlyPaletteName": "Replicator Get Active Objects",
+      "ReadonlyChipName": "Replicator Get Active Objects",
+      "Description": "Returns the list of objects that have been spawned by the target replicator and are currently active.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Replicator Get Active Objects",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Target",
+              "ReadonlyType": "Replicator",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Active Objects",
+              "ReadonlyType": "List<Rec Room Object>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Replicator"
+          ]
+        }
+      ]
+    },
+    "c7d598f7-c8ea-4022-b0b3-a23356e71768": {
+      "ReadonlyPaletteName": "Replicator Return Object",
+      "ReadonlyChipName": "Replicator Return Object",
+      "Description": "If the target object was spawned by a replicator, it will be despawned and returned to the pool. If not, the chip will no-op.\r",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Replicator Return Object",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Run",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Replicator"
+          ]
+        }
+      ]
+    },
+    "fc467906-eb16-4d6f-9c51-e5bd0fbcd492": {
+      "ReadonlyPaletteName": "Replicator Spawn Next Object",
+      "ReadonlyChipName": "Replicator Spawn Next Object",
+      "Description": "Spawns a copy of the object assigned to the target replicator at the position and orientation specified. If “Assign to Player” is true, the resulting object will be assigned to the specified player such that no other players can interact with it, and the object will be automatically returned when that player leaves the room. \r\n\r\nWhen the object is spawned, On Spawn Complete will fire and pass through an object reference. If it fails, such as when the limit of objects has been hit, the object reference will be invalid and the Success bool will be false.",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Replicator Spawn Next Object",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Replicator",
+              "Description": ""
+            },
+            {
+              "Name": "Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Orientation",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            },
+            {
+              "Name": "Assign to Player",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Player",
+              "ReadonlyType": "Player",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "On Spawn Complete",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Object",
+              "ReadonlyType": "Rec Room Object",
+              "Description": ""
+            },
+            {
+              "Name": "Success",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Replicator"
+          ]
+        }
+      ]
+    },
     "73a26510-9160-4e68-93dc-da60aa68a514": {
       "ReadonlyPaletteName": "Request Velocity Set Over Duration",
       "ReadonlyChipName": "Request Velocity Set Over Duration",
@@ -39782,6 +40686,1016 @@
         }
       ]
     },
+    "04dfa392-1f6d-4f7e-9c84-777846cf9ff8": {
+      "ReadonlyPaletteName": "Pathfinder Get Enable Ground Clamping",
+      "ReadonlyChipName": "Pathfinder Get Enable Ground Clamping",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Enable Ground Clamping",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Ground Clamping Enabled",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
+    "af786307-3e91-4321-af54-6d2da29b070e": {
+      "ReadonlyPaletteName": "Pathfinder Get Max Acceleration",
+      "ReadonlyChipName": "Pathfinder Get Max Acceleration",
+      "Description": "Gets the maximum acceleration of the Pathfinder, in meters per second squared",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Max Acceleration",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Max Acceleration",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "de4897c7-a9d2-4219-8674-e1714e1fc9ab": {
+      "ReadonlyPaletteName": "Pathfinder Get Max Angular Speed",
+      "ReadonlyChipName": "Pathfinder Get Max Angular Speed",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Max Angular Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Max Angular Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "07dcdde1-97a5-4923-8d75-78a74c942731": {
+      "ReadonlyPaletteName": "Pathfinder Get Max Linear Speed",
+      "ReadonlyChipName": "Pathfinder Get Max Linear Speed",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Max Linear Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Max Linear Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "f39decac-fc9d-40fb-ae61-090946d64cfe": {
+      "ReadonlyPaletteName": "Pathfinder Get Pathing State",
+      "ReadonlyChipName": "Pathfinder Get Pathing State",
+      "Description": "Gets the Pathfinder's current pathing state information\n* Is Pathing\n* Has Arrived\n* Within Slowdown Distance",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Pathing State",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Pathing",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Has Arrived",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Within Slowdown Distance",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "9665db7b-085a-4453-9121-90e2d084e527": {
+      "ReadonlyPaletteName": "Pathfinder Get Pathing Target",
+      "ReadonlyChipName": "Pathfinder Get Pathing Target",
+      "Description": "Gets the current pathing target (target position, slowdown and arrival distances) of the Pathfinder",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Pathing Target",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Target Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Slowdown Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Arrival Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "0e2cbe0b-53e5-41ad-807a-b8be7a8fd019": {
+      "ReadonlyPaletteName": "Pathfinder Get Rotation State",
+      "ReadonlyChipName": "Pathfinder Get Rotation State",
+      "Description": "Gets the Pathfinder's current rotation state information\n* Is Rotating\n* Has Arrived",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Rotation State",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Is Rotating",
+              "ReadonlyType": "bool",
+              "Description": ""
+            },
+            {
+              "Name": "Has Arrived",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "0f6ac53c-d48b-4085-88b2-008a231c9716": {
+      "ReadonlyPaletteName": "Pathfinder Get Rotation Target",
+      "ReadonlyChipName": "Pathfinder Get Rotation Target",
+      "Description": "Gets the current pathing target (target direction, slowdown and arrival angles in degress) of the Pathfinder",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Rotation Target",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Target Direction",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Slowdown Angle",
+              "ReadonlyType": "float",
+              "Description": "degrees"
+            },
+            {
+              "Name": "Arrival Angle",
+              "ReadonlyType": "float",
+              "Description": "degrees"
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "11510599-9682-47ff-8218-91a83504275f": {
+      "ReadonlyPaletteName": "Pathfinder Get Tags To Ignore",
+      "ReadonlyChipName": "Pathfinder Get Tags To Ignore",
+      "Description": "",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Get Tags To Ignore",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Tags To Ignore",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "9806dabd-f9e6-416c-9fe7-e0346de88c49": {
+      "ReadonlyPaletteName": "Pathfinder Set Ground Clamping",
+      "ReadonlyChipName": "Pathfinder Set Ground Clamping",
+      "Description": "Toggles enabling ground clamping for the pathfinder",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Set Ground Clamping",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            },
+            {
+              "Name": "Enable",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "c299c80e-2406-456f-9455-bf61008d90a2": {
+      "ReadonlyPaletteName": "Pathfinder Set Max Acceleration",
+      "ReadonlyChipName": "Pathfinder Set Max Acceleration",
+      "Description": "Sets the maximum linear acceleration of the Pathfinder, in meters per second squared",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Set Max Acceleration",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            },
+            {
+              "Name": "Max Acceleration",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "dea14fad-b6ba-4ce6-ac67-57dfe0f88b39": {
+      "ReadonlyPaletteName": "Pathfinder Set Max Angular Speed",
+      "ReadonlyChipName": "Pathfinder Set Max Angular Speed",
+      "Description": "Sets the maximum angular speed of the Pathfinder, in degrees per second",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Set Max Angular Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            },
+            {
+              "Name": "Max Angular Speed (deg/s)",
+              "ReadonlyType": "float",
+              "Description": "degrees per second"
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "5ed82dc3-f83d-457a-9605-dbd3a323754e": {
+      "ReadonlyPaletteName": "Pathfinder Set Max Linear Speed",
+      "ReadonlyChipName": "Pathfinder Set Max Linear Speed",
+      "Description": "Sets the maximum linear speed of the Pathfinder, in meters per second",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Set Max Linear Speed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            },
+            {
+              "Name": "Max Linear Speed",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "9eb2c95e-9602-4a0c-a78f-3674e23291ec": {
+      "ReadonlyPaletteName": "Pathfinder Start Pathing to Position",
+      "ReadonlyChipName": "Pathfinder Start Pathing to Position",
+      "Description": "Starts moving the Pathfinder towards the target position\nIt will slow down once it is within Slowdown Distance of the target\nAnd stop once it is within Arrival Distance of the target",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Start Pathing to Position",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            },
+            {
+              "Name": "Target Position",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Slowdown Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            },
+            {
+              "Name": "Arrival Distance",
+              "ReadonlyType": "float",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "d019ed0f-4fa9-464b-baad-22e5f89f25de": {
+      "ReadonlyPaletteName": "Pathfinder Start Rotating to Direction",
+      "ReadonlyChipName": "Pathfinder Start Rotating to Direction",
+      "Description": "Starts rotating the Pathfinder towards the target direction\nRotation target takes priority over automatically rotating to face the pathing direction\nIt will slow down once it is within Slowdown Angle (in degrees) of the target\nAnd stop once it is within Arrival Angle (in degrees) of the target",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Start Rotating to Direction",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            },
+            {
+              "Name": "Target Direction",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            },
+            {
+              "Name": "Slowdown Angle",
+              "ReadonlyType": "float",
+              "Description": "degrees"
+            },
+            {
+              "Name": "Arrival Angle",
+              "ReadonlyType": "float",
+              "Description": "degrees"
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "8b3b16ee-7078-4376-b56b-7da679c9ef14": {
+      "ReadonlyPaletteName": "Pathfinder Set Tags To Ignore",
+      "ReadonlyChipName": "Pathfinder Set Tags To Ignore",
+      "Description": "Sets the object tags that the pathfinder ignores on collision",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Set Tags To Ignore",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            },
+            {
+              "Name": "Tags To Ignore",
+              "ReadonlyType": "List<string>",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "03375be5-3c6e-4f11-8f65-3454c37ed9f6": {
+      "ReadonlyPaletteName": "Pathfinder Stop Pathing",
+      "ReadonlyChipName": "Pathfinder Stop Pathing",
+      "Description": "Stops moving the Pathfinder",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Stop Pathing",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
+    "4d13671f-026a-4eaa-8871-405c4c79f2b5": {
+      "ReadonlyPaletteName": "Pathfinder Stop Rotating",
+      "ReadonlyChipName": "Pathfinder Stop Rotating",
+      "Description": "Clears the target rotation of a Pathfinder\nAutomatic rotation to face the pathing direction will resume",
+      "IsBetaChip": true,
+      "IsValidInRoom1": false,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Pathfinder Stop Rotating",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Pathfinder",
+              "ReadonlyType": "Pathfinder",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": [
+        {
+          "FilterPath": [
+            "Object",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Engine",
+            "Pathfinder"
+          ]
+        },
+        {
+          "FilterPath": [
+            "Game Features",
+            "Pathfinder"
+          ]
+        }
+      ]
+    },
     "a06b802b-bb80-4f66-937e-3a764a419c4d": {
       "ReadonlyPaletteName": "Stop Camera Shake",
       "ReadonlyChipName": "Stop Camera Shake",
@@ -41240,6 +43154,45 @@
         }
       ]
     },
+    "a7f4e64d-41cf-4000-ab55-efbf0ea5d777": {
+      "ReadonlyPaletteName": "Studio Object Get Property - Color",
+      "ReadonlyChipName": "Studio Object Get Property - Color",
+      "Description": "",
+      "IsBetaChip": false,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Studio Object Get Property - Color",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Studio Object",
+              "ReadonlyType": "Studio Object",
+              "Description": ""
+            },
+            {
+              "Name": "Property",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "Color",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
     "0dda9345-0211-4757-8fea-03e05fac89c3": {
       "ReadonlyPaletteName": "Studio Object Get Property - Float",
       "ReadonlyChipName": "Studio Object Get Property - Float",
@@ -41330,6 +43283,45 @@
         }
       ]
     },
+    "4ea0cf52-729d-459b-b70c-93306246da2c": {
+      "ReadonlyPaletteName": "Studio Object Get Property - Quaternion",
+      "ReadonlyChipName": "Studio Object Get Property - Quaternion",
+      "Description": "",
+      "IsBetaChip": false,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Studio Object Get Property - Quaternion",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Studio Object",
+              "ReadonlyType": "Studio Object",
+              "Description": ""
+            },
+            {
+              "Name": "Property",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "Quaternion",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
     "a0708f14-89b6-4ef7-97eb-38359a57422f": {
       "ReadonlyPaletteName": "Studio Object Get Property - String",
       "ReadonlyChipName": "Studio Object Get Property - String",
@@ -41374,6 +43366,45 @@
           ]
         }
       ]
+    },
+    "b96ed765-58d1-46f1-afa8-1b85a40fba50": {
+      "ReadonlyPaletteName": "Studio Object Get Property - Vector3",
+      "ReadonlyChipName": "Studio Object Get Property - Vector3",
+      "Description": "",
+      "IsBetaChip": false,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Active",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Studio Object Get Property - Vector3",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "Studio Object",
+              "ReadonlyType": "Studio Object",
+              "Description": ""
+            },
+            {
+              "Name": "Property",
+              "ReadonlyType": "string",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Value",
+              "ReadonlyType": "Vector3",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
     },
     "226fafe2-1ea8-4ae8-861e-ae4b1bd10bfe": {
       "ReadonlyPaletteName": "String Substring",
@@ -42172,6 +44203,50 @@
       ]
     },
     "fdfb3857-3d13-4d66-9a05-f88586e9f821": {
+      "ReadonlyPaletteName": "Toggle Button Set Is Pressed",
+      "ReadonlyChipName": "Toggle Button Set Is Pressed",
+      "Description": "Sets a Toggle Button state to pressed.",
+      "IsBetaChip": false,
+      "IsValidInRoom1": true,
+      "IsValidInRoom2": true,
+      "IsTrollingRisk": false,
+      "IsRoleAssignmentRisk": false,
+      "DeprecationStage": "Deprecated",
+      "PaletteNameSource": "FirstNodeDesc",
+      "ChipNameSource": "FirstNodeDesc",
+      "NodeDescs": [
+        {
+          "Name": "Toggle Button Set Is Pressed",
+          "ReadonlyTypeParams": {},
+          "Inputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            },
+            {
+              "Name": "Target",
+              "ReadonlyType": "Toggle Button",
+              "Description": ""
+            },
+            {
+              "Name": "Value",
+              "ReadonlyType": "bool",
+              "Description": ""
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "",
+              "ReadonlyType": "exec",
+              "Description": ""
+            }
+          ]
+        }
+      ],
+      "NodeFilters": []
+    },
+    "4b4857a2-db4d-497e-a135-05b02842fd4e": {
       "ReadonlyPaletteName": "Toggle Button Set Is Pressed",
       "ReadonlyChipName": "Toggle Button Set Is Pressed",
       "Description": "Sets a Toggle Button state to pressed.",

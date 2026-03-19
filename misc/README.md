@@ -7,7 +7,7 @@ Circuits data files:
 
 ## descriptor_set.binpb
 
-You can read this file as proto descriptors with `protoc` or `bun`.
+You can read this file as proto descriptors with `protoc` or `buf`.
 
 With [`protoc`](https://protobuf.dev/installation/):
 

@@ -1,10 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
+
 import "circuits_v2/data_table/data_table_registry_entry_data.proto";
 
+option csharp_namespace = "CircuitsV2.Protobuf";
 
-message DataTableRegistryData
-{
+message DataTableRegistryData {
   repeated DataTableRegistryEntryData data_tables = 1;
 }

@@ -1,15 +1,14 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/static/ev/circuit_type_data.proto";
-
 import "circuits_v2/deprecated/DEPRECATED_circuit_type_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message DEPRECATED_CircuitEventProperty {
   string property_name = 1;
   circuits.CircuitTypeData property_type = 3;
 
-  
   DEPRECATED_CircuitTypeData DEPRECATED_property_type = 2;
 }

@@ -1,9 +1,10 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 import "circuits/static/ev/ev_graph_data.proto";
 
+option csharp_namespace = "Circuits.Static.EV.Protobuf";
+
 message EVGraphsData {
-    repeated EVGraphData items = 1;
+  repeated EVGraphData items = 1;
 }

@@ -1,16 +1,15 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message CircuitInteractionFilterData {
   int32 interaction_mode = 1;
 
-  
   repeated core.GuidData game_role_guids = 2;
 
-  
   bool enabled = 3;
   repeated string tags = 4;
 }

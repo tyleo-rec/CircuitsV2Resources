@@ -1,10 +1,11 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message CircuitNodeData {
   int32 circuit_node_id = 1;
-  
+
   string node_message = 2 [deprecated = true];
 }
 

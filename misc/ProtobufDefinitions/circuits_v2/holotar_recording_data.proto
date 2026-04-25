@@ -1,5 +1,6 @@
 syntax = "proto3";
 package circuits_v2;
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
 message HolotarRecordingData {
@@ -8,7 +9,6 @@ message HolotarRecordingData {
   float recording_length = 5;
   string holotar_name = 6;
 
-  
   float startOffset = 2;
   float endOffset = 3;
 }

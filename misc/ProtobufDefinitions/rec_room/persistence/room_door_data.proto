@@ -1,5 +1,6 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message RoomDoorData {
@@ -17,7 +18,7 @@ message RoomDoorData {
   }
 
   oneof Target {
-    int64 room_id_deprecated = 1; 
+    int64 room_id_deprecated = 1;
     string target_name = 2;
   }
   RoomDoorTargetType target_type = 3;

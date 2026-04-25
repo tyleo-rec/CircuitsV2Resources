@@ -1,5 +1,6 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message UGCSteeringEngineData {
@@ -14,11 +15,11 @@ message UGCSteeringEngineData {
 }
 
 message PathingPropertiesData {
-	float slowdownDistance = 1;
-	float arrivalDistance = 2;
+  float slowdownDistance = 1;
+  float arrivalDistance = 2;
 }
 
 message RotationPropertiesData {
-	float slowdownAngle = 1;
-	float arrivalAngle = 2;
+  float slowdownAngle = 1;
+  float arrivalAngle = 2;
 }

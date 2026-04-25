@@ -1,33 +1,25 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
-
-import "core/guid_data.proto";
-import "core/vector3_data.proto";
 
 import "circuits_v2/circuit_graph_data.proto";
 import "circuits_v2/circuit_template_root_data.proto";
 import "circuits_v2/reward_data.proto";
-
-import "rec_room/transform_data.proto";
-
+import "core/guid_data.proto";
+import "core/vector3_data.proto";
 import "rec_room/game_configuration/game_configuration_data.proto";
 import "rec_room/game_configuration/game_rule_wrapper_data.proto";
-
-import "rec_room/persistence/deprecated/DEPRECATED_room_persistence_version.proto";
-import "rec_room/persistence/deprecated/DEPRECATED_tool_data.proto";
-
 import "rec_room/persistence/ai_data.proto";
 import "rec_room/persistence/area_controller_data.proto";
 import "rec_room/persistence/audio_effect_zone_data.proto";
 import "rec_room/persistence/audio_sampler_data.proto";
-import "rec_room/persistence/trail_data.proto";
+import "rec_room/persistence/base_handle_data.proto";
 import "rec_room/persistence/beacon.proto";
 import "rec_room/persistence/bounce_pad_data.proto";
 import "rec_room/persistence/breakable_object_data.proto";
 import "rec_room/persistence/button_data.proto";
 import "rec_room/persistence/checkpoint_data.proto";
 import "rec_room/persistence/circuit_node_data.proto";
+import "rec_room/persistence/collision_detection_volume_data.proto";
 import "rec_room/persistence/configurable_circuit_visibility_data.proto";
 import "rec_room/persistence/configurable_physics_settings_data.proto";
 import "rec_room/persistence/configurable_selector_data.proto";
@@ -35,48 +27,59 @@ import "rec_room/persistence/connectable_node_data.proto";
 import "rec_room/persistence/control_panel_circuit_object_data.proto";
 import "rec_room/persistence/costume_data.proto";
 import "rec_room/persistence/creation_object_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_room_persistence_version.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_tool_data.proto";
+import "rec_room/persistence/dialogue_ui_data.proto";
 import "rec_room/persistence/discovery_storefront_data.proto";
 import "rec_room/persistence/drawing_surface_data.proto";
 import "rec_room/persistence/dynamic_light_data.proto";
 import "rec_room/persistence/explosion_emitter_data.proto";
 import "rec_room/persistence/free_gift_button_data.proto";
 import "rec_room/persistence/full_body_puppet_tool_data.proto";
-import "rec_room/persistence/mannequin_data.proto";
 import "rec_room/persistence/game_ai_data.proto";
 import "rec_room/persistence/game_role_node_data.proto";
 import "rec_room/persistence/glass_pane_data.proto";
 import "rec_room/persistence/grabber_data.proto";
+import "rec_room/persistence/gun_handle_data.proto";
 import "rec_room/persistence/health_potion_data.proto";
 import "rec_room/persistence/holotar_data.proto";
 import "rec_room/persistence/image_data.proto";
+import "rec_room/persistence/interaction_volume_data.proto";
 import "rec_room/persistence/invention_anchor_data.proto";
 import "rec_room/persistence/invention_instance_data.proto";
 import "rec_room/persistence/invisible_collision_data.proto";
 import "rec_room/persistence/invisible_collision_v2_data.proto";
+import "rec_room/persistence/keepsake_data.proto";
 import "rec_room/persistence/laser_pointer_data.proto";
 import "rec_room/persistence/leaderboard_data.proto";
 import "rec_room/persistence/log_screen.proto";
-import "rec_room/persistence/text_screen_data.proto";
-import "rec_room/persistence/collision_detection_volume_data.proto";
+import "rec_room/persistence/mannequin_data.proto";
+import "rec_room/persistence/melee_weapon_data.proto";
 import "rec_room/persistence/message_data.proto";
 import "rec_room/persistence/mood_circuit_data.proto";
 import "rec_room/persistence/moveableprop_data.proto";
 import "rec_room/persistence/object_group_data.proto";
 import "rec_room/persistence/object_spawner_data.proto";
 import "rec_room/persistence/particle_emitter_data.proto";
+import "rec_room/persistence/persisted_audio_player_data.proto";
 import "rec_room/persistence/persisted_room_version.proto";
 import "rec_room/persistence/persisted_sfx_data.proto";
 import "rec_room/persistence/player_attractor_data.proto";
+import "rec_room/persistence/player_event_broadcast_volume_data.proto";
 import "rec_room/persistence/pool_table_data.proto";
 import "rec_room/persistence/poster_data.proto";
+import "rec_room/persistence/projectile_launcher_data.proto";
 import "rec_room/persistence/proximity_mine_data.proto";
+import "rec_room/persistence/ranged_weapon_prop_data.proto";
 import "rec_room/persistence/raycast_gizmo_data.proto";
 import "rec_room/persistence/remote_control_data.proto";
+import "rec_room/persistence/remote_video_player_data.proto";
 import "rec_room/persistence/replicator_data.proto";
 import "rec_room/persistence/room_consumable_button_data.proto";
 import "rec_room/persistence/room_currency_button_data.proto";
 import "rec_room/persistence/room_door_data.proto";
 import "rec_room/persistence/room_door_v2_data.proto";
+import "rec_room/persistence/sandbox_avatar_item_display_data.proto";
 import "rec_room/persistence/sandbox_colorable_data.proto";
 import "rec_room/persistence/sandbox_deformation_data.proto";
 import "rec_room/persistence/sandbox_gizmo_data.proto";
@@ -87,9 +90,9 @@ import "rec_room/persistence/set_leaderboard_stat_data.proto";
 import "rec_room/persistence/set_tags_node_data.proto";
 import "rec_room/persistence/shape_data.proto";
 import "rec_room/persistence/spawn_point_data.proto";
+import "rec_room/persistence/spawn_point_v2_data.proto";
 import "rec_room/persistence/spawnable_tool_data.proto";
 import "rec_room/persistence/spawnpoint_spawner_data.proto";
-import "rec_room/persistence/keepsake_data.proto";
 import "rec_room/persistence/sticky_data.proto";
 import "rec_room/persistence/streaming_camera_point_data.proto";
 import "rec_room/persistence/super_room_version.proto";
@@ -97,52 +100,39 @@ import "rec_room/persistence/swing_handle_data.proto";
 import "rec_room/persistence/synced_data.proto";
 import "rec_room/persistence/tagged_tool_data.proto";
 import "rec_room/persistence/text_label_data.proto";
+import "rec_room/persistence/text_screen_data.proto";
+import "rec_room/persistence/textured_quad_data.proto";
 import "rec_room/persistence/throw_handle_data.proto";
 import "rec_room/persistence/tool_cleanup_data.proto";
 import "rec_room/persistence/tool_entity_data.proto";
 import "rec_room/persistence/tool_holder_data.proto";
+import "rec_room/persistence/trail_data.proto";
 import "rec_room/persistence/trigger_handle_data.proto";
 import "rec_room/persistence/trigger_volume_data.proto";
 import "rec_room/persistence/ugc_steering_data.proto";
 import "rec_room/persistence/ugc_steering_engine_data.proto";
 import "rec_room/persistence/ugc_storefront_data.proto";
 import "rec_room/persistence/vehicle_data.proto";
-import "rec_room/persistence/interaction_volume_data.proto";
-import "rec_room/persistence/player_event_broadcast_volume_data.proto";
-import "rec_room/persistence/persisted_audio_player_data.proto";
-import "rec_room/persistence/projectile_launcher_data.proto";
-import "rec_room/persistence/remote_video_player_data.proto";
-import "rec_room/persistence/ranged_weapon_prop_data.proto";
 import "rec_room/persistence/welcome_mat_v2_data.proto";
-import "rec_room/persistence/gun_handle_data.proto";
-import "rec_room/persistence/spawn_point_v2_data.proto";
-import "rec_room/persistence/dialogue_ui_data.proto";
-import "rec_room/persistence/base_handle_data.proto";
-import "rec_room/persistence/melee_weapon_data.proto";
-import "rec_room/persistence/textured_quad_data.proto";
-import "rec_room/persistence/sandbox_avatar_item_display_data.proto";
+import "rec_room/transform_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message PersistenceViewData {
-  
-
   bytes id = 1;
-  
+
   bool DEPRECATED_is_scene_object = 2;
 
   repeated ChildPersistenceViewData child_views = 3;
-
-  
 
   ToolEntityData tool_entity_data = 9;
   TransformData transform = 10;
   SpawnableToolData spawnable_tool_data = 11;
   ShapeContainerData shape_container_data = 12;
-  
+
   DEPRECATED_ToolData DEPRECATED_tool_data = 13;
   CreationObjectData creation_object_data = 14;
   TaggedToolData tagged_tool_data = 15;
-
-  
 
   StickyData sticky_data = 16;
   DrawingSurfaceData drawing_surface_data = 17;
@@ -199,7 +189,7 @@ message PersistenceViewData {
   LogScreenData log_screen_data = 68;
   AudioEffectZoneData audio_effect_zone_data = 69;
   GlassPaneData glass_pane_data = 70;
-  
+
   ConfigurableSelectorData DEPRECATED_configurable_selector_data = 71;
   repeated ConfigurableSelectorData configurable_selectors = 72;
   StreamingCameraPointData streaming_camera_point_data = 73;
@@ -239,7 +229,7 @@ message PersistenceViewData {
   SwingHandleData swing_handle_data = 106;
   TrailData trail_data = 107;
   FullBodyPuppetToolData full_body_puppet_tool_data = 108;
-  reserved 109; 
+  reserved 109;
   ThrowHandleData throw_handle_data = 110;
   DialogueUIData dialogue_ui_data = 111;
   GrabberData grabber_data = 112;
@@ -257,19 +247,14 @@ message PersistenceViewData {
   SandboxAvatarItemDisplayData sandbox_avatar_item_display_data = 124;
 }
 
-
 message ChildPersistenceViewData {
-  
-  
-  
   int32 child_id = 1;
   PersistenceViewData data = 2;
 }
 
-
 message UGCSpawnerData {
   int32 time_between_spawns_ms = 1;
-  
+
   int32 DEPRECATED_tool_type = 2;
   int64 invention_id = 3;
   int32 num_objects_to_spawn = 4;
@@ -278,7 +263,6 @@ message UGCSpawnerData {
   bytes preview_circuit_graph_id = 7;
   core.GuidData tool_type = 8;
 }
-
 
 message SpawnableTemplateData {
   DEPRECATED_RoomPersistenceVersion DEPRECATED_room_data_version = 1;
@@ -295,8 +279,8 @@ message SpawnableTemplateData {
   PersistedRoomVersion persisted_room_version = 10;
   bytes object_model_data = 11;
   SuperRoomVersion super_room_version = 12;
-  InventionInstanceData invention_instance_data = 13; 
-  SecurityData security_data = 14; 
+  InventionInstanceData invention_instance_data = 13;
+  SecurityData security_data = 14;
 
   repeated bytes inventory_item_dtos = 15;
   repeated bytes room_offer_dtos = 16;

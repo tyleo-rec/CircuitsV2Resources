@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/persistence/interaction_filter.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message PoolTableData {
   InteractionFilterData DEPRECATED_interaction_filter_data = 1;

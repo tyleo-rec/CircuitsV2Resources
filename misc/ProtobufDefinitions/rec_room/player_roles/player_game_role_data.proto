@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/persistence/overridable_field_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message PlayerGameRoleData {
   int32 role_id = 1;
@@ -25,9 +26,9 @@ message PlayerGameRoleData {
   OverridableFloatData vr_walk_speed = 11;
   OverridableBoolData vr_can_sprint = 12;
   OverridableFloatData vr_sprint_max_speed_walk_speed_multiplier = 13;
-  
+
   OverridableBoolData can_fly = 14;
-  
+
   OverridableBoolData vr_can_jump = 36;
   OverridableBoolData vr_can_dodge = 37;
   OverridableFloatData vr_max_jump_height = 51;
@@ -40,7 +41,7 @@ message PlayerGameRoleData {
 
   OverridableIntData item_pickup_restrictions = 17;
   OverridableListStringData item_pickup_allowlist = 18;
-  OverridableListStringData item_pickup_blocklist = 19;	
+  OverridableListStringData item_pickup_blocklist = 19;
   OverridableBoolData can_talk = 20;
   OverridableBoolData can_switch_teams = 21;
 
@@ -61,9 +62,9 @@ message PlayerGameRoleData {
   OverridableFloatData screens_walk_speed = 32;
   OverridableBoolData screens_can_sprint = 33;
   OverridableFloatData screens_sprint_max_speed_walk_speed_multiplier = 34;
-  
+
   OverridableBoolData screens_can_jump = 38;
-  OverridableBoolData screens_can_dodge = 39;	
+  OverridableBoolData screens_can_dodge = 39;
   OverridableFloatData screens_max_jump_height = 52;
   OverridableBoolData screens_can_wall_run = 63;
   OverridableBoolData screens_can_get_pushed = 65;

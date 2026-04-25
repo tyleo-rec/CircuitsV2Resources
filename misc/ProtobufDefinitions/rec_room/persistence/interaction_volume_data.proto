@@ -1,9 +1,9 @@
-
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/persistence/interaction_filter.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message InteractionVolumeData {
   string interaction_string = 1;
@@ -15,6 +15,6 @@ message InteractionVolumeData {
   float movement_speed_multiplier = 8;
   bool preserve_hold_progress = 9;
   bool hide_outline_on_hover = 10;
-  
+
   bool interaction_hold_required_deprecated = 5;
 }

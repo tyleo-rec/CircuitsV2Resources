@@ -1,9 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
-import "circuits_v2/room_mood_data.proto";
 import "circuits_v2/room_mood_background_objects_type_data.proto";
+import "circuits_v2/room_mood_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message RoomMoodBackgroundObjectsData {
   circuits_v2.RoomMoodData mood_base_data = 1;

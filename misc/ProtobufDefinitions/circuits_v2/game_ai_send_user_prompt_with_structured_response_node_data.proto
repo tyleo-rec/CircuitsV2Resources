@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/static/ev/circuit_type_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message GameAISendUserPromptWithStructuredResponseNodeData {
   repeated StructuredDataEntryData entries = 1;
@@ -12,19 +13,16 @@ message StructuredDataEntryData {
   string name = 1;
   circuits.CircuitTypeData circuit_type = 2;
   string description = 3;
-  
-  
+
   StringFormat format = 4;
   string regex = 5;
-  
-  
+
   optional double multiple_of = 6;
   optional double maximum = 7;
   optional bool exclusive_maximum = 8;
   optional double minimum = 9;
   optional bool exclusive_minimum = 10;
-  
-  
+
   optional int32 min_items = 11;
   optional int32 max_items = 12;
 }
@@ -36,11 +34,4 @@ enum StringFormat {
   time = 3;
   date = 4;
   duration = 5;
-
-  
-  
-  
-  
-  
-  
 }

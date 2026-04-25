@@ -1,10 +1,11 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
+
 import "circuits_v2/studio_functions/studio_function_signature_registry_entry_data.proto";
 
-message StudioFunctionSignatureRegistryData
-{
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message StudioFunctionSignatureRegistryData {
   repeated StudioFunctionSignatureRegistryEntryData studio_functions = 1;
   int32 last_id = 2;
 }

@@ -1,15 +1,14 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
-
-import "core/guid_data.proto";
 
 import "circuits_v2/deprecated/DEPRECATED_dictionary_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_keyed_input_node_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_keyed_node_desc_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_keyed_output_node_data.proto";
-
 import "circuits_v2/node_desc_data.proto";
+import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message GraphNodeData {
   core.GuidData inner_graph_id = 13;
@@ -17,7 +16,6 @@ message GraphNodeData {
   core.GuidData out_bus_id = 15;
   repeated NodeDescData node_descs = 12;
 
-  
   bytes DEPRECATED_inner_graph_id = 1;
   DEPRECATED_DictionaryData DEPRECATED_input_nodes_0 = 2;
   DEPRECATED_DictionaryData DEPRECATED_output_nodes_0 = 3;

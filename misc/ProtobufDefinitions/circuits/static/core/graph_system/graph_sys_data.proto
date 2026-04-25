@@ -1,13 +1,14 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.Core.GraphSystem.Protobuf";
 
 import "circuits/static/core/graph_system/inputs_data.proto";
 import "circuits/static/core/graph_system/nodes_data.proto";
 import "circuits/static/core/graph_system/outputs_data.proto";
 
+option csharp_namespace = "Circuits.Static.Core.GraphSystem.Protobuf";
+
 message GraphSysData {
-    InputsData inputs = 1;
-    OutputsData outputs = 2;
-    NodesData nodes = 3;
+  InputsData inputs = 1;
+  OutputsData outputs = 2;
+  NodesData nodes = 3;
 }

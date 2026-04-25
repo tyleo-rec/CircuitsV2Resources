@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits;
+
 option csharp_namespace = "Circuits.Static.Api.Protobuf";
 
 message StaticCircuitsConfigData {
-    int32 max_players = 1;
-    int32 invisible_chip_limit_bytes = 2;
+  int32 max_players = 1;
+  int32 invisible_chip_limit_bytes = 2;
 }

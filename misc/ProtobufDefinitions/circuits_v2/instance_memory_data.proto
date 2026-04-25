@@ -1,16 +1,14 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
-
-import "core/guid_data.proto";
 
 import "circuits_v2/symbol_memory_data.proto";
+import "core/guid_data.proto";
 
-message InstanceMemoryData
-{
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message InstanceMemoryData {
   map<string, SymbolMemoryData> symbol_memory = 3;
 
-  
   map<string, bytes> DEPRECATED_symbol_guid_1 = 1;
   map<string, core.GuidData> DEPRECATED_symbol_guid_2 = 2;
 }

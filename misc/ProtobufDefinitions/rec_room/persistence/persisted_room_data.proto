@@ -1,33 +1,29 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
-
-import "include/google/protobuf/timestamp.proto";
 
 import "circuits_v2/circuit_graph_data.proto";
 import "circuits_v2/circuit_root_data.proto";
-
+import "circuits_v2/room_mood_background_objects_data.proto";
+import "circuits_v2/room_mood_fog_data.proto";
+import "circuits_v2/room_mood_skydome_data.proto";
+import "circuits_v2/room_mood_sun_data.proto";
 import "core/guid_data.proto";
-
-import "rec_room/persistence/deprecated/DEPRECATED_host_settings_data.proto";
-import "rec_room/persistence/deprecated/DEPRECATED_sandbox_settings_data.proto";
-import "rec_room/persistence/deprecated/DEPRECATED_game_settings_data.proto";
-import "rec_room/persistence/deprecated/DEPRECATED_room_persistence_version.proto";
-
+import "include/google/protobuf/timestamp.proto";
 import "rec_room/persistence/autosave_data.proto";
 import "rec_room/persistence/connectable_node_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_game_settings_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_host_settings_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_room_persistence_version.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_sandbox_settings_data.proto";
 import "rec_room/persistence/navmesh_data.proto";
 import "rec_room/persistence/persisted_room_version.proto";
 import "rec_room/persistence/persistence_view_data.proto";
 import "rec_room/persistence/scene_settings_data.proto";
 import "rec_room/persistence/tool_tag_settings_data.proto";
-
 import "rec_room/player_roles/game_role_collection_data.proto";
 import "rec_room/player_roles/room_role_collection_data.proto";
-import "circuits_v2/room_mood_fog_data.proto";
-import "circuits_v2/room_mood_sun_data.proto";
-import "circuits_v2/room_mood_background_objects_data.proto";
-import "circuits_v2/room_mood_skydome_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message PersistedRoomData {
   DEPRECATED_RoomPersistenceVersion DEPRECATED_version = 1;
@@ -67,6 +63,6 @@ message PersistedRoomData {
   circuits_v2.RoomMoodSkydomeData room_mood_skydome = 35;
 
   core.GuidData ugc_localization_scope = 36;
-  
+
   optional bool coordinate_beacons_enabled = 37;
 }

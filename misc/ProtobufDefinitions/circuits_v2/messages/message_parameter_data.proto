@@ -1,11 +1,12 @@
 syntax = "proto3";
 package circuits_v2;
+
+import "circuits/static/ev/variant_data.proto";
+import "circuits/static/rec_room/named_type_data.proto";
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
-import "circuits/static/rec_room/named_type_data.proto";
-import "circuits/static/ev/variant_data.proto";
-
-message MessageParameterData {	
+message MessageParameterData {
   circuits.NamedTypeData named_type = 1;
   circuits.VariantData default_value = 2;
 }

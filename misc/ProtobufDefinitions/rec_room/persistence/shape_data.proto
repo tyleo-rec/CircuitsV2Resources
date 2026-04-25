@@ -1,30 +1,17 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "core/vector3_data.proto";
 
-
-
-
-
-
-
-
+option csharp_namespace = "RecRoom.Protobuf";
 
 message ShapeContainerDataCollectionData {
   message ShapeContainerDataCollectionEntryData {
     int32 photon_view_id = 1;
     ShapeDataCollectionData shapes = 2;
 
-    
-    
-
-    
-    
     bool unchanged = 4 [deprecated = true];
-    
-    
+
     int32 revision = 5;
   }
 
@@ -46,16 +33,7 @@ message ShapeData {
   int32 shape_type = 1;
   int32 shape_color = 2;
   int32 shape_material = 18;
-  
-  
-  
 
-  
-  
-
-  
-  
-  
   core.Vector3Data DEPRECATED_initial_local_position = 5;
   core.Vector3Data DEPRECATED_initial_local_rotation = 6;
 
@@ -64,9 +42,6 @@ message ShapeData {
 
   core.Vector3Data DEPRECATED_scale_non_uniform = 9;
 
-  
-  
-  
   bool use_uncompressed_rotation = 10;
 
   float density = 11;
@@ -82,11 +57,10 @@ message ShapeData {
     MeshShapeData mesh_shape_data = 16;
     CurveShapeData curve_shape_data = 17;
   }
-
 }
 
 message MeshShapeData {
-  core.Vector3Data legacy_scale = 1; 
+  core.Vector3Data legacy_scale = 1;
   core.Vector3Data aspect_ratio = 2;
 }
 

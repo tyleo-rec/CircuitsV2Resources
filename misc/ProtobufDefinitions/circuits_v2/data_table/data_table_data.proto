@@ -1,11 +1,12 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
-import "circuits_v2/data_table/data_table_column_definition_data.proto";
-import "circuits_v2/data_table/data_table_column_data.proto";
 
-message DataTableData
-{
+import "circuits_v2/data_table/data_table_column_data.proto";
+import "circuits_v2/data_table/data_table_column_definition_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message DataTableData {
   string name = 1;
   repeated DataTableColumnDefinitionData column_definitions = 2;
   repeated DataTableColumnData columns = 3;

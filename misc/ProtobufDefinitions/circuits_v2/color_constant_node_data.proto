@@ -1,8 +1,8 @@
-
 syntax = "proto3";
 package circuits_v2;
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
 message ColorConstantNodeData {
-    int32 color_index = 1;
+  int32 color_index = 1;
 }

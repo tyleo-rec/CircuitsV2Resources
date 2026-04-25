@@ -1,19 +1,17 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/static/ev/circuit_type_data.proto";
-
 import "circuits_v2/deprecated/DEPRECATED_circuit_type_data.proto";
-
-import "circuits_v2/node_desc_data.proto";
 import "circuits_v2/memory_type.proto";
+import "circuits_v2/node_desc_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message VariableNodeData {
   MemoryType memory_type = 7;
   string name = 9;
 
-  
   bool DEPRECATED_is_symbolic_name = 1;
   string DEPRECATED_symbol_name = 2;
   DEPRECATED_CircuitTypeData DEPRECATED_type_1 = 3;

@@ -1,9 +1,10 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message ShowcasePosterData {
-  int32 content_type= 1;
+  int32 content_type = 1;
   int64 content_target_id = 2;
   int32 display_flag = 3;
 }

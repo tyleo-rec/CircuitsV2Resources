@@ -1,106 +1,104 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
-
-import "core/guid_data.proto";
 
 import "circuits/static/api/static_edge_data.proto";
-
+import "circuits_v2/add_inventory_item_node_data.proto";
+import "circuits_v2/audio_fx_zone_set_effect_node_data.proto";
+import "circuits_v2/award_consumable_node_data.proto";
+import "circuits_v2/award_currency_from_constant_node_data.proto";
+import "circuits_v2/award_currency_node_data.proto";
+import "circuits_v2/award_room_key_node_data.proto";
+import "circuits_v2/background_objects_constant_node_data.proto";
+import "circuits_v2/big_debug_chip_data.proto";
+import "circuits_v2/board_bus_data.proto";
+import "circuits_v2/chat_ai_model_node_data.proto";
+import "circuits_v2/circuit_object_transform_data.proto";
+import "circuits_v2/color_constant_node_data.proto";
+import "circuits_v2/comment_node_data.proto";
+import "circuits_v2/constant_body_part_node_data.proto";
+import "circuits_v2/constant_consumable_node_data.proto";
+import "circuits_v2/constant_destination_node_data.proto";
+import "circuits_v2/constant_giftdrop_shop_item_node_data.proto";
+import "circuits_v2/constant_inventory_item_node_data.proto";
+import "circuits_v2/constant_objective_marker_node_data.proto";
+import "circuits_v2/constant_player_event_node_data.proto";
+import "circuits_v2/constant_player_outfit_slot_flag_node_data.proto";
+import "circuits_v2/constant_quick_chat_table_node_data.proto";
+import "circuits_v2/constant_reward_data.proto";
+import "circuits_v2/constant_room_currency_node_data.proto";
+import "circuits_v2/constant_room_key_node_data.proto";
+import "circuits_v2/constant_room_offer_node_data.proto";
+import "circuits_v2/constant_state_data.proto";
+import "circuits_v2/constant_storefront_item_data.proto";
+import "circuits_v2/control_panel_data.proto";
+import "circuits_v2/creation_object_get_all_of_type_with_tag_node_data.proto";
+import "circuits_v2/custom_property_node_data.proto";
+import "circuits_v2/data_table/data_table_configured_column_node_data.proto";
+import "circuits_v2/data_table/data_table_node_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_dictionary_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_event_registration_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_keyed_node_group_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_port_collection_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_state_machine_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_synced_event_sender_node_data.proto";
-
-import "circuits_v2/award_currency_node_data.proto";
-import "circuits_v2/award_currency_from_constant_node_data.proto";
-import "circuits_v2/big_debug_chip_data.proto";
-import "circuits_v2/board_bus_data.proto";
-import "circuits_v2/graph_node_data.proto";
-import "circuits_v2/circuit_object_transform_data.proto";
-import "circuits_v2/color_constant_node_data.proto";
-import "circuits_v2/comment_node_data.proto";
-import "circuits_v2/constant_consumable_node_data.proto";
-import "circuits_v2/constant_destination_node_data.proto";
-import "circuits_v2/constant_player_event_node_data.proto";
-import "circuits_v2/constant_player_outfit_slot_flag_node_data.proto";
-import "circuits_v2/constant_room_currency_node_data.proto";
-import "circuits_v2/constant_room_key_node_data.proto";
-import "circuits_v2/control_panel_data.proto";
-import "circuits_v2/data_table/data_table_node_data.proto";
+import "circuits_v2/equipment_slot_data.proto";
 import "circuits_v2/event_definition_node_data.proto";
 import "circuits_v2/event_receiver_node_data.proto";
 import "circuits_v2/event_sender_node_data.proto";
+import "circuits_v2/fog_constant_node_data.proto";
 import "circuits_v2/function_call_node_data.proto";
-import "circuits_v2/get_balance_node_data.proto";
+import "circuits_v2/game_ai_send_user_prompt_with_structured_response_node_data.proto";
+import "circuits_v2/gen_ai_audio_data.proto";
 import "circuits_v2/get_balance_from_constant_node_data.proto";
+import "circuits_v2/get_balance_node_data.proto";
+import "circuits_v2/get_inventory_item_count_node_data.proto";
+import "circuits_v2/graph_node_data.proto";
+import "circuits_v2/guid_node_data.proto";
+import "circuits_v2/holotar_recording_data.proto";
+import "circuits_v2/holster_node_data.proto";
+import "circuits_v2/hud_element_data.proto";
+import "circuits_v2/image_generation_ai_model_node_data.proto";
 import "circuits_v2/in_node_data.proto";
 import "circuits_v2/invention_piece_data.proto";
 import "circuits_v2/is_rec_room_object_of_type_node_data.proto";
-import "circuits_v2/creation_object_get_all_of_type_with_tag_node_data.proto";
-import "circuits_v2/locomotion/locomotion_request_steering_node_data.proto";
-import "circuits_v2/locomotion/locomotion_request_steering_R2_node_data.proto";
-import "circuits_v2/log_node_data.proto";
 import "circuits_v2/leaderboard_stat_data.proto";
+import "circuits_v2/locomotion/locomotion_request_steering_R2_node_data.proto";
+import "circuits_v2/locomotion/locomotion_request_steering_node_data.proto";
+import "circuits_v2/locomotion/request_avatar_locomotion_animation_data.proto";
+import "circuits_v2/log_node_data.proto";
+import "circuits_v2/messages/message_receiver_node_data.proto";
+import "circuits_v2/messages/message_sender_node_data.proto";
+import "circuits_v2/moods_constant_node_data.proto";
 import "circuits_v2/node_group_data.proto";
 import "circuits_v2/notification/banner_notification_node_data.proto";
 import "circuits_v2/notification/reward_notification_node_data.proto";
 import "circuits_v2/out_node_data.proto";
+import "circuits_v2/particle_vfx_data.proto";
+import "circuits_v2/play_audio_at_position_data.proto";
+import "circuits_v2/play_particle_vfx_at_position_data.proto";
+import "circuits_v2/player_definition_board_data.proto";
+import "circuits_v2/player_prompt_node_data.proto";
 import "circuits_v2/player_world_ui_data.proto";
+import "circuits_v2/projectile_data.proto";
 import "circuits_v2/property_node_data.proto";
+import "circuits_v2/raycast_node_data.proto";
+import "circuits_v2/remove_inventory_item_node_data.proto";
+import "circuits_v2/room_hud_data.proto";
+import "circuits_v2/sample_audio_data.proto";
 import "circuits_v2/self_node_data.proto";
 import "circuits_v2/sequence_node_data.proto";
-import "circuits_v2/switch_node_data.proto";
-import "circuits_v2/raycast_node_data.proto";
-import "circuits_v2/variable_node_data.proto";
-import "circuits_v2/sample_audio_data.proto";
-import "circuits_v2/hud_element_data.proto";
-import "circuits_v2/holster_node_data.proto";
 import "circuits_v2/set_player_name_color_data.proto";
-import "circuits_v2/moods_constant_node_data.proto";
-import "circuits_v2/sun_constant_node_data.proto";
-import "circuits_v2/fog_constant_node_data.proto";
-import "circuits_v2/background_objects_constant_node_data.proto";
-import "circuits_v2/skydome_constant_node_data.proto";
 import "circuits_v2/sfx_audio_data.proto";
-import "circuits_v2/play_audio_at_position_data.proto";
-import "circuits_v2/room_hud_data.proto";
-import "circuits_v2/constant_reward_data.proto";
-import "circuits_v2/constant_objective_marker_node_data.proto";
-import "circuits_v2/award_room_key_node_data.proto";
-import "circuits_v2/award_consumable_node_data.proto";
-import "circuits_v2/player_definition_board_data.proto";
-import "circuits_v2/data_table/data_table_configured_column_node_data.proto";
-import "circuits_v2/constant_giftdrop_shop_item_node_data.proto";
-import "circuits_v2/constant_inventory_item_node_data.proto";
-import "circuits_v2/get_inventory_item_count_node_data.proto";
-import "circuits_v2/add_inventory_item_node_data.proto";
-import "circuits_v2/remove_inventory_item_node_data.proto";
+import "circuits_v2/skydome_constant_node_data.proto";
 import "circuits_v2/studio_functions/studio_function_node_data.proto";
-import "circuits_v2/constant_quick_chat_table_node_data.proto";
-import "circuits_v2/equipment_slot_data.proto";
-import "circuits_v2/constant_state_data.proto";
-import "circuits_v2/constant_room_offer_node_data.proto";
-import "circuits_v2/holotar_recording_data.proto";
-import "circuits_v2/player_prompt_node_data.proto";
-import "circuits_v2/constant_storefront_item_data.proto";
-import "circuits_v2/audio_fx_zone_set_effect_node_data.proto";
-import "circuits_v2/custom_property_node_data.proto";
-import "circuits_v2/locomotion/request_avatar_locomotion_animation_data.proto";
-import "circuits_v2/guid_node_data.proto";
-import "circuits_v2/projectile_data.proto";
-import "circuits_v2/particle_vfx_data.proto";
-import "circuits_v2/play_particle_vfx_at_position_data.proto";
-import "circuits_v2/constant_body_part_node_data.proto";
-import "circuits_v2/messages/message_receiver_node_data.proto";
-import "circuits_v2/messages/message_sender_node_data.proto";
-import "circuits_v2/game_ai_send_user_prompt_with_structured_response_node_data.proto";
-import "circuits_v2/texture_constant_data.proto";
+import "circuits_v2/sun_constant_node_data.proto";
+import "circuits_v2/switch_node_data.proto";
 import "circuits_v2/text_to_speech_data.proto";
-import "circuits_v2/gen_ai_audio_data.proto";
-import "circuits_v2/chat_ai_model_node_data.proto";
-import "circuits_v2/image_generation_ai_model_node_data.proto";
+import "circuits_v2/texture_constant_data.proto";
+import "circuits_v2/variable_node_data.proto";
+import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message CircuitNodeData {
   core.GuidData node_id = 12;
@@ -144,10 +142,10 @@ message CircuitNodeData {
   CommentNodeData comment_node_data = 124;
 
   ConstantDestinationData constant_destination_node_data = 125;
-  
+
   HolsterNodeData holster_node_data = 126;
-  
-  HudElementData hud_element_data  = 127;
+
+  HudElementData hud_element_data = 127;
 
   SetPlayerNameColorData set_player_name_color_data = 128;
 
@@ -158,7 +156,7 @@ message CircuitNodeData {
   PlayerWorldUIData player_world_ui_data = 132;
 
   SequenceNodeData sequence_node_data = 133;
-  
+
   ConstantRoomKeyData constant_room_key_node_data = 134;
 
   MoodsConstantNodeData moods_constant_node_data = 135;
@@ -186,16 +184,16 @@ message CircuitNodeData {
   BannerNotificationNodeData banner_notification_node_data = 149;
 
   RewardNotificationNodeData reward_notification_node_data = 150;
-  
+
   ConstantInventoryItemData constant_inventory_item_node_data = 151;
-  
+
   PlayerDefinitionBoardData player_definition_board_data = 152;
 
   ConstantGiftDropShopItemNodeData constant_giftdrop_shop_item_data = 153;
 
   ConstantObjectiveMarkerData constant_objective_marker_node_data = 154;
-  
-  ConstantRoomCurrencyData constant_room_currency_node_data = 155;  
+
+  ConstantRoomCurrencyData constant_room_currency_node_data = 155;
   AwardCurrencyFromConstantNodeData award_currency_from_constant_node_data = 156;
   GetBalanceFromConstantNodeData get_balance_from_constant_node_data = 157;
 
@@ -204,7 +202,7 @@ message CircuitNodeData {
   RemoveInventoryItemNodeData remove_inventory_item_node_data = 161;
 
   StudioFunctionNodeData studio_function_node_data = 162;
-  
+
   ConstantQuickChatTableData constant_quick_chat_table_node_data = 163;
 
   EquipmentSlotData equipment_slot_node_data = 164;
@@ -212,15 +210,15 @@ message CircuitNodeData {
   ConstantStateData state_data = 165;
 
   ConstantRoomOfferData constant_room_offer_node_data = 166;
-  
+
   LocomotionRequestSteeringR2NodeData locomotion_request_steering_r2_node_data = 167;
 
   FunctionCallNodeData function_call_node_data = 168;
 
   HolotarRecordingData holotar_recording_data = 169;
-  
+
   PlayerPromptNodeData player_prompt_node_data = 170;
-  
+
   ConstantStorefrontItemData constant_storefront_item_data = 171;
 
   AudioFxZoneSetEffectNodeData audio_fx_zone_set_effect_node_data = 172;
@@ -230,9 +228,9 @@ message CircuitNodeData {
   CustomPropertyNodeData custom_property_node_data = 174;
 
   RequestAvatarLocomotionAnimationData request_avatar_locomotion_animation_data = 175;
-  
+
   GuidNodeData constant_avatar_item_node_data = 176;
-  
+
   ConstantBodyPartData constant_body_part_node_data = 177;
 
   MessageReceiverNodeData message_receiver_node_data = 178;
@@ -246,8 +244,8 @@ message CircuitNodeData {
   PlayParticleVfxAtPositionData play_particle_vfx_at_position_data = 182;
 
   IsRecRoomObjectOfTypeNodeData is_rec_room_object_of_type_node_data = 183;
-  
-  reserved 184; 
+
+  reserved 184;
 
   CreationObjectGetAllOfTypeWithTagNodeData creation_object_get_all_of_type_with_tag_node_data = 185;
 
@@ -265,7 +263,6 @@ message CircuitNodeData {
 
   GuidNodeData constant_room_badge_node_data = 192;
 
-  
   bytes DEPRECATED_node_id = 1;
   bytes DEPRECATED_node_type = 2;
   DEPRECATED_PortCollectionData DEPRECATED_input_port_collection = 3;

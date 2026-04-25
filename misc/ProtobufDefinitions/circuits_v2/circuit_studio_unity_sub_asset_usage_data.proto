@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 enum CircuitStudioUnitySubAssetKind {
   AudioClip = 0;
@@ -10,11 +11,11 @@ enum CircuitStudioUnitySubAssetKind {
   ParticleVfx = 2;
 }
 
-message CircuitStudioUnitySubAssetUsageData {	
+message CircuitStudioUnitySubAssetUsageData {
   repeated CircuitStudioUnitySubAssetUsageEntryData unity_assets = 1;
 }
 
-message CircuitStudioUnitySubAssetUsageEntryData {	
+message CircuitStudioUnitySubAssetUsageEntryData {
   core.GuidData unity_asset_id = 1;
   repeated core.GuidData referenced_unity_asset_ids = 2;
   CircuitStudioUnitySubAssetKind unity_asset_kind = 3;

@@ -1,5 +1,6 @@
 syntax = "proto3";
 package circuits_v2;
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
 message SampleAudioData {
@@ -8,7 +9,6 @@ message SampleAudioData {
   float sampleLength = 5;
   string audio_name = 6;
 
-  
   float DEPRECATED_startOffset = 2;
   float DEPRECATED_endOffset = 3;
 }

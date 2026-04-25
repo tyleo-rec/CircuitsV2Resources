@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "core/vector3_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message ConnectableGraphData {
   ConnectableNodeData root_node = 1;

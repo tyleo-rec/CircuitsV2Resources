@@ -1,10 +1,11 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits_v2/circuit_interaction_filter_data.proto";
 import "circuits_v2/player_world_bar_data.proto";
 import "circuits_v2/player_world_text_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message PlayerWorldUIData {
   PlayerWorldBarData primary_bar = 1;

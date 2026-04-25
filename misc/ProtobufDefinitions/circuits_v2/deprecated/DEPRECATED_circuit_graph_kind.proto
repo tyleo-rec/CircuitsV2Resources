@@ -1,5 +1,6 @@
 syntax = "proto3";
 package circuits_v2;
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
 enum DEPRECATED_CircuitGraphKind {
@@ -13,7 +14,5 @@ enum DEPRECATED_CircuitGraphKind {
   State = 7;
   FunctionDef = 8;
 
-  
-  
   Count = 9;
 }

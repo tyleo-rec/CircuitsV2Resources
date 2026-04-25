@@ -1,10 +1,11 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "core/guid_data.proto";
 
-message ReplicatorRegistryData {	
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message ReplicatorRegistryData {
   repeated ReplicatorRegistryEntryData replicator_entries = 1;
 }
 
@@ -20,5 +21,5 @@ message ReplicatorRegistryEntryData {
 
 message ReplicatedGraphData {
   core.GuidData base_graph_id = 1;
-  repeated core.GuidData sub_graph_ids = 2; 
+  repeated core.GuidData sub_graph_ids = 2;
 }

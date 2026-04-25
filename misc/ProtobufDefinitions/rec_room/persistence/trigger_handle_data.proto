@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message TriggerHandleData {
-    bool should_play_sfx = 1;
-    string DEPRECATED_control_label = 2;
+  bool should_play_sfx = 1;
+  string DEPRECATED_control_label = 2;
 }

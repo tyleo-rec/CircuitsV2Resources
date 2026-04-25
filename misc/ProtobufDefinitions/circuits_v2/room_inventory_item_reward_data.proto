@@ -1,10 +1,11 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "core/guid_data.proto";
 
+option csharp_namespace = "CircuitsV2.Protobuf";
+
 message RoomInventoryItemRewardData {
-	core.GuidData room_inventory_item_id = 1;
-	int32 quantity = 2;
+  core.GuidData room_inventory_item_id = 1;
+  int32 quantity = 2;
 }

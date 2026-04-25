@@ -1,11 +1,12 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 import "circuits/static/ev/ev_graphs_data.proto";
 import "circuits/static/ev/graphs_data.proto";
 
+option csharp_namespace = "Circuits.Static.EV.Protobuf";
+
 message EVStaticStateSysData {
-    GraphsData graphs = 1;
-    EVGraphsData ev_graphs = 2;
+  GraphsData graphs = 1;
+  EVGraphsData ev_graphs = 2;
 }

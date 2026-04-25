@@ -1,11 +1,11 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "core/color_data.proto";
-
-import "rec_room/persistence/invention_piece_data.proto";
 import "rec_room/persistence/interaction_filter.proto";
+import "rec_room/persistence/invention_piece_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message CreationObjectData {
   core.ColorData color_override = 2;

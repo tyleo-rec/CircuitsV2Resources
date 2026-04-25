@@ -1,18 +1,18 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
+import "circuits_v2/inventory_item_equipment_slots_data.proto";
 import "circuits_v2/persisted_value.proto";
 import "circuits_v2/player_cloud_data.proto";
 import "rec_room/persistence/player_save_version.proto";
-import "circuits_v2/inventory_item_equipment_slots_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message PlayerSaveData {
   PlayerSaveVersion version = 1;
   circuits_v2.PlayerCloudData cloud_data = 9;
   circuits_v2.InventoryItemEquipmentSlotsData inventory_item_equipment_slots_configuration = 10;
 
-  
   repeated circuits_v2.PersistedValue bools_DEPRECATED = 2;
   repeated circuits_v2.PersistedValue floats_DEPRECATED = 3;
   repeated circuits_v2.PersistedValue ints_DEPRECATED = 4;

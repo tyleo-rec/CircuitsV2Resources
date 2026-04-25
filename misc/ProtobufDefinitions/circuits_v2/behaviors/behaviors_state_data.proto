@@ -1,9 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
-import "circuits/shared/utilities/soa_id_32_data.proto";
 import "circuits/shared/api/id_128_data.proto";
+import "circuits/shared/utilities/soa_id_32_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message BehaviorsStateData {
   circuits.SOAId32Data behavior_ids = 1;

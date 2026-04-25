@@ -1,6 +1,5 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/game_configuration/game_combat_auto_heal_configuration_data.proto";
 import "rec_room/game_configuration/game_combat_down_but_not_out_configuration_data.proto";
@@ -15,11 +14,11 @@ import "rec_room/game_configuration/game_team_configuration_data.proto";
 import "rec_room/game_configuration/game_team_player_visual_configuration_data.proto";
 import "rec_room/game_configuration/game_team_radio_configuration_data.proto";
 
+option csharp_namespace = "RecRoom.Protobuf";
+
 message GameConfigurationData {
-  
-  
   string name = 1;
-  
+
   GameStartRequirementConfigurationData manual_start_requirement_configuration_data = 3;
   GameStartRequirementConfigurationData automatic_start_requirement_configuration_data = 4;
   bool join_in_progress_supported = 5;
@@ -37,9 +36,6 @@ message GameConfigurationData {
   bool in_game_player_notifications_supported = 17;
   bool reload_instance_after_postgame_results = 18;
 
-
-  
-  
   repeated GameTeamConfigurationData team_configurations = 101;
   int32 team_selection_method = 102;
   bool team_change_during_game_supported = 103;
@@ -50,22 +46,15 @@ message GameConfigurationData {
   bool clear_teams_after_game = 111;
   bool end_game_when_all_dead = 112;
 
-  
   GameTeamPlayerVisualConfigurationData team_player_visual_configuration_data = 106;
 
-  
   bool team_radios_supported = 107;
   bool team_radios_crossteam_supported = 113;
   GameTeamRadioConfigurationData team_radio_configuration_data = 108;
 
-  
-  
-  
   repeated GameStatConfigurationData stat_configurations = 202;
   bool persist_stats_on_game_start = 203;
 
-  
-  
   int32 max_health = 301;
   int32 max_shield = 302;
 
@@ -95,28 +84,21 @@ message GameConfigurationData {
   bool DEPRECATED_revive_cooldown_persistent_notification_supported = 319;
   bool DEPRECATED_respawn_timer_persistent_notification_supported = 320;
 
-  
-
   bool combat_hud_supported = 322;
 
   bool suppress_weapon_damage = 323;
-  
+
   bool suppress_all_damage_to_player = 324;
   bool enemies_ignore_spectators = 325;
-  
-  
+
   bool default_hit_feedback_supported = 350;
   bool default_revive_feedback_supported = 351;
   bool default_downed_opponent_feedback_supported = 352;
   bool default_downed_local_player_feedback_supported = 353;
   bool default_downed_teammate_feedback_supported = 354;
 
-  
-  
   int32 spawn_point_selection_mode = 401;
 
-  
-  
   bytes main_hand_spawn_equipment_type = 501;
   bytes off_hand_spawn_equipment_type = 502;
 
@@ -126,12 +108,8 @@ message GameConfigurationData {
 
   bool tool_beacons_supported = 507;
 
-  
-  
   bool movement_buffer_distance_restricted = 601;
 
-  
-  
   bool out_of_bounds_supported = 701;
   float out_of_bounds_grace_period = 702;
   float out_of_bounds_max_duration = 703;

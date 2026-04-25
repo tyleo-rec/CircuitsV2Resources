@@ -1,16 +1,15 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/static/ev/circuit_type_data.proto";
-
 import "circuits_v2/deprecated/DEPRECATED_circuit_type_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_dictionary_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_keyed_input_desc_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_keyed_output_desc_data.proto";
-
 import "circuits_v2/input_desc_data.proto";
 import "circuits_v2/output_desc_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message NodeDescData {
   string name = 2;
@@ -18,7 +17,6 @@ message NodeDescData {
   repeated InputDescData inputs = 8;
   repeated OutputDescData outputs = 9;
 
-  
   bytes DEPRECATED_id = 1;
   repeated DEPRECATED_CircuitTypeData DEPRECATED_type_parameters = 3;
   DEPRECATED_ListDictionaryData DEPRECATED_inputs_0 = 4;

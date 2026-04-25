@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message ImageData {
   string image_name = 1;
-  int32  creator_account_id = 2;
+  int32 creator_account_id = 2;
 }

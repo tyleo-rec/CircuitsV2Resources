@@ -1,18 +1,16 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
-
-import "core/guid_data.proto";
 
 import "circuits/static/api/static_edge_data.proto";
-
+import "circuits_v2/circuit_node_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_circuit_graph_kind.proto";
 import "circuits_v2/deprecated/DEPRECATED_circuit_serialization_version.proto";
 import "circuits_v2/deprecated/DEPRECATED_event_bus_data.proto";
-import "circuits_v2/deprecated/DEPRECATED_circuit_graph_kind.proto";
-
-import "circuits_v2/circuit_node_data.proto";
-import "circuits_v2/player_graph_data.proto";
 import "circuits_v2/memory_data.proto";
+import "circuits_v2/player_graph_data.proto";
+import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message CircuitGraphData {
   core.GuidData graph_id = 6;
@@ -33,7 +31,6 @@ message CircuitGraphData {
 
   bool is_replicator_created = 24;
 
-  
   bytes DEPRECATED_graph_id = 1;
   bytes DEPRECATED_graph_template_id = 2;
   DEPRECATED_CircuitSerializationVersion DEPRECATED_serialization_version = 3;

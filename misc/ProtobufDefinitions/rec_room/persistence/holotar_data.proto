@@ -1,31 +1,24 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "core/color_data.proto";
 import "core/vector3_data.proto";
-
 import "rec_room/audio_stream_data.proto";
-import "rec_room/persistence/deprecated/DEPRECATED_outfit_data.proto";
 import "rec_room/persistence/avatar_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_outfit_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message HolotarBlobData {
   enum Version {
-    
     INITIAL = 0;
 
-    
     STRIPPED_TEAM_OUTFITS = 1;
 
-    
-    
-    
     ADDED_TIMESTAMPS_TEAM_COLORS_AND_TOOL_HOLDING_STATE = 3;
 
-    
     ADDED_AVATAR_SYSTEM_STREAM = 4;
 
-    
     AVATAR_DATA_IN_LOCAL_SPACE = 5;
   }
 
@@ -47,39 +40,18 @@ message HolotarBlobData {
 
   message AvatarSystemStreamData {
     message AvatarSystemUpdateData {
-      
-      
-      reserved 1; 
+      reserved 1;
       bool is_local = 2;
       float desired_avatar_scale = 3;
 
-      
-      
-
-      
-      
-      
       core.Vector3Data player_up = 4;
 
-      
-      
-      
-      
       core.Vector3Data forward_yaw_reference = 5;
 
-      
-      
-      
-      
       optional core.Vector3Data torso_forward_override = 6;
 
-      
-      
-      
       optional core.Vector3Data pelvis_anchor_position = 7;
 
-      
-      
       bool is_player_steering = 8;
       bool is_player_seated = 9;
       bool is_player_flying = 10;
@@ -103,9 +75,7 @@ message HolotarBlobData {
       bool is_player_crouching = 28;
       bool is_player_prone = 29;
       optional core.Vector3Data prone_normal = 30;
-        
-      
-      
+
       float right_hand_ik_weight = 31;
       float left_hand_ik_weight = 32;
 
@@ -160,7 +130,6 @@ message ColorStateData {
 }
 
 message HolotarPersistenceData {
-  
   string blob_name = 1;
   bool billboard = 2;
   bool hide_effects = 3;

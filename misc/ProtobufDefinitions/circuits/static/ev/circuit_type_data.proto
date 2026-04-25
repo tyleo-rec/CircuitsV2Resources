@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 import "core/guid_data.proto";
+
+option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 enum TypeKind {
   Any = 0;
@@ -49,7 +50,7 @@ message ClassTypeData {
   repeated CircuitTypeData type_parameters = 2;
   map<string, PropertyData> properties = 3;
   map<string, CircuitTypeData> functions = 4;
-  repeated CircuitTypeData baseClasses  = 5;
+  repeated CircuitTypeData baseClasses = 5;
 }
 
 message FunctionTypeData {

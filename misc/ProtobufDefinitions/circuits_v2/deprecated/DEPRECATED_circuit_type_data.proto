@@ -1,10 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
-
-import "core/guid_data.proto";
 
 import "circuits_v2/deprecated/DEPRECATED_nullable_bytes.proto";
+import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message DEPRECATED_AppliedGenericTypeData {
   int32 version = 1;
@@ -21,7 +21,6 @@ message DEPRECATED_CircuitTypeData {
   DEPRECATED_TypeParameterTypeData type_parameter_type = 7;
   DEPRECATED_ClassTypeData1 class_type = 8;
 
-  
   DEPRECATED_ClassTypeData0 DEPRECATED_class_type = 4;
 }
 
@@ -31,9 +30,8 @@ message DEPRECATED_ClassTypeData1 {
   repeated DEPRECATED_CircuitTypeData type_parameters = 3;
   map<string, DEPRECATED_PropertyData> properties = 4;
   map<string, DEPRECATED_CircuitTypeData> functions = 5;
-  repeated DEPRECATED_CircuitTypeData baseClasses  = 6;
+  repeated DEPRECATED_CircuitTypeData baseClasses = 6;
 
-  
   bytes DEPRECATED_id = 2;
 }
 

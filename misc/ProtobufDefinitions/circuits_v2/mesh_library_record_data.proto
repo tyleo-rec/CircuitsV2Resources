@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits_v2;
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
 message MeshLibraryRecordData {
-    string name = 1;
-    string cdn_name = 2;
+  string name = 1;
+  string cdn_name = 2;
 }

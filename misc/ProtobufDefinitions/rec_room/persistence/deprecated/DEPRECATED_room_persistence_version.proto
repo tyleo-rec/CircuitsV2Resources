@@ -1,125 +1,85 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 enum DEPRECATED_RoomPersistenceVersion {
   V0NewRoomPersistenceVersion = 0;
 
-  
   V1Initial = 1;
 
-  
   V2ExtrusionsCenterOfMass = 2;
 
-  
   V3PersistentHostSettings = 3;
 
-  
   V4RadioPersistence = 4;
 
-  
-  
   V5ExtrusionsPhysicsMode = 5;
 
-  
   V6CustomGameSettings = 6;
 
-  
   V7NewSandboxButton = 7;
 
-  
-  
   V8CircuitChipOrientation = 8;
 
-  
   V9NewTriggerVolume = 9;
 
-  
   V10RoomRoles = 10;
 
-  
   V11SubextrusionsPersistedIds = 11;
 
-  
-  
   V12EverythingARoom = 12;
 
-  
   V13CreationObjectAdded = 13;
 
-  
   V14InventionPieceAdded = 14;
 
-  
   V15GameConfigurationAdded = 15;
 
-  
   V16EraserMarkersFixed = 16;
 
-  
   V17GrabbableAdded = 17;
 
-  
   V18ManualSpawnPointsAdded = 18;
 
-  
   V19StuntRunnerButtonNodeChange = 19;
 
-  
   V20GameRolesInChips = 20;
 
-  
   V21PlayerAttractorConfigurable = 21;
 
-  
   V22AutosaveValidation = 22;
 
-  
   V23TriggerVolumeNoShapeContainers = 23;
 
-  
   V24GadgetVisibilityMovedToSubroomSetting = 24;
 
-  
   V25RoomKeysBeta = 25;
 
-  
   V26DirectionalVoiceChat = 26;
 
-  
   V27JuniorEnabledObjectFlag = 27;
 
-  
   V28SfxPlayForAll = 28;
 
-  
   V29UVManipulationAdded = 29;
 
-  
   V30HomeValuesAdded = 30;
 
-  
   V31SeatCollisionToggleAdded = 31;
 
-  
   V32StoringRotationAsVector4 = 32;
 
-  
   V33LightValuesFloat = 33;
 
-  
   V34OptimizeCollidersToggle = 34;
 
-  
   V35AudioPlayerProperties = 35;
 
-  
   V36BackpackToolsForbiddenInSpawner = 36;
 
-  
   V37ToolHandednessAdded = 37;
 
-  
   V38ProjectileSpreadFloat = 38;
 
   option allow_alias = true;

@@ -1,11 +1,11 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "core/vector3_data.proto";
-
 import "rec_room/persistence/holotar_data.proto";
 import "rec_room/persistence/persistence_view_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message RoomatarBlobData {
   message AvatarAnimationData {
@@ -23,7 +23,7 @@ message RoomatarBlobData {
     }
 
     string name = 1;
-    
+
     repeated ToolEventData events = 3;
     repeated PoseStateData pose_states = 4;
     repeated ColorStateData team_color_states = 5;
@@ -32,18 +32,18 @@ message RoomatarBlobData {
     bool mute_tool_audio = 8;
     bool mute_collision_audio = 9;
 
-    reserved 10; 
+    reserved 10;
 
     oneof spawn_type {
       bytes template_id = 2;
       PlayerBackpackToolType player_backpack_tool_type = 11;
     }
 
-    reserved 12 to 15; 
+    reserved 12 to 15;
   }
 
   message ToolEventData {
-    message NoData { }
+    message NoData {}
 
     message InputUpWithVelocityData {
       core.Vector3Data linear_velocity = 1;
@@ -52,7 +52,7 @@ message RoomatarBlobData {
 
     float timestamp = 1;
 
-    reserved 2 to 15; 
+    reserved 2 to 15;
 
     oneof event_type {
       NoData input_down = 16;

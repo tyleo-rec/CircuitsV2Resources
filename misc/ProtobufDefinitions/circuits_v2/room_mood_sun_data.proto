@@ -1,12 +1,12 @@
 syntax = "proto3";
 package circuits_v2;
+
+import "circuits_v2/room_mood_data.proto";
+import "core/quaternion_data.proto";
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
-import "core/quaternion_data.proto";
-import "circuits_v2/room_mood_data.proto";
-
 message RoomMoodSunData {
-
   circuits_v2.RoomMoodData mood_base_data = 1;
   int32 sun_color = 2;
   float sun_intensity = 3;

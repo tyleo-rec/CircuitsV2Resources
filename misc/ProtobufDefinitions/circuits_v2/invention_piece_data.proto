@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message InventionPieceData {
   core.GuidData instance_id = 5;
@@ -10,6 +11,5 @@ message InventionPieceData {
   int32 version_number = 3;
   bool originally_from_other_invention = 4;
 
-  
   bytes DEPRECATED_instance_id = 1;
 }

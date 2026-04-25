@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits_v2/node_group_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message DEPRECATED_KeyedNodeGroupData {
   bytes key = 1;

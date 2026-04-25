@@ -1,9 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
 message PlayerDefinitionBoardData {
-    bool custom_locomotion_requested = 1;
-    bool force_manual_sprint_r1 = 2;
-    bool custom_footstep_audio_requested = 3;
+  bool custom_locomotion_requested = 1;
+  bool force_manual_sprint_r1 = 2;
+  bool custom_footstep_audio_requested = 3;
 }

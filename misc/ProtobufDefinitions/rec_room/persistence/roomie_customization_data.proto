@@ -1,43 +1,41 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
-import "core/guid_data.proto";
+
 import "core/color_data.proto";
+import "core/guid_data.proto";
 import "core/vector3_data.proto";
 
+option csharp_namespace = "RecRoom.Protobuf";
+
 message RoomieCustomizationData {
-    repeated RoomieOutfitSelectionData outfit_selections = 1;
+  repeated RoomieOutfitSelectionData outfit_selections = 1;
 }
 
 message RoomieOutfitSelectionData {
-    core.GuidData avatar_item_id = 1;
-    optional core.ColorData color = 2;
-    optional core.Vector3Data rotation = 3;
-    RoomieBodyPart body_part = 4;
+  core.GuidData avatar_item_id = 1;
+  optional core.ColorData color = 2;
+  optional core.Vector3Data rotation = 3;
+  RoomieBodyPart body_part = 4;
 
-    enum RoomieBodyPart {
-        None = 0;
-        Head = 1;
-        Waist = 2;
-        Eye = 3;
-        Mouth = 4;
-        Back = 5;
-        Face = 6;
-        LeftWrist = 7;
-        RightWrist = 8;
-        Topper = 9;
-        Ear = 10;
-        Hair = 11;
-        Mask = 12;
-        Wings = 13;
-        Nose = 14;
+  enum RoomieBodyPart {
+    None = 0;
+    Head = 1;
+    Waist = 2;
+    Eye = 3;
+    Mouth = 4;
+    Back = 5;
+    Face = 6;
+    LeftWrist = 7;
+    RightWrist = 8;
+    Topper = 9;
+    Ear = 10;
+    Hair = 11;
+    Mask = 12;
+    Wings = 13;
+    Nose = 14;
 
-        
-        
-        DummyDoNotSerializePrimarySkin = -1;
+    DummyDoNotSerializePrimarySkin = -1;
 
-        
-        
-        DummyDoNotSerializeSecondarySkin = -2;
-    }
+    DummyDoNotSerializeSecondarySkin = -2;
+  }
 }

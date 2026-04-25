@@ -1,5 +1,6 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message ThrowHandleData {
@@ -9,7 +10,7 @@ message ThrowHandleData {
     DART_IDLE = 2;
     DISC_IDLE = 3;
   }
-  
+
   enum ThrowHandleThrowPose {
     DEFAULT_THROW = 0;
     DODGEBALL_THROW = 1;

@@ -1,9 +1,10 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
-import "rec_room/persistence/avatar_data.proto";
 import "core/vector3_data.proto";
+import "rec_room/persistence/avatar_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message MannequinData {
   AvatarData avatar_data = 1;

@@ -1,5 +1,6 @@
 syntax = "proto3";
 package game_server;
+
 option csharp_namespace = "RecRoom.Protobuf.GameServer";
 
 message DebugActionData {
@@ -9,13 +10,10 @@ message DebugActionData {
   }
 }
 
-
 message PrintDebugLogPayloadData {
-    string message = 1;
+  string message = 1;
 }
 
-
-
 message PrintCircuitsLogPayloadData {
-    string message = 1;
+  string message = 1;
 }

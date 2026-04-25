@@ -1,11 +1,12 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/persistence/interaction_filter.proto";
 
+option csharp_namespace = "RecRoom.Protobuf";
+
 message DrawingSurfaceData {
   bool is_modified = 1;
-  bool DEPRECATED_is_drawing_disabled = 2; 
+  bool DEPRECATED_is_drawing_disabled = 2;
   InteractionFilterData DEPRECATED_interaction_filter_data = 3;
 }

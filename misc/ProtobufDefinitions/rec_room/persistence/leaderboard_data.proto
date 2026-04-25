@@ -1,5 +1,6 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message LeaderboardData {
@@ -12,7 +13,7 @@ message LeaderboardData {
   }
 
   repeated StatData stat_configs = 1;
-  
+
   bool enabled = 2;
   bool alwaysFacePlayerEnabled = 3;
   bool proximityDisplayEnabled = 4;

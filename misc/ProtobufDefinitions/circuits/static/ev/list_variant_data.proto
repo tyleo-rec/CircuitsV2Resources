@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 import "circuits/static/ev/variant_data.proto";
+
+option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 message ListVariantData {
   repeated VariantData elements = 1;

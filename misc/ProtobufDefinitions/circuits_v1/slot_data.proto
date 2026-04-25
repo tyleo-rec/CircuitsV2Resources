@@ -1,5 +1,6 @@
 syntax = "proto3";
 package circuits_v1;
+
 option csharp_namespace = "RecRoom.CircuitsV1.Protobuf";
 
 message SlotData {

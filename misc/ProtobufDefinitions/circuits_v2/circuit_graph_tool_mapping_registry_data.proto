@@ -1,15 +1,16 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/shared/api/id_128_data.proto";
 import "core/guid_data.proto";
 
-message CircuitGraphToolMappingRegistryData {	
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message CircuitGraphToolMappingRegistryData {
   repeated CircuitGraphToolMappingRegistryEntryData mapping_entries = 1;
 }
 
-message CircuitGraphToolMappingRegistryEntryData {	
+message CircuitGraphToolMappingRegistryEntryData {
   circuits.Id128Data circuit_graph_id = 1;
-  core.GuidData tool_mapping_id = 2;	
+  core.GuidData tool_mapping_id = 2;
 }

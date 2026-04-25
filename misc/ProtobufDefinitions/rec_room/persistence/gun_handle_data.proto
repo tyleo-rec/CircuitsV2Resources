@@ -1,5 +1,6 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message GunHandleData {
@@ -38,5 +39,5 @@ message GunHandleData {
   float DEPRECATED_aim_friction_radius = 24;
   GunHandleScreensPose screens_pose = 25;
   bool supports_reload = 26;
-  bool enable_auto_fire =  27;
+  bool enable_auto_fire = 27;
 }

@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/persistence/room_door_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message SpawnPointSpawnerData {
   int64 room_id = 1;

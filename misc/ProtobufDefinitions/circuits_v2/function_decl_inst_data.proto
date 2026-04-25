@@ -1,8 +1,9 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/static/rec_room/named_type_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message FunctionDeclInstData {
   string filter = 2;
@@ -10,6 +11,5 @@ message FunctionDeclInstData {
   repeated circuits.NamedTypeData outputs = 4;
   string description = 5;
 
-  
   string DEPRECATED_name = 1;
 }

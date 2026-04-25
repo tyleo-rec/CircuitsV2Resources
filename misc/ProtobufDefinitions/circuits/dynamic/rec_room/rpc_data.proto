@@ -1,5 +1,6 @@
 syntax = "proto3";
 package circuits;
+
 option csharp_namespace = "Circuits.Dynamic.RecRoom.Protobuf";
 
-message RpcData { }
+message RpcData {}

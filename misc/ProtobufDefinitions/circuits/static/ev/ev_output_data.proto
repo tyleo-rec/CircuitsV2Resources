@@ -1,7 +1,8 @@
 syntax = "proto3";
 package circuits;
+
 option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 message EVOutputData {
-    int32 def_id = 1;
+  int32 def_id = 1;
 }

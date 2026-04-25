@@ -1,12 +1,11 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/static/ev/circuit_type_data.proto";
-
+import "circuits_v2/circuit_signal_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_circuit_type_data.proto";
 
-import "circuits_v2/circuit_signal_data.proto";
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message InputDescData {
   string name = 2;
@@ -16,7 +15,6 @@ message InputDescData {
   int32 minimum = 6;
   int32 maximum = 7;
 
-  
   bytes DEPRECATED_id = 1;
   DEPRECATED_CircuitTypeData DEPRECATED_type = 3;
 }

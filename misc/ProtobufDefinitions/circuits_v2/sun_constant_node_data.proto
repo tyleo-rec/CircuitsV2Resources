@@ -1,5 +1,6 @@
 syntax = "proto3";
 package circuits_v2;
+
 option csharp_namespace = "CircuitsV2.Protobuf";
 
 message SunConstantNodeData {
@@ -13,5 +14,4 @@ message SunConstantNodeData {
   float glow_horizon = 8;
   float reflection_intensity = 9;
   bool clip_horizon = 10;
-
 }

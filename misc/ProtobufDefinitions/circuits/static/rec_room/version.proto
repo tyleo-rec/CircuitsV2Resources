@@ -1,5 +1,6 @@
 syntax = "proto3";
 package circuits;
+
 option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
 
 enum Version {

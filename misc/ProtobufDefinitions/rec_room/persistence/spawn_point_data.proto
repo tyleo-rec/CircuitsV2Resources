@@ -1,21 +1,22 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message SpawnPointData {
   int32 team_id = 1;
   string primary_hand_hold_tag = 2;
-  
+
   bool primary_hand_take_from_holder = 3;
   string secondary_hand_hold_tag = 4;
-  
+
   bool secondary_hand_take_from_holder = 5;
-  
-  bool is_pre_post_game_spawn_point = 6; 
-  
+
+  bool is_pre_post_game_spawn_point = 6;
+
   float spawn_precision_radius = 7;
-  
+
   int32 spawn_point_purpose = 8;
-  
+
   bool keep_held_tools = 9;
 }

@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/persistence/interaction_filter.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message ButtonData {
   bool signal_is_player_id = 1;
@@ -12,7 +13,7 @@ message ButtonData {
 }
 
 message ToggleButtonData {
-  bool default_toggle_state= 1;
+  bool default_toggle_state = 1;
   bool signal_is_player_id = 2;
   bool projectile_collision_enabled = 3;
   bool junior_enabled = 4;
@@ -23,6 +24,6 @@ message ToggleButtonData {
 }
 
 message LinkButtonData {
-  int32 link_type= 1;
+  int32 link_type = 1;
   int64 link_target_id = 2;
 }

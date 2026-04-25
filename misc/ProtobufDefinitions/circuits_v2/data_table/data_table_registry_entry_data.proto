@@ -1,11 +1,12 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
+
 import "circuits_v2/data_table/data_table_data.proto";
 import "core/guid_data.proto";
 
-message DataTableRegistryEntryData
-{
-    core.GuidData key = 1;
-    DataTableData value = 2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message DataTableRegistryEntryData {
+  core.GuidData key = 1;
+  DataTableData value = 2;
 }

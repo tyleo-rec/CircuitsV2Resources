@@ -1,9 +1,8 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 message SpawnableToolData {
-  
-  
   bytes prefab_id = 1;
 }

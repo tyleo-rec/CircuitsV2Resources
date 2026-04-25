@@ -1,13 +1,14 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
 
 import "circuits/shared/api/id_128_data.proto";
 
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
 message GroupBoardPortMappingsData {
-    Id128Data node_id = 1;
-    int32 node_port_group_id = 2;
-    int32 node_port_id = 3;
-    int32 bus_port_group_id = 4;
-    int32 bus_port_id = 5;
+  Id128Data node_id = 1;
+  int32 node_port_group_id = 2;
+  int32 node_port_id = 3;
+  int32 bus_port_group_id = 4;
+  int32 bus_port_id = 5;
 }

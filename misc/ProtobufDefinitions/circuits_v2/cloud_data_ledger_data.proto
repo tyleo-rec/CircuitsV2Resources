@@ -1,21 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
-
-import "circuits_v2/deprecated/DEPRECATED_cloud_data_ledger_version.proto";
 
 import "circuits_v2/cloud_data_ledger_entry_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_cloud_data_ledger_version.proto";
 
-
-
-
-
-
-
-
-
-
-
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message CloudDataLedgerData {
   repeated CloudDataLedgerEntryData bools = 2;
@@ -37,8 +26,6 @@ message CloudDataLedgerData {
   repeated CloudDataLedgerEntryData list_colors = 15;
   repeated CloudDataLedgerEntryData list_rec_net_image = 17;
   repeated CloudDataLedgerEntryData list_rec_net_meshes = 19;
-
-  
 
   DEPRECATED_CloudDataLedgerVersion DEPRECATED_Version = 1;
 }

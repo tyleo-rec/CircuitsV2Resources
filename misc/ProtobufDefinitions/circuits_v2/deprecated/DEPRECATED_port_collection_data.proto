@@ -1,12 +1,13 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits_v2/deprecated/DEPRECATED_default_port_data.proto";
 import "circuits_v2/deprecated/DEPRECATED_port_group_data.proto";
 
+option csharp_namespace = "CircuitsV2.Protobuf";
+
 message DEPRECATED_PortCollectionData {
-    repeated DEPRECATED_PortGroupData built_in_port_groups = 1;
-    repeated DEPRECATED_PortGroupData dynamic_port_groups = 2;
-    repeated DEPRECATED_DefaultPortData default_port_value_datas = 10;
+  repeated DEPRECATED_PortGroupData built_in_port_groups = 1;
+  repeated DEPRECATED_PortGroupData dynamic_port_groups = 2;
+  repeated DEPRECATED_DefaultPortData default_port_value_datas = 10;
 }

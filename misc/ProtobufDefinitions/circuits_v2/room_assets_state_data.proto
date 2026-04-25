@@ -1,14 +1,13 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
-
-import "circuits/shared/utilities/soa_id_32_data.proto";
 import "circuits/shared/api/id_128_data.proto";
+import "circuits/shared/utilities/soa_id_32_data.proto";
 import "core/guid_data.proto";
 
-message RoomAssetsStateData {
+option csharp_namespace = "CircuitsV2.Protobuf";
 
+message RoomAssetsStateData {
   circuits.SOAId32Data asset_definitions = 1;
   repeated circuits.Id128Data asset_origin_ids = 2;
   repeated int32 asset_kinds = 3;
@@ -16,7 +15,7 @@ message RoomAssetsStateData {
 
   circuits.SOAId32Data asset_id_32_ids = 5;
   repeated int32 asset_id_32s = 6;
-  
+
   circuits.SOAId32Data asset_id_128_ids = 7;
   repeated core.GuidData asset_id_128s = 8;
 }

@@ -1,25 +1,26 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
+import "circuits/shared/utilities/soa_id_32_data.proto";
 import "circuits/static/ev/ev_input_data.proto";
 import "circuits/static/ev/ev_node_data.proto";
 import "circuits/static/ev/ev_output_data.proto";
 import "circuits/static/ev/input_groups_data.proto";
 import "circuits/static/ev/output_groups_data.proto";
-import "circuits/shared/utilities/soa_id_32_data.proto";
+
+option csharp_namespace = "Circuits.Static.EV.Protobuf";
 
 message EVGraphData {
-    int32 def_id = 1;
-    int32 virt_id = 2;
+  int32 def_id = 1;
+  int32 virt_id = 2;
 
-    repeated EVInputData ev_inputs = 3;
-    repeated EVOutputData ev_outputs = 4;
-    repeated EVNodeData ev_nodes = 5;
+  repeated EVInputData ev_inputs = 3;
+  repeated EVOutputData ev_outputs = 4;
+  repeated EVNodeData ev_nodes = 5;
 
-    SOAId32Data input_group_ids = 6;
-    repeated InputGroupsData input_groups = 7;
+  SOAId32Data input_group_ids = 6;
+  repeated InputGroupsData input_groups = 7;
 
-    SOAId32Data output_group_ids = 8;
-    repeated OutputGroupsData output_groups = 9;
+  SOAId32Data output_group_ids = 8;
+  repeated OutputGroupsData output_groups = 9;
 }

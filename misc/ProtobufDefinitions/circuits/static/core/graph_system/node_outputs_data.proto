@@ -1,7 +1,8 @@
 syntax = "proto3";
 package circuits;
+
 option csharp_namespace = "Circuits.Static.Core.GraphSystem.Protobuf";
 
 message NodeOutputsData {
-    repeated int32 outputs = 1;
+  repeated int32 outputs = 1;
 }

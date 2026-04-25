@@ -1,9 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits_v2/rpc_target.proto";
 
+option csharp_namespace = "CircuitsV2.Protobuf";
+
 message DEPRECATED_SyncedEventSenderNodeData {
-    RpcTarget rpc_target = 1;
+  RpcTarget rpc_target = 1;
 }

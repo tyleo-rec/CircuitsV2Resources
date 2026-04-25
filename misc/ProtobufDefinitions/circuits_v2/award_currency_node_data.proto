@@ -1,13 +1,13 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "core/guid_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message AwardCurrencyNodeData {
   bool logOutput = 3;
   core.GuidData currency_replication_id = 2;
 
-  
   bytes DEPRECATED_currency_replication_id = 1;
 }

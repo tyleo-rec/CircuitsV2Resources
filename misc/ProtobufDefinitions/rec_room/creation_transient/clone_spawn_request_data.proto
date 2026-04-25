@@ -1,9 +1,10 @@
 syntax = "proto3";
 package creation;
+
 option csharp_namespace = "RecRoom.Creation.Protobuf";
 
 message CloneSpawnRequestData {
-    repeated bytes object_ids_to_clone = 1;
-    bytes circuit_graph_id = 2;
-    bytes parent_id = 3;
+  repeated bytes object_ids_to_clone = 1;
+  bytes circuit_graph_id = 2;
+  bytes parent_id = 3;
 }

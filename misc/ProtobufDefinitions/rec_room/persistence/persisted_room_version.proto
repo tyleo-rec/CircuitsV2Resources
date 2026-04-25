@@ -1,431 +1,293 @@
 syntax = "proto3";
 package rec_room;
+
 option csharp_namespace = "RecRoom.Protobuf";
 
 enum PersistedRoomVersion {
   V0New = 0;
 
-  
-  
   V1SerializeDefaultTags = 1;
 
-  
   V2ProgressionEventPopupShop = 2;
 
-  
   V3SandboxGunHandleCanReload = 3;
 
-  
-  
   V4StudioAssetBundleChanges = 4;
 
-  
   V5ParticleEmitterSettings = 5;
 
-  
   V6HolotarProjectorCV2 = 6;
 
-  
   V7LaserPointer = 7;
 
-  
   V8TextScreenRelease = 8;
 
-  
   V9AudioPlayerRolloff = 9;
 
-  
   V7SunDirection = 10;
 
-  
   V11StudioSingleAudioMixer = 11;
 
-  
   V12StudioExposedProperties = 12;
 
-  
   V13AuthorizeRestrictedTools = 13;
 
-  
   V14LaserDirection = 14;
 
-  
   V15StudioAudioClipRegistry = 15;
 
-  
   V16NewUGCShapes = 16;
 
-  
   V17TriggerHandleControlLabel = 17;
 
-  
   V18StudioObjectCanvasInteraction = 18;
 
-  
   V19February23BetaRelease = 19;
 
-  
   V20MotionTrail = 20;
 
-  
   V21StudioVisualPostProcessing = 21;
 
-  
   V22UGCLocalizationMVP = 22;
 
-  
   V23ControlPanelObjectDefinitionIds = 23;
 
-  
   V24April23BetaRelease = 24;
 
-  
   V25InteractionVolumeV2 = 25;
-  
-  
+
   V26AnimationGizmoV2 = 26;
 
-  
   V27CollisionDetectionVolume = 27;
-  
-  
-  V28SwingHandle = 28; 
-  
-  
+
+  V28SwingHandle = 28;
+
   V29VehicleDefaultValue = 29;
 
-  
   V30TouchpadComponent = 30;
 
-  
   V31Pathfinder = 31;
 
-  
-  V32AnimationGizmoV2Release= 32;
+  V32AnimationGizmoV2Release = 32;
 
-  
   V33NewPopupShops = 33;
 
-  
   V34August23BetaRelease = 34;
-  
-  
+
   V35DevModTophySkin = 35;
 
-  
   V36NewAvatarData = 36;
 
-  
   V37ThrowHandle = 37;
-  
-  
+
   V38NoOpIncrement = 38;
 
-  
   V39GrabberComponent = 39;
 
-  
   V40InteractionFilterToggle = 40;
 
-  
   V41RRSDisableRenderInShareCam = 41;
 
-  
   V42DialogueUI = 42;
-  
-  
-  V43FullBodyPuppetToolPersistenceData = 43; 
 
-  
+  V43FullBodyPuppetToolPersistenceData = 43;
+
   V44RewardRoomInventoryItem = 44;
 
-  
   V45RemoveThrowHandleFromSpawner = 45;
-  
-  
+
   V46CollisionDetectionVolumeIntoBetaData = 46;
 
-  
   V47CostumeDummyOM = 47;
 
-  
   V48SwingHandleIntoBetaData = 48;
 
-  
   V49SwingHandleAimAssistEnabled = 49;
 
-  
   V50Replicator = 50;
 
-  
   V51TriggerVolumeV2RoomV2 = 51;
 
-  
   V52GunHandleAutoFireEnabled = 52;
 
-  
   V53AnimationControllerOutOfBeta = 53;
 
-  
   V54BaseHandleType = 54;
 
-  
   V55RRSRecNetImageDisplayComponent = 55;
 
   V56UGCSpawnerUseSpawnableToolGuid = 56;
 
-  
   V57ConsolidateInteractionFilters = 57;
 
-  
   V58RangedPropWeaponCustomization = 58;
 
-  
   V59RoomHudInventoryItem = 59;
 
-  
   V60RoomHudInventoryItem = 60;
 
-  
   V61ReplicatorRemoveMaxCopies = 61;
 
-  
   V62DormFurnitureDevOnlyProps = 62;
 
-  
   V63SandboxColorableTextureSize = 63;
-  
-  
+
   V64FreeDormMirrorPropInDevOnly = 64;
-  
-  
+
   V65Rooms2Storefront = 65;
 
-  
   V66RoomHudInventoryItem = 66;
 
-  
   V67DormCommunityBoardAndButtonsProps = 67;
 
-  
   V68CustomDormShellDevOnlyProps = 68;
-  
-  
+
   V69SwingHandleAnimations = 69;
 
-  
   V70ReplicatorPropBeta = 70;
-  
-  
+
   V71LeaderboardBeta = 71;
-  
-  
+
   V72ImitationLegacyDormProps = 72;
 
-  
   V73UpdateFurniturePropsToCustomDormOnly = 73;
 
-  
   V74PathfinderPersistence = 74;
 
-  
   V75UpdateCustomDormShellPropsToHiddenInPalette = 75;
 
-  
   V76UpdateHolotarScale = 76;
-  
-  
+
   V77LeaderboardOutOfBeta = 77;
-  
-  
+
   V78GoldenTrophy = 78;
 
-  
   V79GoToEvent = 79;
-  
-  
+
   V80PropContainerUpdate = 80;
 
-  
   V81RRStudioSpecularContributionAndInnerSpotAngle = 81;
 
-  
   V82ProBuilderOptimization = 82;
-  
-  
+
   V83RecRoomStudioPlatformTextFilter = 83;
 
-  
   V84AdditionalShaderSupport = 84;
 
-  
   V85UnlitNoFog = 85;
-  
-  
+
   V86RangedWeaponSharedDataUpdate = 86;
-  
-  
+
   V87RangedWeaponPropDataProtobufUpdate = 87;
-  
-  
+
   V88CoordinateBeaconsToggle = 88;
 
-  
   V89LoadEditReady = 89;
-  
-  
+
   V90RangedWeaponAmmoInProtobuf = 90;
 
-  
   V91StudioRoomSubBundles = 91;
 
-  
   V92AddCameraUsesSeatRotationOptionToSeats = 92;
-  
-  
+
   V93NewBulletRpcs = 93;
 
-  
   V94Rooms2DynamicPropBatch = 94;
 
-  
   V95StudioObjectsInR2Inventions = 95;
 
-  
   V96DoorsInR2 = 96;
 
-  
   V97AddedToolsForR2Dorm = 97;
 
-  
   V98StudioObjectPersistenceViewUpdate = 98;
 
-  
   V99RecCenterPropBatch = 99;
 
-  
   V100StageLightV2 = 100;
-  
-  
+
   V101R2IsDefaultPropsOutOfBeta = 101;
 
-  
   V102StudioObjectRecolor = 102;
-  
-  
+
   V103PistonRotatorFixes = 103;
 
-  
   V104MannequinProp = 104;
 
-  
   V105Rooms2MirrorProp = 105;
 
-  
   V106StudioProjectiles = 106;
 
-  
   V107PathfinderCircuitsVisibility = 107;
-  
-  
+
   V108StudioParticleVFX = 108;
 
-  
   V109Rooms2PolaroidProp = 109;
 
-  
   V110Rooms2Vehicles = 110;
-  
-  
+
   V111RemovedCostumeDummyOM = 111;
 
   V112GameAIComponent = 112;
 
-  
   V113MagneticAnchor = 113;
-  
-  
+
   V114TexturedQuad = 114;
-  
+
   V115ElementSnap = 115;
 
-  
   V116PathfinderPositionFix = 116;
 
   V117MoveGameAISyncedStateToSyncedComponentV2 = 117;
 
   V118MeshPresenterComponent = 118;
-  
-  
+
   V119TerrainGenerator = 119;
 
   V120TerrainGeneratorLive = 120;
 
-  
   V121GameAIAutomaticVoiceResponseEnabled = 121;
-  
-  
+
   V122MannequinPropBeta = 122;
 
-  
   V123TextScreenScrollAdded = 123;
 
   V124MadeMeshPresenterNotDevOnly = 124;
-  
-  
+
   V125HologramShader = 125;
-  
-  
+
   V126TexturedQuadAutoFit = 126;
 
-  
   V127RecNetImageHomeAndCloudVariables = 127;
 
-  
   V128SnapPointIntoBeta = 128;
 
-  
   V129SharedGameAIComponent = 129;
 
-  
   V130RecNetMeshCloudVariables = 130;
 
-  
   V131GameAIGetGameAICurrentVolume = 131;
 
-  
   V132MeshPresenterAndGenAIMeshChips = 132;
 
-  
   V133RemoveDevOnlyFromVarious = 133;
 
-  
   V134LaundryBin = 134;
 
-  
   V135StudioAudioSourceSynchronizer = 135;
-  
-  
+
   V136RoomBoosts = 136;
 
-  
   V137StudioGripOptions = 137;
 
-  
   V138AvatarItemDisplayAndWearableHandle = 138;
 
-  
   V139StudioFunctionContainers = 139;
 
-  
   V140StudioObjectPlayerAnimations = 140;
 
-  
   V141StudioPropertiesAndUtilityMethods = 141;
 
   option allow_alias = true;
   LatestVersion = 141;
-
-  
-  
 }

@@ -1,9 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "core/guid_data.proto";
 
+option csharp_namespace = "CircuitsV2.Protobuf";
+
 message KeyRewardData {
-	core.GuidData key_id = 1;
+  core.GuidData key_id = 1;
 }

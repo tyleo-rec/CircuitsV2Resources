@@ -1,10 +1,11 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/gameplay/ammunition_data.proto";
 import "rec_room/gameplay/ranged_weapon_data.proto";
 import "rec_room/persistence/health_potion_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message BattleRoyaleArsenalData {
   repeated BattleRoyaleGearData gear = 1;

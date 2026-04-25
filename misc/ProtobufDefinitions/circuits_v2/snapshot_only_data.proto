@@ -1,9 +1,10 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/static/api/static_circuits_config_data.proto";
 
+option csharp_namespace = "CircuitsV2.Protobuf";
+
 message SnapshotOnlyData {
-    circuits.StaticCircuitsConfigData static_circuits_config_data = 1;
+  circuits.StaticCircuitsConfigData static_circuits_config_data = 1;
 }

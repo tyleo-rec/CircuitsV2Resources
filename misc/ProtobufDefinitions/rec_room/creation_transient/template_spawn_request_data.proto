@@ -1,46 +1,46 @@
 syntax = "proto3";
 package creation;
-option csharp_namespace = "RecRoom.Creation.Protobuf";
 
-import "core/vector3_data.proto";
 import "core/quaternion_data.proto";
+import "core/vector3_data.proto";
 import "rec_room/persistence/persistence_view_data.proto";
 
+option csharp_namespace = "RecRoom.Creation.Protobuf";
+
 message TemplateSpawnRequestData {
-    rec_room.SpawnableTemplateData spawnable_template_data = 1;
-    TemplateCostInfoData cost_info_data = 2;
-    bool assign_new_ids = 3;
-    uint32 parent_id = 4;
-    bytes circuit_graph_id = 5;
-    TemplateSpawnTransformData spawn_transform_data = 6;
-    TemplateSpawnTransformData origin_scope_transform_data = 7;
-    int32 serialization_reason = 8;
-	
-	
-    bool DEPRECATED_skip_culling = 9;
+  rec_room.SpawnableTemplateData spawnable_template_data = 1;
+  TemplateCostInfoData cost_info_data = 2;
+  bool assign_new_ids = 3;
+  uint32 parent_id = 4;
+  bytes circuit_graph_id = 5;
+  TemplateSpawnTransformData spawn_transform_data = 6;
+  TemplateSpawnTransformData origin_scope_transform_data = 7;
+  int32 serialization_reason = 8;
+
+  bool DEPRECATED_skip_culling = 9;
 }
 
 message TemplateSpawnResponseData {
-    repeated bytes spawned_object_guids = 2;
-    repeated GuidMapping old_to_new_id_map = 3;
-    uint32 root_count = 4;
+  repeated bytes spawned_object_guids = 2;
+  repeated GuidMapping old_to_new_id_map = 3;
+  uint32 root_count = 4;
 }
 
-message GuidMapping{
-    bytes Original = 1;
-    bytes New = 2;
+message GuidMapping {
+  bytes Original = 1;
+  bytes New = 2;
 }
 
 message TemplateCostInfoData {
-    int32 ink_cost = 1;
-    int32 lights_cost = 2;
-    int32 ai_cost = 3;
-    int32 num_chips = 4;
-    int32 num_cloud_variables = 5;
+  int32 ink_cost = 1;
+  int32 lights_cost = 2;
+  int32 ai_cost = 3;
+  int32 num_chips = 4;
+  int32 num_cloud_variables = 5;
 }
 
 message TemplateSpawnTransformData {
-    core.Vector3Data position = 1;
-    core.QuaternionData rotation = 2;
-    float scale = 3;
+  core.Vector3Data position = 1;
+  core.QuaternionData rotation = 2;
+  float scale = 3;
 }

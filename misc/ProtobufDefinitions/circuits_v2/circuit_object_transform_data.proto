@@ -1,14 +1,14 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/shared/rec_room/circuits_quat_data.proto";
 import "circuits/shared/rec_room/circuits_vec3_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message CircuitObjectTransformData {
   circuits.CircuitsVec3Data local_position = 2;
   circuits.CircuitsQuatData local_rotation = 3;
 
-  
   bytes DEPRECATED_id = 1;
 }

@@ -1,24 +1,21 @@
 syntax = "proto3";
 package circuits_v2;
-option csharp_namespace = "CircuitsV2.Protobuf";
 
 import "circuits/shared/api/id_128_data.proto";
-
 import "circuits/shared/utilities/soa_id_32_data.proto";
-
 import "circuits/static/core/tree_system/tree_sys_data.proto";
-
-import "circuits_v2/graph/in_out_graph_inst_data.proto";
-import "circuits_v2/graph/state_machine_graph_inst_data.proto";
-import "circuits_v2/graph/behavior_graph_inst_data.proto";
-
 import "circuits_v2/behaviors/behaviors_state_data.proto";
 import "circuits_v2/circuit_graph_entities_data.proto";
+import "circuits_v2/custom_properties_state_data.proto";
 import "circuits_v2/function_decl_inst_data.proto";
 import "circuits_v2/function_def_graph_inst_data.proto";
+import "circuits_v2/graph/behavior_graph_inst_data.proto";
+import "circuits_v2/graph/in_out_graph_inst_data.proto";
+import "circuits_v2/graph/state_machine_graph_inst_data.proto";
 import "circuits_v2/messages/messages_state_data.proto";
-import "circuits_v2/custom_properties_state_data.proto";
 import "circuits_v2/room_assets_state_data.proto";
+
+option csharp_namespace = "CircuitsV2.Protobuf";
 
 message CircuitGlobalEntitiesData {
   circuits.TreeSysData graph_hierarchy = 1;

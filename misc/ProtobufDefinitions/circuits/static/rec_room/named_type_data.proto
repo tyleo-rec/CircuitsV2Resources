@@ -1,10 +1,11 @@
 syntax = "proto3";
 package circuits;
-option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
 
 import "circuits/static/ev/circuit_type_data.proto";
 
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
 message NamedTypeData {
-    string name = 1;
-    CircuitTypeData type = 2;
+  string name = 1;
+  CircuitTypeData type = 2;
 }

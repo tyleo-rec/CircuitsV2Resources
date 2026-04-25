@@ -1,8 +1,9 @@
 syntax = "proto3";
 package rec_room;
-option csharp_namespace = "RecRoom.Protobuf";
 
 import "rec_room/persistence/ranged_weapon_prop_data.proto";
+
+option csharp_namespace = "RecRoom.Protobuf";
 
 message ProjectileLauncherData {
   int32 projectile_index = 1;

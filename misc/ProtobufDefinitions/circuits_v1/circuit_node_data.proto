@@ -1,10 +1,11 @@
 syntax = "proto3";
 package circuits_v1;
-option csharp_namespace = "RecRoom.CircuitsV1.Protobuf";
 
 import "circuits_v1/circuit_link_data.proto";
 import "circuits_v1/node_transform_data.proto";
 import "circuits_v1/slot_data.proto";
+
+option csharp_namespace = "RecRoom.CircuitsV1.Protobuf";
 
 message CircuitNodeData {
   string node_name = 1;

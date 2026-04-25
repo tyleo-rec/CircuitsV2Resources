@@ -1,0 +1,18 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/test_integer_entity_core_data.proto";
+import "circuits_v2/test_integer_entity_provider_data.proto";
+
+message EntityDefinitionData {
+  int32 idx = 1;
+  int32 contextIndex = 2;
+  int32 scope = 3;
+  oneof entity {
+    TestIntegerEntityCoreData test_integer_entity = 16;
+  }
+  oneof entity_data {
+    TestIntegerEntityProviderData test_integer_entity_data = 17;
+  }
+}

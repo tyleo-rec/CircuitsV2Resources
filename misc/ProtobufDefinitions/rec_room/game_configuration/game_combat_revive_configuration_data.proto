@@ -1,0 +1,18 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameCombatReviveConfigurationData {
+  float required_delay = 1;
+
+  float max_revive_normalized_health = 2;
+  float min_revive_normalized_health = 3;
+  float multiplier_per_revive_normalized_health = 4;
+
+  bool pickup_tools_on_revive = 5;
+
+  float reviver_invincibility_duration = 6;
+  float revivee_invincibility_duration = 7;
+
+  float handshake_revive_hold_duration = 8;
+}

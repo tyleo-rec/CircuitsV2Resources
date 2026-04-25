@@ -1,0 +1,11 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
+import "circuits/shared/rec_room/circuits_quat_data.proto";
+import "circuits/shared/rec_room/circuits_vec3_data.proto";
+
+message RRNodeData {
+    CircuitsVec3Data local_position = 1;
+    CircuitsQuatData local_rotation = 2;
+}

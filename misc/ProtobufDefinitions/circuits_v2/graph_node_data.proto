@@ -1,0 +1,32 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+import "circuits_v2/deprecated/DEPRECATED_dictionary_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_keyed_input_node_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_keyed_node_desc_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_keyed_output_node_data.proto";
+
+import "circuits_v2/node_desc_data.proto";
+
+message GraphNodeData {
+  core.GuidData inner_graph_id = 13;
+  core.GuidData in_bus_id = 14;
+  core.GuidData out_bus_id = 15;
+  repeated NodeDescData node_descs = 12;
+
+  
+  bytes DEPRECATED_inner_graph_id = 1;
+  DEPRECATED_DictionaryData DEPRECATED_input_nodes_0 = 2;
+  DEPRECATED_DictionaryData DEPRECATED_output_nodes_0 = 3;
+  DEPRECATED_ListDictionaryData DEPRECATED_node_descs_0 = 4;
+  repeated DEPRECATED_KeyedInputNodeData DEPRECATED_input_nodes_1 = 5;
+  repeated DEPRECATED_KeyedOutputNodeData DEPRECATED_output_nodes_1 = 6;
+  repeated DEPRECATED_KeyedNodeDescData DEPRECATED_node_descs_1 = 7;
+  repeated DEPRECATED_KeyedInputNodeData DEPRECATED_in_bus_groups = 8;
+  repeated DEPRECATED_KeyedOutputNodeData DEPRECATED_out_bus_groups = 9;
+  bytes DEPRECATED_in_bus_id = 10;
+  bytes DEPRECATED_out_bus_id = 11;
+}

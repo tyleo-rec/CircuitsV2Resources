@@ -1,0 +1,16 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+message DEPRECATED_EventRegistrationData {
+  core.GuidData registered_to_context_id = 5;
+  core.GuidData event_definition_id = 6;
+
+  
+  bytes DEPRECATED_registered_to_context_id = 1;
+  bytes DEPRECATED_event_definition_id = 2;
+  bool DEPRECATED_is_global = 3;
+  bool DEPRECATED_is_built_in = 4;
+}

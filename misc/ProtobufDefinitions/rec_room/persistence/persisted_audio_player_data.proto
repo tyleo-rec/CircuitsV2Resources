@@ -1,0 +1,17 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message PersistedAudioPlayerData {
+  bool loop = 1;
+  bool use_spatial_audio = 2;
+  bool interrupt_current_sound = 3;
+  int32 channel = 5;
+  float speed = 6;
+  float volume = 7;
+  float max_rolloff = 8;
+  int32 rolloff_curve = 9;
+  bool doppler_enabled = 10;
+
+  bool DEPRECATED_play_for_all = 4;
+}

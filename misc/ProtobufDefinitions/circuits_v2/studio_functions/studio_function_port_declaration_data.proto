@@ -1,0 +1,25 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message StudioFunctionPortDeclarationData {
+  string name = 1;
+  StudioFunctionParameterType type = 2;
+
+  enum StudioFunctionParameterType {
+    bool = 0;
+    float = 1;
+    int = 2;
+    short = 3;
+    string = 4;
+    uint = 5;
+    ushort = 6;
+    Color = 7;
+    Color32 = 8;
+    Vector2 = 9;
+    Vector3 = 10;
+    Quaternion = 11;
+    UnityEngineObject = 12;
+    RecNetImage = 13;
+  }
+}

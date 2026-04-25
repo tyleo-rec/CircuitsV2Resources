@@ -1,0 +1,10 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message StateMachineGraphInstData {
+  int32 in_out_circuit_graph_id = 1;
+  int32 default_state = 2;
+  bool is_synced = 3;
+  bool has_default = 4;
+}

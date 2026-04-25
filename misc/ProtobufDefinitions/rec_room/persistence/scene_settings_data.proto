@@ -1,0 +1,15 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message SceneSettingsData {
+  bytes mood_id = 1;
+  bool movement_blockers_disabled = 2; 
+  bool enforce_host_only_areas = 3;
+  bool show_gadgets_to_everyone = 4;
+  bool disable_directional_voice_chat = 5;
+  bool use_new_materials = 6;
+  bool remove_griefable_chips = 7;
+  int32 load_edit_ready_preference = 8;
+  bool roomie_disabled = 9;
+}

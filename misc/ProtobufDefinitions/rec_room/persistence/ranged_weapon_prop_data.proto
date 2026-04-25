@@ -1,0 +1,37 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message RangedWeaponPropData {
+  ProjectileDamageData DEPRECATED_projectile_damage = 1;
+  int32 DEPRECATED_projectile_color = 2;
+  bool auto_fire = 3;
+  bool aim_assist = 4;
+  bool projectile_magnetism = 5;
+  float maximum_firing_rate = 6;
+  float maximum_auto_fire_rate = 7;
+  float projectile_spread_multiplier = 8;
+  float impact_force_multiplier = 9;
+  float recoil_multiplier = 10;
+  int32 default_total_ammunition = 11;
+  int32 magazine_size = 12;
+  bool infinite_ammo = 13;
+  bool disable_reload = 14;
+  bool reset_on_ammo_exhaustion = 15;
+}
+
+message ProjectileDamageData {
+  int32 head_damage = 1;
+  int32 torso_damage = 2;
+  int32 hand_damage = 3;
+  int32 object_damage = 4;
+}
+
+message SharedRangedWeaponData {
+  ProjectileDamageData projectile_damage = 1;
+  int32 projectile_color = 2;
+  float projectile_speed = 3;
+  float projectile_lifetime_seconds = 4;
+  bool gravity = 5;
+  bool sfx = 6;
+}

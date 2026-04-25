@@ -1,0 +1,16 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message RangedWeaponData {
+  int32 ammo_magazine_capacity = 1;
+  int32 ammo_total_capacity = 2;
+  bool reset_on_total_ammo_exhaustion = 3;
+  float projectile_damage = 4;
+  float rate_of_fire = 5;
+  float automatic_rate_of_fire = 6;
+  float max_projectile_speed = 7;
+  float critical_hit_damage_multiplier = 8;
+  float explosive_damage_radius = 9;
+  float explosive_damage_delay = 10;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
+import "circuits/static/ev/ev_static_state_sys_data.proto";
+import "circuits/static/rec_room/rr_graphs_data.proto";
+
+message RRStaticStateSysData {
+    RRGraphsData rr_graphs = 1;
+    EVStaticStateSysData ev_static_state_sys = 2;
+    int32 root_graph_id = 3;
+}

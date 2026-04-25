@@ -1,0 +1,11 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message HealthPotionData {
+  float health_restore_amount = 1;
+  float health_restore_duration = 2;
+
+  float shield_restore_amount = 3;
+  float shield_restore_duration = 4;
+}

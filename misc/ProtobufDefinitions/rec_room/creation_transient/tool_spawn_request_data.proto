@@ -1,0 +1,14 @@
+syntax = "proto3";
+package creation;
+option csharp_namespace = "RecRoom.Creation.Protobuf";
+
+import "core/vector3_data.proto";
+import "core/quaternion_data.proto";
+
+message ToolSpawnRequestData {
+    int32 spawnable_tool_type = 1;
+    core.Vector3Data position = 5;
+    core.QuaternionData rotation = 6;
+    float scale = 7;
+    bytes requested_persistence_id = 9;
+}

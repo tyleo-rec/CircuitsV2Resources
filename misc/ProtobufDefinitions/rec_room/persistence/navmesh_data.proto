@@ -1,0 +1,19 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+
+message NavMeshSerializedData {
+  NavMeshData graphs = 1;
+
+  
+  
+  bool unchanged = 2 [deprecated = true];
+  
+  int32 revision = 3;
+}
+
+message NavMeshData {
+  bytes graphs_data = 1;
+  uint64 hash = 2;
+}

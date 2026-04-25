@@ -1,0 +1,21 @@
+syntax = "proto3";
+package creation;
+option csharp_namespace = "RecRoom.Creation.Protobuf";
+
+import "core/guid_data.proto";
+import "rec_room/creation_transient/template_spawn_request_data.proto";
+
+
+message InventionSpawnRequestData {
+    int64 invention_id = 1; 
+    int32 version_num = 2;  
+    string data_blob_name = 3;
+    string data_blob_hash = 4;
+    creation.TemplateSpawnTransformData spawn_transform_data = 5;
+    core.GuidData circuit_graph_id = 6;
+    bool is_trial = 7;
+    bool check_anchor = 8;
+    bool replace_progression_table = 9;
+    uint32 parent_id = 10; 
+    repeated core.GuidData unity_sub_asset_ids = 11;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/quaternion_data.proto";
+import "circuits_v2/room_mood_data.proto";
+
+message RoomMoodSunData {
+
+  circuits_v2.RoomMoodData mood_base_data = 1;
+  int32 sun_color = 2;
+  float sun_intensity = 3;
+  float shadow_strength = 4;
+  float disc_Size = 5;
+  float reflection_intensity = 6;
+  int32 glow_color = 7;
+  float glow_size = 8;
+  float glow_strength = 9;
+  float glow_horizon = 10;
+  bool clip_sun = 11;
+  core.QuaternionData sun_direction = 12;
+  int32 sun_component_id = 13;
+  int32 circuit_sun_overrides = 14;
+}

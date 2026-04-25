@@ -1,0 +1,10 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameStatConfigurationData {
+  string stat_name = 1;
+  bool visible_in_ui = 2;
+  int32 stat_format = 3;
+  bool visible_in_hud = 4;
+}

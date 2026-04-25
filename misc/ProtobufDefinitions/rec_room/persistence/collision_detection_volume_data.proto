@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message CollisionDetectionVolumeData {
+  CollisionDetectionVolumeCapsuleGroupData capsule_collider_group_data = 1;
+  repeated string tags_to_ignore = 2;
+  bool DEPRECATED_sync_enabled_state = 3;
+  bool impact_decal_enabled = 4;
+  bool only_run_on_authority = 5;
+}
+
+message CollisionDetectionVolumeCapsuleGroupData {
+  float DEPRECATED_thickness = 1;
+  int32 num_spherecasts = 2;
+  bool support_stationary_collision_tests = 3;
+}
+

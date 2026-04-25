@@ -1,0 +1,8 @@
+syntax = "proto3";
+package core;
+option csharp_namespace = "RecRoom.Protobuf.Core";
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.MessageOptions {
+    bool utf8_serializable = 50000;
+}

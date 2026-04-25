@@ -1,0 +1,7 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
+message FunctionNodeData {
+    int32 function_graph_id = 1;
+}

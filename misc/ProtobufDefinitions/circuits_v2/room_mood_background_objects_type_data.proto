@@ -1,0 +1,10 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message RoomMoodBackgroundObjectsTypeData {
+  int32 variant = 1;
+  int32 color = 2;
+  float rotation = 3;
+  float transparency = 4;
+}

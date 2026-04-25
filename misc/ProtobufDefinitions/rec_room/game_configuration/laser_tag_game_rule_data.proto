@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message LaserTagGameRuleData {
+  int32 score_to_win = 1;
+  float max_game_duration = 2;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/deprecated/DEPRECATED_circuit_type_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_node_port_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_port_group_type.proto";
+
+message DEPRECATED_PortGroupData {
+    bytes port_group_id = 1;
+    DEPRECATED_PortGroupType port_group_type = 2;
+    repeated DEPRECATED_NodePortData node_port_datas = 3;
+    string port_group_name = 4;
+
+    
+    DEPRECATED_CircuitTypeData element_port_type = 100;
+    uint32 number_of_ports = 101;
+    string element_name = 102;
+
+    
+    string execName = 201;
+}

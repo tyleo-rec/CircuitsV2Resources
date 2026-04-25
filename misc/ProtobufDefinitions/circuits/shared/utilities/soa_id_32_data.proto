@@ -1,0 +1,9 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Shared.Utilities.Protobuf";
+
+message SOAId32Data {
+    repeated uint64 used = 1;
+    repeated int32 free = 2;
+    int32 next = 3;
+}

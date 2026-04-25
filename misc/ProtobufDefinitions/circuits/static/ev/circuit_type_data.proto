@@ -1,0 +1,82 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.EV.Protobuf";
+
+import "core/guid_data.proto";
+
+enum TypeKind {
+  Any = 0;
+
+  Boolean = 1;
+  Int32 = 2;
+  Single = 3;
+  String = 4;
+
+  Exec = 5;
+  Error = 6;
+
+  Array = 7;
+  Tuple = 8;
+  Union = 9;
+  Class = 10;
+  Function = 11;
+
+  TypeParameter = 12;
+  TypeParameterReference = 13;
+
+  AppliedGeneric = 14;
+
+  Intersection = 15;
+}
+
+message AppliedGenericTypeData {
+  CircuitTypeData original_type = 1;
+  repeated CircuitTypeData type_parameter_assignments = 2;
+}
+
+message CircuitTypeData {
+  TypeKind kind = 1;
+
+  AppliedGenericTypeData applied_generic_type = 2;
+  FunctionTypeData function_type = 3;
+  TypeParameterReferenceTypeData type_parameter_reference_type = 4;
+  TypeParameterTypeData type_parameter_type = 5;
+  ClassTypeData class_type = 6;
+}
+
+message ClassTypeData {
+  core.GuidData id = 1;
+  repeated CircuitTypeData type_parameters = 2;
+  map<string, PropertyData> properties = 3;
+  map<string, CircuitTypeData> functions = 4;
+  repeated CircuitTypeData baseClasses  = 5;
+}
+
+message FunctionTypeData {
+  repeated CircuitTypeData type_parameters = 1;
+  map<string, FunctionInputData> inputs = 2;
+  map<string, FunctionOutputData> outputs = 3;
+}
+
+message FunctionInputData {
+  CircuitTypeData type = 1;
+}
+
+message PropertyData {
+  CircuitTypeData type = 1;
+  bool get = 2;
+  bool set = 3;
+}
+
+message FunctionOutputData {
+  CircuitTypeData type = 1;
+}
+
+message TypeParameterReferenceTypeData {
+  string name = 1;
+}
+
+message TypeParameterTypeData {
+  string name = 1;
+  CircuitTypeData constraint = 2;
+}

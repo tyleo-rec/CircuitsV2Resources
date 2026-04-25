@@ -1,0 +1,13 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message SpawnPointV2Data {
+  bool spawn_point_active = 1;
+  float spawn_radius = 2;
+  float hazard_radius = 3;
+  repeated string tags_to_spawn = 4;
+  repeated string tags_to_avoid = 5;
+  repeated string roles_to_spawn = 6;
+  repeated string roles_to_avoid = 7;
+}

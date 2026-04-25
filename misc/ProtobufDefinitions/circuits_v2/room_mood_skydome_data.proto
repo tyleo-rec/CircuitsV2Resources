@@ -1,0 +1,16 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/room_mood_data.proto";
+
+message RoomMoodSkydomeData {
+  circuits_v2.RoomMoodData mood_base_data = 1;
+  int32 sky_bottom = 2;
+  int32 sky_top = 3;
+  int32 ground_bottom = 4;
+  int32 ground_top = 5;
+  int32 horizon_color = 6;
+  float horizon_size = 7;
+  float horizon_strength = 8;
+}

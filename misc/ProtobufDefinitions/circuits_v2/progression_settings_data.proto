@@ -1,0 +1,78 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/data_table/data_table_data.proto";
+import "core/guid_data.proto";
+
+message ProgressionManagerData {
+  ProgressionSettingsData settings_data = 1;
+  circuits_v2.DataTableData progression_table_data = 2;
+}
+
+message ProgressionSettingsData {
+
+  enum ShowRewards {
+	  All = 0;
+	  Claimed = 1;
+	  Next = 2;
+  }
+  
+  enum BackgroundType {
+    Image = 0;
+    Gradient = 1;
+  }
+
+  
+  bool room_levels_enabled = 1;
+  string level_name = 2;
+  string xp_name = 3;
+  int32 xp_color = 4;
+
+  
+  ProgressionHeaderTextData header_title = 5;
+  ProgressionHeaderTextData header_subtitle = 6;
+  int32 background_color = 7;
+  string background_image = 8;
+  bool show_progress_bar = 9;
+  ProgressionHeaderTextData label_text = 10;
+  bool show_xp_counter_text = 11;
+  bool show_level_progression_table = 12;
+  ShowRewards table_style = 13;
+  repeated ProgressionCurrencyData currencies = 14;
+
+  
+  bool display_room_level_on_nametag = 15;
+  
+  
+  bool show_player_facing_progression_page = 16;
+  BackgroundType background_type = 17;
+  
+  repeated ProgressionRoomInventoryItemData room_inventory_items = 18;
+}
+
+message ProgressionHeaderTextData {
+
+  enum TitleMode {
+    PlayerName = 0;
+	  RoomLevel = 1;
+	  FromTable = 2;
+  }
+
+  TitleMode title_mode = 1;
+  int32 table_column = 2;
+}
+
+message ProgressionCurrencyData {
+  core.GuidData currency_id = 1;
+  bool show_icon = 2;
+  bool show_name = 3;
+  int32 text_color = 4;
+}
+
+message ProgressionRoomInventoryItemData {
+  core.GuidData room_inventory_item_id = 1;
+  bool show_icon = 2;
+  bool show_name = 3;
+  int32 text_color = 4;
+}

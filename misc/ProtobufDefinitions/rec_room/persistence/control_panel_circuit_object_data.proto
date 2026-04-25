@@ -1,0 +1,14 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/vector3_data.proto";
+
+message ControlPanelCircuitObjectData {
+  bytes control_panel_graph_id = 2;
+  bytes control_panel_parent_graph_id = 3;
+  core.Vector3Data attach_point_local_position = 4;
+  core.Vector3Data attach_point_local_rotation = 5;
+  
+  bytes DEPRECATED_control_panel_node_id = 1;
+}

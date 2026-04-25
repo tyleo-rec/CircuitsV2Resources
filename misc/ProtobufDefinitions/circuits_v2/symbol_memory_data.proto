@@ -1,0 +1,16 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+import "circuits_v2/circuit_signal_data.proto";
+
+message SymbolMemoryData
+{
+  core.GuidData guid = 1;
+  CircuitSignalData home_value = 2;
+  
+  
+  CircuitSignalData home_value_from_room_load_snapshot_only = 3;
+}

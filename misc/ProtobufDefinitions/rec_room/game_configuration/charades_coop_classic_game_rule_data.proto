@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message CharadesCoOpClassicGameRuleData {
+  float max_game_duration = 1;
+  float max_round_duration = 2;
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message RoomDoorData {
+  enum RoomDoorTargetType {
+    UnknownType = 0;
+    Room = 1;
+    RoomScene = 2;
+  }
+
+  enum RoomDoorInviteMode {
+    UnknownMode = 0;
+    Normal = 1;
+    PartyAutoFollow = 2;
+    EveryoneAutoFollow = 3;
+  }
+
+  oneof Target {
+    int64 room_id_deprecated = 1; 
+    string target_name = 2;
+  }
+  RoomDoorTargetType target_type = 3;
+  RoomDoorInviteMode invite_mode = 4;
+  bool hide_sign = 5;
+  bool hide_door = 6;
+  bool force_new_instance = 7;
+}

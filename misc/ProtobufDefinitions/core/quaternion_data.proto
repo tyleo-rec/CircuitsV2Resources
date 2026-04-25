@@ -1,0 +1,10 @@
+syntax = "proto3";
+package core;
+option csharp_namespace = "RecRoom.Protobuf.Core";
+
+message QuaternionData {
+  float w = 1;
+  float x = 2;
+  float y = 3;
+  float z = 4;
+}

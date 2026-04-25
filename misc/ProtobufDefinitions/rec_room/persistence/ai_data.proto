@@ -1,0 +1,53 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message AIData {
+  oneof type_data {
+    AIPathPointData aiPathPoint = 1;
+    AIQuestSpawnerData aiQuestSpawner = 2;
+    AIMoveOrderData aiMoveOrder = 3;
+  }
+}
+
+message AIPathPointData {
+  repeated bytes connections = 1;
+  int32 faceDirection = 2;
+  float pauseTime = 3;
+}
+
+message AIQuestSpawnerData {
+  AIQuestCommonEnemyConfigData common_config = 1;
+  AIQuestDashConfigData dash_config = 2;
+  AIQuestProjectileConfigData projectile_config = 3;
+  AIQuestChargeConfigData charge_config = 4;
+  int32 team = 5;
+}
+
+message AIQuestCommonEnemyConfigData {
+  int32 max_health = 1;
+  float movement_speed = 2;
+  int32 health_bar_setting = 3;
+  int32 spawn_state = 4;
+  bool prevent_auto_aggro = 5;
+}
+
+message AIQuestDashConfigData {
+  float dash_speed = 1;
+  float dash_min_dist = 2;
+  float dash_max_dist = 3;
+}
+
+message AIQuestProjectileConfigData {
+  float projectile_speed = 1;
+}
+
+message AIQuestChargeConfigData {
+  float charge_distance = 1;
+  float charge_speed = 2;
+}
+
+message AIMoveOrderData {
+  repeated bytes path_connections = 1;
+  int32 interruptable_by_enemy = 2;
+}

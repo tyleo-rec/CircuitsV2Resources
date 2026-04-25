@@ -1,0 +1,33 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message SwingHandleData {
+  enum SwingHandleAnimation {
+    QUEST_SWORD = 0;
+    PITCHFORK = 1;
+    CUTLASS = 2;
+    FRYING_PAN = 3;
+    OAR = 4;
+    STOOL = 5;
+    FISH = 6;
+    PUSHBROOM = 7;
+    SHOVEL = 8;
+    PICKAXE = 9;
+    HANDAXE = 10;
+    PICKAXE_HEAVY = 11;
+  }
+
+  
+  enum SwingHandleIdlePose 
+  {
+    DEPRECATED = 0;
+  }
+
+  SwingHandleAnimation screens_animation = 1;
+  SwingHandleIdlePose DEPRECATED_screens_pose = 2;
+  bool supports_charged_attack = 3;
+  bool supports_continuous_swing = 4;
+  bool aim_assist_enabled = 5;
+  float vr_swing_detection_speed = 6;
+}

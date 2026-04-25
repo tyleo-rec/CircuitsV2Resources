@@ -1,0 +1,19 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message CircuitNodeData {
+  int32 circuit_node_id = 1;
+  
+  string node_message = 2 [deprecated = true];
+}
+
+message StateMachineStateData {
+  int32 state_idx = 1;
+  bytes state_machine_view_id = 2;
+  string name = 3;
+  int32 val1 = 4;
+  int32 val2 = 5;
+  int32 val3 = 6;
+  int32 min_time_in_state = 7;
+}

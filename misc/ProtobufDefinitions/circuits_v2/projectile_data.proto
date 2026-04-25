@@ -1,0 +1,25 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+message ProjectileDamageData {
+  int32 head_damage = 1;
+  int32 torso_damage = 2;
+  int32 hand_damage = 3;
+  int32 object_damage = 4;
+}
+
+message ProjectileData {
+  core.GuidData guid = 1;
+  int32 color_index = 2;
+  float speed = 3;
+  float lifetime_seconds = 4;
+  bool gravity = 5;
+  ProjectileDamageData damage = 6;
+  int32 count = 7;
+  float angle = 8;
+  float force = 9;
+  bool self_collisions_enabled = 10;
+}

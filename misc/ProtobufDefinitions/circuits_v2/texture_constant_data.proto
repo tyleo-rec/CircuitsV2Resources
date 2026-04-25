@@ -1,0 +1,8 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message TextureConstantData {
+  int32 width = 1;
+  int32 height = 2;
+}

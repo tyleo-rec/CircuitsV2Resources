@@ -1,0 +1,22 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message AudioStreamData {
+  enum Format {
+    UNCOMPRESSED = 0;
+    OPUS = 1;
+  }
+
+  
+  int32 channels = 1;
+  int32 sample_rate = 2;
+  int32 sample_count = 3;
+
+  
+  Format format = 10;
+  repeated float uncompressed_samples = 11;
+  bytes compressed_data = 12;
+  float compressed_bitrate = 13;
+  repeated int32 compressed_packet_sizes = 14;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message InvisibleCollisionData {
+  bool collide_with_players = 1;
+  bool collide_with_objects = 2;
+  repeated string filter_roles = 3;
+  bool restrict_roles = 4;
+  bool occludes_targeting = 5;
+}

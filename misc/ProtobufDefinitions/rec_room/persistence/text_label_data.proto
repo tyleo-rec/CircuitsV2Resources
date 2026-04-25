@@ -1,0 +1,13 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message TextLabelData {
+    int32 horizontal_alignment = 1;
+    int32 character_spacing = 2;
+    int32 line_spacing = 3;
+    int32 paragraph_spacing = 4;
+    float text_thickness = 5;
+    bool billboard = 6;
+    bool billboardPitch = 7;
+}

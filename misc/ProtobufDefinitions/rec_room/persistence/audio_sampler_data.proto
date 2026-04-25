@@ -1,0 +1,21 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/audio_stream_data.proto";
+
+message AudioSamplerBlobData {
+  int32 creator_id = 1;
+  float duration = 2;
+  AudioStreamData audio_data = 3;
+}
+
+message AudioSamplerPersistenceData {
+  string blob_name = 1;
+  
+  bool use_2d_audio = 3;
+  int32 channel = 4;
+  float start_offset = 5;
+  float end_offset = 6;
+  bool interrupt_current_sound = 7;
+}

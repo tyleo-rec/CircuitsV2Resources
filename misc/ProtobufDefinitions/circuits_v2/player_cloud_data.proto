@@ -1,0 +1,30 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits/static/ev/variant_data.proto";
+import "circuits_v2/persisted_value.proto";
+
+message PlayerCloudData {
+  repeated PersistedValue bools = 1;
+  repeated PersistedValue floats = 2;
+  repeated PersistedValue ints = 3;
+  repeated PersistedValue quaternions = 4;
+  repeated PersistedValue strings = 5;
+  repeated PersistedValue vector3s = 6;
+  repeated PersistedValue colors = 7;
+  repeated PersistedValue rec_net_image = 16;
+  repeated PersistedValue rec_net_meshes = 18;
+
+  repeated circuits.VariantData reference_objects = 8;
+
+  repeated PersistedValue list_bools = 9;
+  repeated PersistedValue list_floats = 10;
+  repeated PersistedValue list_ints = 11;
+  repeated PersistedValue list_quaternions = 12;
+  repeated PersistedValue list_strings = 13;
+  repeated PersistedValue list_vector3s = 14;
+  repeated PersistedValue list_colors = 15;
+  repeated PersistedValue list_rec_net_image = 17;
+  repeated PersistedValue list_rec_net_meshes = 19;
+}

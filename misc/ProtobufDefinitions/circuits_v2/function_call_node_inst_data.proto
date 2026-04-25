@@ -1,0 +1,8 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message FunctionCallNodeInstData {
+    int32 function_decl_id = 1;
+    bool has_function_decl_id = 2;
+}

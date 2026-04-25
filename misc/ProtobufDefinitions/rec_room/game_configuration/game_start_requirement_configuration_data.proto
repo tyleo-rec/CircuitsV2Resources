@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameStartRequirementConfigurationData {
+  int32 min_player_count = 1;
+  int32 min_team_count = 2;
+  int32 min_team_size = 3;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+
+message PlayerWorldBarData {
+  bool show = 1;
+  int32 value = 2;
+  int32 max_value = 3;
+  int32 color = 4;
+  bool animated = 5;
+}

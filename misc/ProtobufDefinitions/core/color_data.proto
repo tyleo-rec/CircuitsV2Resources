@@ -1,0 +1,10 @@
+syntax = "proto3";
+package core;
+option csharp_namespace = "RecRoom.Protobuf.Core";
+
+message ColorData {
+  float r = 1;
+  float g = 2;
+  float b = 3;
+  float a = 4;
+}

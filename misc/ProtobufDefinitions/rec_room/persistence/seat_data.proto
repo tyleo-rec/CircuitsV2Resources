@@ -1,0 +1,17 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message SeatData {
+  enum PostureType {
+    SITTING = 0;
+    STANDING = 1;
+  }
+
+  bool sitting_disabled = 1;
+  PostureType posture = 2;
+  bool camera_smoothing_enabled = 3;
+  bool camera_recentering_enabled = 4;
+  bool seat_collision_disabled = 5;
+  bool camera_uses_seat_rotation = 6;
+}

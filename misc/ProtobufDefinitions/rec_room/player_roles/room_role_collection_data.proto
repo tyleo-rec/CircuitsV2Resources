@@ -1,0 +1,16 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/player_roles/player_room_role_data.proto";
+
+message RoomRoleCollectionData {
+  repeated PlayerRoomRoleData room_roles = 1;
+  MigratedToRecNetVersion rec_net_migration_version = 2;
+}
+
+enum MigratedToRecNetVersion
+{
+    NotYetMigrated = 0;
+    MigratedToRecNet = 1;
+}

@@ -1,0 +1,31 @@
+
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/vector3_data.proto";
+
+message DialogueUIData {
+  core.Vector3Data billboard_pivot_offset = 1;
+  bool billboard_enabled = 2;
+  int32 background_color_index = 3;
+  int32 border_color_index = 4;
+  int32 text_color_index = 5;
+  int32 title_text_color_index = 6;
+  bool animated_text_enabled = 7;
+  int32 animation_speed = 8;
+  bool is_enabled = 9;
+  bool is_title_enabled = 10;
+  int32 title_position = 11;
+  bool play_interaction_sound_effects = 12;
+  bool play_hover_sound_effects = 13;
+  int32 styling_option = 14;
+  bool speech_arrow_enabled = 15;
+  int32 speech_arrow_position_option = 16;
+  int32 next_arrow_color_index = 17;
+  int32 opacity = 18;
+  bool buttons_can_show_while_animating = 19;
+  bool auto_size = 20;
+  int32 auto_size_anchor = 21;
+  bool billboard_pivot_offset_synchronized = 22;
+}

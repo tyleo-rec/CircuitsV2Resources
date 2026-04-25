@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message StreamingCameraPointData {
+  int32 transition_time = 1;
+  string name = 2;
+}

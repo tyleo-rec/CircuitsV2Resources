@@ -1,0 +1,68 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/color_data.proto";
+import "core/vector3_data.proto";
+
+
+message OverridableIntData {
+  bool overrides = 1;
+  int32 inner_value = 2;
+}
+
+message OverridableBoolData {
+  bool overrides = 1;
+  bool inner_value = 2;
+}
+
+message OverridableFloatData {
+  bool overrides = 1;
+  float inner_value = 2;
+}
+
+message OverridableStringData {
+  bool overrides = 1;
+  string inner_value = 2;
+}
+
+message OverridableVector3Data {
+  bool overrides = 1;
+  core.Vector3Data inner_value = 2;
+}
+
+message OverridableColorData {
+  bool overrides = 1;
+  core.ColorData inner_value = 2;
+}
+
+
+message OverridableListIntData {
+  bool overrides = 1;
+  repeated int32 inner_value = 2;
+}
+
+message OverridableListBoolData {
+  bool overrides = 1;
+  repeated bool inner_value = 2;
+}
+
+message OverridableListFloatData {
+  bool overrides = 1;
+  repeated float inner_value = 2;
+}
+
+message OverridableListStringData {
+  bool overrides = 1;
+  repeated string inner_value = 2;
+}
+
+message OverridableListVector3Data {
+  bool overrides = 1;
+  repeated core.Vector3Data inner_value = 2;
+}
+
+message OverridableListColorData {
+  bool overrides = 1;
+  repeated core.ColorData inner_value = 2;
+}

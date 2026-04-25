@@ -1,0 +1,45 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+import "circuits/static/api/static_edge_data.proto";
+
+import "circuits_v2/deprecated/DEPRECATED_circuit_serialization_version.proto";
+import "circuits_v2/deprecated/DEPRECATED_event_bus_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_circuit_graph_kind.proto";
+
+import "circuits_v2/circuit_node_data.proto";
+import "circuits_v2/player_graph_data.proto";
+import "circuits_v2/memory_data.proto";
+
+message CircuitGraphData {
+  core.GuidData graph_id = 6;
+
+  repeated circuits.StaticEdgeData edges = 5;
+
+  repeated CircuitNodeData node_datas = 11;
+  repeated CircuitGraphData child_graphs = 14;
+  uint64 determistic_guid_index = 15;
+
+  MemoryData variable_memory = 18;
+
+  core.GuidData active_player_definition_board = 20;
+  core.GuidData active_player_world_ui_config_node = 21;
+  int32 object_definition_id = 22;
+
+  PlayerGraphData player_graph_data = 23;
+
+  bool is_replicator_created = 24;
+
+  
+  bytes DEPRECATED_graph_id = 1;
+  bytes DEPRECATED_graph_template_id = 2;
+  DEPRECATED_CircuitSerializationVersion DEPRECATED_serialization_version = 3;
+  bytes DEPRECATED_parent_node_id = 4;
+  DEPRECATED_EventBusData DEPRECATED_event_bus_data = 10;
+  DEPRECATED_CircuitGraphKind DEPRECATED_kind = 16;
+  bytes DEPRECATED_active_player_definition_board = 17;
+  MemoryData DEPRECATED_variable_memory = 19;
+}

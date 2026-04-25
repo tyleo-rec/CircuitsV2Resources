@@ -1,0 +1,15 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message CostumeData {
+  repeated string add_player_role_on_equip = 1;
+  bool do_not_remove_player_role_on_unequip = 2;
+  bool do_not_show_equip_ui = 3;
+  bool hide_player_outfit = 4;
+  bool do_not_play_equip_sound_effect = 5;
+  int32 outfit_filter = 6;
+  bytes equip_locked_by_key_id = 7;
+  int32 animation_pose_index = 8;
+  int32 avatar_type_filter = 9;
+}

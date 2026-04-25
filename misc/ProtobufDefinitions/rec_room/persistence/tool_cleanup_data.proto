@@ -1,0 +1,17 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/vector3_data.proto";
+
+message ToolCleanupData {
+  message CleanupOverridesData {
+    core.Vector3Data position = 1;
+    core.Vector3Data rotation = 2;
+    float delay = 3;
+    bool disableDefaultVisualEffects = 4;
+  }
+
+  CleanupOverridesData overrides = 1;
+  bool is_allowed = 2;
+}

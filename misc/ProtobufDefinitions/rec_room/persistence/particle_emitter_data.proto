@@ -1,0 +1,12 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message ParticleEmitterData {
+  bytes effect_id = 1;
+  bool looping = 2;
+  bool use_sandbox_recolor = 3;
+  bool playing = 4;
+  float size = 5;
+  float speed = 6;
+}

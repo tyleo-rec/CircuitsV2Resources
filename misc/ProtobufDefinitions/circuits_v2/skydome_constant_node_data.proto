@@ -1,0 +1,13 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message SkydomeConstantNodeData {
+  int32 sky_bottom_color = 1;
+  int32 sky_top_color = 2;
+  int32 ground_bottom_color = 3;
+  int32 ground_top_color = 4;
+  int32 horizon_color = 5;
+  float horizon_size = 6;
+  float horizon_strength = 7;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message TextScreenData {
+  bool muted = 1;
+  int32 channels = 2;
+  bool show_timestamps = 3;
+  bool show_error_logs = 4;
+  bool sync_content = 5;
+}

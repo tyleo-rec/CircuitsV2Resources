@@ -1,0 +1,14 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/room_mood_data.proto";
+import "circuits_v2/room_mood_background_objects_type_data.proto";
+
+message RoomMoodBackgroundObjectsData {
+  circuits_v2.RoomMoodData mood_base_data = 1;
+  circuits_v2.RoomMoodBackgroundObjectsTypeData mountains = 2;
+  circuits_v2.RoomMoodBackgroundObjectsTypeData clouds = 3;
+  circuits_v2.RoomMoodBackgroundObjectsTypeData stars = 4;
+  circuits_v2.RoomMoodBackgroundObjectsTypeData moon = 5;
+}

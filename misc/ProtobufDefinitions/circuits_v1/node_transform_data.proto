@@ -1,0 +1,10 @@
+syntax = "proto3";
+package circuits_v1;
+option csharp_namespace = "RecRoom.CircuitsV1.Protobuf";
+
+import "core/vector3_data.proto";
+
+message NodeTransformData {
+  core.Vector3Data position = 1;
+  core.Vector3Data rotation = 2;
+}

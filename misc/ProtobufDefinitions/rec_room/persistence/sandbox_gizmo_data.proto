@@ -1,0 +1,53 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/tag_data.proto";
+
+message SandboxGizmoData {
+  AcceleratedMovementData accelerated_movement_data = 1;
+
+  oneof typeData {
+    PhysicsThrusterData thruster_data = 3;
+    SmoothLookAtData look_at_data = 5;
+    PistonData piston_data = 6;
+    RotatorData rotator_data = 7;
+  }
+}
+
+message PhysicsThrusterData {
+  int32 thrust_mode = 1;
+}
+
+message AcceleratedMovementData {
+  float acceleration_time = 1;
+  bool uses_target_value = 2;
+  bool LEGACY_cv2_scale_affects_speed = 3;
+  bool DEPRECATED_cv2_stop_on_reset = 4;
+}
+
+message SmoothLookAtData {
+  int32 smoothness = 1;
+  TagData tag_data = 2;
+  int32 tracking_mode = 3;
+  int32 target_type = 4;
+  string role_guid = 5;
+  int32 body_part = 6;
+}
+
+message PistonData {
+  float max_travel_distance = 1;
+  float target_distance = 2;
+  float default_speed = 4;
+  float default_acceleration = 5;
+
+  bool DEPRECATED_play_target_for_all = 3;
+}
+
+message RotatorData {
+  float target_rotation = 1;
+  float default_speed = 3;
+  float default_acceleration = 4;
+
+  bool DEPRECATED_play_target_for_all = 2;
+}

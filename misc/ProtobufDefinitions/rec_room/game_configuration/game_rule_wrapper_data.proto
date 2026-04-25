@@ -1,0 +1,26 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/game_configuration/charades_coop_classic_game_rule_data.proto";
+import "rec_room/game_configuration/charades_team_lightning_game_rule_data.proto";
+import "rec_room/game_configuration/dodgeball_game_rule_data.proto";
+import "rec_room/game_configuration/laser_tag_game_rule_data.proto";
+import "rec_room/game_configuration/paddleball_game_rule_data.proto";
+import "rec_room/game_configuration/paintball_capture_the_flag_game_rule_data.proto";
+import "rec_room/game_configuration/paintball_team_battle_game_rule_data.proto";
+import "rec_room/game_configuration/soccer_game_rule_data.proto";
+import "rec_room/game_configuration/stuntrunner_game_rule_data.proto";
+
+message GameRuleWrapperData {
+  CharadesCoOpClassicGameRuleData charades_coop_classic_game_rule_data = 1;
+  CharadesTeamLightningGameRuleData charades_team_lightning_game_rule_data = 2;
+  DodgeballGameRuleData dodgeball_game_rule_data = 3;
+  LaserTagGameRuleData laser_tag_game_rule_data = 4;
+  PaddleballGameRuleData paddleball_game_rule_data = 5;
+  PaintballCaptureTheFlagGameRuleData paintball_capture_the_flag_game_rule_data = 6;
+  PaintballTeamBattleGameRuleData paintball_team_battle_game_rule_data = 7;
+  
+  SoccerGameRuleData soccer_game_rule_data = 9;
+  StuntrunnerGameRuleData stuntrunner_game_rule_data = 10;
+}

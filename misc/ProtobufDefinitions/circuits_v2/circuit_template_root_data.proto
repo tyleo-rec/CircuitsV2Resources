@@ -1,0 +1,20 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/circuit_global_entities_data.proto";
+import "circuits_v2/circuit_graph_data.proto";
+import "circuits_v2/circuit_serialization_version.proto";
+import "circuits_v2/data_table/data_table_registry_data.proto";
+import "circuits_v2/data_table/data_table_data.proto";
+import "circuits_v2/studio_functions/studio_function_signature_registry_data.proto";
+
+message CircuitTemplateRootData {
+  CircuitSerializationVersion version = 1;
+  CircuitGraphData root = 2;
+  DataTableRegistryData data_table_registry_data = 3;
+  DataTableData progression_table_data = 4;
+  StudioFunctionSignatureRegistryData source_studio_function_signature_registry_data = 5;
+  CircuitGlobalEntitiesData entities = 6;
+  CircuitTemplateRootData behavior_template = 7;
+}

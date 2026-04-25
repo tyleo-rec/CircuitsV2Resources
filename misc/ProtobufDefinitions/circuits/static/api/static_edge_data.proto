@@ -1,0 +1,23 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.Api.Protobuf";
+
+import "circuits/shared/api/id_128_data.proto";
+
+message StaticEdgeData {
+  Id128Data src_node_id = 11;
+  int32 src_port_group_id = 7;
+  int32 src_port_id = 8;
+
+  Id128Data dst_node_id = 12;
+  int32 dst_port_group_id = 9;
+  int32 dst_port_id = 10;
+
+  
+  bytes DEPRECATED_src_node_id = 1;
+  bytes DEPRECATED_src_port_id = 2;
+  bytes DEPRECATED_dst_node_id = 3;
+  bytes DEPRECATED_dst_port_id = 4;
+  bytes DEPRECATED_src_node_desc_id = 5;
+  bytes DEPRECATED_dst_node_desc_id = 6;
+}

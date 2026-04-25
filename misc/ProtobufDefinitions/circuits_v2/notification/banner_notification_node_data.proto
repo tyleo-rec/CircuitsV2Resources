@@ -1,0 +1,15 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message BannerNotificationNodeData {
+  int32 position = 1;
+  int32 title_text_color = 2;
+  int32 title_background_color = 3;
+  int32 title_text_size = 4;
+  int32 main_text_color = 5;
+  int32 main_text_background_color = 6;
+  int32 main_text_size = 7;
+  string left_emoji = 8;
+  string right_emoji = 9;
+}

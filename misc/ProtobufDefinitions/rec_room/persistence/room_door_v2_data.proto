@@ -1,0 +1,13 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message RoomDoorV2Data {
+  string destination_room_name = 1;
+  string destination_subroom_name = 2;
+  string destination_welcome_mat_name = 3;
+  int32 destination_room_door_invite_mode = 4;
+  bool destination_force_new_instance = 5;
+  bool hide_sign = 6;
+  bool hide_door = 7;
+}

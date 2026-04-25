@@ -1,0 +1,7 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.Core.TreeSystem.Protobuf";
+
+message NodeChildrenData {
+    repeated int32 children = 1;
+}

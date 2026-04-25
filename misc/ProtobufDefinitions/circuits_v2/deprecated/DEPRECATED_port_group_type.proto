@@ -1,0 +1,10 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+enum DEPRECATED_PortGroupType {
+    BasicGroup = 0;
+    IndexBased = 1;
+    NameBased = 2;
+    ExecNameBased = 3;
+}

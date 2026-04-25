@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameTeamRadioConfigurationData {
+  float volume = 1;
+  float enter_distance = 2;
+  float exit_distance = 3;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message TexturedQuadData {
+  float aspectRatio = 1;
+  bool autoFitAspectRatio = 2;
+  int32 materialType = 3;
+}

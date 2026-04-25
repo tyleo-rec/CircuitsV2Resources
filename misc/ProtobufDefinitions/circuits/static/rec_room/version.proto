@@ -1,0 +1,12 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
+enum Version {
+  V0New = 0;
+
+  V1InitialVersion = 1;
+
+  option allow_alias = true;
+  LatestVersion = 1;
+}

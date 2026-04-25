@@ -1,0 +1,13 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message ConstantObjectiveMarkerData {
+  string friendly_name = 1;
+  int32 colorId = 2;
+  string label = 3;
+  bool label_enabled = 4;
+  bool distance_indicator_enabled = 5;
+  bool prioritize_distance_indicator = 6;
+  float proximity_fade_threshold = 7;
+}

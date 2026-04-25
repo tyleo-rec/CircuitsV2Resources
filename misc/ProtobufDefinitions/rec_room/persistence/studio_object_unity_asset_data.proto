@@ -1,0 +1,11 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+import "core/guid_data.proto";
+
+message StudioObjectUnityAssetData {
+    core.GuidData unity_sub_asset_id = 1;
+    repeated core.GuidData referenced_unity_asset_ids = 2;
+    bytes object_board_data = 3;
+    string object_board_signature = 4;
+}

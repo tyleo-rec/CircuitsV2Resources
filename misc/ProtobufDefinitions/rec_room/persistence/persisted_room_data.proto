@@ -1,0 +1,72 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "include/google/protobuf/timestamp.proto";
+
+import "circuits_v2/circuit_graph_data.proto";
+import "circuits_v2/circuit_root_data.proto";
+
+import "core/guid_data.proto";
+
+import "rec_room/persistence/deprecated/DEPRECATED_host_settings_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_sandbox_settings_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_game_settings_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_room_persistence_version.proto";
+
+import "rec_room/persistence/autosave_data.proto";
+import "rec_room/persistence/connectable_node_data.proto";
+import "rec_room/persistence/navmesh_data.proto";
+import "rec_room/persistence/persisted_room_version.proto";
+import "rec_room/persistence/persistence_view_data.proto";
+import "rec_room/persistence/scene_settings_data.proto";
+import "rec_room/persistence/tool_tag_settings_data.proto";
+
+import "rec_room/player_roles/game_role_collection_data.proto";
+import "rec_room/player_roles/room_role_collection_data.proto";
+import "circuits_v2/room_mood_fog_data.proto";
+import "circuits_v2/room_mood_sun_data.proto";
+import "circuits_v2/room_mood_background_objects_data.proto";
+import "circuits_v2/room_mood_skydome_data.proto";
+
+message PersistedRoomData {
+  DEPRECATED_RoomPersistenceVersion DEPRECATED_version = 1;
+  repeated PersistenceViewData persistence_views = 2;
+  google.protobuf.Timestamp last_save_time = 3;
+  string activity_id = 4;
+  string output_log = 5;
+  int64 sub_room_id = 6;
+
+  DEPRECATED_HostSettingsData DEPRECATED_host_settings = 16;
+  DEPRECATED_SandboxSettingsData DEPRECATED_sandbox_settings = 17;
+
+  bytes circuit_data = 18;
+  DEPRECATED_GameSettingsData DEPRECATED_game_settings = 19;
+
+  ToolTagSettingsData tool_tag_settings_data = 20;
+  ConnectableGraphData connectable_graph_data = 21;
+
+  GameRoleCollectionData game_role_data = 22;
+  RoomRoleCollectionData room_role_data = 23;
+
+  SceneSettingsData scene_settings_data = 24;
+  AutosaveData DEPRECATED_autosave_data = 25;
+
+  circuits_v2.CircuitGraphData DEPRECATED_circuit_v2_data = 26;
+  NavMeshData navmesh_data = 27;
+  circuits_v2.CircuitRootData circuit_v2_data = 28;
+
+  bytes object_model_data = 29;
+
+  PersistedRoomVersion version = 30;
+  bool creative_roles_enabled = 31;
+
+  circuits_v2.RoomMoodFogData room_fog_data = 32;
+  circuits_v2.RoomMoodSunData room_mood_sun_data = 33;
+  circuits_v2.RoomMoodBackgroundObjectsData room_mood_background_objects = 34;
+  circuits_v2.RoomMoodSkydomeData room_mood_skydome = 35;
+
+  core.GuidData ugc_localization_scope = 36;
+  
+  optional bool coordinate_beacons_enabled = 37;
+}

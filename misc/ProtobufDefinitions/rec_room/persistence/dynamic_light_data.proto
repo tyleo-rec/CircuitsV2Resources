@@ -1,0 +1,22 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message SpotlightData {
+  int32 angle_int = 1;
+  float angle = 2;
+}
+
+message DomeLightData {
+	float angle = 1;
+	float softness = 2;
+}
+
+message DynamicLightData {
+  int32 intensity_int = 1;
+  int32 range_int = 2;
+  bool emit = 3;
+  float intensity = 4;
+  float range = 5;
+  float specular = 6;
+}

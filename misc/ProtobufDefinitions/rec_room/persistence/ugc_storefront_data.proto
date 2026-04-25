@@ -1,0 +1,18 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message UGCStorefrontCarouselData {
+  string name = 1;
+  repeated string purchasableItemIds = 2;
+}
+
+message UGCStorefrontData {
+  repeated UGCStorefrontCarouselData carousels = 1;
+  int32 featuredCarouselRowCount = 2;
+  int32 featuredCarouselColumnCount = 3;
+  bool isThisRoomStorefront = 4;
+  bool isBackgroundHidden = 5;  
+  bool isEnabled = 6;
+  bool isSynced = 7;
+}

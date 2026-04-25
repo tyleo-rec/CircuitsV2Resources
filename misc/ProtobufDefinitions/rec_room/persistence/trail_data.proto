@@ -1,0 +1,15 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message TrailData {
+  bool enabled = 1;
+  float fadeInDuration = 2;
+  float fadeOutDuration = 3;
+  float lifetime = 4;
+  float opacity = 5;
+  int32 material = 6;
+  int32 widthCurve = 7;
+  int32 gradient = 8;
+  bool alignToCameraEnabled = 9;
+}

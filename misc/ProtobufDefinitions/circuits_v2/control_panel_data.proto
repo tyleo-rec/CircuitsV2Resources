@@ -1,0 +1,10 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message ControlPanelData {
+  int32 attachment_mode = 3;
+
+  bool DEPRECATED_is_detached_from_object = 1;
+  bool DEPRECATED_was_attached_to_beta_object = 2;
+}

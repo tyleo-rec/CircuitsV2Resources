@@ -1,0 +1,12 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message SynchronizedEventData {
+  bytes graph_id = 1;
+  bytes event_id = 2;
+  bytes data = 3;
+  uint32 environment_network_id = 4;
+  uint32 environment_context = 5;
+  uint32 environment_type = 6;
+}

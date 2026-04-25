@@ -1,0 +1,140 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/game_configuration/game_combat_auto_heal_configuration_data.proto";
+import "rec_room/game_configuration/game_combat_down_but_not_out_configuration_data.proto";
+import "rec_room/game_configuration/game_combat_enemy_ui_configuration_data.proto";
+import "rec_room/game_configuration/game_combat_friendly_fire_configuration_data.proto";
+import "rec_room/game_configuration/game_combat_player_ui_configuration_data.proto";
+import "rec_room/game_configuration/game_combat_respawn_configuration_data.proto";
+import "rec_room/game_configuration/game_combat_revive_configuration_data.proto";
+import "rec_room/game_configuration/game_start_requirement_configuration_data.proto";
+import "rec_room/game_configuration/game_stat_configuration_data.proto";
+import "rec_room/game_configuration/game_team_configuration_data.proto";
+import "rec_room/game_configuration/game_team_player_visual_configuration_data.proto";
+import "rec_room/game_configuration/game_team_radio_configuration_data.proto";
+
+message GameConfigurationData {
+  
+  
+  string name = 1;
+  
+  GameStartRequirementConfigurationData manual_start_requirement_configuration_data = 3;
+  GameStartRequirementConfigurationData automatic_start_requirement_configuration_data = 4;
+  bool join_in_progress_supported = 5;
+  bool automatic_start_supported = 6;
+  int32 load_priority = 7;
+  bool respawn_on_game_start_supported = 8;
+  bool respawn_on_game_over_supported = 9;
+  bool pregame_voice_over_supported = 10;
+  bool results_voice_over_supported = 11;
+  bool end_game_if_start_requirements_not_met = 12;
+  bool countdown_voice_over_supported = 13;
+  float game_start_delay = 14;
+  float end_game_results_duration = 15;
+  bool game_mode_notifications_supported = 16;
+  bool in_game_player_notifications_supported = 17;
+  bool reload_instance_after_postgame_results = 18;
+
+
+  
+  
+  repeated GameTeamConfigurationData team_configurations = 101;
+  int32 team_selection_method = 102;
+  bool team_change_during_game_supported = 103;
+  bool explicit_team_selection_supported = 104;
+  bool spectating_supported = 105;
+  bool respawn_on_team_change_during_game_supported = 109;
+  bool show_open_slots_on_scoreboard = 110;
+  bool clear_teams_after_game = 111;
+  bool end_game_when_all_dead = 112;
+
+  
+  GameTeamPlayerVisualConfigurationData team_player_visual_configuration_data = 106;
+
+  
+  bool team_radios_supported = 107;
+  bool team_radios_crossteam_supported = 113;
+  GameTeamRadioConfigurationData team_radio_configuration_data = 108;
+
+  
+  
+  
+  repeated GameStatConfigurationData stat_configurations = 202;
+  bool persist_stats_on_game_start = 203;
+
+  
+  
+  int32 max_health = 301;
+  int32 max_shield = 302;
+
+  bool auto_heal_supported = 303;
+  GameCombatAutoHealConfigurationData auto_heal_configuration_data = 304;
+
+  bool dbno_supported = 305;
+  GameCombatDownButNotOutConfigurationData dbno_configuration_data = 306;
+
+  bool auto_respawn_supported = 307;
+  GameCombatRespawnConfigurationData respawn_configuration_data = 308;
+
+  int32 revive_mode = 309;
+  GameCombatReviveConfigurationData revive_configuration_data = 310;
+
+  GameCombatFriendlyFireConfigurationData friendly_fire_configuration_data = 311;
+
+  GameCombatPlayerUIConfigurationData combat_player_ui_configuration_data = 312;
+  GameCombatEnemyUIConfigurationData combat_enemy_ui_configuration_data = 313;
+
+  bool monochrome_dead_effect_supported = 314;
+  bool monochrome_dbno_effect_supported = 315;
+  bool damage_red_flash_effect_supported = 316;
+
+  bool dead_persistent_notification_supported = 317;
+  bool DEPRECATED_dbno_persistent_notification_supported = 318;
+  bool DEPRECATED_revive_cooldown_persistent_notification_supported = 319;
+  bool DEPRECATED_respawn_timer_persistent_notification_supported = 320;
+
+  
+
+  bool combat_hud_supported = 322;
+
+  bool suppress_weapon_damage = 323;
+  
+  bool suppress_all_damage_to_player = 324;
+  bool enemies_ignore_spectators = 325;
+  
+  
+  bool default_hit_feedback_supported = 350;
+  bool default_revive_feedback_supported = 351;
+  bool default_downed_opponent_feedback_supported = 352;
+  bool default_downed_local_player_feedback_supported = 353;
+  bool default_downed_teammate_feedback_supported = 354;
+
+  
+  
+  int32 spawn_point_selection_mode = 401;
+
+  
+  
+  bytes main_hand_spawn_equipment_type = 501;
+  bytes off_hand_spawn_equipment_type = 502;
+
+  bool reset_tools_on_game_start_supported = 503;
+  int32 broken_tool_behavior = 504;
+  bool infinite_reserve_ammmunition_supported = 505;
+
+  bool tool_beacons_supported = 507;
+
+  
+  
+  bool movement_buffer_distance_restricted = 601;
+
+  
+  
+  bool out_of_bounds_supported = 701;
+  float out_of_bounds_grace_period = 702;
+  float out_of_bounds_max_duration = 703;
+  bool out_of_bounds_spectators_supported = 704;
+  bool down_out_of_bounds_players = 705;
+}

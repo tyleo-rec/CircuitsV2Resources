@@ -1,0 +1,174 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/color_data.proto";
+import "core/vector3_data.proto";
+
+import "rec_room/audio_stream_data.proto";
+import "rec_room/persistence/deprecated/DEPRECATED_outfit_data.proto";
+import "rec_room/persistence/avatar_data.proto";
+
+message HolotarBlobData {
+  enum Version {
+    
+    INITIAL = 0;
+
+    
+    STRIPPED_TEAM_OUTFITS = 1;
+
+    
+    
+    
+    ADDED_TIMESTAMPS_TEAM_COLORS_AND_TOOL_HOLDING_STATE = 3;
+
+    
+    ADDED_AVATAR_SYSTEM_STREAM = 4;
+
+    
+    AVATAR_DATA_IN_LOCAL_SPACE = 5;
+  }
+
+  message PoseStreamData {
+    repeated PoseTransformData poses = 1;
+  }
+
+  message HandPoseStreamData {
+    message HandPoseData {
+      PoseTransformData transform = 1;
+      bool is_menu_hand_visible = 2;
+      bool thumbs_up_active = 3;
+      float open_closed_axis = 4;
+      bool is_holding_tool = 5;
+    }
+
+    repeated HandPoseData poses = 1;
+  }
+
+  message AvatarSystemStreamData {
+    message AvatarSystemUpdateData {
+      
+      
+      reserved 1; 
+      bool is_local = 2;
+      float desired_avatar_scale = 3;
+
+      
+      
+
+      
+      
+      
+      core.Vector3Data player_up = 4;
+
+      
+      
+      
+      
+      core.Vector3Data forward_yaw_reference = 5;
+
+      
+      
+      
+      
+      optional core.Vector3Data torso_forward_override = 6;
+
+      
+      
+      
+      optional core.Vector3Data pelvis_anchor_position = 7;
+
+      
+      
+      bool is_player_steering = 8;
+      bool is_player_seated = 9;
+      bool is_player_flying = 10;
+      bool is_player_wall_climbing = 11;
+      optional core.Vector3Data wall_climb_normal = 12;
+      bool is_player_wall_running = 13;
+      optional core.Vector3Data wall_run_wall_tangent = 14;
+      bool is_player_clambering = 15;
+      optional core.Vector3Data clamber_wall_normal = 16;
+      float clamber_time_remaining = 17;
+      optional core.Vector3Data player_steering_velocity = 18;
+      bool is_player_falling = 19;
+      bool is_player_starting_slide = 20;
+      bool is_player_sliding = 21;
+      bool is_player_landing = 22;
+      bool is_player_seated_in_sitting_posture = 23;
+      bool is_player_wall_run_on_right_side = 24;
+      bool is_player_starting_jump = 25;
+      bool is_player_starting_teleport = 26;
+      bool is_player_teleporting = 27;
+      bool is_player_crouching = 28;
+      bool is_player_prone = 29;
+      optional core.Vector3Data prone_normal = 30;
+        
+      
+      
+      float right_hand_ik_weight = 31;
+      float left_hand_ik_weight = 32;
+
+      float timestamp = 33;
+
+      bool do_ground_offset = 34;
+    }
+
+    repeated AvatarSystemUpdateData avatar_system_update_data = 1;
+
+    repeated PoseTransformData tracking_space_poses = 2;
+
+    core.Vector3Data root_to_tracking_space_rotation = 3;
+  }
+
+  message PlayerPoseData {
+    int32 samples_per_second = 1;
+
+    PoseStreamData head_poses = 2;
+    PoseStreamData torso_poses = 3;
+    HandPoseStreamData left_hand_poses = 4;
+    HandPoseStreamData right_hand_poses = 5;
+
+    optional AvatarSystemStreamData avatar_system_update = 6;
+  }
+
+  message PoseTransformData {
+    core.Vector3Data local_position = 1;
+    core.Vector3Data local_rotation = 2;
+    float timestamp = 3;
+  }
+
+  int32 creator_id = 1;
+  float duration = 2;
+  PlayerPoseData pose_data = 3;
+  DEPRECATED_OutfitData outfit_data = 4;
+  AudioStreamData audio_data = 5;
+  int32 voip_filter = 6;
+
+  Version version = 7;
+
+  repeated ColorStateData team_color_states = 8;
+
+  AvatarData avatar_data = 9;
+
+  bool was_player_using_screen = 10;
+}
+
+message ColorStateData {
+  float timestamp = 1;
+  core.ColorData color = 2;
+}
+
+message HolotarPersistenceData {
+  
+  string blob_name = 1;
+  bool billboard = 2;
+  bool hide_effects = 3;
+  float audio_volume = 4;
+  bool is_looping = 5;
+  bool uses_2D_audio = 6;
+  float playback_puppet_scale = 7;
+  float playback_puppet_vertical_offset = 8;
+  bool mirrored_when_recording = 9;
+  int32 audio_channel = 10;
+}

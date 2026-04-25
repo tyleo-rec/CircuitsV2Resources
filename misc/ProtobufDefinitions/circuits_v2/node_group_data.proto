@@ -1,0 +1,20 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/deprecated/DEPRECATED_dictionary_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_keyed_input_port_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_keyed_output_port_data.proto";
+
+import "circuits_v2/input_port_data.proto";
+
+message NodeGroupData {
+  repeated InputPortData inputs = 5;
+  repeated int32 first_input_indices = 6;
+
+  
+  DEPRECATED_ListDictionaryData DEPRECATED_input_ports_0 = 1;
+  DEPRECATED_ListDictionaryData DEPRECATED_output_ports_0 = 2;
+  repeated DEPRECATED_KeyedInputPortData DEPRECATED_input_ports_1 = 3;
+  repeated DEPRECATED_KeyedOutputPortData DEPRECATED_output_ports_1 = 4;
+}

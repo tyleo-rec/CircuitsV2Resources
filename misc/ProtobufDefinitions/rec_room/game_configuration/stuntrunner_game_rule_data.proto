@@ -1,0 +1,11 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message StuntrunnerGameRuleData {
+  bool music_enabled = 1;
+  bool announcer_enabled = 2;
+  bool ambience_enabled = 3;
+  bool spotlights_enabled = 4;
+  int32 max_course_time = 5;
+}

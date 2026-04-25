@@ -1,0 +1,19 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+message RoomMoodData {
+
+  enum RoleFilterModeType {
+    ENABLED = 0;
+    DISABLED = 1;
+  }
+  
+  float blend_time = 1;
+  bool ease_in_out = 2;
+  RoleFilterModeType role_filter_mode = 3;
+  repeated core.GuidData filtered_roles = 4;
+  core.GuidData mood_id = 5;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameCombatDownButNotOutConfigurationData {
+  float DEPRECATED_max_value = 1;
+  float max_depletion_duration = 2;
+  float invincibility_duration = 3;
+}

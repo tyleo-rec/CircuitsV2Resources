@@ -1,0 +1,14 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message InteractionFilterData {
+  int32 interaction_mode = 1;
+
+  
+  bytes game_role_guids = 2;
+
+  
+  bool enabled = 3;
+  repeated string tags = 4;
+}

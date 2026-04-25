@@ -1,0 +1,12 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/quaternion_data.proto";
+import "core/vector3_data.proto";
+
+message InventionAnchorData {
+  bytes anchor_id = 1;
+  core.Vector3Data anchor_from_template_position = 2;
+  core.QuaternionData anchor_from_template_rotation = 3;
+}

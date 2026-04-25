@@ -1,0 +1,21 @@
+syntax = "proto3";
+package game_server;
+option csharp_namespace = "RecRoom.Protobuf.GameServer";
+
+message DebugActionData {
+  oneof payload {
+    PrintDebugLogPayloadData print_debug_log_payload_data = 1;
+    PrintCircuitsLogPayloadData print_circuits_log_payload_data = 2;
+  }
+}
+
+
+message PrintDebugLogPayloadData {
+    string message = 1;
+}
+
+
+
+message PrintCircuitsLogPayloadData {
+    string message = 1;
+}

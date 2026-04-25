@@ -1,0 +1,11 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.EV.Protobuf";
+
+import "circuits/static/core/graph_system/graph_sys_data.proto";
+import "circuits/static/core/tree_system/tree_sys_data.proto";
+
+message GraphsData {
+    TreeSysData tree = 1;
+    repeated GraphSysData items = 2;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message ExplosionEmitterData {
+  int32 explosion_color = 1;
+  float explosion_radius = 2;
+  int32 explosion_damage = 3;
+  bool sfx = 4;
+}

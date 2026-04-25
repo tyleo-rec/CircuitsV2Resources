@@ -1,0 +1,15 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/quaternion_data.proto";
+import "core/vector3_data.proto";
+
+message TransformData {
+  core.Vector3Data position = 1;
+  core.Vector3Data DEPRECATED_rotation = 2;
+  core.Vector3Data DEPRECATED_scale_non_uniform = 3;
+  bool DEPRECATED_is_sleeping = 4;
+  float scale = 5;
+  core.QuaternionData quaternion_rotation = 6;
+}

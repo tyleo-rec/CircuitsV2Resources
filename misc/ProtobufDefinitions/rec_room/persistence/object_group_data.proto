@@ -1,0 +1,82 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/vector3_data.proto";
+
+import "rec_room/transform_data.proto";
+
+
+message ObjectGroupDataCollectionData {
+  message ObjectGroupDataCollectionEntryData {
+    int32 photon_view_id = 1;
+    ObjectGroupData object_group = 2;
+
+    int32 revision = 3;
+  }
+
+  repeated ObjectGroupDataCollectionEntryData object_groups = 1;
+}
+
+message ObjectGroupData {
+  repeated bytes group_member_ids = 1;
+
+  oneof typeData {
+    CircuitGroupData circuit_group_data = 2;
+    AnimationData animation_data = 3;
+  }
+}
+
+message CircuitGroupData {
+  repeated CircuitGroupInterfaceNodeData input_interface_nodes = 1;
+  repeated CircuitGroupInterfaceNodeData output_interface_nodes = 2;
+  string name = 3;
+
+  
+  
+  repeated TransformData local_transforms = 4;
+}
+
+message CircuitGroupInterfaceNodeData {
+  CircuitGroupConnectionData internal_connection = 1;
+  CircuitGroupConnectionData external_connection = 2;
+  string name = 3;
+}
+
+message CircuitGroupConnectionData {
+  oneof typeData {
+    CircuitGroupCircuitReferenceData circuit_reference_data = 1;
+    CircuitGroupInterfaceNodeReferenceData interface_node_reference_data = 2;
+  }
+}
+
+message CircuitGroupCircuitReferenceData {
+  bytes circuit_node_id = 1;
+  int32 slot = 2;
+  bool is_input = 3;
+}
+
+message CircuitGroupInterfaceNodeReferenceData {
+  bytes circuit_group_id = 1;
+  int32 index = 2;
+  bool is_input = 3; 
+}
+
+
+message ObjectKeyFrameData {
+  core.Vector3Data position = 1;
+  core.Vector3Data rotation = 2;
+  int32 flags = 3;
+}
+
+message KeyFrameData {
+  float time = 1;
+  repeated ObjectKeyFrameData object_key_frames = 2;
+}
+
+message AnimationData {
+  repeated KeyFrameData key_frames = 2;
+  int32 speed_percentage = 5;
+  int32 priority = 6;
+  int32 flags = 7;
+}

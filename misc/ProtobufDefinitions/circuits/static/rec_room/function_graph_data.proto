@@ -1,0 +1,13 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
+import "circuits/static/rec_room/named_type_data.proto";
+
+message FunctionGraphData {
+    string name = 1;
+    repeated NamedTypeData inputs = 2;
+    repeated NamedTypeData outputs = 3;
+    int32 in_node_id = 4;
+    int32 out_node_id = 5;
+}

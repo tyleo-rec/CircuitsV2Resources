@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message CharadesTeamLightningGameRuleData {
+  int32 max_round_count = 1;
+  float performer_duration = 2;
+  float team_round_duration = 3;
+}

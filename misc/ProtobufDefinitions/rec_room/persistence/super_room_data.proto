@@ -1,0 +1,18 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "circuits_v2/cloud_data_ledger_data.proto";
+import "circuits_v2/progression_settings_data.proto";
+import "circuits_v2/reward_data.proto";
+
+import "rec_room/persistence/super_room_version.proto";
+
+message SuperRoomData {
+  SuperRoomVersion version = 2;
+  circuits_v2.CloudDataLedgerData cloud_data_ledger = 3;
+  repeated circuits_v2.RewardData reward_data = 4;
+  circuits_v2.ProgressionManagerData progression_manager_data = 5;
+
+  bytes DEPRECATED_cloud_data_ledger = 1;
+}

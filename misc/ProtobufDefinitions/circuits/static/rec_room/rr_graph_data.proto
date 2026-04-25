@@ -1,0 +1,14 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
+import "circuits/static/rec_room/function_node_data.proto";
+import "circuits/static/rec_room/rr_node_data.proto";
+import "circuits/shared/utilities/soa_id_32_data.proto";
+
+message RRGraphData {
+    repeated RRNodeData rr_nodes = 1;
+
+    SOAId32Data function_node_ids = 2;
+    repeated FunctionNodeData function_nodes = 3;
+}

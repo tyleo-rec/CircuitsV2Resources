@@ -1,0 +1,14 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameTeamPlayerVisualConfigurationData {
+  bool team_outfits_supported = 1;
+  bool team_name_in_feedback_supported = 2;
+  bool team_color_in_feedback_supported = 3;
+  int32 team_color_mode = 4;
+
+  
+  int32 teammate_beacon_mode = 5;
+  int32 opponent_beacon_mode = 6;
+}

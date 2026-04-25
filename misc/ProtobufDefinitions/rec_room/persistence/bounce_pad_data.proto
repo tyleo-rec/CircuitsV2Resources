@@ -1,0 +1,13 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message BouncePadData {
+  int32 mode = 1;
+  bool is_additive = 2;
+  float velocity_multiplier = 3;
+  float velocity_additive = 4;
+  float max_velocity = 5;
+  float impulse_velocity = 6;
+  int32 air_control_percentage = 7;
+}

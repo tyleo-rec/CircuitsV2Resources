@@ -1,0 +1,68 @@
+syntax = "proto3";
+package circuits_v1;
+option csharp_namespace = "RecRoom.CircuitsV1.Protobuf";
+
+import "circuits_v1/circuit_link_data.proto";
+import "circuits_v1/node_transform_data.proto";
+import "circuits_v1/slot_data.proto";
+
+message CircuitNodeData {
+  string node_name = 1;
+  int32 node_id = 2;
+  int32 paired_node_id = 3;
+  bytes node_type = 4;
+  repeated CircuitLinkData circuit_links = 6;
+  NodeTransformData transform_data = 7;
+  InternalGraphData internal_graph_data = 8;
+  repeated SlotData slotData = 9;
+  int32 mode = 10;
+  SelectorNodeData selector_node_data = 11;
+  bool advanced_mode = 12;
+  int32 time_unit = 13;
+  int32 role_id = 14;
+  repeated StateMachineStateData state_machine_data = 15;
+  int32 default_index = 16;
+  repeated SlotData defaultInputSlotData = 17;
+  string role_guid = 18;
+}
+
+message SelectorNodeData {
+  int32 eval_mode = 1;
+  repeated SelectorConfigData selector_config_data = 2;
+}
+
+message InternalGraphData {
+  int32 input_node_id = 1;
+  int32 output_node_id = 2;
+  CircuitNodeGraphData internal_node_graph = 3;
+}
+
+message CircuitNodeGraphData {
+  bytes node_graph_guid = 1;
+  bool is_internal_graph = 2;
+  CircuitNodeData root_node_data = 3;
+  repeated CircuitNodeData circuit_nodes = 4;
+}
+
+message CircuitNodeGraphCollectionData {
+  repeated CircuitNodeGraphData graphs = 1;
+}
+
+message SelectorConfigData {
+  int32 compare_mode = 1;
+  int32 compare_value = 2;
+}
+
+message StateMachineStateData {
+  int32 val1 = 1;
+  int32 val2 = 2;
+  int32 val3 = 3;
+  repeated StateMachineTransitionData state_transition_data = 4;
+  int32 min_time_in_state = 5;
+  int32 removed = 6;
+}
+
+message StateMachineTransitionData {
+  int32 input_index = 1;
+  int32 state_index = 2;
+}

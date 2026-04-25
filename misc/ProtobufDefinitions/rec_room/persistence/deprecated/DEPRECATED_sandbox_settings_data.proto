@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message DEPRECATED_SandboxSettingsData {
+  bool DEPRECATED_limit_teleport_speed = 1; 
+  int32 DEPRECATED_time_limit_seconds = 2; 
+}

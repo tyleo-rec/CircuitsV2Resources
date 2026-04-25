@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameCombatRespawnConfigurationData {
+  float auto_respawn_delay = 1;
+  bool restore_health_on_respawn = 2;
+  float respawn_invincibility_duration = 3;
+}

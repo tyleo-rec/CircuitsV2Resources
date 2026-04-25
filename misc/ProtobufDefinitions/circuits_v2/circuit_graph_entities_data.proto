@@ -1,0 +1,52 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits/shared/api/id_128_data.proto";
+
+import "circuits/shared/utilities/soa_id_32_data.proto";
+
+import "circuits/static/core/graph_system/graph_sys_data.proto";
+
+import "circuits_v2/function_call_node_inst_data.proto";
+
+import "circuits_v2/custom_property_node_inst_data.proto";
+
+import "circuits_v2/messages/message_receiver_node_inst_data.proto";
+import "circuits_v2/messages/message_sender_node_inst_data.proto";
+
+import "circuits_v2/behaviors/behavior_board_inst_data.proto";
+import "circuits_v2/behaviors/behavior_def_node_inst_data.proto";
+
+import "circuits_v2/constant_ai_function_node_inst_data.proto";
+
+message CircuitGraphEntitiesData {
+  circuits.GraphSysData graph = 1;
+  repeated int32 node_def_ids = 2;
+  repeated int32 node_join_ids = 3;
+  repeated circuits.Id128Data legacy_node_ids = 4;
+
+  circuits.SOAId32Data function_call_node_ids = 5;
+  repeated FunctionCallNodeInstData function_call_nodes = 6;
+
+  circuits.SOAId32Data object_property_node_ids = 7;
+  repeated CustomPropertyNodeInstData object_property_nodes = 8;
+
+  circuits.SOAId32Data player_property_node_ids = 9;
+  repeated CustomPropertyNodeInstData player_property_nodes = 10;
+
+  circuits.SOAId32Data message_receiver_node_ids = 11;
+  repeated MessageReceiverNodeInstData message_receiver_nodes = 12;
+
+  circuits.SOAId32Data message_sender_node_ids = 13;
+  repeated MessageSenderNodeInstData message_sender_nodes = 14;
+
+  circuits.SOAId32Data behavior_board_node_ids = 15;
+  repeated BehaviorBoardInstData behavior_board_nodes = 16;
+
+  circuits.SOAId32Data behavior_def_node_ids = 17;
+  repeated BehaviorDefNodeInstData behavior_def_nodes = 18;
+
+  circuits.SOAId32Data constant_ai_function_node_ids = 19;
+  repeated ConstantAiFunctionNodeInstData constant_ai_function_nodes = 20;
+}

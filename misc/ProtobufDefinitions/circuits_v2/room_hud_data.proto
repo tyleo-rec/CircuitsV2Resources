@@ -1,0 +1,26 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+message RoomHudData {
+  int32 titleOption = 1;
+  int32 subtitleOption = 2;
+  int32 barOption = 3;
+  int32 progressWheelOption = 4;
+  bool showProgress = 5;
+  RoomHudInventoryData inventoryOption = 6;
+  RoomHudInventoryData inventoryOption1 = 7;
+  RoomHudInventoryData inventoryOption2 = 8;
+  int32 bar1Option = 9;
+}
+
+message RoomHudInventoryData {
+  int32 inventoryOption = 1;
+  int32 roomInventoryOption = 2;
+  bool showIcon = 3;
+  core.GuidData consumableId = 4;
+  core.GuidData currencyId = 5;
+  core.GuidData roomInventoryItemId = 6;
+}

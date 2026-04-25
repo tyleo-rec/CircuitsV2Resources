@@ -1,0 +1,10 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameCombatFriendlyFireConfigurationData {
+  bool player_on_player_friendly_fire_supported = 1;
+  bool player_on_enemy_friendly_fire_supported = 2;
+  bool enemy_on_player_friendly_fire_supported = 3;
+  bool enemy_on_enemy_friendly_fire_supported = 4;
+}

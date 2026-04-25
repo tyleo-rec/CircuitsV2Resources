@@ -1,0 +1,24 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/gameplay/ammunition_data.proto";
+import "rec_room/gameplay/ranged_weapon_data.proto";
+import "rec_room/persistence/health_potion_data.proto";
+
+message BattleRoyaleArsenalData {
+  repeated BattleRoyaleGearData gear = 1;
+}
+
+message BattleRoyaleGearData {
+  string display_name = 1;
+  bool is_available = 2;
+  int32 gear_type = 3;
+  int32 quality = 4;
+  int32 drop_weight = 5;
+  bytes equipment_id = 6;
+
+  RangedWeaponData ranged_weapon_data = 7;
+  HealthPotionData health_potion_data = 8;
+  AmmunitionData ammunition_data = 9;
+}

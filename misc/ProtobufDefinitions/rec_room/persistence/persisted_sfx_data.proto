@@ -1,0 +1,14 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message PersistedSFXData {
+  bytes track_id = 1;
+  bool loop = 2;
+  bool shuffle = 3;
+  bool paused = 4;
+  bool use_spatial_audio = 5;
+  bool interrupt_current_sound = 6;
+  int32 volume_modifier = 7;
+  bool play_for_all = 8;
+}

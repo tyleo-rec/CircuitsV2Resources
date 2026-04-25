@@ -1,0 +1,92 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+import "circuits_v2/deprecated/DEPRECATED_nullable_bytes.proto";
+
+message DEPRECATED_AppliedGenericTypeData {
+  int32 version = 1;
+  DEPRECATED_CircuitTypeData original_type = 2;
+  repeated DEPRECATED_CircuitTypeData type_parameter_assignments = 3;
+}
+
+message DEPRECATED_CircuitTypeData {
+  int32 version = 1;
+  int32 kind = 2;
+  DEPRECATED_AppliedGenericTypeData applied_generic_type = 3;
+  DEPRECATED_FunctionTypeData function_type = 5;
+  DEPRECATED_TypeParameterReferenceTypeData type_parameter_reference_type = 6;
+  DEPRECATED_TypeParameterTypeData type_parameter_type = 7;
+  DEPRECATED_ClassTypeData1 class_type = 8;
+
+  
+  DEPRECATED_ClassTypeData0 DEPRECATED_class_type = 4;
+}
+
+message DEPRECATED_ClassTypeData1 {
+  int32 version = 1;
+  core.GuidData id = 7;
+  repeated DEPRECATED_CircuitTypeData type_parameters = 3;
+  map<string, DEPRECATED_PropertyData> properties = 4;
+  map<string, DEPRECATED_CircuitTypeData> functions = 5;
+  repeated DEPRECATED_CircuitTypeData baseClasses  = 6;
+
+  
+  bytes DEPRECATED_id = 2;
+}
+
+message DEPRECATED_FunctionTypeData {
+  int32 version = 1;
+  repeated DEPRECATED_CircuitTypeData type_parameters = 2;
+  repeated DEPRECATED_KeyedFunctionInputData inputs = 3;
+  repeated DEPRECATED_KeyedFunctionOutputData outputs = 4;
+}
+
+message DEPRECATED_FunctionInputData {
+  int32 version = 1;
+  DEPRECATED_CircuitTypeData type = 2;
+}
+
+message DEPRECATED_KeyedFunctionInputData {
+  int32 version = 1;
+  string key = 2;
+  DEPRECATED_FunctionInputData value = 3;
+}
+
+message DEPRECATED_PropertyData {
+  int32 version = 1;
+  DEPRECATED_CircuitTypeData type = 2;
+  bool get = 3;
+  bool set = 4;
+}
+
+message DEPRECATED_FunctionOutputData {
+  int32 version = 1;
+  DEPRECATED_CircuitTypeData type = 2;
+}
+
+message DEPRECATED_KeyedFunctionOutputData {
+  int32 version = 1;
+  string key = 2;
+  DEPRECATED_FunctionOutputData value = 3;
+}
+
+message DEPRECATED_TypeParameterReferenceTypeData {
+  int32 version = 1;
+  string name = 2;
+}
+
+message DEPRECATED_TypeParameterTypeData {
+  int32 version = 1;
+  string name = 2;
+  DEPRECATED_CircuitTypeData constraint = 3;
+}
+
+message DEPRECATED_ClassTypeData0 {
+  int32 version = 1;
+  repeated DEPRECATED_CircuitTypeData type_parameters = 2;
+  map<string, DEPRECATED_PropertyData> properties = 3;
+  DEPRECATED_NullableBytes name = 4;
+}

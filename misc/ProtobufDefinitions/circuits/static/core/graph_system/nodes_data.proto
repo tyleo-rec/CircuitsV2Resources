@@ -1,0 +1,13 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.Core.GraphSystem.Protobuf";
+
+import "circuits/static/core/graph_system/node_inputs_data.proto";
+import "circuits/static/core/graph_system/node_outputs_data.proto";
+import "circuits/shared/utilities/soa_id_32_data.proto";
+
+message NodesData {
+    circuits.SOAId32Data ids = 1;
+    repeated NodeInputsData inputs = 2;
+    repeated NodeOutputsData outputs = 3;
+}

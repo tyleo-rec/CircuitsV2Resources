@@ -1,0 +1,20 @@
+
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/persistence/interaction_filter.proto";
+
+message InteractionVolumeData {
+  string interaction_string = 1;
+  bool sync_portal_lock = 2;
+  bool sync_interaction_string = 3;
+  InteractionFilterData DEPRECATED_interaction_filter_data = 4;
+  float interaction_hold_time = 6;
+  bool portal_locked = 7;
+  float movement_speed_multiplier = 8;
+  bool preserve_hold_progress = 9;
+  bool hide_outline_on_hover = 10;
+  
+  bool interaction_hold_required_deprecated = 5;
+}

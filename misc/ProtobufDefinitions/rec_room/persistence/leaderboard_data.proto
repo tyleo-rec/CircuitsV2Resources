@@ -1,0 +1,21 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message LeaderboardData {
+  message StatData {
+    bool use_stat = 1;
+    string stat_full_name = 2;
+    string stat_short_name = 3;
+    bool stat_sort_ascending = 4;
+    int32 formatting_mode = 5;
+  }
+
+  repeated StatData stat_configs = 1;
+  
+  bool enabled = 2;
+  bool alwaysFacePlayerEnabled = 3;
+  bool proximityDisplayEnabled = 4;
+  float innerProximityTriggerRadius = 5;
+  float outerProximityTriggerRadius = 6;
+}

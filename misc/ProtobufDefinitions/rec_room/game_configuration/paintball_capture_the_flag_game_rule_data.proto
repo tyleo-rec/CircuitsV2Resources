@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message PaintballCaptureTheFlagGameRuleData {
+  int32 scores_to_win = 1;
+  float max_game_duration = 2;
+  bool music_enabled = 3;
+}

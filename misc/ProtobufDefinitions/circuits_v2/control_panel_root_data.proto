@@ -1,0 +1,16 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/circuit_global_entities_data.proto";
+import "circuits_v2/circuit_graph_data.proto";
+import "circuits_v2/circuit_node_data.proto";
+import "circuits_v2/circuit_serialization_version.proto";
+
+message ControlPanelRootData {
+  CircuitSerializationVersion version = 1;
+  CircuitGraphData graph_template = 2;
+  CircuitGlobalEntitiesData entities = 4;
+
+  CircuitNodeData DEPRECATED_node_template = 3;
+}

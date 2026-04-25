@@ -1,0 +1,18 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+import "rec_room/persistence/persisted_room_data.proto";
+import "core/guid_data.proto";
+
+message AutosaveFileData {
+    int64 roomId = 1;
+    int64 subroomId = 2;
+
+    repeated string referenced_filenames = 3;
+    repeated string legacy_additional_referenced_filenames = 4;
+    repeated int64 invention_ids = 5;
+    repeated int32 invention_references = 6;
+    string unity_asset_id = 7;
+    PersistedRoomData persisted_room_data = 8;
+    repeated core.GuidData referenced_unity_asset_ids = 9;
+}

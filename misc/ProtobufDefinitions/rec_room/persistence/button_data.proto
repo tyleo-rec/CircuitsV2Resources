@@ -1,0 +1,28 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/persistence/interaction_filter.proto";
+
+message ButtonData {
+  bool signal_is_player_id = 1;
+  bool junior_enabled = 2;
+  InteractionFilterData DEPRECATED_interaction_filter_data = 3;
+  bool sound_disabled = 4;
+}
+
+message ToggleButtonData {
+  bool default_toggle_state= 1;
+  bool signal_is_player_id = 2;
+  bool projectile_collision_enabled = 3;
+  bool junior_enabled = 4;
+  bool toggle_button_state = 5;
+  bool vehicle_collision_enabled = 6;
+  InteractionFilterData DEPRECATED_interaction_filter_data = 7;
+  bool sound_disabled = 8;
+}
+
+message LinkButtonData {
+  int32 link_type= 1;
+  int64 link_target_id = 2;
+}

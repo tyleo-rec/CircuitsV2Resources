@@ -1,0 +1,14 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message ConstantDestinationData {
+  int32 room_door_invite_mode = 4;
+  bool force_new_instance = 5;
+  string room_name = 6;
+  string subroom_name = 7;
+  string welcome_mat_name = 8;
+  int64 DEPRECATED_room_id = 1;
+  int64 DEPRECATED_subroom_id = 2;
+  int32 DEPRECATED_welcome_mat_id = 3;
+}

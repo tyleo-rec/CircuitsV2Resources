@@ -1,0 +1,21 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+
+
+
+
+
+
+
+
+
+
+message InventionPieceData
+{
+  bytes instance_id = 1;
+  int64 invention_id = 2;                    
+  int32 version_number = 3;                  
+  bool originally_from_other_invention = 4;  
+}

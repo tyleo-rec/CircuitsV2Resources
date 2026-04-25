@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message SecurityData
+{
+  int32 hash = 1;
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameAIData {
+  string instructions = 1;
+  float wackiness = 2;
+  int32 voice_option = 3;
+  bool use_spatial_audio = 4;
+  float max_rolloff = 5;
+  int32 rolloff_curve = 6;
+  bool doppler_enabled = 7;
+  string use_context = 8;
+  bool are_subtitles_enabled = 9;
+  bool is_voice_input_enabled = 10;
+  bool is_voice_output_enabled = 11;
+  bool DEPRECATEDis_synchronized = 12;
+  bool can_all_players_hear_voice = 13;
+  bool is_scene_comprehension_enabled = 14;
+  repeated bool function_enablements = 15;
+  bool is_server_hosted = 16;
+  int32 realtime_session_log_channel = 17;
+  bool is_automatic_voice_response_enabled = 18;
+  repeated string circuits_function_enablements = 19;
+  bool single_speaker_mode_enabled = 20;
+  float single_speaker_mode_audio_threshold = 21;
+}

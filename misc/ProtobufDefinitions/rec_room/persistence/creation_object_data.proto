@@ -1,0 +1,26 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/color_data.proto";
+
+import "rec_room/persistence/invention_piece_data.proto";
+import "rec_room/persistence/interaction_filter.proto";
+
+message CreationObjectData {
+  core.ColorData color_override = 2;
+  sint32 team_override = 3;
+  bool is_frozen = 4;
+  InventionPieceData invention_piece_data = 5;
+  bool is_grabbable = 6;
+  bool is_climbable = 7;
+  bool prevents_wall_run = 8;
+  bool prevents_clambering = 9;
+  int32 navmesh_generation_mode = 10;
+  bytes pickup_locked_by_key_id = 11;
+  InteractionFilterData interaction_filter_data = 14;
+  bool DEPRECATED_interaction_filter_enabled = 15;
+  int32 tool_preferred_hand_type_for_interaction = 16;
+  int32 maker_pen_interaction_filter = 17;
+  bool is_locked_by_room_contributors = 18;
+}

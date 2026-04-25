@@ -1,0 +1,46 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/instance_memory_data.proto";
+import "circuits_v2/synced_memory_data.proto";
+import "circuits_v2/cloud_memory_data.proto";
+
+message MemoryData
+{
+  SyncedMemoryData sync_memory_int = 1;
+  SyncedMemoryData sync_memory_bool = 2;
+  SyncedMemoryData sync_memory_float = 3;
+  SyncedMemoryData sync_memory_string = 4;
+  SyncedMemoryData sync_memory_vector3 = 5;
+  InstanceMemoryData instance_memory_var = 6;
+  SyncedMemoryData sync_memory_quaternion = 7;
+  SyncedMemoryData sync_memory_destination = 15;
+  SyncedMemoryData sync_memory_player_event = 23;
+  SyncedMemoryData sync_memory_player = 24;
+  SyncedMemoryData sync_memory_creation_object = 25;
+  SyncedMemoryData sync_memory_player_account = 26;
+  SyncedMemoryData sync_rec_net_image = 27;
+  SyncedMemoryData sync_rec_net_mesh = 30;
+  SyncedMemoryData sync_memory_chat_ai = 33;
+
+  CloudMemoryData cloud_memory_int = 8;
+  CloudMemoryData cloud_memory_bool = 9;
+  CloudMemoryData cloud_memory_float = 10;
+  CloudMemoryData cloud_memory_string = 11;
+  CloudMemoryData cloud_memory_vector3 = 12;
+  CloudMemoryData cloud_memory_quaternion = 13;
+  CloudMemoryData cloud_memory_color = 14;
+  CloudMemoryData cloud_memory_rec_net_image = 28;
+  CloudMemoryData cloud_memory_rec_net_mesh = 31;
+
+  CloudMemoryData cloud_memory_list_int = 16;
+  CloudMemoryData cloud_memory_list_bool = 17;
+  CloudMemoryData cloud_memory_list_float = 18;
+  CloudMemoryData cloud_memory_list_string = 19;
+  CloudMemoryData cloud_memory_list_vector3 = 20;
+  CloudMemoryData cloud_memory_list_quaternion = 21;
+  CloudMemoryData cloud_memory_list_color = 22;
+  CloudMemoryData cloud_memory_list_rec_net_image = 29;
+  CloudMemoryData cloud_memory_list_rec_net_mesh = 32;
+}

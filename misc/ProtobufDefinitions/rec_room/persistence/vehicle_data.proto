@@ -1,0 +1,45 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message BaseVehicleData {
+  float mass = 1;
+}
+
+message GroundVehicleData {
+  BaseVehicleData base_data = 1;
+  VehicleBoostData boost = 2;
+}
+
+message VehicleEngineData {
+  float max_torque = 1;
+  float max_reverse_torque = 2;
+}
+
+message WheelDifferentialData {
+  float max_steering_angle = 1;
+  repeated bytes DEPRECATED_steering_axle_wheel_ids = 2;
+  repeated bytes DEPRECATED_rear_axle_wheel_ids = 3;
+}
+
+message WheelSuspensionSystemData {
+  bool can_steer = 1;
+  bool can_drive = 2;
+  bool can_handbrake = 3;
+  bool can_drive_on_walls = 4;
+  float suspension_max_extension = 5;
+  float suspension_rest_compression_percentage = 6;
+  float suspension_damping_ratio = 7;
+  float wheel_cornering_stiffness = 8;
+  float wheel_longitudinal_friction_coefficient = 9;
+  float wheel_lateral_friction_coefficient = 10;
+  float wheel_handbrake_longitudinal_friction_multiplier = 11;
+  float wheel_handbrake_lateral_friction_multiplier = 12;
+  float wheel_max_rolling_friction_torque = 13;
+  float wheel_max_braking_torque = 14;
+  float suspension_efficiency = 15;
+}
+
+message VehicleBoostData {
+  int32 max_fuel_capacity = 1;
+}

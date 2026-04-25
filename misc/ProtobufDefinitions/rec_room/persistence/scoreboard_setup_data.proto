@@ -1,0 +1,7 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message ScoreboardSetupData {
+  string score_name = 1;
+}

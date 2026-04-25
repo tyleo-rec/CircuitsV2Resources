@@ -1,0 +1,12 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/vector3_data.proto";
+
+message StickyData {
+  bool is_attached = 1;
+  bytes connected_view_id = 2;
+  core.Vector3Data attached_relative_position = 3;
+  core.Vector3Data attached_relative_rotation = 4;
+}

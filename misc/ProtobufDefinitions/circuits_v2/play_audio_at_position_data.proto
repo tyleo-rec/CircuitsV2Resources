@@ -1,0 +1,11 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message PlayAudioAtPositionData {
+    bool synced = 1;
+    float max_rolloff_distance = 2;
+    int32 rolloff_curve = 3;
+    int32 audio_channel = 4;
+    string audio_sub_channel = 5;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message AreaControllerData {
+  bytes area_object = 1;
+  int32 use_area = 2;
+}
+
+message AreaData {
+  int32 snap_to_ground = 1;
+}

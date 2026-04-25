@@ -1,0 +1,10 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+import "circuits_v2/studio_functions/studio_function_registration_data.proto";
+
+message StudioFunctionSignatureRegistryEntryData
+{
+  int32 id = 1;
+  StudioFunctionRegistrationData registration = 2;
+}

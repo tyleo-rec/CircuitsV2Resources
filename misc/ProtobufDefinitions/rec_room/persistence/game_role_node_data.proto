@@ -1,0 +1,46 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/player_roles/player_game_role_data.proto";
+
+message GameRoleNodeData {
+  PlayerGameRoleData game_role = 1;
+  /*int32 role_id = 1;
+  int32 role_rank = 2;
+
+  bool is_role_active = 3;
+  bool is_ag_role = 4;
+
+  string role_name = 5;
+  bool is_modified_by_player = 6;
+  string role_guid = 7;
+
+  OverridableBoolData can_move = 8;
+  OverridableBoolData can_fly = 9;
+  OverridableBoolData can_switch_teams = 10;
+  OverridableIntData item_pickup_restrictions = 11;
+  OverridableListStringData item_pickup_allowlist = 12;
+  OverridableListStringData item_pickup_blocklist = 13;
+  OverridableIntData enable_equip_slot_hip = 14;
+  OverridableIntData equip_restrictions_hip = 15;
+  OverridableListStringData equip_hip_allowlist = 16;
+  OverridableListStringData equip_hip_blocklist = 17;
+  OverridableIntData equip_restrictions_shoulder = 18;
+  OverridableListStringData equip_shoulder_allowlist = 19;
+  OverridableListStringData equip_shoulder_blocklist = 20;
+  OverridableIntData voice_rolloff_max_distance = 21;
+  OverridableBoolData hides_name = 22;
+
+  OverridableFloatData teleport_delay = 23;
+  OverridableFloatData max_teleport_distance = 24;
+  OverridableFloatData walk_speed = 25;
+  OverridableFloatData max_jump_height = 26;
+  OverridableBoolData can_sprint = 27;
+  OverridableBoolData can_auto_sprint = 28;
+  OverridableBoolData can_slide_down_slopes = 29;
+  OverridableFloatData sprint_max_speed_walk_speed_multiplier = 30;
+  OverridableBoolData can_wall_run = 31;
+  OverridableBoolData can_get_pushed = 32;
+  OverridableBoolData can_ram = 33;*/
+}

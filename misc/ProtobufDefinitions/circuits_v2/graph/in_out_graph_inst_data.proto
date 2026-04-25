@@ -1,0 +1,8 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message InOutGraphInstData {
+  int32 in_node_id = 1;
+  int32 out_node_id = 2;
+}

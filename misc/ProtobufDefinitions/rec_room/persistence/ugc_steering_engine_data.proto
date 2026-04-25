@@ -1,0 +1,24 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message UGCSteeringEngineData {
+  PathingPropertiesData pathing_properties_data = 1;
+  RotationPropertiesData rotation_properties_data = 2;
+  float maxLinearSpeedSyncedProp = 3;
+  float maxAngularSpeedSyncedProp = 4;
+  float maxAccelerationSyncedProp = 5;
+  bool enableGroundClamping = 6;
+  bool waitForGroundClamping = 7;
+  bool enableLegacyPosition = 8;
+}
+
+message PathingPropertiesData {
+	float slowdownDistance = 1;
+	float arrivalDistance = 2;
+}
+
+message RotationPropertiesData {
+	float slowdownAngle = 1;
+	float arrivalAngle = 2;
+}

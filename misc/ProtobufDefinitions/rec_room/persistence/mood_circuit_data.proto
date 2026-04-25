@@ -1,0 +1,81 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message MoodCircuitData {
+  int32 priority = 1;
+  float blend_in_time = 2;
+
+  oneof typeData {
+    SkyBoxCircuitData sky_box_data = 3;
+    SunCircuitData sun_data = 4;
+    BloomCircuitData bloom_data = 5;
+    ColorGradingCircuitData color_grading_data = 6;
+    FogCircuitData fog_data = 7;
+    BackgroundObjectsCircuitData background_objects_data = 8;
+  }
+
+  string role_guid = 9;
+  float blend_out_time = 10;
+  int32 ease_in_out = 11;
+}
+
+message SkyBoxCircuitData {
+  int32 sky_top_color = 1;
+  int32 sky_bottom_color = 2;
+  int32 ground_top_color = 3;
+  int32 ground_bottom_color = 4;
+  int32 horizon_color = 5;
+  float horizon_size = 6;
+  float horizon_strength = 7;
+  float ambient_light_intensity = 8;
+}
+
+message SunCircuitData {
+  int32 sun_color = 1;
+  float disc_size = 2;
+  float intensity = 3;
+  float shadow_strength = 4;
+  int32 glow_color = 5;
+  float glow_size = 6;
+  float glow_strength = 7;
+  float glow_horizon = 8;
+  int32 blend_sun_direction = 9;
+  int32 clip_sun = 10;
+  float reflection_intensity = 11;
+}
+
+message BloomCircuitData {
+  float bloom_intensity = 1;
+  float bloom_threshold = 2;
+  float bloom_diffusion = 3;
+  int32 bloom_color = 4;
+}
+
+message ColorGradingCircuitData {
+  float color_grading_temp = 1;
+  float color_grading_tint = 2;
+  float color_grading_exposure = 3;
+  int32 color_grading_color_filter = 4;
+  float color_grading_color_filter_intensity = 5;
+  float color_grading_hue_shift = 6;
+  float color_grading_saturation = 7;
+  float color_grading_contrast = 8;
+}
+
+message FogCircuitData {
+  int32 color = 1;
+  float start_distance = 2;
+  float fade_distance = 3;
+}
+
+message BackgroundObjectData {
+  int32 object_id = 1;
+  int32 color = 2;
+  float alpha = 3;
+  float rotation = 4;
+}
+
+message BackgroundObjectsCircuitData {
+  repeated BackgroundObjectData object_data = 1;
+}

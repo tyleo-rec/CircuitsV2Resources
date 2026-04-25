@@ -1,0 +1,10 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message WelcomeMatV2Data {
+  int32 id = 1;
+  string welcome_mat_name = 2;
+  float spawn_radius = 3;
+  bool is_default_welcome_mat = 4;
+}

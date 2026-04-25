@@ -1,0 +1,10 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message PrimitiveMemoryData {
+  repeated int32 intData = 1;
+  repeated float singleDatas = 2;
+  repeated bool boolDatas = 3;
+  repeated string stringDatas = 4;
+}

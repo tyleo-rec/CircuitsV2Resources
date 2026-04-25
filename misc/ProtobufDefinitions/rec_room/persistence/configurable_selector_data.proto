@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message ConfigurableSelectorData {
+  int32 selected_id = 1;
+  bytes instance_id = 2;
+}

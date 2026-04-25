@@ -1,0 +1,82 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/vector3_data.proto";
+
+import "rec_room/persistence/holotar_data.proto";
+import "rec_room/persistence/persistence_view_data.proto";
+
+message RoomatarBlobData {
+  message AvatarAnimationData {
+    string name = 1;
+    float start_timestamp = 2;
+    HolotarBlobData holotar_data = 3;
+  }
+
+  message ToolAnimationData {
+    enum PlayerBackpackToolType {
+      INVALID = 0;
+      SHARE_CAM = 1;
+      MAKER_PEN = 2;
+      FEEDBACK_TOOL = 3;
+    }
+
+    string name = 1;
+    
+    repeated ToolEventData events = 3;
+    repeated PoseStateData pose_states = 4;
+    repeated ColorStateData team_color_states = 5;
+    repeated IsEnabledStateData is_enabled_states = 6;
+    bool suppress_animate_in_out = 7;
+    bool mute_tool_audio = 8;
+    bool mute_collision_audio = 9;
+
+    reserved 10; 
+
+    oneof spawn_type {
+      bytes template_id = 2;
+      PlayerBackpackToolType player_backpack_tool_type = 11;
+    }
+
+    reserved 12 to 15; 
+  }
+
+  message ToolEventData {
+    message NoData { }
+
+    message InputUpWithVelocityData {
+      core.Vector3Data linear_velocity = 1;
+      core.Vector3Data angular_velocity = 2;
+    }
+
+    float timestamp = 1;
+
+    reserved 2 to 15; 
+
+    oneof event_type {
+      NoData input_down = 16;
+      NoData input_pressed = 17;
+      NoData input_up = 18;
+      InputUpWithVelocityData input_up_with_velocity = 19;
+      NoData input_cancelled = 20;
+    }
+  }
+
+  message PoseStateData {
+    float timestamp = 1;
+    core.Vector3Data position = 2;
+    core.Vector3Data rotation = 3;
+    float uniformScale = 4;
+  }
+
+  message IsEnabledStateData {
+    float timestamp = 1;
+    bool is_enabled = 2;
+  }
+
+  float duration = 1;
+  repeated AvatarAnimationData avatars = 2;
+  SpawnableTemplateData tools_spawnable_template = 3;
+  repeated ToolAnimationData tool_animations = 4;
+}

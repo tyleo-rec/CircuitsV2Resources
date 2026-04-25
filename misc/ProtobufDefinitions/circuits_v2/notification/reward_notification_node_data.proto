@@ -1,0 +1,15 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message RewardNotificationNodeData {
+  int32 background_color = 1;
+  int32 title_text_color = 2;
+  int32 title_text_size = 3;
+  int32 description_text_color = 4;
+  int32 description_text_size = 5;
+  bool show_contents_text = 6;
+  int32 contents_text_color = 7;
+  int32 contents_display_mode = 8;
+  bool show_image = 9;
+}

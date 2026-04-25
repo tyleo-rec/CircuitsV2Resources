@@ -1,0 +1,14 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message DEPRECATED_GameSettingsData {
+  int32 DEPRECATED_mode_type = 1; 
+
+  
+  
+  
+  
+  
+  
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+
+message AutosaveData {
+  repeated string referenced_filenames = 1;
+  repeated string legacy_additional_referenced_filenames = 2;
+  repeated int64 invention_ids = 3;
+  repeated int32 invention_references = 4;
+  string unity_asset_id = 5;
+}

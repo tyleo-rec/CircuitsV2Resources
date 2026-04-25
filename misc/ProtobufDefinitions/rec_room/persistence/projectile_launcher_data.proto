@@ -1,0 +1,21 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/persistence/ranged_weapon_prop_data.proto";
+
+message ProjectileLauncherData {
+  int32 projectile_index = 1;
+  int32 DEPRECATED_projectile_color = 2;
+  int32 projectile_count = 3;
+  float DEPRECATED_projectile_speed = 4;
+  float DEPRECATED_projectile_lifetime = 5;
+  int32 DEPRECATED_projectile_angle = 6;
+  bool DEPRECATED_gravity = 7;
+  bool DEPRECATED_sfx = 8;
+  ProjectileDamageData DEPRECATED_projectile_damage = 9;
+  float projectile_angle = 10;
+  float projectile_force = 11;
+  bool self_collisions_enabled = 12;
+  bool disable_legacy_fire_rate_throttling = 13;
+}

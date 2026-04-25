@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GrabberData {
+  int32 grabAttachmentMode = 1;
+  bool playerCanStealFromGrabber = 2;
+}

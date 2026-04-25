@@ -1,0 +1,34 @@
+syntax = "proto3";
+package room_load;
+option csharp_namespace = "RecRoom.RoomLoad.Protobuf";
+
+enum ValidationReason {
+    UnknownFailure = 0;
+    Success = 1;
+    NullPlayer = 2;
+    OperationAlreadyInProgress = 3;
+    JuniorRestriction = 4;
+    PlatformRestriction = 5;
+    Moderation = 6;
+    ServerForbidsSaving = 7;
+    ServerForbidsSavingItem = 8;
+    GameRunning = 9;
+    UgcRestrictedForLocation = 10;
+    Permissions = 11;
+    Aggregate = 12;
+    NotInRoom = 13;
+    MultiInstanceEventActive = 14;
+    WaitingForPlayerToFinishOperation = 15;
+    KeepsakeRoomWithActiveEvent = 16;
+    RoomContentIsBaked = 17;
+    CircuitsCorruption = 18;
+    Cancelled = 200;
+}
+
+message RoomOperationValidationResult {
+    ValidationReason reason = 1;
+    
+    bytes context = 5;
+    
+    repeated RoomOperationValidationResult failed_children = 10;
+}

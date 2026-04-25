@@ -1,0 +1,7 @@
+syntax = "proto3";
+package core;
+option csharp_namespace = "RecRoom.Protobuf.Core";
+
+message GuidData {
+  bytes value = 1;
+}

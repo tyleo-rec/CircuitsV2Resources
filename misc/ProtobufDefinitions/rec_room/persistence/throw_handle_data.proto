@@ -1,0 +1,26 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message ThrowHandleData {
+  enum ThrowHandleIdlePose {
+    DEFAULT_IDLE = 0;
+    DODGEBALL_IDLE = 1;
+    DART_IDLE = 2;
+    DISC_IDLE = 3;
+  }
+  
+  enum ThrowHandleThrowPose {
+    DEFAULT_THROW = 0;
+    DODGEBALL_THROW = 1;
+    UNDERHAND_THROW = 2;
+    DART_THROW = 3;
+    DISC_THROW = 4;
+  }
+
+  ThrowHandleIdlePose screens_idle_pose = 1;
+  ThrowHandleThrowPose screens_throw_pose = 2;
+  float screens_throw_speed = 3;
+  float min_throw_speed = 4;
+  string DEPRECATED_control_prompt = 5;
+}

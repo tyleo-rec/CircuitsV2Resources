@@ -1,0 +1,29 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+
+import "circuits/shared/utilities/soa_id_32_data.proto";
+import "circuits/static/ev/circuit_type_data.proto";
+import "circuits/static/ev/variant_data.proto";
+import "circuits_v2/custom_property_instance_set_data.proto";
+import "circuits/shared/api/id_128_data.proto";
+
+message CustomPropertiesStateData {
+
+  circuits.SOAId32Data property_definitions = 1;
+  repeated string property_definition_names = 2;
+  repeated circuits.CircuitTypeData property_definition_types = 3;
+
+  circuits.SOAId32Data property_instances = 4;
+  repeated int32 property_instance_definitions = 5;
+  repeated int32 property_instance_memory_kinds = 6;
+  repeated circuits.VariantData property_instance_stored_home_values = 7;
+  
+  
+  repeated circuits.VariantData property_instance_stored_home_values_from_room_load_snapshot_only = 12;
+  repeated circuits.Id128Data property_instance_event_ids = 10;
+
+  repeated CustomPropertyInstanceSetData property_instances_by_object = 9;
+  repeated string property_instance_display_metadata = 11;
+}

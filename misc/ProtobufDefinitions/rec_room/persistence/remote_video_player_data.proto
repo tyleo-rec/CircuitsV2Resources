@@ -1,0 +1,11 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message RemoteVideoPlayerData {
+  string video_url = 1;
+  float audio_volume = 2;
+  bool is_looping = 3;
+  bool uses_direct_audio = 4;
+  int32 audio_channel = 5;
+}

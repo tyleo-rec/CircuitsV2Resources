@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+package RecRoom.ObjectModel.Protobuf;
+option csharp_namespace = "RecRoom.ObjectModel.Protobuf";
+
+message AssetMsg {
+    enum Version {
+        V0_PreObjectModel = 0;
+        V1_ObjectModelHierarchy = 1;
+        V2_ObjectModelHierarchy = 2;
+        V3_Entities_050 = 3;
+        V4_Entities_050_Compressed = 4;
+        V5_BumpObjectModelVersion_May_2024 = 5; 
+        V6_Entities100 = 6;
+
+        option allow_alias = true;
+        OldestCompatibleVersion = 3; 
+        LatestVersion = 6;
+    }
+
+    Version version = 1;
+    bytes world = 2;
+}

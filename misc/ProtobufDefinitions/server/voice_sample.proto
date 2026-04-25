@@ -1,0 +1,13 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message VoiceSample {
+  int32 account_id = 1;
+  bytes audio_data = 2;
+  int64 room_id = 3;
+  int64 sub_room_id = 4;
+  int64 instance_id = 5;
+  int32 sample_rate = 6;
+  int64 nonce = 7;
+}

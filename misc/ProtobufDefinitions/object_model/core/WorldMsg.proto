@@ -1,0 +1,40 @@
+
+syntax = "proto3";
+package RecRoom.ObjectModel.Protobuf;
+option csharp_namespace = "RecRoom.ObjectModel.Protobuf";
+
+
+
+
+
+message WorldMsg {
+    enum Version {
+        V0_PreObjectModel = 0;
+        V1_ObjectModelHierarchy = 1;
+        V2_ObjectModelHierarchy = 2;
+    
+        option allow_alias = true;
+        OldestCompatibleVersion = 2; 
+        LatestVersion = 2;
+    }
+
+    message TypeHash {
+        uint64 hash = 1;
+        uint32 version = 2;
+    }
+        
+    message Archetype {
+        int32 entityCount = 1;
+        repeated int32 types = 2;
+        repeated ArchetypeChunk chunks = 3;
+    }
+
+    message ArchetypeChunk {
+        int32 entityCount = 1;
+        repeated bytes components = 2;
+    }
+
+    Version version = 1;
+    repeated TypeHash typeHashes = 2;
+    repeated Archetype archetypes = 3;
+}

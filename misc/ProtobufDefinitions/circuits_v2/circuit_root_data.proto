@@ -1,0 +1,23 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/circuit_global_entities_data.proto";
+import "circuits_v2/circuit_graph_data.proto";
+import "circuits_v2/circuit_serialization_version.proto";
+import "circuits_v2/replicator_registry_data.proto";
+import "circuits_v2/data_table/data_table_registry_data.proto";
+import "circuits_v2/studio_functions/studio_function_signature_registry_data.proto";
+import "circuits_v2/snapshot_only_data.proto";
+
+message CircuitRootData {
+  CircuitSerializationVersion version = 1;
+  CircuitGraphData root = 2;
+  DataTableRegistryData data_table_registry = 3;
+  StudioFunctionSignatureRegistryData studio_function_signature_registry_data = 5;
+  CircuitGlobalEntitiesData entities = 6;
+  ReplicatorRegistryData replicator_registry_data = 7;
+  SnapshotOnlyData snapshot_only_data = 8;
+
+  int32 DEPRECATED_max_players = 4;
+}

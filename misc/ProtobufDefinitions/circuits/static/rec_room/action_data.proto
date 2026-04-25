@@ -1,0 +1,2557 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.RecRoom.Protobuf";
+
+import "core/guid_data.proto";
+
+import "circuits/shared/api/id_128_data.proto";
+import "circuits/shared/rec_room/circuits_quat_data.proto";
+import "circuits/shared/rec_room/circuits_vec3_data.proto";
+import "circuits/static/ev/circuit_type_data.proto";
+import "circuits/static/ev/variant_data.proto";
+import "circuits/static/rec_room/named_type_data.proto";
+import "circuits/static/rec_room/root_data.proto";
+import "circuits/static/rec_room/group_board_port_mappings_data.proto";
+
+import "circuits_v2/circuit_graph_tool_mapping_registry_data.proto";
+import "circuits_v2/circuit_root_data.proto";
+import "circuits_v2/circuit_signal_data.proto";
+import "circuits_v2/circuit_studio_unity_sub_asset_usage_data.proto";
+import "circuits_v2/circuit_template_root_data.proto";
+import "circuits_v2/control_panel_root_data.proto";
+import "circuits_v2/messages/message_sender_node_data.proto";
+import "circuits_v2/progression_settings_data.proto";
+import "circuits_v2/rpc_target.proto";
+import "circuits_v2/reward_data.proto";
+import "circuits_v2/data_table/data_table_data.proto";
+import "circuits_v2/studio_functions/studio_function_registration_data.proto";
+import "circuits_v2/game_ai_send_user_prompt_with_structured_response_node_data.proto";
+
+import "rec_room/persistence/super_room_data.proto";
+
+import "rec_room/avatars/full_body_animation_override.proto";
+
+enum ActionKind {
+  PartialInitialize = 0;
+  
+  
+  
+  
+  
+  
+  FullInitialize = 1;
+  Destroy = 2;
+  Multi = 3;
+  Compressed = 4;
+  PartialAction = 5;
+
+  AddGraph = 6;
+  RemoveGraph = 7;
+  AddNode = 8;
+  RemoveNode = 9;
+  AddEdge = 10;
+  RemoveEdge = 11;
+  InputSetDefaultValue = 12;
+  FunctionNodeAddInput = 13;
+  FunctionNodeAddOutput = 14;
+  FunctionNodeRemoveInput = 15;
+  FunctionNodeRemoveOutput = 16;
+  AddInputToGroup = 17;
+
+  
+
+  CV2AddNode = 1000005;
+  CV2RemoveNode = 1000006;
+
+  CV2AddConnection = 1000007;
+  CV2RemoveConnection = 1000008;
+
+  CV2RemoveInputPortConnections = 1000009;
+  CV2RemoveOutputPortConnections = 1000010;
+
+  CV2AddInputDesc = 1000011;
+  CV2AddInputPort = 1000012;
+  CV2AddOutputDesc = 1000013;
+  CV2AddNodeDesc = 1000014;
+  CV2RemoveInputDesc = 1000015;
+  CV2RemoveInputPort = 1000016;
+  CV2RemoveOutputDesc = 1000017;
+  CV2RemoveNodeDesc = 1000018;
+
+  CV2SpawnTemplate = 1000019;
+
+  CV2SetNodeName = 1000020;
+  CV2SetNodeTransform = 1000021;
+  CV2SetDefaultValue = 1000022;
+
+  CV2DeserializeObjectBoard = 1000023;
+
+  CV2SetEventNodeBaseRegistration = 1000024;
+  CV2SetEventSenderTarget = 1000025;
+
+  CV2AddGraph = 1000026;
+  CV2RemoveGraph = 1000027;
+
+  CV2SetObjectBoardObjectAttachmentMode = 1000028;
+
+  
+  
+  
+  CV2SetActivePlayerDefinitionBoard = 1000029;
+
+  
+  CV2SetVariableMemoryType = 1000031;
+
+  
+  CV2SetLogStringChannel = 1000032;
+
+  
+  
+  
+  
+  
+  
+  
+  
+  CV2RemoveObjectBoard = 1000033;
+
+  CV2SetNodeColor = 1000034;
+  CV2SetAwardCurrencyNodeCurrencyReplicationId = 1000035;
+  CV2SetGetBalanceNodeCurrencyReplicationId = 1000036;
+
+  
+  
+  CV2SetAwardCurrencyNodeLogOutput = 1000037;
+  CV2SetGetBalanceNodeLogOutput = 1000038;
+
+  CV2SetConstantConsumable = 1000039;
+
+  
+  CV2CloudDataResetEntry = 1000040;
+  CV2CloudDataDeleteEntry = 1000041;
+
+  CV2SetRaycastIgnorePlayers = 1000042;
+  CV2SetRaycastIgnoreObjects = 1000043;
+
+  CV2SetVariableNodeHomeValue = 1000044;
+  CV2SetLeaderboardStatMode = 1000045;
+
+  CV2SetColorConstantIndexValue = 1000046;
+
+  CV2SetCommentBody = 1000047;
+  CV2SetCommentColor = 1000048;
+  CV2SetCommentAlwaysOn = 1000049;
+
+  CV2SetSampleAudioNodeValues = 1000050;
+  CV2SetSampleAudioNodePreload = 1000051;
+  CV2RenameInputDesc = 1000052;
+  CV2RenameOutputDesc = 1000053;
+  CV2RenameNodeGroup = 1000054;
+
+  CV2SetConstantDestination = 1000055;
+  CV2SetAudioClipValue = 1000056;
+
+  CV2SetHudElement = 1000057;
+  CV2SetHudElementColor = 1000058;
+  CV2SetHudElementLabel = 1000059;
+  CV2SetHudElementValue = 1000060;
+  CV2SetHudElementMaxValue = 1000061;
+  CV2SetHudElementShowLabel = 1000062;
+  CV2SetHudElementShowValueText = 1000063;
+  CV2SetPlayerNameColorSynced = 1000064;
+  CV2SetConstantPlayerOutfitSlotFlag = 1000065;
+
+  CV2BytesDebug = 1000066;
+
+  
+  CV2ReparentNodes = 1000067;
+
+  CV2SetInteractionFilter = 1000068;
+  CV2RemoveInteractionFilter = 1000069;
+  
+  CV2SetPlayerUIEnabled = 1000070;
+  CV2SetPlayerUISynced = 1000071;
+  CV2SetPlayerUIBarEnabled = 1000072;
+  CV2SetPlayerUIBarColor = 1000073;
+  CV2SetPlayerUIBarValue = 1000074;
+  CV2SetPlayerUIBarMaxValue = 1000075;
+  CV2SetPlayerUIBarAnimated = 1000076;
+  CV2SetPlayerUITextEnabled = 1000077;
+  CV2SetPlayerUITextText = 1000078;
+  CV2SetPlayerUITextColor = 1000079;
+
+  CV2SetPlayerUIRoleFilter = 1000080;
+  CV2SetPlayerUIFilterMode = 1000081;
+
+  CV2SetConstantRoomKey = 1000082;
+  CV2SetMoodsConstantSynced = 1000083;
+  CV2SetMoodsConstantBlendTime = 1000084;
+  CV2SetMoodsConstantRoleFilterMode = 1000085;
+  CV2SetMoodsConstantFilteredRoles = 1000086;
+  CV2SetMoodsConstantEaseIn = 1000087;
+
+  CV2SetSunConstantSunColor = 1000088;
+  CV2SetSunConstantSunIntensity = 1000089;
+  CV2SetSunConstantShadowStrength = 1000090;
+  CV2SetSunConstantDiscSize = 1000091;
+  CV2SetSunConstantGlowColor = 1000092;
+  CV2SetSunConstantGlowStrength = 1000093;
+  CV2SetSunConstantGlowSize = 1000094;
+  CV2SetSunConstantGlowHorizon = 1000095;
+  CV2SetSunConstantReflectionIntensity = 1000096;
+  CV2SetSunConstantClipHorizon = 1000097;
+
+  CV2SetFogConstantFogColor = 1000098;
+  CV2SetFogConstantStartDistance = 1000099;
+  CV2SetFogConstantFadeDistance = 1000100;
+
+  CV2SetSkydomeConstantSkyBottomColor = 1000101;
+  CV2SetSkydomeConstantSkyTopColor = 1000102;
+  CV2SetSkydomeConstantGroundBottomColor = 1000103;
+  CV2SetSkydomeConstantGroundTopColor = 1000104;
+  CV2SetSkydomeConstantHorizonColor = 1000105;
+  CV2SetSkydomeConstantHorizonSize = 1000106;
+  CV2SetSkydomeConstantHorizonStrength = 1000107;
+
+  CV2SetBackgroundObjectsConstantObjectVariant = 1000108;
+  CV2SetBackgroundObjectsConstantColor = 1000109;
+  CV2SetBackgroundObjectsConstantRotation = 1000110;
+  CV2SetBackgroundObjectsConstantTransparency = 1000111;
+
+  CV2SetAudioClipVolume = 1000112;
+  CV2SetAudioClipPlaybackSpeedShift = 1000113;
+  CV2SetAudioClipPlaybackSpeedVariation = 1000114;
+
+  CV2SetPlayAudioAtPositionSynced = 1000115;
+  CV2SetPlayAudioAtPositionMaxRolloffDistance = 1000116;
+  CV2SetPlayAudioAtPositionRolloffCurve = 1000117;
+  CV2SetPlayAudioAtPositionAudioChannel = 1000118;
+
+  CV2SetDataTableReadTarget = 1000119;
+  CV2SetConstantReward = 1000120;
+  CV2ModifyUGCReward = 1000121;
+  CV2DeleteUGCReward = 1000122;
+
+  CV2SetAwardRoomKeyNodeLogOutput = 1000123;
+  CV2SetAwardConsumableNodeLogOutput = 1000124;
+
+  CV2UpdateProgressionSettings = 1000125;
+  
+  CV2SetLockedByRoomContributors = 1000126;
+  
+  CV2ModifyDataTable = 1000127;
+
+  CV2SetConstantInventoryItem = 1000128;
+
+  CV2SetConstantGiftDropShopItem = 1000129;
+
+  CV2SetBannerNotificationPosition = 1000130;
+  CV2SetBannerNotificationTitleTextColor = 1000131;
+  CV2SetBannerNotificationTitleBackgroundColor = 1000132;
+  CV2SetBannerNotificationTitleTextSize = 1000133;
+  CV2SetBannerNotificationMainTextColor = 1000134;
+  CV2SetBannerNotificationMainTextBackgroundColor = 1000135;
+  CV2SetBannerNotificationMainTextSize = 1000136;
+  CV2SetBannerNotificationLeftEmoji = 1000137;
+  CV2SetBannerNotificationRightEmoji = 1000138;
+
+  CV2SetRewardNotificationBackgroundColor = 1000139;
+  CV2SetRewardNotificationTitleTextColor = 1000140;
+  CV2SetRewardNotificationTitleTextSize = 1000141;
+  CV2SetRewardNotificationDescriptionTextColor = 1000142;
+  CV2SetRewardNotificationDescriptionTextSize = 1000143;
+  CV2SetRewardNotificationShowContentsText = 1000144;
+  CV2SetRewardNotificationContentsTextColor = 1000145;
+  CV2SetRewardNotificationContentsDisplayMode = 1000146;
+  CV2SetRewardNotificationShowImage = 1000147;
+
+  CV2SetConstantObjectiveMarker = 1000148; 
+  
+  CV2SetPlayerDefinitionBoardCustomLocomotionRequested = 1000149;
+  CV2SetPlayerDefinitionBoardForceManualSprintR1 = 1000150;
+  CV2SetPlayerDefinitionBoardCustomFootstepAudioRequested = 1000151;
+  
+  CV2SetRoomHudElementTitleOption = 1000152;
+  CV2SetRoomHudElementSubtitleOption = 1000153;
+  CV2SetRoomHudElementBarOption = 1000154;
+  CV2SetRoomHudElementInventoryOption = 1000155;
+  CV2SetRoomHudElementInventoryRoomOption = 1000156;
+  CV2SetRoomHudElementInventoryShowIcon = 1000157;
+  CV2SetRoomHudElementInventoryConsumable = 1000158;
+  CV2SetRoomHudElementInventoryCurrency = 1000159;
+  CV2SetRoomHudElementProgressWheelOption = 1000160;
+  CV2SetRoomHudElementShowProgress = 1000161;
+
+  CV2_LocomotionRequestSteering_SetSteerInWorldSpace = 1000162;
+  CV2SetInputDescIndex = 1000163;
+  CV2SetOutputDescIndex = 1000164;
+  CV2SetPortGroupIndex = 1000165;
+  
+  CV2SetConstantRoomCurrency = 1000166;
+  CV2SetAwardCurrencyFromConstantNodeLogOutput = 1000167;
+  CV2SetGetBalanceFromConstantNodeLogOutput = 1000168;
+  CV2SetStateMachineDefaultState = 1000169;
+  
+  CV2SetAddInventoryItemNodeLogOutput = 1000171;
+  CV2SetRemoveInventoryItemNodeLogOutput = 1000172;
+
+  CV2SetStudioFunctionId = 1000173;
+  CV2RegisterStudioFunctions = 1000174;
+
+  CV2SetConstantQuickChatTable = 1000175; 
+
+  CV2SetStateMachineSynced = 1000176;
+  CV2SetStateConstant = 1000177;
+  
+  CV2SetEquipmentSlotConstantSlotType = 1000178;
+  CV2SetEquipmentSlotConstantSlotNumber = 1000179;
+
+  CV2SetConstantRoomOffer = 1000180;
+
+  CV2SetPlayerUITagFilter = 1000181;
+  CV2SetPlayerUIFilterEnabled = 1000182;
+
+  CV2RetypeInputDesc = 1000183;
+  CV2RetypeOutputDesc = 1000184;
+
+  CV2SetPlayerDefinitionGraphTraitValue = 1000185;
+  
+  CV2SetReplicatorTarget = 1000186;
+  CV2ClearReplicatorTarget = 1000187;
+  
+  CV2LocomotionRequestSteeringR2SetSteerInWorldSpace = 1000188;
+
+  CV2CreateObjectBoard = 1000189;
+
+  CV2SetFunctionCallDeclId = 1000190;
+
+  CV2FunctionNodeAddExec = 1000191;
+  CV2FunctionNodeRemoveExec = 1000192;
+  CV2FunctionNodeChangeFilter = 1000193;
+  
+  CV2SetHolotarRecordingNodeValues = 1000194;
+  
+  CV2SetPlayerPromptImmediate = 1000195;
+  CV2SetPlayerPromptCancelOnWatchClose = 1000196;
+  CV2SetPlayerPromptReplaceExistingPrompts = 1000197;
+  
+  CV2SetConstantStorefrontItem = 1000198;
+  CV2SetRoomHudElementInventoryRoomInventoryItem = 1000199;
+
+  CV2SetConstantPlayerEvent = 1000200;
+  CV2SetObjectProperty = 1000201;
+
+  CV2RequestAvatarLocomotionAnimationSetFullBodyAnimation = 1000202;
+  CV2UngroupBoard = 1000203;
+  CV2GroupBoard = 1000204;
+
+  CV2CreateObjectProperty = 1000205;
+  CV2SetObjectPropertyHomeValue = 1000206;
+  CV2SetObjectPropertyNameAndType = 1000207;
+  CV2SetObjectPropertySynced = 1000208;
+  CV2DeleteObjectProperty = 100209;
+  CV2MoveToBoard = 1000210;
+  CV2SplitFromBoard = 1000211;
+  CV2GroupObjectBoard = 1000212;
+  CV2DeleteAllNodes = 1000213;
+  CV2SetConstantAvatarItem = 1000214;
+  CV2PromoteDataTableToRoomAsset = 1000215;
+  CV2CreateDataTableRoomAsset = 1000216;
+
+  CV2SetProjectileValue = 1000217;
+  CV2SetProjectileColorIndex = 1000218;
+  CV2SetProjectileSpeed = 1000219;
+  CV2SetProjectileLifetimeSeconds = 1000220;
+  CV2SetProjectileGravity = 1000221;
+  CV2SetProjectileHeadDamage = 1000222;
+  CV2SetProjectileTorsoDamage = 1000223;
+  CV2SetProjectileHandDamage = 1000224;
+  CV2SetProjectileObjectDamage = 1000225;
+  CV2SetProjectileCount = 1000226;
+  CV2SetProjectileAngle = 1000227;
+  CV2SetProjectileForce = 1000228;
+  CV2SetProjectileSelfCollisionsEnabled = 1000229;
+
+  CV2SetIsFrozen = 1000230;
+  CV2IsRecRoomObjectOfTypeSetTargetType = 1000231;
+  CV2ManagePlayerProperty = 1000232;
+  CV2SetEventDefinitionEventId = 1000233;
+
+  CV2SetParticleVfxType = 1000234;
+  CV2SetPlayParticleVfxAtPositionSynced = 1000235;
+  
+  CV2SetConstantBodyPart = 1000236;
+
+  CV2SetMessageNodeMessageName = 1000237;
+  CV2SetMessageSenderNodeScopeAndTarget = 1000238;
+  CV2SetMessageNodeHasPortForParameter = 1000239;
+  CV2EditMessageName = 1000240;
+  CV2ManageMessageParameter = 1000241;
+
+  CV2CreationObjectGetAllOfTypeWithTagSetTargetType = 1000242;
+
+  CV2SetObjectPropertyDisplayMetadata = 1000243;
+
+  CV2GameAISendUserPromptWithStructuredResponseAddOutput = 1000244;
+  CV2GameAISendUserPromptWithStructuredResponseEditOutput = 1000245;
+  CV2GameAISendUserPromptWithStructuredResponseRemoveOutput = 1000246;
+
+  CV2SetBehaviorBoardBehavior = 1000247;
+  CV2CreateBehaviorBoardBehavior = 1000248;
+  CV2SetBehaviorName = 1000249;
+  CV2CreateNewBehaviorVersion = 1000250;
+
+  CV2SetTextureConstantSize = 1000251;
+
+  CV2SetTextToSpeechMaxRolloffDistance = 1000252;
+  CV2SetTextToSpeechRolloffCurve = 1000253;
+
+  CV2SetGenAIMusicBlobName = 1000254;
+  CV2SetGenAIMusicPrompt = 1000255;
+  CV2SetGenAIMusicDuration = 1000256;
+  CV2SetGenAIMusicLyrics = 1000257;
+
+  CV2SetGenAISFXBlobName = 1000258;
+  CV2SetGenAISFXPrompt = 1000259;
+  CV2SetGenAISFXDuration = 1000260;
+
+  CV2FunctionDeclSetDescription = 1000261;
+
+  CV2SetChatAIModelNodeModel = 1000262;
+  CV2SetImageGenerationAIModelNodeModel = 1000263;
+
+  CV2SetGenAIMusicContext = 1000264;
+  CV2SetGenAISFXContext = 1000265;
+
+  CV2AiFunctionSetFunctionDeclId = 1000266;
+
+  CV2SetConstantRoomBadge = 1000267;
+}
+
+message ActionData {
+  ActionKind Kind = 1;
+  oneof payload {
+    PartialInitializePayloadData partial_initialize = 2;
+    FullInitializePayloadData full_initialize = 3;
+    DestroyPayloadData destroy = 4;
+    MultiPayloadData multi = 5;
+    CompressedPayloadData compressed = 6;
+    PartialActionPayloadData partial_action = 7;
+
+    AddGraphPayloadData add_graph = 8;
+    RemoveGraphPayloadData remove_graph = 9;
+    AddNodePayloadData add_node = 10;
+    RemoveNodePayloadData remove_node = 11;
+    AddEdgePayloadData add_edge = 12;
+    RemoveEdgePayloadData remove_edge = 13;
+    InputSetDefaultValuePayloadData input_set_default_value = 14;
+    FunctionNodeAddInputPayloadData function_node_add_input = 15;
+    FunctionNodeAddOutputPayloadData function_node_add_output = 16;
+    FunctionNodeRemoveInputPayloadData function_node_remove_input = 17;
+    FunctionNodeRemoveOutputPayloadData function_node_remove_output = 18;
+    AddInputToGroupPayloadData add_input_to_group = 19;
+
+
+    
+
+    CV2AddNodePayloadData cv2_add_node = 1000005;
+    CV2RemoveNodePayloadData cv2_remove_node = 1000006;
+    CV2AddConnectionPayloadData cv2_add_connection = 1000007;
+    CV2RemoveConnectionPayloadData cv2_remove_connection = 1000008;
+    CV2RemoveInputPortConnectionsPayloadData cv2_remove_input_port_connections = 1000009;
+    CV2RemoveOutputPortConnectionsPayloadData cv2_remove_output_port_connections = 1000010;
+    CV2AddInputDescPayloadData cv2_add_input_desc = 1000011;
+    CV2AddInputPortPayloadData cv2_add_input_port = 1000012;
+    CV2AddOutputDescPayloadData cv2_add_output_desc = 1000013;
+    CV2AddNodeDescPayloadData cv2_add_node_desc = 1000014;
+    CV2RemoveInputDescPayloadData cv2_remove_input_desc = 1000015;
+    CV2RemoveInputPortPayloadData cv2_remove_input_port = 1000016;
+    CV2RemoveOutputDescPayloadData cv2_remove_output_desc = 1000017;
+    CV2RemoveNodeDescPayloadData cv2_remove_node_desc = 1000018;
+    CV2SpawnTemplatePayloadData cv2_spawn_template = 1000019;
+    CV2SetNodeNamePayloadData cv2_set_node_name = 1000020;
+    CV2SetNodeTransformPayloadData cv2_set_node_transform = 1000021;
+    CV2SetDefaultValuePayloadData cv2_set_default_value = 1000022;
+    CV2DeserializeObjectBoardPayloadData cv2_deserialize_object_board = 1000023;
+    CV2SetEventNodeBaseRegistrationPayloadData cv2_set_event_node_base_registration = 1000024;
+    CV2SetEventSenderTargetPayloadData cv2_set_event_sender_target = 1000025;
+    CV2AddGraphPayloadData cv2_add_graph = 1000026;
+    CV2RemoveGraphPayloadData cv2_remove_graph = 1000027;
+    CV2SetObjectBoardObjectAttachmentModePayloadData cv2_set_object_board_object_attachment_mode = 1000028;
+    CV2SetActivePlayerDefinitionBoardPayloadData cv2_set_active_player_definition_board = 1000029;
+    CV2SetVariableMemoryTypePayloadData cv2_set_variable_memory_type = 1000031;
+    CV2SetLogStringChannelPayloadData cv2_set_log_string_channel = 1000032;
+    CV2RemoveObjectBoardPayloadData cv2_remove_object_board = 1000033;
+    CV2SetNodeColorPayloadData cv2_set_node_color = 1000034;
+    CV2SetAwardCurrencyNodeCurrencyReplicationIdPayloadData cv2_set_award_currency_node_currency_replication_id = 1000035;
+    CV2SetGetBalanceNodeCurrencyReplicationIdPayloadData cv2_set_get_balance_node_currency_replication_id = 1000036;
+    CV2SetAwardCurrencyNodeLogOutputPayloadData cv2_set_award_currency_node_log_output = 1000037;
+    CV2SetGetBalanceNodeLogOutputPayloadData cv2_set_get_balance_node_log_output = 1000038;
+    CV2SetConstantConsumablePayloadData cv2_set_constant_consumable = 1000039;
+    CV2CloudDataResetEntryPayloadData cv2_cloud_data_reset_entry = 1000040;
+    CV2CloudDataDeleteEntryPayloadData cv2_cloud_data_delete_entry = 1000041;
+    CV2SetRaycastIgnorePlayersPayloadData cv2_set_raycast_ignore_players = 1000042;
+    CV2SetRaycastIgnoreObjectsPayloadData cv2_set_raycast_ignore_objects = 1000043;
+    CV2SetVariableNodeHomeValuePayloadData cv2_set_variable_node_home_value = 1000044;
+    CV2SetLeaderboardStatModePayloadData cv2_set_leaderboard_stat_mode = 1000045;
+    CV2SetColorConstantIndexValuePayloadData cv2_set_color_constant_index_value = 1000046;
+    CV2SetCommentBodyPayloadData cv2_set_comment_body = 1000047;
+    CV2SetCommentColorPayloadData cv2_set_comment_color = 1000048;
+    CV2SetCommentAlwaysOnPayloadData cv2_set_comment_always_on = 1000049;
+    CV2SetSampleAudioNodeValuesPayloadData cv2_set_sample_audio_node_values = 1000050;
+    CV2SetSampleAudioNodePreloadPayloadData cv2_set_sample_audio_node_preload = 1000051;
+    CV2RenameInputDescPayloadData cv2_rename_input_desc = 1000052;
+    CV2RenameOutputDescPayloadData cv2_rename_output_desc = 1000053;
+    CV2RenameNodeGroupPayloadData cv2_rename_node_group = 1000054;
+    CV2SetConstantDestinationPayloadData cv2_set_constant_destination = 1000055;
+    CV2SetAudioClipValuePayloadData cv2_set_audio_clip_value = 1000056;
+    CV2SetHudElementPayloadData cv2_set_hud_element = 1000057;
+    CV2SetHudElementColorPayloadData cv2_set_hud_element_color = 1000058;
+    CV2SetHudElementLabelPayloadData cv2_set_hud_element_label = 1000059;
+    CV2SetHudElementValuePayloadData cv2_set_hud_element_value = 1000060;
+    CV2SetHudElementMaxValuePayloadData cv2_set_hud_element_max_value = 1000061;
+    CV2SetHudElementShowLabelPayloadData cv2_set_hud_element_show_label = 1000062;
+    CV2SetHudElementShowValueTextPayloadData cv2_set_hud_element_show_value_text = 1000063;
+    CV2SetPlayerNameColorSyncedPayloadData cv2_set_player_name_color_synced = 1000064;
+    CV2SetConstantPlayerOutfitSlotFlagPayloadData cv2_set_constant_player_outfit_slot_flag = 1000065;
+    CV2BytesDebugPayloadData cv2_bytes_debug = 1000066;
+    CV2ReparentNodesPayloadData cv2_reparent_nodes = 1000067;
+    CV2SetInteractionFilterPayloadData cv2_set_interaction_filter = 1000068;
+    CV2RemoveInteractionFilterPayloadData cv2_remove_interaction_filter = 1000069;
+    CV2SetPlayerUIEnabledPayloadData cv2_set_player_ui_enabled = 1000070;
+    CV2SetPlayerUISyncedPayloadData cv2_set_player_ui_synced = 1000071;
+    CV2SetPlayerUIBarEnabledPayloadData cv2_set_player_ui_bar_enabled = 1000072;
+    CV2SetPlayerUIBarColorPayloadData cv2_set_player_ui_bar_color = 1000073;
+    CV2SetPlayerUIBarValuePayloadData cv2_set_player_ui_bar_value = 1000074;
+    CV2SetPlayerUIBarMaxValuePayloadData cv2_set_player_ui_bar_max_value = 1000075;
+    CV2SetPlayerUIBarAnimatedPayloadData cv2_set_player_ui_bar_animated = 1000076;
+    CV2SetPlayerUITextEnabledPayloadData cv2_set_player_ui_text_enabled = 1000077;
+    CV2SetPlayerUITextTextPayloadData cv2_set_player_ui_text_text = 1000078;
+    CV2SetPlayerUITextColorPayloadData cv2_set_player_ui_text_color = 1000079;
+    CV2SetPlayerUIRoleFilterPayloadData cv2_set_player_ui_role_filter = 1000080;
+    CV2SetPlayerUIFilterModePayloadData cv2_set_player_ui_filter_mode = 1000081;
+    CV2SetConstantRoomKeyPayloadData cv2_set_constant_room_key = 1000082;
+    CV2SetMoodsConstantSyncedPayloadData cv2_set_moods_constant_synced = 1000083;
+    CV2SetMoodsConstantBlendTimePayloadData cv2_set_moods_constant_blend_time = 1000084;
+    CV2SetMoodsConstantRoleFilterModePayloadData cv2_set_moods_constant_role_filter_mode = 1000085;
+    CV2SetMoodsConstantFilteredRolesPayloadData cv2_set_moods_constant_filtered_roles = 1000086;
+    CV2SetMoodsConstantEaseInPayloadData cv2_set_moods_constant_ease_in = 1000087;
+    CV2SetSunConstantSunColorPayloadData cv2_set_sun_constant_sun_color = 1000088;
+    CV2SetSunConstantSunIntensityPayloadData cv2_set_sun_constant_sun_intensity = 1000089;
+    CV2SetSunConstantShadowStrengthPayloadData cv2_set_sun_constant_shadow_strength = 1000090;
+    CV2SetSunConstantDiscSizePayloadData cv2_set_sun_constant_disc_size = 1000091;
+    CV2SetSunConstantGlowColorPayloadData cv2_set_sun_constant_glow_color = 1000092;
+    CV2SetSunConstantGlowStrengthPayloadData cv2_set_sun_constant_glow_strength = 1000093;
+    CV2SetSunConstantGlowSizePayloadData cv2_set_sun_constant_glow_size = 1000094;
+    CV2SetSunConstantGlowHorizonPayloadData cv2_set_sun_constant_glow_horizon = 1000095;
+    CV2SetSunConstantReflectionIntensityPayloadData cv2_set_sun_constant_reflection_intensity = 1000096;
+    CV2SetSunConstantClipHorizonPayloadData cv2_set_sun_constant_clip_horizon = 1000097;
+    CV2SetFogConstantFogColorPayloadData cv2_set_fog_constant_fog_color = 1000098;
+    CV2SetFogConstantStartDistancePayloadData cv2_set_fog_constant_start_distance = 1000099;
+    CV2SetFogConstantFadeDistancePayloadData cv2_set_fog_constant_fade_distance = 1000100;
+    CV2SetSkydomeConstantSkyBottomColorPayloadData cv2_set_skydome_constant_sky_bottom_color = 1000101;
+    CV2SetSkydomeConstantSkyTopColorPayloadData cv2_set_skydome_constant_sky_top_color = 1000102;
+    CV2SetSkydomeConstantGroundBottomColorPayloadData cv2_set_skydome_constant_ground_bottom_color = 1000103;
+    CV2SetSkydomeConstantGroundTopColorPayloadData cv2_set_skydome_constant_ground_top_color = 1000104;
+    CV2SetSkydomeConstantHorizonColorPayloadData cv2_set_skydome_constant_horizon_color = 1000105;
+    CV2SetSkydomeConstantHorizonSizePayloadData cv2_set_skydome_constant_horizon_size = 1000106;
+    CV2SetSkydomeConstantHorizonStrengthPayloadData cv2_set_skydome_constant_horizon_strength = 1000107;
+    CV2SetBackgroundObjectsConstantObjectVariantPayloadData cv2_set_background_objects_constant_object_variant = 1000108;
+    CV2SetBackgroundObjectsConstantColorPayloadData cv2_set_background_objects_constant_color = 1000109;
+    CV2SetBackgroundObjectsConstantRotationPayloadData cv2_set_background_objects_constant_rotation = 1000110;
+    CV2SetBackgroundObjectsConstantTransparencyPayloadData cv2_set_background_objects_constant_transparency = 1000111;
+    CV2SetAudioClipVolumePayloadData cv2_set_audio_clip_volume = 1000112;
+    CV2SetAudioClipPlaybackSpeedShiftPayloadData cv2_set_audio_clip_playback_speed_shift = 1000113;
+    CV2SetAudioClipPlaybackSpeedVariationPayloadData cv2_set_audio_clip_playback_speed_variation = 1000114;
+    CV2SetPlayAudioAtPositionSyncedPayloadData cv2_set_play_audio_at_position_synced = 1000115;
+    CV2SetPlayAudioAtPositionMaxRolloffDistancePayloadData cv2_set_play_audio_at_position_max_rolloff_distance = 1000116;
+    CV2SetPlayAudioAtPositionRolloffCurvePayloadData cv2_set_play_audio_at_position_rolloff_curve = 1000117;
+    CV2SetPlayAudioAtPositionAudioChannelPayloadData cv2_set_play_audio_at_position_audio_channel = 1000118;
+
+    CV2SetDataTableReadTargetPayloadData cv2_set_data_table_read_target = 1000119;
+
+    CV2SetConstantRewardPayloadData cv2_set_constant_reward = 1000120;
+    CV2ModifyUGCRewardPayloadData cv2_modify_ugc_reward = 1000121;
+    CV2DeleteUGCRewardPayloadData cv2_delete_ugc_reward = 1000122;
+
+    CV2SetAwardRoomKeyNodeLogOutputPayloadData cv2_set_award_room_key_node_log_output = 1000123;
+    CV2SetAwardConsumableNodeLogOutputPayloadData cv2_set_award_consumable_node_log_output = 1000124;
+    
+    CV2UpdateProgressionSettingsPayloadData cv2_update_progression_settings = 1000125;
+    
+    CV2SetLockedByRoomContributorsPayloadData cv2_set_locked_by_room_contributors = 1000126;
+
+    CV2ModifyDataTablePayloadData cv2_modify_data_table = 1000127;
+
+    CV2SetConstantInventoryItemPayloadData cv2_set_constant_inventory_item = 1000128;
+    
+    CV2SetConstantGiftDropShopItemPayloadData cv2_set_constant_giftdrop_shop_item = 1000129;
+    
+    CV2SetBannerNotificationPositionPayloadData cv2_set_banner_notification_position = 1000130;
+    CV2SetBannerNotificationTitleTextColorPayloadData cv2_set_banner_notification_title_text_color = 1000131;
+    CV2SetBannerNotificationTitleBackgroundColorPayloadData cv2_set_banner_notification_title_background_color = 1000132;
+    CV2SetBannerNotificationTitleTextSizePayloadData cv2_set_banner_notification_title_text_size = 1000133;
+    CV2SetBannerNotificationMainTextColorPayloadData cv2_set_banner_notification_main_text_color = 1000134;
+    CV2SetBannerNotificationMainTextBackgroundColorPayloadData cv2_set_banner_notification_main_text_background_color = 1000135;
+    CV2SetBannerNotificationMainTextSizePayloadData cv2_set_banner_notification_main_text_size = 1000136;
+    CV2SetBannerNotificationLeftEmojiPayloadData cv2_set_banner_notification_left_emoji = 1000137;
+    CV2SetBannerNotificationRightEmojiPayloadData cv2_set_banner_notification_right_emoji = 1000138;
+
+    CV2SetRewardNotificationBackgroundColorPayloadData cv2_set_reward_notification_background_color = 1000139;
+    CV2SetRewardNotificationTitleTextColorPayloadData cv2_set_reward_notification_title_text_color = 1000140;
+    CV2SetRewardNotificationTitleTextSizePayloadData cv2_set_reward_notification_title_text_size = 1000141;
+    CV2SetRewardNotificationDescriptionTextColorPayloadData cv2_set_reward_notification_description_text_color = 1000142;
+    CV2SetRewardNotificationDescriptionTextSizePayloadData cv2_set_reward_notification_description_text_size = 1000143;
+    CV2SetRewardNotificationShowContentsTextPayloadData cv2_set_reward_notification_show_contents_text = 1000144;
+    CV2SetRewardNotificationContentsTextColorPayloadData cv2_set_reward_notification_contents_text_color = 1000145;
+    CV2SetRewardNotificationContentsDisplayModePayloadData cv2_set_reward_notification_contents_display_mode = 1000146;
+    CV2SetRewardNotificationShowImagePayloadData cv2_set_reward_notification_show_image = 1000147;
+
+    CV2SetConstantObjectiveMarkerPayloadData cv2_set_constant_objective_marker = 1000148;
+    
+    CV2SetPlayerDefinitionBoardCustomLocomotionRequestedPayloadData cv2_set_player_definition_board_custom_locomotion_requested = 1000149;
+    CV2SetPlayerDefinitionBoardForceManualSprintR1PayloadData cv2_set_player_definition_board_force_manual_sprint_r1 = 1000150;
+    CV2SetPlayerDefinitionBoardCustomFootstepAudioRequestedPayloadData cv2_set_player_definition_board_custom_footstep_audio_requested = 1000151;
+    
+    CV2SetRoomHudElementTitleOptionPayloadData cv2_set_room_hud_title_option = 1000152;
+    CV2SetRoomHudElementSubtitleOptionPayloadData cv2_set_room_hud_subtitle_option = 1000153;
+    CV2SetRoomHudElementBarOptionPayloadData cv2_set_room_hud_bar_option = 1000154;
+    CV2SetRoomHudElementInventoryOptionPayloadData cv2_set_room_hud_inventory_option = 1000155;
+    CV2SetRoomHudElementInventoryRoomOptionPayloadData cv2_set_room_hud_inventory_room_option = 1000156;
+    CV2SetRoomHudElementInventoryShowIconPayloadData cv2_set_room_hud_inventory_show_icon = 1000157;
+    CV2SetRoomHudElementInventoryConsumablePayloadData cv2_set_room_hud_inventory_consumable = 1000158;
+    CV2SetRoomHudElementInventoryCurrencyPayloadData cv2_set_room_hud_inventory_currency = 1000159;
+    CV2SetRoomHudElementProgressWheelOptionPayloadData cv2_set_room_hud_progress_wheel_option = 1000160;
+    CV2SetRoomHudElementShowProgressPayloadData cv2_set_room_hud_show_progress = 1000161;
+
+    CV2_LocomotionRequestSteering_SetSteerInWorldSpacePayloadData cv2_locomotion_request_steering_set_steer_in_world_space = 1000162;
+    CV2SetInputDescIndexPayloadData cv2_set_input_desc_index = 1000163;
+    CV2SetOutputDescIndexPayloadData cv2_set_output_desc_index = 1000164;
+    CV2SetPortGroupIndexPayloadData cv2_set_port_group_index = 1000165;
+    
+    CV2SetConstantRoomCurrencyPayloadData cv2_set_constant_room_currency = 1000166;
+    CV2SetAwardCurrencyFromConstantNodeLogOutputPayloadData cv2_set_award_currency_from_constant_node_log_output = 1000167;
+    CV2SetGetBalanceFromConstantNodeLogOutputPayloadData cv2_set_get_balance_from_constant_node_log_output = 1000168;
+    CV2SetStateMachineDefaultStatePayloadData cv2_set_state_machine_default_state = 1000169;
+    
+    CV2SetAddInventoryItemNodeLogOutputPayloadData cv2_set_add_inventory_item_node_log_output = 1000171;
+    CV2SetRemoveInventoryItemNodeLogOutputPayloadData cv2_set_remove_inventory_item_node_log_output = 1000172;
+
+    CV2SetStudioFunctionIdPayloadData cv2_set_studio_function_id = 1000173;
+    CV2RegisterStudioFunctionsPayloadData cv2_register_studio_functions = 1000174;
+
+    CV2SetConstantQuickChatTablePayloadData cv2_set_constant_quick_chat_table = 1000175;
+
+    CV2SetStateMachineSyncedPayloadData cv2_set_state_machine_synced = 1000176;
+    CV2SetStateConstantPayloadData cv2_set_state_constant = 1000177;
+
+    CV2SetEquipmentSlotConstantSlotTypeData cv2_set_equipment_slot_constant_slot_type = 1000178;
+    CV2SetEquipmentSlotConstantSlotNumberData cv2_set_equipment_slot_constant_slot_number = 1000179;
+
+    CV2SetConstantRoomOfferPayloadData cv2_set_constant_room_offer = 1000180;
+
+    CV2SetPlayerUITagFilterPayloadData cv2_set_player_ui_tag_filter = 1000181;
+    CV2SetPlayerUIFilterEnabledPayloadData cv2_set_player_ui_filter_enabled = 1000182;
+
+    CV2RetypeInputDescPayloadData cv2_retype_input_desc = 1000183;
+    CV2RetypeOutputDescPayloadData cv2_retype_output_desc = 1000184;
+
+    CV2SetPlayerDefinitionGraphTraitValuePayloadData cv2_set_player_definition_graph_trait_value = 1000185;
+    
+    CV2SetReplicatorTargetPayloadData cv2_set_replicator_target = 1000186;
+    CV2ClearReplicatorTargetPayloadData cv2_clear_replicator_target = 1000187;
+    
+    CV2LocomotionRequestSteeringR2SetSteerInWorldSpacePayloadData cv2_locomotion_request_steering_r2_set_steer_in_world_space = 1000188;
+
+    CV2CreateObjectBoardPayloadData cv2_create_object_board = 1000189;
+
+    CV2SetFunctionCallDeclIdPayloadData cv2_set_function_call_decl_id = 1000190;
+
+    CV2FunctionNodeAddExecPayloadData cv2_function_node_add_exec = 1000191;
+    CV2FunctionNodeRemoveExecPayloadData cv2_function_node_remove_exec = 1000192;
+    CV2FunctionNodeChangeFilterPayloadData cv2_function_node_change_filter = 1000193;
+    
+    CV2SetHolotarRecordingNodeValuesPayloadData cv2_set_holotar_recording_node_values = 1000194;
+	
+    CV2PlayerPromptSetImmediatePayloadData cv2_player_prompt_set_immediate = 1000195;
+    CV2PlayerPromptSetCancelOnWatchClosePayloadData cv2_player_prompt_set_cancel_on_watch_close = 1000196;
+	  CV2PlayerPromptSetReplaceExistingPromptsPayloadData cv2_player_prompt_set_replace_existing_prompts = 1000197;
+
+    CV2SetConstantStorefrontItemPayloadData cv2_set_constant_storefront_item = 1000198;
+    CV2SetRoomHudElementInventoryRoomInventoryItemPayloadData cv2_set_room_hud_inventory_room_inventory_item = 1000199;
+    CV2SetConstantPlayerEventPayloadData cv2_set_constant_player_event = 1000200;
+
+    CV2SetCustomPropertyPayloadData cv2_set_custom_property = 1000201;
+
+    CV2RequestAvatarLocomotionAnimationSetFullBodyAnimationPayloadData cv2_request_avatar_locomotion_animation_set_full_body_animation = 1000202;
+    CV2UngroupBoardPayloadData cv2_ungroup_board = 1000203;
+    CV2GroupBoardPayloadData cv2_group_board = 1000204;
+    CV2CreateObjectPropertyPayloadData cv2_create_object_property = 100205;
+    CV2SetObjectPropertyHomeValuePayloadData cv2_set_object_property_home_value = 1000206;
+    CV2SetObjectPropertyNameAndTypePayloadData cv2_set_object_property_type = 1000207;
+    CV2SetObjectPropertySyncedPayloadData cv2_set_object_property_synced = 1000208;
+    CV2DeleteObjectPropertyPayloadData cv2_delete_object_property = 100209;
+    CV2MoveToBoardPayloadData cv2_move_to_board = 1000210;
+    CV2SplitFromBoardPayloadData cv2_split_from_board = 1000211;
+    CV2GroupObjectBoardPayloadData cv2_group_object_board = 1000212;
+    CV2DeleteAllNodesPayloadData cv2_delete_all_nodes = 1000213;
+    CV2SetConstantAvatarItemPayloadData cv2_set_constant_avatar_item = 1000214;
+    CV2PromoteDataTableToRoomAssetPayloadData cv2_promote_data_table_to_room_asset = 1000215;
+    CV2CreateDataTableRoomAssetPayloadData cv2_create_data_table_room_asset = 1000216;
+
+    CV2SetProjectileValuePayloadData cv2_set_projectile_value = 1000217;
+    CV2SetProjectileColorIndexPayloadData cv2_set_projectile_color_index = 1000218;
+    CV2SetProjectileSpeedPayloadData cv2_set_projectile_speed = 1000219;
+    CV2SetProjectileLifetimeSecondsPayloadData cv2_set_projectile_lifetime_seconds = 1000220;
+    CV2SetProjectileGravityPayloadData cv2_set_projectile_gravity = 1000221;
+    CV2SetProjectileHeadDamagePayloadData cv2_set_projectile_head_damage = 1000222;
+    CV2SetProjectileTorsoDamagePayloadData cv2_set_projectile_torso_damage = 1000223;
+    CV2SetProjectileHandDamagePayloadData cv2_set_projectile_hand_damage = 1000224;
+    CV2SetProjectileObjectDamagePayloadData cv2_set_projectile_object_damage = 1000225;
+    CV2SetProjectileCountPayloadData cv2_set_projectile_count = 1000226;
+    CV2SetProjectileAnglePayloadData cv2_set_projectile_angle = 1000227;
+    CV2SetProjectileForcePayloadData cv2_set_projectile_force = 1000228;
+    CV2SetProjectileSelfCollisionsEnabledPayloadData cv2_set_projectile_self_collisions_enabled = 1000229;
+
+    CV2SetIsFrozenData cv2_set_is_frozen = 1000230;
+    CV2IsRecRoomObjectOfTypeSetTargetTypePayloadData cv2_is_rec_room_object_of_type_set_target_type = 1000231;
+    CV2ManagePlayerPropertyPayloadData cv2_manage_player_property = 1000232;
+    CV2SetEventDefinitionEventIdPayloadData cv2_set_event_definition_event_id = 1000233;
+
+    CV2SetParticleVfxTypePayloadData cv2_set_particle_vfx_type = 1000234;
+    CV2SetPlayParticleVfxAtPositionSyncedPayloadData cv2_set_play_particle_vfx_at_position_synced = 1000235;
+
+    CV2SetConstantBodyPartPayloadData cv2_set_constant_body_part = 1000236;
+
+    CV2SetMessageNodeMessageNamePayloadData cv2_set_message_node_message_name = 1000237;
+    CV2SetMessageSenderNodeScopeAndTargetPayloadData cv2_set_message_sender_node_scope_and_target = 1000238;
+    CV2SetMessageNodeHasPortForParameterPayloadData cv2_set_message_node_has_port_for_parameter = 1000239;
+    CV2EditMessageNamePayloadData cv2_edit_message_name = 1000240;
+    CV2ManageMessageParameterPayloadData cv2_manage_message_parameter = 1000241;
+
+    CV2CreationObjectGetAllOfTypeWithTagSetTargetTypePayloadData cv2_creation_object_get_all_of_type_with_tag_set_target_type = 1000242;
+
+    CV2SetObjectPropertyDisplayMetadataPayloadData cv2_set_object_property_display_metadata = 1000243;
+
+    CV2GameAISendUserPromptWithStructuredResponseAddOutputPayloadData cv2_game_ai_send_user_prompt_with_structured_response_add_output = 1000244;
+    CV2GameAISendUserPromptWithStructuredResponseEditOutputPayloadData cv2_game_ai_send_user_prompt_with_structured_response_edit_output = 1000245;
+    CV2GameAISendUserPromptWithStructuredResponseRemoveOutputPayloadData cv2_game_ai_send_user_prompt_with_structured_response_remove_output = 1000246;
+
+    CV2SetBehaviorBoardBehaviorPayloadData cv2_set_behavior_board_behavior = 1000247;
+    CV2CreateBehaviorBoardBehaviorPayloadData cv2_create_behavior_board_behavior = 1000248;
+    CV2SetBehaviorNamePayloadData cv2_set_behavior_name = 1000249;
+    CV2CreateNewBehaviorVersionPayloadData cv2_create_new_behavior_version = 1000250;
+
+    CV2SetTextureConstantSizePayloadData cv2_set_texture_constant_size = 1000251;
+
+    CV2SetTextToSpeechMaxRolloffDistancePayloadData cv2_set_text_to_speech_max_rolloff_distance = 1000252;
+    CV2SetTextToSpeechRolloffCurvePayloadData cv2_set_text_to_speech_rolloff_curve = 1000253;
+
+    CV2SetGenAIMusicBlobNamePayloadData cv2_set_gen_ai_music_blob_name = 1000254;
+    CV2SetGenAIMusicPromptPayloadData cv2_set_gen_ai_music_prompt = 1000255;
+    CV2SetGenAIMusicDurationPayloadData cv2_set_gen_ai_music_duration = 1000256;
+    CV2SetGenAIMusicLyricsPayloadData cv2_set_gen_ai_music_lyrics = 1000257;
+
+    CV2SetGenAISFXBlobNamePayloadData cv2_set_gen_ai_sfx_blob_name = 1000258;
+    CV2SetGenAISFXPromptPayloadData cv2_set_gen_ai_sfx_prompt = 1000259;
+    CV2SetGenAISFXDurationPayloadData cv2_set_gen_ai_sfx_duration = 1000260;
+
+    CV2FunctionDeclSetDescriptionPayloadData cv2_function_decl_set_description = 1000261;
+
+    CV2SetChatAIModelNodeModelPayloadData cv2_set_chat_ai_model_node_model = 1000262;
+    CV2SetImageGenerationAIModelNodeModelPayloadData cv2_set_image_generation_ai_model_node_model = 1000263;
+
+    CV2SetGenAIMusicContextPayloadData cv2_set_gen_ai_music_context = 1000264;
+    CV2SetGenAISFXContextPayloadData cv2_set_gen_ai_sfx_context = 1000265;
+
+    CV2AiFunctionSetFunctionDeclIdPayloadData cv2_ai_function_set_function_decl_id = 1000266;
+
+    CV2SetConstantRoomBadgePayloadData cv2_set_constant_room_badge = 1000267;
+  }
+}
+
+message PartialInitializePayloadData {
+    int32 count = 1;
+    int32 index = 2;
+    bytes data = 3;
+}
+
+message FullInitializePayloadData {
+    RootData root_data = 1;
+    circuits_v2.CircuitRootData circuit_root_data = 2;
+    rec_room.SuperRoomData super_room_data = 3;
+    circuits_v2.CircuitStudioUnitySubAssetUsageData circuit_studio_unity_sub_asset_usage_data = 4;
+}
+
+message DestroyPayloadData {
+
+}
+
+message MultiPayloadData {
+  repeated ActionData actions = 1;
+}
+
+message CompressedPayloadData {
+  bytes value = 1;
+}
+
+message PartialActionPayloadData {
+  int32 count = 1;
+  int32 index = 2;
+  bytes data = 3;
+  Id128Data action_id = 4;
+}
+
+message AddGraphPayloadData {
+  int32 parent_graph_id = 1;
+  int32 graph_def_id = 2;
+}
+
+message RemoveGraphPayloadData {
+  int32 graph_id = 1;
+}
+
+message AddNodePayloadData {
+  int32 graph_id = 1;
+  int32 node_def = 2;
+  CircuitsVec3Data local_position = 3;
+  CircuitsQuatData local_rotation = 4;
+}
+
+message RemoveNodePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+}
+
+message AddEdgePayloadData {
+  int32 graph_id = 1;  int32 src_id = 2;
+  int32 dst_id = 3;
+}
+
+message RemoveEdgePayloadData {
+  int32 graph_id = 1;
+  int32 src_id = 2;
+  int32 dst_id = 3;
+}
+
+message InputSetDefaultValuePayloadData {
+  int32 graph_id = 1;
+  int32 input_id = 2;
+  VariantData default_value = 3;
+}
+
+message FunctionNodeAddInputPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 input_index = 3;
+  NamedTypeData type = 4;
+}
+
+message FunctionNodeAddOutputPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 output_index = 3;
+  NamedTypeData type = 4;
+}
+
+message FunctionNodeRemoveInputPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 input_index = 3;
+}
+
+message FunctionNodeRemoveOutputPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 output_index = 3;
+}
+
+message AddInputToGroupPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 input_def_id = 3;
+}
+
+
+
+
+
+
+
+
+
+message CV2AddNodePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_type = 2;
+  core.GuidData node_id = 3;
+  circuits.CircuitsVec3Data local_space_position = 4;
+  circuits.CircuitsQuatData local_space_rotation = 5;
+}
+
+message CV2RemoveNodePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+}
+
+message CV2AddConnectionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData src_node_id = 2;
+  int32 src_node_desc_index = 3;
+  int32 src_port_index = 4;
+  core.GuidData dst_node_id = 5;
+  int32 dst_node_desc_index = 6;
+  int32 dst_port_index = 7;
+}
+
+message CV2RemoveConnectionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData src_node_id = 2;
+  int32 src_node_desc_index = 3;
+  int32 src_port_index = 4;
+  core.GuidData dst_node_id = 5;
+  int32 dst_node_desc_index = 6;
+  int32 dst_port_index = 7;
+}
+
+message CV2RemoveInputPortConnectionsPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 port_index = 4;
+}
+
+message CV2RemoveOutputPortConnectionsPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 port_index = 4;
+}
+
+message CV2AddInputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  string name = 4;
+  circuits.CircuitTypeData type = 5;
+}
+
+message CV2AddInputPortPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 input_desc_index = 4;
+}
+
+message CV2AddOutputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  string name = 4;
+  circuits.CircuitTypeData type = 5;
+}
+
+message CV2AddNodeDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string name = 3;
+}
+
+message CV2RemoveInputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 input_desc_index = 4;
+}
+
+message CV2RemoveInputPortPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 input_desc_index = 4;
+  int32 input_port_index = 5;
+}
+
+message CV2RemoveOutputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 output_desc_index = 4;
+}
+
+message CV2RemoveNodeDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+}
+
+message CV2SpawnTemplatePayloadData {
+  core.GuidData graph_id = 1;
+  circuits_v2.CircuitTemplateRootData circuit_template_root_data = 2;
+  circuits_v2.CircuitGraphToolMappingRegistryData circuit_graph_tool_mapping_registry_data = 3;
+  circuits_v2.CircuitStudioUnitySubAssetUsageData circuit_studio_unity_sub_asset_usage_data = 4;
+}
+
+message CV2SetNodeNamePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string name = 3;
+}
+
+message CV2SetNodeTransformPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  circuits.CircuitsVec3Data local_space_position = 3;
+  circuits.CircuitsQuatData local_space_rotation = 4;
+}
+
+message CV2SetDefaultValuePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 input_port_index = 4;
+  circuits_v2.CircuitSignalData default_value = 5;
+}
+
+message CV2DeserializeObjectBoardPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData inner_graph_id = 2;
+  core.GuidData node_id = 4;
+  circuits_v2.ControlPanelRootData control_panel_root_data = 3;
+}
+
+message CV2SetEventNodeBaseRegistrationPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData event_id = 3;
+}
+
+message CV2SetEventSenderTargetPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  circuits_v2.RpcTarget rpc_target = 3;
+}
+
+message CV2AddGraphPayloadData {
+  core.GuidData parent_graph_id = 1;
+  core.GuidData graph_id = 2;
+  int32 graph_def_id = 3;
+}
+
+message CV2RemoveGraphPayloadData {
+  core.GuidData graph_id = 1;
+}
+
+message CV2SetObjectBoardObjectAttachmentModePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 attachment_mode = 3;
+}
+
+message CV2SetActivePlayerDefinitionBoardPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+}
+
+message CV2SetVariableMemoryTypePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 memory_type = 3;
+}
+
+message CV2SetLogStringChannelPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 channel = 3;
+}
+
+message CV2RemoveObjectBoardPayloadData {
+  core.GuidData graph_id = 1;
+}
+
+message CV2SetNodeColorPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 color = 3;
+}
+
+message CV2SetAwardCurrencyNodeCurrencyReplicationIdPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData currency_replication_id = 3;
+}
+
+message CV2SetGetBalanceNodeCurrencyReplicationIdPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData currency_replication_id = 3;
+}
+
+message CV2SetAwardCurrencyNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2SetAwardCurrencyFromConstantNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2SetGetBalanceNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2SetGetBalanceFromConstantNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2SetAddInventoryItemNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2SetRemoveInventoryItemNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2SetConstantConsumablePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData consumable_id = 3;
+}
+
+message CV2SetConstantRoomCurrencyPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData room_currency_id = 3;
+}
+
+message CV2SetConstantRoomKeyPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData room_key_id = 3;
+}
+
+message CV2SetConstantRoomOfferPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData room_offer_id = 3;
+}
+
+message CV2SetConstantPlayerOutfitSlotFlagPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 player_outfit_slot_flag = 3;
+}
+
+message CV2SetConstantDestinationPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string room_name = 3;
+  string subroom_name = 4;
+  string mat_name = 5;
+  int32 room_door_invite_mode = 6;
+  bool force_new_instance = 7;
+}
+
+message CV2SetConstantObjectiveMarkerPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string friendly_name = 3;
+  core.GuidData id = 4;
+  int32 color_id = 5;
+  string label = 6;
+  bool label_enabled = 7;
+  bool distance_indicator_enabled = 8;
+  bool prioritize_distance_indicator = 9;
+  float proximity_fade_threshold = 10;
+}
+
+message CV2CloudDataResetEntryPayloadData {
+  core.GuidData old_guid = 1;
+  core.GuidData new_guid = 2;
+  int32 requesting_player_id = 3;
+}
+
+message CV2CloudDataDeleteEntryPayloadData {
+  core.GuidData guid = 1;
+  int32 requesting_player_id = 2;
+}
+
+message CV2SetRaycastIgnorePlayersPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool ignore_players = 3;
+}
+
+message CV2SetRaycastIgnoreObjectsPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool ignore_objects = 3;
+}
+
+message CV2SetVariableNodeHomeValuePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string homeValue = 3;
+}
+
+message CV2SetLeaderboardStatModePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 set_mode = 3;
+}
+
+message CV2SetColorConstantIndexValuePayloadData {
+    core.GuidData graph_id = 1;
+    core.GuidData node_id = 2;
+    int32 colorIndexValue = 3;
+}
+
+message CV2SetCommentBodyPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bytes body = 3;
+}
+
+message CV2SetCommentColorPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 color = 3;
+}
+
+message CV2SetCommentAlwaysOnPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool always_on = 3;
+}
+
+message CV2SetSampleAudioNodeValuesPayloadData {
+  core.GuidData graph_id = 1;
+    core.GuidData node_id = 2;
+    string blobName = 3;
+  float sampleLength = 4;
+}
+
+message CV2SetSampleAudioNodePreloadPayloadData {
+  core.GuidData graph_id = 1;
+    core.GuidData node_id = 2;
+    bool preload = 3;
+}
+
+message CV2RenameInputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 input_desc_index = 4;
+  string name = 5;
+}
+
+message CV2RenameOutputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 output_desc_index = 4;
+  string name = 5;
+}
+
+message CV2RenameNodeGroupPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  string new_name = 4;
+}
+
+message CV2ReparentNodesPayloadData {
+  core.GuidData DEPRECATED_graph_id = 1;
+  core.GuidData DEPRECATED_parent_graph_id = 2;
+  int32 source_graph_id = 3;
+  repeated int32 node_ids = 4;
+  int32 target_graph_id = 5;
+}
+
+message CV2SetAudioClipValuePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData value = 3;
+}
+
+message CV2SetAudioClipVolumePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float volume = 3;
+}
+
+message CV2SetAudioClipPlaybackSpeedShiftPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float playbackSpeedShift = 3;
+}
+
+message CV2SetAudioClipPlaybackSpeedVariationPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float playbackSpeedVariation = 5;
+}
+
+message CV2SetPlayAudioAtPositionSyncedPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool synced = 3;
+}
+
+message CV2SetPlayAudioAtPositionMaxRolloffDistancePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float max_rolloff_distance = 3;
+}
+
+message CV2SetPlayAudioAtPositionRolloffCurvePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 rolloff_curve = 3;
+}
+
+message CV2SetPlayAudioAtPositionAudioChannelPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 audio_channel = 3;
+  string audio_sub_channel = 4;
+}
+
+message CV2SetHudElementPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 hud_element_index = 3;
+}
+
+message CV2SetHudElementColorPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 color_index = 3;
+}
+
+message CV2SetHudElementLabelPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string label = 3;
+}
+
+message CV2SetHudElementValuePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+}
+
+message CV2SetHudElementMaxValuePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 max_value = 3;
+}
+
+message CV2SetHudElementShowLabelPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool show_label = 3;
+}
+
+message CV2SetHudElementShowValueTextPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool show_value_text = 3;
+}
+
+message CV2SetPlayerNameColorSyncedPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool synced = 3;
+}
+
+message CV2BytesDebugPayloadData {
+  bytes data = 1;
+}
+message CV2SetInteractionFilterPayloadData {
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 filter_flags = 4;
+}
+
+message CV2RemoveInteractionFilterPayloadData {
+  int32 filter_flags = 1;
+}
+
+message CV2SetPlayerUIEnabledPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+}
+
+message CV2SetPlayerUISyncedPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool synced = 3;
+}
+
+message CV2SetPlayerUIBarEnabledPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool enabled = 3;
+  bool is_primary = 4;
+}
+
+message CV2SetPlayerUIBarColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 color = 3;
+  bool is_primary = 4;
+}
+
+message CV2SetPlayerUIBarValuePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+  bool is_primary = 4;
+}
+
+message CV2SetPlayerUIBarMaxValuePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 max_value = 3;
+  bool is_primary = 4;
+}
+
+message CV2SetPlayerUIBarAnimatedPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool animated = 3;
+  bool is_primary = 4;
+}
+
+message CV2SetPlayerUITextEnabledPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool enabled = 3;
+}
+
+message CV2SetPlayerUITextTextPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string text = 3;
+}
+
+message CV2SetPlayerUITextColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 color = 3;
+}
+
+message CV2SetPlayerUIRoleFilterPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  repeated core.GuidData filtered_roles = 3;
+}
+
+message CV2SetPlayerUITagFilterPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  repeated string filtered_tags = 3;
+}
+
+message CV2SetPlayerUIFilterModePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 filter_mode = 3;
+}
+
+message CV2SetPlayerUIFilterEnabledPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool filter_enabled = 3;
+}
+
+message CV2SetMoodsConstantSyncedPayloadData {
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  bool synced = 3;
+}
+
+message CV2SetMoodsConstantBlendTimePayloadData {
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 blend_time = 3;
+}
+
+message CV2SetMoodsConstantRoleFilterModePayloadData {
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 filter_mode = 3;
+}
+
+message CV2SetMoodsConstantFilteredRolesPayloadData {
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  repeated core.GuidData filtered_roles = 3;
+}
+
+message CV2SetMoodsConstantEaseInPayloadData {
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  bool easeIn = 3;
+}
+message CV2SetSunConstantSunColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 sun_color = 3;
+
+}
+message CV2SetSunConstantSunIntensityPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float sun_intensity = 3;
+}
+message CV2SetSunConstantShadowStrengthPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float shadow_strength = 3;
+}
+message CV2SetSunConstantDiscSizePayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float disc_size = 3;
+}
+message CV2SetSunConstantGlowColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 glow_color = 3;
+}
+message CV2SetSunConstantGlowStrengthPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float glow_strength = 3;
+}
+message CV2SetSunConstantGlowSizePayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float glow_size = 3;
+}
+message CV2SetSunConstantGlowHorizonPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float glow_horizon = 3;
+}
+message CV2SetSunConstantReflectionIntensityPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float reflection_intensity = 3;
+}
+
+message CV2SetSunConstantClipHorizonPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  bool clip_horizon = 3;
+}
+
+message CV2SetFogConstantFogColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 fog_color = 3;
+}
+
+message CV2SetFogConstantStartDistancePayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float start_distance = 3;
+}
+
+message CV2SetFogConstantFadeDistancePayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float fade_distance = 3;
+}
+
+message CV2SetSkydomeConstantSkyBottomColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 sky_bottom_color = 3;
+}
+
+message CV2SetSkydomeConstantSkyTopColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 sky_top_color = 3;
+}
+
+message CV2SetSkydomeConstantGroundBottomColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 ground_bottom_color = 3;
+}
+
+message CV2SetSkydomeConstantGroundTopColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 ground_top_color = 3;
+}
+
+message CV2SetSkydomeConstantHorizonColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 horizon_color = 3;
+}
+
+message CV2SetSkydomeConstantHorizonSizePayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float horizon_size = 3;
+}
+
+message CV2SetSkydomeConstantHorizonStrengthPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  float horizon_strength = 3;
+}
+
+message CV2SetBackgroundObjectsConstantObjectVariantPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 object_type = 3;
+  int32 object_variant = 4;
+}
+
+message CV2SetBackgroundObjectsConstantColorPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 object_type = 3;
+  int32 color = 4;
+}
+
+message CV2SetBackgroundObjectsConstantRotationPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 object_type = 3;
+  float rotation = 4;
+}
+
+message CV2SetBackgroundObjectsConstantTransparencyPayloadData
+{
+  core.GuidData context_id = 1;
+  core.GuidData node_id = 2;
+  int32 object_type = 3;
+  float transparency = 4;
+}
+
+message CV2SetDataTableReadTargetPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  Id128Data data_table_id = 3;
+  int32 column_index = 4;
+  string room_asset_file_name = 5;
+  string room_asset_hash = 6;
+}
+
+message CV2SetConstantRewardPayloadData
+{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData reward_id = 3;
+}
+
+message CV2ModifyUGCRewardPayloadData 
+{
+  circuits_v2.RewardData reward_data = 1;
+} 
+
+message CV2DeleteUGCRewardPayloadData
+{
+  core.GuidData reward_id = 1;
+}
+
+message CV2SetAwardRoomKeyNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2SetAwardConsumableNodeLogOutputPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool log_output = 3;
+}
+
+message CV2UpdateProgressionSettingsPayloadData
+{
+  circuits_v2.ProgressionSettingsData progression_settings = 1;
+}
+
+message CV2SetLockedByRoomContributorsPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool is_locked_by_room_contributors = 3;
+}
+
+message CV2ModifyDataTablePayloadData {
+  Id128Data table_id = 1;
+  circuits_v2.DataTableData data_table_data = 2;
+}
+
+message CV2SetConstantInventoryItemPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData inventory_item_id = 3;
+}
+
+
+message CV2SetPlayerDefinitionBoardCustomLocomotionRequestedPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool requested = 3;
+}
+
+message CV2SetPlayerDefinitionBoardForceManualSprintR1PayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool force = 3;
+}
+
+message CV2SetPlayerDefinitionBoardCustomFootstepAudioRequestedPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool requested = 3;
+}
+
+message CV2SetConstantGiftDropShopItemPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string shop_name = 3;
+  int32 item_index = 4; 
+}
+
+message CV2SetRoomHudElementTitleOptionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 title_option = 3;
+}
+
+message CV2SetRoomHudElementSubtitleOptionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 subtitle_option = 3;
+}
+
+message CV2SetRoomHudElementBarOptionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 bar_option = 3;
+}
+
+message CV2SetRoomHudElementInventoryOptionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 inventory_option = 3;
+}
+
+message CV2SetRoomHudElementInventoryRoomOptionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 inventory_room_option = 3;
+}
+
+message CV2SetRoomHudElementInventoryShowIconPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool inventory_show_icon = 3;
+}
+
+message CV2SetRoomHudElementInventoryConsumablePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData inventory_consumable = 3;
+}
+
+message CV2SetRoomHudElementInventoryCurrencyPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData inventory_currency = 3;
+}
+
+message CV2SetRoomHudElementInventoryRoomInventoryItemPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData inventory_room_inventory_item = 3;
+}
+
+message CV2SetRoomHudElementProgressWheelOptionPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 progress_wheel_option = 3;
+}
+
+message CV2SetRoomHudElementShowProgressPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool show_progress = 3;
+}
+
+message CV2SetBannerNotificationPositionPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 position = 3;
+}
+
+message CV2SetBannerNotificationTitleTextColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 title_text_color = 3;
+}
+
+message CV2SetBannerNotificationTitleBackgroundColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 title_background_color = 3;
+}
+
+message CV2SetBannerNotificationTitleTextSizePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 title_text_size = 3;
+}
+
+message CV2SetBannerNotificationMainTextColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 main_text_color = 3;
+}
+
+message CV2SetBannerNotificationMainTextBackgroundColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 main_text_background_color = 3;
+}
+
+message CV2SetBannerNotificationMainTextSizePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 main_text_size = 3;
+}
+
+message CV2SetBannerNotificationLeftEmojiPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string left_emoji = 3;
+}
+
+message CV2SetBannerNotificationRightEmojiPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  string right_emoji = 3;
+}
+
+message CV2SetRewardNotificationBackgroundColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 background_color = 3;
+}
+
+message CV2SetRewardNotificationTitleTextColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 title_text_color = 3;
+}
+
+message CV2SetRewardNotificationTitleTextSizePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 title_text_size = 3;
+}
+
+message CV2SetRewardNotificationDescriptionTextColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 description_text_color = 3;
+}
+
+message CV2SetRewardNotificationDescriptionTextSizePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 description_text_size = 3;
+}
+
+message CV2SetRewardNotificationShowContentsTextPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool show_contents_text = 3;
+}
+
+message CV2SetRewardNotificationContentsTextColorPayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 contents_text_color = 3;
+}
+
+message CV2SetRewardNotificationContentsDisplayModePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 contents_display_mode = 3;
+}
+
+message CV2SetRewardNotificationShowImagePayloadData{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool show_image = 3;
+}
+
+message CV2_LocomotionRequestSteering_SetSteerInWorldSpacePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool steer_in_world_space_option = 3;
+}
+
+message CV2SetInputDescIndexPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 input_desc_index = 4;
+  int32 target_desc_index = 5;
+}
+
+message CV2SetOutputDescIndexPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 output_desc_index = 4;
+  int32 target_desc_index = 5;
+}
+
+message CV2SetPortGroupIndexPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 index = 3;
+  int32 target = 4;
+}
+
+message CV2SetStateMachineDefaultStatePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData default_state_id = 3;
+}
+
+message CV2SetStateMachineSyncedPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool synced = 3;
+}
+
+message CV2SetStateConstantPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData state_id = 3;
+}
+
+message CV2SetStudioFunctionIdPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 function_id = 3;
+}
+
+message CV2RegisterStudioFunctionsPayloadData {
+  repeated circuits_v2.StudioFunctionRegistrationData studio_function_registrations = 1;
+}
+
+message CV2SetConstantQuickChatTablePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  repeated string phrases = 3;
+}
+
+message CV2SetEquipmentSlotConstantSlotTypeData
+{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 slot_type = 3;
+}
+
+message CV2SetEquipmentSlotConstantSlotNumberData
+{
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 slot_number = 3;
+}
+
+message CV2RetypeInputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 input_desc_index = 4;
+  circuits.CircuitTypeData type = 5;
+}
+
+message CV2RetypeOutputDescPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 node_desc_index = 3;
+  int32 output_desc_index = 4;
+  circuits.CircuitTypeData type = 5;
+}
+
+message CV2SetPlayerDefinitionGraphTraitValuePayloadData {
+  core.GuidData graph_id = 1;
+  int32 trait_type = 2;
+  VariantData trait_value = 3;
+}
+  
+message CV2SetReplicatorTargetPayloadData {
+  core.GuidData replicator_id = 1;
+  int32 target_graph_id = 2;
+  int32 max_copies = 3;
+  uint32 revision = 4;
+}
+
+message CV2ClearReplicatorTargetPayloadData {
+  core.GuidData replicator_id = 1;
+}
+
+message CV2LocomotionRequestSteeringR2SetSteerInWorldSpacePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool steer_in_world_space_option = 3;
+}
+
+message CV2CreateObjectBoardPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData inner_graph_id = 2;
+  core.GuidData node_id = 3;
+  int32 object_definition_id = 4;
+  int32 board_attachment_mode = 5;
+  CircuitsVec3Data position = 6;
+  CircuitsQuatData rotation = 7;
+}
+
+message CV2SetFunctionCallDeclIdPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 function_decl_id = 3;
+}
+
+message CV2FunctionNodeAddExecPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+}
+
+message CV2FunctionNodeRemoveExecPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+}
+
+message CV2FunctionNodeChangeFilterPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string filter = 3;
+}
+
+message CV2SetHolotarRecordingNodeValuesPayloadData {
+  core.GuidData graph_id = 1;
+    core.GuidData node_id = 2;
+    string blobName = 3;
+  float sampleLength = 4;
+}
+
+message CV2PlayerPromptSetImmediatePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  bool immediate = 3;
+}
+
+message CV2PlayerPromptSetCancelOnWatchClosePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  bool cancel_on_watch_close = 3;
+}
+
+message CV2PlayerPromptSetReplaceExistingPromptsPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  bool replace_existing_prompts = 3;
+}
+
+message CV2SetConstantStorefrontItemPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 storefront_id = 3;
+  int32 item_index = 4;
+}
+
+message CV2SetConstantPlayerEventPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int64 player_event_id = 3;
+  string player_event_name = 4;
+}
+
+message CV2RequestAvatarLocomotionAnimationSetFullBodyAnimationPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  rec_room.FullBodyAnimationOverride full_body_animation = 3;
+}
+
+message CV2SetCustomPropertyPayloadData {
+  Id128Data graph_id = 1;
+  Id128Data node_id = 2;
+  int32 property_def = 3;
+}
+
+message CV2CreateObjectPropertyPayloadData {
+  int32 graph_id = 1;
+  string property_name = 2;
+  CircuitTypeData property_type = 3;
+  bool synced = 4;
+  string displayMetadata = 5;
+}
+
+message CV2SetObjectPropertyHomeValuePayloadData {
+  int32 property_instance_id = 1;
+  VariantData value = 2;
+}
+
+message CV2SetObjectPropertyNameAndTypePayloadData {
+  int32 property_instance_id = 1;
+  string new_name = 2;
+  CircuitTypeData new_type = 3;
+}
+
+message CV2SetObjectPropertySyncedPayloadData {
+  int32 property_instance_id = 1;
+  bool new_synced = 2;
+}
+
+message CV2SetObjectPropertyDisplayMetadataPayloadData {
+  int32 property_instance_id = 1;
+  string new_display_metadata = 2;
+}
+
+message CV2DeleteObjectPropertyPayloadData {
+  int32 graph_id = 1;
+  int32 property_instance_id = 2;
+}
+
+message CV2UngroupBoardPayloadData {
+  int32 parent_graph_id = 1;
+  int32 board_node_id = 2;
+  circuits.CircuitsVec3Data offset = 3;
+  bool deleteBoard = 4;
+}
+
+message CV2GroupBoardPayloadData {
+  int32 parent_graph_id = 1;
+  core.GuidData board_node_id = 2;
+  repeated int32 node_ids = 3;
+  circuits.CircuitsVec3Data local_board_position = 4;
+  circuits.CircuitsQuatData local_board_rotation = 5;
+  circuits.CircuitsVec3Data offset = 6;
+}
+
+message CV2MoveToBoardPayloadData {
+  int32 parent_graph_id = 1;
+  core.GuidData board_node_id = 2;
+  repeated int32 node_ids = 3;
+}
+
+message CV2SplitFromBoardPayloadData {
+  int32 parent_graph_id = 1;
+  core.GuidData board_node_id = 2;
+  int32 graph_id = 3;
+  repeated int32 node_ids = 4;
+}
+
+message CV2GroupObjectBoardPayloadData {
+  int32 graph_id = 1;
+  int32 board_node_id = 2;
+  repeated int32 node_ids = 3;
+  repeated GroupBoardPortMappingsData input_mappings = 4;
+  repeated GroupBoardPortMappingsData output_mappings = 5;
+}
+
+message CV2DeleteAllNodesPayloadData {
+
+}
+
+message CV2SetConstantAvatarItemPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData avatar_item_id = 3;
+}
+
+message CV2PromoteDataTableToRoomAssetPayloadData {
+  Id128Data origin_id = 1;
+  Id128Data table_id = 2;
+}
+
+message CV2CreateDataTableRoomAssetPayloadData {
+  Id128Data origin_id = 1;
+  string table_name = 2;
+}
+
+message CV2SetEventDefinitionEventIdPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData event_id = 3;
+}
+
+message CV2SetProjectileValuePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData value = 3;
+}
+
+message CV2SetProjectileColorIndexPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+}
+
+message CV2SetProjectileSpeedPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float value = 3;
+}
+
+message CV2SetProjectileLifetimeSecondsPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float value = 3;
+}
+
+message CV2SetProjectileGravityPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool value = 3;
+}
+
+message CV2SetProjectileHeadDamagePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+}
+
+message CV2SetProjectileTorsoDamagePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+}
+
+message CV2SetProjectileHandDamagePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+}
+
+message CV2SetProjectileObjectDamagePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+}
+
+message CV2SetProjectileCountPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 value = 3;
+}
+
+message CV2SetProjectileAnglePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float value = 3;
+}
+
+message CV2SetProjectileForcePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  float value = 3;
+}
+
+message CV2SetProjectileSelfCollisionsEnabledPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool value = 3;
+}
+
+message CV2SetIsFrozenData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool value = 3;
+}
+
+message CV2IsRecRoomObjectOfTypeSetTargetTypePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  circuits.CircuitTypeData target_type = 3;
+}
+
+message CV2CreationObjectGetAllOfTypeWithTagSetTargetTypePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  circuits.CircuitTypeData target_type = 3;
+}
+
+message CV2ManagePlayerPropertyPayloadData {
+  int32 node_being_set_graph_id = 1;
+  int32 node_being_set_node_id = 2;
+
+  NamedTypeData new_key = 3;
+  bool new_is_synced = 4;
+  VariantData new_home_value = 5;
+
+  
+  NamedTypeData key_being_edited = 6;
+}
+
+message CV2SetParticleVfxTypePayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  core.GuidData value = 3;
+}
+
+message CV2SetPlayParticleVfxAtPositionSyncedPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  bool value = 3;
+}
+
+message CV2SetConstantBodyPartPayloadData {
+  core.GuidData graph_id = 1;
+  core.GuidData node_id = 2;
+  int32 body_part = 3;
+}
+
+enum CV2SetMessageNodeMessageNameMode {
+
+  
+  
+  
+  SnapPortsToSignatureParameters = 0;
+
+  
+  
+  
+  
+  
+  BringSignatureParametersAlongAndMaintainExistingPorts = 1;
+}
+
+message CV2SetMessageNodeMessageNamePayloadData {
+  Id128Data graph_id = 1;
+  Id128Data node_id = 2;
+  string message_name = 3;
+  CV2SetMessageNodeMessageNameMode mode = 4;
+}
+
+message CV2SetMessageSenderNodeScopeAndTargetPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  circuits_v2.MessageReceiverScope receiver_scope = 3;
+  circuits_v2.MessageTargetPlayers target_players = 4;
+}
+
+message CV2SetMessageNodeHasPortForParameterPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+
+  string message_name = 3;
+  NamedTypeData parameter_key = 4;
+  bool should_have_port = 5;
+}
+
+message CV2EditMessageNamePayloadData {
+  string old_message_name = 1;
+  string new_message_name = 2;
+}
+
+message CV2ManageMessageParameterPayloadData {
+  string message_name = 1;
+
+  int32 requesting_graph_id = 2;
+  int32 requesting_node_id = 3;
+
+  
+  NamedTypeData existing_parameter_key = 4;
+
+  
+  NamedTypeData new_parameter_key = 5;
+
+  
+  VariantData default_value = 6;
+}
+
+message CV2GameAISendUserPromptWithStructuredResponseAddOutputPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+}
+
+message CV2GameAISendUserPromptWithStructuredResponseEditOutputPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+
+  int32 output_index = 3;
+  circuits_v2.StructuredDataEntryData output_data = 4;
+}
+
+message CV2GameAISendUserPromptWithStructuredResponseRemoveOutputPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+
+  int32 output_index = 3;
+}
+
+message CV2SetBehaviorBoardBehaviorPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  optional int32 behavior_id = 3;
+}
+
+message CV2CreateBehaviorBoardBehaviorPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string behavior_name = 3;
+}
+
+message CV2SetBehaviorNamePayloadData {
+  int32 behavior_id = 1;
+  string behavior_name = 2;
+}
+
+message CV2CreateNewBehaviorVersionPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 behavior_id = 3;
+}
+
+message CV2SetTextureConstantSizePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 width = 3;
+  int32 height = 4;
+}
+
+message CV2SetTextToSpeechMaxRolloffDistancePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  float max_rolloff_distance = 3;
+}
+
+message CV2SetTextToSpeechRolloffCurvePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 rolloff_curve = 3;
+}
+
+message CV2SetGenAIMusicBlobNamePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string blob_name = 3;
+}
+
+message CV2SetGenAIMusicPromptPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string prompt = 3;
+}
+
+message CV2SetGenAIMusicDurationPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 duration = 3;
+}
+
+message CV2SetGenAIMusicLyricsPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string lyrics = 3;
+}
+
+message CV2SetGenAIMusicContextPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string context = 3;
+}
+
+message CV2SetGenAISFXBlobNamePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string blob_name = 3;
+}
+
+message CV2SetGenAISFXPromptPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string prompt = 3;
+}
+
+message CV2SetGenAISFXDurationPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 duration = 3;
+}
+
+message CV2SetGenAISFXContextPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string context = 3;
+}
+
+message CV2FunctionDeclSetDescriptionPayloadData {
+  int32 function_decl_id = 1;
+  string description = 2;
+}
+
+message CV2SetChatAIModelNodeModelPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string model = 3;
+}
+
+message CV2SetImageGenerationAIModelNodeModelPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  string model = 3;
+}
+
+message CV2AiFunctionSetFunctionDeclIdPayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  int32 function_decl_id = 3;
+}
+
+message CV2SetConstantRoomBadgePayloadData {
+  int32 graph_id = 1;
+  int32 node_id = 2;
+  core.GuidData room_badge_id = 3;
+}

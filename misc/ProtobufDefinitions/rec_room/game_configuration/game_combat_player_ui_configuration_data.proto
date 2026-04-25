@@ -1,0 +1,11 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GameCombatPlayerUIConfigurationData {
+  bool local_player_ui_supported = 1;
+  bool opponent_ui_supported = 2;
+  bool teammate_ui_supported = 3;
+  bool teammate_ui_always_visible = 4;
+  bool opponent_ui_always_visible = 5;
+}

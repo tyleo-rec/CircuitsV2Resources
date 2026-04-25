@@ -1,0 +1,15 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+enum PlayerSaveVersion {
+  V0NewPlayerSaveVersion = 0;
+  V1CircuitsQuatConversion = 1;
+  V2CloudDataInteriorMessage = 2;
+  V3PersistedValueVariantData = 3;
+  V4InventoryItemEquipmentSlotsData = 4;
+  V5InventoryItemEquipmentSlotsUpdatedMaximum = 5;
+
+  option allow_alias = true;
+  LatestPlayerSaveVersion = 5;
+}

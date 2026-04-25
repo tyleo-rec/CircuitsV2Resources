@@ -1,0 +1,188 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+import "core/guid_data.proto";
+import "core/vector3_data.proto";
+import "core/vector2_data.proto";
+import "core/color_data.proto";
+import "core/message_options.proto";
+import "rec_room/rec_net/ugc_accessibility.proto";
+
+message AvatarData {
+    option (core.utf8_serializable) = true;
+
+    AvatarVersion avatar_version = 1;
+
+    repeated BodyPartSelectionData outfit_selections = 2;
+
+    core.GuidData skin_color = 3;
+
+    core.GuidData body_shape_id = 4;
+    bool hide_ears = 5;
+
+    HelmetHairState use_helmet_hair = 6;
+    bool use_hat_anchor_params = 7;
+    AnchorParamsData hat_anchor_params = 8;
+
+    FaceCustomizationSettingsData face_customization_settings = 9;
+
+    HairData hair_data = 10;
+    HairData beard_data = 11;
+
+    AvatarBodyType avatar_body_type = 12;
+
+    BodyPropertyData body_property_data = 13;
+
+    FacePropertyData face_property_data = 14;
+
+    NosePropertyData nose_property_data = 15;
+
+    core.GuidData body_paint = 16;
+
+    AuraData aura_data = 17;
+}
+
+message SavedOutfitData {
+    option (core.utf8_serializable) = true;
+
+    AvatarData avatar_data = 1;
+    string name = 2;
+    int32 slot = 3;
+    string thumbnail_image_name = 4;
+    UgcAccessibility accessibility = 5;
+}
+
+message HairData {
+    core.GuidData primary_color_id = 1;
+    core.GuidData secondary_color_id = 2;
+    core.GuidData pattern_texture_id = 3;
+}
+
+message BodyPartSelectionData {
+    BodyPart raw_body_part = 1;
+    AvatarItemDescriptionData avatar_item = 2;
+}
+
+message AvatarItemDescriptionData {
+    core.GuidData avatar_item_id = 1;
+    core.GuidData avatar_item_material_id = 2;
+    core.GuidData custom_avatar_item_id = 3;
+    core.ColorData custom_avatar_item_base_color = 4;
+}
+
+message FaceCustomizationSettingsData {
+    FaceFeatureCustomizationSettingsData eye_settings = 1;
+    FaceFeatureCustomizationSettingsData eye_brows_settings = 2;
+    FaceFeatureCustomizationSettingsData mouth_settings = 3;
+    core.GuidData face_shape_id = 4;
+    FaceFeatureCustomizationSettingsData nose_settings = 5;
+    float head_scale = 6;
+    float modern_bean_head_scale = 7;
+}
+
+message BodyPropertyData {
+    float bicep_width = 1;
+    float forearm_width = 2;
+    float chest_size = 3;
+    float chest_out = 4;
+    float waist_size = 5;
+    float hip_width = 6;
+    float neck_length = 7;
+    float neck_thickness = 8;
+    float thigh_width = 9;
+    float calf_width = 10;
+    float foot_width = 11;
+    float foot_size = 12;
+    float shoulder_width = 13;
+    float belly_out = 14;
+}
+
+message FacePropertyData {
+    float cheek_puff = 1;
+    float jaw_width = 2;
+    float jaw_in_out = 3;
+    float chin_width = 4;
+    float chin_size = 5;
+    float ear_size = 6;
+    float ear_angle = 7;
+    float head_stretch = 8;
+}
+
+message NosePropertyData {
+    float nose_width = 1;
+    float nose_height = 2;
+    float nose_length = 3;
+    float nose_angle = 4;
+    float nose_bulge = 5;
+    float nose_pinch_flair = 6;
+    float nose_sneer = 7;
+    float nose_tip_scale = 8;
+}
+
+message FaceFeatureCustomizationSettingsData {
+    core.GuidData id = 1;
+    core.Vector2Data position_offset = 2;
+    float scale_offset = 3;
+    float rotation = 4;
+    float aspect = 5;
+}
+
+message AnchorParamsData {
+    core.Vector2Data normalized_position = 1;
+    core.Vector3Data hemisphere_offsets = 2;
+    core.Vector3Data hemisphere_rotations = 3;
+}
+
+message AuraData {
+    int32 id = 1;
+}
+
+
+enum HelmetHairState {
+    Legacy_Hide = 0;
+    On = 1;
+    Off = 2;
+}
+
+enum BodyPart {
+    None = 0;
+    Head = 1;
+    Torso = 2;
+    LeftHand = 3;
+    RightHand = 4;
+    Mouth = 5;
+    Legs = 6;
+    LeftFoot = 7;
+    RightFoot = 8;
+    FullBody = 9;
+    Nose = 10;
+    Face = 11;
+    CustomBadge1 = 12;
+}
+
+enum AvatarBodyType {
+    FloatingBeanBodyType = 0;
+    FullBodyType = 1;
+    ModernFloatingBeanBodyType = 2;
+    reserved 3; 
+
+    
+    
+    reserved 4;
+}
+
+enum AvatarVersion {
+    Legacy = 0;
+    Version1 = 1;
+    AddedNoseSettings = 2;
+    AddedHeadScale = 3;
+    AddedModernBeanHeadScale = 4;
+    AddedBodyProperties = 5;
+    AddedFaceProperties = 6;
+    AddedNoseProperties = 7;
+    UpdatedHeadAndNoseRanges = 8;
+    AddedBodyPaint = 9;
+    AddedAuraData = 10;
+}
+
+

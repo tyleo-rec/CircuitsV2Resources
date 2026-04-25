@@ -1,0 +1,16 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message CircuitSignalData {
+  bytes backing_bytes = 6;
+
+  
+  string backing_string = 5;
+
+  
+  int32 DEPRECATED_type_kind = 1;
+  bool DEPRECATED_backing_bool = 2;
+  float DEPRECATED_backing_float = 4;
+  int32 DEPRECATED_int32_backing_bytes = 3;
+}

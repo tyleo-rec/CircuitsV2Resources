@@ -1,0 +1,13 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message RaycastGizmoData {
+  int32 distance_unit = 1;
+  bool ignore_objects = 2;
+  bool ignore_players = 3;
+  string filter_tag = 4;
+  string filter_role = 5;
+  string filter_role_guid = 6;
+  bool always_show_laser = 7;
+}

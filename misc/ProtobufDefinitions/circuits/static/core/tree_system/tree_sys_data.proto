@@ -1,0 +1,12 @@
+syntax = "proto3";
+package circuits;
+option csharp_namespace = "Circuits.Static.Core.TreeSystem.Protobuf";
+
+import "circuits/static/core/tree_system/node_children_data.proto";
+import "circuits/shared/utilities/soa_id_32_data.proto";
+
+message TreeSysData {
+    circuits.SOAId32Data ids = 1;
+    repeated int32 parent = 2;
+    repeated NodeChildrenData children = 3;
+}

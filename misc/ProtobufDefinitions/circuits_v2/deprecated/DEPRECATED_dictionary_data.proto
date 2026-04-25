@@ -1,0 +1,16 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message DEPRECATED_KeyValuePairData {
+  bytes key = 1;
+  bytes value = 2;
+}
+
+message DEPRECATED_DictionaryData {
+  repeated DEPRECATED_KeyValuePairData items = 1;
+}
+
+message DEPRECATED_ListDictionaryData {
+  repeated DEPRECATED_KeyValuePairData items = 1;
+}

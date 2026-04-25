@@ -1,0 +1,25 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+enum CloudDataLedgerType {
+  Bool = 0;
+  Float = 1;
+  Int = 2;
+  String = 3;
+  Quaternion = 4;
+  Vector3 = 5;
+  Color = 6;
+  RecNetImage = 14;
+  RecNetMesh = 16;
+
+  ListBool = 7;
+  ListFloat = 8;
+  ListInt = 9;
+  ListString = 10;
+  ListQuaternion = 11;
+  ListVector3 = 12;
+  ListColor = 13;
+  ListRecNetImage = 15;
+  ListRecNetMesh = 17;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message DEPRECATED_KeyedOutputNodeData {
+  bytes key = 1;
+  bytes value = 2;
+}

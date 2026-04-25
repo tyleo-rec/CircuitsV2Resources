@@ -1,0 +1,70 @@
+syntax = "proto3";
+package room_load;
+option csharp_namespace = "RecRoom.RoomLoad.Protobuf";
+import "core/message_options.proto";
+import "core/guid_data.proto";
+
+message RoomOperationMessage {
+    option (core.utf8_serializable) = true;
+
+    MessageKind message_kind = 1;
+    bytes operation_id = 2;
+
+    
+    int32 room_authority_phase = 3;
+
+    bytes completion_mark = 4;
+
+    int32 player_account_id = 5;
+
+    
+    RoomOperationType room_operation_type = 10;
+
+    
+    RoomAuthorityErrorType error_type = 11;
+
+    RoomLoadRequestPayload room_load_request_payload = 20;
+    RoomSaveRequestPayload room_save_request_payload = 21;
+}
+
+message RoomLoadRequestPayload {
+    int64 super_room_id = 1;
+    int64 sub_room_id = 2;
+    int64 sub_room_data_save_id = 3;
+    ProtoFilenameWithHash super_room_data = 4;
+    string studio_session_id = 6;
+    core.GuidData room_wide_asset_snapshot_id = 7;
+    bool load_used_compatibility = 8;
+}
+
+message RoomSaveRequestPayload {
+    string description = 1;
+    bool auto_publish = 2;
+    bool should_stage_save = 3;
+}
+
+message ProtoFilenameWithHash {
+    string filename = 1;
+    string hash = 2;
+}
+
+enum MessageKind {
+    Error = 0;
+    OperationStart = 1;
+    PhaseChange = 2;
+    CompletionMark = 3;
+    Reload = 4;
+    Finished = 100;
+}
+
+enum RoomAuthorityErrorType {
+    Irrecoverable = 0;
+    Recoverable = 1;
+}
+
+enum RoomOperationType {
+    Invalid = 0;
+    LoadRoom = 1;
+    SaveRoom = 2;
+    ReloadRoom = 3;
+}

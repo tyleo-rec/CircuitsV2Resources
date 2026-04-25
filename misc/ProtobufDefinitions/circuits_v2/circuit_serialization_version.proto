@@ -1,0 +1,376 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+enum CircuitSerializationVersion {
+  V0New = 0;
+
+  V1InitialVersion = 1;
+
+  V2VariablesImproved = 2;
+
+  
+  
+  V3ClassStructures = 3;
+
+  
+  V4VariablesNewMesh = 4;
+
+  
+  V5CircuitBuses = 5;
+
+  
+  
+  V6EventDefinitionChips = 6;
+
+  
+  V7EventSenderChips = 7;
+
+  
+  V8NoObjectGuids = 8;
+
+  
+  V9InvalidChipColor = 9;
+
+  
+  
+  V10NoInternalGuids = 10;
+
+  
+  V11TypedSerializedGuids = 11;
+
+  
+  
+  V12EventIdOnlyEventRegistration = 12;
+
+  
+  
+  V13VariablesMemoryTypes = 13;
+
+  
+  
+  
+  
+  
+  V14FixGetAllPlayersNode = 14;
+
+  
+  V15VariableHomeValues = 15;
+
+  
+  V16TypeSysBreakout = 16;
+
+  
+  
+  V17NoDynamicDescVariables = 17;
+
+  
+  V18NoCustomCommentCompression = 18;
+
+  
+  V19SampleAudioTrimData = 19;
+
+  
+  
+  
+  
+  V20ShowdownRelease = 20;
+
+  
+  V21ObjectBoardTransform = 21;
+
+  
+  V22DestinationStringIdentifiers = 22;
+
+  
+  V23PlayerPortOnLocalOnlyChips = 23;
+
+  
+  V24VignetteIntensityPort = 24;
+
+  
+  
+  V25UnityVecAndQuatRemoval = 25;
+
+  
+  V26AudioConstantParams = 26;
+
+  
+  V27DataTableRegistry = 27;
+
+  
+  V28AudioNodeNonNullSfxAudioData = 28;
+
+  
+  
+  V29PlayerLeavingPlayerLeftEventSplit = 29;
+
+  
+  V30StudioFunctionSignatureRegistry = 30;
+
+  
+  V31ProgressionTableLevelsPort = 31;
+
+  
+  V32MoodsV2ParameterRange = 32;
+
+  
+  V33PlayerTraits = 33;
+
+  
+  V34InteractionFilterToggle = 34;
+
+  
+  V35CircuitGlobalEntities = 35;
+
+  
+  V36CircuitGraphEntities = 36;
+
+  
+  V37CircuitGraphEntitiesPorts = 37;
+
+  
+  V38CircuitGraphEntitiesEdges = 38;
+
+  
+  V39PlayerTraitsOnPlayerCircuitGraph = 39;
+
+  
+  V40ReplicatorRegistry = 40;
+  
+  
+  V41PlayerTraitsAddCrouchProneSlideSpeeds = 41;
+
+  
+  V42GraphDefIds = 42;
+
+  
+  V43NodeDefIds = 43;
+
+  
+  
+  
+  V44RewriteInitialization = 44;
+
+  
+  V45SerializeStudioFunctionNodeDesc = 45;
+
+  
+  V46FixDataTableCorruption = 46;
+
+  
+  V47PlayerTraitOverrides = 47;
+
+  
+  V48AddImagePortToInventoryItemGetDefinition = 48;
+  
+  
+  V49CanWallRunTrait = 49;  
+
+  
+  V50StateMachineDefaultState = 50;
+
+  
+  V51RemoveSwingHandlePort = 51;
+
+  
+  V52CanWallClimbTrait = 52;
+
+  
+  V53DecorruptObjectBoards = 53;
+
+  
+  V54CanFlyTrait = 54;
+
+  
+  V55RegenerateEntitiesEdges = 55;
+
+  
+  V56AddHolotarRecordingChipPort = 56;
+
+  
+  V57EnsureInputsMatchDesc = 57;
+
+  
+  
+  V58PopulateMissingGlobalEntitiesFields = 58;
+
+  
+  V59ProjectileHitOtherDamage = 59;
+
+  
+  V60AddTagsListPortToInventoryItemGetDefinition = 60;
+
+  
+  V61AirControlPercentage = 61;
+  
+  
+  V62FunctionDefOutBusNode = 62;
+
+  
+  V63AddNewValueToVariableChangeEventChips = 63;
+
+  
+  V64RemoveDeprecatedRequestWallRunPorts = 64;
+
+  
+  V65NoDuplicateFunctionNames = 65;
+
+  
+  V66FunctionNameSOA = 66;
+
+  
+  V67RemoveNonSOAFunctionName = 67;
+
+  
+  
+  
+  V68AddValueToRemainingVariableChangeEventChips = 68;
+
+  
+  V69AddObjectPropertiesStateData = 69;
+
+  
+  V70SOAFunctionCall = 70;
+
+  
+  V71DecorruptPass = 71;
+  
+  
+  
+  V72AddPortsToRequestWallClimbStart = 72;
+
+  
+  
+  V73AddDurationPortToRequestSlideNode = 73;
+
+  
+  V74DecorruptChipLocalPosition = 74;
+
+  
+  V75AddObjectPropertyNodeField = 75;
+  
+  
+  V76ReplicatedGraphNewId = 76;
+  
+  
+  V77RangedWeaponToRangedWeaponProp = 77;
+
+  
+  V78AddSyncPlayerMemoryAndSyncRecRoomObjectMemory = 78;
+
+  
+  V79AddRoomWideAssetsStateData = 79;
+
+  
+  V80UnbindMisconfiguredEventSenders = 80;
+
+  
+  V81AddMoreBytesToCircuitSignalData = 81;
+  
+  
+  V82AddCustomAvatarExecPortToDiscoverySectionTypeSwitchNode = 82;
+  
+  
+  V83FixDuplicateProjectileHitPlayerEventGuid = 83;
+  
+  
+  V84AddRoomExecPortToDiscoverySectionTypeSwitchNode = 84;
+  
+  
+  V85AddPlayerPropertiesStateData = 85;
+
+  
+  V86MessagesState = 86;
+
+  
+  V87AddPlayerAccountsExecPortToDiscoverySectionTypeSwitchNode = 87;
+
+  
+  V88AddPlayerAccountPortToGetRoomDetailsNode = 88;
+
+  
+  V89AddTurnSpeedPortsToObjectMoveNodes = 89;
+
+  
+  V90AddShouldWaitForAudioPortsToGameAINodes = 90;
+
+  
+  V91QuickConfigObjectProperties = 91;
+
+  
+  V92FixCorruptedNodesPass = 92;
+
+  
+  V93GameAIErrorPorts = 93;
+
+  
+  V94RecursionForFunctions = 94;
+
+  
+  V95AddConversationItemIdsToAIEvents = 95;
+
+  
+  V96AddConversationItemIdsToAINodes = 96;
+
+  
+  V97BehaviorsState = 97;
+
+  
+  V98BehaviorGraphInst = 98;
+
+  
+  V99BehaviorBoardNodeInst = 99;
+
+  
+  V100BehaviorBoardGlobalId = 100;
+
+  
+  
+  V101Skip = 101;
+
+  
+  V102UseContextToGenAINodes = 102;
+
+  
+  V103RemoveUnsupportedHomeValueData = 103;
+
+  
+  V104AddGenAIErrorPorts = 104;
+
+  
+  V105AddTemperaturePorts = 105;
+
+  
+  V106IsAvatarBodyEnabledTrait = 106;
+
+  
+  V107AddFunctionDeclDescription = 107;
+
+  
+  V108AddModelPorts = 108;
+  
+  
+  V109AddGenSendAIRecNetImagePromptErrorPorts = 109;
+
+  
+  V110UseContextToMeshPresenterNodes = 110;
+
+  
+  V111AIFunctionConstantNode = 111;
+
+  
+  V112ChatAIFunctionCalls = 112;
+
+  
+  V113AddGiftPackageMessageOverrideToAwardRoomBadgeNode = 113;
+
+  
+  V114AddRoomBoostCountToGetRoomDetailsNode = 114;
+
+  
+  V115AddGiftPackageOverrides = 115;
+
+  option allow_alias = true;
+  LatestVersion = 115;
+}

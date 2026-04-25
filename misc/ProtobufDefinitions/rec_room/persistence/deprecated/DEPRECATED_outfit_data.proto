@@ -1,0 +1,10 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message DEPRECATED_OutfitData {
+  string outfit_selections = 1;
+  string hair_color = 2;
+  string skin_color = 3;
+  string face_settings = 4;
+}

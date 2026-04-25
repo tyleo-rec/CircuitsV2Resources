@@ -1,0 +1,23 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "core/vector3_data.proto";
+
+import "rec_room/tag_data.proto";
+
+message TriggerVolumeData {
+  int32 mode_id = 1;
+  
+  core.Vector3Data DEPRECATED_scale = 2;
+  core.Vector3Data DEPRECATED_position = 3;
+  TagData filter_tags_object = 4; 
+  string filter_role = 5; 
+  int32 trigger_once = 6;
+  bool junior_enabled = 7;
+  TagData filter_tags_player = 8; 
+  bool filter_tags_player_enable = 9; 
+  bool filter_tags_object_enable = 10; 
+  bool filter_tags_player_inclusion = 11; 
+  bool filter_tags_object_inclusion = 12; 
+}

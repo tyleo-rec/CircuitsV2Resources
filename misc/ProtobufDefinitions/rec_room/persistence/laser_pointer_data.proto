@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message LaserPointerData {
+  bool is_on = 1;
+  float length = 2;
+  bool scale_length = 3;
+}

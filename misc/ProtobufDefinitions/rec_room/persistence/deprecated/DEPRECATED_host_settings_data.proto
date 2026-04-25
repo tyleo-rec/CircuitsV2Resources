@@ -1,0 +1,25 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message DEPRECATED_HostSettingsData {
+  
+
+  
+  bool DEPRECATED_enforce_host_only_areas = 2; 
+
+
+  bool DEPRECATED_only_hosts_can_invite = 3; 
+  bool DEPRECATED_only_hosts_can_print_polaroids = 4; 
+
+  
+
+  
+  int32 DEPRECATED_flying_permission = 6; 
+  bool DEPRECATED_hide_scoreboards = 7; 
+  
+  int32 DEPRECATED_circuit_editing_permission = 8; 
+  bool DEPRECATED_only_hosts_can_start_games = 9; 
+  
+  bool DEPRECATED_only_hosts_can_vote_kick = 11; 
+}

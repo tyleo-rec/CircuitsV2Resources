@@ -1,0 +1,18 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/persistence/avatar_data.proto";
+import "core/vector3_data.proto";
+
+message MannequinData {
+  AvatarData avatar_data = 1;
+  int32 idle_stance = 2;
+  float idle_stance_left_right_blend = 3;
+  int32 posture_id = 4;
+  bool left_hand_posture_enabled = 5;
+  bool right_hand_posture_enabled = 6;
+  core.Vector3Data posture_rotation = 7;
+  bool mirror_posture = 8;
+  int32 face_id = 9;
+}

@@ -1,0 +1,119 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/persistence/overridable_field_data.proto";
+
+message PlayerGameRoleData {
+  int32 role_id = 1;
+  int32 role_rank = 2;
+
+  bool is_role_active = 3;
+  bool is_ag_role = 4;
+
+  string role_name = 5;
+
+  OverridableStringData name = 6;
+  OverridableIntData teleport_mode = 7;
+  OverridableFloatData teleport_delay = 8;
+  OverridableFloatData teleport_speed = 9;
+  OverridableBoolData can_walk = 10;
+
+  OverridableBoolData force_walk_allowed = 28;
+  OverridableBoolData experimental_walk_enabled = 29;
+
+  OverridableFloatData vr_walk_speed = 11;
+  OverridableBoolData vr_can_sprint = 12;
+  OverridableFloatData vr_sprint_max_speed_walk_speed_multiplier = 13;
+  
+  OverridableBoolData can_fly = 14;
+  
+  OverridableBoolData vr_can_jump = 36;
+  OverridableBoolData vr_can_dodge = 37;
+  OverridableFloatData vr_max_jump_height = 51;
+  OverridableBoolData vr_can_wall_run = 62;
+  OverridableBoolData vr_can_get_pushed = 64;
+  OverridableBoolData vr_can_ram = 66;
+
+  OverridableBoolData is_invincible = 15;
+  OverridableFloatData outgoing_damage_multiplier = 16;
+
+  OverridableIntData item_pickup_restrictions = 17;
+  OverridableListStringData item_pickup_allowlist = 18;
+  OverridableListStringData item_pickup_blocklist = 19;	
+  OverridableBoolData can_talk = 20;
+  OverridableBoolData can_switch_teams = 21;
+
+  OverridableFloatData max_teleport_distance = 22;
+  OverridableFloatData max_teleport_drop_height = 23;
+  OverridableFloatData max_teleport_angle = 24;
+
+  bool is_modified_by_player = 25;
+
+  OverridableIntData voice_rolloff_max_distance = 26;
+
+  int32 role_version = 27;
+
+  OverridableBoolData hides_name = 30;
+
+  OverridableBoolData can_move = 31;
+
+  OverridableFloatData screens_walk_speed = 32;
+  OverridableBoolData screens_can_sprint = 33;
+  OverridableFloatData screens_sprint_max_speed_walk_speed_multiplier = 34;
+  
+  OverridableBoolData screens_can_jump = 38;
+  OverridableBoolData screens_can_dodge = 39;	
+  OverridableFloatData screens_max_jump_height = 52;
+  OverridableBoolData screens_can_wall_run = 63;
+  OverridableBoolData screens_can_get_pushed = 65;
+  OverridableBoolData screens_can_ram = 67;
+
+  OverridableBoolData can_auto_sprint = 70;
+  OverridableFloatData air_control_parameter = 71;
+  OverridableBoolData can_jump_cutoff = 72;
+  OverridableBoolData can_clamber = 73;
+  OverridableFloatData wall_run_duration = 74;
+  OverridableFloatData wall_run_drop_rate_parameter = 75;
+  OverridableFloatData wall_run_start_speed_boost = 76;
+  OverridableFloatData wall_run_jump_height = 77;
+  OverridableFloatData wall_run_jump_direction_parameter = 78;
+  OverridableFloatData wall_run_jump_air_control_multiplier = 79;
+  OverridableBoolData can_slide = 80;
+  OverridableBoolData can_slide_down_slopes = 81;
+  OverridableFloatData slide_min_duration = 82;
+  OverridableFloatData slide_steering_parameter = 83;
+  OverridableFloatData slide_start_speed_boost = 84;
+  OverridableFloatData slide_air_control_multiplier = 85;
+  OverridableBoolData can_wall_climb = 86;
+  OverridableBoolData can_wall_climb_without_markup = 87;
+  OverridableBoolData can_wall_run_without_markup = 88;
+  OverridableBoolData hides_avatar = 89;
+  OverridableListStringData player_tags = 90;
+  OverridableBoolData add_player_tags = 91;
+  OverridableBoolData remove_player_tags = 92;
+
+  OverridableBoolData creation_restrictions_apply = 93;
+  OverridableBoolData can_use_maker_pen = 94;
+  OverridableBoolData can_save_inventions = 95;
+  OverridableBoolData can_spawn_inventions = 96;
+  OverridableBoolData can_use_room_reset_button = 97;
+  OverridableBoolData can_use_delete_all_button = 98;
+  OverridableBoolData can_create_role_assignment_chips = 99;
+  OverridableBoolData can_use_play_gizmos_toggle = 100;
+  OverridableBoolData can_edit_circuits = 101;
+
+  OverridableIntData screens_default_first_person_control_type = 50;
+  OverridableIntData screens_default_third_person_control_type = 40;
+
+  OverridableIntData enable_equip_slot_hip = 41;
+  OverridableIntData equip_restrictions_hip = 42;
+  OverridableListStringData equip_hip_allowlist = 43;
+  OverridableListStringData equip_hip_blocklist = 44;
+  OverridableBoolData enable_equip_slot_shoulder = 45;
+  OverridableIntData equip_restrictions_shoulder = 46;
+  OverridableListStringData equip_shoulder_allowlist = 47;
+  OverridableListStringData equip_shoulder_blocklist = 48;
+
+  string role_guid = 49;
+}

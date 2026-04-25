@@ -1,0 +1,9 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "core/guid_data.proto";
+
+message ConstantConsumableData {
+  core.GuidData consumable_id = 1;
+}

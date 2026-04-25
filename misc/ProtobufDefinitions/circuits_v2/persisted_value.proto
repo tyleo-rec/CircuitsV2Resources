@@ -1,0 +1,14 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits/static/ev/variant_data.proto";
+import "core/guid_data.proto";
+
+message PersistedValue {
+  core.GuidData guid = 1;
+  circuits.VariantData value = 3;
+
+  
+  bytes data_DEPRECATED = 2;
+}

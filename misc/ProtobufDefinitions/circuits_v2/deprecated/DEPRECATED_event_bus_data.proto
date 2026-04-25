@@ -1,0 +1,12 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+import "circuits_v2/deprecated/DEPRECATED_circuit_event_definition_data.proto";
+import "circuits_v2/deprecated/DEPRECATED_circuit_event_object_data.proto";
+
+message DEPRECATED_EventBusData {
+  
+  repeated DEPRECATED_CircuitEventObjectData DEPRECATED_event_object_datas = 1;
+  repeated DEPRECATED_CircuitEventDefinitionData DEPRECATED_node_event_datas = 2;
+}

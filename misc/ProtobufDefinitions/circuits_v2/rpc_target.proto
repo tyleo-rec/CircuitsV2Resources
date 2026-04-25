@@ -1,0 +1,12 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+enum RpcTarget {
+  Local = 0;
+  Others = 1;
+  RoomAuthority = 2;
+  Authority = 3;
+  All = 4;
+  Player = 5;
+}

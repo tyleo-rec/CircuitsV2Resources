@@ -1,0 +1,42 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+message GunHandleData {
+  enum GunHandleScreensPose {
+    Pistol_OneHanded = 0;
+    Pistol_TwoHanded = 1;
+    Shotgun_OneHanded = 2;
+    Shotgun_TwoHanded = 3;
+    Rifle_OneHanded = 4;
+    Rifle_TwoHanded = 5;
+  }
+
+  bool continuous_fire = 1;
+  float max_fire_rate = 2;
+  float DEPRECATED_recoil_angle_x = 3;
+  float DEPRECATED_recoil_angle_y = 4;
+  float DEPRECATED_recoil_duration = 5;
+  float DEPRECATED_recoil_shake_amplitude = 6;
+  float DEPRECATED_recoil_shake_frequency = 7;
+  float DEPRECATED_recoil_return_duration = 8;
+  float reload_duration = 9;
+  float ads_zoom = 10;
+  bool aim_friction_enabled = 11;
+  bool projectile_magnetism_enabled = 12;
+  repeated string DEPRECATED_auto_aim_target_roles = 13;
+  int32 max_ammo = 14;
+  int32 crosshair_ticks = 15;
+  float crosshair_idle_spread = 16;
+  float crosshair_walk_scalar = 17;
+  float crosshair_sprint_scalar = 18;
+  float crosshair_crouch_scalar = 19;
+  float crosshair_prone_scalar = 20;
+  float crosshair_ads_scalar = 21;
+  bool ads_enabled = 22;
+  bool ads_crosshair_enabled = 23;
+  float DEPRECATED_aim_friction_radius = 24;
+  GunHandleScreensPose screens_pose = 25;
+  bool supports_reload = 26;
+  bool enable_auto_fire =  27;
+}

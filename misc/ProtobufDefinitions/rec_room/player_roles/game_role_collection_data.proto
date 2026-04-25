@@ -1,0 +1,9 @@
+syntax = "proto3";
+package rec_room;
+option csharp_namespace = "RecRoom.Protobuf";
+
+import "rec_room/player_roles/player_game_role_data.proto";
+
+message GameRoleCollectionData {
+  repeated PlayerGameRoleData DEPRECATED_game_roles = 1;
+}

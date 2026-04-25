@@ -1,0 +1,14 @@
+syntax = "proto3";
+package circuits_v2;
+option csharp_namespace = "CircuitsV2.Protobuf";
+
+message HudElementData {
+  int32 hudElement = 1;
+  string label = 2;
+  int32 color = 3;
+  int32 value = 4;
+  int32 maxValue = 5;
+  bool showLabel = 6;
+  bool showValueText = 7;
+  string name = 8;
+}
